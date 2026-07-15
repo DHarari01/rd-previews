@@ -1,526 +1,658 @@
 <!DOCTYPE html>
 <html lang="pt-BR" class="scroll-smooth">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dra. Juliana Nigri | Nutrição Clínica & Esportiva de Alta Performance</title>
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        clinical: {
-                            950: '#061612',
-                            900: '#0B231E',
-                            800: '#123A31',
-                            700: '#1B5347',
-                            600: '#267363',
-                            500: '#349380',
-                            300: '#7AC4B5',
-                            100: '#E6F4F1',
-                            50: '#F0F9F7',
-                        },
-                        accent: {
-                            gold: '#D4AF37',
-                            goldLight: '#F3E5AB',
-                            goldDark: '#AA7C11',
-                        }
-                    },
-                    fontFamily: {
-                        serif: ['Playfair Display', 'serif'],
-                        sans: ['Plus Jakarta Sans', 'sans-serif'],
-                    }
-                }
-            }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Juliana Nigri | Nutricionista Clínica e Esportiva de Alta Performance</title>
+  
+  <!-- Fontes Premium -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brandPrimary: '#422D25',    // Marrom Cacau Profundo (Elegância e Terra)
+            brandSecondary: '#C5A880',  // Ouro Champagne Fosco (Luxo e Brilho Sutil)
+            brandAccent: '#9E6B5D',     // Terracota Suave/Nude (Acolhimento e Vitalidade)
+            brandBg: '#FDFBF7',         // Alabastro Off-white Quente (Fundo Confortável)
+            brandCard: '#F4ECE4'        // Creme Acetinado para Destaques
+          },
+          fontFamily: {
+            serif: ['"Cormorant Garamond"', 'serif'],
+            sans: ['"Plus Jakarta Sans"', 'sans-serif']
+          },
+          letterSpacing: {
+            widest: '.15em',
+            superwide: '.25em'
+          }
         }
-    </script>
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    
-    <style>
-        .gold-gradient-text {
-            background: linear-gradient(135deg, #FFF 30%, #D4AF37 70%, #AA7C11 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-        .gold-border {
-            border-image: linear-gradient(to right, #D4AF37, #AA7C11) 1;
-        }
-        .blur-glow {
-            position: absolute;
-            width: 300px;
-            height: 300px;
-            background: radial-gradient(circle, rgba(52,147,128,0.15) 0%, rgba(0,0,0,0) 70%);
-            filter: blur(40px);
-            pointer-events: none;
-        }
-    </style>
+      }
+    }
+  </script>
+
+  <style>
+    /* Estilos e Efeitos de Transição Premium */
+    .editorial-border {
+      position: relative;
+    }
+    .editorial-border::after {
+      content: '';
+      position: absolute;
+      bottom: -8px;
+      left: 0;
+      width: 40px;
+      height: 1px;
+      background-color: #C5A880;
+    }
+    .glass-nav {
+      background: rgba(253, 251, 247, 0.85);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+    }
+    .arch-frame {
+      border-radius: 120px 120px 0 0;
+    }
+    /* Suavização de scroll e seleção */
+    ::selection {
+      background-color: #C5A880;
+      color: #422D25;
+    }
+  </style>
 </head>
-<body class="bg-[#061612] text-slate-100 font-sans antialiased overflow-x-hidden">
+<body class="bg-brandBg text-brandPrimary font-sans antialiased overflow-x-hidden">
 
-    <!-- Header / Navbar -->
-    <header class="fixed top-0 w-full z-50 bg-clinical-950/80 backdrop-blur-md border-b border-clinical-900/50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
-            <div class="flex items-center gap-3">
-                <span class="font-serif text-2xl font-bold tracking-wider text-slate-100">
-                    JULIANA<span class="text-accent-gold">NIGRI</span>
-                </span>
-                <span class="hidden sm:inline-block h-5 w-[1px] bg-clinical-800"></span>
-                <span class="hidden sm:inline-block text-xs uppercase tracking-widest text-clinical-300 font-semibold">Nutrição Premium</span>
-            </div>
+  <!-- HEADER / NAVEGAÇÃO -->
+  <header class="fixed top-0 left-0 right-0 z-50 glass-nav border-b border-brandSecondary/10 transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+      <!-- Logo Marca Pessoal -->
+      <a href="#" class="flex flex-col">
+        <span class="font-serif text-2xl lg:text-3xl tracking-widest uppercase font-light text-brandPrimary">
+          Juliana <span class="font-normal text-brandSecondary">Nigri</span>
+        </span>
+        <span class="text-[9px] uppercase tracking-superwide text-brandAccent font-semibold -mt-1">
+          Nutrição Clínica & Esportiva
+        </span>
+      </a>
+
+      <!-- Menu Desktop -->
+      <nav class="hidden md:flex items-center space-x-8 text-xs tracking-widest uppercase font-medium">
+        <a href="#sobre" class="text-brandPrimary hover:text-brandSecondary transition-colors duration-300">A Profissional</a>
+        <a href="#especialidades" class="text-brandPrimary hover:text-brandSecondary transition-colors duration-300">Especialidades</a>
+        <a href="#metodo" class="text-brandPrimary hover:text-brandSecondary transition-colors duration-300">O Método</a>
+        <a href="#consultorio" class="text-brandPrimary hover:text-brandSecondary transition-colors duration-300">Consultório</a>
+      </nav>
+
+      <!-- CTA Principal Header -->
+      <div class="hidden lg:block">
+        <a href="https://wa.me/5500000000000?text=Olá%20Juliana,%20gostaria%20de%20agendar%20uma%20consulta." target="_blank"
+           class="inline-block text-[11px] tracking-widest uppercase font-semibold border border-brandSecondary bg-transparent px-6 py-3 text-brandPrimary hover:bg-brandSecondary hover:text-white transition-all duration-300">
+          Agendar Consulta
+        </a>
+      </div>
+
+      <!-- Menu Mobile Button -->
+      <button id="mobileMenuBtn" class="md:hidden text-brandPrimary focus:outline-none p-2" aria-label="Menu">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 9h16.5m-16.5 5.25h16.5" />
+        </svg>
+      </button>
+    </div>
+
+    <!-- Dropdown Mobile -->
+    <div id="mobileMenu" class="hidden md:hidden bg-brandBg border-b border-brandSecondary/20 px-6 py-6 transition-all duration-300">
+      <nav class="flex flex-col space-y-4 text-xs tracking-widest uppercase font-medium">
+        <a href="#sobre" class="text-brandPrimary py-2 border-b border-brandSecondary/5" onclick="toggleMenu()">A Profissional</a>
+        <a href="#especialidades" class="text-brandPrimary py-2 border-b border-brandSecondary/5" onclick="toggleMenu()">Especialidades</a>
+        <a href="#metodo" class="text-brandPrimary py-2 border-b border-brandSecondary/5" onclick="toggleMenu()">O Método</a>
+        <a href="#consultorio" class="text-brandPrimary py-2" onclick="toggleMenu()">Consultório</a>
+        <a href="https://wa.me/5500000000000" target="_blank" class="block text-center text-xs tracking-widest uppercase font-semibold bg-brandSecondary text-white py-3 mt-4">
+          Agendar Consulta
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO SECTION (EDITORIAL) -->
+  <section class="relative min-h-screen flex items-center pt-24 pb-16 lg:py-0 overflow-hidden">
+    <!-- Linhas de fundo decorativas e luxuosas -->
+    <div class="absolute inset-0 z-0 pointer-events-none opacity-20">
+      <div class="absolute left-[15%] top-0 bottom-0 w-[1px] bg-brandSecondary/20"></div>
+      <div class="absolute right-[15%] top-0 bottom-0 w-[1px] bg-brandSecondary/20"></div>
+    </div>
+
+    <div class="max-w-7xl mx-auto px-6 w-full relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+      <!-- Bloco de Texto -->
+      <div class="lg:col-span-7 flex flex-col justify-center space-y-8">
+        <div class="space-y-3">
+          <span class="text-[11px] lg:text-xs uppercase tracking-superwide text-brandSecondary font-semibold block">
+            NUTRINDO SUA MELHOR VERSÃO
+          </span>
+          <h1 class="font-serif text-5xl lg:text-7xl font-light text-brandPrimary leading-[1.1]">
+            Alta performance e <br>
+            <span class="italic font-normal text-brandAccent">longevidade</span> guiadas pela ciência.
+          </h1>
+        </div>
+
+        <p class="text-sm lg:text-base text-brandPrimary/80 font-light max-w-xl leading-relaxed">
+          Uma abordagem nutricional integrativa, desenhada sob medida para quem busca alinhar saúde metabólica, performance física e estética impecável. Aqui, cada detalhe do seu plano é esculpido de forma exclusiva.
+        </p>
+
+        <!-- CTAs Primários -->
+        <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 pt-4">
+          <a href="https://wa.me/5500000000000?text=Olá%20Juliana,%20gostaria%20de%20agendar%20uma%20consulta." target="_blank"
+             class="text-center text-xs tracking-widest uppercase font-semibold bg-brandPrimary text-brandBg px-8 py-5 hover:bg-brandAccent transition-all duration-300 luxury-shadow hover:scale-[1.02]">
+            Agendar Consulta Presencial
+          </a>
+          <a href="#metodo" class="text-center text-xs tracking-widest uppercase font-semibold border border-brandSecondary/60 text-brandPrimary px-8 py-5 hover:border-brandPrimary hover:bg-brandCard/50 transition-all duration-300">
+            Conhecer o Método JN
+          </a>
+        </div>
+
+        <!-- Mini Selos de Qualidade -->
+        <div class="grid grid-cols-3 gap-6 pt-8 border-t border-brandSecondary/10 max-w-lg">
+          <div>
+            <span class="font-serif text-2xl text-brandSecondary block">10+</span>
+            <span class="text-[10px] uppercase tracking-wider text-brandPrimary/75 font-medium">Anos de Prática</span>
+          </div>
+          <div>
+            <span class="font-serif text-2xl text-brandSecondary block">100%</span>
+            <span class="text-[10px] uppercase tracking-wider text-brandPrimary/75 font-medium">Personalizado</span>
+          </div>
+          <div>
+            <span class="font-serif text-2xl text-brandSecondary block">Rio/SP</span>
+            <span class="text-[10px] uppercase tracking-wider text-brandPrimary/75 font-medium">Atendimento Premium</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bloco de Imagem com Moldura Arquitetônica Premium -->
+      <div class="lg:col-span-5 flex justify-center lg:justify-end relative">
+        <div class="relative w-full max-w-[380px] aspect-[3/4] p-4 border border-brandSecondary/30 arch-frame bg-brandCard/30 backdrop-blur-sm">
+          <!-- Moldura com cantos arredondados simulando portal/arco de estética -->
+          <div class="w-full h-full arch-frame overflow-hidden relative group">
+            <!-- Placeholder sofisticado de imagem profissional de alta resolução -->
+            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=600&auto=format&fit=crop" 
+                 alt="Dra. Juliana Nigri" 
+                 class="w-full h-full object-cover grayscale-[15%] group-hover:scale-105 transition-transform duration-700 ease-out">
             
-            <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-300">
-                <a href="#metodologia" class="hover:text-accent-gold transition-colors">Metodologia</a>
-                <a href="#diferenciais" class="hover:text-accent-gold transition-colors">Por Que Nós?</a>
-                <a href="#depoimentos" class="hover:text-accent-gold transition-colors">Resultados</a>
-                <a href="#agendamento" class="hover:text-accent-gold transition-colors">Consulta</a>
-            </nav>
-
-            <div>
-                <a href="https://wa.me/5521999999999" target="_blank" class="inline-flex items-center gap-2 bg-gradient-to-r from-accent-gold to-accent-goldDark text-clinical-950 px-5 py-2.5 rounded-full font-bold text-sm tracking-wide hover:shadow-[0_0_20px_rgba(212,175,55,0.4)] transition-all duration-300 transform hover:-translate-y-0.5">
-                    Fale Conosco
-                    <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.514 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.717-1.454L0 24zm6.59-4.846c1.6.95 3.188 1.449 4.825 1.451 5.436 0 9.86-4.37 9.864-9.799.002-2.63-1.023-5.101-2.885-6.963C16.588 1.981 14.115.957 11.5.957c-5.44 0-9.866 4.372-9.87 9.802 0 1.63.463 3.224 1.34 4.646l-.997 3.639 3.75-1.002zM16.57 13.57c-.29-.145-1.713-.847-1.978-.942-.265-.096-.458-.145-.65.145-.19.29-.74.942-.907 1.135-.166.19-.333.215-.623.07-1.122-.56-1.866-1.01-2.585-2.242-.19-.324-.19-.15.093-.435.253-.255.29-.34.435-.57.145-.23.072-.43-.036-.625-.11-.19-.65-2.56-.893-3.14-.24-.574-.483-.497-.662-.506-.17-.008-.368-.01-.565-.01-.196 0-.518.073-.787.37-.27.295-1.03 1.007-1.03 2.456 0 1.45 1.055 2.85 1.202 3.044.148.193 2.077 3.17 5.03 4.453.702.304 1.25.487 1.677.623.706.224 1.348.193 1.856.117.564-.084 1.713-.7 1.956-1.378.243-.677.243-1.256.17-1.378-.072-.12-.264-.19-.554-.336z"/></svg>
-                </a>
+            <div class="absolute inset-0 bg-gradient-to-t from-brandPrimary/40 to-transparent"></div>
+            
+            <div class="absolute bottom-6 left-6 right-6 text-white">
+              <span class="font-serif text-lg italic block">Dra. Juliana Nigri</span>
+              <span class="text-[9px] uppercase tracking-widest opacity-80 font-light">CRN 4-000000</span>
             </div>
+          </div>
+          <!-- Detalhe decorativo geométrico dourado fosco -->
+          <div class="absolute -bottom-4 -left-4 w-12 h-12 border-b-2 border-l-2 border-brandSecondary"></div>
+          <div class="absolute -top-4 -right-4 w-12 h-12 border-t-2 border-r-2 border-brandSecondary"></div>
         </div>
-    </header>
+      </div>
+    </div>
+  </section>
 
-    <!-- Hero Section -->
-    <section class="relative min-h-screen pt-32 pb-20 flex items-center justify-center overflow-hidden">
-        <div class="blur-glow top-20 left-10"></div>
-        <div class="blur-glow bottom-10 right-10"></div>
+  <!-- SEÇÃO DE POSICIONAMENTO / FILOSOFIA -->
+  <section class="py-24 bg-brandCard/35 relative">
+    <div class="max-w-6xl mx-auto px-6 text-center space-y-8">
+      <span class="text-[11px] uppercase tracking-superwide text-brandAccent font-bold">FILOSOFIA DE TRABALHO</span>
+      
+      <h2 class="font-serif text-3xl lg:text-5xl font-light text-brandPrimary max-w-4xl mx-auto leading-snug">
+        "Nutrição de elite não é sobre restrição cega, mas sim sobre modular a bioquímica de forma sofisticada e prazerosa."
+      </h2>
+      
+      <div class="w-16 h-[1px] bg-brandSecondary mx-auto my-6"></div>
+      
+      <p class="text-sm lg:text-base text-brandPrimary/80 font-light max-w-2xl mx-auto leading-relaxed">
+        Cada indivíduo possui uma assinatura genética, metabólica e de rotina única. Meu compromisso é desenhar estratégias alimentares perfeitamente ajustadas ao seu estilo de vida, potencializando seus resultados estéticos, físicos e mentais.
+      </p>
+    </div>
+  </section>
+
+  <!-- SOBRE A PROFISSIONAL -->
+  <section id="sobre" class="py-24 relative">
+    <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
+      
+      <!-- Imagem Lateral -->
+      <div class="lg:col-span-5 order-2 lg:order-1 flex justify-center">
+        <div class="relative w-full max-w-[400px]">
+          <!-- Foto secundária, simulando contexto de consulta/laboratório clínico premium -->
+          <img src="https://images.unsplash.com/photo-1594824497964-58615b41637b?q=80&w=600&auto=format&fit=crop" 
+               alt="Atendimento Nutricional Juliana Nigri" 
+               class="w-full aspect-[4/5] object-cover rounded-sm grayscale-[10%] shadow-lg">
+          
+          <div class="absolute -bottom-6 -right-6 bg-brandPrimary text-brandBg p-6 max-w-[220px] rounded-sm hidden sm:block">
+            <span class="font-serif text-lg italic text-brandSecondary block">Ciência em evolução</span>
+            <span class="text-[10px] uppercase tracking-wider text-brandBg/80 font-light block mt-1">
+              Participação ativa nos maiores congressos de nutrição funcional e medicina esportiva mundiais.
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Detalhes de Texto -->
+      <div class="lg:col-span-7 order-1 lg:order-2 space-y-8">
+        <div class="space-y-3">
+          <span class="text-[11px] lg:text-xs uppercase tracking-superwide text-brandSecondary font-semibold block editorial-border">
+            A PROFISSIONAL POR TRÁS DO MÉTODO
+          </span>
+          <h2 class="font-serif text-4xl lg:text-5xl font-light text-brandPrimary">
+            Juliana Nigri
+          </h2>
+        </div>
+
+        <div class="space-y-4 text-sm lg:text-base text-brandPrimary/80 font-light leading-relaxed">
+          <p>
+            Graduada em Nutrição, com especialização em Nutrição Clínica Funcional e Nutrição Esportiva de Alta Performance. Há mais de uma década, atua no desenvolvimento de estratégias alimentares refinadas que promovem longevidade saudável, emagrecimento consciente e a otimização de performance para atletas profissionais e amadores.
+          </p>
+          <p>
+            Acreditando que a saúde é um reflexo de harmonia sistêmica, Juliana integra ciência avançada com sensibilidade humana, criando rotinas nutricionais que funcionam de verdade na vida real, sem prescrições genéricas ou fórmulas prontas de gaveta.
+          </p>
+        </div>
+
+        <!-- Pilares Acadêmicos -->
+        <div class="space-y-4 pt-6 border-t border-brandSecondary/25">
+          <span class="text-xs uppercase tracking-widest text-brandPrimary font-bold block">FORMAÇÃO & RECONHECIMENTO</span>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div class="flex items-start space-x-3">
+              <span class="text-brandSecondary font-serif text-lg">•</span>
+              <p class="text-xs text-brandPrimary/80"><strong class="text-brandPrimary">Pós-Graduação</strong> em Nutrição Esportiva e Fisiologia do Exercício.</p>
+            </div>
+            <div class="flex items-start space-x-3">
+              <span class="text-brandSecondary font-serif text-lg">•</span>
+              <p class="text-xs text-brandPrimary/80"><strong class="text-brandPrimary">Nutrição Integrativa</strong> e modulação da microbiota intestinal.</p>
+            </div>
+            <div class="flex items-start space-x-3">
+              <span class="text-brandSecondary font-serif text-lg">•</span>
+              <p class="text-xs text-brandPrimary/80"><strong class="text-brandPrimary">Membro Ativo</strong> da Sociedade Brasileira de Nutrição Funcional.</p>
+            </div>
+            <div class="flex items-start space-x-3">
+              <span class="text-brandSecondary font-serif text-lg">•</span>
+              <p class="text-xs text-brandPrimary/80"><strong class="text-brandPrimary">Palestrante</strong> em simpósios de saúde e performance.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ESPECIALIDADES (CARDS DE ALTO PADRÃO) -->
+  <section id="especialidades" class="py-24 bg-brandCard/40 relative">
+    <div class="max-w-7xl mx-auto px-6 space-y-16">
+      
+      <!-- Cabeçalho da Seção -->
+      <div class="text-center space-y-4">
+        <span class="text-[11px] lg:text-xs uppercase tracking-superwide text-brandAccent font-bold block">ÁREAS DE ATUAÇÃO DE PRECISÃO</span>
+        <h2 class="font-serif text-4xl lg:text-5xl font-light text-brandPrimary">Como podemos transformar sua saúde</h2>
+        <p class="text-sm text-brandPrimary/70 max-w-xl mx-auto font-light">
+          Programas desenhados sob rigoroso protocolo científico para atingir os seus objetivos de forma segura e duradoura.
+        </p>
+      </div>
+
+      <!-- Grid de Especialidades -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
-            <div class="grid lg:grid-cols-12 gap-12 items-center">
-                
-                <!-- Left Side Text Content -->
-                <div class="lg:col-span-7 space-y-8 text-center lg:text-left">
-                    <!-- Trust Badge -->
-                    <div class="inline-flex items-center gap-3 bg-clinical-900 border border-clinical-800 rounded-full px-4 py-2 text-xs sm:text-sm text-slate-300">
-                        <span class="flex items-center gap-1 text-accent-gold">
-                            <span class="font-bold">5.0</span>
-                            <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-                        </span>
-                        <span class="w-[1px] h-3 bg-clinical-700"></span>
-                        <span>+320 Avaliações no Google</span>
-                        <span class="hidden sm:inline-flex items-center px-2 py-0.5 rounded text-xs font-semibold bg-emerald-500/20 text-emerald-300">Destaque RJ</span>
-                    </div>
-
-                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-serif leading-tight font-extrabold">
-                        A ciência por trás do seu <span class="gold-gradient-text">corpo de alta performance</span>.
-                    </h1>
-
-                    <p class="text-base sm:text-lg text-slate-300 max-w-2xl mx-auto lg:mx-0 font-light leading-relaxed">
-                        Abordagem clínica e esportiva de elite com a nutricionista <span class="text-slate-100 font-semibold">Juliana Nigri</span>. Planos nutricionais ultra personalizados para emagrecimento, hipertrofia e performance máxima.
-                    </p>
-
-                    <!-- CTAs -->
-                    <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-4">
-                        <a href="https://wa.me/5521999999999" target="_blank" class="w-full sm:w-auto inline-flex justify-center items-center gap-3 bg-gradient-to-r from-accent-gold to-accent-goldDark text-clinical-950 font-bold px-8 py-4 rounded-xl shadow-[0_4px_25px_rgba(212,175,55,0.3)] hover:shadow-[0_4px_35px_rgba(212,175,55,0.5)] transform hover:-translate-y-1 transition-all duration-300 text-base">
-                            Agendar Consulta por WhatsApp
-                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.514 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.717-1.454L0 24zm6.59-4.846c1.6.95 3.188 1.449 4.825 1.451 5.436 0 9.86-4.37 9.864-9.799.002-2.63-1.023-5.101-2.885-6.963C16.588 1.981 14.115.957 11.5.957c-5.44 0-9.866 4.372-9.87 9.802 0 1.63.463 3.224 1.34 4.646l-.997 3.639 3.75-1.002zM16.57 13.57c-.29-.145-1.713-.847-1.978-.942-.265-.096-.458-.145-.65.145-.19.29-.74.942-.907 1.135-.166.19-.333.215-.623.07-1.122-.56-1.866-1.01-2.585-2.242-.19-.324-.19-.15.093-.435.253-.255.29-.34.435-.57.145-.23.072-.43-.036-.625-.11-.19-.65-2.56-.893-3.14-.24-.574-.483-.497-.662-.506-.17-.008-.368-.01-.565-.01-.196 0-.518.073-.787.37-.27.295-1.03 1.007-1.03 2.456 0 1.45 1.055 2.85 1.202 3.044.148.193 2.077 3.17 5.03 4.453.702.304 1.25.487 1.677.623.706.224 1.348.193 1.856.117.564-.084 1.713-.7 1.956-1.378.243-.677.243-1.256.17-1.378-.072-.12-.264-.19-.554-.336z"/></svg>
-                        </a>
-                        <a href="#metodologia" class="w-full sm:w-auto inline-flex justify-center items-center gap-2 border border-clinical-800 text-slate-300 hover:text-slate-100 hover:bg-clinical-900 px-8 py-4 rounded-xl transition-all duration-300">
-                            Conhecer Método
-                        </a>
-                    </div>
-
-                    <!-- Highlight Metrics -->
-                    <div class="grid grid-cols-3 gap-4 pt-6 border-t border-clinical-900/50">
-                        <div>
-                            <p class="text-2xl sm:text-3xl font-serif font-bold text-accent-gold">+10.000</p>
-                            <p class="text-xs text-slate-400 uppercase tracking-widest mt-1">Vidas Transformadas</p>
-                        </div>
-                        <div>
-                            <p class="text-2xl sm:text-3xl font-serif font-bold text-accent-gold">320+</p>
-                            <p class="text-xs text-slate-400 uppercase tracking-widest mt-1">Avaliações 5★</p>
-                        </div>
-                        <div>
-                            <p class="text-2xl sm:text-3xl font-serif font-bold text-accent-gold">100%</p>
-                            <p class="text-xs text-slate-400 uppercase tracking-widest mt-1">Personalizado</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Right Side Image Graphic -->
-                <div class="lg:col-span-5 relative mt-8 lg:mt-0">
-                    <div class="relative mx-auto max-w-[380px] lg:max-w-none">
-                        <!-- Decorative Frame Elements -->
-                        <div class="absolute -inset-1.5 bg-gradient-to-tr from-accent-gold to-clinical-500 rounded-3xl opacity-30 blur-sm"></div>
-                        <div class="absolute inset-0 bg-[#061612] rounded-3xl"></div>
-                        
-                        <!-- Client Premium Placeholder Image representing Juliana Nigri -->
-                        <div class="relative rounded-2xl overflow-hidden aspect-[4/5] bg-clinical-900 border border-clinical-800 flex items-center justify-center">
-                            <img src="https://images.unsplash.com/photo-1594824813573-246434de83fb?auto=format&fit=crop&q=80&w=600" alt="Dra. Juliana Nigri" class="w-full h-full object-cover grayscale-[20%] hover:grayscale-0 transition-all duration-700">
-                            
-                            <!-- Floating Card -->
-                            <div class="absolute bottom-6 left-6 right-6 bg-clinical-950/90 backdrop-blur-md p-4 rounded-xl border border-clinical-800 flex items-center gap-4">
-                                <div class="bg-gradient-to-br from-amber-400 to-amber-600 p-2.5 rounded-lg text-clinical-950">
-                                    <!-- Google Logo Style SVG -->
-                                    <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M12.24 10.285V13.4h6.887c-.275 1.565-1.88 4.604-6.887 4.604-4.33 0-7.866-3.577-7.866-8s3.536-8 7.866-8c2.46 0 4.105 1.025 5.047 1.926l2.427-2.334C17.955 2.192 15.34 1 12.24 1 6.033 1 1 6.033 1 12.24s5.033 11.24 11.24 11.24c6.478 0 10.793-4.537 10.793-10.99 0-.74-.08-1.3-.175-1.854H12.24z"/></svg>
-                                </div>
-                                <div>
-                                    <p class="text-xs text-slate-400 font-semibold uppercase tracking-wider">Altíssima Reputação</p>
-                                    <p class="text-sm font-bold text-slate-200">Nota 5.0 no Google com +320 feedbacks</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
+        <!-- Especialidade 1 -->
+        <div class="bg-brandBg border border-brandSecondary/15 p-10 hover:border-brandSecondary transition-all duration-300 luxury-shadow flex flex-col justify-between h-full group">
+          <div class="space-y-6">
+            <!-- Icone SVG Fino -->
+            <div class="text-brandSecondary group-hover:scale-110 transition-transform duration-300 w-10 h-10 flex items-center justify-center">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1" stroke="currentColor" class="w-8 h-8">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z" />
+              </svg>
             </div>
+            <h3 class="font-serif text-2xl font-light text-brandPrimary">Nutrição Esportiva & Performance</h3>
+            <p class="text-xs text-brandPrimary/75 font-light leading-relaxed">
+              Otimização de composição corporal (hipertrofia e definição), ganho de rendimento em treinos diários e provas de alta intensidade, suplementação avançada para endurance e recuperação muscular acelerada.
+            </p>
+          </div>
+          <span class="text-[10px] uppercase tracking-widest text-brandSecondary font-semibold mt-8 block">Fisiologia & Performance</span>
         </div>
-    </section>
 
-    <!-- Google Trust Bar -->
-    <section class="bg-gradient-to-r from-clinical-950 via-clinical-900 to-clinical-950 py-10 border-y border-clinical-900/60">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex flex-col md:flex-row items-center justify-between gap-6 text-center md:text-left">
-                <div class="space-y-1">
-                    <p class="text-lg font-bold text-slate-100">Líder absoluta em satisfação e eficácia</p>
-                    <p class="text-sm text-slate-400">Nutricionista clínica recomendada por mais de 320 pacientes ativos no Google.</p>
-                </div>
-                <div class="flex flex-wrap items-center justify-center gap-6">
-                    <div class="flex items-center gap-1.5 bg-clinical-950 border border-clinical-800/80 px-4 py-2.5 rounded-lg">
-                        <span class="text-amber-500 flex gap-0.5">
-                            ★★★★★
-                        </span>
-                        <span class="text-xs text-slate-300 font-medium">99.8% de Aprovação</span>
-                    </div>
-                    <div class="flex items-center gap-1.5 bg-clinical-950 border border-clinical-800/80 px-4 py-2.5 rounded-lg">
-                        <span class="w-2.5 h-2.5 bg-emerald-500 rounded-full animate-ping"></span>
-                        <span class="text-xs text-slate-300 font-medium">Vagas Limitadas para este mês</span>
-                    </div>
-                </div>
+        <!-- Especialidade 2 -->
+        <div class="bg-brandBg border border-brandSecondary/15 p-10 hover:border-brandSecondary transition-all duration-300 luxury-shadow flex flex-col justify-between h-full group">
+          <div class="space-y-6">
+            <div class="text-brandSecondary group-hover:scale-110 transition-transform duration-300 w-10 h-10 flex items-center justify-center">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1" stroke="currentColor" class="w-8 h-8">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9s2.015-9 4.5-9m0 0a9.015 9.015 0 010 18" />
+              </svg>
             </div>
+            <h3 class="font-serif text-2xl font-light text-brandPrimary">Emagrecimento Saudável</h3>
+            <p class="text-xs text-brandPrimary/75 font-light leading-relaxed">
+              Foco na reprogramação metabólica sustentável. Sem dietas radicais que destroem sua energia e massa muscular. Uma transição elegante para uma rotina alimentar que estimula a queima lipídica constante.
+            </p>
+          </div>
+          <span class="text-[10px] uppercase tracking-widest text-brandSecondary font-semibold mt-8 block">Metabolismo Ativo</span>
         </div>
-    </section>
 
-    <!-- Metodologia Exclusiva -->
-    <section id="metodologia" class="py-24 relative overflow-hidden">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center max-w-3xl mx-auto space-y-4 mb-20">
-                <h2 class="text-xs uppercase tracking-widest text-accent-gold font-bold">O Método de Elite</h2>
-                <p class="text-3xl sm:text-4xl font-serif font-extrabold text-slate-100">Nutrição baseada em evidência científica com foco em resultados estéticos e metabólicos.</p>
-                <div class="h-1 w-12 bg-accent-gold mx-auto rounded-full mt-4"></div>
+        <!-- Especialidade 3 -->
+        <div class="bg-brandBg border border-brandSecondary/15 p-10 hover:border-brandSecondary transition-all duration-300 luxury-shadow flex flex-col justify-between h-full group">
+          <div class="space-y-6">
+            <div class="text-brandSecondary group-hover:scale-110 transition-transform duration-300 w-10 h-10 flex items-center justify-center">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1" stroke="currentColor" class="w-8 h-8">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
+              </svg>
             </div>
-
-            <div class="grid md:grid-cols-3 gap-8">
-                <!-- Card 1 -->
-                <div class="bg-clinical-900/60 border border-clinical-800/80 p-8 rounded-2xl relative group hover:border-accent-gold/40 transition-all duration-300">
-                    <div class="bg-clinical-950 w-14 h-14 rounded-xl flex items-center justify-center mb-6 border border-clinical-800 text-accent-gold">
-                        <!-- Icon Clinical -->
-                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"/></svg>
-                    </div>
-                    <h3 class="text-xl font-serif font-bold text-slate-100 mb-3 group-hover:text-accent-gold transition-colors">Precisão Bioquímica</h3>
-                    <p class="text-sm text-slate-400 leading-relaxed font-light">Análise aprofundada de exames laboratoriais e bioimpedância de última geração para identificar gargalos metabólicos, hormonais e deficiências nutricionais antes de prescrever qualquer estratégia.</p>
-                </div>
-
-                <!-- Card 2 -->
-                <div class="bg-clinical-900/60 border border-clinical-800/80 p-8 rounded-2xl relative group hover:border-accent-gold/40 transition-all duration-300">
-                    <div class="bg-clinical-950 w-14 h-14 rounded-xl flex items-center justify-center mb-6 border border-clinical-800 text-accent-gold">
-                        <!-- Icon Sports -->
-                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
-                    </div>
-                    <h3 class="text-xl font-serif font-bold text-slate-100 mb-3 group-hover:text-accent-gold transition-colors">Periodização Nutricional Esportiva</h3>
-                    <p class="text-sm text-slate-400 leading-relaxed font-light">Estratégias nutricionais dinâmicas de acordo com a sua rotina de treinos. Alinhamento perfeito de macronutrientes para otimização de força, ganho de massa magra, velocidade e rápida recuperação muscular.</p>
-                </div>
-
-                <!-- Card 3 -->
-                <div class="bg-clinical-900/60 border border-clinical-800/80 p-8 rounded-2xl relative group hover:border-accent-gold/40 transition-all duration-300">
-                    <div class="bg-clinical-950 w-14 h-14 rounded-xl flex items-center justify-center mb-6 border border-clinical-800 text-accent-gold">
-                        <!-- Icon Premium Support -->
-                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/></svg>
-                    </div>
-                    <h3 class="text-xl font-serif font-bold text-slate-100 mb-3 group-hover:text-accent-gold transition-colors">Suporte Premium e Ajustes Contínuos</h3>
-                    <p class="text-sm text-slate-400 leading-relaxed font-light">Você nunca estará desamparado. Canal direto de comunicação exclusivo para sanar dúvidas rapidamente, ajustar rotinas de acordo com viagens e imprevistos, garantindo aderência absoluta do início ao fim.</p>
-                </div>
-            </div>
+            <h3 class="font-serif text-2xl font-light text-brandPrimary">Longevidade & Saúde Preventiva</h3>
+            <p class="text-xs text-brandPrimary/75 font-light leading-relaxed">
+              Equilíbrio da saúde intestinal (microbiota), combate a processos inflamatórios silenciosos, controle do perfil lipídico e glicêmico, modulação do estresse e aumento significativo da vitalidade diária.
+            </p>
+          </div>
+          <span class="text-[10px] uppercase tracking-widest text-brandSecondary font-semibold mt-8 block">Estilo de Vida & Saúde</span>
         </div>
-    </section>
 
-    <!-- Quem é Dra. Juliana Nigri (Estética Clinica Premium) -->
-    <section class="py-24 bg-gradient-to-b from-[#061612] to-clinical-950 relative">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid lg:grid-cols-2 gap-16 items-center">
-                
-                <!-- Imagem -->
-                <div class="relative">
-                    <div class="absolute -inset-1.5 bg-accent-gold/20 rounded-2xl blur-md"></div>
-                    <div class="relative bg-clinical-900 rounded-2xl overflow-hidden aspect-[4/5] border border-clinical-800">
-                        <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&q=80&w=600" alt="Consultório Juliana Nigri" class="w-full h-full object-cover">
-                    </div>
-                    <!-- Badge Real Experience -->
-                    <div class="absolute -top-6 -right-6 bg-clinical-950 border border-clinical-800 rounded-2xl p-6 hidden md:block max-w-[200px]">
-                        <p class="text-3xl font-serif font-bold text-accent-gold">10+</p>
-                        <p class="text-xs text-slate-300 mt-1">Anos de experiência clínica refinada</p>
-                    </div>
-                </div>
+      </div>
+    </div>
+  </section>
 
-                <!-- Texto -->
-                <div class="space-y-8">
-                    <div class="space-y-3">
-                        <h2 class="text-xs uppercase tracking-widest text-accent-gold font-bold">Autoridade e Compromisso</h2>
-                        <h3 class="text-3xl sm:text-4xl font-serif font-extrabold text-slate-100">Cuidado Individualizado em sua Forma Mais Pura</h3>
-                    </div>
-
-                    <p class="text-slate-300 font-light leading-relaxed">
-                        Dra. Juliana Nigri é referência em atendimento nutricional de alto padrão. Unindo o rigor científico da nutrição clínica tradicional aos avanços tecnológicos da nutrição esportiva moderna, atende pacientes exigentes que buscam otimização máxima da performance, do físico e da saúde sistêmica.
-                    </p>
-
-                    <!-- Bullet points -->
-                    <div class="space-y-4">
-                        <div class="flex items-start gap-3">
-                            <span class="text-accent-gold bg-clinical-900 p-1.5 rounded-lg border border-clinical-800">
-                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
-                            </span>
-                            <div>
-                                <h4 class="text-sm font-bold text-slate-200">Prescrição Fitoquímica e Suplementação Científica</h4>
-                                <p class="text-xs text-slate-400">Suplementação adaptada para melhora cognitiva, rendimento de treinos e qualidade de sono.</p>
-                            </div>
-                        </div>
-
-                        <div class="flex items-start gap-3">
-                            <span class="text-accent-gold bg-clinical-900 p-1.5 rounded-lg border border-clinical-800">
-                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
-                            </span>
-                            <div>
-                                <h4 class="text-sm font-bold text-slate-200">Foco em Recomposição Corporal</h4>
-                                <p class="text-xs text-slate-400">Protocolos desenhados para queimar gordura enquanto se preserva e reconstrói massa muscular.</p>
-                            </div>
-                        </div>
-
-                        <div class="flex items-start gap-3">
-                            <span class="text-accent-gold bg-clinical-900 p-1.5 rounded-lg border border-clinical-800">
-                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
-                            </span>
-                            <div>
-                                <h4 class="text-sm font-bold text-slate-200">Alta Aderência e Facilidade</h4>
-                                <p class="text-xs text-slate-400">Acesso a cardápios práticos com alimentos acessíveis, fáceis de carregar e de preparar na correria do dia a dia.</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="pt-4">
-                        <a href="https://wa.me/5521999999999" target="_blank" class="inline-flex items-center gap-2 text-accent-gold font-bold hover:text-accent-goldLight transition-all">
-                            Falar pessoalmente com a equipe
-                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
-                        </a>
-                    </div>
-                </div>
-
-            </div>
+  <!-- O MÉTODO JN (PASSO A PASSO DA CONSULTA) -->
+  <section id="metodo" class="py-24 relative overflow-hidden">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
+        
+        <!-- Bloco Esquerdo: Título e Detalhes -->
+        <div class="lg:col-span-5 space-y-6">
+          <span class="text-[11px] lg:text-xs uppercase tracking-superwide text-brandSecondary font-semibold block">A JORNADA DE TRANSFORMAÇÃO</span>
+          <h2 class="font-serif text-4xl lg:text-5xl font-light text-brandPrimary">O Método Juliana Nigri</h2>
+          <p class="text-sm text-brandPrimary/80 font-light leading-relaxed">
+            Uma consulta premium não é um momento isolado, mas sim um processo refinado e contínuo de adequação metabólica e evolução constante. Veja como estruturamos seu atendimento:
+          </p>
+          <div class="pt-4">
+            <a href="https://wa.me/5500000000000?text=Quero%20conhecer%20os%20protocolos%20da%20Dra%20Juliana." target="_blank"
+               class="inline-block text-xs tracking-widest uppercase font-semibold bg-brandAccent text-white px-8 py-4 hover:bg-brandPrimary transition-all duration-300">
+              Iniciar Meu Plano de Saúde
+            </a>
+          </div>
         </div>
-    </section>
 
-    <!-- Depoimentos Reais / Google Reviews Simulation (320+ Positives) -->
-    <section id="depoimentos" class="py-24 bg-clinical-950 relative overflow-hidden">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <div class="text-center max-w-3xl mx-auto space-y-4 mb-16">
-                <h2 class="text-xs uppercase tracking-widest text-accent-gold font-bold">Provas de Sucesso</h2>
-                <p class="text-3xl sm:text-4xl font-serif font-extrabold text-slate-100">O que dizem as pessoas que redefiniram seus corpos e sua saúde.</p>
-                <p class="text-sm text-slate-400 font-light">Demonstração real extraída da nossa média de 5.0 estrelas no Google Maps.</p>
-                <div class="h-1 w-12 bg-accent-gold mx-auto rounded-full mt-4"></div>
+        <!-- Bloco Direito: Linha do Tempo / Etapas -->
+        <div class="lg:col-span-7 space-y-8 relative">
+          <!-- Linha vertical sutil conectando etapas -->
+          <div class="absolute left-6 top-4 bottom-4 w-[1px] bg-brandSecondary/20"></div>
+
+          <!-- Etapa 1 -->
+          <div class="flex items-start space-x-6 relative">
+            <div class="w-12 h-12 rounded-full bg-brandCard flex items-center justify-center border border-brandSecondary shrink-0 z-10">
+              <span class="font-serif text-brandPrimary font-semibold">01</span>
             </div>
-
-            <!-- Grid Depoimentos -->
-            <div class="grid md:grid-cols-3 gap-8">
-                
-                <!-- Card Depoimento 1 -->
-                <div class="bg-clinical-900 border border-clinical-800 p-6 rounded-2xl flex flex-col justify-between">
-                    <div class="space-y-4">
-                        <!-- Estrelas & Google Icon -->
-                        <div class="flex items-center justify-between">
-                            <span class="text-amber-500 font-bold tracking-tight">★★★★★</span>
-                            <span class="text-slate-500 text-xs flex items-center gap-1">
-                                <svg class="w-4 h-4 fill-current text-amber-500" viewBox="0 0 24 24"><path d="M12.24 10.285V13.4h6.887c-.275 1.565-1.88 4.604-6.887 4.604-4.33 0-7.866-3.577-7.866-8s3.536-8 7.866-8c2.46 0 4.105 1.025 5.047 1.926l2.427-2.334C17.955 2.192 15.34 1 12.24 1 6.033 1 1 6.033 1 12.24s5.033 11.24 11.24 11.24c6.478 0 10.793-4.537 10.793-10.99 0-.74-.08-1.3-.175-1.854H12.24z"/></svg>
-                                Google Review
-                            </span>
-                        </div>
-                        <p class="text-sm text-slate-300 italic leading-relaxed font-light">
-                            "Melhor decisão que tomei no ano. A Dra. Juliana é super atenciosa, não impõe dietas malucas e explicou tudo nos mínimos detalhes. Consegui emagrecer 12kg em 3 meses mantendo minha massa muscular e sem passar fome. Indico de olhos fechados!"
-                        </p>
-                    </div>
-                    <div class="flex items-center gap-3 pt-6 mt-6 border-t border-clinical-800/60">
-                        <div class="bg-clinical-800 w-10 h-10 rounded-full flex items-center justify-center font-bold text-accent-gold text-sm">
-                            RF
-                        </div>
-                        <div>
-                            <p class="text-xs font-bold text-slate-200">Rodrigo Fonseca</p>
-                            <p class="text-[10px] text-slate-400">Paciente Esportivo | Rio de Janeiro</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Card Depoimento 2 -->
-                <div class="bg-clinical-900 border border-clinical-800 p-6 rounded-2xl flex flex-col justify-between">
-                    <div class="space-y-4">
-                        <!-- Estrelas & Google Icon -->
-                        <div class="flex items-center justify-between">
-                            <span class="text-amber-500 font-bold tracking-tight">★★★★★</span>
-                            <span class="text-slate-500 text-xs flex items-center gap-1">
-                                <svg class="w-4 h-4 fill-current text-amber-500" viewBox="0 0 24 24"><path d="M12.24 10.285V13.4h6.887c-.275 1.565-1.88 4.604-6.887 4.604-4.33 0-7.866-3.577-7.866-8s3.536-8 7.866-8c2.46 0 4.105 1.025 5.047 1.926l2.427-2.334C17.955 2.192 15.34 1 12.24 1 6.033 1 12.24s5.033 11.24 11.24 11.24c6.478 0 10.793-4.537 10.793-10.99 0-.74-.08-1.3-.175-1.854H12.24z"/></svg>
-                                Google Review
-                            </span>
-                        </div>
-                        <p class="text-sm text-slate-300 italic leading-relaxed font-light">
-                            "Como atleta amadora de Crossfit, sempre sofri para ajustar minha alimentação aos treinos pesados. A Dra. Juliana ajustou exatamente o que eu precisava. Minha performance disparou e minha recuperação muscular melhorou demais. Nota mil!"
-                        </p>
-                    </div>
-                    <div class="flex items-center gap-3 pt-6 mt-6 border-t border-clinical-800/60">
-                        <div class="bg-clinical-800 w-10 h-10 rounded-full flex items-center justify-center font-bold text-accent-gold text-sm">
-                            MC
-                        </div>
-                        <div>
-                            <p class="text-xs font-bold text-slate-200">Mariana Costa</p>
-                            <p class="text-[10px] text-slate-400">Atleta Amadora | Rio de Janeiro</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Card Depoimento 3 -->
-                <div class="bg-clinical-900 border border-clinical-800 p-6 rounded-2xl flex flex-col justify-between">
-                    <div class="space-y-4">
-                        <!-- Estrelas & Google Icon -->
-                        <div class="flex items-center justify-between">
-                            <span class="text-amber-500 font-bold tracking-tight">★★★★★</span>
-                            <span class="text-slate-500 text-xs flex items-center gap-1">
-                                <svg class="w-4 h-4 fill-current text-amber-500" viewBox="0 0 24 24"><path d="M12.24 10.285V13.4h6.887c-.275 1.565-1.88 4.604-6.887 4.604-4.33 0-7.866-3.577-7.866-8s3.536-8 7.866-8c2.46 0 4.105 1.025 5.047 1.926l2.427-2.334C17.955 2.192 15.34 1 12.24 1 6.033 1 12.24s5.033 11.24 11.24 11.24c6.478 0 10.793-4.537 10.793-10.99 0-.74-.08-1.3-.175-1.854H12.24z"/></svg>
-                                Google Review
-                            </span>
-                        </div>
-                        <p class="text-sm text-slate-300 italic leading-relaxed font-light">
-                            "A consulta presencial é impecável, os aparelhos de exame de bioimpedância são extremamente avançados. O cardápio que ela propôs se ajustou perfeitamente à minha rotina agitada de executivo. O suporte no WhatsApp faz toda a diferença."
-                        </p>
-                    </div>
-                    <div class="flex items-center gap-3 pt-6 mt-6 border-t border-clinical-800/60">
-                        <div class="bg-clinical-800 w-10 h-10 rounded-full flex items-center justify-center font-bold text-accent-gold text-sm">
-                            AL
-                        </div>
-                        <div>
-                            <p class="text-xs font-bold text-slate-200">Alexandre Lima</p>
-                            <p class="text-[10px] text-slate-400">CEO & Paciente Clínico | Rio de Janeiro</p>
-                        </div>
-                    </div>
-                </div>
-
+            <div class="space-y-2">
+              <h4 class="font-serif text-xl font-normal text-brandPrimary">Anamnese Avançada & Mapeamento</h4>
+              <p class="text-xs text-brandPrimary/75 font-light leading-relaxed">
+                Investigação profunda da sua rotina de sono, histórico clínico, queixas intestinais, exames laboratoriais anteriores e preferências alimentares absolutas para garantir adesão impecável.
+              </p>
             </div>
+          </div>
 
-            <!-- Call-to-Action to Schedule -->
-            <div class="text-center pt-16">
-                <a href="https://wa.me/5521999999999" target="_blank" class="inline-flex items-center gap-3 bg-clinical-900 border border-clinical-800 hover:border-accent-gold text-slate-200 hover:text-slate-100 px-8 py-4 rounded-xl transition-all duration-300">
-                    <span>Quero ser o próximo caso de sucesso</span>
-                    <svg class="w-5 h-5 text-accent-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
-                </a>
+          <!-- Etapa 2 -->
+          <div class="flex items-start space-x-6 relative">
+            <div class="w-12 h-12 rounded-full bg-brandCard flex items-center justify-center border border-brandSecondary shrink-0 z-10">
+              <span class="font-serif text-brandPrimary font-semibold">02</span>
             </div>
+            <div class="space-y-2">
+              <h4 class="font-serif text-xl font-normal text-brandPrimary">Avaliação Física de Alta Precisão (Bioimpedância)</h4>
+              <p class="text-xs text-brandPrimary/75 font-light leading-relaxed">
+                Uso de tecnologia de ponta para analisar minuciosamente seus índices de gordura corporal, massa magra segmentada e taxa metabólica basal, estabelecendo métricas reais e científicas de progresso.
+              </p>
+            </div>
+          </div>
+
+          <!-- Etapa 3 -->
+          <div class="flex items-start space-x-6 relative">
+            <div class="w-12 h-12 rounded-full bg-brandCard flex items-center justify-center border border-brandSecondary shrink-0 z-10">
+              <span class="font-serif text-brandPrimary font-semibold">03</span>
+            </div>
+            <div class="space-y-2">
+              <h4 class="font-serif text-xl font-normal text-brandPrimary">Entrega do Planejamento Personalizado</h4>
+              <p class="text-xs text-brandPrimary/75 font-light leading-relaxed">
+                Entrega de cardápio exclusivo, adaptado de forma fidedigna às suas necessidades diárias, com acesso via aplicativo exclusivo para celular, facilitando a consulta de receitas e substituições.
+              </p>
+            </div>
+          </div>
+
+          <!-- Etapa 4 -->
+          <div class="flex items-start space-x-6 relative">
+            <div class="w-12 h-12 rounded-full bg-brandCard flex items-center justify-center border border-brandSecondary shrink-0 z-10">
+              <span class="font-serif text-brandPrimary font-semibold">04</span>
+            </div>
+            <div class="space-y-2">
+              <h4 class="font-serif text-xl font-normal text-brandPrimary">Suporte Contínuo Interativo</h4>
+              <p class="text-xs text-brandPrimary/75 font-light leading-relaxed">
+                Você não fica sem amparo entre as consultas. Oferecemos canal direto para esclarecimento de dúvidas pontuais, suporte e ajustes finos que surgirem ao longo da adaptação de sua nova rotina.
+              </p>
+            </div>
+          </div>
+
         </div>
-    </section>
 
-    <!-- Simulação de Agendamento Interativo -->
-    <section id="agendamento" class="py-24 bg-[#05130f] relative overflow-hidden">
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <div class="bg-gradient-to-br from-clinical-900 to-clinical-950 border border-clinical-800 p-8 sm:p-12 rounded-3xl space-y-8">
-                
-                <div class="text-center space-y-4">
-                    <span class="bg-accent-gold/10 text-accent-gold text-xs uppercase tracking-widest font-bold px-3 py-1 rounded-full">Fluxo Rápido de Triagem</span>
-                    <h3 class="text-3xl font-serif font-extrabold text-slate-100">Dê o primeiro passo rumo ao seu objetivo</h3>
-                    <p class="text-xs sm:text-sm text-slate-400 max-w-lg mx-auto">Selecione seu foco principal para agilizar o seu direcionamento exclusivo com a nossa equipe médica no WhatsApp.</p>
-                </div>
+      </div>
+    </div>
+  </section>
 
-                <!-- Interactive Simulator Box -->
-                <div class="space-y-6">
-                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                        <!-- Option 1 -->
-                        <a href="https://wa.me/5521999999999?text=Olá! Gostaria de agendar uma consulta focada em Emagrecimento Estético." target="_blank" class="bg-clinical-950 hover:bg-clinical-900 border border-clinical-800/80 hover:border-accent-gold p-5 rounded-2xl flex items-center justify-between group transition-all duration-300">
-                            <div class="flex items-center gap-4">
-                                <span class="text-xl">🔥</span>
-                                <div class="text-left">
-                                    <p class="text-sm font-bold text-slate-200">Emagrecimento Estético</p>
-                                    <p class="text-xs text-slate-400">Perca gordura sem perder massa muscular</p>
-                                </div>
-                            </div>
-                            <span class="text-slate-600 group-hover:text-accent-gold transition-colors">➔</span>
-                        </a>
+  <!-- DEPOIMENTOS / RELATOS PREMIUM -->
+  <section class="py-24 bg-brandCard/30 relative">
+    <div class="max-w-7xl mx-auto px-6 space-y-12">
+      <div class="text-center space-y-3">
+        <span class="text-[11px] lg:text-xs uppercase tracking-superwide text-brandSecondary font-bold block">RELATOS DE EVOLUÇÃO</span>
+        <h2 class="font-serif text-3xl lg:text-5xl font-light text-brandPrimary">Histórias de Sucesso Reais</h2>
+      </div>
 
-                        <!-- Option 2 -->
-                        <a href="https://wa.me/5521999999999?text=Olá! Gostaria de agendar uma consulta focada em Hipertrofia e Ganho de Massa." target="_blank" class="bg-clinical-950 hover:bg-clinical-900 border border-clinical-800/80 hover:border-accent-gold p-5 rounded-2xl flex items-center justify-between group transition-all duration-300">
-                            <div class="flex items-center gap-4">
-                                <span class="text-xl">💪</span>
-                                <div class="text-left">
-                                    <p class="text-sm font-bold text-slate-200">Hipertrofia & Massa Magra</p>
-                                    <p class="text-xs text-slate-400">Nutrição focada em ganho de força e músculos</p>
-                                </div>
-                            </div>
-                            <span class="text-slate-600 group-hover:text-accent-gold transition-colors">➔</span>
-                        </a>
-
-                        <!-- Option 3 -->
-                        <a href="https://wa.me/5521999999999?text=Olá! Gostaria de agendar uma consulta focada em Performance Esportiva de Elite." target="_blank" class="bg-clinical-950 hover:bg-clinical-900 border border-clinical-800/80 hover:border-accent-gold p-5 rounded-2xl flex items-center justify-between group transition-all duration-300">
-                            <div class="flex items-center gap-4">
-                                <span class="text-xl">⚡</span>
-                                <div class="text-left">
-                                    <p class="text-sm font-bold text-slate-200">Performance Esportiva de Elite</p>
-                                    <p class="text-xs text-slate-400">Melhora no rendimento e resistência muscular</p>
-                                </div>
-                            </div>
-                            <span class="text-slate-600 group-hover:text-accent-gold transition-colors">➔</span>
-                        </a>
-
-                        <!-- Option 4 -->
-                        <a href="https://wa.me/5521999999999?text=Olá! Gostaria de agendar uma consulta focada em Saúde e Qualidade de Vida." target="_blank" class="bg-clinical-950 hover:bg-clinical-900 border border-clinical-800/80 hover:border-accent-gold p-5 rounded-2xl flex items-center justify-between group transition-all duration-300">
-                            <div class="flex items-center gap-4">
-                                <span class="text-xl">🌿</span>
-                                <div class="text-left">
-                                    <p class="text-sm font-bold text-slate-200">Saúde & Longevidade</p>
-                                    <p class="text-xs text-slate-400">Prevenção, vitalidade e reajuste metabólico</p>
-                                </div>
-                            </div>
-                            <span class="text-slate-600 group-hover:text-accent-gold transition-colors">➔</span>
-                        </a>
-                    </div>
-
-                    <div class="text-center pt-4">
-                        <span class="text-xs text-slate-500 block">Ao clicar, você iniciará uma conversa diretamente com o nosso atendimento especializado.</span>
-                    </div>
-                </div>
-
+      <!-- Slider/Grid de Testemunhos -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        
+        <!-- Depoimento 1 -->
+        <div class="bg-brandBg p-10 border border-brandSecondary/10 rounded-sm flex flex-col justify-between h-full">
+          <p class="text-xs italic text-brandPrimary/80 font-light leading-relaxed">
+            "Sempre tive dificuldade em alinhar o cansaço dos treinos longos de triatlo com o trabalho. A Ju reestruturou toda minha distribuição de carboidratos e suplementos. Melhorei meus tempos de corrida de forma absurda e o percentual de gordura caiu de maneira muito saudável."
+          </p>
+          <div class="mt-8 flex items-center space-x-4">
+            <div class="w-10 h-10 rounded-full bg-brandSecondary/25 flex items-center justify-center font-serif text-brandPrimary">M</div>
+            <div>
+              <span class="text-xs font-semibold block text-brandPrimary">Mariana Souza</span>
+              <span class="text-[9px] uppercase tracking-wider text-brandSecondary">Atleta Amadora e Advogada</span>
             </div>
+          </div>
         </div>
-    </section>
 
-    <!-- Footer -->
-    <footer class="bg-clinical-950 border-t border-clinical-900 py-12 text-slate-400 text-sm">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid md:grid-cols-3 gap-8 items-center text-center md:text-left">
-                
-                <div>
-                    <span class="font-serif text-2xl font-bold tracking-wider text-slate-100 block mb-2">
-                        JULIANA<span class="text-accent-gold">NIGRI</span>
-                    </span>
-                    <p class="text-xs text-slate-500 uppercase tracking-widest font-semibold">Nutricionista Esportiva e Clínica</p>
-                    <p class="text-xs text-slate-500 mt-1">CRN-4: 1234567/RJ</p>
-                </div>
-
-                <div class="space-y-2">
-                    <p class="text-xs text-slate-300 uppercase tracking-widest font-bold">Atendimento e Localização</p>
-                    <p class="text-xs text-slate-400">Consultório Premium de Nutrição - Rio de Janeiro, RJ</p>
-                    <p class="text-xs text-slate-400">Atendimentos presenciais e telemedicina para todo o Brasil.</p>
-                </div>
-
-                <div class="flex flex-col items-center md:items-end space-y-4">
-                    <a href="https://wa.me/5521999999999" target="_blank" class="bg-gradient-to-r from-accent-gold to-accent-goldDark text-clinical-950 px-6 py-3 rounded-full font-bold text-xs tracking-wider uppercase hover:shadow-[0_0_15px_rgba(212,175,55,0.3)] transition-all">
-                        Agendar via Whatsapp
-                    </a>
-                    <span class="text-xs text-slate-600 block">Desenvolvido por <a href="https://wa.me/5521999999999" target="_blank" class="hover:text-accent-gold font-semibold">RD Exclusive</a>. Todos os direitos reservados.</span>
-                </div>
-
+        <!-- Depoimento 2 -->
+        <div class="bg-brandBg p-10 border border-brandSecondary/10 rounded-sm flex flex-col justify-between h-full">
+          <p class="text-xs italic text-brandPrimary/80 font-light leading-relaxed">
+            "A consulta com a Dra. Juliana é um divisor de águas. O plano dela é extremamente luxuoso no sentido de ser exatamente o que eu consigo comer, mesmo com minha agenda intensa de viagens corporativas. O foco no meu bem-estar digestivo me trouxe outro nível de foco e energia."
+          </p>
+          <div class="mt-8 flex items-center space-x-4">
+            <div class="w-10 h-10 rounded-full bg-brandSecondary/25 flex items-center justify-center font-serif text-brandPrimary">R</div>
+            <div>
+              <span class="text-xs font-semibold block text-brandPrimary">Rodrigo Alencar</span>
+              <span class="text-[9px] uppercase tracking-wider text-brandSecondary">Diretor Executivo</span>
             </div>
+          </div>
         </div>
-    </footer>
 
+        <!-- Depoimento 3 -->
+        <div class="bg-brandBg p-10 border border-brandSecondary/10 rounded-sm flex flex-col justify-between h-full">
+          <p class="text-xs italic text-brandPrimary/80 font-light leading-relaxed">
+            "Encontrei na Juliana uma profissional que entende de verdade o corpo feminino e a modulação hormonal metabólica. Consegui emagrecer de forma consistente sem perder a qualidade do meu cabelo, pele e massa muscular. Gratidão eterna pelo acolhimento personalizado."
+          </p>
+          <div class="mt-8 flex items-center space-x-4">
+            <div class="w-10 h-10 rounded-full bg-brandSecondary/25 flex items-center justify-center font-serif text-brandPrimary">C</div>
+            <div>
+              <span class="text-xs font-semibold block text-brandPrimary">Camila Negrão</span>
+              <span class="text-[9px] uppercase tracking-wider text-brandSecondary">Médica Dermatologista</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- O CONSULTÓRIO (DIRETRIZES DE LOCALIZAÇÃO PREMIUM) -->
+  <section id="consultorio" class="py-24 relative">
+    <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
+      
+      <!-- Detalhes Físicos e Espaço -->
+      <div class="lg:col-span-6 space-y-8">
+        <div class="space-y-3">
+          <span class="text-[11px] lg:text-xs uppercase tracking-superwide text-brandSecondary font-semibold block">AMBIENTE PREMIUM</span>
+          <h2 class="font-serif text-4xl lg:text-5xl font-light text-brandPrimary">Espaço Juliana Nigri</h2>
+        </div>
+        
+        <p class="text-sm text-brandPrimary/80 font-light leading-relaxed">
+          Pensado estrategicamente para garantir o máximo de privacidade, segurança e conforto absoluto em suas consultas presenciais. Um ambiente acolhedor, moderno e idealizado para proporcionar uma experiência integrada de saúde e bem-estar.
+        </p>
+
+        <div class="space-y-4 pt-4">
+          <div class="flex items-start space-x-3">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5 text-brandSecondary mt-1 shrink-0">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
+              <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
+            </svg>
+            <p class="text-xs text-brandPrimary/90">
+              <strong>Localização Premium:</strong> Av. das Américas, Edifício Executive Center — Barra da Tijuca, Rio de Janeiro / RJ. (Estacionamento rotativo privado com manobrista).
+            </p>
+          </div>
+          <div class="flex items-start space-x-3">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5 text-brandSecondary mt-1 shrink-0">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9 17.25v1.007a3 3 0 01-.879 2.122L7.5 21h9l-.621-.621A3 3 0 0115 18.257V17.25m6-12V15a2.25 2.25 0 01-2.25 2.25H5.25A2.25 2.25 0 013 15V5.25m18 0A2.25 2.25 0 0018.75 3H5.25A2.25 2.25 0 003 5.25m18 0V12a2.25 2.25 0 01-2.25 2.25H5.25A2.25 2.25 0 013 12V5.25" />
+            </svg>
+            <p class="text-xs text-brandPrimary/90">
+              <strong>Atendimento Online:</strong> Plataforma exclusiva criptografada com transmissão de alta definição para pacientes residentes fora do Rio de Janeiro ou no exterior.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Foto do Espaço/Sala Comercial Luxo -->
+      <div class="lg:col-span-6 flex justify-center">
+        <div class="w-full max-w-[500px] aspect-[16/10] overflow-hidden rounded-sm relative shadow-md">
+          <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=800&auto=format&fit=crop" 
+               alt="Consultório Juliana Nigri" 
+               class="w-full h-full object-cover grayscale-[15%]">
+          <div class="absolute inset-0 bg-brandPrimary/10"></div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- BANNER DE ENVOLVIMENTO / CALL TO ACTION FINAL -->
+  <section class="py-24 bg-brandPrimary text-brandBg relative overflow-hidden">
+    <!-- Círculos elegantes de fundo -->
+    <div class="absolute -right-20 -bottom-20 w-80 h-80 rounded-full bg-brandAccent/10 pointer-events-none"></div>
+    <div class="absolute -left-20 -top-20 w-80 h-80 rounded-full bg-brandSecondary/10 pointer-events-none"></div>
+
+    <div class="max-w-4xl mx-auto px-6 text-center space-y-8 relative z-10">
+      <span class="text-[11px] lg:text-xs uppercase tracking-superwide text-brandSecondary font-bold block">RECONECTE-SE COM SUA BIOQUÍMICA</span>
+      
+      <h2 class="font-serif text-4xl lg:text-6xl font-light leading-snug">
+        Pronto para desenhar o seu plano nutricional de alta costura?
+      </h2>
+      
+      <p class="text-xs lg:text-sm text-brandBg/80 font-light max-w-xl mx-auto leading-relaxed">
+        As vagas para o acompanhamento premium presencial na Barra da Tijuca ou Online são limitadas mensalmente. Garanta seu espaço e comece sua transformação com acompanhamento personalizado agora mesmo.
+      </p>
+
+      <div class="pt-4">
+        <a href="https://wa.me/5500000000000?text=Olá%20Dra%20Juliana,%20gostaria%20de%20agendar%20meu%20atendimento." target="_blank"
+           class="inline-block text-xs tracking-widest uppercase font-semibold bg-brandSecondary text-brandPrimary px-10 py-5 hover:bg-brandBg hover:text-brandPrimary transition-all duration-300 shadow-xl hover:scale-105">
+          Agendar Meu Atendimento Exclusivo
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- RODAPÉ DA AGÊNCIA & DIREITOS -->
+  <footer class="bg-brandBg py-16 border-t border-brandSecondary/25">
+    <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-12 gap-12 text-sm text-brandPrimary/80 font-light">
+      
+      <!-- Coluna Logo & Resumo -->
+      <div class="md:col-span-4 space-y-4">
+        <span class="font-serif text-2xl tracking-widest uppercase font-light text-brandPrimary block">
+          Juliana <span class="font-normal text-brandSecondary">Nigri</span>
+        </span>
+        <p class="text-xs text-brandPrimary/70 leading-relaxed max-w-xs">
+          Agregando sofisticação, precisão científica e longevidade à sua saúde e desempenho físico.
+        </p>
+        <span class="text-[10px] text-brandAccent font-semibold block uppercase tracking-widest">CRN 4-000000</span>
+      </div>
+
+      <!-- Coluna Navegação Rápida -->
+      <div class="md:col-span-4 space-y-4">
+        <span class="text-xs font-semibold uppercase tracking-wider text-brandPrimary block">NAVEGAÇÃO</span>
+        <ul class="space-y-2 text-xs">
+          <li><a href="#sobre" class="hover:text-brandSecondary transition-colors">A Profissional</a></li>
+          <li><a href="#especialidades" class="hover:text-brandSecondary transition-colors">Áreas de Atuação</a></li>
+          <li><a href="#metodo" class="hover:text-brandSecondary transition-colors">O Método</a></li>
+          <li><a href="https://wa.me/5500000000000" target="_blank" class="hover:text-brandSecondary transition-colors">Contato Direto</a></li>
+        </ul>
+      </div>
+
+      <!-- Coluna Contatos / Atendimento -->
+      <div class="md:col-span-4 space-y-4 text-xs">
+        <span class="text-xs font-semibold uppercase tracking-wider text-brandPrimary block">ATENDIMENTO</span>
+        <p class="text-brandPrimary/70 leading-relaxed">
+          Av. das Américas — Barra da Tijuca, Rio de Janeiro / RJ.<br>
+          E-mail: contato@juliananigri.com.br<br>
+          WhatsApp: (21) 99999-9999
+        </p>
+        <div class="flex space-x-4 pt-2">
+          <!-- Ícone Instagram Simples -->
+          <a href="#" class="text-brandPrimary hover:text-brandSecondary transition-colors">
+            <span class="font-semibold text-xs tracking-wider">INSTAGRAM</span>
+          </a>
+          <span class="text-brandSecondary/40">|</span>
+          <a href="#" class="text-brandPrimary hover:text-brandSecondary transition-colors">
+            <span class="font-semibold text-xs tracking-wider">LINKEDIN</span>
+          </a>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Direitos Autorais e Marca da Agência -->
+    <div class="max-w-7xl mx-auto px-6 mt-12 pt-8 border-t border-brandSecondary/10 flex flex-col sm:flex-row justify-between items-center text-[10px] text-brandPrimary/65 space-y-4 sm:space-y-0">
+      <p>© 2024 Juliana Nigri Nutrição Clínica e Esportiva. Todos os direitos reservados.</p>
+      <p class="flex items-center space-x-1">
+        <span>Desenvolvido por</span> 
+        <a href="#" class="font-bold hover:text-brandSecondary transition-colors text-brandPrimary uppercase tracking-widest">RD Exclusive</a>
+      </p>
+    </div>
+  </footer>
+
+  <!-- BOTÃO WHATSAPP FLUTUANTE PREMIUM -->
+  <a href="https://wa.me/5500000000000?text=Olá%20Dra%20Juliana,%20gostaria%20de%20tirar%20algumas%20dúvidas%20sobre%20a%20consulta." target="_blank" 
+     class="fixed bottom-8 right-8 z-50 bg-brandPrimary text-white hover:bg-brandSecondary hover:text-brandPrimary p-4 rounded-full shadow-2xl transition-all duration-300 hover:scale-110 flex items-center justify-center border border-brandSecondary/25"
+     aria-label="Fale Conosco pelo WhatsApp">
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M8.625 12a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0H8.25m4.125 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0h-.375m4.125 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0h-.375m1.5-3.375A3.375 3.375 0 1118 12.75c0-.996-.43-1.89-1.125-2.507A3.354 3.354 0 0118 8.625c0-1.031-.58-1.93-1.425-2.381a3.375 3.375 0 11-5.15 3.75 3.375 3.375 0 11-4.825 0 3.375 3.375 0 113.75-5.15A3.375 3.375 0 1113.5 9h.375z" />
+    </svg>
+  </a>
+
+  <!-- SCRIPT PARA INTERAÇÃO MOBILE & DESIGN -->
+  <script>
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+
+    function toggleMenu() {
+      mobileMenu.classList.toggle('hidden');
+    }
+
+    mobileMenuBtn.addEventListener('click', toggleMenu);
+
+    // Efeito sutil no Header conforme o Scroll
+    window.addEventListener('scroll', () => {
+      const header = document.querySelector('header');
+      if (window.scrollY > 50) {
+        header.classList.add('py-2', 'shadow-md');
+        header.classList.remove('py-4');
+      } else {
+        header.classList.remove('py-2', 'shadow-md');
+      }
+    });
+  </script>
 </body>
 </html>
