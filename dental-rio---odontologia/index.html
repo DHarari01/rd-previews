@@ -3,14 +3,18 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dental Rio - Odontologia de Emergência e Estética de Alto Padrão</title>
+  <title>Dental Rio | Odontologia de Emergência e Estética Premium</title>
+  <meta name="description" content="Atendimento odontológico de urgência 24h e tratamentos estéticos de altíssimo padrão no Rio de Janeiro.">
   
-  <!-- Google Fonts -->
+  <!-- Fontes Premium -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
   
-  <!-- Tailwind CSS CDN -->
+  <!-- Ícones -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- Tailwind CSS & Configuração de Design System -->
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
@@ -18,430 +22,419 @@
         extend: {
           colors: {
             brandPrimary: '#7A00DF',
-            brandSecondary: '#150E22',
-            brandAccent: '#C5A880',
-            brandBg: '#FAF8F5',
-            brandMuted: '#6B7280',
-            brandDark: '#0D0518'
+            brandSecondary: '#D4B26F',
+            brandAccent: '#1E122D',
+            brandBg: '#FAF9FC'
           },
           fontFamily: {
             serif: ['Playfair Display', 'serif'],
             sans: ['Inter', 'sans-serif']
+          },
+          boxShadow: {
+            premium: '0 20px 40px -15px rgba(122, 0, 223, 0.1)',
+            gold: '0 20px 40px -15px rgba(212, 178, 111, 0.25)'
           }
         }
       }
     }
   </script>
-  <style>
-    .glass-effect {
-      background: rgba(255, 255, 255, 0.85);
-      backdrop-filter: blur(12px);
-      -webkit-backdrop-filter: blur(12px);
-    }
-    .text-gradient {
-      background: linear-gradient(135deg, #7A00DF 0%, #A855F7 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
-    .gold-gradient {
-      background: linear-gradient(135deg, #C5A880 0%, #E2D1B9 100%);
-    }
-  </style>
 </head>
-<body class="font-sans bg-brandBg text-brandSecondary antialiased overflow-x-hidden">
+<body class="font-sans bg-brandBg text-brandAccent antialiased selection:bg-brandPrimary selection:text-white">
 
-  <!-- HEADER -->
-  <header class="fixed top-0 left-0 w-full z-50 glass-effect border-b border-purple-100 transition-all duration-300">
-    <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-      
-      <!-- Logo Container -->
-      <a href="#inicio" class="flex items-center gap-3 group">
-        <div class="w-10 h-10 rounded-full bg-white flex items-center justify-center p-1.5 shadow-md border border-purple-100 group-hover:scale-105 transition-transform">
-          <img src="https://www.google.com/s2/favicons?domain=dentalrio.com.br&sz=128" alt="Dental Rio Logo" class="w-full h-full object-contain">
-        </div>
+  <!-- HEADER NAVEGAÇÃO (FROSTED GLASS EFFECT) -->
+  <header class="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md border-b border-brandPrimary/10 transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-6 h-24 flex items-center justify-between">
+      <!-- Logo Centralizado e Ajustado -->
+      <a href="#" class="flex items-center gap-3 group">
+        <img src="https://www.google.com/s2/favicons?domain=dentalrio.com.br&sz=128" alt="Dental Rio Logo" class="h-10 w-10 object-contain rounded-lg shadow-sm border border-brandPrimary/20 group-hover:scale-105 transition-transform">
         <div class="flex flex-col">
-          <span class="font-serif text-lg font-bold tracking-tight text-brandSecondary leading-none">Dental Rio</span>
-          <span class="text-[10px] tracking-widest text-brandPrimary uppercase font-bold mt-0.5">Odontologia</span>
+          <span class="font-serif text-xl font-bold tracking-tight text-brandAccent">Dental Rio</span>
+          <span class="text-[10px] tracking-widest text-brandPrimary uppercase font-semibold">Odontologia</span>
         </div>
       </a>
 
-      <!-- Desktop Navigation -->
-      <nav class="hidden lg:flex items-center gap-8 font-medium text-sm text-brandSecondary/80">
+      <!-- Menu Desktop -->
+      <nav class="hidden lg:flex items-center gap-8 font-medium text-sm text-brandAccent/80">
         <a href="#emergencia" class="hover:text-brandPrimary transition-colors">Emergência 24h</a>
-        <a href="#estetica" class="hover:text-brandPrimary transition-colors">Estética Premium</a>
-        <a href="#implantes" class="hover:text-brandPrimary transition-colors">Implantes</a>
+        <a href="#estetica" class="hover:text-brandPrimary transition-colors">Odontologia Estética</a>
+        <a href="#tratamentos" class="hover:text-brandPrimary transition-colors">Especialidades</a>
         <a href="#sobre" class="hover:text-brandPrimary transition-colors">A Clínica</a>
         <a href="#depoimentos" class="hover:text-brandPrimary transition-colors">Depoimentos</a>
       </nav>
 
-      <!-- CTA Buttons Desktop -->
+      <!-- CTA Header -->
       <div class="hidden lg:flex items-center gap-4">
-        <a href="tel:0800" class="text-xs font-bold text-red-600 flex items-center gap-2 px-3 py-1.5 rounded-full bg-red-50 border border-red-200">
-          <span class="w-2 h-2 rounded-full bg-red-600 animate-pulse"></span>
-          Urgência 24h
+        <a href="tel:0800000000" class="text-sm font-semibold text-brandPrimary flex items-center gap-2 hover:opacity-80 transition-opacity">
+          <i class="fa-solid fa-phone-volume animate-pulse"></i> (21) 99999-9999
         </a>
-        <a href="https://wa.me/5521999999999" target="_blank" class="bg-brandPrimary text-white text-sm font-semibold px-6 py-2.5 rounded-full hover:bg-brandSecondary transition-all duration-300 shadow-lg shadow-purple-200 hover:shadow-none flex items-center gap-2">
-          Agendar Consulta
-          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+        <a href="https://wa.me/5521999999999" target="_blank" class="bg-brandPrimary text-white px-6 py-3 rounded-full text-sm font-semibold hover:bg-brandPrimary/90 transition-all duration-300 shadow-premium flex items-center gap-2">
+          <i class="fa-brands fa-whatsapp text-lg"></i> Agendar Consulta
         </a>
       </div>
 
-      <!-- Mobile Menu Toggle -->
-      <button id="menuBtn" class="lg:hidden p-2 text-brandSecondary focus:outline-none">
-        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path id="menuIcon" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"/>
-        </svg>
+      <!-- Menu Mobile Trigger -->
+      <button onclick="toggleMobileMenu()" class="lg:hidden p-2 text-brandAccent hover:text-brandPrimary focus:outline-none">
+        <i class="fa-solid fa-bars text-2xl"></i>
       </button>
     </div>
 
-    <!-- Mobile Navigation Drawer -->
-    <div id="mobileMenu" class="hidden lg:hidden absolute top-20 left-0 w-full bg-white border-b border-purple-100 shadow-xl py-6 px-6 transition-all duration-300">
-      <nav class="flex flex-col gap-4 font-medium text-brandSecondary/90 mb-6">
-        <a href="#emergencia" class="mobile-link py-2 border-b border-gray-50">Emergência 24h</a>
-        <a href="#estetica" class="mobile-link py-2 border-b border-gray-50">Estética Premium</a>
-        <a href="#implantes" class="mobile-link py-2 border-b border-gray-50">Implantes</a>
-        <a href="#sobre" class="mobile-link py-2 border-b border-gray-50">A Clínica</a>
-        <a href="#depoimentos" class="mobile-link py-2">Depoimentos</a>
-      </nav>
+    <!-- Mobile Menu Dropdown -->
+    <div id="mobile-menu" class="hidden lg:hidden bg-white border-b border-brandPrimary/10 px-6 py-6 space-y-4 absolute left-0 right-0 shadow-lg">
+      <a href="#emergencia" onclick="toggleMobileMenu()" class="block font-medium hover:text-brandPrimary">Emergência 24h</a>
+      <a href="#estetica" onclick="toggleMobileMenu()" class="block font-medium hover:text-brandPrimary">Odontologia Estética</a>
+      <a href="#tratamentos" onclick="toggleMobileMenu()" class="block font-medium hover:text-brandPrimary">Especialidades</a>
+      <a href="#sobre" onclick="toggleMobileMenu()" class="block font-medium hover:text-brandPrimary">A Clínica</a>
+      <a href="#depoimentos" onclick="toggleMobileMenu()" class="block font-medium hover:text-brandPrimary">Depoimentos</a>
+      <hr class="border-brandPrimary/10">
       <div class="flex flex-col gap-3">
-        <a href="tel:0800" class="w-full text-center py-3 rounded-full bg-red-50 text-red-600 font-bold border border-red-200 text-sm flex items-center justify-center gap-2">
-          <span class="w-2.5 h-2.5 rounded-full bg-red-600 animate-pulse"></span>
-          Plantão de Emergência 24h
+        <a href="tel:0800000000" class="text-center font-semibold text-brandPrimary py-2">
+          <i class="fa-solid fa-phone-volume"></i> Chamar Emergência 24h
         </a>
-        <a href="https://wa.me/5521999999999" target="_blank" class="w-full text-center bg-brandPrimary text-white py-3 rounded-full font-semibold shadow-md hover:bg-brandSecondary transition-all">
-          Falar com Especialista
+        <a href="https://wa.me/5521999999999" target="_blank" class="bg-brandPrimary text-white text-center py-3 rounded-full font-semibold shadow-premium">
+          <i class="fa-brands fa-whatsapp mr-2"></i> WhatsApp Clínico
         </a>
       </div>
     </div>
   </header>
 
-  <!-- HERO SECTION -->
-  <section id="inicio" class="pt-32 pb-20 lg:pt-44 lg:pb-32 relative overflow-hidden bg-gradient-to-b from-[#FAF8F5] via-[#F4EFFF] to-[#FAF8F5]">
-    
-    <!-- Background Decor Elements -->
-    <div class="absolute top-1/4 right-0 w-96 h-96 bg-purple-200 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-blob"></div>
-    <div class="absolute bottom-10 left-10 w-72 h-72 bg-amber-100 rounded-full mix-blend-multiply filter blur-2xl opacity-40 animate-blob animation-delay-2000"></div>
+  <!-- HERO SECTION (PADDINGS AJUSTADOS PARA EVITAR CHOQUE) -->
+  <section class="relative pt-36 md:pt-44 pb-20 overflow-hidden bg-gradient-to-b from-[#FAF8F5] via-white to-brandBg">
+    <!-- Efeitos de Fundo Abstratos -->
+    <div class="absolute top-20 right-0 w-96 h-96 bg-brandPrimary/5 rounded-full filter blur-3xl pointer-events-none"></div>
+    <div class="absolute bottom-10 left-10 w-72 h-72 bg-brandSecondary/5 rounded-full filter blur-3xl pointer-events-none"></div>
 
-    <div class="max-w-7xl mx-auto px-6 relative z-10">
-      <div class="grid lg:grid-cols-12 gap-12 lg:gap-8 items-center">
-        
-        <!-- Left Side: Copy -->
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="grid lg:grid-cols-12 gap-12 items-center">
+        <!-- Texto Hero -->
         <div class="lg:col-span-7 space-y-8">
-          <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-purple-100 border border-purple-200/50 text-xs font-semibold text-brandPrimary tracking-wider uppercase">
-            <span class="w-2 h-2 rounded-full bg-brandPrimary animate-pulse"></span>
-            Referência em Estética & Emergência no Rio
+          <!-- Tag Exclusiva -->
+          <div class="inline-flex items-center gap-2 bg-brandPrimary/10 px-4 py-2 rounded-full border border-brandPrimary/20">
+            <span class="w-2 h-2 rounded-full bg-brandPrimary animate-ping"></span>
+            <span class="text-xs font-bold text-brandPrimary tracking-wider uppercase">Plantão de Emergência 24h & Estética</span>
           </div>
 
-          <h1 class="font-serif text-4xl sm:text-5xl lg:text-6xl text-brandSecondary font-bold leading-normal lg:leading-relaxed">
-            Sua saúde bucal e a <span class="text-gradient">estética do seu sorriso</span> em mãos de especialistas.
+          <!-- Título com leading-normal para evitar cortes -->
+          <h1 class="font-serif text-4xl md:text-6xl text-brandAccent font-bold leading-normal">
+            A arte de criar sorrisos, a agilidade de <span class="text-brandPrimary">cuidar de você.</span>
           </h1>
 
-          <p class="text-brandMuted text-lg max-w-xl leading-relaxed">
-            Unimos o que há de mais moderno na odontologia estética com um pronto atendimento de urgência 24 horas. Tenha o sorriso dos seus sonhos com conforto, exclusividade e segurança.
+          <p class="text-lg text-brandAccent/70 leading-relaxed max-w-xl">
+            A Dental Rio combina tecnologia de ponta, atendimento emergencial imediato e o design estético de sorrisos mais sofisticado do Rio de Janeiro. Seu bem-estar em primeiro lugar.
           </p>
 
-          <div class="flex flex-col sm:flex-row gap-4 pt-4">
-            <a href="https://wa.me/5521999999999" target="_blank" class="bg-brandPrimary text-white font-semibold px-8 py-4 rounded-full hover:bg-brandSecondary transition-all text-center shadow-xl shadow-purple-200 flex items-center justify-center gap-3 group">
-              Fale Conosco pelo WhatsApp
-              <svg class="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+          <!-- CTAs Principais -->
+          <div class="flex flex-col sm:flex-row items-center gap-4 pt-4">
+            <a href="https://wa.me/5521999999999" target="_blank" class="w-full sm:w-auto bg-brandPrimary text-white px-8 py-4 rounded-full font-bold shadow-premium hover:bg-brandPrimary/90 hover:scale-[1.02] transition-all duration-300 text-center flex items-center justify-center gap-3">
+              <i class="fa-brands fa-whatsapp text-xl"></i> Agendar Avaliação Estética
             </a>
-            <a href="#emergencia" class="bg-white hover:bg-gray-50 text-brandSecondary font-semibold px-8 py-4 rounded-full border border-gray-200 text-center transition-all">
-              Emergência 24 Horas
+            <a href="#emergencia" class="w-full sm:w-auto bg-white border-2 border-red-500 text-red-600 px-8 py-4 rounded-full font-bold hover:bg-red-50 hover:scale-[1.02] transition-all duration-300 text-center flex items-center justify-center gap-3">
+              <span class="w-2.5 h-2.5 rounded-full bg-red-600 animate-pulse"></span>
+              Emergência 24h
             </a>
           </div>
 
-          <!-- Mini Badges -->
-          <div class="grid grid-cols-3 gap-4 pt-8 border-t border-purple-100">
-            <div>
-              <p class="font-serif text-3xl font-bold text-brandPrimary">15k+</p>
-              <p class="text-xs text-brandMuted uppercase tracking-wider mt-1">Sorrisos Transformados</p>
-            </div>
+          <!-- Diferenciais Rápidos -->
+          <div class="grid grid-cols-3 gap-6 pt-8 border-t border-brandPrimary/10">
             <div>
               <p class="font-serif text-3xl font-bold text-brandPrimary">24h</p>
-              <p class="text-xs text-brandMuted uppercase tracking-wider mt-1">Atendimento de Urgência</p>
+              <p class="text-xs text-brandAccent/60 uppercase tracking-wider font-semibold mt-1">Atendimento Urgente</p>
             </div>
             <div>
-              <p class="font-serif text-3xl font-bold text-brandPrimary">Nota 5.0</p>
-              <p class="text-xs text-brandMuted uppercase tracking-wider mt-1">Avaliações no Google</p>
+              <p class="font-serif text-3xl font-bold text-brandSecondary">10k+</p>
+              <p class="text-xs text-brandAccent/60 uppercase tracking-wider font-semibold mt-1">Sorrisos Desenhados</p>
+            </div>
+            <div>
+              <p class="font-serif text-3xl font-bold text-brandAccent">100%</p>
+              <p class="text-xs text-brandAccent/60 uppercase tracking-wider font-semibold mt-1">Tecnologia Digital</p>
             </div>
           </div>
         </div>
 
-        <!-- Right Side: Graphic / Placeholder Image -->
+        <!-- Imagem / Placeholder Sofisticado -->
         <div class="lg:col-span-5 relative">
-          <div class="relative mx-auto max-w-[420px] aspect-[4/5] rounded-3xl overflow-hidden shadow-2xl border-4 border-white bg-slate-200 group">
+          <div class="relative mx-auto max-w-[450px]">
+            <!-- Molduras Decorativas com as cores da marca -->
+            <div class="absolute -inset-4 rounded-3xl border-2 border-brandSecondary/30 transform translate-x-4 translate-y-4 pointer-events-none"></div>
+            <div class="absolute -inset-4 rounded-3xl border-2 border-brandPrimary/10 transform -translate-x-2 -translate-y-2 pointer-events-none"></div>
             
-            <!-- Elegant Brand Placeholder Image -->
-            <img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&q=80&w=800" alt="Consultório Dental Rio" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
-            
-            <!-- Floating Premium Card overlay -->
-            <div class="absolute bottom-6 left-6 right-6 glass-effect p-6 rounded-2xl border border-white/40 shadow-lg">
-              <div class="flex items-center gap-4">
-                <div class="w-12 h-12 rounded-full gold-gradient flex items-center justify-center text-white">
-                  <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
-                </div>
+            <!-- Imagem Principal (Dentista Estética Premium) -->
+            <div class="relative overflow-hidden rounded-2xl shadow-2xl bg-white aspect-[4/5]">
+              <img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=800&q=80" alt="Dra. Dental Rio" class="w-full h-full object-cover">
+              
+              <!-- Tag Flutuante no Topo -->
+              <div class="absolute top-4 left-4 bg-brandAccent/95 backdrop-blur-md text-white px-4 py-2 rounded-xl border border-brandSecondary/20 flex items-center gap-2">
+                <i class="fa-solid fa-award text-brandSecondary"></i>
+                <span class="text-xs font-semibold tracking-wider">Padrão RD Gold</span>
+              </div>
+
+              <!-- Tag Flutuante no Rodapé -->
+              <div class="absolute bottom-4 right-4 left-4 bg-white/95 backdrop-blur-md p-4 rounded-xl shadow-lg border border-brandPrimary/10 flex items-center justify-between">
                 <div>
-                  <p class="text-xs text-brandMuted font-semibold uppercase tracking-wider">Padrão de Excelência</p>
-                  <p class="text-sm font-bold text-brandSecondary mt-0.5">Tecnologia Alemã e Alta Precisão</p>
+                  <p class="text-xs text-brandAccent/60 font-semibold uppercase">Responsável Técnico</p>
+                  <p class="font-serif text-sm font-bold text-brandAccent">Dr. Rodrigo Silva, CRO-RJ</p>
+                </div>
+                <div class="bg-brandPrimary/10 p-2 rounded-lg">
+                  <i class="fa-solid fa-stethoscope text-brandPrimary"></i>
                 </div>
               </div>
             </div>
           </div>
         </div>
-
       </div>
     </div>
   </section>
 
-  <!-- EMERGENCY 24h BANNER -->
-  <section id="emergencia" class="py-16 bg-gradient-to-r from-red-600 to-brandPrimary text-white relative overflow-hidden">
-    <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_var(--tw-gradient-stops))] from-white/10 via-transparent to-transparent"></div>
+  <!-- BANNER DE EMERGÊNCIA (URGENTE & SOFISTICADO) -->
+  <section id="emergencia" class="bg-brandAccent text-white py-16 relative overflow-hidden">
+    <div class="absolute -right-10 top-1/2 -translate-y-1/2 w-80 h-80 bg-red-600/10 rounded-full blur-3xl"></div>
     <div class="max-w-7xl mx-auto px-6 relative z-10">
-      <div class="flex flex-col lg:flex-row items-center justify-between gap-8">
-        <div class="space-y-4 max-w-3xl">
-          <span class="inline-block px-3 py-1 rounded-full bg-white/20 text-xs font-bold uppercase tracking-widest animate-pulse">Plantão de Urgência</span>
-          <h2 class="font-serif text-3xl sm:text-4xl font-bold leading-normal">Está sentindo dor de dente ou sofreu algum trauma bucal?</h2>
-          <p class="text-white/80 text-base sm:text-lg">
-            Nossa equipe de plantão está pronta para resolver o seu problema imediatamente. Atendimento humanizado, rápido e sem burocracia para aliviar sua dor.
-          </p>
-        </div>
-        <div class="flex flex-col sm:flex-row gap-4 w-full lg:w-auto shrink-0">
-          <a href="tel:0800" class="w-full sm:w-auto bg-white text-red-600 hover:bg-amber-100 font-bold px-8 py-4 rounded-full text-center shadow-lg flex items-center justify-center gap-2">
-            <svg class="w-5 h-5 animate-bounce" fill="currentColor" viewBox="0 0 20 20"><path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.3 11.3 0 005.455 5.455l.773-1.548a1 1 0 011.06-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/></svg>
-            Ligar para Emergência
-          </a>
-          <a href="https://wa.me/5521999999999" target="_blank" class="w-full sm:w-auto bg-transparent border-2 border-white hover:bg-white/10 text-white font-bold px-8 py-4 rounded-full text-center flex items-center justify-center gap-2">
-            WhatsApp do Plantão
-          </a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- SPECIALTIES (ESTÉTICA PREMIUM & IMPLANTES) -->
-  <section id="estetica" class="py-24 bg-white">
-    <div class="max-w-7xl mx-auto px-6">
-      
-      <!-- Section Intro -->
-      <div class="text-center max-w-2xl mx-auto space-y-4 mb-20">
-        <span class="text-brandPrimary font-bold text-xs uppercase tracking-widest">Procedimentos Exclusivos</span>
-        <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold leading-normal text-brandSecondary">Reinvente o seu Sorriso com Tecnologia de Ponta</h2>
-        <p class="text-brandMuted">Planejamento digital personalizado para criar o sorriso ideal que valoriza a sua beleza natural.</p>
-      </div>
-
-      <!-- Specialties Grid -->
-      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-        
-        <!-- Card 1 -->
-        <div class="group bg-brandBg p-8 rounded-3xl border border-purple-100 hover:border-brandPrimary/30 hover:shadow-xl transition-all duration-300 flex flex-col justify-between">
-          <div class="space-y-6">
-            <div class="w-14 h-14 rounded-2xl bg-purple-100 flex items-center justify-center text-brandPrimary group-hover:bg-brandPrimary group-hover:text-white transition-all duration-300">
-              <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"/></svg>
+      <div class="bg-gradient-to-r from-red-950/40 via-brandAccent to-brandAccent p-8 md:p-12 rounded-3xl border border-red-500/30 shadow-2xl">
+        <div class="grid lg:grid-cols-12 gap-8 items-center">
+          <div class="lg:col-span-8 space-y-4">
+            <div class="inline-flex items-center gap-2 bg-red-500/20 px-4 py-1.5 rounded-full border border-red-500/40 text-red-400 font-bold text-xs uppercase tracking-widest">
+              <i class="fa-solid fa-circle-exclamation animate-pulse"></i> Plantão Ativo Agora
             </div>
-            <div class="space-y-2">
-              <h3 class="font-serif text-xl font-bold text-brandSecondary">Lentes de Contato Dental</h3>
-              <p class="text-brandMuted text-sm leading-relaxed">
-                Facetas ultrafinas de porcelana que corrigem imperfeições de cor, formato e alinhamento com desgaste mínimo.
-              </p>
-            </div>
-          </div>
-          <a href="https://wa.me/5521999999999" target="_blank" class="mt-8 inline-flex items-center gap-2 text-brandPrimary font-semibold text-sm hover:underline">
-            Saber mais <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
-          </a>
-        </div>
-
-        <!-- Card 2 -->
-        <div id="implantes" class="group bg-brandBg p-8 rounded-3xl border border-purple-100 hover:border-brandPrimary/30 hover:shadow-xl transition-all duration-300 flex flex-col justify-between">
-          <div class="space-y-6">
-            <div class="w-14 h-14 rounded-2xl bg-purple-100 flex items-center justify-center text-brandPrimary group-hover:bg-brandPrimary group-hover:text-white transition-all duration-300">
-              <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"/></svg>
-            </div>
-            <div class="space-y-2">
-              <h3 class="font-serif text-xl font-bold text-brandSecondary">Implantes & Carga Rápida</h3>
-              <p class="text-brandMuted text-sm leading-relaxed">
-                Recupere a mastigação e estética com tecnologia de implantes indolores de última geração. Dentes fixos rapidamente.
-              </p>
-            </div>
-          </div>
-          <a href="https://wa.me/5521999999999" target="_blank" class="mt-8 inline-flex items-center gap-2 text-brandPrimary font-semibold text-sm hover:underline">
-            Saber mais <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
-          </a>
-        </div>
-
-        <!-- Card 3 -->
-        <div class="group bg-brandBg p-8 rounded-3xl border border-purple-100 hover:border-brandPrimary/30 hover:shadow-xl transition-all duration-300 flex flex-col justify-between">
-          <div class="space-y-6">
-            <div class="w-14 h-14 rounded-2xl bg-purple-100 flex items-center justify-center text-brandPrimary group-hover:bg-brandPrimary group-hover:text-white transition-all duration-300">
-              <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364-6.364l-.707.707M6.343 17.657l-.707.707m0-12.728l.707.707m12.728 12.728l.707.707M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
-            </div>
-            <div class="space-y-2">
-              <h3 class="font-serif text-xl font-bold text-brandSecondary">Alinhadores Invisíveis</h3>
-              <p class="text-brandMuted text-sm leading-relaxed">
-                Tratamento ortodôntico moderno com placas transparentes e confortáveis, totalmente imperceptíveis no dia a dia.
-              </p>
-            </div>
-          </div>
-          <a href="https://wa.me/5521999999999" target="_blank" class="mt-8 inline-flex items-center gap-2 text-brandPrimary font-semibold text-sm hover:underline">
-            Saber mais <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
-          </a>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- CLINIC OVERVIEW / ABOUT -->
-  <section id="sobre" class="py-24 bg-gradient-to-b from-white to-brandBg">
-    <div class="max-w-7xl mx-auto px-6">
-      <div class="grid lg:grid-cols-12 gap-12 lg:gap-16 items-center">
-        
-        <!-- Left Column: Elegant Placeholder Image of Clinic/Dentist -->
-        <div class="lg:col-span-6 relative">
-          <div class="aspect-video lg:aspect-[4/5] rounded-3xl overflow-hidden shadow-2xl relative bg-slate-100 border border-purple-100">
-            <img src="https://images.unsplash.com/photo-1579684389782-64d84b5e905d?auto=format&fit=crop&q=80&w=800" alt="Dra Dental Rio" class="w-full h-full object-cover">
-            
-            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
-            
-            <!-- In-image Info Card -->
-            <div class="absolute bottom-6 left-6 right-6 text-white">
-              <p class="text-brandAccent font-semibold uppercase text-xs tracking-wider">Segurança Máxima</p>
-              <h4 class="font-serif text-lg font-bold mt-1">Ambiente Hospitalar e Biossegurança Rígida</h4>
-            </div>
-          </div>
-        </div>
-
-        <!-- Right Column: Info & Content -->
-        <div class="lg:col-span-6 space-y-8">
-          <div class="space-y-4">
-            <span class="text-brandPrimary font-bold text-xs uppercase tracking-widest">Sobre a Dental Rio</span>
-            <h2 class="font-serif text-3xl sm:text-4xl font-bold leading-normal text-brandSecondary">Estrutura de ponta para cuidar de você e sua família.</h2>
-            <p class="text-brandMuted leading-relaxed">
-              Localizada em ponto nobre do Rio de Janeiro, a Dental Rio foi projetada sob o conceito de odontologia boutique: unindo alta tecnologia clínica com uma experiência de atendimento acolhedora e personalizada.
+            <h2 class="font-serif text-3xl md:text-5xl font-bold leading-normal">
+              Dor de dente ou trauma? <br class="hidden md:inline"><span class="text-red-500">Atendimento imediato 24h</span>
+            </h2>
+            <p class="text-white/70 max-w-xl text-sm md:text-base leading-relaxed">
+              Equipe de plantão pronta para aliviar sua dor, tratar canais, extrações urgentes, quebras de próteses e dentes danificados. Sem filas e com acolhimento humanizado.
             </p>
           </div>
-
-          <div class="space-y-4">
-            <!-- Benefit item 1 -->
-            <div class="flex items-start gap-4">
-              <div class="w-6 h-6 rounded-full bg-purple-100 flex items-center justify-center text-brandPrimary shrink-0 mt-1">
-                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
-              </div>
-              <div>
-                <h4 class="font-bold text-brandSecondary">Equipe Multidisciplinar</h4>
-                <p class="text-sm text-brandMuted">Especialistas prontos para cobrir todas as áreas da saúde e estética dental.</p>
-              </div>
-            </div>
-            
-            <!-- Benefit item 2 -->
-            <div class="flex items-start gap-4">
-              <div class="w-6 h-6 rounded-full bg-purple-100 flex items-center justify-center text-brandPrimary shrink-0 mt-1">
-                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
-              </div>
-              <div>
-                <h4 class="font-bold text-brandSecondary">Radiologia Digital Integrada</h4>
-                <p class="text-sm text-brandMuted">Seus exames feitos com agilidade diretamente dentro da clínica.</p>
-              </div>
-            </div>
-
-            <!-- Benefit item 3 -->
-            <div class="flex items-start gap-4">
-              <div class="w-6 h-6 rounded-full bg-purple-100 flex items-center justify-center text-brandPrimary shrink-0 mt-1">
-                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
-              </div>
-              <div>
-                <h4 class="font-bold text-brandSecondary">Sedação Consciente</h4>
-                <p class="text-sm text-brandMuted">Procedimentos confortáveis e livres de ansiedade ou dor.</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="pt-4">
-            <a href="https://wa.me/5521999999999" target="_blank" class="inline-flex items-center gap-3 bg-brandPrimary text-white font-semibold px-8 py-4 rounded-full hover:bg-brandSecondary transition-all shadow-lg shadow-purple-200">
-              Agende sua Visita de Avaliação
-              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+          <div class="lg:col-span-4 flex flex-col gap-4">
+            <a href="tel:0800000000" class="w-full bg-red-600 hover:bg-red-700 text-white py-4 rounded-xl font-bold transition-all duration-300 text-center flex items-center justify-center gap-3 shadow-lg shadow-red-900/30">
+              <i class="fa-solid fa-phone-flip text-xl animate-bounce"></i> Ligar para Plantão 24h
+            </a>
+            <a href="https://wa.me/5521999999999" target="_blank" class="w-full bg-white/10 hover:bg-white/20 text-white border border-white/20 py-4 rounded-xl font-bold transition-all duration-300 text-center flex items-center justify-center gap-3">
+              <i class="fa-brands fa-whatsapp text-xl"></i> Falar no WhatsApp Urgente
             </a>
           </div>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SEÇÃO DE TRATAMENTOS (ESTRUTURADO / TABS) -->
+  <section id="estetica" class="py-24 bg-white">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="text-center max-w-2xl mx-auto space-y-4 mb-16">
+        <span class="text-xs font-bold text-brandPrimary uppercase tracking-widest">Sua Melhor Versão</span>
+        <h2 class="font-serif text-3xl md:text-4xl text-brandAccent font-bold leading-normal">
+          Especialidades Desenhadas para Sua Autoestima e Saúde
+        </h2>
+        <div class="w-16 h-1 bg-brandSecondary mx-auto rounded"></div>
+      </div>
+
+      <!-- Abas Clínicas / Estrutura de Atendimento -->
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        
+        <!-- Tratamento 1: Estética -->
+        <div class="group bg-brandBg p-8 rounded-2xl border border-brandPrimary/5 hover:border-brandPrimary/30 hover:bg-white hover:shadow-premium transition-all duration-300 flex flex-col justify-between h-full">
+          <div>
+            <div class="w-14 h-14 bg-brandPrimary/10 rounded-xl flex items-center justify-center text-brandPrimary mb-6 group-hover:bg-brandPrimary group-hover:text-white transition-colors">
+              <i class="fa-solid fa-sparkles text-2xl"></i>
+            </div>
+            <h3 class="font-serif text-xl font-bold text-brandAccent mb-3 leading-relaxed">Odontologia Estética</h3>
+            <p class="text-sm text-brandAccent/70 leading-relaxed mb-6">
+              Lentes de contato de porcelana, facetas e clareamento dental a laser com planejamento digital do sorriso.
+            </p>
+          </div>
+          <a href="https://wa.me/5521999999999" target="_blank" class="text-sm font-bold text-brandPrimary flex items-center gap-2 group-hover:underline">
+            Saber mais <i class="fa-solid fa-arrow-right"></i>
+          </a>
+        </div>
+
+        <!-- Tratamento 2: Alinhadores -->
+        <div class="group bg-brandBg p-8 rounded-2xl border border-brandPrimary/5 hover:border-brandPrimary/30 hover:bg-white hover:shadow-premium transition-all duration-300 flex flex-col justify-between h-full">
+          <div>
+            <div class="w-14 h-14 bg-brandPrimary/10 rounded-xl flex items-center justify-center text-brandPrimary mb-6 group-hover:bg-brandPrimary group-hover:text-white transition-colors">
+              <i class="fa-solid fa-wand-magic-sparkles text-2xl"></i>
+            </div>
+            <h3 class="font-serif text-xl font-bold text-brandAccent mb-3 leading-relaxed">Ortodontia Invisível</h3>
+            <p class="text-sm text-brandAccent/70 leading-relaxed mb-6">
+              Alinhadores invisíveis de última geração. Alinhe seu sorriso com discrição, conforto e previsibilidade 3D.
+            </p>
+          </div>
+          <a href="https://wa.me/5521999999999" target="_blank" class="text-sm font-bold text-brandPrimary flex items-center gap-2 group-hover:underline">
+            Saber mais <i class="fa-solid fa-arrow-right"></i>
+          </a>
+        </div>
+
+        <!-- Tratamento 3: Implantes -->
+        <div class="group bg-brandBg p-8 rounded-2xl border border-brandPrimary/5 hover:border-brandPrimary/30 hover:bg-white hover:shadow-premium transition-all duration-300 flex flex-col justify-between h-full">
+          <div>
+            <div class="w-14 h-14 bg-brandPrimary/10 rounded-xl flex items-center justify-center text-brandPrimary mb-6 group-hover:bg-brandPrimary group-hover:text-white transition-colors">
+              <i class="fa-solid fa-tooth text-2xl"></i>
+            </div>
+            <h3 class="font-serif text-xl font-bold text-brandAccent mb-3 leading-relaxed">Implantes & Carga Rápida</h3>
+            <p class="text-sm text-brandAccent/70 leading-relaxed mb-6">
+              Recupere a mastigação e autoconfiança de forma segura com implantes de alta tecnologia e procedimentos indolores.
+            </p>
+          </div>
+          <a href="https://wa.me/5521999999999" target="_blank" class="text-sm font-bold text-brandPrimary flex items-center gap-2 group-hover:underline">
+            Saber mais <i class="fa-solid fa-arrow-right"></i>
+          </a>
+        </div>
+
+        <!-- Tratamento 4: Harmonização Orofacial -->
+        <div class="group bg-brandBg p-8 rounded-2xl border border-brandPrimary/5 hover:border-brandPrimary/30 hover:bg-white hover:shadow-premium transition-all duration-300 flex flex-col justify-between h-full">
+          <div>
+            <div class="w-14 h-14 bg-brandPrimary/10 rounded-xl flex items-center justify-center text-brandPrimary mb-6 group-hover:bg-brandPrimary group-hover:text-white transition-colors">
+              <i class="fa-solid fa-face-smile text-2xl"></i>
+            </div>
+            <h3 class="font-serif text-xl font-bold text-brandAccent mb-3 leading-relaxed">Harmonização Facial</h3>
+            <p class="text-sm text-brandAccent/70 leading-relaxed mb-6">
+              Preenchimentos, toxina botulínica e bioestimuladores de colágeno para valorizar sua beleza natural de forma sutil.
+            </p>
+          </div>
+          <a href="https://wa.me/5521999999999" target="_blank" class="text-sm font-bold text-brandPrimary flex items-center gap-2 group-hover:underline">
+            Saber mais <i class="fa-solid fa-arrow-right"></i>
+          </a>
+        </div>
 
       </div>
     </div>
   </section>
 
-  <!-- SOCIAL PROOF / TESTIMONIALS -->
-  <section id="depoimentos" class="py-24 bg-brandDark text-white relative overflow-hidden">
-    <!-- Accent gradients inside dark theme -->
-    <div class="absolute bottom-0 right-0 w-80 h-80 bg-purple-950 rounded-full mix-blend-screen filter blur-3xl opacity-30"></div>
-    
-    <div class="max-w-7xl mx-auto px-6 relative z-10">
-      
-      <div class="text-center max-w-2xl mx-auto space-y-4 mb-20">
-        <span class="text-brandAccent font-bold text-xs uppercase tracking-widest">Opinião de Quem Confia</span>
-        <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold leading-normal">O que nossos pacientes dizem</h2>
-        <p class="text-gray-400">A maior recompensa pelo nosso trabalho é a felicidade e o sorriso de nossos clientes.</p>
+  <!-- SEÇÃO DE DIFERENCIAIS CLÍNICOS E MARCA PESSOAL -->
+  <section id="sobre" class="py-24 bg-brandBg relative overflow-hidden">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="grid lg:grid-cols-2 gap-16 items-center">
+        <!-- Imagem Premium / Detalhe Técnico -->
+        <div class="relative order-2 lg:order-1">
+          <div class="relative max-w-[480px] mx-auto">
+            <div class="absolute -top-6 -left-6 w-full h-full bg-brandSecondary/10 rounded-3xl -z-10"></div>
+            <img src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&w=800&q=80" alt="Consultório Odontológico de Alto Padrão" class="rounded-3xl shadow-xl w-full object-cover aspect-[4/3]">
+            <div class="absolute -bottom-6 -right-6 bg-white p-6 rounded-2xl shadow-xl border border-brandPrimary/10 max-w-xs">
+              <p class="font-serif text-lg font-bold text-brandAccent">Biossegurança Rígida</p>
+              <p class="text-xs text-brandAccent/60 mt-1 leading-relaxed">Equipamentos de esterilização hospitalar de última geração para máxima proteção da sua saúde.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Conteúdo Textual -->
+        <div class="space-y-8 order-1 lg:order-2">
+          <span class="text-xs font-bold text-brandPrimary uppercase tracking-widest">Infraestrutura Padrão RD</span>
+          <h2 class="font-serif text-3xl md:text-4xl text-brandAccent font-bold leading-relaxed">
+            Uma Experiência Totalmente Focada no Seu Conforto
+          </h2>
+          <p class="text-brandAccent/70 leading-relaxed">
+            Esqueça aquela antiga sensação de receio ao ir ao dentista. Na Dental Rio, cada detalhe foi milimetricamente desenhado para oferecer uma jornada de relaxamento, acolhimento e alto luxo.
+          </p>
+
+          <!-- Lista de Vantagens -->
+          <ul class="space-y-4">
+            <li class="flex items-start gap-3">
+              <span class="p-1 rounded-full bg-brandSecondary/20 text-brandSecondary mt-1">
+                <i class="fa-solid fa-check text-xs"></i>
+              </span>
+              <div>
+                <strong class="text-brandAccent">Sedação Consciente:</strong>
+                <span class="text-brandAccent/70"> Procedimentos totalmente indolores para pacientes com fobia de agulhas ou dor.</span>
+              </div>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="p-1 rounded-full bg-brandSecondary/20 text-brandSecondary mt-1">
+                <i class="fa-solid fa-check text-xs"></i>
+              </span>
+              <div>
+                <strong class="text-brandAccent">Scanner Intraoral 3D:</strong>
+                <span class="text-brandAccent/70"> Adeus às massas de moldagem desconfortáveis. Seu sorriso em alta definição na hora.</span>
+              </div>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="p-1 rounded-full bg-brandSecondary/20 text-brandSecondary mt-1">
+                <i class="fa-solid fa-check text-xs"></i>
+              </span>
+              <div>
+                <strong class="text-brandAccent">Atendimento Humanizado:</strong>
+                <span class="text-brandAccent/70"> Atendimento individualizado, acolhedor e com profissionais altamente especializados.</span>
+              </div>
+            </li>
+          </ul>
+
+          <div class="pt-4">
+            <a href="https://wa.me/5521999999999" target="_blank" class="inline-flex items-center gap-3 bg-brandAccent text-white px-8 py-4 rounded-full font-bold hover:bg-brandPrimary transition-all duration-300 shadow-lg">
+              <i class="fa-brands fa-whatsapp text-lg"></i> Conhecer a Clínica
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROVA SOCIAL / DEPOIMENTOS DE ALTO PADRÃO -->
+  <section id="depoimentos" class="py-24 bg-white relative">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="text-center max-w-2xl mx-auto space-y-4 mb-16">
+        <span class="text-xs font-bold text-brandPrimary uppercase tracking-widest">Depoimentos Reais</span>
+        <h2 class="font-serif text-3xl md:text-4xl text-brandAccent font-bold leading-normal">
+          O Que Nossos Clientes Dizem Sobre Nós
+        </h2>
+        <div class="w-16 h-1 bg-brandSecondary mx-auto rounded"></div>
       </div>
 
-      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div class="grid md:grid-cols-3 gap-8">
         
-        <!-- Testimonial 1 -->
-        <div class="bg-purple-950/40 p-8 rounded-3xl border border-white/5 flex flex-col justify-between">
-          <div class="space-y-6">
-            <!-- Stars -->
-            <div class="flex text-amber-400 gap-1">
-              <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+        <!-- Depoimento 1 -->
+        <div class="bg-brandBg p-8 rounded-2xl border border-brandPrimary/5 space-y-6 flex flex-col justify-between shadow-sm">
+          <div class="space-y-4">
+            <div class="flex text-brandSecondary">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
             </div>
-            <p class="text-gray-300 text-sm leading-relaxed italic">
-              "Fui atendida na emergência durante a madrugada com uma dor insuportável de dente. O atendimento foi espetacular, muito rápido e o dentista foi de uma sensibilidade e calma incríveis. Recomendo muito!"
+            <p class="text-brandAccent/70 italic leading-relaxed text-sm">
+              "Precisei de atendimento às 3h da manhã devido a uma forte dor de canal. Fui atendido imediatamente, a dor cessou na hora e a infraestrutura me deixou extremamente seguro. Excelente equipe!"
             </p>
           </div>
-          <div class="mt-8 flex items-center gap-4">
-            <div class="w-10 h-10 rounded-full bg-brandAccent/20 flex items-center justify-center font-bold text-brandAccent">
+          <div class="flex items-center gap-4">
+            <div class="w-12 h-12 rounded-full bg-brandPrimary/20 flex items-center justify-center font-bold text-brandPrimary">
               MA
             </div>
             <div>
-              <p class="font-semibold text-sm">Mariana Albuquerque</p>
-              <p class="text-xs text-gray-500">Paciente do Pronto Atendimento</p>
+              <p class="font-serif font-bold text-sm text-brandAccent">Marcos Alencar</p>
+              <p class="text-[11px] text-brandAccent/50">Paciente de Emergência</p>
             </div>
           </div>
         </div>
 
-        <!-- Testimonial 2 -->
-        <div class="bg-purple-950/40 p-8 rounded-3xl border border-white/5 flex flex-col justify-between">
-          <div class="space-y-6">
-            <div class="flex text-amber-400 gap-1">
-              <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+        <!-- Depoimento 2 -->
+        <div class="bg-brandBg p-8 rounded-2xl border border-brandPrimary/5 space-y-6 flex flex-col justify-between shadow-sm">
+          <div class="space-y-4">
+            <div class="flex text-brandSecondary">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
             </div>
-            <p class="text-gray-300 text-sm leading-relaxed italic">
-              "Fiz o meu tratamento com lentes de contato de porcelana na Dental Rio e o resultado superou todas as minhas expectativas. O planejamento digital me deixou super seguro do resultado final!"
+            <p class="text-brandAccent/70 italic leading-relaxed text-sm">
+              "Coloquei minhas lentes de contato de porcelana na Dental Rio e foi a melhor decisão da minha vida. O planejamento digital me deu certeza do resultado antes mesmo de começar. Indico para todos!"
             </p>
           </div>
-          <div class="mt-8 flex items-center gap-4">
-            <div class="w-10 h-10 rounded-full bg-brandAccent/20 flex items-center justify-center font-bold text-brandAccent">
-              RC
+          <div class="flex items-center gap-4">
+            <div class="w-12 h-12 rounded-full bg-brandPrimary/20 flex items-center justify-center font-bold text-brandPrimary">
+              CC
             </div>
             <div>
-              <p class="font-semibold text-sm">Rodrigo Castro</p>
-              <p class="text-xs text-gray-500">Paciente de Odontologia Estética</p>
+              <p class="font-serif font-bold text-sm text-brandAccent">Camila Cavalcanti</p>
+              <p class="text-[11px] text-brandAccent/50">Paciente de Odontologia Estética</p>
             </div>
           </div>
         </div>
 
-        <!-- Testimonial 3 -->
-        <div class="bg-purple-950/40 p-8 rounded-3xl border border-white/5 flex flex-col justify-between">
-          <div class="space-y-6">
-            <div class="flex text-amber-400 gap-1">
-              <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+        <!-- Depoimento 3 -->
+        <div class="bg-brandBg p-8 rounded-2xl border border-brandPrimary/5 space-y-6 flex flex-col justify-between shadow-sm">
+          <div class="space-y-4">
+            <div class="flex text-brandSecondary">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
             </div>
-            <p class="text-gray-300 text-sm leading-relaxed italic">
-              "Atendimento diferenciado e exclusivo desde a recepção até o consultório. Fiz implante e não senti dor alguma durante e após a cirurgia. Indico para todos meus amigos do RJ."
+            <p class="text-brandAccent/70 italic leading-relaxed text-sm">
+              "Ambiente de altíssimo padrão, tratamento extremamente delicado e tecnologia incomparável. Fazer meus alinhadores lá foi prático e muito rápido."
             </p>
           </div>
-          <div class="mt-8 flex items-center gap-4">
-            <div class="w-10 h-10 rounded-full bg-brandAccent/20 flex items-center justify-center font-bold text-brandAccent">
-              FS
+          <div class="flex items-center gap-4">
+            <div class="w-12 h-12 rounded-full bg-brandPrimary/20 flex items-center justify-center font-bold text-brandPrimary">
+              RP
             </div>
             <div>
-              <p class="font-semibold text-sm">Fernando Souza</p>
-              <p class="text-xs text-gray-500">Paciente de Implantes</p>
+              <p class="font-serif font-bold text-sm text-brandAccent">Rodrigo Prado</p>
+              <p class="text-[11px] text-brandAccent/50">Paciente de Alinhadores Invisíveis</p>
             </div>
           </div>
         </div>
@@ -450,157 +443,168 @@
     </div>
   </section>
 
-  <!-- FAQ SECTION -->
-  <section class="py-24 bg-white">
-    <div class="max-w-4xl mx-auto px-6">
-      
-      <div class="text-center space-y-4 mb-16">
-        <span class="text-brandPrimary font-bold text-xs uppercase tracking-widest">Dúvidas Frequentes</span>
-        <h2 class="font-serif text-3xl sm:text-4xl font-bold leading-normal text-brandSecondary">FAQ - Esclareça suas dúvidas</h2>
-      </div>
-
-      <div class="space-y-4">
+  <!-- CONTATO / RESERVA / LOCALIZAÇÃO -->
+  <section class="py-24 bg-brandBg relative">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="grid lg:grid-cols-12 gap-12 bg-white rounded-3xl shadow-xl overflow-hidden border border-brandPrimary/10">
         
-        <!-- FAQ 1 -->
-        <details class="group bg-brandBg rounded-2xl border border-purple-100 p-6 [&_summary::-webkit-details-marker]:hidden">
-          <summary class="flex justify-between items-center font-bold text-brandSecondary cursor-pointer">
-            <span class="text-base sm:text-lg">Como funciona a Emergência 24 Horas?</span>
-            <span class="transition group-open:rotate-180 text-brandPrimary">
-              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
-            </span>
-          </summary>
-          <p class="mt-4 text-brandMuted text-sm leading-relaxed">
-            Oferecemos suporte odontológico emergencial integral fora do horário comercial comum, incluindo finais de semana e feriados. Basta entrar em contato por telefone ou WhatsApp para notificar nossa equipe de plantão antes de sua chegada.
-          </p>
-        </details>
+        <!-- Formulário & Informações de Contato -->
+        <div class="lg:col-span-7 p-8 md:p-12 space-y-8">
+          <div class="space-y-3">
+            <span class="text-xs font-bold text-brandPrimary uppercase tracking-widest">Inicie Seu Tratamento</span>
+            <h2 class="font-serif text-3xl font-bold text-brandAccent leading-normal">Solicite um Pré-Agendamento</h2>
+            <p class="text-sm text-brandAccent/70">Nossa equipe entrará em contato em menos de 15 minutos para confirmar o melhor horário.</p>
+          </div>
 
-        <!-- FAQ 2 -->
-        <details class="group bg-brandBg rounded-2xl border border-purple-100 p-6 [&_summary::-webkit-details-marker]:hidden">
-          <summary class="flex justify-between items-center font-bold text-brandSecondary cursor-pointer">
-            <span class="text-base sm:text-lg">Quais planos ou convênios de saúde vocês aceitam?</span>
-            <span class="transition group-open:rotate-180 text-brandPrimary">
-              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
-            </span>
-          </summary>
-          <p class="mt-4 text-brandMuted text-sm leading-relaxed">
-            Atuamos principalmente no sistema de clínica particular e emitimos documentação completa e relatórios para reembolso junto ao seu convênio médico/odontológico de forma ágil e descomplicada.
-          </p>
-        </details>
+          <form action="#" method="POST" class="space-y-4">
+            <div class="grid md:grid-cols-2 gap-4">
+              <div>
+                <label class="block text-xs font-bold text-brandAccent/80 uppercase mb-2">Nome Completo</label>
+                <input type="text" placeholder="Ex: Maria Souza" class="w-full bg-brandBg border border-brandPrimary/10 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-brandPrimary transition-colors" required>
+              </div>
+              <div>
+                <label class="block text-xs font-bold text-brandAccent/80 uppercase mb-2">Seu WhatsApp</label>
+                <input type="tel" placeholder="Ex: (21) 99999-9999" class="w-full bg-brandBg border border-brandPrimary/10 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-brandPrimary transition-colors" required>
+              </div>
+            </div>
+            <div>
+              <label class="block text-xs font-bold text-brandAccent/80 uppercase mb-2">Qual procedimento você busca?</label>
+              <select class="w-full bg-brandBg border border-brandPrimary/10 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-brandPrimary transition-colors text-brandAccent/70">
+                <option>Selecione uma opção...</option>
+                <option>Urgência / Dor de Dente (24h)</option>
+                <option>Lentes de Contato / Estética</option>
+                <option>Clareamento Dental</option>
+                <option>Alinhadores Invisíveis</option>
+                <option>Implantes Dentários</option>
+                <option>Outro Procedimento</option>
+              </select>
+            </div>
+            <div>
+              <label class="block text-xs font-bold text-brandAccent/80 uppercase mb-2">Mensagem (Opcional)</label>
+              <textarea rows="3" placeholder="Conte brevemente o que precisa..." class="w-full bg-brandBg border border-brandPrimary/10 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-brandPrimary transition-colors"></textarea>
+            </div>
+            <button type="submit" class="w-full bg-brandPrimary text-white py-4 rounded-xl font-bold shadow-premium hover:bg-brandPrimary/90 transition-all duration-300">
+              Solicitar Agendamento
+            </button>
+          </form>
+        </div>
 
-        <!-- FAQ 3 -->
-        <details class="group bg-brandBg rounded-2xl border border-purple-100 p-6 [&_summary::-webkit-details-marker]:hidden">
-          <summary class="flex justify-between items-center font-bold text-brandSecondary cursor-pointer">
-            <span class="text-base sm:text-lg">O tratamento com lentes de contato dental dói?</span>
-            <span class="transition group-open:rotate-180 text-brandPrimary">
-              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
-            </span>
-          </summary>
-          <p class="mt-4 text-brandMuted text-sm leading-relaxed">
-            Não. Os procedimentos de preparação e aplicação são totalmente confortáveis. Quando necessários, microdesgastes são feitos sob anestesia local computadorizada, garantindo que o paciente não sinta absolutamente nenhum incômodo.
-          </p>
-        </details>
+        <!-- Localização / Detalhes de Endereço -->
+        <div class="lg:col-span-5 bg-brandAccent text-white p-8 md:p-12 flex flex-col justify-between relative overflow-hidden">
+          <div class="absolute inset-0 opacity-10 bg-no-repeat bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1516549655169-df83a0774514?auto=format&fit=crop&w=800&q=80');"></div>
+          
+          <div class="relative z-10 space-y-8">
+            <div>
+              <h3 class="font-serif text-2xl font-bold mb-2">Endereço</h3>
+              <p class="text-sm text-white/80 leading-relaxed">
+                Av. das Américas, 4200 - Bloco 4 - Barra da Tijuca<br>
+                Rio de Janeiro - RJ, 22640-102
+              </p>
+            </div>
 
-      </div>
-    </div>
-  </section>
+            <div class="space-y-4">
+              <h3 class="font-serif text-xl font-bold">Informações Adicionais</h3>
+              <div class="flex items-center gap-3 text-sm">
+                <i class="fa-solid fa-parking text-brandSecondary"></i>
+                <span>Estacionamento privativo no local com manobrista</span>
+              </div>
+              <div class="flex items-center gap-3 text-sm">
+                <i class="fa-solid fa-wheelchair text-brandSecondary"></i>
+                <span>Estrutura com acessibilidade completa</span>
+              </div>
+            </div>
 
-  <!-- CTA FINAL -->
-  <section class="py-20 bg-brandPrimary text-white text-center relative overflow-hidden">
-    <div class="max-w-3xl mx-auto px-6 relative z-10 space-y-8">
-      <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold leading-normal">Pronto para transformar a sua saúde bucal?</h2>
-      <p class="text-white/80 max-w-xl mx-auto text-base sm:text-lg">
-        Agende uma avaliação inicial agora mesmo com nossos especialistas. Cuidado exclusivo que você merece.
-      </p>
-      <div class="flex flex-col sm:flex-row justify-center gap-4">
-        <a href="https://wa.me/5521999999999" target="_blank" class="bg-white text-brandPrimary hover:bg-brandSecondary hover:text-white font-bold px-8 py-4 rounded-full transition-all shadow-xl">
-          Falar com Especialista
-        </a>
-        <a href="tel:0800" class="border-2 border-white/40 hover:border-white text-white font-bold px-8 py-4 rounded-full transition-all">
-          Ligar para Emergência
-        </a>
+            <div class="pt-6 border-t border-white/10 space-y-2">
+              <p class="text-xs text-white/60">Fale diretamente pelo telefone:</p>
+              <a href="tel:0800000000" class="text-xl font-bold text-brandSecondary hover:underline block">
+                <i class="fa-solid fa-phone-volume mr-2"></i> (21) 3333-3333
+              </a>
+            </div>
+          </div>
+
+          <!-- Assinatura Fina do Mapa -->
+          <div class="relative z-10 pt-6">
+            <span class="text-[10px] tracking-wider uppercase text-white/40">Fácil acesso pelo metrô e BRT</span>
+          </div>
+        </div>
+
       </div>
     </div>
   </section>
 
   <!-- FOOTER -->
-  <footer class="bg-brandSecondary text-gray-400 py-16 border-t border-purple-950/50">
+  <footer class="bg-brandAccent text-white py-16 border-t border-white/5">
     <div class="max-w-7xl mx-auto px-6">
-      <div class="grid lg:grid-cols-12 gap-12 lg:gap-8 pb-12 border-b border-purple-950/50">
-        
-        <!-- Column 1 -->
-        <div class="lg:col-span-4 space-y-6">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+        <!-- Logo e Bio -->
+        <div class="space-y-4">
           <div class="flex items-center gap-3">
-            <div class="w-8 h-8 rounded-full bg-white flex items-center justify-center p-1">
-              <img src="https://www.google.com/s2/favicons?domain=dentalrio.com.br&sz=128" alt="Dental Rio" class="w-full h-full object-contain">
-            </div>
-            <span class="font-serif text-lg font-bold text-white tracking-tight">Dental Rio</span>
+            <img src="https://www.google.com/s2/favicons?domain=dentalrio.com.br&sz=128" alt="Dental Rio Logo" class="h-8 w-8 object-contain rounded bg-white p-0.5">
+            <span class="font-serif text-lg font-bold">Dental Rio</span>
           </div>
-          <p class="text-sm leading-relaxed text-gray-400">
-            Clínica Odontológica integrada de excelência técnica e de atendimento. Especialistas em Reabilitação Oral, Estética Premium e Pronto Atendimento de Emergência.
+          <p class="text-xs text-white/60 leading-relaxed">
+            Clínica Odontológica especializada em urgência 24h, lentes de contato digitais, implantes e alinhadores invisíveis. Atendimento de excelência.
           </p>
         </div>
 
-        <!-- Column 2 -->
-        <div class="lg:col-span-4 space-y-4">
-          <h4 class="text-white font-bold text-sm uppercase tracking-wider">Unidades & Contato</h4>
-          <p class="text-sm text-gray-400">
-            Av. das Américas, Barra da Tijuca<br>
-            Rio de Janeiro - RJ
-          </p>
-          <p class="text-sm">
-            E-mail: contato@dentalrio.com.br<br>
-            Tel / WhatsApp: (21) 99999-9999
-          </p>
+        <!-- Links Rápidos -->
+        <div>
+          <h4 class="font-serif font-bold text-sm text-brandSecondary mb-4">Tratamentos</h4>
+          <ul class="space-y-2 text-xs text-white/70">
+            <li><a href="#estetica" class="hover:text-white transition-colors">Lentes de Contato</a></li>
+            <li><a href="#estetica" class="hover:text-white transition-colors">Clareamento Dental</a></li>
+            <li><a href="#tratamentos" class="hover:text-white transition-colors">Alinhadores Invisíveis</a></li>
+            <li><a href="#tratamentos" class="hover:text-white transition-colors">Implantes Estéticos</a></li>
+          </ul>
         </div>
 
-        <!-- Column 3 -->
-        <div class="lg:col-span-4 space-y-4">
-          <h4 class="text-white font-bold text-sm uppercase tracking-wider">Responsabilidade Técnica</h4>
-          <p class="text-sm text-gray-400">
-            RT: Dr. Dentista Responsável<br>
-            CRO-RJ: 00.000
-          </p>
-          <div class="pt-2 text-xs text-gray-500">
-            Os conteúdos aqui presentes possuem caráter meramente informativo e educacional.
+        <!-- Emergências -->
+        <div>
+          <h4 class="font-serif font-bold text-sm text-brandSecondary mb-4">Urgência</h4>
+          <ul class="space-y-2 text-xs text-white/70">
+            <li><a href="#emergencia" class="hover:text-white transition-colors">Plantão de Canal 24h</a></li>
+            <li><a href="#emergencia" class="hover:text-white transition-colors">Dor de Dente Aguda</a></li>
+            <li><a href="#emergencia" class="hover:text-white transition-colors">Trauma / Quedas</a></li>
+            <li><a href="#emergencia" class="hover:text-white transition-colors">Extração Urgente</a></li>
+          </ul>
+        </div>
+
+        <!-- Redes Sociais e Contato -->
+        <div>
+          <h4 class="font-serif font-bold text-sm text-brandSecondary mb-4">Redes Sociais</h4>
+          <div class="flex gap-4 mb-4">
+            <a href="#" class="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center hover:bg-brandPrimary transition-colors text-white text-sm"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" class="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center hover:bg-brandPrimary transition-colors text-white text-sm"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#" class="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center hover:bg-brandPrimary transition-colors text-white text-sm"><i class="fa-brands fa-youtube"></i></a>
           </div>
+          <p class="text-xs text-white/50">RT. Dr. Rodrigo Silva | CRO-RJ: 12345</p>
         </div>
-
       </div>
 
-      <div class="pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs">
+      <hr class="border-white/5 my-8">
+
+      <!-- Direitos Autorais e Assinatura -->
+      <div class="flex flex-col md:flex-row items-center justify-between text-xs text-white/40 gap-4">
         <p>&copy; 2024 Dental Rio Odontologia. Todos os direitos reservados.</p>
-        <div class="flex gap-4">
-          <a href="#" class="hover:underline">Políticas de Privacidade</a>
-          <span>&middot;</span>
-          <p class="text-brandAccent">Desenvolvido por RD Exclusive</p>
-        </div>
+        <p>Desenvolvido com sofisticação por <span class="text-brandSecondary font-semibold">RD Exclusive</span></p>
       </div>
     </div>
   </footer>
 
-  <!-- SIMPLE SCRIPT FOR MENU RESPONSIVENESS -->
+  <!-- Floating WhatsApp CTA para Emergência Rápida -->
+  <a href="https://wa.me/5521999999999" target="_blank" class="fixed bottom-6 right-6 z-40 bg-brandPrimary text-white p-4 rounded-full shadow-2xl hover:scale-110 active:scale-95 transition-all duration-300 flex items-center justify-center gap-2 group">
+    <i class="fa-brands fa-whatsapp text-2xl"></i>
+    <span class="max-w-0 overflow-hidden group-hover:max-w-xs transition-all duration-500 ease-out whitespace-nowrap text-sm font-bold">
+      Falar no WhatsApp
+    </span>
+  </a>
+
+  <!-- Mobile Menu Script -->
   <script>
-    const menuBtn = document.getElementById('menuBtn');
-    const mobileMenu = document.getElementById('mobileMenu');
-    const menuIcon = document.getElementById('menuIcon');
-    const mobileLinks = document.querySelectorAll('.mobile-link');
-
-    menuBtn.addEventListener('click', () => {
-      mobileMenu.classList.toggle('hidden');
-      if (mobileMenu.classList.contains('hidden')) {
-        menuIcon.setAttribute('d', 'M4 6h16M4 12h16m-7 6h7');
-      } else {
-        menuIcon.setAttribute('d', 'M6 18L18 6M6 6l12 12');
-      }
-    });
-
-    mobileLinks.forEach(link => {
-      link.addEventListener('click', () => {
-        mobileMenu.classList.add('hidden');
-        menuIcon.setAttribute('d', 'M4 6h16M4 12h16m-7 6h7');
-      });
-    });
+    function toggleMobileMenu() {
+      const menu = document.getElementById('mobile-menu');
+      menu.classList.toggle('hidden');
+    }
   </script>
-
 </body>
 </html>
