@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Beatriz Amorim | Nutrição Estética & Alta Performance</title>
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brandPrimary: '#ffffff',
+            brandSecondary: '#D1B38C',
+            brandDark: '#1C1613',
+            brandBg: '#FAF8F5'
+          },
+          fontFamily: {
+            serif: ['Playfair Display', 'serif'],
+            sans: ['Plus Jakarta Sans', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-brandBg text-brandDark font-sans selection:bg-brandSecondary selection:text-brandDark overflow-x-hidden">
+
+  <!-- HEADER INDESTRUTÍVEL (FLUTUANTE) -->
+  <header class="fixed top-0 left-0 right-0 z-50 backdrop-blur-md bg-[#FAF8F5]/90 border-b border-[#1C1613]/10">
+    <div class="max-w-7xl mx-auto px-6 h-24 flex items-center justify-between">
+      
+      <!-- LOGO: Extrema Esquerda -->
+      <a href="#" class="flex items-center gap-3 group">
+        <img src="https://www.google.com/s2/favicons?domain=instagram.com&sz=128" alt="Beatriz Amorim Logo" class="max-h-10 w-auto object-contain transition-transform duration-500 group-hover:scale-105">
+        <div class="flex flex-col">
+          <span class="font-serif text-lg font-semibold tracking-[0.15em] uppercase leading-none">Beatriz Amorim</span>
+          <span class="text-[9px] uppercase tracking-[0.3em] text-[#1C1613]/60 mt-1">Nutrição de Grife</span>
+        </div>
+      </a>
+
+      <!-- LINKS: Centro (Com blindagem total contra quebra de linha) -->
+      <nav class="hidden lg:flex items-center gap-10">
+        <a href="#filosofia" class="whitespace-nowrap text-[11px] uppercase tracking-[0.2em] font-medium text-brandDark/80 hover:text-brandSecondary transition-all duration-300">A Filosofia</a>
+        <a href="#metodo" class="whitespace-nowrap text-[11px] uppercase tracking-[0.2em] font-medium text-brandDark/80 hover:text-brandSecondary transition-all duration-300">O Método</a>
+        <a href="#servicos" class="whitespace-nowrap text-[11px] uppercase tracking-[0.2em] font-medium text-brandDark/80 hover:text-brandSecondary transition-all duration-300">Programas Premium</a>
+        <a href="#ebooks" class="whitespace-nowrap text-[11px] uppercase tracking-[0.2em] font-medium text-brandDark/80 hover:text-brandSecondary transition-all duration-300">E-books & Guias</a>
+        <a href="#experiencia" class="whitespace-nowrap text-[11px] uppercase tracking-[0.2em] font-medium text-brandDark/80 hover:text-brandSecondary transition-all duration-300">Depoimentos</a>
+      </nav>
+
+      <!-- BOTÃO DE AGENDAMENTO: Extrema Direita -->
+      <div class="flex items-center gap-4">
+        <a href="https://wa.me/5511999999999" target="_blank" class="hidden sm:inline-flex whitespace-nowrap bg-brandDark text-[#FAF8F5] hover:bg-brandSecondary hover:text-brandDark px-7 py-3.5 text-xs uppercase tracking-[0.15em] font-semibold transition-all duration-500 border border-brandDark shadow-sm hover:shadow-lg">
+          Agendar Protocolo
+        </a>
+        <!-- Mobile Menu Trigger -->
+        <button onclick="toggleMobileMenu()" class="lg:hidden flex flex-col justify-center items-end w-8 h-8 gap-1.5 focus:outline-none" aria-label="Menu">
+          <span class="w-8 h-[2px] bg-brandDark transition-all duration-300"></span>
+          <span class="w-6 h-[2px] bg-brandDark transition-all duration-300"></span>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- MOBILE MENU (HIDDEN BY DEFAULT) -->
+  <div id="mobileMenu" class="fixed inset-0 bg-brandDark text-brandBg z-40 transform translate-x-full transition-transform duration-500 flex flex-col justify-between p-8 pt-32">
+    <div class="flex flex-col gap-8 text-center">
+      <a href="#filosofia" onclick="toggleMobileMenu()" class="font-serif text-2xl tracking-wider hover:text-brandSecondary transition-colors">A Filosofia</a>
+      <a href="#metodo" onclick="toggleMobileMenu()" class="font-serif text-2xl tracking-wider hover:text-brandSecondary transition-colors">O Método</a>
+      <a href="#servicos" onclick="toggleMobileMenu()" class="font-serif text-2xl tracking-wider hover:text-brandSecondary transition-colors">Programas Premium</a>
+      <a href="#ebooks" onclick="toggleMobileMenu()" class="font-serif text-2xl tracking-wider hover:text-brandSecondary transition-colors">E-books & Guias</a>
+      <a href="#experiencia" onclick="toggleMobileMenu()" class="font-serif text-2xl tracking-wider hover:text-brandSecondary transition-colors">Depoimentos</a>
+    </div>
+    <div class="flex flex-col gap-4">
+      <a href="https://wa.me/5511999999999" target="_blank" class="w-full text-center bg-brandSecondary text-brandDark py-4 text-xs uppercase tracking-widest font-semibold transition-all">
+        Agendar Consulta
+      </a>
+      <p class="text-[9px] uppercase tracking-[0.2em] text-center text-[#FAF8F5]/40">© 2024 Beatriz Amorim</p>
+    </div>
+  </div>
+
+  <!-- SEÇÃO DE LINHAS DE GRADE EDITORIAIS (DECORATIVAS) -->
+  <div class="absolute inset-0 pointer-events-none z-0 overflow-hidden">
+    <div class="max-w-7xl mx-auto h-full px-6 grid grid-cols-4 gap-0 opacity-[0.03]">
+      <div class="border-l border-brandDark h-full"></div>
+      <div class="border-l border-brandDark h-full"></div>
+      <div class="border-l border-brandDark h-full"></div>
+      <div class="border-l border-brandDark h-full border-r"></div>
+    </div>
+  </div>
+
+  <!-- HERO SECTION (ASIMÉTRICA COM SOBREPOSIÇÃO REAL) -->
+  <section class="relative min-h-screen bg-brandBg pt-36 pb-24 md:py-36 flex items-center overflow-hidden z-10">
+    <div class="max-w-7xl mx-auto px-6 w-full relative">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        
+        <!-- Título principal com sobreposição real para a direita -->
+        <div class="lg:col-span-7 relative z-20 -mr-20 lg:-mr-32 pointer-events-none select-none">
+          <p class="text-xs uppercase tracking-[0.3em] text-[#1C1613]/50 mb-6 font-semibold">Nutrição Clínica & Estética Premium</p>
+          <h1 class="font-serif text-5xl md:text-7xl lg:text-[5.5rem] text-brandDark leading-[1.05] tracking-tight">
+            A alta arte da <br>
+            <span class="italic text-brandSecondary font-light">nutrição sob</span> <br>
+            medida.
+          </h1>
+          <p class="font-sans text-sm md:text-base text-brandDark/70 max-w-xl mt-8 leading-relaxed pointer-events-auto">
+            Abandone os protocolos genéricos. Tenha acesso a um ecossistema de saúde sob medida, desenvolvido para mulheres sofisticadas que buscam alinhar estética deslumbrante, alta performance metabólica e longevidade real.
+          </p>
+          <div class="mt-10 flex flex-col sm:flex-row gap-4 pointer-events-auto">
+            <a href="#servicos" class="bg-brandDark text-[#FAF8F5] hover:bg-brandSecondary hover:text-brandDark px-8 py-4 text-xs uppercase tracking-widest font-semibold transition-all duration-500 border border-brandDark text-center">
+              Explorar Programas
+            </a>
+            <a href="#filosofia" class="bg-transparent text-brandDark hover:bg-brandDark/5 px-8 py-4 text-xs uppercase tracking-widest font-semibold transition-all duration-500 border border-brandDark/20 text-center">
+              Minha Filosofia
+            </a>
+          </div>
+        </div>
+
+        <!-- Imagem de Destaque Vertical e Rotacionada -->
+        <div class="lg:col-span-5 relative z-10">
+          <div class="relative overflow-hidden rounded-3xl rotate-1 hover:rotate-0 transition-all duration-1000 shadow-[0_30px_100px_rgba(28,22,19,0.15)] aspect-[4/5] max-w-md mx-auto lg:max-w-none">
+            <!-- Camada de overlay estético sutil -->
+            <div class="absolute inset-0 bg-[#1C1613]/5 z-10"></div>
+            <img src="https://images.unsplash.com/photo-1540420773420-3366772f4999?auto=format&fit=crop&w=1000&q=80" alt="Ingredientes estéticos, gastronomia minimalista de alta classe" class="w-full h-full object-cover transform scale-105 hover:scale-100 transition-all duration-1000">
+          </div>
+          <!-- Detalhe flutuante de grife -->
+          <div class="absolute -bottom-8 -left-8 bg-brandPrimary border border-brandDark/10 p-6 rounded-2xl shadow-xl z-20 max-w-[200px] hidden sm:block">
+            <p class="font-serif text-3xl font-bold text-brandSecondary">100%</p>
+            <p class="text-[9px] uppercase tracking-[0.15em] text-brandDark/60 mt-1 leading-relaxed">Cuidado Personalizado & Nutrologia Estética Individualizada</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- SEÇÃO FILOSOFIA (CONTRALUZ ASSIMÉTRICO) -->
+  <section id="filosofia" class="relative bg-brandDark text-brandPrimary py-32 md:py-48 overflow-hidden">
+    <!-- Linhas sutis de grade metálica -->
+    <div class="absolute inset-0 opacity-[0.03] pointer-events-none">
+      <div class="max-w-7xl mx-auto h-full px-6 grid grid-cols-3 gap-0">
+        <div class="border-l border-brandPrimary h-full"></div>
+        <div class="border-l border-brandPrimary h-full"></div>
+        <div class="border-l border-brandPrimary h-full border-r"></div>
+      </div>
+    </div>
+
+    <div class="max-w-7xl mx-auto px-6 relative z-10">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
+        
+        <!-- Imagem de Gastronomia Minimalista -->
+        <div class="lg:col-span-5 order-2 lg:order-1">
+          <div class="relative">
+            <div class="absolute inset-0 border border-brandSecondary/20 rounded-3xl translate-x-4 translate-y-4"></div>
+            <div class="relative overflow-hidden rounded-3xl shadow-2xl aspect-[3/4]">
+              <img src="https://images.unsplash.com/photo-1505252585461-04db1eb84625?auto=format&fit=crop&w=1000&q=80" alt="Gastronomia minimalista e autocuidado" class="w-full h-full object-cover hover:scale-105 transition-all duration-1000">
+            </div>
+          </div>
+        </div>
+
+        <!-- Copy de luxo deslocado e assimétrico -->
+        <div class="lg:col-span-7 order-1 lg:order-2 lg:pl-12">
+          <p class="text-xs uppercase tracking-[0.3em] text-brandSecondary mb-4">Essência &amp; Propósito</p>
+          <h2 class="font-serif text-4xl md:text-6xl text-brandPrimary leading-tight mb-8">
+            O alimento como a mais pura <span class="italic text-brandSecondary font-light">expressão artística</span> do seu corpo.
+          </h2>
+          <div class="space-y-6 text-brandBg/80 text-sm md:text-base leading-relaxed font-light">
+            <p>
+              A nutrição de alta classe não impõe amarras ou restrições severas. Ela atua através do refinamento metabólico, onde cada ingrediente estético selecionado é responsável por calibrar seus níveis de energia, regeneração cutânea e simetria física.
+            </p>
+            <p>
+              Em meu consultório, desenvolvo protocolos baseados na mais moderna ciência da longevidade aliados a uma gastronomia funcional e prazerosa. Juntos, criamos um estilo de vida sustentável onde sua mesa reflete a harmonia perfeita entre o autocuidado refinado e a alta performance que sua rotina exige.
+            </p>
+          </div>
+          <!-- Assinatura digital sofisticada -->
+          <div class="mt-12 border-t border-brandPrimary/10 pt-8 flex items-center gap-4">
+            <div>
+              <p class="font-serif text-xl italic text-brandSecondary">Beatriz Amorim</p>
+              <p class="text-[9px] uppercase tracking-[0.2em] text-[#FAF8F5]/60 mt-1">Nutricionista Integrativa &amp; Estética Clássica</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- SEÇÃO METODO (DESIGN EDITORIAL) -->
+  <section id="metodo" class="py-32 bg-brandBg border-b border-[#1C1613]/10">
+    <div class="max-w-7xl mx-auto px-6">
+      
+      <div class="max-w-3xl mb-24">
+        <p class="text-xs uppercase tracking-[0.3em] text-[#1C1613]/50 mb-4">A Ciência do Sob Medida</p>
+        <h2 class="font-serif text-4xl md:text-6xl text-brandDark leading-tight">
+          As três bases da sua <span class="italic font-light text-brandSecondary">metamorfose biológica</span>
+        </h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-12 lg:gap-16">
+        
+        <!-- Base 01 -->
+        <div class="relative group">
+          <p class="font-serif text-7xl md:text-8xl text-brandSecondary/20 font-light leading-none mb-6 group-hover:text-brandSecondary/40 transition-colors duration-500">01</p>
+          <h3 class="font-serif text-2xl text-brandDark mb-4">Mapeamento Genômico &amp; Bioquímico</h3>
+          <p class="text-brandDark/70 text-sm leading-relaxed font-light">
+            Análise aprofundada de marcadores biológicos, alergias silenciosas e predisposições genéticas para desenhar um plano nutricional livre de tentativas e erros.
+          </p>
+          <div class="w-full h-[1px] bg-brandDark/10 mt-8 group-hover:bg-brandSecondary transition-all duration-500"></div>
+        </div>
+
+        <!-- Base 02 -->
+        <div class="relative group">
+          <p class="font-serif text-7xl md:text-8xl text-brandSecondary/20 font-light leading-none mb-6 group-hover:text-brandSecondary/40 transition-colors duration-500">02</p>
+          <h3 class="font-serif text-2xl text-brandDark mb-4">Modulação Hormonal &amp; Metabólica</h3>
+          <p class="text-brandDark/70 text-sm leading-relaxed font-light">
+            Alinhamento alimentar estratégico focado em otimizar a queima lipídica natural, impulsionar os níveis de energia celular e promover a densidade muscular.
+          </p>
+          <div class="w-full h-[1px] bg-brandDark/10 mt-8 group-hover:bg-brandSecondary transition-all duration-500"></div>
+        </div>
+
+        <!-- Base 03 -->
+        <div class="relative group">
+          <p class="font-serif text-7xl md:text-8xl text-brandSecondary/20 font-light leading-none mb-6 group-hover:text-brandSecondary/40 transition-colors duration-500">03</p>
+          <h3 class="font-serif text-2xl text-brandDark mb-4">Gastronomia Funcional Premium</h3>
+          <p class="text-brandDark/70 text-sm leading-relaxed font-light">
+            A união perfeita de culinária minimalista e alta gastronomia, garantindo que o seu plano alimentar de luxo seja incrivelmente saboroso, belo e prático.
+          </p>
+          <div class="w-full h-[1px] bg-brandDark/10 mt-8 group-hover:bg-brandSecondary transition-all duration-500"></div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SEÇÃO SERVIÇOS DETALHADA -->
+  <section id="servicos" class="bg-brandPrimary py-32 md:py-48">
+    <div class="max-w-7xl mx-auto px-6">
+      
+      <div class="text-center max-w-2xl mx-auto mb-24">
+        <p class="text-xs uppercase tracking-[0.3em] text-[#1C1613]/50 mb-4">Programas Clínicos Exclusivos</p>
+        <h2 class="font-serif text-4xl md:text-6xl text-brandDark">
+          Acompanhamento de <br><span class="italic text-brandSecondary font-light">Extrema Performance</span>
+        </h2>
+        <div class="w-12 h-[1px] bg-brandSecondary mx-auto mt-6"></div>
+      </div>
+
+      <!-- Serviços Grid (Ultra Premium Cards) -->
+      <div class="space-y-16">
+        
+        <!-- Serviço 01 -->
+        <div class="bg-brandBg border border-[#1C1613]/5 p-8 md:p-16 rounded-[2rem] shadow-sm hover:shadow-xl transition-all duration-500">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            <div class="lg:col-span-7">
+              <div class="flex items-center gap-4 mb-6">
+                <span class="font-serif text-lg italic text-brandSecondary font-semibold">01</span>
+                <span class="text-xs uppercase tracking-[0.2em] text-brandDark/60">Atendimento Premium Individual</span>
+              </div>
+              <h3 class="font-serif text-3xl md:text-4xl text-brandDark mb-6">Protocolo de Redefinição Estética &amp; Longevidade</h3>
+              <p class="text-brandDark/70 text-sm md:text-base leading-relaxed mb-8 font-light">
+                O programa definitivo para quem deseja reescrever a composição corporal e retardar o envelhecimento celular. Inclui exames bioquímicos integrativos, design de plano alimentar personalizado semana a semana, consultoria de ingredientes estéticos e acompanhamento direto via WhatsApp Premium.
+              </p>
+              <ul class="space-y-3 mb-8 text-sm text-brandDark/80">
+                <li class="flex items-center gap-3">
+                  <span class="w-1.5 h-1.5 rounded-full bg-brandSecondary"></span> Suporte contínuo de concierge de saúde.
+                </li>
+                <li class="flex items-center gap-3">
+                  <span class="w-1.5 h-1.5 rounded-full bg-brandSecondary"></span> Avaliação física por densitometria avançada.
+                </li>
+                <li class="flex items-center gap-3">
+                  <span class="w-1.5 h-1.5 rounded-full bg-brandSecondary"></span> Acesso ao aplicativo de receitas refinadas exclusivas.
+                </li>
+              </ul>
+              <a href="https://wa.me/5511999999999" target="_blank" class="inline-flex items-center gap-3 bg-brandDark text-brandBg hover:bg-brandSecondary hover:text-brandDark px-8 py-4 text-xs uppercase tracking-widest font-semibold transition-all duration-500">
+                Solicitar Aplicação
+              </a>
+            </div>
+            <div class="lg:col-span-5">
+              <div class="overflow-hidden rounded-2xl aspect-video lg:aspect-square">
+                <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=800&q=80" alt="Alimentação de alta classe" class="w-full h-full object-cover hover:scale-105 transition-all duration-700">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Serviço 02 -->
+        <div class="bg-brandBg border border-[#1C1613]/5 p-8 md:p-16 rounded-[2rem] shadow-sm hover:shadow-xl transition-all duration-500">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            <div class="lg:col-span-7 lg:order-2">
+              <div class="flex items-center gap-4 mb-6">
+                <span class="font-serif text-lg italic text-brandSecondary font-semibold">02</span>
+                <span class="text-xs uppercase tracking-[0.2em] text-brandDark/60">Gestão de Wellness Empresarial</span>
+              </div>
+              <h3 class="font-serif text-3xl md:text-4xl text-brandDark mb-6">Alta Performance para Executivos &amp; Empresárias</h3>
+              <p class="text-brandDark/70 text-sm md:text-base leading-relaxed mb-8 font-light">
+                Desenvolvido estrategicamente para a rotina acelerada de grandes líderes. Foco em foco mental, regulação do cortisol (hormônio do estresse), melhora drástica da qualidade do sono e manutenção de vitalidade estonteante mesmo em viagens de negócios.
+              </p>
+              <ul class="space-y-3 mb-8 text-sm text-brandDark/80">
+                <li class="flex items-center gap-3">
+                  <span class="w-1.5 h-1.5 rounded-full bg-brandSecondary"></span> Otimização de biohackers e nutracêuticos de ponta.
+                </li>
+                <li class="flex items-center gap-3">
+                  <span class="w-1.5 h-1.5 rounded-full bg-brandSecondary"></span> Cardápios adaptados para jantares de negócios e viagens de luxo.
+                </li>
+                <li class="flex items-center gap-3">
+                  <span class="w-1.5 h-1.5 rounded-full bg-brandSecondary"></span> Sessões exclusivas bimestrais presenciais ou online.
+                </li>
+              </ul>
+              <a href="https://wa.me/5511999999999" target="_blank" class="inline-flex items-center gap-3 bg-brandDark text-brandBg hover:bg-brandSecondary hover:text-brandDark px-8 py-4 text-xs uppercase tracking-widest font-semibold transition-all duration-500">
+                Consultar Vagas
+              </a>
+            </div>
+            <div class="lg:col-span-5 lg:order-1">
+              <div class="overflow-hidden rounded-2xl aspect-video lg:aspect-square">
+                <img src="https://images.unsplash.com/photo-1556910103-1c02745aae4d?auto=format&fit=crop&w=800&q=80" alt="Executive wellness lifestyle" class="w-full h-full object-cover hover:scale-105 transition-all duration-700">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Serviço 03 -->
+        <div class="bg-brandBg border border-[#1C1613]/5 p-8 md:p-16 rounded-[2rem] shadow-sm hover:shadow-xl transition-all duration-500">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            <div class="lg:col-span-7">
+              <div class="flex items-center gap-4 mb-6">
+                <span class="font-serif text-lg italic text-brandSecondary font-semibold">03</span>
+                <span class="text-xs uppercase tracking-[0.2em] text-brandDark/60">Estilo de Vida</span>
+              </div>
+              <h3 class="font-serif text-3xl md:text-4xl text-brandDark mb-6">Mentoria de Gastronomia Funcional de Luxo</h3>
+              <p class="text-brandDark/70 text-sm md:text-base leading-relaxed mb-8 font-light">
+                Um programa imersivo onde te ensino a transformar ingredientes altamente nutritivos em pratos dignos de restaurante estrelado Michelin. Aprenda técnicas de preparo inteligente de conservas estéticas, sobremesas sem açúcares refinados extremamente saborosas e harmonização nutritiva.
+              </p>
+              <ul class="space-y-3 mb-8 text-sm text-brandDark/80">
+                <li class="flex items-center gap-3">
+                  <span class="w-1.5 h-1.5 rounded-full bg-brandSecondary"></span> Apostila impressa em papel editorial texturizado de luxo.
+                </li>
+                <li class="flex items-center gap-3">
+                  <span class="w-1.5 h-1.5 rounded-full bg-brandSecondary"></span> Listas de compras de grife em empórios selecionados.
+                </li>
+                <li class="flex items-center gap-3">
+                  <span class="w-1.5 h-1.5 rounded-full bg-brandSecondary"></span> Videoaulas gravadas em qualidade de cinema.
+                </li>
+              </ul>
+              <a href="https://wa.me/5511999999999" target="_blank" class="inline-flex items-center gap-3 bg-brandDark text-brandBg hover:bg-brandSecondary hover:text-brandDark px-8 py-4 text-xs uppercase tracking-widest font-semibold transition-all duration-500">
+                Quero Participar
+              </a>
+            </div>
+            <div class="lg:col-span-5">
+              <div class="overflow-hidden rounded-2xl aspect-video lg:aspect-square">
+                <img src="https://images.unsplash.com/photo-1512290923902-8a9f81dc236c?auto=format&fit=crop&w=800&q=80" alt="Minimalist wellness setup" class="w-full h-full object-cover hover:scale-105 transition-all duration-700">
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SEÇÃO PRODUTO / E-BOOKS PROTEGIDOS (COM CAPTURA PREMIUM) -->
+  <section id="ebooks" class="relative bg-[#FAF8F5] py-32 border-t border-[#1C1613]/10">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
+        
+        <!-- Detalhe do Produto e Livro de Arte -->
+        <div class="lg:col-span-6">
+          <p class="text-xs uppercase tracking-[0.3em] text-[#1C1613]/50 mb-4">Material de Assinatura Autoral</p>
+          <h2 class="font-serif text-4xl md:text-5xl text-brandDark mb-6">
+            Guia de <span class="italic font-light text-brandSecondary">Gastronomia Minimalista</span> de Alta Performance
+          </h2>
+          <p class="text-brandDark/70 text-sm md:text-base leading-relaxed mb-8 font-light">
+            Tenha em suas mãos o best-seller digital da Dra. Beatriz Amorim. Um compêndio metodológico contendo mais de 50 receitas estéticas projetadas para desinflamar e potencializar os resultados de perda calórica de forma elegante.
+          </p>
+
+          <!-- Book Showcase Mockup -->
+          <div class="relative max-w-sm mx-auto lg:mx-0">
+            <div class="absolute inset-0 bg-[#1C1613]/5 rounded-xl blur-xl translate-x-4 translate-y-4"></div>
+            <div class="relative bg-brandDark text-brandPrimary p-8 rounded-xl border border-brandSecondary/20 aspect-[3/4] flex flex-col justify-between">
+              <div>
+                <p class="text-[9px] uppercase tracking-[0.2em] text-brandSecondary">Beatriz Amorim</p>
+                <div class="w-8 h-[1px] bg-brandSecondary/40 mt-2"></div>
+              </div>
+              <div class="my-6">
+                <h4 class="font-serif text-3xl italic text-brandSecondary font-light leading-none">O Protocolo</h4>
+                <h3 class="font-serif text-4xl text-brandPrimary tracking-wide mt-2">ESTÉTICA</h3>
+                <p class="text-[10px] uppercase tracking-[0.15em] text-[#FAF8F5]/60 mt-4 leading-relaxed">Guia de nutrição desinflamatória para o corpo de alta performance.</p>
+              </div>
+              <div class="border-t border-brandPrimary/10 pt-4 flex justify-between items-center text-[9px] uppercase tracking-[0.15em]">
+                <span>Volume I</span>
+                <span class="text-brandSecondary">Awwwards Special Edition</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Captura Premium integrada com WhatsApp -->
+        <div class="lg:col-span-6 bg-brandPrimary border border-[#1C1613]/10 p-8 md:p-12 rounded-[2rem] shadow-xl">
+          <div class="mb-8">
+            <h3 class="font-serif text-2xl md:text-3xl text-brandDark mb-2">Acesso Exclusivo</h3>
+            <p class="text-xs text-brandDark/60">Inscreva-se abaixo para receber uma amostra grátis de receitas raras e iniciar seu contato.</p>
+          </div>
+          
+          <form class="space-y-6" onsubmit="event.preventDefault(); alert('Inscrição realizada! Um link exclusivo está sendo gerado e enviado para seu WhatsApp.');">
+            <div>
+              <label class="block text-[10px] uppercase tracking-[0.2em] text-brandDark/80 mb-2 font-semibold">Nome Completo</label>
+              <input type="text" required placeholder="Ex: Sophia Alencar" class="w-full bg-brandBg border border-[#1C1613]/15 rounded-lg px-4 py-3.5 text-sm focus:outline-none focus:border-brandSecondary transition-all">
+            </div>
+            <div>
+              <label class="block text-[10px] uppercase tracking-[0.2em] text-brandDark/80 mb-2 font-semibold">E-mail Corporativo</label>
+              <input type="email" required placeholder="sophia@empresa.com.br" class="w-full bg-brandBg border border-[#1C1613]/15 rounded-lg px-4 py-3.5 text-sm focus:outline-none focus:border-brandSecondary transition-all">
+            </div>
+            <div>
+              <label class="block text-[10px] uppercase tracking-[0.2em] text-brandDark/80 mb-2 font-semibold">WhatsApp para Contato</label>
+              <input type="tel" required placeholder="(11) 99999-9999" class="w-full bg-brandBg border border-[#1C1613]/15 rounded-lg px-4 py-3.5 text-sm focus:outline-none focus:border-brandSecondary transition-all">
+            </div>
+            <div class="flex items-center gap-3">
+              <input type="checkbox" required id="lgpd" class="accent-brandDark">
+              <label for="lgpd" class="text-[11px] text-brandDark/60 leading-tight">Aceito receber conteúdos exclusivos de saúde integrativa e promoções.</label>
+            </div>
+            <button type="submit" class="w-full bg-brandDark text-[#FAF8F5] hover:bg-brandSecondary hover:text-brandDark py-4 text-xs uppercase tracking-widest font-semibold transition-all duration-500 shadow-md">
+              Desbloquear Amostra Grátis
+            </button>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- SEÇÃO PROVA SOCIAL COMPLETA -->
+  <section id="experiencia" class="bg-brandBg py-32">
+    <div class="max-w-7xl mx-auto px-6">
+      
+      <div class="max-w-2xl mb-24">
+        <p class="text-xs uppercase tracking-[0.3em] text-[#1C1613]/50 mb-4">Relatos Reais</p>
+        <h2 class="font-serif text-4xl md:text-6xl text-brandDark leading-tight">
+          Histórias de <span class="italic font-light text-brandSecondary">Transformação Notável</span>
+        </h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        
+        <!-- Depoimento 1 -->
+        <div class="bg-brandPrimary p-8 rounded-2xl border border-brandDark/5 flex flex-col justify-between shadow-sm hover:shadow-lg transition-shadow duration-300">
+          <div>
+            <!-- Estrelas Douradas de Alta Classe -->
+            <div class="flex gap-1 mb-6 text-brandSecondary">
+              <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+            </div>
+            <p class="text-brandDark/80 text-sm italic leading-relaxed font-light mb-6">
+              "A Beatriz mudou totalmente minha percepção de dieta. Em 3 meses perdi gordura, recuperei meu sono e minha pele está mais radiante do que nunca. Não sinto que estou fazendo dieta, é um estilo de vida fantástico."
+            </p>
+          </div>
+          <div class="border-t border-brandDark/5 pt-4">
+            <p class="font-serif text-base font-semibold text-brandDark">Mariana Lins</p>
+            <p class="text-[9px] uppercase tracking-[0.15em] text-brandDark/40">CEO da Lins Brand &amp; Arquitetura</p>
+          </div>
+        </div>
+
+        <!-- Depoimento 2 -->
+        <div class="bg-brandPrimary p-8 rounded-2xl border border-brandDark/5 flex flex-col justify-between shadow-sm hover:shadow-lg transition-shadow duration-300">
+          <div>
+            <div class="flex gap-1 mb-6 text-brandSecondary">
+              <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+            </div>
+            <p class="text-brandDark/80 text-sm italic leading-relaxed font-light mb-6">
+              "Foquei na performance cognitiva e na modulação hormonal. Os cardápios da Bia são de altíssimo nível, refinados e práticos. Sinto-me incrivelmente vigorosa e produtiva nas reuniões executivas."
+            </p>
+          </div>
+          <div class="border-t border-brandDark/5 pt-4">
+            <p class="font-serif text-base font-semibold text-brandDark">Renata Vasconcellos</p>
+            <p class="text-[9px] uppercase tracking-[0.15em] text-brandDark/40">Sócia Diretora no Vally Group</p>
+          </div>
+        </div>
+
+        <!-- Depoimento 3 -->
+        <div class="bg-brandPrimary p-8 rounded-2xl border border-brandDark/5 flex flex-col justify-between shadow-sm hover:shadow-lg transition-shadow duration-300">
+          <div>
+            <div class="flex gap-1 mb-6 text-brandSecondary">
+              <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+            </div>
+            <p class="text-brandDark/80 text-sm italic leading-relaxed font-light mb-6">
+              "O atendimento premium da Dra. Beatriz é sem igual. O suporte diário pelo concierge garante que eu não me perca mesmo viajando constantemente pela Europa. Os resultados superaram todas as minhas metas."
+            </p>
+          </div>
+          <div class="border-t border-brandDark/5 pt-4">
+            <p class="font-serif text-base font-semibold text-brandDark">Gisele Albuquerque</p>
+            <p class="text-[9px] uppercase tracking-[0.15em] text-brandDark/40">Fashion Designer &amp; Influencer</p>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FOOTER MINIMALISTA E NOBRE -->
+  <footer class="bg-brandDark text-[#FAF8F5]/60 py-24 border-t border-[#FAF8F5]/10 text-xs tracking-[0.15em] uppercase">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
+        
+        <!-- Coluna 1: Branding -->
+        <div>
+          <span class="font-serif text-lg font-semibold tracking-[0.15em] uppercase text-brandBg leading-none block mb-4">Beatriz Amorim</span>
+          <p class="text-[9px] text-[#FAF8F5]/40 leading-relaxed font-light normal-case">
+            Nutrição Estética Integral e de Alta Performance para indivíduos refinados.
+          </p>
+        </div>
+
+        <!-- Coluna 2: Navegação Rápida -->
+        <div class="flex flex-col gap-3">
+          <p class="text-brandSecondary text-[10px] tracking-[0.2em] font-semibold mb-2">Navegação</p>
+          <a href="#filosofia" class="hover:text-brandSecondary transition-colors">A Filosofia</a>
+          <a href="#metodo" class="hover:text-brandSecondary transition-colors">O Método</a>
+          <a href="#servicos" class="hover:text-brandSecondary transition-colors">Serviços Premium</a>
+          <a href="#ebooks" class="hover:text-brandSecondary transition-colors">E-books</a>
+        </div>
+
+        <!-- Coluna 3: Links Legais -->
+        <div class="flex flex-col gap-3">
+          <p class="text-brandSecondary text-[10px] tracking-[0.2em] font-semibold mb-2">Legal</p>
+          <a href="#" class="hover:text-brandSecondary transition-colors">Termos de Uso</a>
+          <a href="#" class="hover:text-brandSecondary transition-colors">Políticas de Privacidade</a>
+          <p class="text-[9px] text-[#FAF8F5]/40 mt-2 normal-case">CRN-3: 12345/SP</p>
+        </div>
+
+        <!-- Coluna 4: Agência & Contato -->
+        <div class="flex flex-col gap-3">
+          <p class="text-brandSecondary text-[10px] tracking-[0.2em] font-semibold mb-2">Rede Exclusiva</p>
+          <a href="https://instagram.com/nutriamorimbea" target="_blank" class="hover:text-brandSecondary transition-colors">Instagram</a>
+          <a href="mailto:contato@beatrizamorim.com" class="hover:text-brandSecondary transition-colors">E-mail Privado</a>
+        </div>
+
+      </div>
+
+      <!-- Créditos Finos e Awwwards-compliant -->
+      <div class="border-t border-[#FAF8F5]/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-[9px] text-[#FAF8F5]/40 tracking-[0.2em]">
+        <p>© 2024 Beatriz Amorim Nutrição. Todos os direitos reservados.</p>
+        <p class="normal-case">Concebido com rigor estético pela agência <a href="https://rdexclusive.com.br" class="text-brandSecondary hover:underline font-semibold">RD Exclusive</a>.</p>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- Script para Gerenciamento do Menu Mobile -->
+  <script>
+    function toggleMobileMenu() {
+      const menu = document.getElementById('mobileMenu');
+      if (menu.classList.contains('translate-x-full')) {
+        menu.classList.remove('translate-x-full');
+        menu.classList.add('translate-x-0');
+      } else {
+        menu.classList.remove('translate-x-0');
+        menu.classList.add('translate-x-full');
+      }
+    }
+  </script>
+
+</body>
+</html>
