@@ -3,337 +3,316 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Nutricionista Luciana Guerra | Alta Gastronomia & Performance Nutricional Premium</title>
+  <title>Luciana Guerra | Nutrição de Alta Performance & Longevidade</title>
   
-  <!-- FontAwesome Integration -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-  
-  <!-- Google Fonts -->
+  <!-- Fontes Premium -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Plus+Jakarta+Sans:wght@200..800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   
-  <!-- Tailwind CSS -->
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Tailwind CSS & Configuração de Identidade Visual -->
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
       theme: {
         extend: {
           colors: {
-            brandPrimary: '#F0EBE1',
-            brandSecondary: '#D1B38C',
-            brandDark: '#1C1613',
-            brandBg: '#FAF8F5'
+            brandPrimary: '#F0EBE1', // Bege Nobre (Coluna Q)
+            brandDark: '#1C1613',    // Ébano Sofisticado
+            brandBg: '#FAF8F5',      // Off-White Premium
+            brandAccent: '#C5A880'   // Ouro Escovado
           },
           fontFamily: {
             serif: ['Playfair Display', 'serif'],
             sans: ['Plus Jakarta Sans', 'sans-serif']
+          },
+          animation: {
+            'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+            'float': 'float 6s ease-in-out infinite',
+          },
+          keyframes: {
+            float: {
+              '0%, 100%': { transform: 'translateY(0)' },
+              '50%': { transform: 'translateY(-10px)' },
+            }
           }
         }
       }
     }
   </script>
 
-  <!-- Inline CSS for Premium Touches and WhatsApp Pulse Animation -->
   <style>
-    @keyframes pulse-premium {
-      0% {
-        transform: scale(1);
-        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
-      }
-      70% {
-        transform: scale(1.05);
-        box-shadow: 0 0 0 15px rgba(37, 211, 102, 0);
-      }
-      100% {
-        transform: scale(1);
-        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
-      }
+    /* Custom Scrollbar */
+    ::-webkit-scrollbar {
+      width: 8px;
     }
-    .animate-whatsapp {
-      animation: pulse-premium 2s infinite;
+    ::-webkit-scrollbar-track {
+      background: #FAF8F5;
     }
-    .editorial-grid {
-      background-image: 
-        linear-gradient(to right, rgba(28, 22, 19, 0.03) 1px, transparent 1px),
-        linear-gradient(to bottom, rgba(28, 22, 19, 0.03) 1px, transparent 1px);
-      background-size: 80px 80px;
+    ::-webkit-scrollbar-thumb {
+      background: #C5A880;
+      border-radius: 4px;
+    }
+    
+    /* Smooth CSS Gradients */
+    .hero-gradient {
+      background: linear-gradient(180deg, rgba(240, 235, 225, 0.5) 0%, rgba(250, 248, 245, 1) 100%);
     }
   </style>
 </head>
-<body class="bg-brandBg text-brandDark font-sans selection:bg-brandSecondary selection:text-brandDark leading-relaxed overflow-x-hidden">
+<body class="bg-brandBg text-brandDark font-sans selection:bg-brandPrimary selection:text-brandDark overflow-x-hidden">
 
-  <!-- TOP BAR (SEO, Tel & Mail Clicáveis, Redes Sociais) -->
-  <div class="bg-brandDark text-brandPrimary/80 py-3 px-4 sm:px-8 border-b border-white/5 text-xs tracking-wider uppercase z-50 relative">
-    <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-2">
-      <div class="flex flex-wrap justify-center gap-6">
-        <a href="mailto:contato@nutrilucianaguerra.com.br" class="hover:text-brandSecondary transition-colors flex items-center gap-2">
-          <i class="fa-regular fa-envelope text-brandSecondary text-sm"></i>
-          <span>contato@nutrilucianaguerra.com.br</span>
-        </a>
-        <a href="tel:+5511999999999" class="hover:text-brandSecondary transition-colors flex items-center gap-2">
-          <i class="fa-solid fa-phone text-brandSecondary text-sm"></i>
-          <span>+55 (11) 99999-9999</span>
-        </a>
-      </div>
-      <div class="flex items-center gap-4">
-        <span class="text-[10px] bg-brandSecondary/20 text-brandSecondary px-2 py-0.5 rounded border border-brandSecondary/30">Clínica Presencial & Online</span>
-        <div class="flex items-center gap-3 ml-2 border-l border-white/10 pl-3">
-          <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="hover:text-brandSecondary transition-colors text-sm" aria-label="Acesse o Instagram"><i class="fa-brands fa-instagram"></i></a>
-          <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="hover:text-brandSecondary transition-colors text-sm" aria-label="Acesse o Facebook"><i class="fa-brands fa-facebook-f"></i></a>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- HEADER INDESTRUTÍVEL DE TRÊS PARTES -->
-  <header class="sticky top-0 z-40 backdrop-blur-md bg-[#FAF8F5]/80 border-b border-brandDark/5 transition-all duration-300">
-    <div class="max-w-7xl mx-auto px-4 sm:px-8 h-24 flex items-center justify-between">
+  <!-- HEADER FLUTUANTE -->
+  <header class="fixed top-0 left-0 w-full z-50 backdrop-blur-md bg-white/70 border-b border-brandPrimary transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12 h-20 flex items-center justify-between">
       
-      <!-- PARTE 1: Logotipo na esquerda -->
-      <div class="flex-shrink-0">
-        <a href="#" class="flex items-center gap-3">
-          <img src="https://www.google.com/s2/favicons?domain=nutrilucianaguerra.com.br&sz=128" alt="Logo Luciana Guerra" class="max-h-12 w-auto object-contain bg-white p-1 rounded-full shadow-sm border border-brandDark/5">
-          <span class="font-serif text-lg tracking-wider font-semibold text-brandDark">LUCIANA GUERRA</span>
-        </a>
-      </div>
+      <!-- Logo Harmonizado -->
+      <a href="#" class="flex items-center gap-3 group">
+        <img src="https://www.google.com/s2/favicons?domain=nutrilucianaguerra.com.br&sz=128" alt="Luciana Guerra Logo" class="w-10 h-10 rounded-full border border-brandAccent/30 object-cover transition-transform duration-500 group-hover:rotate-12">
+        <div class="flex flex-col">
+          <span class="font-serif text-lg lg:text-xl tracking-wider font-semibold uppercase">Luciana Guerra</span>
+          <span class="text-[10px] tracking-widest font-sans uppercase text-brandAccent">Nutricionista Clínica & Funcional</span>
+        </div>
+      </a>
 
-      <!-- PARTE 2: Links de navegação no centro (Blidados com whitespace-nowrap) -->
-      <nav class="hidden md:flex items-center justify-center gap-8 text-sm font-semibold tracking-wider uppercase text-brandDark/80">
-        <a href="#inicio" class="whitespace-nowrap hover:text-brandSecondary transition-colors">Início</a>
-        <a href="#filosofia" class="whitespace-nowrap hover:text-brandSecondary transition-colors">A Filosofia</a>
-        <a href="#servicos" class="whitespace-nowrap hover:text-brandSecondary transition-colors">Especialidades</a>
-        <a href="#ebooks" class="whitespace-nowrap hover:text-brandSecondary transition-colors">E-books & Guias</a>
-        <a href="#depoimentos" class="whitespace-nowrap hover:text-brandSecondary transition-colors">Depoimentos</a>
+      <!-- Menu Desktop -->
+      <nav class="hidden md:flex items-center gap-8 text-sm font-semibold tracking-wider uppercase">
+        <a href="#sobre" class="hover:text-brandAccent transition-colors">Sobre</a>
+        <a href="#metodologia" class="hover:text-brandAccent transition-colors">Metodologia</a>
+        <a href="#servicos" class="hover:text-brandAccent transition-colors">Serviços</a>
+        <a href="#depoimentos" class="hover:text-brandAccent transition-colors">Pacientes</a>
       </nav>
 
-      <!-- PARTE 3: Botão de Agendamento na extrema direita -->
-      <div class="hidden md:flex items-center justify-end">
-        <a href="https://wa.me/5511999999999?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20consulta%20com%20a%20Dra.%20Luciana." target="_blank" rel="noopener noreferrer" class="bg-brandDark hover:bg-brandSecondary text-brandPrimary hover:text-brandDark px-6 py-3 text-xs tracking-widest uppercase font-bold transition-all duration-300 border border-brandDark hover:border-brandSecondary rounded-sm shadow-md">
+      <!-- CTA Contato -->
+      <div class="hidden md:flex items-center gap-4">
+        <a href="mailto:contato@nutrilucianaguerra.com.br" class="text-sm font-medium hover:text-brandAccent transition-all"><i class="fa-regular fa-envelope mr-2"></i>E-mail</a>
+        <a href="https://wa.me/5511999999999" target="_blank" class="bg-brandDark text-brandBg hover:bg-brandAccent hover:text-brandDark px-6 py-3 rounded-full text-xs font-bold tracking-widest uppercase transition-all duration-300 shadow-sm">
           Agendar Consulta
         </a>
       </div>
 
-      <!-- Hambúrguer Mobile Button (Visível apenas em telas menores) -->
-      <button id="mobile-menu-btn" class="md:hidden flex flex-col justify-between w-6 h-4 text-brandDark focus:outline-none" aria-label="Abrir Menu">
-        <span class="w-full h-[2px] bg-brandDark transition-all duration-300" id="hamburger-line-1"></span>
-        <span class="w-full h-[2px] bg-brandDark transition-all duration-300" id="hamburger-line-2"></span>
-        <span class="w-full h-[2px] bg-brandDark transition-all duration-300" id="hamburger-line-3"></span>
+      <!-- Hamburguer Mobile -->
+      <button id="menu-btn" class="md:hidden flex flex-col justify-between w-6 h-4 z-50 focus:outline-none" aria-label="Abrir Menu">
+        <span class="w-full h-[2px] bg-brandDark transition-all duration-300 origin-left"></span>
+        <span class="w-full h-[2px] bg-brandDark transition-all duration-300"></span>
+        <span class="w-full h-[2px] bg-brandDark transition-all duration-300 origin-left"></span>
       </button>
-
     </div>
 
-    <!-- Mobile Drawer -->
-    <div id="mobile-menu" class="hidden md:hidden bg-[#FAF8F5] border-t border-brandDark/10 px-4 py-8 space-y-6 absolute left-0 w-full shadow-xl transition-all duration-300">
-      <nav class="flex flex-col gap-5 text-center font-medium tracking-wide text-brandDark">
-        <a href="#inicio" class="whitespace-nowrap hover:text-brandSecondary transition-colors text-lg" onclick="toggleMenu()">Início</a>
-        <a href="#filosofia" class="whitespace-nowrap hover:text-brandSecondary transition-colors text-lg" onclick="toggleMenu()">A Filosofia</a>
-        <a href="#servicos" class="whitespace-nowrap hover:text-brandSecondary transition-colors text-lg" onclick="toggleMenu()">Especialidades</a>
-        <a href="#ebooks" class="whitespace-nowrap hover:text-brandSecondary transition-colors text-lg" onclick="toggleMenu()">E-books & Guias</a>
-        <a href="#depoimentos" class="whitespace-nowrap hover:text-brandSecondary transition-colors text-lg" onclick="toggleMenu()">Depoimentos</a>
-      </nav>
-      <div class="pt-4 border-t border-brandDark/5 text-center">
-        <a href="https://wa.me/5511999999999?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20consulta%20com%20a%20Dra.%20Luciana." target="_blank" rel="noopener noreferrer" class="inline-block bg-brandDark hover:bg-brandSecondary text-brandPrimary hover:text-brandDark w-full py-4 text-xs tracking-widest uppercase font-bold transition-all duration-300 rounded-sm">
-          Agendar Consulta
-        </a>
-      </div>
+    <!-- Menu Mobile Dropdown -->
+    <div id="mobile-menu" class="fixed inset-0 bg-brandBg z-40 flex flex-col justify-center items-center gap-8 text-2xl font-serif translate-x-full transition-transform duration-500 ease-in-out">
+      <a href="#sobre" class="mobile-link hover:text-brandAccent transition-colors">Sobre</a>
+      <a href="#metodologia" class="mobile-link hover:text-brandAccent transition-colors">Metodologia</a>
+      <a href="#servicos" class="mobile-link hover:text-brandAccent transition-colors">Serviços</a>
+      <a href="#depoimentos" class="mobile-link hover:text-brandAccent transition-colors">Pacientes</a>
+      <div class="h-[1px] w-24 bg-brandAccent/30 my-4"></div>
+      <a href="tel:+5511999999999" class="text-sm font-sans tracking-wider uppercase hover:text-brandAccent transition-all"><i class="fa-solid fa-phone mr-2"></i>Ligar Agora</a>
+      <a href="https://wa.me/5511999999999" target="_blank" class="bg-brandDark text-brandBg px-8 py-4 rounded-full text-sm font-bold tracking-widest uppercase font-sans">
+        Agendar Consulta
+      </a>
     </div>
   </header>
 
-  <!-- HERO SECTION: IMERSIVO, SOBREPOSTO E ASSIMÉTRICO -->
-  <section id="inicio" class="relative py-20 md:py-32 lg:py-40 overflow-hidden editorial-grid">
-    <div class="max-w-7xl mx-auto px-4 sm:px-8 relative z-10">
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
-        
-        <!-- Bloco de Texto (Nobre, Gigante e Sobreposto) -->
-        <div class="lg:col-span-7 relative z-20 space-y-6 lg:pr-10">
-          <div class="flex items-center gap-3">
-            <span class="w-12 h-[1px] bg-brandSecondary"></span>
-            <span class="text-xs tracking-widest uppercase font-bold text-brandSecondary">Clínica de Nutrição de Alta Performance</span>
-          </div>
-          <h1 class="font-serif text-5xl md:text-6xl lg:text-7xl text-brandDark font-medium tracking-tight leading-[1.1]">
-            Nutrição de grife <br>
-            <span class="font-serif italic font-light text-brandSecondary">desenhada para</span> <br>
-            seu estilo de vida.
-          </h1>
-          <p class="text-base md:text-lg text-brandDark/70 max-w-xl font-light">
-            Não se trata de restrição, mas de refinamento. Desenvolvo protocolos nutricionais de alta costura com base em mapeamento metabólico avançado, proporcionando longevidade, vigor e bem-estar supremo.
-          </p>
-          <div class="flex flex-col sm:flex-row gap-4 pt-4">
-            <a href="https://wa.me/5511999999999" target="_blank" rel="noopener noreferrer" class="bg-brandDark hover:bg-brandSecondary text-brandPrimary hover:text-brandDark px-8 py-4 text-xs tracking-widest uppercase font-bold transition-all duration-300 rounded-sm shadow-xl text-center">
-              Começar Minha Transformação
-            </a>
-            <a href="#servicos" class="border border-brandDark/20 hover:border-brandDark hover:bg-brandDark/5 text-brandDark px-8 py-4 text-xs tracking-widest uppercase font-bold transition-all duration-300 rounded-sm text-center">
-              Ver Metodologia
-            </a>
-          </div>
-        </div>
+  <!-- HERO SECTION (ESTILO EDITORIAL AWWWARDS) -->
+  <section class="min-h-screen pt-32 lg:pt-40 flex items-center hero-gradient relative overflow-hidden">
+    <!-- Elementos Abstratos de Fundo -->
+    <div class="absolute top-1/4 right-[-10%] w-[50vw] h-[50vw] rounded-full bg-brandPrimary/30 blur-[120px] pointer-events-none"></div>
+    <div class="absolute bottom-10 left-[-10%] w-[30vw] h-[30vw] rounded-full bg-brandAccent/10 blur-[80px] pointer-events-none"></div>
 
-        <!-- Bloco da Imagem (Vertical, rotacionada, de alto padrão) -->
-        <div class="lg:col-span-5 relative mt-10 lg:mt-0">
-          <div class="relative w-full max-w-md mx-auto">
-            <!-- Detalhe decorativo de moldura minimalista -->
-            <div class="absolute inset-0 border border-brandSecondary/40 rounded-2xl transform translate-x-4 translate-y-4 z-0"></div>
-            <!-- Container Principal da Imagem -->
-            <div class="relative overflow-hidden rounded-2xl shadow-2xl transform rotate-1 transition-transform duration-500 hover:rotate-0 z-10 bg-brandPrimary">
-              <!-- Gastronomia minimalista de alta classe -->
-              <img src="https://images.unsplash.com/photo-1540420773420-3366772f4999?q=80&w=1000&auto=format&fit=crop" alt="Ingredientes Estéticos" class="w-full h-[500px] object-cover filter brightness-[0.97] hover:scale-105 transition-transform duration-700">
-            </div>
-            <!-- Selo de Assinatura Flutuante -->
-            <div class="absolute -bottom-6 -left-6 bg-brandDark text-brandPrimary px-6 py-4 rounded shadow-2xl z-20 hidden sm:block">
-              <span class="block text-[10px] uppercase tracking-widest text-brandSecondary font-bold">Protocolo</span>
-              <span class="font-serif text-lg italic font-light">Luciana Guerra</span>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- SEÇÃO FILOSOFIA: CONTRALUZ ASSIMÉTRICO (FUNDO ESCURO) -->
-  <section id="filosofia" class="bg-brandDark text-brandPrimary py-24 md:py-32 relative overflow-hidden">
-    <!-- Linhas decorativas sutis -->
-    <div class="absolute inset-y-0 left-1/4 w-[1px] bg-white/5 hidden lg:block"></div>
-    <div class="absolute inset-y-0 right-1/4 w-[1px] bg-white/5 hidden lg:block"></div>
-    
-    <div class="max-w-7xl mx-auto px-4 sm:px-8 relative z-10">
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
-        
-        <!-- Esquerda: Depoimento / Manifesto Conceitual -->
-        <div class="lg:col-span-5 space-y-8">
-          <div class="space-y-3">
-            <span class="text-xs uppercase tracking-widest text-brandSecondary font-bold">O Manifesto</span>
-            <h2 class="font-serif text-4xl md:text-5xl font-light tracking-tight leading-tight">
-              A comida como <span class="font-serif italic text-brandSecondary">arte e cura</span>.
-            </h2>
-          </div>
-          <p class="text-brandPrimary/80 font-light leading-relaxed text-base md:text-lg">
-            Abomino as tabelas calóricas frias e a monotonia das dietas genéricas. Acredito na ciência aliada ao design da alimentação de alto padrão. Cada refeição deve nutrir o DNA e, ao mesmo tempo, satisfazer os olhos e a alma.
-          </p>
-          <div class="border-l-2 border-brandSecondary pl-4 space-y-2">
-            <p class="font-serif italic text-lg text-brandPrimary/95">"Sua assinatura celular é única. Por que sua nutrição seria uniforme?"</p>
-            <span class="text-xs uppercase tracking-widest text-brandSecondary">— Dra. Luciana Guerra</span>
-          </div>
-        </div>
-
-        <!-- Direita: Bloco de Informações Assecível e de Grife -->
-        <div class="lg:col-span-7 bg-white/5 p-8 md:p-12 rounded-2xl border border-white/10 backdrop-blur-sm space-y-8">
-          <h3 class="font-serif text-2xl text-brandSecondary font-normal">Nossos Pilares Fundamentais</h3>
-          
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div class="space-y-3">
-              <span class="text-brandSecondary font-serif text-3xl font-light">I.</span>
-              <h4 class="font-semibold text-lg text-brandPrimary">Mapeamento Genético</h4>
-              <p class="text-xs text-brandPrimary/70 leading-relaxed">
-                Análise minuciosa de sensibilidades genéticas, metabolismo de macronutrientes e predisposições para um plano verdadeiramente individual.
-              </p>
-            </div>
-            
-            <div class="space-y-3">
-              <span class="text-brandSecondary font-serif text-3xl font-light">II.</span>
-              <h4 class="font-semibold text-lg text-brandPrimary">Gastronomia Funcional</h4>
-              <p class="text-xs text-brandPrimary/70 leading-relaxed">
-                Desenvolvimento de receitas premium e cardápios contemporâneos que unem sabor e densidade nutricional insuperável.
-              </p>
-            </div>
-
-            <div class="space-y-3">
-              <span class="text-brandSecondary font-serif text-3xl font-light">III.</span>
-              <h4 class="font-semibold text-lg text-brandPrimary">Modulação Intestinal</h4>
-              <p class="text-xs text-brandPrimary/70 leading-relaxed">
-                Restauração da integridade da microbiota com foco no controle inflamatório, melhora da disposição e absorção premium de nutrientes.
-              </p>
-            </div>
-
-            <div class="space-y-3">
-              <span class="text-brandSecondary font-serif text-3xl font-light">IV.</span>
-              <h4 class="font-semibold text-lg text-brandPrimary">Suplementação Ortomolecular</h4>
-              <p class="text-xs text-brandPrimary/70 leading-relaxed">
-                Prescrição sinérgica de minerais quelatados, fitoterápicos e compostos ativos para elevar a barreira imunológica e a vitalidade.
-              </p>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- SEÇÃO SERVIÇOS DETALHADOS -->
-  <section id="servicos" class="py-24 md:py-32 bg-[#FAF8F5]">
-    <div class="max-w-7xl mx-auto px-4 sm:px-8">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12 w-full grid grid-cols-1 lg:grid-cols-12 gap-12 items-center relative z-10">
       
-      <!-- Cabeçalho Central -->
-      <div class="text-center max-w-3xl mx-auto mb-20 space-y-4">
-        <span class="text-xs tracking-widest uppercase font-bold text-brandSecondary">Metodologia e Atendimento</span>
-        <h2 class="font-serif text-4xl md:text-5xl text-brandDark font-medium tracking-tight">Experiências Clínicas Exclusivas</h2>
-        <p class="text-brandDark/60 text-sm md:text-base font-light">
-          Acompanhamento dinâmico focado em criar um ecossistema saudável que se integre elegantemente à sua rotina pessoal e de negócios.
+      <!-- Copy Principal -->
+      <div class="lg:col-span-7 flex flex-col justify-center text-left">
+        <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/80 border border-brandPrimary text-xs font-semibold tracking-widest uppercase text-brandAccent mb-6 max-w-max">
+          <span class="w-2 h-2 rounded-full bg-brandAccent animate-pulse"></span> Nutrição Baseada em Evidências Clínicas
+        </div>
+        
+        <h1 class="font-serif text-5xl sm:text-6xl lg:text-7xl xl:text-8xl leading-[1.1] tracking-tight mb-8">
+          A ciência por trás do seu bem-estar <span class="italic text-brandAccent">extraordinário</span>.
+        </h1>
+        
+        <p class="font-sans text-lg lg:text-xl text-brandDark/80 font-light max-w-xl leading-relaxed mb-10">
+          Atendimento personalizado com foco em nutrição clínica, esportiva e reeducação metabólica. Estratégias desenhadas sob medida para a sua bioquímica, rotina e longevidade.
+        </p>
+
+        <!-- CTAs Duplos -->
+        <div class="flex flex-col sm:flex-row gap-4">
+          <a href="https://wa.me/5511999999999" target="_blank" class="bg-brandDark text-brandBg hover:bg-brandAccent hover:text-brandDark text-center px-8 py-5 rounded-full font-bold tracking-widest uppercase transition-all duration-300 text-sm shadow-lg flex items-center justify-center gap-3">
+            Começar Minha Transformação <i class="fa-solid fa-arrow-right"></i>
+          </a>
+          <a href="#sobre" class="border border-brandDark/20 hover:border-brandDark text-center px-8 py-5 rounded-full font-bold tracking-widest uppercase transition-all duration-300 text-sm flex items-center justify-center">
+            Ver Metodologia
+          </a>
+        </div>
+
+        <!-- Diferenciais Rápidos -->
+        <div class="grid grid-cols-3 gap-6 pt-12 mt-12 border-t border-brandDark/10">
+          <div>
+            <span class="font-serif text-3xl font-semibold text-brandAccent">100%</span>
+            <p class="text-xs tracking-wider uppercase text-brandDark/60 mt-1">Personalizado</p>
+          </div>
+          <div>
+            <span class="font-serif text-3xl font-semibold text-brandAccent">+1k</span>
+            <p class="text-xs tracking-wider uppercase text-brandDark/60 mt-1">Vidas Transformadas</p>
+          </div>
+          <div>
+            <span class="font-serif text-3xl font-semibold text-brandAccent">CIÊNCIA</span>
+            <p class="text-xs tracking-wider uppercase text-brandDark/60 mt-1">Base Científica</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Imagem Editorial Assimétrica -->
+      <div class="lg:col-span-5 relative mt-8 lg:mt-0 flex justify-center">
+        <div class="relative w-full max-w-md aspect-[3/4] rounded-2xl overflow-hidden border-8 border-brandPrimary shadow-2xl animate-float">
+          <!-- Placeholder de Alta Costura Digital Representando Nutrição Premium -->
+          <div class="absolute inset-0 bg-gradient-to-tr from-brandDark/20 via-transparent to-transparent z-10"></div>
+          <img src="https://images.unsplash.com/photo-1540420773420-3366772f4999?auto=format&fit=crop&q=80&w=1000" alt="Alimentação Saudável e Funcional" class="w-full h-full object-cover">
+        </div>
+        
+        <!-- Selo Flutuante -->
+        <div class="absolute bottom-6 -left-6 bg-white p-5 rounded-2xl border border-brandPrimary shadow-xl max-w-[200px] z-20">
+          <p class="font-serif text-sm italic text-brandAccent mb-1">Dra. Luciana Guerra</p>
+          <p class="text-[10px] font-sans tracking-wider uppercase text-brandDark/60">Atendimento humanizado focado em resultados reais e duradouros.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SEÇÃO SOBRE & CONCEITO CLÍNICO -->
+  <section id="sobre" class="py-24 lg:py-32 bg-white relative">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12 grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
+      
+      <!-- Bloco de Imagem Coadjuvante -->
+      <div class="lg:col-span-5 order-2 lg:order-1">
+        <div class="grid grid-cols-2 gap-4">
+          <div class="space-y-4">
+            <img class="w-full aspect-square object-cover rounded-xl shadow-md" src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&q=80&w=500" alt="Clínica Nutrição">
+            <img class="w-full aspect-[3/4] object-cover rounded-xl shadow-md" src="https://images.unsplash.com/photo-1490645935967-10de6ba17061?auto=format&fit=crop&q=80&w=500" alt="Alimentos Funcionais">
+          </div>
+          <div class="space-y-4 pt-8">
+            <img class="w-full aspect-[3/4] object-cover rounded-xl shadow-md" src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&q=80&w=500" alt="Salada Otimizada">
+            <div class="bg-brandPrimary aspect-square rounded-xl p-6 flex flex-col justify-between text-brandDark">
+              <i class="fa-solid fa-heart-pulse text-3xl text-brandAccent"></i>
+              <p class="text-xs font-semibold tracking-wider uppercase">Foco na saúde integrativa e longevidade.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Texto Conceitual -->
+      <div class="lg:col-span-7 order-1 lg:order-2 space-y-8">
+        <span class="text-xs font-bold tracking-widest uppercase text-brandAccent">Sobre a Profissional</span>
+        <h2 class="font-serif text-4xl lg:text-5xl tracking-tight leading-tight">
+          Uma abordagem científica, acolhedora e totalmente individualizada.
+        </h2>
+        <p class="font-sans text-brandDark/80 font-light text-lg leading-relaxed">
+          Com ampla bagagem acadêmica e prática clínica, a nutricionista <strong>Luciana Guerra</strong> desenvolve estratégias nutricionais focadas em reestabelecer o equilíbrio bioquímico do organismo de seus pacientes. 
+        </p>
+        <p class="font-sans text-brandDark/80 font-light text-lg leading-relaxed">
+          Longe de dietas restritivas e fórmulas prontas, seu trabalho se baseia em compreender profundamente o seu histórico, exames de sangue, composição de gordura e massa magra, rotina corporativa, hábitos e objetivos individuais, entregando uma rota sustentável de saúde.
+        </p>
+        
+        <!-- Lista de Pilares de Atuação -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 pt-4">
+          <div class="flex items-start gap-3">
+            <span class="w-6 h-6 rounded-full bg-brandPrimary flex items-center justify-center shrink-0 text-brandAccent"><i class="fa-solid fa-check text-xs"></i></span>
+            <div>
+              <h4 class="font-semibold text-sm">Equilíbrio Hormonal</h4>
+              <p class="text-xs text-brandDark/60 mt-0.5">Otimização através de micronutrientes.</p>
+            </div>
+          </div>
+          <div class="flex items-start gap-3">
+            <span class="w-6 h-6 rounded-full bg-brandPrimary flex items-center justify-center shrink-0 text-brandAccent"><i class="fa-solid fa-check text-xs"></i></span>
+            <div>
+              <h4 class="font-semibold text-sm">Nutrição Esportiva Pragmática</h4>
+              <p class="text-xs text-brandDark/60 mt-0.5">Foco em rendimento e composição corporal.</p>
+            </div>
+          </div>
+          <div class="flex items-start gap-3">
+            <span class="w-6 h-6 rounded-full bg-brandPrimary flex items-center justify-center shrink-0 text-brandAccent"><i class="fa-solid fa-check text-xs"></i></span>
+            <div>
+              <h4 class="font-semibold text-sm">Modulação Intestinal</h4>
+              <p class="text-xs text-brandDark/60 mt-0.5">A base de toda absorção e imunidade.</p>
+            </div>
+          </div>
+          <div class="flex items-start gap-3">
+            <span class="w-6 h-6 rounded-full bg-brandPrimary flex items-center justify-center shrink-0 text-brandAccent"><i class="fa-solid fa-check text-xs"></i></span>
+            <div>
+              <h4 class="font-semibold text-sm">Emagrecimento sem Mitos</h4>
+              <p class="text-xs text-brandDark/60 mt-0.5">Foco na preservação de massa muscular.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- METODOLOGIA DA CONSULTA -->
+  <section id="metodologia" class="py-24 bg-brandBg relative border-t border-brandPrimary">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12">
+      
+      <div class="text-center max-w-2xl mx-auto mb-20">
+        <span class="text-xs font-bold tracking-widest uppercase text-brandAccent">Como Funciona</span>
+        <h2 class="font-serif text-4xl lg:text-5xl mt-3 mb-6">A Jornada de Acompanhamento</h2>
+        <p class="text-brandDark/70 font-light">
+          Um método estruturado em pilares sequenciais para garantir que sua evolução seja monitorada, prazerosa e cientificamente validada.
         </p>
       </div>
 
-      <!-- Grid de Serviços -->
-      <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
         
-        <!-- Card de Serviço 1 -->
-        <div class="bg-white p-8 md:p-10 rounded-2xl border border-brandDark/5 shadow-sm hover:shadow-xl transition-all duration-300 relative group overflow-hidden">
-          <div class="absolute top-0 left-0 w-full h-[3px] bg-brandSecondary transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></div>
-          <div class="flex justify-between items-start mb-8">
-            <span class="font-serif text-5xl font-light text-brandSecondary/30">01</span>
-            <div class="w-12 h-12 rounded-full bg-brandPrimary/50 flex items-center justify-center text-brandDark">
-              <i class="fa-solid fa-gem text-lg text-brandSecondary"></i>
-            </div>
+        <!-- Passo 1 -->
+        <div class="bg-white p-8 rounded-2xl border border-brandPrimary/60 relative group hover:shadow-xl transition-all duration-300">
+          <span class="absolute top-6 right-8 font-serif text-5xl text-brandAccent/20 font-bold group-hover:text-brandAccent/40 transition-colors">01</span>
+          <div class="w-12 h-12 rounded-full bg-brandPrimary flex items-center justify-center mb-8 text-brandDark">
+            <i class="fa-solid fa-clipboard-list text-lg"></i>
           </div>
-          <h3 class="font-serif text-2xl font-semibold text-brandDark mb-4">Metabolismo de Grife</h3>
-          <p class="text-brandDark/70 text-sm leading-relaxed mb-6">
-            Acompanhamento contínuo focado em emagrecimento sustentável e recomposição corporal avançada, utilizando estratégias nutricionais sofisticadas de fácil aderência para pessoas exigentes.
+          <h3 class="font-serif text-xl font-semibold mb-4">Anamnese Completa</h3>
+          <p class="text-brandDark/70 text-sm leading-relaxed">
+            Mapeamento aprofundado dos seus hábitos, sintomas clínicos, histórico familiar, sono, rotina profissional e preferências de paladar.
           </p>
-          <ul class="text-xs space-y-3 text-brandDark/80 font-medium">
-            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brandSecondary"></i> Consultas quinzenais de monitoramento</li>
-            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brandSecondary"></i> Suporte contínuo direto via WhatsApp</li>
-            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brandSecondary"></i> Plano alimentar adaptado para viagens</li>
-          </ul>
         </div>
 
-        <!-- Card de Serviço 2 -->
-        <div class="bg-white p-8 md:p-10 rounded-2xl border border-brandDark/5 shadow-sm hover:shadow-xl transition-all duration-300 relative group overflow-hidden">
-          <div class="absolute top-0 left-0 w-full h-[3px] bg-brandSecondary transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></div>
-          <div class="flex justify-between items-start mb-8">
-            <span class="font-serif text-5xl font-light text-brandSecondary/30">02</span>
-            <div class="w-12 h-12 rounded-full bg-brandPrimary/50 flex items-center justify-center text-brandDark">
-              <i class="fa-solid fa-dna text-lg text-brandSecondary"></i>
-            </div>
+        <!-- Passo 2 -->
+        <div class="bg-white p-8 rounded-2xl border border-brandPrimary/60 relative group hover:shadow-xl transition-all duration-300">
+          <span class="absolute top-6 right-8 font-serif text-5xl text-brandAccent/20 font-bold group-hover:text-brandAccent/40 transition-colors">02</span>
+          <div class="w-12 h-12 rounded-full bg-brandPrimary flex items-center justify-center mb-8 text-brandDark">
+            <i class="fa-solid fa-stethoscope text-lg"></i>
           </div>
-          <h3 class="font-serif text-2xl font-semibold text-brandDark mb-4">Imunidade & Intestino</h3>
-          <p class="text-brandDark/70 text-sm leading-relaxed mb-6">
-            Restauração completa do equilíbrio digestivo e barreira imunológica. Foco no tratamento de disbiose, intolerâncias alimentares, inchaço crônico e fadiga inexplicável.
+          <h3 class="font-serif text-xl font-semibold mb-4">Análise Bioquímica</h3>
+          <p class="text-brandDark/70 text-sm leading-relaxed">
+            Avaliação minuciosa de seus exames laboratoriais recentes para verificar possíveis carências de vitaminas, minerais e inflamações silenciosas.
           </p>
-          <ul class="text-xs space-y-3 text-brandDark/80 font-medium">
-            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brandSecondary"></i> Protocolo de Modulação em 4 Etapas</li>
-            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brandSecondary"></i> Guia exclusivo de shots anti-inflamatórios</li>
-            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brandSecondary"></i> Análise integrada de exames de sangue</li>
-          </ul>
         </div>
 
-        <!-- Card de Serviço 3 -->
-        <div class="bg-white p-8 md:p-10 rounded-2xl border border-brandDark/5 shadow-sm hover:shadow-xl transition-all duration-300 relative group overflow-hidden">
-          <div class="absolute top-0 left-0 w-full h-[3px] bg-brandSecondary transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></div>
-          <div class="flex justify-between items-start mb-8">
-            <span class="font-serif text-5xl font-light text-brandSecondary/30">03</span>
-            <div class="w-12 h-12 rounded-full bg-brandPrimary/50 flex items-center justify-center text-brandDark">
-              <i class="fa-solid fa-crown text-lg text-brandSecondary"></i>
-            </div>
+        <!-- Passo 3 -->
+        <div class="bg-white p-8 rounded-2xl border border-brandPrimary/60 relative group hover:shadow-xl transition-all duration-300">
+          <span class="absolute top-6 right-8 font-serif text-5xl text-brandAccent/20 font-bold group-hover:text-brandAccent/40 transition-colors">03</span>
+          <div class="w-12 h-12 rounded-full bg-brandPrimary flex items-center justify-center mb-8 text-brandDark">
+            <i class="fa-solid fa-apple-whole text-lg"></i>
           </div>
-          <h3 class="font-serif text-2xl font-semibold text-brandDark mb-4">Longevidade Ativa</h3>
-          <p class="text-brandDark/70 text-sm leading-relaxed mb-6">
-            Estratégias nutricionais focadas no rejuvenescimento celular e performance cognitiva de executivos. Otimize sua mente, foco e produtividade de forma integrada.
+          <h3 class="font-serif text-xl font-semibold mb-4">Plano de Ação</h3>
+          <p class="text-brandDark/70 text-sm leading-relaxed">
+            Criação de um plano alimentar focado no seu metabolismo, com receitas práticas, estratégias de suplementação segura e metas atingíveis.
           </p>
-          <ul class="text-xs space-y-3 text-brandDark/80 font-medium">
-            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brandSecondary"></i> Cronobiologia da alimentação</li>
-            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brandSecondary"></i> Protocolos de fitoterápicos adaptógenos</li>
-            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brandSecondary"></i> Suporte estético com foco em colágeno</li>
-          </ul>
+        </div>
+
+        <!-- Passo 4 -->
+        <div class="bg-white p-8 rounded-2xl border border-brandPrimary/60 relative group hover:shadow-xl transition-all duration-300">
+          <span class="absolute top-6 right-8 font-serif text-5xl text-brandAccent/20 font-bold group-hover:text-brandAccent/40 transition-colors">04</span>
+          <div class="w-12 h-12 rounded-full bg-brandPrimary flex items-center justify-center mb-8 text-brandDark">
+            <i class="fa-solid fa-chart-line text-lg"></i>
+          </div>
+          <h3 class="font-serif text-xl font-semibold mb-4">Acompanhamento</h3>
+          <p class="text-brandDark/70 text-sm leading-relaxed">
+            Feedbacks estruturados e consultas de retorno para ajustar a estratégia e garantir aderência ao plano no médio e longo prazo.
+          </p>
         </div>
 
       </div>
@@ -341,158 +320,171 @@
     </div>
   </section>
 
-  <!-- SEÇÃO PRODUTO / E-BOOKS PROTEGIDOS -->
-  <section id="ebooks" class="py-24 md:py-32 bg-brandPrimary relative overflow-hidden">
-    <!-- Grade Decorativa de Editorial -->
-    <div class="absolute inset-0 editorial-grid opacity-30 pointer-events-none"></div>
+  <!-- SERVIÇOS EXCLUSIVOS -->
+  <section id="servicos" class="py-24 lg:py-32 bg-brandDark text-brandBg relative">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12">
+      
+      <div class="flex flex-col lg:flex-row lg:items-end justify-between mb-16 gap-6">
+        <div class="max-w-xl">
+          <span class="text-xs font-bold tracking-widest uppercase text-brandAccent">Nossos Serviços</span>
+          <h2 class="font-serif text-4xl lg:text-5xl mt-3">Áreas de Especialidade Clínica</h2>
+        </div>
+        <p class="text-brandBg/60 max-w-sm font-light text-sm">
+          Frentes integradas de intervenção focadas no resgate da vitalidade e performance em todas as fases da vida.
+        </p>
+      </div>
 
-    <div class="max-w-7xl mx-auto px-4 sm:px-8 relative z-10">
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         
-        <!-- Lado Esquerdo: Capa do e-book simulando arte editorial de museu -->
-        <div class="lg:col-span-5 relative">
-          <div class="relative w-full max-w-sm mx-auto transform -rotate-2 hover:rotate-0 transition-all duration-500">
-            <div class="absolute inset-0 bg-brandDark rounded-lg shadow-xl transform translate-x-2 translate-y-3"></div>
-            <!-- Capa Premium -->
-            <div class="relative bg-brandDark text-brandPrimary p-10 rounded-lg shadow-2xl border border-white/10 space-y-8 flex flex-col justify-between h-[480px]">
-              <div class="space-y-4">
-                <span class="text-[10px] tracking-widest uppercase text-brandSecondary font-bold">Lançamento Digital</span>
-                <h3 class="font-serif text-3xl font-light tracking-wide leading-tight">O Guia Supremo da Gastro-Nutrição Premium</h3>
-              </div>
-              <p class="text-brandPrimary/70 text-xs font-light leading-relaxed">
-                Segredos de alta gastronomia e protocolos de desintoxicação e emagrecimento aplicados pelas maiores referências mundiais de bem-estar.
-              </p>
-              <div class="border-t border-brandPrimary/10 pt-4 flex justify-between items-center text-[10px] uppercase tracking-wider font-semibold text-brandSecondary">
-                <span>Dra. Luciana Guerra</span>
-                <span>Edição 2024</span>
-              </div>
-            </div>
+        <!-- Card Serviço 1 -->
+        <div class="border border-brandBg/10 rounded-2xl p-8 hover:border-brandAccent transition-all duration-300 group bg-brandDark/40">
+          <div class="text-brandAccent mb-6 text-2xl group-hover:scale-110 transition-transform">
+            <i class="fa-solid fa-scale-balanced"></i>
           </div>
+          <h3 class="font-serif text-xl font-semibold mb-4">Emagrecimento Definitivo</h3>
+          <p class="text-brandBg/70 text-sm leading-relaxed">
+            Desenvolvimento de estratégias hipocalóricas e densas em nutrientes para queima saudável de gordura sem sacrificar a massa magra ou a disposição diária.
+          </p>
         </div>
 
-        <!-- Lado Direito: Formulário Premium de Captura de WhatsApp -->
-        <div class="lg:col-span-7 space-y-8">
-          <div class="space-y-3">
-            <span class="text-xs uppercase tracking-widest text-brandSecondary font-bold">Conteúdo Gratuito Selecionado</span>
-            <h2 class="font-serif text-4xl md:text-5xl text-brandDark font-medium">Faça o Download do E-book Grátis</h2>
-            <p class="text-brandDark/70 text-sm md:text-base font-light">
-              Cadastre seu contato para receber o link de acesso exclusivo em PDF diretamente no seu celular via WhatsApp e dê o primeiro passo para reprogramar seu organismo.
+        <!-- Card Serviço 2 -->
+        <div class="border border-brandBg/10 rounded-2xl p-8 hover:border-brandAccent transition-all duration-300 group bg-brandDark/40">
+          <div class="text-brandAccent mb-6 text-2xl group-hover:scale-110 transition-transform">
+            <i class="fa-solid fa-dumbbell"></i>
+          </div>
+          <h3 class="font-serif text-xl font-semibold mb-4">Nutrição Esportiva</h3>
+          <p class="text-brandBg/70 text-sm leading-relaxed">
+            Planejamento alimentar direcionado à hipertrofia, recuperação muscular acelerada, energia celular e máximo rendimento em treinos diários e competições.
+          </p>
+        </div>
+
+        <!-- Card Serviço 3 -->
+        <div class="border border-brandBg/10 rounded-2xl p-8 hover:border-brandAccent transition-all duration-300 group bg-brandDark/40">
+          <div class="text-brandAccent mb-6 text-2xl group-hover:scale-110 transition-transform">
+            <i class="fa-solid fa-venus"></i>
+          </div>
+          <h3 class="font-serif text-xl font-semibold mb-4">Saúde da Mulher & Gestação</h3>
+          <p class="text-brandBg/70 text-sm leading-relaxed">
+            Modulação hormonal por meio da alimentação, controle de sintomas de TPM, SOP, menopausa e acompanhamento pré, durante e pós-gestacional personalizado.
+          </p>
+        </div>
+
+        <!-- Card Serviço 4 -->
+        <div class="border border-brandBg/10 rounded-2xl p-8 hover:border-brandAccent transition-all duration-300 group bg-brandDark/40">
+          <div class="text-brandAccent mb-6 text-2xl group-hover:scale-110 transition-transform">
+            <i class="fa-solid fa-capsules"></i>
+          </div>
+          <h3 class="font-serif text-xl font-semibold mb-4">Nutrição Preventiva e Longevidade</h3>
+          <p class="text-brandBg/70 text-sm leading-relaxed">
+            Prevenção de doenças crônicas como diabetes, hipertensão e dislipidemias, focando no rejuvenescimento celular e manutenção da imunidade fortalecida.
+          </p>
+        </div>
+
+        <!-- Card Serviço 5 -->
+        <div class="border border-brandBg/10 rounded-2xl p-8 hover:border-brandAccent transition-all duration-300 group bg-brandDark/40">
+          <div class="text-brandAccent mb-6 text-2xl group-hover:scale-110 transition-transform">
+            <i class="fa-solid fa-seedling"></i>
+          </div>
+          <h3 class="font-serif text-xl font-semibold mb-4">Nutrição Vegetariana e Vegana</h3>
+          <p class="text-brandBg/70 text-sm leading-relaxed">
+            Adequação de nutrientes essenciais (B12, ferro, zinco, proteínas) para quem deseja transitar de dieta ou manter-se com saúde impecável em dietas plant-based.
+          </p>
+        </div>
+
+        <!-- Card Atendimento Remoto -->
+        <div class="border-2 border-dashed border-brandAccent/30 rounded-2xl p-8 hover:border-brandAccent transition-all duration-300 group bg-brandDark/60 flex flex-col justify-between">
+          <div>
+            <div class="text-brandAccent mb-6 text-2xl">
+              <i class="fa-solid fa-laptop-medical"></i>
+            </div>
+            <h3 class="font-serif text-xl font-semibold mb-4">Atendimento Premium Online</h3>
+            <p class="text-brandBg/70 text-sm leading-relaxed">
+              Consulte-se no conforto da sua casa, em qualquer lugar do Brasil ou do mundo, com a mesma qualidade técnica e humanização do consultório presencial.
             </p>
           </div>
-
-          <form action="#" class="bg-[#FAF8F5] p-8 md:p-10 rounded-xl border border-brandDark/5 shadow-xl space-y-6">
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
-              <div class="space-y-2">
-                <label for="name" class="block text-xs uppercase tracking-wider font-bold text-brandDark/70">Nome Completo</label>
-                <input type="text" id="name" placeholder="Ex: Carolina Alencar" required class="w-full bg-white border border-brandDark/10 rounded-md px-4 py-3 text-sm focus:outline-none focus:border-brandSecondary transition-all">
-              </div>
-              <div class="space-y-2">
-                <label for="whatsapp" class="block text-xs uppercase tracking-wider font-bold text-brandDark/70">WhatsApp Comercial</label>
-                <input type="tel" id="whatsapp" placeholder="Ex: (11) 99999-9999" required class="w-full bg-white border border-brandDark/10 rounded-md px-4 py-3 text-sm focus:outline-none focus:border-brandSecondary transition-all">
-              </div>
-            </div>
-            
-            <div class="space-y-2">
-              <label for="objetivo" class="block text-xs uppercase tracking-wider font-bold text-brandDark/70">Principal Objetivo de Saúde</label>
-              <select id="objetivo" class="w-full bg-white border border-brandDark/10 rounded-md px-4 py-3 text-sm focus:outline-none focus:border-brandSecondary transition-all">
-                <option value="emagrecimento">Emagrecimento & Definição</option>
-                <option value="saude-intestinal">Saúde Intestinal & Bem-Estar</option>
-                <option value="longevidade">Longevidade & Suplementação</option>
-              </select>
-            </div>
-
-            <button type="submit" class="w-full bg-brandDark hover:bg-brandSecondary text-brandPrimary hover:text-brandDark py-4 text-xs tracking-widest uppercase font-bold transition-all duration-300 rounded shadow-md">
-              Receber Acesso Exclusivo por WhatsApp
-            </button>
-            <p class="text-[10px] text-center text-brandDark/50">Respeitamos a privacidade dos seus dados. Seus dados nunca serão compartilhados.</p>
-          </form>
+          <a href="https://wa.me/5511999999999" target="_blank" class="text-brandAccent text-sm font-bold tracking-widest uppercase flex items-center gap-2 mt-6 group-hover:text-white transition-all">
+            Reservar Vaga <i class="fa-solid fa-arrow-right"></i>
+          </a>
         </div>
 
       </div>
+
     </div>
   </section>
 
-  <!-- SEÇÃO PROVA SOCIAL COMPLETA (DEPOIMENTOS REAIS) -->
-  <section id="depoimentos" class="py-24 md:py-32 bg-[#FAF8F5]">
-    <div class="max-w-7xl mx-auto px-4 sm:px-8">
+  <!-- DEPOIMENTOS E PROVA SOCIAL -->
+  <section id="depoimentos" class="py-24 bg-brandBg relative">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12">
       
-      <!-- Cabeçalho Central -->
-      <div class="text-center max-w-3xl mx-auto mb-20 space-y-4">
-        <span class="text-xs tracking-widest uppercase font-bold text-brandSecondary">A Prova do Resultado</span>
-        <h2 class="font-serif text-4xl md:text-5xl text-brandDark font-medium">Histórias de Sucesso</h2>
-        <p class="text-brandDark/60 text-sm md:text-base font-light">
-          Relatos reais de pacientes de alta performance que conquistaram o equilíbrio físico e mental através da abordagem metabólica integrada da Dra. Luciana.
+      <div class="text-center max-w-2xl mx-auto mb-20">
+        <span class="text-xs font-bold tracking-widest uppercase text-brandAccent">Histórias Reais</span>
+        <h2 class="font-serif text-4xl lg:text-5xl mt-3 mb-6">Resultados Reais de Pacientes</h2>
+        <p class="text-brandDark/70 font-light">
+          A verdadeira satisfação em ver a qualidade de vida, disposição corporal e autoimagem restabelecidas por meio da alimentação inteligente.
         </p>
       </div>
 
-      <!-- Grid de Depoimentos -->
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
         
-        <!-- Testemunho 1 -->
-        <div class="bg-white p-8 rounded-2xl border border-brandDark/5 shadow-sm space-y-6 flex flex-col justify-between">
-          <div class="space-y-4">
-            <div class="flex items-center gap-1 text-brandSecondary">
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
+        <!-- Depoimento 1 -->
+        <div class="bg-white p-8 rounded-2xl border border-brandPrimary shadow-sm hover:shadow-lg transition-shadow duration-300 flex flex-col justify-between">
+          <div class="space-y-6">
+            <div class="flex text-brandAccent gap-1">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
             </div>
-            <p class="text-brandDark/80 text-sm italic font-light leading-relaxed">
-              "A consulta com a Luciana mudou a minha vida de uma forma que eu não imaginava. Eu sempre vivia cansada e com sono após o almoço. Com o protocolo intestinal, recuperei a energia e ainda emagreci 8kg de forma saudável."
+            <p class="font-sans text-brandDark/80 italic text-sm leading-relaxed">
+              "Fiz o acompanhamento com a Luciana para o meu primeiro triatlo e o resultado foi incrível. Ela organizou minha rotina alimentar focando na energia necessária para as provas sem me fazer sentir inchado ou fadigado."
             </p>
           </div>
-          <div class="flex items-center gap-4 pt-4 border-t border-brandDark/5">
-            <div class="w-10 h-10 rounded-full bg-brandPrimary flex items-center justify-center font-bold text-brandDark font-serif">M</div>
+          <div class="flex items-center gap-4 pt-8 mt-8 border-t border-brandPrimary">
+            <div class="w-10 h-10 rounded-full bg-brandPrimary flex items-center justify-center font-serif text-brandDark font-semibold">
+              RM
+            </div>
             <div>
-              <h4 class="font-semibold text-sm text-brandDark">Mariana Siqueira</h4>
-              <span class="text-[10px] uppercase tracking-wider text-brandSecondary">Empresária, 34 anos</span>
+              <h4 class="font-semibold text-sm">Rodrigo Mello</h4>
+              <p class="text-xs text-brandDark/50">Atleta de Alta Performance</p>
             </div>
           </div>
         </div>
 
-        <!-- Testemunho 2 -->
-        <div class="bg-white p-8 rounded-2xl border border-brandDark/5 shadow-sm space-y-6 flex flex-col justify-between">
-          <div class="space-y-4">
-            <div class="flex items-center gap-1 text-brandSecondary">
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
+        <!-- Depoimento 2 -->
+        <div class="bg-white p-8 rounded-2xl border border-brandPrimary shadow-sm hover:shadow-lg transition-shadow duration-300 flex flex-col justify-between">
+          <div class="space-y-6">
+            <div class="flex text-brandAccent gap-1">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
             </div>
-            <p class="text-brandDark/80 text-sm italic font-light leading-relaxed">
-              "Fiz o teste genético com a Luciana e foi libertador. Descobri intolerâncias que causavam dores crônicas na minha rotina corporativa. O planejamento com foco em gastronomia prática é impecável."
+            <p class="font-sans text-brandDark/80 italic text-sm leading-relaxed">
+              "Minha principal queixa era o cansaço diário e má digestão. O protocolo integrativo foi impecável. Em apenas 2 meses, sinto um ânimo absurdo e minha relação com a comida mudou completamente, sem neuras."
             </p>
           </div>
-          <div class="flex items-center gap-4 pt-4 border-t border-brandDark/5">
-            <div class="w-10 h-10 rounded-full bg-brandPrimary flex items-center justify-center font-bold text-brandDark font-serif">R</div>
+          <div class="flex items-center gap-4 pt-8 mt-8 border-t border-brandPrimary">
+            <div class="w-10 h-10 rounded-full bg-brandPrimary flex items-center justify-center font-serif text-brandDark font-semibold">
+              FS
+            </div>
             <div>
-              <h4 class="font-semibold text-sm text-brandDark">Roberto K.</h4>
-              <span class="text-[10px] uppercase tracking-wider text-brandSecondary">Diretor Executivo, 45 anos</span>
+              <h4 class="font-semibold text-sm">Fernanda Silva</h4>
+              <p class="text-xs text-brandDark/50">Advogada Corporativa</p>
             </div>
           </div>
         </div>
 
-        <!-- Testemunho 3 -->
-        <div class="bg-white p-8 rounded-2xl border border-brandDark/5 shadow-sm space-y-6 flex flex-col justify-between">
-          <div class="space-y-4">
-            <div class="flex items-center gap-1 text-brandSecondary">
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
+        <!-- Depoimento 3 -->
+        <div class="bg-white p-8 rounded-2xl border border-brandPrimary shadow-sm hover:shadow-lg transition-shadow duration-300 flex flex-col justify-between">
+          <div class="space-y-6">
+            <div class="flex text-brandAccent gap-1">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
             </div>
-            <p class="text-brandDark/80 text-sm italic font-light leading-relaxed">
-              "Incrível o acompanhamento! Sou atleta amador e sempre tive dificuldades com rendimento. O protocolo ortomolecular e de cronobiologia me ajudou a bater recordes pessoais com o corpo em harmonia."
+            <p class="font-sans text-brandDark/80 italic text-sm leading-relaxed">
+              "Trabalho incrível focado na modulação para climatério. Consegui regular meu sono, diminuir as dores e me sinto no meu melhor momento físico e hormonal. Indico para todas as minhas amigas de olhos fechados."
             </p>
           </div>
-          <div class="flex items-center gap-4 pt-4 border-t border-brandDark/5">
-            <div class="w-10 h-10 rounded-full bg-brandPrimary flex items-center justify-center font-bold text-brandDark font-serif">G</div>
+          <div class="flex items-center gap-4 pt-8 mt-8 border-t border-brandPrimary">
+            <div class="w-10 h-10 rounded-full bg-brandPrimary flex items-center justify-center font-serif text-brandDark font-semibold">
+              MA
+            </div>
             <div>
-              <h4 class="font-semibold text-sm text-brandDark">Gustavo Mendes</h4>
-              <span class="text-[10px] uppercase tracking-wider text-brandSecondary">Advogado, 39 anos</span>
+              <h4 class="font-semibold text-sm">Mariana Almeida</h4>
+              <p class="text-xs text-brandDark/50">Diretora de Marketing</p>
             </div>
           </div>
         </div>
@@ -502,100 +494,164 @@
     </div>
   </section>
 
-  <!-- BOTÃO FLUTUANTE DO WHATSAPP PREMIUM -->
-  <a href="https://wa.me/5511999999999?text=Ol%C3%A1%2C%20gostaria%20de%20solicitar%20informa%C3%A7%C3%B5es%20sobre%20as%20consultas%20com%20a%20Dra.%20Luciana%20Guerra." target="_blank" rel="noopener noreferrer" class="fixed bottom-6 right-6 z-50 flex items-center justify-center w-16 h-16 rounded-full bg-[#25d366] text-white shadow-2xl transition-all duration-300 transform hover:scale-110 active:scale-95 animate-whatsapp" aria-label="Fale Conosco pelo WhatsApp">
-    <i class="fa-brands fa-whatsapp text-3xl"></i>
-  </a>
-
-  <!-- FOOTER MINIMALISTA EM GRAFITE FECHADO -->
-  <footer class="bg-brandDark text-brandPrimary/80 pt-20 pb-10 border-t border-white/5">
-    <div class="max-w-7xl mx-auto px-4 sm:px-8 space-y-16">
-      
-      <div class="grid grid-cols-1 lg:grid-cols-4 gap-12 lg:gap-8">
+  <!-- CTA FINAL EXTRAORDINÁRIO -->
+  <section class="py-24 bg-white relative">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12">
+      <div class="bg-brandDark rounded-3xl p-8 lg:p-16 text-brandBg relative overflow-hidden flex flex-col lg:flex-row items-center justify-between gap-12">
         
-        <!-- Coluna 1: Branding -->
-        <div class="space-y-6">
-          <div class="flex items-center gap-3">
-            <img src="https://www.google.com/s2/favicons?domain=nutrilucianaguerra.com.br&sz=128" alt="Logo Luciana Guerra" class="max-h-10 w-auto object-contain bg-white p-1 rounded-full">
-            <span class="font-serif text-lg tracking-wider font-semibold text-brandPrimary">LUCIANA GUERRA</span>
-          </div>
-          <p class="text-xs text-brandPrimary/60 leading-relaxed">
-            Desenvolvendo as melhores soluções em saúde, equilíbrio metabólico e performance física por meio de planejamento individualizado contemporâneo.
+        <!-- Elemento de Fundo Abstrato -->
+        <div class="absolute -right-20 -bottom-20 w-80 h-80 rounded-full bg-brandAccent/10 blur-[60px] pointer-events-none"></div>
+
+        <div class="max-w-2xl text-left relative z-10 space-y-6">
+          <span class="text-xs font-bold tracking-widest uppercase text-brandAccent">Dê o primeiro passo hoje</span>
+          <h2 class="font-serif text-4xl lg:text-5xl tracking-tight leading-tight">
+            Pronto para conquistar sua melhor versão metabólica e física?
+          </h2>
+          <p class="text-brandBg/80 font-light text-base lg:text-lg">
+            Os horários são limitados para garantir a máxima qualidade de acompanhamento e suporte individual para cada paciente. Escolha o atendimento (Online ou Presencial) e fale conosco.
           </p>
-          <div class="flex items-center gap-4">
-            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="w-8 h-8 rounded-full bg-white/5 hover:bg-brandSecondary hover:text-brandDark flex items-center justify-center transition-colors text-sm" aria-label="Acesse o Instagram"><i class="fa-brands fa-instagram"></i></a>
-            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="w-8 h-8 rounded-full bg-white/5 hover:bg-brandSecondary hover:text-brandDark flex items-center justify-center transition-colors text-sm" aria-label="Acesse o Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          <div class="flex flex-wrap gap-4 text-xs tracking-wider uppercase text-brandBg/60">
+            <span><i class="fa-solid fa-circle text-brandAccent text-[8px] mr-1.5"></i> Vagas Disponíveis para este Mês</span>
+            <span><i class="fa-solid fa-circle text-brandAccent text-[8px] mr-1.5"></i> Atendimento Nacional e Internacional</span>
           </div>
         </div>
 
-        <!-- Coluna 2: Navegação -->
-        <div class="space-y-4">
-          <h4 class="text-xs uppercase tracking-wider font-bold text-brandSecondary">Navegação</h4>
-          <ul class="text-xs space-y-3">
-            <li><a href="#inicio" class="hover:text-brandSecondary transition-colors">Início</a></li>
-            <li><a href="#filosofia" class="hover:text-brandSecondary transition-colors">A Filosofia</a></li>
-            <li><a href="#servicos" class="hover:text-brandSecondary transition-colors">Especialidades</a></li>
-            <li><a href="#ebooks" class="hover:text-brandSecondary transition-colors">E-books & Guias</a></li>
-          </ul>
-        </div>
-
-        <!-- Coluna 3: Contatos -->
-        <div class="space-y-4">
-          <h4 class="text-xs uppercase tracking-wider font-bold text-brandSecondary">Atendimento</h4>
-          <ul class="text-xs space-y-3 text-brandPrimary/70">
-            <li class="flex items-center gap-2"><i class="fa-solid fa-location-dot text-brandSecondary"></i> Av. Brigadeiro Faria Lima, 4200 - São Paulo, SP</li>
-            <li class="flex items-center gap-2"><i class="fa-solid fa-phone text-brandSecondary"></i> (11) 99999-9999</li>
-            <li class="flex items-center gap-2"><i class="fa-solid fa-envelope text-brandSecondary"></i> contato@nutrilucianaguerra.com.br</li>
-          </ul>
-        </div>
-
-        <!-- Coluna 4: Informação Adicional -->
-        <div class="space-y-4">
-          <h4 class="text-xs uppercase tracking-wider font-bold text-brandSecondary">Selo de Qualidade</h4>
-          <p class="text-xs text-brandPrimary/60 leading-relaxed">
-            Dra. Luciana Guerra - CRN-3 12345/SP. Registro de Qualificação de Especialista em Nutrição Humana e Ortomolecular.
-          </p>
-          <div class="pt-2">
-            <span class="text-[10px] text-brandSecondary uppercase tracking-widest font-bold border border-brandSecondary/20 px-3 py-1 rounded">Certificação Premium</span>
-          </div>
+        <div class="shrink-0 relative z-10 w-full lg:w-auto">
+          <a href="https://wa.me/5511999999999" target="_blank" class="bg-brandAccent text-brandDark hover:bg-white hover:text-brandDark w-full lg:w-auto text-center px-10 py-6 rounded-full font-bold tracking-widest uppercase transition-all duration-300 text-sm shadow-xl flex items-center justify-center gap-3">
+            <i class="fa-brands fa-whatsapp text-lg"></i> Agendar Atendimento Especializado
+          </a>
         </div>
 
       </div>
+    </div>
+  </section>
 
-      <!-- Barra de Direitos Autorais e Créditos -->
-      <div class="border-t border-white/5 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-[11px] text-brandPrimary/50">
-        <p>&copy; 2024 Nutricionista Luciana Guerra. Todos os direitos reservados.</p>
-        <div class="flex items-center gap-2">
-          <span>Design e Desenvolvimento de Grife por</span>
-          <a href="https://rdexclusive.com.br" target="_blank" rel="noopener noreferrer" class="text-brandSecondary hover:underline font-bold">RD Exclusive</a>
+  <!-- FOOTER -->
+  <footer class="bg-brandBg text-brandDark py-16 border-t border-brandPrimary">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12 grid grid-cols-1 md:grid-cols-12 gap-12">
+      
+      <!-- Logo e Descrição -->
+      <div class="md:col-span-5 space-y-6">
+        <a href="#" class="flex items-center gap-3">
+          <img src="https://www.google.com/s2/favicons?domain=nutrilucianaguerra.com.br&sz=128" alt="Luciana Guerra Logo" class="w-10 h-10 rounded-full border border-brandAccent/30 object-cover">
+          <div class="flex flex-col">
+            <span class="font-serif text-lg tracking-wider font-semibold uppercase">Luciana Guerra</span>
+            <span class="text-[10px] tracking-widest font-sans uppercase text-brandAccent">Nutricionista Clínica & Funcional</span>
+          </div>
+        </a>
+        <p class="text-xs text-brandDark/60 leading-relaxed max-w-sm">
+          A transformação da sua qualidade de vida por meio de processos biológicos otimizados e hábitos alimentares individualizados. Atendimento de excelência nacional e internacional.
+        </p>
+        <div class="flex gap-4">
+          <a href="https://instagram.com" target="_blank" class="w-8 h-8 rounded-full border border-brandDark/10 flex items-center justify-center text-brandDark/60 hover:text-brandDark hover:border-brandDark transition-colors"><i class="fa-brands fa-instagram"></i></a>
+          <a href="https://linkedin.com" target="_blank" class="w-8 h-8 rounded-full border border-brandDark/10 flex items-center justify-center text-brandDark/60 hover:text-brandDark hover:border-brandDark transition-colors"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="mailto:contato@nutrilucianaguerra.com.br" class="w-8 h-8 rounded-full border border-brandDark/10 flex items-center justify-center text-brandDark/60 hover:text-brandDark hover:border-brandDark transition-colors"><i class="fa-regular fa-envelope"></i></a>
         </div>
       </div>
 
+      <!-- Links Rápidos -->
+      <div class="md:col-span-3 space-y-4">
+        <h4 class="font-bold text-xs tracking-widest uppercase text-brandDark">Acesso Rápido</h4>
+        <ul class="space-y-2 text-sm text-brandDark/70">
+          <li><a href="#sobre" class="hover:text-brandAccent transition-colors">Sobre Nós</a></li>
+          <li><a href="#metodologia" class="hover:text-brandAccent transition-colors">Metodologia</a></li>
+          <li><a href="#servicos" class="hover:text-brandAccent transition-colors">Especialidades</a></li>
+          <li><a href="#depoimentos" class="hover:text-brandAccent transition-colors">Histórias de Sucesso</a></li>
+        </ul>
+      </div>
+
+      <!-- Informações Legais & Atendimento -->
+      <div class="md:col-span-4 space-y-4">
+        <h4 class="font-bold text-xs tracking-widest uppercase text-brandDark">Contatos Oficiais</h4>
+        <ul class="space-y-3 text-sm text-brandDark/70">
+          <li>
+            <a href="mailto:contato@nutrilucianaguerra.com.br" class="hover:text-brandAccent transition-colors flex items-center gap-2">
+              <i class="fa-solid fa-envelope text-brandAccent"></i> contato@nutrilucianaguerra.com.br
+            </a>
+          </li>
+          <li>
+            <a href="tel:+5511999999999" class="hover:text-brandAccent transition-colors flex items-center gap-2">
+              <i class="fa-solid fa-phone text-brandAccent"></i> +55 (11) 99999-9999
+            </a>
+          </li>
+          <li class="flex items-start gap-2 pt-1 text-xs leading-relaxed text-brandDark/50">
+            <i class="fa-solid fa-location-dot text-brandAccent mt-0.5"></i>
+            <span>Atendimento Presencial em São Paulo / SP <br>Atendimentos Online globalmente ativos.</span>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+
+    <!-- Barra de Direitos e Credenciais -->
+    <div class="max-w-7xl mx-auto px-6 lg:px-12 mt-16 pt-8 border-t border-brandPrimary flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-brandDark/40">
+      <p>© 2024 Nutricionista Luciana Guerra. Todos os direitos reservados. CRN Ativo.</p>
+      <p class="flex items-center gap-1.5">
+        Feito sob medida por <a href="#" class="font-semibold text-brandDark hover:text-brandAccent transition-colors">RD Exclusive</a>
+      </p>
     </div>
   </footer>
 
-  <!-- MOBILE HAMBURGER MENU JS LOGIC -->
-  <script>
-    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
-    const mobileMenu = document.getElementById('mobile-menu');
-    const hamburgerLine1 = document.getElementById('hamburger-line-1');
-    const hamburgerLine2 = document.getElementById('hamburger-line-2');
-    const hamburgerLine3 = document.getElementById('hamburger-line-3');
+  <!-- BOTÃO FLUTUANTE DO WHATSAPP -->
+  <a href="https://wa.me/5511999999999" target="_blank" class="fixed bottom-6 right-6 z-50 bg-[#25d366] hover:bg-[#1ebd5d] text-white p-4 rounded-full shadow-2xl flex items-center justify-center transition-all duration-300 hover:scale-110 active:scale-95 group" aria-label="Fale Conosco no WhatsApp">
+    <!-- Pulse Effect -->
+    <span class="absolute inset-0 rounded-full bg-[#25d366]/40 animate-ping opacity-75"></span>
+    <i class="fa-brands fa-whatsapp text-3xl relative z-10"></i>
+  </a>
 
+  <!-- SCRIPT PARA MENU RESPONSIVO -->
+  <script>
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const mobileLinks = document.querySelectorAll('.mobile-link');
+
+    // Toggle menu state
     function toggleMenu() {
-      mobileMenu.classList.toggle('hidden');
+      const isOpen = mobileMenu.classList.contains('translate-x-0');
       
-      // Animação das linhas do hambúrguer
-      hamburgerLine1.classList.toggle('rotate-45');
-      hamburgerLine1.classList.toggle('translate-y-1.5');
-      
-      hamburgerLine2.classList.toggle('opacity-0');
-      
-      hamburgerLine3.classList.toggle('-rotate-45');
-      hamburgerLine3.classList.toggle('-translate-y-1.5');
+      if (isOpen) {
+        mobileMenu.classList.remove('translate-x-0');
+        mobileMenu.classList.add('translate-x-full');
+        document.body.style.overflow = 'auto';
+        
+        // Reset hamburger animation
+        menuBtn.children[0].style.transform = 'none';
+        menuBtn.children[1].style.opacity = '1';
+        menuBtn.children[2].style.transform = 'none';
+      } else {
+        mobileMenu.classList.remove('translate-x-full');
+        mobileMenu.classList.add('translate-x-0');
+        document.body.style.overflow = 'hidden';
+        
+        // Active hamburger animation
+        menuBtn.children[0].style.transform = 'rotate(45deg) translate(2px, 0.5px)';
+        menuBtn.children[1].style.opacity = '0';
+        menuBtn.children[2].style.transform = 'rotate(-45deg) translate(2px, -0.5px)';
+      }
     }
 
-    mobileMenuBtn.addEventListener('click', toggleMenu);
+    menuBtn.addEventListener('click', toggleMenu);
+
+    // Close menu when clicking links
+    mobileLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        if (mobileMenu.classList.contains('translate-x-0')) {
+          toggleMenu();
+        }
+      });
+    });
+
+    // Header Background Change on Scroll
+    window.addEventListener('scroll', () => {
+      const header = document.querySelector('header');
+      if (window.scrollY > 50) {
+        header.classList.add('shadow-md', 'bg-white/95');
+        header.classList.remove('bg-white/70');
+      } else {
+        header.classList.remove('shadow-md', 'bg-white/95');
+        header.classList.add('bg-white/70');
+      }
+    });
   </script>
 
 </body>
