@@ -1,347 +1,667 @@
 <!DOCTYPE html>
-<html lang="pt-BR" class="scroll-smooth">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Luciana Guerra | Nutricionista</title>
-    <!-- Fonts -->
+    <title>Nutricionista Luciana Guerra | Emagrecimento e Saúde</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Syne:wght@700;800&display=swap" rel="stylesheet">
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        brand: {
-                            canvas: '#F0EBE1',
-                            ink: '#0C0C0C',
-                            muted: '#6E6A64',
-                            border: '#2A2927'
-                        }
-                    },
-                    fontFamily: {
-                        syne: ['Syne', 'sans-serif'],
-                        space: ['Space Grotesk', 'sans-serif']
-                    }
-                }
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* CSS Variables - Elementor-like global styles */
+        :root {
+            --color-primary: #2C4A3E; /* Deep Forest Green for premium/health feel */
+            --color-secondary: #D4A373; /* Warm Ochre/Gold for high-converting CTA */
+            --color-bg-light: #F0EBE1; /* Requested Base Color */
+            --color-bg-white: #FFFFFF;
+            --color-text-dark: #2B2D42;
+            --color-text-muted: #5C5F62;
+            --font-heading: 'Playfair Display', serif;
+            --font-body: 'Plus Jakarta Sans', sans-serif;
+            --border-radius-sm: 8px;
+            --border-radius-md: 16px;
+            --border-radius-lg: 24px;
+            --shadow-subtle: 0 10px 30px rgba(44, 74, 62, 0.05);
+            --shadow-medium: 0 15px 40px rgba(44, 74, 62, 0.08);
+            --transition-smooth: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        /* Reset & Base Styles */
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: var(--font-body);
+            background-color: var(--color-bg-light);
+            color: var(--color-text-dark);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* Utility Components */
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 18px 36px;
+            font-size: 16px;
+            font-weight: 700;
+            text-decoration: none;
+            border-radius: 50px;
+            transition: var(--transition-smooth);
+            cursor: pointer;
+            box-shadow: 0 8px 20px rgba(212, 163, 115, 0.3);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .btn-primary {
+            background-color: var(--color-secondary);
+            color: var(--color-bg-white);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 25px rgba(212, 163, 115, 0.45);
+            background-color: #C29263;
+        }
+
+        /* Header / Navbar */
+        header {
+            padding: 24px 0;
+            background-color: transparent;
+            position: absolute;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 100;
+        }
+
+        .header-wrap {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo-area {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+        }
+
+        .logo-img {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid var(--color-primary);
+        }
+
+        .logo-text {
+            font-family: var(--font-heading);
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--color-primary);
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 160px 0 100px 0;
+            background-color: var(--color-bg-light);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            width: 600px;
+            height: 600px;
+            background-color: rgba(44, 74, 62, 0.03);
+            border-radius: 50%;
+            top: -100px;
+            right: -100px;
+            z-index: 1;
+        }
+
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1.1fr 0.9fr;
+            gap: 60px;
+            align-items: center;
+            position: relative;
+            z-index: 2;
+        }
+
+        .rating-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: var(--color-bg-white);
+            padding: 8px 16px;
+            border-radius: 50px;
+            box-shadow: var(--shadow-subtle);
+            margin-bottom: 24px;
+        }
+
+        .stars {
+            color: #FFC107;
+            font-size: 16px;
+        }
+
+        .rating-text {
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--color-text-dark);
+        }
+
+        .hero-title {
+            font-family: var(--font-heading);
+            font-size: 56px;
+            line-height: 1.15;
+            color: var(--color-primary);
+            margin-bottom: 24px;
+            font-weight: 800;
+        }
+
+        .hero-title span {
+            font-style: italic;
+            font-weight: 400;
+        }
+
+        .hero-description {
+            font-size: 18px;
+            color: var(--color-text-muted);
+            margin-bottom: 40px;
+            max-width: 540px;
+        }
+
+        .hero-image-container {
+            position: relative;
+            border-radius: var(--border-radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow-medium);
+        }
+
+        .hero-image {
+            width: 100%;
+            height: 520px;
+            object-fit: cover;
+            border-radius: var(--border-radius-lg);
+            transition: var(--transition-smooth);
+        }
+
+        .hero-image-container:hover .hero-image {
+            transform: scale(1.03);
+        }
+
+        /* Benefits / Differential Section */
+        .benefits {
+            padding: 100px 0;
+            background-color: var(--color-bg-white);
+        }
+
+        .section-header {
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto 64px auto;
+        }
+
+        .section-tag {
+            font-size: 14px;
+            font-weight: 700;
+            color: var(--color-secondary);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 16px;
+            display: block;
+        }
+
+        .section-title {
+            font-family: var(--font-heading);
+            font-size: 40px;
+            color: var(--color-primary);
+            font-weight: 700;
+        }
+
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 32px;
+        }
+
+        .benefit-card {
+            background-color: var(--color-bg-light);
+            padding: 48px 32px;
+            border-radius: var(--border-radius-md);
+            transition: var(--transition-smooth);
+            border: 1px solid rgba(44, 74, 62, 0.05);
+        }
+
+        .benefit-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-medium);
+            background-color: var(--color-bg-white);
+            border-color: var(--color-secondary);
+        }
+
+        .benefit-icon {
+            width: 64px;
+            height: 64px;
+            background-color: rgba(44, 74, 62, 0.08);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 24px;
+            color: var(--color-primary);
+            font-size: 24px;
+        }
+
+        .benefit-card-title {
+            font-family: var(--font-heading);
+            font-size: 22px;
+            color: var(--color-primary);
+            margin-bottom: 16px;
+            font-weight: 700;
+        }
+
+        .benefit-card-desc {
+            font-size: 15px;
+            color: var(--color-text-muted);
+            line-text: 1.6;
+        }
+
+        /* Social Proof / Testimonials Section */
+        .testimonials {
+            padding: 100px 0;
+            background-color: var(--color-bg-light);
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 32px;
+        }
+
+        .testimonial-card {
+            background-color: var(--color-bg-white);
+            padding: 40px;
+            border-radius: var(--border-radius-md);
+            box-shadow: var(--shadow-subtle);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .testimonial-rating {
+            color: #FFC107;
+            margin-bottom: 20px;
+        }
+
+        .testimonial-text {
+            font-size: 16px;
+            color: var(--color-text-muted);
+            font-style: italic;
+            margin-bottom: 24px;
+            line-height: 1.7;
+        }
+
+        .patient-info {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .patient-avatar {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            background-color: var(--color-bg-light);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            color: var(--color-primary);
+        }
+
+        .patient-name {
+            font-weight: 700;
+            color: var(--color-text-dark);
+            font-size: 15px;
+        }
+
+        .patient-meta {
+            font-size: 12px;
+            color: var(--color-text-muted);
+        }
+
+        /* Final CTA Section */
+        .cta-section {
+            padding: 100px 0;
+            background-color: var(--color-primary);
+            color: var(--color-bg-white);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-section::before {
+            content: '';
+            position: absolute;
+            width: 400px;
+            height: 400px;
+            background-color: rgba(255, 255, 255, 0.02);
+            border-radius: 50%;
+            bottom: -200px;
+            left: -100px;
+        }
+
+        .cta-content {
+            max-width: 700px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
+        }
+
+        .cta-title {
+            font-family: var(--font-heading);
+            font-size: 44px;
+            line-height: 1.2;
+            margin-bottom: 24px;
+        }
+
+        .cta-desc {
+            font-size: 18px;
+            opacity: 0.9;
+            margin-bottom: 40px;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #1F362D;
+            color: rgba(240, 235, 225, 0.7);
+            padding: 60px 0 30px 0;
+            font-size: 14px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1.5fr 1fr 1fr;
+            gap: 48px;
+            margin-bottom: 48px;
+        }
+
+        .footer-brand .logo-text {
+            color: var(--color-bg-white);
+            margin-bottom: 16px;
+        }
+
+        .footer-brand p {
+            margin-top: 12px;
+            line-height: 1.6;
+        }
+
+        .footer-title {
+            color: var(--color-bg-white);
+            font-size: 16px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 12px;
+        }
+
+        .footer-links a {
+            color: rgba(240, 235, 225, 0.7);
+            text-decoration: none;
+            transition: var(--transition-smooth);
+        }
+
+        .footer-links a:hover {
+            color: var(--color-secondary);
+            padding-left: 5px;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(240, 235, 225, 0.1);
+            padding-top: 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1024px) {
+            .hero-title {
+                font-size: 46px;
+            }
+            .benefits-grid, .testimonials-grid {
+                grid-template-columns: repeat(2, 1fr);
             }
         }
-    </script>
-    <style>
-        /* Custom scrollbar matching the editorial aesthetic */
-        ::-webkit-scrollbar {
-            width: 6px;
-        }
-        ::-webkit-scrollbar-track {
-            background: #F0EBE1;
-        }
-        ::-webkit-scrollbar-thumb {
-            background: #0C0C0C;
-        }
-        
-        /* Brutalist Grid Lines */
-        .grid-line-h {
-            height: 1px;
-            background-color: #0C0C0C;
-            width: 100%;
-        }
-        .grid-line-v {
-            width: 1px;
-            background-color: #0C0C0C;
-            height: 100%;
-        }
 
-        /* Pulse animation for CTA */
-        @keyframes customPulse {
-            0%, 100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(12, 12, 12, 0.4); }
-            50% { transform: scale(1.05); box-shadow: 0 0 0 10px rgba(12, 12, 12, 0); }
-        }
-        .btn-pulse {
-            animation: customPulse 2s infinite ease-in-out;
-        }
-
-        @keyframes greenPulse {
-            0%, 100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.6); }
-            50% { transform: scale(1.08); box-shadow: 0 0 0 12px rgba(34, 197, 94, 0); }
-        }
-        .whatsapp-pulse {
-            animation: greenPulse 2s infinite ease-in-out;
+        @media (max-width: 768px) {
+            .hero {
+                padding: 120px 0 60px 0;
+            }
+            .hero-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+                text-align: center;
+            }
+            .rating-badge {
+                justify-content: center;
+            }
+            .hero-description {
+                margin: 0 auto 32px auto;
+            }
+            .hero-image {
+                height: 380px;
+            }
+            .benefits-grid, .testimonials-grid {
+                grid-template-columns: 1fr;
+            }
+            .section-title {
+                font-size: 32px;
+            }
+            .cta-title {
+                font-size: 32px;
+            }
+            .footer-grid {
+                grid-template-columns: 1fr;
+                gap: 32px;
+            }
+            .footer-bottom {
+                flex-direction: column;
+                text-align: center;
+            }
         }
     </style>
 </head>
-<body class="bg-brand-canvas text-brand-ink font-space overflow-x-hidden antialiased">
+<body>
 
-    <!-- OVERLAY MENU MOBILE -->
-    <div id="mobile-menu" class="fixed inset-0 bg-brand-ink text-brand-canvas z-50 flex flex-col justify-between p-8 translate-x-full transition-transform duration-500 ease-in-out">
-        <div class="flex justify-between items-center">
-            <img src="https://www.google.com/s2/favicons?domain=nutrilucianaguerra.com.br&sz=128" alt="Logo Luciana Guerra" class="w-10 h-10 invert">
-            <button id="close-menu" class="font-space text-sm tracking-widest uppercase hover:opacity-70 transition-opacity">FECHAR [X]</button>
-        </div>
-        <nav class="flex flex-col gap-8 text-4xl sm:text-6xl font-syne font-extrabold uppercase">
-            <a href="#calorimetria" class="menu-link hover:line-through transition-all">Calorimetria</a>
-            <a href="#mflex" class="menu-link hover:line-through transition-all">MFLEX App</a>
-            <a href="#consultorio" class="menu-link hover:line-through transition-all">Consultório</a>
-            <a href="#agendamento" class="menu-link hover:line-through transition-all">Agendar</a>
-        </nav>
-        <div class="border-t border-brand-canvas/20 pt-8 flex flex-col gap-2 text-sm uppercase opacity-60">
-            <p>nutrilucianaguerra.com.br</p>
-            <p>Nota 5.0 no Google (48 avaliações)</p>
-        </div>
-    </div>
-
-    <!-- HEADER / NAVIGATION -->
-    <header class="border-b border-brand-ink sticky top-0 bg-brand-canvas/90 backdrop-blur-md z-40">
-        <div class="max-w-7xl mx-auto px-4 sm:px-8 h-20 flex justify-between items-center">
-            <a href="#" class="flex items-center gap-3">
-                <img src="https://www.google.com/s2/favicons?domain=nutrilucianaguerra.com.br&sz=128" alt="Logo Luciana Guerra" class="w-8 h-8 md:w-10 md:h-10">
-                <span class="font-syne font-extrabold text-lg md:text-xl tracking-tighter">LUCIANA GUERRA</span>
+    <!-- Header -->
+    <header>
+        <div class="container header-wrap">
+            <a href="#" class="logo-area">
+                <img src="https://www.google.com/s2/favicons?domain=nutrilucianaguerra.com.br&sz=128" alt="Logo Luciana Guerra" class="logo-img">
+                <span class="logo-text">Luciana Guerra</span>
             </a>
-            <div class="hidden md:flex items-center gap-8 text-sm uppercase font-semibold">
-                <a href="#calorimetria" class="hover:underline underline-offset-4">Calorimetria Indireta</a>
-                <a href="#mflex" class="hover:underline underline-offset-4">MFLEX App</a>
-                <a href="#consultorio" class="hover:underline underline-offset-4">Shopping Uptown</a>
-                <a href="https://wa.me/5521999999999" target="_blank" class="border border-brand-ink px-4 py-2 hover:bg-brand-ink hover:text-brand-canvas transition-colors">Agendar Consulta</a>
-            </div>
-            <button id="open-menu" class="md:hidden flex flex-col gap-1.5 p-2">
-                <span class="w-6 h-0.5 bg-brand-ink"></span>
-                <span class="w-6 h-0.5 bg-brand-ink"></span>
-                <span class="w-6 h-0.5 bg-brand-ink"></span>
-            </button>
         </div>
     </header>
 
-    <!-- HERO SECTION - BRUTALIST & ASYMMETRIC -->
-    <section class="relative min-h-[90vh] flex flex-col justify-between border-b border-brand-ink">
-        <div class="max-w-7xl mx-auto px-4 sm:px-8 w-full py-12 md:py-20 flex-grow grid grid-cols-1 lg:grid-cols-12 gap-8 items-end">
-            
-            <!-- Col 1: Hero Text Statement -->
-            <div class="lg:col-span-8 flex flex-col gap-6">
-                <div class="inline-flex items-center gap-2 border border-brand-ink px-3 py-1 rounded-full w-fit bg-brand-ink text-brand-canvas text-xs uppercase tracking-widest font-semibold">
-                    <span class="w-2 h-2 rounded-full bg-green-500 animate-ping"></span>
-                    Atendimento Premium
-                </div>
-                <h1 class="font-syne font-extrabold text-5xl sm:text-7xl lg:text-8xl leading-none tracking-tighter uppercase">
-                    LUCIANA GUERRA
-                </h1>
-                <p class="font-space text-lg sm:text-2xl font-light text-brand-muted max-w-2xl">
-                    Ciência da nutrição aplicada à sua performance e metabolismo, fundamentada em dados clínicos reais e tecnologia de ponta.
-                </p>
-            </div>
-
-            <!-- Col 2: Social Proof Box (Asymmetric placement) -->
-            <div class="lg:col-span-4 border border-brand-ink p-8 flex flex-col justify-between h-auto lg:h-[350px] bg-brand-ink text-brand-canvas">
-                <div>
-                    <div class="flex items-center gap-1 mb-4">
-                        <!-- 5 Stars SVG -->
-                        <span class="text-yellow-400 text-2xl">★★★★★</span>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-grid">
+                <div class="hero-content">
+                    <div class="rating-badge">
+                        <span class="stars">★★★★★</span>
+                        <span class="rating-text">Nota 5 no Google (48 avaliações)</span>
                     </div>
-                    <p class="font-syne text-5xl font-extrabold tracking-tighter mb-2">5.0</p>
-                    <p class="text-xs uppercase tracking-widest text-brand-canvas/70 font-semibold">Nota máxima de avaliação</p>
-                </div>
-                <div class="mt-8 pt-8 border-t border-brand-canvas/20">
-                    <p class="text-sm">Consolidada através de 48 avaliações reais de pacientes no Google.</p>
-                </div>
-            </div>
-        </div>
-
-        <!-- Horizontal Running Ticker -->
-        <div class="w-full bg-brand-ink text-brand-canvas py-4 overflow-hidden border-t border-brand-ink">
-            <div class="whitespace-nowrap flex gap-10 animate-[marquee_20s_linear_infinite] uppercase font-syne text-xs sm:text-sm tracking-widest font-bold">
-                <span class="flex-shrink-0">CALORIMETRIA INDIRETA •</span>
-                <span class="flex-shrink-0">ACOMPANHAMENTO COM MFLEX APP •</span>
-                <span class="flex-shrink-0">ATENDIMENTO SHOPPING UPTOWN •</span>
-                <span class="flex-shrink-0">AVALIAÇÃO 5.0 GOOGLE •</span>
-                <span class="flex-shrink-0">CALORIMETRIA INDIRETA •</span>
-                <span class="flex-shrink-0">ACOMPANHAMENTO COM MFLEX APP •</span>
-                <span class="flex-shrink-0">ATENDIMENTO SHOPPING UPTOWN •</span>
-                <span class="flex-shrink-0">AVALIAÇÃO 5.0 GOOGLE •</span>
-            </div>
-        </div>
-    </section>
-
-    <!-- MONUMENTAL SECTION 1: CALORIMETRIA INDIRETA -->
-    <section id="calorimetria" class="border-b border-brand-ink min-h-screen flex flex-col justify-between relative bg-[#E6E1D7] overflow-hidden">
-        <div class="max-w-7xl mx-auto px-4 sm:px-8 py-20 w-full grid grid-cols-1 lg:grid-cols-12 gap-12 items-center flex-grow">
-            <!-- Left Header (Gigantic Title) -->
-            <div class="lg:col-span-6 flex flex-col gap-6">
-                <p class="font-space text-xs uppercase tracking-widest text-brand-muted">[ DIAGNÓSTICO METABÓLICO ]</p>
-                <h2 class="font-syne font-extrabold text-4xl sm:text-6xl lg:text-7xl leading-none uppercase tracking-tighter text-brand-ink">
-                    CALORIMETRIA INDIRETA
-                </h2>
-                <div class="w-20 h-[2px] bg-brand-ink"></div>
-            </div>
-            
-            <!-- Right Content Block -->
-            <div class="lg:col-span-6 border border-brand-ink p-8 md:p-12 bg-brand-canvas flex flex-col justify-between gap-8 shadow-[8px_8px_0px_0px_#0C0C0C]">
-                <p class="font-space text-lg md:text-xl text-brand-ink leading-relaxed">
-                    Exame de alta precisão diagnóstica realizado no consultório. Através da medição do consumo de oxigênio e produção de gás carbônico, determinamos com exatidão a sua Taxa Metabólica Basal (TMB).
-                </p>
-                <div class="border-t border-brand-ink/20 pt-6">
-                    <p class="font-bold text-xs uppercase tracking-widest text-brand-muted mb-2">Por que realizar?</p>
-                    <p class="text-sm text-brand-ink">
-                        Elimine o empirismo e as estimativas de fórmulas genéricas. Saiba exatamente quantas calorias seu corpo gasta em repouso absoluto para estruturar um planejamento de queima de gordura ou ganho de massa muscular de extrema precisão.
+                    <h1 class="hero-title">Sua saúde guiada por quem realmente <span>te escuta.</span></h1>
+                    <p class="hero-description">
+                        Descubra como alcançar o corpo dos seus sonhos e ter mais disposição através de um acompanhamento nutricional humanizado, sem dietas restritivas e totalmente adaptado à sua rotina.
                     </p>
+                    <a href="https://wa.me/5500000000000?text=Olá,%20gostaria%20de%20agendar%20uma%20consulta." target="_blank" class="btn btn-primary">Agendar Consulta</a>
+                </div>
+                <div class="hero-image-container">
+                    <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=800" alt="Nutricionista Luciana Guerra" class="hero-image">
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- MONUMENTAL SECTION 2: MFLEX APP -->
-    <section id="mflex" class="border-b border-brand-ink bg-brand-ink text-brand-canvas min-h-screen flex flex-col justify-between relative">
-        <div class="max-w-7xl mx-auto px-4 sm:px-8 py-20 w-full grid grid-cols-1 lg:grid-cols-12 gap-12 items-center flex-grow">
-            <!-- Left Content Block -->
-            <div class="lg:col-span-6 order-2 lg:order-1 border border-brand-canvas/30 p-8 md:p-12 bg-neutral-900 flex flex-col justify-between gap-8 shadow-[8px_8px_0px_0px_#F0EBE1]">
-                <div class="flex flex-col gap-4">
-                    <div class="inline-block bg-brand-canvas text-brand-ink font-mono text-[10px] uppercase font-bold tracking-widest px-2.5 py-1 w-fit">
-                        INTEGRAÇÃO DIGITAL DIÁRIA
-                    </div>
-                    <p class="font-space text-lg md:text-xl text-brand-canvas leading-relaxed">
-                        Acesso exclusivo ao MFLEX App, sua plataforma dedicada de acompanhamento nutricional dinâmico, onde seu plano alimentar e sua evolução são monitorados continuamente.
-                    </p>
+    <!-- Benefits Section -->
+    <section class="benefits">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">O Método</span>
+                <h2 class="section-title">Como funciona o acompanhamento?</h2>
+            </div>
+            <div class="benefits-grid">
+                <!-- Card 1 -->
+                <div class="benefit-card">
+                    <div class="benefit-icon">🥗</div>
+                    <h3 class="benefit-card-title">Plano 100% Individualizado</h3>
+                    <p class="benefit-card-desc">Nada de cardápios prontos. Sua dieta é construída com base nos seus gostos, rotina, exames de sangue e objetivos específicos.</p>
                 </div>
-                <div class="border-t border-brand-canvas/20 pt-6">
-                    <p class="font-bold text-xs uppercase tracking-widest text-brand-canvas/60 mb-2">Recursos Integrados</p>
-                    <p class="text-sm text-brand-canvas/80">
-                        Seu protocolo, metas de hidratação, registros de refeições e contato direto estruturados em um ecossistema projetado para gerar aderência e resultados consistentes.
-                    </p>
+                <!-- Card 2 -->
+                <div class="benefit-card">
+                    <div class="benefit-icon">📱</div>
+                    <h3 class="benefit-card-title">Suporte Contínuo</h3>
+                    <p class="benefit-card-desc">Você terá acesso direto ao meu WhatsApp exclusivo de pacientes para tirar dúvidas em tempo real e não perder o foco.</p>
                 </div>
-            </div>
-
-            <!-- Right Header -->
-            <div class="lg:col-span-6 order-1 lg:order-2 flex flex-col gap-6 lg:text-right lg:items-end">
-                <p class="font-space text-xs uppercase tracking-widest text-brand-canvas/60">[ TECNOLOGIA DE ACOMPANHAMENTO ]</p>
-                <h2 class="font-syne font-extrabold text-5xl sm:text-7xl lg:text-8xl leading-none uppercase tracking-tighter">
-                    MFLEX APP
-                </h2>
-                <div class="w-20 h-[2px] bg-brand-canvas"></div>
-            </div>
-        </div>
-    </section>
-
-    <!-- MONUMENTAL SECTION 3: ATENDIMENTO / LOCALIZAÇÃO -->
-    <section id="consultorio" class="border-b border-brand-ink min-h-screen flex flex-col justify-between relative bg-[#EAE5DC]">
-        <div class="max-w-7xl mx-auto px-4 sm:px-8 py-20 w-full grid grid-cols-1 lg:grid-cols-12 gap-12 items-center flex-grow">
-            <!-- Left Header -->
-            <div class="lg:col-span-6 flex flex-col gap-6">
-                <p class="font-space text-xs uppercase tracking-widest text-brand-muted">[ ESTRUTURA FÍSICA ]</p>
-                <h2 class="font-syne font-extrabold text-4xl sm:text-6xl lg:text-7xl leading-none uppercase tracking-tighter text-brand-ink">
-                    SHOPPING UPTOWN
-                </h2>
-                <p class="font-syne text-xl sm:text-2xl font-bold uppercase text-brand-muted">
-                    Espaço Carandaí
-                </p>
-                <div class="w-20 h-[2px] bg-brand-ink"></div>
-            </div>
-            
-            <!-- Right Content Block -->
-            <div class="lg:col-span-6 border border-brand-ink p-8 md:p-12 bg-brand-canvas flex flex-col justify-between gap-8 shadow-[8px_8px_0px_0px_#0C0C0C]">
-                <p class="font-space text-lg md:text-xl text-brand-ink leading-relaxed">
-                    Atendimento presencial focado em privacidade, conforto e infraestrutura de alta precisão para a realização do seu diagnóstico corporal e clínico completo.
-                </p>
-                <div class="border-t border-brand-ink/20 pt-6 flex flex-col gap-2">
-                    <p class="font-bold text-xs uppercase tracking-widest text-brand-muted">Localização</p>
-                    <p class="text-sm text-brand-ink font-semibold">
-                        Av. Ayrton Senna, 5500 - Barra da Tijuca, Rio de Janeiro - RJ
-                    </p>
-                    <p class="text-xs text-brand-muted">
-                        Fácil acesso, segurança e estacionamento amplo no Shopping Uptown (Espaço Carandaí).
-                    </p>
+                <!-- Card 3 -->
+                <div class="benefit-card">
+                    <div class="benefit-icon">📈</div>
+                    <h3 class="benefit-card-title">Foco na Sustentabilidade</h3>
+                    <p class="benefit-card-desc">O objetivo é gerar resultados duradouros. Você aprenderá a fazer escolhas corretas de forma leve e sem terrorismo nutricional.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- MONUMENTAL SECTION 4: GOOGLE REVIEWS SUMMARY -->
-    <section class="border-b border-brand-ink bg-brand-canvas py-24">
-        <div class="max-w-7xl mx-auto px-4 sm:px-8 text-center flex flex-col items-center justify-center gap-6">
-            <p class="font-space text-xs uppercase tracking-widest text-brand-muted">[ RECONHECIMENTO COMPROVADO ]</p>
-            <h2 class="font-syne font-extrabold text-4xl sm:text-6xl tracking-tighter uppercase max-w-4xl leading-none">
-                RECONHECIMENTO MÁXIMO DOS PACIENTES
-            </h2>
-            <div class="flex items-center gap-1.5 text-2xl text-yellow-500 my-2">
-                ★★★★★
+    <!-- Testimonials Section (Social Proof) -->
+    <section class="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Depoimentos</span>
+                <h2 class="section-title">Quem já mudou de vida aprova</h2>
             </div>
-            <p class="font-space text-xl max-w-2xl text-brand-muted">
-                <strong>Nota 5.0</strong> em todas as avaliações registradas. O reflexo de um acompanhamento nutricional ético, pragmático e desenhado com foco em resultados de alto impacto.
-            </p>
-            <span class="text-xs uppercase tracking-widest font-bold border-b border-brand-ink pb-2">48 avaliações reais e validadas no Google</span>
-        </div>
-    </section>
-
-    <!-- CTA & FOOTER MONOLITHIC -->
-    <section id="agendamento" class="bg-brand-ink text-brand-canvas pt-20 pb-12">
-        <div class="max-w-7xl mx-auto px-4 sm:px-8 flex flex-col justify-between min-h-[50vh]">
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start mb-20">
-                <div class="lg:col-span-8 flex flex-col gap-6">
-                    <p class="font-space text-xs uppercase tracking-widest text-brand-canvas/60">[ ALTA PERFORMANCE METABÓLICA ]</p>
-                    <h2 class="font-syne font-extrabold text-5xl sm:text-7xl lg:text-8xl leading-none tracking-tighter uppercase">
-                        AGENDE SUA<br>CONSULTA
-                    </h2>
-                </div>
-                <div class="lg:col-span-4 lg:pt-12">
-                    <a href="https://wa.me/5521999999999" target="_blank" class="btn-pulse inline-flex justify-center items-center w-full bg-brand-canvas text-brand-ink hover:bg-brand-canvas/90 font-syne font-extrabold text-lg py-6 px-8 tracking-wider uppercase transition-all duration-300">
-                        FALAR NO WHATSAPP
-                    </a>
-                </div>
-            </div>
-
-            <!-- Footer Details -->
-            <div class="border-t border-brand-canvas/20 pt-12 flex flex-col md:flex-row justify-between items-start md:items-center gap-8 text-xs uppercase tracking-wider text-brand-canvas/60">
-                <div class="flex items-center gap-3">
-                    <img src="https://www.google.com/s2/favicons?domain=nutrilucianaguerra.com.br&sz=128" alt="Logo Luciana Guerra" class="w-8 h-8 invert">
-                    <div>
-                        <p class="font-bold text-brand-canvas text-sm">LUCIANA GUERRA</p>
-                        <p class="text-[10px]">Nutricionista Clínica e Esportiva</p>
+            <div class="testimonials-grid">
+                <!-- Card 1 -->
+                <div class="testimonial-card">
+                    <div class="testimonial-rating">★★★★★</div>
+                    <p class="testimonial-text">"O melhor acompanhamento que já fiz. Perdi 8kg em 3 meses sem passar fome e sem deixar de comer o que gosto. O atendimento da Luciana é impecável!"</p>
+                    <div class="patient-info">
+                        <div class="patient-avatar">M</div>
+                        <div>
+                            <div class="patient-name">Mariana Silva</div>
+                            <div class="patient-meta">Paciente de Emagrecimento</div>
+                        </div>
                     </div>
                 </div>
-                <div class="flex flex-col gap-1">
-                    <p>Shopping Uptown (Espaço Carandaí) - RJ</p>
-                    <p>Exame de Calorimetria Indireta & MFLEX App</p>
+                <!-- Card 2 -->
+                <div class="testimonial-card">
+                    <div class="testimonial-rating">★★★★★</div>
+                    <p class="testimonial-text">"A Luciana me ensinou a ter uma relação saudável com a comida. Minha disposição diária e exames de sangue melhoraram absurdamente."</p>
+                    <div class="patient-info">
+                        <div class="patient-avatar">R</div>
+                        <div>
+                            <div class="patient-name">Ricardo Santos</div>
+                            <div class="patient-meta">Foco em Performance e Saúde</div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 3 -->
+                <div class="testimonial-card">
+                    <div class="testimonial-rating">★★★★★</div>
+                    <p class="testimonial-text">"Profissional extremamente atenciosa e atualizada. O plano se encaixou perfeitamente na minha rotina corrida de trabalho. Super recomendo!"</p>
+                    <div class="patient-info">
+                        <div class="patient-avatar">A</div>
+                        <div>
+                            <div class="patient-name">Amanda Costa</div>
+                            <div class="patient-meta">Mãe e Empresária</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2 class="cta-title">Vamos começar a escrever a sua história de sucesso hoje?</h2>
+                <p class="cta-desc">As vagas para novos pacientes do mês são limitadas para garantir a qualidade de atendimento individual que você merece.</p>
+                <a href="https://wa.me/5500000000000?text=Olá,%20gostaria%20de%20agendar%20uma%20consulta." target="_blank" class="btn btn-primary" style="background-color: var(--color-bg-white); color: var(--color-primary); box-shadow: 0 10px 25px rgba(0,0,0,0.1);">Falar Comigo no WhatsApp</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <span class="logo-text">Luciana Guerra</span>
+                    <p>Transformando vidas através de uma nutrição descomplicada, ética e baseada em evidências científicas.</p>
                 </div>
                 <div>
-                    <p class="text-right">&copy; 2024. Todos os direitos reservados.</p>
-                    <p class="text-right text-[9px] text-brand-canvas/40 mt-1">Desenvolvido por RD Exclusive</p>
+                    <h4 class="footer-title">Contato</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">contato@nutrilucianaguerra.com.br</a></li>
+                        <li>Atendimento Presencial e Online</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="footer-title">Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="http://nutrilucianaguerra.com.br" target="_blank">nutrilucianaguerra.com.br</a></li>
+                        <li><a href="#">Agendamento</a></li>
+                    </ul>
                 </div>
             </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Nutricionista Luciana Guerra. Todos os direitos reservados.</p>
+                <p>CRN-3 / XXXX</p>
+            </div>
         </div>
-    </section>
+    </footer>
 
-    <!-- WHATSAPP FLOATING BUTTON -->
-    <a href="https://wa.me/5521999999999" target="_blank" class="whatsapp-pulse fixed bottom-6 right-6 z-50 bg-green-500 text-white p-4 rounded-full shadow-2xl flex items-center justify-center hover:bg-green-600 transition-colors" aria-label="Falar no Whatsapp">
-        <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-            <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.513 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.717-1.458L0 24zm6.59-4.846c1.6.95 3.188 1.449 4.825 1.451 5.436 0 9.86-4.37 9.864-9.799.002-2.63-1.023-5.101-2.885-6.963C16.588 2.01 14.12 1.01 11.99 1.01c-5.439 0-9.865 4.37-9.869 9.8a9.69 9.69 0 0 0 1.491 5.158L2.617 21.01l5.13-1.328zM17.886 14.7c-.318-.16-1.884-.93-2.175-1.038-.291-.106-.503-.16-.714.16-.211.318-.819 1.038-1.004 1.25-.186.21-.371.238-.69.079-.318-.16-1.344-.495-2.56-1.58-.946-.844-1.585-1.885-1.771-2.202-.186-.318-.02-.489.139-.648.143-.142.318-.371.477-.556.16-.186.213-.318.318-.53.106-.21.053-.397-.027-.556-.08-.16-.714-1.722-.979-2.357-.258-.62-.52-.536-.714-.546-.185-.01-.397-.01-.61-.01-.212 0-.556.08-.847.4-.291.318-1.112 1.087-1.112 2.65 0 1.562 1.139 3.072 1.298 3.284.16.21 2.241 3.424 5.43 4.802.758.328 1.35.524 1.813.67.763.243 1.457.209 2.006.127.612-.091 1.884-.77 2.15-1.485.264-.714.264-1.324.185-1.454-.078-.13-.291-.21-.61-.37z"/>
-        </svg>
-    </a>
-
-    <!-- CUSTOM INTERACTIVE JAVASCRIPT -->
-    <script>
-        const mobileMenu = document.getElementById('mobile-menu');
-        const openMenuBtn = document.getElementById('open-menu');
-        const closeMenuBtn = document.getElementById('close-menu');
-        const menuLinks = document.querySelectorAll('.menu-link');
-
-        function toggleMenu() {
-            if (mobileMenu.classList.contains('translate-x-full')) {
-                mobileMenu.classList.remove('translate-x-full');
-                mobileMenu.classList.add('translate-x-0');
-            } else {
-                mobileMenu.classList.remove('translate-x-0');
-                mobileMenu.classList.add('translate-x-full');
-            }
-        }
-
-        openMenuBtn.addEventListener('click', toggleMenu);
-        closeMenuBtn.addEventListener('click', toggleMenu);
-
-        menuLinks.forEach(link => {
-            link.addEventListener('click', () => {
-                mobileMenu.classList.remove('translate-x-0');
-                mobileMenu.classList.add('translate-x-full');
-            });
-        });
-    </script>
 </body>
 </html>
