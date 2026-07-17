@@ -1,631 +1,402 @@
 <!DOCTYPE html>
 <html lang="pt-BR" class="scroll-smooth">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Luciana Guerra | Nutrição de Alta Performance & Longevidade</title>
-  
-  <!-- Tailwind CSS & Custom Config -->
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            brandPrimary: '#F0EBE1',
-            brandDark: '#121212',
-            brandBg: '#FAF8F5',
-            brandGold: '#C5A880',
-            brandGray: '#7E7C75'
-          },
-          fontFamily: {
-            serif: ['Cormorant Garamond', 'serif'],
-            sans: ['Plus Jakarta Sans', 'sans-serif'],
-          }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luciana Guerra | Nutricionista</title>
+    <!-- Google Fonts: Syne & Space Grotesk -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            beige: '#F0EBE1',
+                            dark: '#0D0D0D',
+                            muted: '#5E5A54',
+                            accent: '#1C1C1C'
+                        }
+                    },
+                    fontFamily: {
+                        syne: ['Syne', 'sans-serif'],
+                        space: ['Space Grotesk', 'sans-serif'],
+                    }
+                }
+            }
         }
-      }
-    }
-  </script>
+    </script>
+    <style>
+        body {
+            background-color: #F0EBE1;
+            color: #0D0D0D;
+            font-family: 'Space Grotesk', sans-serif;
+            overflow-x: hidden;
+        }
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 6px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #F0EBE1;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #0D0D0D;
+        }
+        /* Brutalist layout borders */
+        .swiss-grid {
+            border-bottom: 1px solid #0D0D0D;
+            border-right: 1px solid #0D0D0D;
+        }
+        .swiss-border-t { border-top: 1px solid #0D0D0D; }
+        .swiss-border-b { border-bottom: 1px solid #0D0D0D; }
+        .swiss-border-l { border-left: 1px solid #0D0D0D; }
+        .swiss-border-r { border-right: 1px solid #0D0D0D; }
 
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
-  <style>
-    body {
-      background-color: #FAF8F5;
-      color: #121212;
-      overflow-x: hidden;
-    }
-    .editorial-grid {
-      background-image: linear-gradient(to right, rgba(18, 18, 18, 0.05) 1px, transparent 1px);
-      background-size: 25% 100%;
-    }
-    .text-stroke {
-      -webkit-text-stroke: 1px rgba(18, 18, 18, 0.3);
-      color: transparent;
-    }
-    .text-stroke-white {
-      -webkit-text-stroke: 1px rgba(255, 255, 255, 0.2);
-      color: transparent;
-    }
-    @keyframes pulse-slow {
-      0%, 100% { transform: scale(1); opacity: 1; }
-      50% { transform: scale(1.08); opacity: 0.9; }
-    }
-    .animate-pulse-slow {
-      animation: pulse-slow 3s infinite ease-in-out;
-    }
-  </style>
+        @keyframes pulse-slow {
+            0%, 100% { transform: scale(1); opacity: 1; }
+            50% { transform: scale(1.08); opacity: 0.9; }
+        }
+        .pulse-btn {
+            animation: pulse-slow 3s infinite ease-in-out;
+        }
+    </style>
 </head>
-<body class="font-sans antialiased">
+<body class="antialiased selection:bg-brand-dark selection:text-brand-beige">
 
-  <!-- HEADER -->
-  <header class="fixed top-0 left-0 w-full z-50 bg-brandBg/80 backdrop-blur-md border-b border-brandDark/10 transition-all duration-300">
-    <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-      
-      <!-- Brand Logo & Identity -->
-      <a href="#" class="flex items-center gap-3 group">
-        <img src="https://www.google.com/s2/favicons?domain=nutrilucianaguerra.com.br&sz=128" alt="Luciana Guerra Logo" class="w-8 h-8 rounded-full border border-brandDark/20 grayscale group-hover:grayscale-0 transition-all duration-500">
-        <div class="flex flex-col">
-          <span class="font-serif text-lg tracking-[0.2em] font-semibold leading-none">LUCIANA GUERRA</span>
-          <span class="text-[9px] uppercase tracking-[0.3em] text-brandGray mt-1">Nutrição Clínica & Performance</span>
-        </div>
-      </a>
-
-      <!-- Desktop Navigation -->
-      <nav class="hidden lg:flex items-center gap-8 text-xs uppercase tracking-widest font-medium">
-        <a href="#metodologia" class="hover:text-brandGold transition-colors">Metodologia</a>
-        <a href="#calorometria" class="hover:text-brandGold transition-colors">Calorometria</a>
-        <a href="#mflex" class="hover:text-brandGold transition-colors">MFLEX App</a>
-        <a href="#consultorio" class="hover:text-brandGold transition-colors">O Espaço</a>
-        <a href="#depoimentos" class="hover:text-brandGold transition-colors">Depoimentos</a>
-      </nav>
-
-      <!-- CTA -->
-      <div class="hidden md:flex items-center gap-4">
-        <a href="https://wa.me/5521999999999?text=Olá,%20gostaria%20de%20agendar%20uma%20consulta%20com%20a%20Dra.%20Luciana%20Guerra." target="_blank" class="border border-brandDark px-6 py-2.5 text-xs uppercase tracking-widest font-medium hover:bg-brandDark hover:text-brandBg transition-all duration-300">
-          Agendar Consulta
-        </a>
-      </div>
-
-      <!-- Mobile Menu Button -->
-      <button id="mobile-menu-btn" class="lg:hidden flex flex-col justify-center items-end w-8 h-8 gap-1.5 focus:outline-none" aria-label="Menu">
-        <span class="w-6 h-[1.5px] bg-brandDark transition-all duration-300"></span>
-        <span class="w-4 h-[1.5px] bg-brandDark transition-all duration-300"></span>
-      </button>
-    </div>
-
-    <!-- Mobile Drawer -->
-    <div id="mobile-drawer" class="fixed top-20 left-0 w-full h-[calc(100vh-5rem)] bg-brandBg border-t border-brandDark/10 z-40 flex flex-col justify-between p-8 translate-x-full transition-transform duration-500 ease-in-out">
-      <nav class="flex flex-col gap-6 text-xl font-serif">
-        <a href="#metodologia" class="mobile-link hover:translate-x-2 transition-transform inline-block">01. Metodologia</a>
-        <a href="#calorometria" class="mobile-link hover:translate-x-2 transition-transform inline-block">02. Calorometria Indireta</a>
-        <a href="#mflex" class="mobile-link hover:translate-x-2 transition-transform inline-block">03. MFLEX App</a>
-        <a href="#consultorio" class="mobile-link hover:translate-x-2 transition-transform inline-block">04. Consultório Uptown</a>
-        <a href="#depoimentos" class="mobile-link hover:translate-x-2 transition-transform inline-block">05. Avaliações</a>
-      </nav>
-      <div class="flex flex-col gap-4 border-t border-brandDark/10 pt-6">
-        <p class="text-xs text-brandGray tracking-widest uppercase">Contatos & Reservas</p>
-        <a href="tel:+552199999999" class="text-lg font-serif">+55 (21) 99999-9999</a>
-        <a href="https://wa.me/5521999999999" class="bg-brandDark text-brandBg text-center py-4 uppercase tracking-widest text-xs font-semibold hover:bg-brandGold transition-colors">
-          Agendar pelo WhatsApp
-        </a>
-      </div>
-    </div>
-  </header>
-
-  <!-- HERO SECTION (Asymmetric Magazine Layout) -->
-  <section class="relative min-h-screen flex items-center pt-28 pb-16 px-6 overflow-hidden editorial-grid">
-    <div class="max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-      
-      <!-- Left side text overlapping layout -->
-      <div class="lg:col-span-7 z-10 flex flex-col justify-center">
-        <div class="inline-flex items-center gap-2 px-3 py-1 bg-brandPrimary border border-brandDark/10 text-[10px] uppercase tracking-[0.25em] font-semibold mb-6 w-fit">
-          <span class="w-1.5 h-1.5 bg-brandGold rounded-full"></span> Atendimento Premium & Alta Performance
-        </div>
-        
-        <h1 class="font-serif text-5xl md:text-7xl lg:text-8xl tracking-tight leading-[0.9] font-light">
-          A alta costura da <br>
-          <span class="italic font-normal text-brandGold">Nutrição Clínica</span> e Longevidade.
-        </h1>
-
-        <p class="mt-8 text-base md:text-lg text-brandGray max-w-xl font-light leading-relaxed">
-          Sem dietas de prateleira ou restrições cegas. Uma engenharia metabólica desenhada sob medida para a sua individualidade biológica, ancorada em tecnologia e ciência diagnóstica de ponta.
-        </p>
-
-        <!-- Social Proof Grid Badge -->
-        <div class="mt-10 flex items-center gap-6 border-t border-brandDark/10 pt-8 max-w-lg">
-          <div class="flex flex-col">
-            <span class="font-serif text-3xl font-light">★ 5.0</span>
-            <span class="text-[10px] uppercase tracking-widest text-brandGray mt-1">Google Reviews</span>
-          </div>
-          <div class="h-8 w-[1px] bg-brandDark/10"></div>
-          <div>
-            <p class="text-xs text-brandGray leading-relaxed">
-              Consolidada como referência máxima com <strong>48 avaliações de excelência absoluta</strong>.
-            </p>
-          </div>
-        </div>
-
-        <div class="mt-10 flex flex-col sm:flex-row gap-4">
-          <a href="#metodologia" class="bg-brandDark text-brandBg px-8 py-4 uppercase tracking-widest text-xs font-semibold hover:bg-brandGold hover:text-brandDark transition-all duration-500 text-center">
-            Conheça o Método
-          </a>
-          <a href="#consultorio" class="border border-brandDark/30 px-8 py-4 uppercase tracking-widest text-xs font-semibold hover:bg-brandDark hover:text-brandBg transition-all duration-500 text-center">
-            Espaço Barra da Tijuca
-          </a>
-        </div>
-      </div>
-
-      <!-- Right side asymmetrical image frame -->
-      <div class="lg:col-span-5 relative mt-12 lg:mt-0">
-        <div class="absolute -top-12 -left-12 text-[15rem] font-serif font-light text-stroke leading-none pointer-events-none select-none hidden xl:block opacity-40">
-          LG
-        </div>
-        <div class="relative bg-brandPrimary p-4 border border-brandDark/10 shadow-2xl">
-          <div class="overflow-hidden aspect-[3/4]">
-            <!-- Elegant placeholder/stock photo representing premium nutritionist/lifestyle -->
-            <img src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&q=80&w=800" alt="Luciana Guerra - Consultório de Luxo" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-1000 transform hover:scale-105">
-          </div>
-          <div class="mt-4 flex justify-between items-center text-xs tracking-wider uppercase text-brandGray">
-            <span>Dra. Luciana Guerra</span>
-            <span>CRN-4: 20101700</span>
-          </div>
-        </div>
-      </div>
-
-    </div>
-
-    <!-- Background Decorative subtle lines -->
-    <div class="absolute bottom-0 left-0 w-full h-[1px] bg-brandDark/10"></div>
-    <div class="absolute top-0 right-1/4 w-[1px] h-full bg-brandDark/5 hidden lg:block"></div>
-  </section>
-
-  <!-- SEÇÃO METODOLOGIA (Asymmetric Typography Grid) -->
-  <section id="metodologia" class="py-24 px-6 border-b border-brandDark/10 bg-brandBg">
-    <div class="max-w-7xl mx-auto">
-      
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 mb-16">
-        <div class="lg:col-span-4">
-          <span class="text-xs uppercase tracking-[0.3em] text-brandGold block mb-2">01 / FILOSOFIA CLÍNICA</span>
-          <h2 class="font-serif text-4xl md:text-5xl font-light tracking-tight">Tratamento desenhado sob medida.</h2>
-        </div>
-        <div class="lg:col-span-8 flex items-end">
-          <p class="text-brandGray text-base md:text-lg font-light leading-relaxed max-w-2xl">
-            A saúde ideal não reside em extremos. Nosso pilar metodológico se apoia no mapeamento metabólico completo do paciente, permitindo reajustar hábitos, tratar patologias e otimizar a longevidade sem descaracterizar sua rotina.
-          </p>
-        </div>
-      </div>
-
-      <!-- Triad of differentials (Non-standard layouts) -->
-      <div class="grid grid-cols-1 md:grid-cols-3 border-t border-l border-brandDark/10">
-        
-        <div class="p-8 lg:p-12 border-r border-b border-brandDark/10 flex flex-col justify-between hover:bg-brandPrimary/30 transition-all duration-500">
-          <div>
-            <span class="font-serif text-6xl text-stroke block mb-6">01</span>
-            <h3 class="font-serif text-2xl font-light mb-4">Individualidade Biológica</h3>
-            <p class="text-brandGray text-sm leading-relaxed font-light">
-              Nenhuma prescrição é repetida. Seus exames bioquímicos, carga de treinos e rotina corporativa moldam a estrutura do seu plano alimentar.
-            </p>
-          </div>
-          <div class="mt-8 h-[1px] w-12 bg-brandGold"></div>
-        </div>
-
-        <div class="p-8 lg:p-12 border-r border-b border-brandDark/10 flex flex-col justify-between hover:bg-brandPrimary/30 transition-all duration-500">
-          <div>
-            <span class="font-serif text-6xl text-stroke block mb-6">02</span>
-            <h3 class="font-serif text-2xl font-light mb-4">Nutrição Baseada em Evidências</h3>
-            <p class="text-brandGray text-sm leading-relaxed font-light">
-              Livre de modismos e radicalismos estéreis. Protocolos que unem a ciência acadêmica atualizada com a prática clínica comprovada.
-            </p>
-          </div>
-          <div class="mt-8 h-[1px] w-12 bg-brandGold"></div>
-        </div>
-
-        <div class="p-8 lg:p-12 border-r border-b border-brandDark/10 flex flex-col justify-between hover:bg-brandPrimary/30 transition-all duration-500">
-          <div>
-            <span class="font-serif text-6xl text-stroke block mb-6">03</span>
-            <h3 class="font-serif text-2xl font-light mb-4">Performance Sustentável</h3>
-            <p class="text-brandGray text-sm leading-relaxed font-light">
-              Garantir que a busca pela melhor composição física ande em perfeita sintonia com a clareza mental e a longevidade saudável do organismo.
-            </p>
-          </div>
-          <div class="mt-8 h-[1px] w-12 bg-brandGold"></div>
-        </div>
-
-      </div>
-
-    </div>
-  </section>
-
-  <!-- SEÇÃO REAL ASSET 1: CALORIMETRIA INDIRETA (Immersive Dark Screen) -->
-  <section id="calorometria" class="relative bg-brandDark text-brandBg py-24 px-6 overflow-hidden">
-    <!-- Fine luxury grid lines background -->
-    <div class="absolute inset-0 opacity-10 pointer-events-none">
-      <div class="w-full h-full" style="background-image: linear-gradient(rgba(255, 255, 255, 0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 255, 255, 0.1) 1px, transparent 1px); background-size: 100px 100px;"></div>
-    </div>
-
-    <div class="max-w-7xl mx-auto relative z-10">
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-        
-        <div class="lg:col-span-5">
-          <div class="inline-flex items-center gap-2 px-3 py-1 bg-white/5 border border-white/10 text-[10px] uppercase tracking-[0.25em] text-brandGold mb-6">
-            Padrão Ouro de Diagnóstico
-          </div>
-          <h2 class="font-serif text-4xl md:text-5xl lg:text-6xl font-light tracking-tight leading-tight">
-            Exame de <br>
-            <span class="italic text-brandGold font-normal">Calorimetria</span> Indireta.
-          </h2>
-          <p class="mt-6 text-brandBg/80 text-base font-light leading-relaxed">
-            Esqueça as fórmulas matemáticas genéricas. Com o teste de calorimetria indireta, medimos de forma exata a quantidade de oxigênio que seu corpo consome. 
-          </p>
-          <p class="mt-4 text-brandBg/60 text-sm font-light leading-relaxed">
-            Identificamos com precisão matemática se o seu metabolismo é lento, normal ou rápido, determinando a taxa metabólica basal real para estruturar seu plano nutricional de alta precisão.
-          </p>
-
-          <ul class="mt-8 space-y-4 text-xs uppercase tracking-widest text-brandBg/80">
-            <li class="flex items-center gap-3">
-              <span class="w-1.5 h-1.5 bg-brandGold rounded-full"></span> Mapeamento Metabólico Preciso
-            </li>
-            <li class="flex items-center gap-3">
-              <span class="w-1.5 h-1.5 bg-brandGold rounded-full"></span> Sem Suposições ou Fórmulas Estimadas
-            </li>
-            <li class="flex items-center gap-3">
-              <span class="w-1.5 h-1.5 bg-brandGold rounded-full"></span> Direcionamento Exato para Emagrecimento e Hipertrofia
-            </li>
-          </ul>
-        </div>
-
-        <div class="lg:col-span-7 relative">
-          <!-- Stylized technology graphic / premium clinical aesthetic -->
-          <div class="relative bg-white/5 p-6 md:p-10 border border-white/10 backdrop-blur-md">
-            <div class="absolute top-0 right-0 p-4 text-[7rem] font-serif font-bold text-stroke-white leading-none opacity-20 select-none pointer-events-none">
-              O2
-            </div>
-            
-            <h4 class="text-xs uppercase tracking-[0.2em] text-brandGold font-semibold mb-6">Métrica e Performance Celular</h4>
-            
-            <div class="space-y-6">
-              <div class="border-b border-white/10 pb-4">
-                <span class="text-[10px] uppercase text-brandBg/50 tracking-wider">Como funciona o exame?</span>
-                <p class="text-sm mt-1 text-brandBg/95">Através da análise de gases respiratórios em repouso absoluto, calculamos os substratos energéticos preferenciais do seu organismo.</p>
-              </div>
-
-              <div class="border-b border-white/10 pb-4">
-                <span class="text-[10px] uppercase text-brandBg/50 tracking-wider">A quem se destina?</span>
-                <p class="text-sm mt-1 text-brandBg/95">Pacientes com dificuldades de emagrecimento, atletas que buscam otimizar eficiência energética e indivíduos focados em longevidade ativa.</p>
-              </div>
-
-              <div class="pt-2">
-                <a href="https://wa.me/5521999999999?text=Gostaria%20de%20saber%20mais%20informações%20sobre%20o%20exame%20de%20Calorimetria%20Indireta." target="_blank" class="inline-flex items-center gap-2 text-brandGold text-xs uppercase tracking-[0.2em] hover:text-white transition-colors">
-                  <span>Reservar Horário para Exame</span>
-                  <span class="text-lg">→</span>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- SEÇÃO REAL ASSET 2: MFLEX APP (Tech Interactive Simulator Layout) -->
-  <section id="mflex" class="py-24 px-6 border-b border-brandDark/10 bg-brandPrimary/30">
-    <div class="max-w-7xl mx-auto">
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-        
-        <!-- App visual representation (asymmetric phone canvas mock) -->
-        <div class="lg:col-span-6 flex justify-center order-2 lg:order-1">
-          <div class="relative w-full max-w-[340px] aspect-[9/18] bg-brandDark rounded-[45px] p-4 shadow-3xl border-4 border-brandDark/60 ring-8 ring-brandPrimary">
-            <!-- Dynamic camera notch -->
-            <div class="absolute top-0 left-1/2 transform -translate-x-1/2 w-32 h-6 bg-brandDark rounded-b-2xl z-20"></div>
-            
-            <!-- App Content Area -->
-            <div class="w-full h-full bg-brandBg rounded-[35px] overflow-hidden p-6 flex flex-col justify-between relative">
-              <div class="flex justify-between items-center mt-4">
-                <div class="flex items-center gap-1.5">
-                  <span class="w-2.5 h-2.5 bg-brandGold rounded-full"></span>
-                  <span class="font-serif text-sm tracking-widest font-bold">MFLEX</span>
-                </div>
-                <span class="text-[9px] uppercase tracking-wider text-brandGray">Área do Paciente</span>
-              </div>
-
-              <!-- Main Card App Simulator -->
-              <div class="my-auto space-y-4">
-                <div class="bg-brandPrimary/70 p-4 border border-brandDark/5 rounded-2xl">
-                  <span class="text-[8px] uppercase tracking-wider text-brandGray block">Plano Nutricional</span>
-                  <p class="font-serif text-lg font-light mt-1">Refeição Pré-Treino</p>
-                  <div class="mt-2 flex justify-between text-[10px] text-brandGray border-t border-brandDark/5 pt-2">
-                    <span>150g Carboidrato</span>
-                    <span>30g Proteína</span>
-                  </div>
-                </div>
-
-                <div class="bg-brandDark text-brandBg p-4 rounded-2xl">
-                  <span class="text-[8px] uppercase tracking-wider text-white/50 block">Suplementação Inteligente</span>
-                  <p class="font-serif text-lg font-light mt-1 text-brandGold">Fórmula Manipulada Ativa</p>
-                  <p class="text-[9px] text-white/70 mt-1">Tomar às 08h00 em jejum absoluto</p>
-                </div>
-              </div>
-
-              <div class="border-t border-brandDark/10 pt-4 flex justify-between items-center">
-                <span class="text-[9px] text-brandGray font-medium">Luciana Guerra App</span>
-                <span class="text-[10px] text-brandDark font-bold">V 2.4</span>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Copywriting Section -->
-        <div class="lg:col-span-6 order-1 lg:order-2">
-          <span class="text-xs uppercase tracking-[0.3em] text-brandGold block mb-2">02 / ECOSSISTEMA DIGITAL</span>
-          <h2 class="font-serif text-4xl md:text-5xl font-light tracking-tight">
-            Sua prescrição a um toque: <br>
-            Conheça o <span class="italic font-normal text-brandGold">MFLEX App</span>.
-          </h2>
-          <p class="mt-6 text-brandGray text-base font-light leading-relaxed">
-            Sua evolução monitorada com maestria. Através do aplicativo MFLEX App, você tem acesso em tempo real à sua dieta dinâmica, cronograma exato de hidratação, prescrição de manipulados e canal exclusivo de suporte direto.
-          </p>
-          <p class="mt-4 text-brandGray text-sm font-light leading-relaxed">
-            Nada de PDFs estáticos esquecidos no e-mail. A facilidade digital desenhada para se alinhar ao seu estilo de vida acelerado e garantir constância nos resultados.
-          </p>
-
-          <div class="mt-8 flex flex-col sm:flex-row gap-6 items-start">
-            <div class="flex items-center gap-4">
-              <span class="text-3xl font-serif text-brandGold font-light">100%</span>
-              <p class="text-xs text-brandGray uppercase tracking-wider leading-snug">Sincronizado com <br>seus treinos diários</p>
-            </div>
-            <div class="h-10 w-[1px] bg-brandDark/10 hidden sm:block"></div>
-            <div class="flex items-center gap-4">
-              <span class="text-3xl font-serif text-brandGold font-light">iOS / Android</span>
-              <p class="text-xs text-brandGray uppercase tracking-wider leading-snug">Acesso exclusivo <br>para pacientes</p>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- SEÇÃO REAL ASSET 3: CONSULTÓRIO PREMIUM (Uptown Barra Layout) -->
-  <section id="consultorio" class="py-24 px-6 border-b border-brandDark/10 bg-brandBg relative">
-    <div class="max-w-7xl mx-auto">
-      
-      <!-- Asymmetrical Title -->
-      <div class="mb-16">
-        <span class="text-xs uppercase tracking-[0.3em] text-brandGold block mb-2">03 / ATENDIMENTO PRESENCIAL</span>
-        <h2 class="font-serif text-4xl md:text-6xl font-light tracking-tight leading-none">
-          Espaço Carandaí <br>
-          <span class="font-normal italic text-brandGold text-3xl md:text-5xl">Shopping Uptown, Barra da Tijuca</span>
-        </h2>
-      </div>
-
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
-        
-        <!-- Address & Details Card -->
-        <div class="lg:col-span-4 bg-brandPrimary p-8 md:p-12 border border-brandDark/10 flex flex-col justify-between">
-          <div>
-            <h3 class="font-serif text-2xl font-light mb-6">Arquitetura de acolhimento e bem-estar.</h3>
-            <p class="text-brandGray text-sm font-light leading-relaxed mb-6">
-              Um ambiente projetado de forma cirúrgica para que sua experiência clínica seja extremamente agradável, reservada e imersiva. Estacionamento facilitado, acessibilidade absoluta e segurança no coração da Barra da Tijuca.
-            </p>
-          </div>
-          <div class="space-y-4 pt-6 border-t border-brandDark/10">
-            <p class="text-xs text-brandGray uppercase tracking-widest font-semibold">Endereço Exato</p>
-            <p class="text-sm">
-              Shopping Uptown (Espaço Carandaí) <br>
-              Avenida Ayrton Senna, 5500 <br>
-              Barra da Tijuca, Rio de Janeiro - RJ
-            </p>
-            <a href="https://maps.google.com" target="_blank" class="inline-block text-xs uppercase tracking-widest text-brandGold hover:underline">
-              Como chegar via GPS →
+    <!-- Header / Navigation -->
+    <header class="fixed top-0 left-0 w-full z-50 bg-[#F0EBE1]/90 backdrop-blur-md swiss-border-b">
+        <div class="max-w-[1800px] mx-auto flex justify-between items-center px-6 py-4 md:px-12">
+            <a href="#" class="flex items-center gap-3 group">
+                <img src="https://www.google.com/s2/favicons?domain=nutrilucianaguerra.com.br&sz=128" alt="Luciana Guerra Logo" class="w-8 h-8 rounded-full border border-brand-dark filter grayscale group-hover:grayscale-0 transition-all duration-300">
+                <span class="font-syne text-xl tracking-tighter uppercase font-extrabold">Luciana Guerra</span>
             </a>
-          </div>
-        </div>
-
-        <!-- High-End Image Mosaic (Asymmetric layout) -->
-        <div class="lg:col-span-8 grid grid-cols-1 sm:grid-cols-2 gap-4">
-          <div class="overflow-hidden aspect-video sm:aspect-auto sm:h-full relative group">
-            <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=800" alt="Consultório Luciana Guerra" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-1000 transform group-hover:scale-105">
-            <div class="absolute bottom-4 left-4 bg-brandBg/90 px-3 py-1 border border-brandDark/10 text-[10px] uppercase tracking-wider">
-              Sala de Avaliação
+            
+            <div class="hidden md:flex items-center gap-8 text-sm font-medium uppercase tracking-wider">
+                <a href="#calorimetria" class="hover:line-through transition-all duration-200">Calorimetria</a>
+                <a href="#mflex" class="hover:line-through transition-all duration-200">MFLEX App</a>
+                <a href="#consultorio" class="hover:line-through transition-all duration-200">Consultório</a>
+                <a href="https://wa.me/5521999999999" target="_blank" class="px-5 py-2.5 bg-brand-dark text-brand-beige font-bold hover:bg-brand-muted hover:text-brand-dark transition-all duration-300">Agendar Consulta</a>
             </div>
-          </div>
-          <div class="overflow-hidden aspect-video sm:aspect-auto sm:h-full relative group">
-            <img src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&q=80&w=800" alt="Espaço de Atendimento" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-1000 transform group-hover:scale-105">
-            <div class="absolute bottom-4 left-4 bg-brandBg/90 px-3 py-1 border border-brandDark/10 text-[10px] uppercase tracking-wider">
-              Recepção Climatizada
-            </div>
-          </div>
-        </div>
 
-      </div>
+            <!-- Hamburger Button -->
+            <button id="menu-toggle" class="md:hidden flex flex-col justify-between w-6 h-4 z-50" aria-label="Menu">
+                <span class="w-full h-[2px] bg-brand-dark transition-transform duration-300 origin-top-left" id="line1"></span>
+                <span class="w-full h-[2px] bg-brand-dark transition-opacity duration-300" id="line2"></span>
+                <span class="w-full h-[2px] bg-brand-dark transition-transform duration-300 origin-bottom-left" id="line3"></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Mobile Fullscreen Menu -->
+    <div id="mobile-menu" class="fixed inset-0 bg-brand-dark text-brand-beige z-40 flex-col justify-between p-8 pt-32 hidden transition-all duration-500 opacity-0">
+        <nav class="flex flex-col gap-8 text-4xl font-syne uppercase font-extrabold">
+            <a href="#calorimetria" class="mobile-link hover:text-gray-400">Calorimetria</a>
+            <a href="#mflex" class="mobile-link hover:text-gray-400">MFLEX App</a>
+            <a href="#consultorio" class="mobile-link hover:text-gray-400">Consultório</a>
+        </nav>
+        <div class="swiss-border-t pt-8 border-brand-beige/20">
+            <p class="text-sm uppercase tracking-widest text-brand-beige/60 mb-4">Atendimento</p>
+            <p class="font-medium text-lg">Shopping Uptown (Espaço Carandaí)</p>
+            <p class="text-sm text-brand-beige/60">Av. Ayrton Senna, Barra da Tijuca, RJ</p>
+            <a href="https://wa.me/5521999999999" target="_blank" class="mt-6 block w-full py-4 text-center bg-brand-beige text-brand-dark font-syne font-extrabold uppercase tracking-wider hover:bg-brand-muted transition-all duration-300">Falar com Luciana</a>
+        </div>
     </div>
-  </section>
 
-  <!-- SEÇÃO DEPOIMENTOS DE VERDADE (Google Reviews Modern Layout) -->
-  <section id="depoimentos" class="py-24 px-6 bg-brandDark text-brandBg relative">
-    <div class="max-w-7xl mx-auto">
-      
-      <div class="flex flex-col md:flex-row justify-between items-start md:items-end mb-16 border-b border-white/10 pb-8">
-        <div>
-          <span class="text-xs uppercase tracking-[0.3em] text-brandGold block mb-2">04 / VOZ DO PACIENTE</span>
-          <h2 class="font-serif text-4xl md:text-5xl font-light tracking-tight">O que dizem sobre o método</h2>
-        </div>
-        <div class="mt-4 md:mt-0">
-          <span class="text-5xl font-serif text-brandGold block leading-none">5.0</span>
-          <span class="text-[10px] uppercase tracking-widest text-brandBg/60">Nota Geral / 48 Opiniões Reais</span>
-        </div>
-      </div>
+    <main class="pt-16 max-w-[1800px] mx-auto">
 
-      <!-- Testimonial Grid Structure -->
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        
-        <!-- Depoimento 1 -->
-        <div class="border border-white/10 p-8 flex flex-col justify-between hover:bg-white/5 transition-colors">
-          <div>
-            <div class="flex items-center gap-1 text-brandGold mb-6">
-              ★★★★★
+        <!-- HERO SECTION: Bold Editorial Grid -->
+        <section class="min-h-[85vh] grid grid-cols-1 lg:grid-cols-12 swiss-border-b">
+            <!-- Col Left: The Statement -->
+            <div class="lg:col-span-8 p-6 md:p-12 lg:p-20 flex flex-col justify-between swiss-border-r relative">
+                <div>
+                    <div class="inline-flex items-center gap-2 px-3 py-1 bg-brand-dark text-brand-beige text-xs uppercase tracking-widest font-semibold mb-8">
+                        ★ Google Rating 5.0 (48 Avaliações)
+                    </div>
+                    <h1 class="font-syne text-[11vw] lg:text-[7vw] leading-[0.85] font-extrabold tracking-tighter uppercase mb-8">
+                        LUCIANA<br>GUERRA
+                    </h1>
+                </div>
+                <div>
+                    <p class="text-xl md:text-3xl font-medium max-w-2xl leading-snug tracking-tight mb-8">
+                        Atendimento nutricional de alta precisão. Diagnósticos reais baseados em fisiologia, tecnologia de ponta e praticidade diária.
+                    </p>
+                    <div class="flex flex-wrap gap-4">
+                        <a href="https://wa.me/5521999999999" target="_blank" class="px-8 py-5 bg-brand-dark text-brand-beige text-lg font-syne font-extrabold uppercase tracking-wider hover:bg-brand-muted hover:text-brand-dark transition-all duration-300 flex items-center gap-4">
+                            Agendar Atendimento
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                        </a>
+                    </div>
+                </div>
             </div>
-            <p class="font-serif text-lg font-light leading-relaxed italic">
-              "A consulta com a Luciana é fora da curva. Ela não te entrega apenas uma folha de papel com quantidades, ela entende a sua rotina, pede exames profundos e faz a calorimetria lá mesmo. Resultados reais."
-            </p>
-          </div>
-          <div class="mt-8 pt-6 border-t border-white/10 flex justify-between items-center text-xs tracking-wider uppercase text-brandBg/60">
-            <span>Mariana S.</span>
-            <span>Empresária</span>
-          </div>
-        </div>
 
-        <!-- Depoimento 2 -->
-        <div class="border border-white/10 p-8 flex flex-col justify-between hover:bg-white/5 transition-colors">
-          <div>
-            <div class="flex items-center gap-1 text-brandGold mb-6">
-              ★★★★★
+            <!-- Col Right: Context Meta -->
+            <div class="lg:col-span-4 p-6 md:p-12 lg:p-16 flex flex-col justify-between bg-brand-dark text-brand-beige">
+                <div class="space-y-8">
+                    <p class="text-xs uppercase tracking-widest text-brand-beige/60">Foco de Atuação</p>
+                    <h3 class="font-syne text-2xl font-extrabold uppercase leading-tight">Nutrição Clínica, Esportiva &amp; Performance</h3>
+                    <p class="text-sm text-brand-beige/70 leading-relaxed">
+                        Abordagem científica sem fórmulas prontas. Protocolos sob medida criados estritamente sobre a sua individualidade biológica.
+                    </p>
+                </div>
+                <div class="swiss-border-t border-brand-beige/20 pt-8 mt-12 lg:mt-0">
+                    <div class="flex items-center gap-4 mb-4">
+                        <span class="text-5xl font-syne font-extrabold text-brand-beige">48</span>
+                        <div class="text-xs uppercase tracking-widest text-brand-beige/60 leading-tight">
+                            Avaliações de<br>Pacientes reais
+                        </div>
+                    </div>
+                    <p class="text-xs text-brand-beige/50">Nota máxima 5 estrelas em canais de satisfação oficiais.</p>
+                </div>
             </div>
-            <p class="font-serif text-lg font-light leading-relaxed italic">
-              "Uso o aplicativo MFLEX todos os dias, facilita muito para ver os treinos em conjunto com as quantidades da dieta. A evolução da minha musculatura foi nítida após iniciarmos."
-            </p>
-          </div>
-          <div class="mt-8 pt-6 border-t border-white/10 flex justify-between items-center text-xs tracking-wider uppercase text-brandBg/60">
-            <span>Thiago M.</span>
-            <span>Atleta de CrossFit</span>
-          </div>
-        </div>
+        </section>
 
-        <!-- Depoimento 3 -->
-        <div class="border border-white/10 p-8 flex flex-col justify-between hover:bg-white/5 transition-colors">
-          <div>
-            <div class="flex items-center gap-1 text-brandGold mb-6">
-              ★★★★★
+        <!-- MONUMENTAL SECTION 1: Calorimetria Indireta -->
+        <section id="calorimetria" class="swiss-border-b grid grid-cols-1 lg:grid-cols-2">
+            <!-- Left Side: Conceptual Data Canvas -->
+            <div class="p-6 md:p-12 lg:p-20 flex flex-col justify-between swiss-border-r bg-brand-dark text-brand-beige relative overflow-hidden">
+                <div class="absolute inset-0 opacity-10 pointer-events-none flex items-center justify-center">
+                    <div class="w-[120%] h-[120%] border-[2px] border-dashed border-brand-beige rounded-full animate-[spin_120s_linear_infinite]"></div>
+                </div>
+                
+                <span class="text-xs uppercase tracking-widest text-brand-beige/60 relative z-10">Diagnóstico Avançado</span>
+                <div class="my-12 relative z-10">
+                    <h2 class="font-syne text-5xl md:text-7xl font-extrabold uppercase tracking-tighter leading-none mb-6">
+                        CALORIMETRIA<br>INDIRETA
+                    </h2>
+                    <p class="text-lg text-brand-beige/80 max-w-lg leading-relaxed">
+                        A ciência eliminando as suposições. O exame que quantifica com exatidão a taxa metabólica e o consumo de oxigênio do seu organismo.
+                    </p>
+                </div>
+                <div class="relative z-10">
+                    <span class="inline-flex items-center gap-2 text-xs uppercase tracking-widest border border-brand-beige/20 px-3 py-1.5 rounded-full">
+                        Exame Realizado no Consultório
+                    </span>
+                </div>
             </div>
-            <p class="font-serif text-lg font-light leading-relaxed italic">
-              "Atendimento espetacular no Uptown Barra. O consultório é super discreto e acolhedor. Fazer o exame de calorimetria tirou todas as minhas dúvidas sobre por que eu não conseguia emagrecer."
-            </p>
-          </div>
-          <div class="mt-8 pt-6 border-t border-white/10 flex justify-between items-center text-xs tracking-wider uppercase text-brandBg/60">
-            <span>Juliana K.</span>
-            <span>Advogada</span>
-          </div>
-        </div>
 
-      </div>
+            <!-- Right Side: Brutalist Swiss Information Block -->
+            <div class="p-6 md:p-12 lg:p-20 flex flex-col justify-between bg-brand-beige">
+                <div class="space-y-12 max-w-xl">
+                    <div class="swiss-border-b border-brand-dark pb-6">
+                        <span class="font-syne text-3xl font-extrabold uppercase block mb-3">01 / Taxa Metabólica Real</span>
+                        <p class="text-brand-muted">Descubra o consumo calórico basal exato do seu corpo. Chega de estimativas matemáticas imprecisas baseadas apenas em peso e altura.</p>
+                    </div>
+                    <div class="swiss-border-b border-brand-dark pb-6">
+                        <span class="font-syne text-3xl font-extrabold uppercase block mb-3">02 / Direcionamento Energético</span>
+                        <p class="text-brand-muted">Saber com precisão se seu metabolismo é lento, normal ou acelerado permite criar o déficit ou superávit calórico perfeito.</p>
+                    </div>
+                    <div>
+                        <span class="font-syne text-3xl font-extrabold uppercase block mb-3">03 / Eficiência e Emagrecimento</span>
+                        <p class="text-brand-muted">Foco total na queima de gordura real preservando sua massa magra através da estratégia alimentar ajustada ao seu padrão.</p>
+                    </div>
+                </div>
+                
+                <div class="mt-12 pt-8 swiss-border-t border-brand-dark">
+                    <a href="https://wa.me/5521999999999" target="_blank" class="inline-flex items-center gap-3 font-syne font-extrabold uppercase tracking-wider hover:line-through">
+                        Agendar exame de Calorimetria
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                    </a>
+                </div>
+            </div>
+        </section>
 
-    </div>
-  </section>
+        <!-- MONUMENTAL SECTION 2: MFLEX App -->
+        <section id="mflex" class="swiss-border-b grid grid-cols-1 lg:grid-cols-12">
+            <!-- Left Header Segment -->
+            <div class="lg:col-span-4 p-6 md:p-12 lg:p-20 swiss-border-r flex flex-col justify-between">
+                <div>
+                    <span class="text-xs uppercase tracking-widest text-brand-muted">Acompanhamento Mobile</span>
+                    <h2 class="font-syne text-5xl md:text-6xl font-extrabold uppercase tracking-tighter leading-none mt-6 mb-8">
+                        MFLEX<br>APP
+                    </h2>
+                </div>
+                <p class="text-brand-muted text-base leading-relaxed">
+                    Sua rotina alimentar na palma da mão. O aplicativo exclusivo de acompanhamento conecta seu plano nutricional às suas atividades diárias e treinos de maneira integrada.
+                </p>
+            </div>
 
-  <!-- SEÇÃO CTA FINAL (Monumental & Imposing) -->
-  <section class="py-24 px-6 bg-brandPrimary text-brandDark relative overflow-hidden">
-    <div class="max-w-5xl mx-auto text-center relative z-10">
-      <span class="text-xs uppercase tracking-[0.3em] text-brandDark/60 block mb-4">AGENDE SEU METABOLISMO DE ALTA PERFORMANCE</span>
-      <h2 class="font-serif text-5xl md:text-7xl font-light tracking-tight leading-none">
-        Pronto para desenhar sua <span class="italic font-normal">melhor versão</span>?
-      </h2>
-      <p class="mt-6 text-brandDark/80 text-base md:text-lg font-light max-w-2xl mx-auto leading-relaxed">
-        Seja para emagrecimento definitivo, reequilíbrio hormonal, performance esportiva ou longevidade, agende agora o seu exame de Calorimetria Indireta e consulta individualizada.
-      </p>
+            <!-- Central Visual Mockup Panel -->
+            <div class="lg:col-span-4 p-8 bg-brand-dark flex items-center justify-center swiss-border-r min-h-[450px]">
+                <!-- Abstract App UI -->
+                <div class="w-full max-w-[280px] bg-brand-beige p-6 rounded-3xl border-4 border-brand-accent shadow-2xl relative overflow-hidden">
+                    <div class="flex justify-between items-center mb-6">
+                        <span class="font-syne text-xs uppercase font-extrabold tracking-widest">MFLEX</span>
+                        <div class="w-4 h-4 rounded-full bg-brand-dark"></div>
+                    </div>
+                    
+                    <div class="space-y-4">
+                        <div class="p-3 bg-brand-dark text-brand-beige rounded-xl">
+                            <p class="text-[10px] uppercase text-brand-beige/60">Plano Ativo</p>
+                            <p class="text-sm font-semibold">Protocolo Alinhado</p>
+                        </div>
+                        <div class="h-[2px] bg-brand-dark/20"></div>
+                        <div class="p-3 border border-brand-dark/20 rounded-xl space-y-2">
+                            <p class="text-[9px] uppercase tracking-wide text-brand-muted">Consumo Diário</p>
+                            <div class="w-full bg-brand-dark/15 h-2 rounded-full overflow-hidden">
+                                <div class="bg-brand-dark w-[72%] h-full"></div>
+                            </div>
+                        </div>
+                        <div class="p-3 bg-[#E5DFD4] rounded-xl flex justify-between items-center">
+                            <span class="text-xs font-medium">Treino Conectado</span>
+                            <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-      <div class="mt-10 flex flex-col sm:flex-row gap-4 justify-center items-center">
-        <a href="https://wa.me/5521999999999?text=Olá,%20Dra.%20Luciana.%20Gostaria%20de%20reservar%20uma%20consulta%20e%20exame." target="_blank" class="bg-brandDark text-brandBg px-10 py-5 uppercase tracking-widest text-xs font-semibold hover:bg-brandGold hover:text-brandDark transition-all duration-500 w-full sm:w-auto shadow-xl">
-          Agendar pelo WhatsApp
-        </a>
-        <a href="tel:+552199999999" class="border border-brandDark/30 px-10 py-5 uppercase tracking-widest text-xs font-semibold hover:bg-brandDark hover:text-brandBg transition-all duration-500 w-full sm:w-auto">
-          Ligar para o Consultório
-        </a>
-      </div>
-    </div>
-  </section>
+            <!-- Right Key Benefits -->
+            <div class="lg:col-span-4 p-6 md:p-12 lg:p-20 flex flex-col justify-between">
+                <div class="space-y-8">
+                    <p class="text-xs uppercase tracking-widest text-brand-muted">Vantagens Ativas</p>
+                    <ul class="space-y-6">
+                        <li class="flex items-start gap-3">
+                            <span class="font-syne text-lg font-bold">✓</span>
+                            <span class="text-brand-muted">Acesso instantâneo ao seu plano de alimentação de qualquer lugar.</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="font-syne text-lg font-bold">✓</span>
+                            <span class="text-brand-muted">Histórico de exames físicos e evolução de composição corporal organizados.</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="font-syne text-lg font-bold">✓</span>
+                            <span class="text-brand-muted">Comunicação e atualizações de metas de maneira dinâmica.</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="mt-8">
+                    <a href="https://wa.me/5521999999999" target="_blank" class="px-6 py-3 border border-brand-dark font-syne text-xs font-bold uppercase tracking-wider hover:bg-brand-dark hover:text-brand-beige transition-all duration-300">Conhecer Ecossistema</a>
+                </div>
+            </div>
+        </section>
 
-  <!-- FOOTER -->
-  <footer class="bg-brandBg text-brandDark py-16 px-6 border-t border-brandDark/10">
-    <div class="max-w-7xl mx-auto">
-      <div class="grid grid-cols-1 md:grid-cols-12 gap-8 mb-12">
-        
-        <!-- Left Side -->
-        <div class="md:col-span-5">
-          <div class="flex items-center gap-3 mb-6">
-            <img src="https://www.google.com/s2/favicons?domain=nutrilucianaguerra.com.br&sz=128" alt="Logo" class="w-8 h-8 rounded-full border border-brandDark/10 grayscale">
-            <span class="font-serif text-lg tracking-[0.2em] font-semibold">LUCIANA GUERRA</span>
-          </div>
-          <p class="text-brandGray text-xs font-light max-w-sm leading-relaxed">
-            Nutricionista Clínica focada em reestruturação metabólica, modulação dietética, longevidade celular e performance esportiva de alta precisão.
-          </p>
-        </div>
+        <!-- MONUMENTAL SECTION 3: Espaço Carandaí (Shopping Uptown) -->
+        <section id="consultorio" class="swiss-border-b grid grid-cols-1 lg:grid-cols-2">
+            <!-- Left Info Panel -->
+            <div class="p-6 md:p-12 lg:p-20 flex flex-col justify-between swiss-border-r">
+                <div>
+                    <span class="text-xs uppercase tracking-widest text-brand-muted">Onde Atendemos</span>
+                    <h2 class="font-syne text-5xl md:text-6xl font-extrabold uppercase tracking-tighter leading-none mt-6 mb-8">
+                        UPTOWN<br>BARRA
+                    </h2>
+                </div>
+                <div class="space-y-6">
+                    <p class="text-xl font-medium">Espaço Carandaí</p>
+                    <p class="text-brand-muted max-w-md">
+                        Um ambiente projetado para oferecer o máximo conforto, privacidade e infraestrutura completa para suas consultas e exames de ponta.
+                    </p>
+                    <p class="text-sm tracking-wide text-brand-muted">
+                        Shopping Uptown — Av. Ayrton Senna, 5500. Barra da Tijuca, Rio de Janeiro - RJ.
+                    </p>
+                </div>
+                <div class="pt-8 mt-12 swiss-border-t border-brand-dark">
+                    <a href="https://maps.google.com/?q=Shopping+Uptown+Av+Ayrton+Senna+Barra+da+Tijuca" target="_blank" class="inline-flex items-center gap-3 font-syne font-extrabold uppercase tracking-wider hover:line-through">
+                        Como chegar
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+                    </a>
+                </div>
+            </div>
 
-        <!-- Middle Columns (Links) -->
-        <div class="md:col-span-3">
-          <h4 class="text-xs uppercase tracking-widest text-brandGold font-bold mb-4">Nossos Diferenciais</h4>
-          <ul class="space-y-2 text-xs text-brandGray font-light">
-            <li><a href="#calorometria" class="hover:text-brandDark">Calorimetria Indireta</a></li>
-            <li><a href="#mflex" class="hover:text-brandDark">MFLEX App Oficial</a></li>
-            <li><a href="#consultorio" class="hover:text-brandDark">Espaço Carandaí (Uptown)</a></li>
-          </ul>
-        </div>
+            <!-- Right Architecture Map Canvas / Placeholder -->
+            <div class="bg-brand-dark text-brand-beige p-6 md:p-12 lg:p-20 flex flex-col justify-between min-h-[400px]">
+                <div class="border border-brand-beige/20 p-8 flex flex-col justify-between h-full">
+                    <div>
+                        <span class="text-[10px] uppercase tracking-widest text-brand-beige/50 block mb-2">Estrutura &amp; Acesso</span>
+                        <h4 class="font-syne text-3xl font-extrabold uppercase tracking-tight">Estacionamento Facilitado &amp; Segurança</h4>
+                    </div>
+                    <div class="mt-8 space-y-4">
+                        <p class="text-sm text-brand-beige/70">
+                            Situado em um dos maiores polos corporativos e gastronômicos da Barra da Tijuca, o Shopping Uptown garante comodidade absoluta de acesso, vaga no local e segurança privada em período integral.
+                        </p>
+                        <div class="flex gap-4">
+                            <span class="px-3 py-1 bg-brand-beige text-brand-dark text-[10px] uppercase font-bold">Fácil Acesso</span>
+                            <span class="px-3 py-1 bg-brand-beige text-brand-dark text-[10px] uppercase font-bold">Acessibilidade</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-        <!-- Contact & Legal -->
-        <div class="md:col-span-4">
-          <h4 class="text-xs uppercase tracking-widest text-brandGold font-bold mb-4">Atendimento & Contatos</h4>
-          <p class="text-xs text-brandGray font-light leading-relaxed">
-            CRN-4: 20101700 <br>
-            Avenida Ayrton Senna, 5500 - Shopping Uptown <br>
-            Barra da Tijuca, Rio de Janeiro - RJ
-          </p>
-          <p class="text-xs text-brandGray font-light mt-4">
-            contato@nutrilucianaguerra.com.br
-          </p>
-        </div>
+        <!-- CTA / CLOSING SECTION -->
+        <section class="swiss-border-b py-20 lg:py-32 px-6 md:px-12 lg:px-20 text-center bg-brand-dark text-brand-beige relative overflow-hidden">
+            <div class="max-w-4xl mx-auto space-y-12 relative z-10">
+                <span class="text-xs uppercase tracking-widest text-brand-beige/60">Agende de Forma Prática</span>
+                <h2 class="font-syne text-5xl md:text-8xl font-extrabold uppercase tracking-tighter leading-none">
+                    INICIE SEU<br>PLANEJAMENTO
+                </h2>
+                <p class="text-lg md:text-xl text-brand-beige/80 max-w-2xl mx-auto leading-relaxed">
+                    Clique abaixo para iniciar sua jornada nutricional orientada por metas reais, calorimetria e suporte tecnológico contínuo.
+                </p>
+                <div class="flex justify-center">
+                    <a href="https://wa.me/5521999999999" target="_blank" class="px-10 py-6 bg-brand-beige text-brand-dark font-syne text-xl font-extrabold uppercase tracking-wider hover:bg-brand-muted hover:text-brand-dark transition-all duration-300">
+                        Agendar via WhatsApp
+                    </a>
+                </div>
+            </div>
+        </section>
 
-      </div>
+        <!-- FOOTER -->
+        <footer class="py-12 px-6 md:px-12 lg:px-20 text-xs text-brand-muted uppercase tracking-wider flex flex-col md:flex-row justify-between items-center gap-6">
+            <div class="flex items-center gap-3">
+                <img src="https://www.google.com/s2/favicons?domain=nutrilucianaguerra.com.br&sz=128" alt="Luciana Guerra Logo" class="w-6 h-6 rounded-full filter grayscale">
+                <span>© Luciana Guerra. Todos os direitos reservados.</span>
+            </div>
+            <div class="flex gap-6">
+                <span>Espaço Carandaí — Shopping Uptown</span>
+                <span>Barra da Tijuca, RJ</span>
+            </div>
+        </footer>
 
-      <!-- Legal bottom bar -->
-      <div class="border-t border-brandDark/10 pt-8 flex flex-col sm:flex-row justify-between items-center text-[10px] text-brandGray uppercase tracking-widest">
-        <span>&copy; 2024 Luciana Guerra Nutrição. Todos os direitos reservados.</span>
-        <span class="mt-2 sm:mt-0">Criado com rigor e exclusividade</span>
-      </div>
-    </div>
-  </footer>
+    </main>
 
-  <!-- PREMIUM FLOATING WHATSAPP BUTTON -->
-  <a href="https://wa.me/5521999999999?text=Olá,%20gostaria%20de%20agendar%20uma%20consulta%20com%20a%20Dra.%20Luciana%20Guerra." target="_blank" class="fixed bottom-6 right-6 z-50 flex items-center gap-3 bg-[#25d366] text-white p-4 rounded-full shadow-2xl hover:bg-[#20ba59] transition-all duration-300 transform hover:scale-105 group" aria-label="Falar no WhatsApp">
-    <!-- Pulsating effect -->
-    <span class="absolute inset-0 rounded-full bg-[#25d366]/40 animate-pulse-slow"></span>
-    <svg class="w-6 h-6 relative z-10 fill-current" viewBox="0 0 24 24">
-      <path d="M12.004 2C6.48 2 2 6.48 2 12.004c0 1.81.48 3.51 1.3 5L2 22l5.12-1.28c1.44.75 3.08 1.18 4.88 1.18 5.52 0 10-4.48 10-10C22.004 6.48 17.52 2 12.004 2zm5.72 13.91c-.24.68-1.2 1.24-1.92 1.32-.48.08-1.08.12-3.16-.76-2.68-1.12-4.4-3.84-4.52-4-.12-.16-1.04-1.36-1.04-2.6 0-1.24.64-1.84.88-2.08.2-.2.48-.32.76-.32.12 0 .24 0 .32.04.28.04.44.08.64.48.24.56.84 2.04.92 2.2.08.16.12.36.04.52-.08.16-.16.28-.32.44-.16.16-.36.36-.52.52-.16.16-.36.36-.16.72.2.36.88 1.44 1.88 2.32.84.76 1.56 1 1.92 1.16.36.16.56.12.76-.12.2-.24.88-1.04 1.12-1.4.24-.36.48-.28.8-.16.32.12 2 .96 2.36 1.12.36.16.6.24.68.4.08.16.08.92-.16 1.6z"/>
-    </svg>
-    <span class="max-w-0 overflow-hidden group-hover:max-w-xs transition-all duration-500 ease-out text-xs uppercase tracking-widest font-semibold relative z-10 whitespace-nowrap hidden sm:inline-block">Agendar Consulta</span>
-  </a>
+    <!-- FLOATING WHATSAPP BUTTON (Exclusive premium design style) -->
+    <a href="https://wa.me/5521999999999" target="_blank" class="fixed bottom-6 right-6 z-50 pulse-btn flex items-center justify-center bg-emerald-600 hover:bg-emerald-500 text-white w-14 h-14 rounded-full shadow-2xl transition-all duration-300 group" aria-label="Fale pelo WhatsApp">
+        <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.514 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.717-1.455L0 24zm6.59-4.846c1.6.95 3.188 1.449 4.825 1.451 5.436 0 9.86-4.37 9.864-9.799.002-2.63-1.023-5.101-2.885-6.968C16.528 2.017 14.077 1 11.493 1 6.058 1 1.632 5.371 1.629 10.8c-.001 1.761.487 3.479 1.413 5.013l-.995 3.637 3.73-.96c1.514.88 3.197 1.344 4.87 1.346zm10.155-7.147c-.287-.143-1.696-.828-1.959-.923-.262-.096-.454-.143-.645.144-.191.286-.74.923-.907 1.114-.167.19-.334.214-.621.071-1.218-.61-2.01-1.084-2.801-2.436-.208-.356.208-.33.596-1.077.105-.214.053-.401-.026-.544-.08-.143-.645-1.551-.884-2.124-.233-.559-.47-.483-.645-.492-.167-.008-.358-.01-.55-.01-.191 0-.501.071-.763.357-.262.286-1 .977-1 2.383 0 1.407 1.025 2.766 1.168 2.957.143.191 2.018 3.031 4.887 4.253.682.29 1.216.464 1.631.593.686.214 1.311.184 1.803.111.548-.082 1.696-.685 1.936-1.344.24-.659.24-1.222.167-1.343-.072-.122-.263-.191-.55-.334z"/>
+        </svg>
+    </a>
 
-  <!-- Mobile Drawer Toggle Script -->
-  <script>
-    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
-    const mobileDrawer = document.getElementById('mobile-drawer');
-    const mobileLinks = document.querySelectorAll('.mobile-link');
+    <!-- Basic Interactions Script -->
+    <script>
+        const menuToggle = document.getElementById('menu-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const line1 = document.getElementById('line1');
+        const line2 = document.getElementById('line2');
+        const line3 = document.getElementById('line3');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
 
-    function toggleMenu() {
-      const isOpen = mobileDrawer.classList.contains('translate-x-0');
-      if (isOpen) {
-        mobileDrawer.classList.remove('translate-x-0');
-        mobileDrawer.classList.add('translate-x-full');
-        mobileMenuBtn.children[0].style.transform = "none";
-        mobileMenuBtn.children[1].style.transform = "none";
-        mobileMenuBtn.children[1].style.width = "16px";
-      } else {
-        mobileDrawer.classList.remove('translate-x-full');
-        mobileDrawer.classList.add('translate-x-0');
-        mobileMenuBtn.children[0].style.transform = "rotate(45deg) translate(4px, 4px)";
-        mobileMenuBtn.children[1].style.transform = "rotate(-45deg) translate(2px, -2px)";
-        mobileMenuBtn.children[1].style.width = "24px";
-      }
-    }
+        function toggleMenu() {
+            if (mobileMenu.classList.contains('hidden')) {
+                mobileMenu.classList.remove('hidden');
+                setTimeout(() => {
+                    mobileMenu.classList.add('flex', 'opacity-100');
+                }, 10);
+                line1.style.transform = 'rotate(45deg) translate(5px, 5px)';
+                line2.style.opacity = '0';
+                line3.style.transform = 'rotate(-45deg) translate(5px, -5px)';
+                document.body.style.overflow = 'hidden';
+            } else {
+                mobileMenu.classList.remove('opacity-100');
+                setTimeout(() => {
+                    mobileMenu.classList.add('hidden');
+                    mobileMenu.classList.remove('flex');
+                }, 500);
+                line1.style.transform = 'none';
+                line2.style.opacity = '1';
+                line3.style.transform = 'none';
+                document.body.style.overflow = '';
+            }
+        }
 
-    mobileMenuBtn.addEventListener('click', toggleMenu);
-    mobileLinks.forEach(link => {
-      link.addEventListener('click', toggleMenu);
-    });
-  </script>
+        menuToggle.addEventListener('click', toggleMenu);
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', toggleMenu);
+        });
+    </script>
 
 </body>
 </html>
