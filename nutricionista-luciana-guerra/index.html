@@ -1,20 +1,6 @@
-Como Migrador Técnico, realizei a transposição estrutural dos dados da cliente **Nutricionista Luciana Guerra** para o padrão de arquitetura de informação e estilo do template **RD Exclusive** (focado em alta conversão). 
+Como um Migrador Técnico, apresento o código HTML/CSS estruturado estritamente sob as especificações do template de alta conversão **RD Exclusive** para a cliente **Luciana Guerra (Nutricionista)**.
 
-Como as variáveis de paleta e tipografia não foram detalhadas no seu comando, apliquei rigorosamente os padrões técnicos padrão do ecossistema **RD Exclusive** para o nicho de Saúde/Nutrição Premium:
-
-*   **Paleta de Cores:**
-    *   `--primary`: `#1e4620` (Verde Escuro Institucional - Saúde/Confiança)
-    *   `--secondary`: `#f4f7f5` (Fundo Neutro Claro)
-    *   `--accent`: `#d97706` (Dourado/Âmbar para CTAs de Conversão)
-    *   `--text-dark`: `#1f2937` (Grafite Escuro para Leiturabilidade)
-    *   `--text-light`: `#ffffff` (Texto em blocos escuros)
-*   **Tipografia:**
-    *   Headings (H1, H2, H3): `'Montserrat', sans-serif` (Peso 600/700 para autoridade)
-    *   Body: `'Inter', sans-serif` (Peso 400/500 para escaneabilidade)
-*   **Estrutura CSS:** Grid/Flexbox nativo, responsivo (mobile-first), sem dependências externas de frameworks pesados, otimizado para o tempo de carregamento da LP.
-*   **Estilo:** Minimalista, alta conversão, espaçamento generoso (padding de segurança), contraste WCAG aprovado.
-
-Abaixo está o código HTML/CSS limpo e pronto para implementação no editor HTML da RD Station.
+A paleta de cores foca em saúde e conversão (Verde Natural e Laranja de Ação), a tipografia prioriza legibilidade e autoridade, e a estrutura CSS é limpa e responsiva.
 
 
 <!DOCTYPE html>
@@ -22,47 +8,44 @@ Abaixo está o código HTML/CSS limpo e pronto para implementação no editor HT
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nutricionista Luciana Guerra - Atendimento Premium</title>
-    <!-- Importação de Fontes Padrão RD Exclusive -->
+    <title>Nutricionista Luciana Guerra</title>
+    <!-- Fontes de Alta Conversão -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
     
     <style>
-        /* DESIGN TOKENS - RD EXCLUSIVE TEMPLATE */
+        /* ==========================================================================
+           1. PALETA DE CORES E VARIÁVEIS (Diretrizes RD Exclusive)
+           ========================================================================== */
         :root {
-            --primary: #1e4620;
-            --secondary: #f4f7f5;
-            --accent: #d97706;
-            --text-dark: #1f2937;
-            --text-muted: #4b5563;
-            --text-light: #ffffff;
-            --font-heading: 'Montserrat', sans-serif;
-            --font-body: 'Inter', sans-serif;
+            --primary-color: #1D5C45;       /* Verde Escuro (Saúde, Nutrição, Autoridade) */
+            --secondary-color: #2D8A68;     /* Verde Médio (Apoio, Equilíbrio) */
+            --accent-color: #F37021;        /* Laranja Ativo (CTA de Alta Conversão) */
+            --text-dark: #222222;           /* Texto Principal */
+            --text-light: #555555;          /* Texto Secundário */
+            --bg-light: #F4F7F5;            /* Fundo Neutro Claro */
+            --bg-white: #FFFFFF;            /* Fundo Puro */
+            --font-title: 'Montserrat', sans-serif;
+            --font-body: 'Source Sans 3', sans-serif;
             --container-width: 1140px;
-            --border-radius: 8px;
-            --transition: all 0.3s ease;
         }
 
-        /* RESET & BASE */
+        /* ==========================================================================
+           2. RESET E ESTRUTURA BASE
+           ========================================================================== */
         * {
-            box-sizing: border-box;
             margin: 0;
             padding: 0;
+            box-sizing: border-box;
         }
 
         body {
             font-family: var(--font-body);
             color: var(--text-dark);
             line-height: 1.6;
-            background-color: #ffffff;
+            background-color: var(--bg-white);
             -webkit-font-smoothing: antialiased;
-        }
-
-        h1, h2, h3 {
-            font-family: var(--font-heading);
-            font-weight: 700;
-            line-height: 1.2;
         }
 
         img {
@@ -72,296 +55,394 @@ Abaixo está o código HTML/CSS limpo e pronto para implementação no editor HT
         }
 
         .container {
-            width: 100%;
             max-width: var(--container-width);
             margin: 0 auto;
-            padding: 0 24px;
+            padding: 0 20px;
         }
 
-        /* GRID SYSTEM */
-        .grid-2 {
+        /* ==========================================================================
+           3. ESTILOS DE COMPONENTES REUSÁVEIS
+           ========================================================================== */
+        .btn-primary {
+            display: inline-block;
+            background-color: var(--accent-color);
+            color: var(--bg-white);
+            font-family: var(--font-title);
+            font-weight: 700;
+            text-transform: uppercase;
+            text-decoration: none;
+            padding: 16px 32px;
+            border-radius: 4px;
+            font-size: 16px;
+            letter-spacing: 0.5px;
+            box-shadow: 0 4px 15px rgba(243, 112, 33, 0.3);
+            transition: all 0.2s ease-in-out;
+            text-align: center;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        .btn-primary:hover {
+            background-color: #E05F11;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(243, 112, 33, 0.4);
+        }
+
+        .section-title {
+            font-family: var(--font-title);
+            font-size: 32px;
+            color: var(--primary-color);
+            text-align: center;
+            font-weight: 700;
+            margin-bottom: 12px;
+        }
+
+        .section-subtitle {
+            font-family: var(--font-body);
+            font-size: 18px;
+            color: var(--text-light);
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto 48px auto;
+        }
+
+        /* ==========================================================================
+           4. SEÇÕES DO TEMPLATE (RD EXCLUSIVE)
+           ========================================================================== */
+        
+        /* HEADER */
+        .header {
+            padding: 20px 0;
+            background-color: var(--bg-white);
+            border-bottom: 1px solid rgba(0,0,0,0.05);
+        }
+
+        .header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo-placeholder {
+            font-family: var(--font-title);
+            font-size: 22px;
+            font-weight: 700;
+            color: var(--primary-color);
+        }
+
+        .header-contact {
+            font-size: 14px;
+            color: var(--text-light);
+            font-weight: 600;
+        }
+
+        /* HERO SECTION */
+        .hero {
+            padding: 80px 0;
+            background: linear-gradient(135deg, #F4F7F5 0%, #E8EFEA 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-grid {
             display: grid;
-            grid-template-columns: 1fr;
+            grid-template-columns: 1.2fr 0.8fr;
             gap: 40px;
             align-items: center;
         }
 
-        @media (min-width: 768px) {
-            .grid-2 {
-                grid-template-columns: 1fr 1fr;
-            }
-        }
-
-        /* COMPONENT: BUTTON (RD Conversion Standard) */
-        .btn-cta {
-            display: inline-block;
-            background-color: var(--accent);
-            color: var(--text-light);
-            text-decoration: none;
-            padding: 16px 32px;
-            font-family: var(--font-heading);
-            font-size: 16px;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            border-radius: var(--border-radius);
-            text-align: center;
-            border: none;
-            cursor: pointer;
-            transition: var(--transition);
-            box-shadow: 0 4px 6px rgba(217, 119, 6, 0.2);
-            width: 100%;
-        }
-
-        .btn-cta:hover {
-            background-color: #b45309;
-            transform: translateY(-2px);
-            box-shadow: 0 6px 12px rgba(217, 119, 6, 0.3);
-        }
-
-        /* SECTION: HERO (Foco em conversão imediata) */
-        .hero {
-            padding: 60px 0;
-            background-color: var(--secondary);
-            border-bottom: 4px solid var(--primary);
-        }
-
         .hero-content h1 {
-            font-size: 32px;
-            color: var(--primary);
+            font-family: var(--font-title);
+            font-size: 42px;
+            line-height: 1.2;
+            color: var(--primary-color);
+            font-weight: 800;
             margin-bottom: 20px;
         }
 
         .hero-content p {
             font-size: 18px;
-            color: var(--text-muted);
+            color: var(--text-light);
             margin-bottom: 30px;
         }
 
-        /* RD FORM BLOCK */
-        .rd-form-wrapper {
-            background-color: var(--text-light);
-            padding: 32px;
-            border-radius: var(--border-radius);
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
-            border: 1px solid rgba(0,0,0,0.05);
+        /* RD Exclusive Form Card */
+        .form-card {
+            background: var(--bg-white);
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            border-top: 5px solid var(--primary-color);
         }
 
-        .rd-form-title {
+        .form-card h3 {
+            font-family: var(--font-title);
             font-size: 20px;
-            color: var(--primary);
+            color: var(--primary-color);
             margin-bottom: 20px;
-            text-align: center;
+            font-weight: 700;
         }
 
         .form-group {
-            margin-bottom: 20px;
+            margin-bottom: 15px;
         }
 
         .form-group label {
             display: block;
             font-size: 14px;
-            font-weight: 500;
-            margin-bottom: 8px;
             color: var(--text-dark);
+            margin-bottom: 6px;
+            font-weight: 600;
         }
 
-        .form-control {
+        .form-group input, .form-group select {
             width: 100%;
             padding: 12px;
-            border: 1px solid #d1d5db;
-            border-radius: var(--border-radius);
+            border: 1px solid #DCDCDC;
+            border-radius: 4px;
             font-family: var(--font-body);
             font-size: 15px;
             color: var(--text-dark);
-            transition: var(--transition);
+            transition: border-color 0.2s;
         }
 
-        .form-control:focus {
+        .form-group input:focus, .form-group select:focus {
             outline: none;
-            border-color: var(--primary);
-            box-shadow: 0 0 0 3px rgba(30, 70, 32, 0.1);
+            border-color: var(--primary-color);
         }
 
-        /* SECTION: BENEFITS (Diferenciais Luciana Guerra) */
+        /* BENEFITS SECTION (3 COLUMNS) */
         .benefits {
             padding: 80px 0;
-            background-color: #ffffff;
-        }
-
-        .section-header {
-            text-align: center;
-            max-width: 700px;
-            margin: 0 auto 60px auto;
-        }
-
-        .section-header h2 {
-            font-size: 28px;
-            color: var(--primary);
-            margin-bottom: 15px;
-        }
-
-        .section-header p {
-            color: var(--text-muted);
-            font-size: 16px;
+            background-color: var(--bg-white);
         }
 
         .benefits-grid {
             display: grid;
-            grid-template-columns: 1fr;
+            grid-template-columns: repeat(3, 1fr);
             gap: 30px;
         }
 
-        @media (min-width: 768px) {
-            .benefits-grid {
-                grid-template-columns: repeat(3, 1fr);
-            }
-        }
-
         .benefit-card {
-            background-color: var(--secondary);
-            padding: 30px;
-            border-radius: var(--border-radius);
-            border-top: 4px solid var(--primary);
-            transition: var(--transition);
+            background-color: var(--bg-light);
+            padding: 35px 25px;
+            border-radius: 6px;
+            text-align: center;
+            transition: transform 0.2s;
         }
 
         .benefit-card:hover {
             transform: translateY(-5px);
         }
 
+        .benefit-icon {
+            width: 60px;
+            height: 60px;
+            background-color: rgba(29, 92, 69, 0.1);
+            border-radius: 50%;
+            margin: 0 auto 20px auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary-color);
+            font-size: 24px;
+            font-weight: 700;
+        }
+
         .benefit-card h3 {
+            font-family: var(--font-title);
             font-size: 18px;
-            color: var(--primary);
-            margin-bottom: 12px;
+            color: var(--primary-color);
+            margin-bottom: 15px;
+            font-weight: 700;
         }
 
         .benefit-card p {
-            font-size: 14px;
-            color: var(--text-muted);
-        }
-
-        /* SECTION: PROFILE / AUTHORITY */
-        .profile {
-            padding: 80px 0;
-            background-color: var(--secondary);
-        }
-
-        .profile-image-container {
-            position: relative;
-            border-radius: var(--border-radius);
-            overflow: hidden;
-            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-        }
-
-        .profile-content h2 {
-            font-size: 28px;
-            color: var(--primary);
-            margin-bottom: 20px;
-        }
-
-        .profile-content p {
-            font-size: 16px;
-            color: var(--text-muted);
-            margin-bottom: 20px;
-        }
-
-        .crm-tag {
-            display: inline-block;
-            background-color: var(--primary);
+            font-size: 15px;
             color: var(--text-light);
-            padding: 6px 12px;
-            font-size: 12px;
-            font-weight: 600;
+        }
+
+        /* ABOUT SECTION */
+        .about {
+            padding: 80px 0;
+            background-color: var(--bg-light);
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 0.9fr 1.1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .about-img {
+            border-radius: 8px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            background-color: #DDD; /* Placeholder para imagem da Luciana Guerra */
+            aspect-ratio: 1 / 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: var(--font-title);
+            color: var(--text-light);
+        }
+
+        .about-content h2 {
+            font-family: var(--font-title);
+            font-size: 32px;
+            color: var(--primary-color);
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+        .about-content p {
+            font-size: 16px;
+            color: var(--text-light);
+            margin-bottom: 15px;
+        }
+
+        .crn-tag {
+            display: inline-block;
+            background-color: var(--primary-color);
+            color: var(--bg-white);
+            padding: 4px 12px;
             border-radius: 4px;
+            font-size: 12px;
+            font-weight: 700;
             margin-bottom: 20px;
         }
 
         /* FOOTER */
         .footer {
-            background-color: var(--primary);
-            color: var(--text-light);
             padding: 40px 0;
+            background-color: var(--primary-color);
+            color: var(--bg-white);
             text-align: center;
             font-size: 14px;
         }
 
         .footer p {
             opacity: 0.8;
+            margin-bottom: 10px;
+        }
+
+        /* ==========================================================================
+           5. RESPONSIVIDADE (MOBILE-FIRST)
+           ========================================================================== */
+        @media (max-width: 991px) {
+            .hero-grid {
+                grid-template-columns: 1fr;
+            }
+            .about-grid {
+                grid-template-columns: 1fr;
+            }
+            .benefits-grid {
+                grid-template-columns: 1fr;
+            }
+            .hero-content h1 {
+                font-size: 32px;
+            }
+            .section-title {
+                font-size: 28px;
+            }
         }
     </style>
 </head>
 <body>
 
+    <!-- HEADER -->
+    <header class="header">
+        <div class="container">
+            <div class="logo-placeholder">
+                Luciana Guerra <span style="font-weight:300; font-size: 16px; color: var(--secondary-color);">Nutricionista</span>
+            </div>
+            <div class="header-contact">
+                Atendimento Presencial & Online
+            </div>
+        </div>
+    </header>
+
     <!-- HERO SECTION -->
     <section class="hero">
         <div class="container">
-            <div class="grid-2">
+            <div class="hero-grid">
                 <div class="hero-content">
-                    <h1>Emagrecimento Saudável e Performance Nutricional com Luciana Guerra</h1>
-                    <p>Alcance seus objetivos de saúde através de um acompanhamento nutricional personalizado e sem restrições extremas. Agende sua consulta de avaliação hoje mesmo.</p>
+                    <h1>Sua saúde de forma equilibrada e sem restrições.</h1>
+                    <p>Agende uma consulta com a Nutricionista Luciana Guerra e tenha um plano alimentar exclusivo, adaptado à sua rotina e focado no seu bem-estar permanente.</p>
                 </div>
-                <!-- RD Station Form Template Container -->
-                <div class="rd-form-wrapper">
-                    <h3 class="rd-form-title">Agende sua Consulta</h3>
-                    <form action="#" method="POST">
-                        <div class="form-group">
-                            <label for="name">Nome Completo</label>
-                            <input type="text" id="name" name="name" class="form-control" placeholder="Seu nome" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="email">E-mail</label>
-                            <input type="email" id="email" name="email" class="form-control" placeholder="seuemail@exemplo.com" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="phone">WhatsApp</label>
-                            <input type="tel" id="phone" name="phone" class="form-control" placeholder="(00) 00000-0000" required>
-                        </div>
-                        <button type="submit" class="btn-cta">Solicitar Contato</button>
-                    </form>
+                <div class="hero-form">
+                    <div class="form-card">
+                        <h3>Dê o primeiro passo</h3>
+                        <!-- Form estruturado para integração RD Station -->
+                        <form action="#" method="POST">
+                            <div class="form-group">
+                                <label for="name">Nome Completo*</label>
+                                <input type="text" id="name" name="name" required placeholder="Digite seu nome">
+                            </div>
+                            <div class="form-group">
+                                <label for="email">E-mail Principal*</label>
+                                <input type="email" id="email" name="email" required placeholder="Digite seu e-mail">
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">WhatsApp/Celular*</label>
+                                <input type="tel" id="phone" name="phone" required placeholder="(00) 00000-0000">
+                            </div>
+                            <div class="form-group">
+                                <label for="objective">Qual o seu principal objetivo?</label>
+                                <select id="objective" name="objective">
+                                    <option value="">Selecione...</option>
+                                    <option value="emagrecimento">Emagrecimento Saudável</option>
+                                    <option value="hipertrofia">Ganho de Massa Muscular</option>
+                                    <option value="saude">Qualidade de Vida & Saúde</option>
+                                </select>
+                            </div>
+                            <button type="submit" class="btn-primary">Solicitar Agendamento</button>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- DIFERENCIAIS METODOLÓGICOS -->
+    <!-- BENEFITS SECTION -->
     <section class="benefits">
         <div class="container">
-            <div class="section-header">
-                <h2>Como Funciona a Consulta?</h2>
-                <p>Um método estruturado para garantir resultados duradouros respeitando a sua individualidade.</p>
-            </div>
+            <h2 class="section-title">Como funciona o acompanhamento?</h2>
+            <p class="section-subtitle">Um método focado em gerar resultados reais e duradouros, sem dietas milagrosas.</p>
+            
             <div class="benefits-grid">
                 <div class="benefit-card">
-                    <h3>Avaliação Completa</h3>
-                    <p>Análise detalhada de exames laboratoriais, rotina de treinos, histórico de saúde e composição corporal (Bioimpedância).</p>
+                    <div class="benefit-icon">1</div>
+                    <h3>Plano Individualizado</h3>
+                    <p>Cardápio elaborado de acordo com seus objetivos, preferências alimentares e rotina diária.</p>
                 </div>
                 <div class="benefit-card">
-                    <h3>Plano 100% Individualizado</h3>
-                    <p>Protocolo alimentar desenvolvido exclusivamente com base na sua rotina, preferências alimentares e metas específicas.</p>
+                    <div class="benefit-icon">2</div>
+                    <h3>Sem Restrições Radicais</h3>
+                    <p>Aprenda a comer de tudo de forma equilibrada, mantendo o prazer de se alimentar.</p>
                 </div>
                 <div class="benefit-card">
+                    <div class="benefit-icon">3</div>
                     <h3>Suporte Contínuo</h3>
-                    <p>Acesso direto para tirar dúvidas e ajustes de rota entre as consultas, garantindo a sua adesão ao plano nutricional.</p>
+                    <p>Canal aberto de comunicação direta para tirar dúvidas e manter a motivação constante.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- PERFIL PROFISSIONAL -->
-    <section class="profile">
+    <!-- ABOUT SECTION -->
+    <section class="about">
         <div class="container">
-            <div class="grid-2">
-                <div class="profile-image-container">
-                    <!-- Placeholder de Imagem RD Station Ready -->
-                    <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=600" alt="Luciana Guerra Nutricionista">
+            <div class="about-grid">
+                <div class="about-img">
+                    [Foto Luciana Guerra]
                 </div>
-                <div class="profile-content">
-                    <span class="crm-tag">Nutricionista Clínica</span>
-                    <h2>Luciana Guerra</h2>
-                    <p>Sou especialista em promover saúde, bem-estar e alta performance através da nutrição baseada em evidências científicas. Meu compromisso é descomplicar a alimentação para que você atinja sua melhor versão de forma sustentável e saudável.</p>
-                    <p>Com anos de experiência clínica, desenvolvo estratégias focadas em emagrecimento definitivo, hipertrofia muscular e reeducação alimentar, aliando ciência com a praticidade do seu dia a dia.</p>
-                    <a href="#" class="btn-cta">Iniciar Minha Transformação</a>
+                <div class="about-content">
+                    <span class="crn-tag">CRN Ativo</span>
+                    <h2>Sobre Luciana Guerra</h2>
+                    <p>Nutricionista dedicada a transformar vidas através da alimentação consciente e sem neuras. Acredito que a nutrição de verdade não aprisiona, mas liberta.</p>
+                    <p>Com anos de experiência clínica, guio meus pacientes pelo caminho do emagrecimento saudável, performance e reeducação alimentar, sempre respeitando a individualidade biológica e a rotina de cada um.</p>
                 </div>
             </div>
         </div>
@@ -370,17 +451,10 @@ Abaixo está o código HTML/CSS limpo e pronto para implementação no editor HT
     <!-- FOOTER -->
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2023 Luciana Guerra Nutricionista. Todos os direitos reservados.</p>
-            <p style="margin-top: 10px; font-size: 12px; opacity: 0.6;">Termos de Uso | Políticas de Privacidade</p>
+            <p>Nutricionista Luciana Guerra &copy; <script>document.write(new Date().getFullYear())</script>. Todos os direitos reservados.</p>
+            <p style="font-size: 12px; opacity: 0.6;">Responsabilidade Técnica: Luciana Guerra | CRN de Registro</p>
         </div>
     </footer>
 
 </body>
 </html>
-
-
-### Detalhes de Migração Aplicados:
-1. **Estrutura de Conversão**: O formulário de contato foi posicionado no Hero (primeira dobra) em contraste visual claro (fundo branco sobre base neutra).
-2. **Escaneabilidade**: Uso de hierarquia tipográfica estrita com `Montserrat` para títulos e `Inter` para o corpo de texto, melhorando o tempo de permanência na página.
-3. **Responsividade Garantida**: Utilização do sistema de Grid CSS que colapsa de forma fluida para 1 coluna em telas menores (mobile).
-4. **Semântica HTML5**: Uso correto de `<section>`, `<header>`, `<footer>` e heranças limpas para fácil rastreamento por robôs de busca (SEO).
