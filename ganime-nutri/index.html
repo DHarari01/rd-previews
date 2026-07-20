@@ -1,397 +1,519 @@
-Como um **Migrador Técnico**, executei a transposição estrutural dos dados do cliente **Ganime Nutri** para o padrão de arquitetura de informação e código do template **RD Exclusive**. 
-
-Como os campos de especificação foram deixados em branco no seu comando, apliquei estritamente os padrões técnicos industriais de alta conversão para o nicho de Saúde/Nutrição dentro do framework da RD Station:
-
-*   **Paleta de Cores:**
-    *   Dominante (60%): `#F8F9FA` (Branco Off-white - Leitura limpa)
-    *   Secundária (30%): `#1C3F3A` (Verde Escuro Institucional - Saúde, Autoridade e Confiança)
-    *   Destaque/CTA (10%): `#E07A5F` (Terracota/Coral - Contraste de Conversão)
-    *   Textos: `#2D3748` (Cinza Escuro - Legibilidade máxima)
-*   **Tipografia:**
-    *   Títulos (H1, H2, H3): `Montserrat`, sans-serif (Força e profissionalismo)
-    *   Corpo: `Open Sans`, sans-serif (Alta escaneabilidade)
-*   **Estrutura CSS:** Código inline combinado com folha de estilo interna (`<style>`) otimizada para o parser da RD Station, 100% responsivo (Mobile-First), sem dependências externas de JS.
-*   **Estilo:** Minimalista de alta conversão, focado em clareza de proposta de valor, hierarquia visual rígida e zonas de clique desimpedidas.
-
-Abaixo está o código HTML/CSS pronto para colagem no componente de HTML Customizado da RD Station.
-
-
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ganime Nutri - Emagrecimento e Performance</title>
-    
-    <!-- Importação de Fontes Oficiais -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ganime Nutri - Nutrição de Alta Performance</title>
+  
+  <!-- Fontes de Alta Conversão -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 
-    <style>
-        /* RESET E VARIÁVEIS TÉCNICAS */
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-        :root {
-            --color-bg: #F8F9FA;
-            --color-primary: #1C3F3A;
-            --color-secondary: #2D5A53;
-            --color-accent: #E07A5F;
-            --color-text: #2D3748;
-            --color-light: #FFFFFF;
-            --font-title: 'Montserrat', sans-serif;
-            --font-body: 'Open Sans', sans-serif;
-        }
+  <style>
+    /* ==========================================================================
+       TABELA DE PARÂMETROS - RD EXCLUSIVE TEMPLATE
+       ========================================================================== */
+    :root {
+      /* Paleta de Cores (Saúde, Performance e Conversão) */
+      --color-primary: #1e4620;        /* Verde Escuro Institucional */
+      --color-primary-light: #2d6a4f;  /* Verde Auxiliar */
+      --color-accent: #e65f2b;         /* Laranja de Alta Conversão (CTAs) */
+      --color-accent-hover: #cf4e1d;   /* Hover do CTA */
+      --color-dark: #1f2937;           /* Grafite para textos */
+      --color-light: #f4f6f4;          /* Off-White para fundos secundários */
+      --color-white: #ffffff;          /* Branco puro */
+      --color-border: #e5e7eb;         /* Cinza claro para divisórias */
 
-        body {
-            font-family: var(--font-body);
-            background-color: var(--color-bg);
-            color: var(--color-text);
-            line-height: 1.6;
-            -webkit-font-smoothing: antialiased;
-        }
+      /* Tipografia */
+      --font-title: 'Montserrat', sans-serif;
+      --font-body: 'Inter', sans-serif;
 
-        /* CONTAINER PADRÃO RD EXCLUSIVE */
-        .rd-container {
-            width: 100%;
-            max-width: 1140px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
+      /* Estrutura Base */
+      --container-width: 1140px;
+      --border-radius: 8px;
+      --transition-fast: 0.2s ease-in-out;
+    }
 
-        /* HERO SECTION */
-        .rd-hero {
-            background: linear-gradient(135deg, var(--color-primary) 0%, #0F2522 100%);
-            color: var(--color-light);
-            padding: 80px 0;
-            text-align: center;
-        }
-        .rd-hero h1 {
-            font-family: var(--font-title);
-            font-size: 2.5rem;
-            font-weight: 800;
-            line-height: 1.2;
-            margin-bottom: 20px;
-            letter-spacing: -1px;
-        }
-        .rd-hero p {
-            font-size: 1.15rem;
-            max-width: 700px;
-            margin: 0 auto 40px auto;
-            opacity: 0.9;
-        }
+    /* Reset e Estilos Globais */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
-        /* COMPONENTE DE FORMULÁRIO DE ALTA CONVERSÃO */
-        .rd-form-wrapper {
-            background: var(--color-light);
-            padding: 40px;
-            border-radius: 8px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
-            max-width: 550px;
-            margin: 0 auto;
-            color: var(--color-text);
-        }
-        .rd-form-title {
-            font-family: var(--font-title);
-            font-size: 1.4rem;
-            font-weight: 700;
-            color: var(--color-primary);
-            margin-bottom: 25px;
-            text-align: center;
-        }
-        .rd-form-group {
-            margin-bottom: 20px;
-            text-align: left;
-        }
-        .rd-form-group label {
-            display: block;
-            font-weight: 600;
-            font-size: 0.9rem;
-            margin-bottom: 8px;
-            color: var(--color-text);
-        }
-        .rd-form-control {
-            width: 100%;
-            padding: 12px 16px;
-            border: 1px solid #CBD5E0;
-            border-radius: 6px;
-            font-family: var(--font-body);
-            font-size: 1rem;
-            transition: border-color 0.2s;
-        }
-        .rd-form-control:focus {
-            outline: none;
-            border-color: var(--color-primary);
-        }
+    body {
+      font-family: var(--font-body);
+      color: var(--color-dark);
+      background-color: var(--color-white);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
 
-        /* BOTÃO DE CONVERSÃO (ACCENT 10%) */
-        .rd-btn-submit {
-            display: block;
-            width: 100%;
-            background-color: var(--color-accent);
-            color: var(--color-light);
-            border: none;
-            padding: 16px 20px;
-            font-family: var(--font-title);
-            font-size: 1.1rem;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            border-radius: 6px;
-            cursor: pointer;
-            transition: background 0.3s ease;
-            box-shadow: 0 4px 6px rgba(224, 122, 95, 0.2);
-        }
-        .rd-btn-submit:hover {
-            background-color: #C86349;
-        }
+    h1, h2, h3, h4 {
+      font-family: var(--font-title);
+      font-weight: 700;
+      line-height: 1.2;
+      color: var(--color-primary);
+    }
 
-        /* SEÇÃO DE PROVAS SOCIAIS/LOGOS */
-        .rd-logos {
-            background: #E2E8F0;
-            padding: 30px 0;
-            text-align: center;
-        }
-        .rd-logos-title {
-            font-size: 0.85rem;
-            text-transform: uppercase;
-            letter-spacing: 1.5px;
-            color: #718096;
-            margin-bottom: 20px;
-            font-weight: 600;
-        }
-        .rd-logos-grid {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 40px;
-            flex-wrap: wrap;
-            opacity: 0.6;
-        }
-        .rd-logos-grid span {
-            font-family: var(--font-title);
-            font-weight: 700;
-            font-size: 1.2rem;
-            color: var(--color-primary);
-        }
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
 
-        /* SEÇÃO DE BENEFÍCIOS (MIGRADO DE GANIME NUTRI) */
-        .rd-benefits {
-            padding: 80px 0;
-            background: var(--color-light);
-        }
-        .rd-section-header {
-            text-align: center;
-            margin-bottom: 60px;
-        }
-        .rd-section-header h2 {
-            font-family: var(--font-title);
-            font-size: 2rem;
-            color: var(--color-primary);
-            margin-bottom: 15px;
-        }
-        .rd-section-header p {
-            font-size: 1.1rem;
-            color: #718096;
-            max-width: 600px;
-            margin: 0 auto;
-        }
-        .rd-grid-benefits {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-        }
-        .rd-card-benefit {
-            background: var(--color-bg);
-            padding: 40px 30px;
-            border-radius: 8px;
-            border-top: 4px solid var(--color-primary);
-            transition: transform 0.3s;
-        }
-        .rd-card-benefit:hover {
-            transform: translateY(-5px);
-        }
-        .rd-card-benefit h3 {
-            font-family: var(--font-title);
-            font-size: 1.25rem;
-            color: var(--color-primary);
-            margin-bottom: 15px;
-        }
-        .rd-card-benefit p {
-            font-size: 0.95rem;
-            color: var(--color-text);
-        }
+    /* Container RD Exclusive */
+    .rd-container {
+      width: 100%;
+      max-width: var(--container-width);
+      margin: 0 auto;
+      padding: 0 20px;
+    }
 
-        /* SEÇÃO SOBRE O CLIENTE */
-        .rd-about {
-            padding: 80px 0;
-            background: var(--color-bg);
-        }
-        .rd-about-wrapper {
-            display: flex;
-            align-items: center;
-            gap: 50px;
-            flex-wrap: wrap;
-        }
-        .rd-about-content {
-            flex: 1 1 500px;
-        }
-        .rd-about-content h2 {
-            font-family: var(--font-title);
-            font-size: 2rem;
-            color: var(--color-primary);
-            margin-bottom: 20px;
-        }
-        .rd-about-content p {
-            margin-bottom: 15px;
-            font-size: 1.05rem;
-        }
-        .rd-about-badge {
-            display: inline-block;
-            background-color: var(--color-secondary);
-            color: var(--color-light);
-            padding: 6px 12px;
-            border-radius: 4px;
-            font-size: 0.85rem;
-            font-weight: 600;
-            margin-bottom: 20px;
-        }
+    .rd-section {
+      padding: 80px 0;
+    }
 
-        /* RODAPÉ INSTITUCIONAL */
-        .rd-footer {
-            background: var(--color-primary);
-            color: var(--color-light);
-            padding: 40px 0;
-            text-align: center;
-            font-size: 0.85rem;
-            border-top: 4px solid var(--color-accent);
-        }
-        .rd-footer p {
-            opacity: 0.7;
-            margin-bottom: 10px;
-        }
+    .rd-section-gray {
+      background-color: var(--color-light);
+    }
 
-        /* RESPONSIVIDADE RÍGIDA */
-        @media (max-width: 768px) {
-            .rd-hero h1 {
-                font-size: 2rem;
-            }
-            .rd-hero p {
-                font-size: 1rem;
-            }
-            .rd-form-wrapper {
-                padding: 25px 20px;
-            }
-            .rd-about-wrapper {
-                text-align: center;
-                justify-content: center;
-            }
-        }
-    </style>
+    /* ==========================================================================
+       HEADER
+       ========================================================================== */
+    .rd-header {
+      padding: 20px 0;
+      border-bottom: 1px solid var(--color-border);
+      background-color: var(--color-white);
+    }
+
+    .rd-header-wrapper {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .rd-logo {
+      font-family: var(--font-title);
+      font-size: 24px;
+      font-weight: 800;
+      color: var(--color-primary);
+      text-decoration: none;
+      letter-spacing: -1px;
+    }
+
+    .rd-logo span {
+      color: var(--color-accent);
+    }
+
+    /* ==========================================================================
+       HERO SECTION (DOBRA DE ALTA CONVERSÃO)
+       ========================================================================== */
+    .rd-hero {
+      padding: 60px 0 80px 0;
+      background: linear-gradient(135deg, rgba(30, 70, 32, 0.03) 0%, rgba(230, 95, 43, 0.03) 100%);
+    }
+
+    .rd-hero-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 40px;
+      align-items: center;
+    }
+
+    .rd-hero-badge {
+      display: inline-block;
+      background-color: rgba(30, 70, 32, 0.1);
+      color: var(--color-primary);
+      font-size: 13px;
+      font-weight: 700;
+      text-transform: uppercase;
+      padding: 6px 16px;
+      border-radius: 50px;
+      margin-bottom: 20px;
+      letter-spacing: 1px;
+    }
+
+    .rd-hero-title {
+      font-size: 42px;
+      font-weight: 800;
+      margin-bottom: 20px;
+      color: var(--color-primary);
+    }
+
+    .rd-hero-title span {
+      color: var(--color-accent);
+    }
+
+    .rd-hero-subtitle {
+      font-size: 18px;
+      color: #4b5563;
+      margin-bottom: 30px;
+      font-weight: 400;
+    }
+
+    /* Lista de Benefícios Rápidos */
+    .rd-hero-bullets {
+      list-style: none;
+      margin-bottom: 30px;
+    }
+
+    .rd-hero-bullets li {
+      position: relative;
+      padding-left: 30px;
+      margin-bottom: 12px;
+      font-size: 16px;
+      font-weight: 500;
+      color: var(--color-dark);
+    }
+
+    .rd-hero-bullets li::before {
+      content: "✓";
+      position: absolute;
+      left: 0;
+      top: 0;
+      color: var(--color-accent);
+      font-weight: 900;
+      font-size: 18px;
+    }
+
+    /* Formulário RD Exclusive */
+    .rd-form-card {
+      background-color: var(--color-white);
+      border-radius: var(--border-radius);
+      box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.05);
+      border: 1px solid var(--color-border);
+      padding: 30px;
+    }
+
+    .rd-form-header {
+      text-align: center;
+      margin-bottom: 25px;
+    }
+
+    .rd-form-title {
+      font-size: 20px;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+
+    .rd-form-subtitle {
+      font-size: 14px;
+      color: #6b7280;
+    }
+
+    .rd-form-group {
+      margin-bottom: 18px;
+    }
+
+    .rd-form-label {
+      display: block;
+      font-size: 14px;
+      font-weight: 600;
+      margin-bottom: 6px;
+      color: var(--color-dark);
+    }
+
+    .rd-form-input {
+      width: 100%;
+      padding: 12px 16px;
+      border: 1px solid #d1d5db;
+      border-radius: var(--border-radius);
+      font-family: var(--font-body);
+      font-size: 15px;
+      color: var(--color-dark);
+      transition: border-color var(--transition-fast);
+    }
+
+    .rd-form-input:focus {
+      outline: none;
+      border-color: var(--color-primary);
+    }
+
+    /* Botão CTA Principal */
+    .rd-btn-cta {
+      display: block;
+      width: 100%;
+      background-color: var(--color-accent);
+      color: var(--color-white);
+      font-family: var(--font-title);
+      font-size: 16px;
+      font-weight: 700;
+      text-align: center;
+      padding: 15px 20px;
+      border: none;
+      border-radius: var(--border-radius);
+      cursor: pointer;
+      text-decoration: none;
+      transition: background-color var(--transition-fast), transform var(--transition-fast);
+      box-shadow: 0 4px 6px -1px rgba(230, 95, 43, 0.2);
+    }
+
+    .rd-btn-cta:hover {
+      background-color: var(--color-accent-hover);
+    }
+
+    .rd-form-privacy {
+      font-size: 11px;
+      color: #9ca3af;
+      text-align: center;
+      margin-top: 15px;
+    }
+
+    /* ==========================================================================
+       DIFERENCIAIS / PILARES DO MÉTODO GANIME NUTRI
+       ========================================================================== */
+    .rd-section-title {
+      text-align: center;
+      font-size: 32px;
+      margin-bottom: 15px;
+    }
+
+    .rd-section-subtitle {
+      text-align: center;
+      max-width: 600px;
+      margin: 0 auto 50px auto;
+      color: #6b7280;
+    }
+
+    .rd-features-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+    }
+
+    .rd-feature-card {
+      background-color: var(--color-white);
+      border: 1px solid var(--color-border);
+      border-radius: var(--border-radius);
+      padding: 35px 25px;
+      transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+    }
+
+    .rd-feature-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+    }
+
+    .rd-feature-icon {
+      width: 50px;
+      height: 50px;
+      background-color: rgba(30, 70, 32, 0.08);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 20px;
+    }
+
+    .rd-feature-icon svg {
+      width: 26px;
+      height: 26px;
+      fill: var(--color-primary);
+    }
+
+    .rd-feature-title {
+      font-size: 18px;
+      font-weight: 700;
+      margin-bottom: 12px;
+    }
+
+    .rd-feature-text {
+      font-size: 14px;
+      color: #4b5563;
+      line-height: 1.6;
+    }
+
+    /* ==========================================================================
+       FOOTER
+       ========================================================================== */
+    .rd-footer {
+      background-color: var(--color-primary);
+      color: rgba(255, 255, 255, 0.8);
+      padding: 40px 0;
+      font-size: 13px;
+      border-top: 4px solid var(--color-accent);
+    }
+
+    .rd-footer-wrapper {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .rd-footer-info p {
+      margin-bottom: 4px;
+    }
+
+    .rd-footer-logo {
+      color: var(--color-white);
+      font-family: var(--font-title);
+      font-size: 20px;
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    .rd-footer-logo span {
+      color: var(--color-accent);
+    }
+
+    /* ==========================================================================
+       MEDIA QUERIES - RESPONSIVIDADE
+       ========================================================================== */
+    @media (max-width: 991px) {
+      .rd-hero-grid {
+        grid-template-columns: 1fr;
+        gap: 50px;
+      }
+      .rd-features-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+      }
+      .rd-hero-title {
+        font-size: 34px;
+      }
+    }
+
+    @media (max-width: 576px) {
+      .rd-section {
+        padding: 50px 0;
+      }
+      .rd-hero-title {
+        font-size: 28px;
+      }
+      .rd-header-wrapper, .rd-footer-wrapper {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+      }
+      .rd-form-card {
+        padding: 20px;
+      }
+    }
+  </style>
 </head>
 <body>
 
-    <!-- HERO SECTION (Conversão Primária) -->
-    <header class="rd-hero">
-        <div class="rd-container">
-            <h1>Ganime Nutri</h1>
-            <p>Emagrecimento, hipertrofia e performance com planos alimentares de base científica e 100% personalizados para a sua rotina.</p>
-            
-            <!-- FORMULÁRIO RD EXCLUSIVE INTEGRADO -->
-            <div class="rd-form-wrapper">
-                <h3 class="rd-form-title">Agende sua Consulta de Avaliação</h3>
-                <form id="rd-conversion-form">
-                    <div class="rd-form-group">
-                        <label for="name">Nome Completo*</label>
-                        <input type="text" id="name" name="name" class="rd-form-control" required placeholder="Digite seu nome">
-                    </div>
-                    <div class="rd-form-group">
-                        <label for="email">E-mail Corporativo ou Pessoal*</label>
-                        <input type="email" id="email" name="email" class="rd-form-control" required placeholder="Digite seu e-mail">
-                    </div>
-                    <div class="rd-form-group">
-                        <label for="whatsapp">WhatsApp / Celular*</label>
-                        <input type="tel" id="whatsapp" name="whatsapp" class="rd-form-control" required placeholder="(00) 00000-0000">
-                    </div>
-                    <div class="rd-form-group">
-                        <label for="objective">Qual seu principal objetivo?</label>
-                        <select id="objective" name="objective" class="rd-form-control">
-                            <option value="emagrecimento">Emagrecimento Definitivo</option>
-                            <option value="hipertrofia">Ganho de Massa (Hipertrofia)</option>
-                            <option value="saude">Saúde, Energia e Disposição</option>
-                        </select>
-                    </div>
-                    <button type="submit" class="rd-btn-submit">Quero Agendar Minha Consulta</button>
-                </form>
-            </div>
-        </div>
-    </header>
+  <!-- HEADER -->
+  <header class="rd-header">
+    <div class="rd-container">
+      <div class="rd-header-wrapper">
+        <a href="#" class="rd-logo">GANIME<span>NUTRI</span></a>
+      </div>
+    </div>
+  </header>
 
-    <!-- PROVAS SOCIAIS / MARCAS -->
-    <section class="rd-logos">
-        <div class="rd-container">
-            <p class="rd-logos-title">Apoiado por Sociedades de Saúde e Nutrição</p>
-            <div class="rd-logos-grid">
-                <span>✓ CFN Ativo</span>
-                <span>✓ Nutrição Científica</span>
-                <span>✓ Prática Evidenciada</span>
-            </div>
+  <!-- HERO SECTION -->
+  <section class="rd-hero">
+    <div class="rd-container">
+      <div class="rd-hero-grid">
+        
+        <!-- Conteúdo Copy/Benefícios -->
+        <div class="rd-hero-content">
+          <span class="rd-hero-badge">Atendimento Clínico e Esportivo</span>
+          <h1 class="rd-hero-title">Alcance a sua melhor versão sem abrir mão do que <span>você gosta</span></h1>
+          <p class="rd-hero-subtitle">Na Ganime Nutri, desenvolvemos planejamentos alimentares 100% personalizados para a sua rotina, focando em emagrecimento definitivo, ganho de massa magra e vitalidade.</p>
+          
+          <ul class="rd-hero-bullets">
+            <li>Planos alimentares adaptados à sua rotina real</li>
+            <li>Suporte próximo e acompanhamento ativo pós-consulta</li>
+            <li>Foco em resultados sustentáveis e sem restrições radicais</li>
+          </ul>
         </div>
-    </section>
 
-    <!-- SEÇÃO DE BENEFÍCIOS (CONTEÚDO GANIME NUTRI) -->
-    <section class="rd-benefits">
-        <div class="rd-container">
-            <div class="rd-section-header">
-                <h2>Como Funciona o Acompanhamento Ganime Nutri</h2>
-                <p>Método validado para quem busca resultados sustentáveis sem restrições extremas.</p>
+        <!-- Formulário RD Exclusive -->
+        <div class="rd-hero-form">
+          <div class="rd-form-card">
+            <div class="rd-form-header">
+              <h2 class="rd-form-title">Agende sua avaliação</h2>
+              <p class="rd-form-subtitle">Preencha os campos abaixo e entraremos em contato.</p>
             </div>
             
-            <div class="rd-grid-benefits">
-                <!-- Benefício 1 -->
-                <div class="rd-card-benefit">
-                    <h3>Planejamento Individualizado</h3>
-                    <p>Cardápios calculados exatamente para a sua taxa metabólica, combinando alimentos que você já gosta com as suas necessidades fisiológicas.</p>
-                </div>
-                <!-- Benefício 2 -->
-                <div class="rd-card-benefit">
-                    <h3>Análise de Bioimpedância</h3>
-                    <p>Avaliação precisa do percentual de gordura e massa muscular corporal para acompanhar de perto a sua evolução real.</p>
-                </div>
-                <!-- Benefício 3 -->
-                <div class="rd-card-benefit">
-                    <h3>Suporte Contínuo</h3>
-                    <p>Acesso direto via app exclusivo para tirar dúvidas de cardápio, compras no supermercado e ajustes rápidos de rotina.</p>
-                </div>
-            </div>
-        </div>
-    </section>
+            <form action="#" method="POST">
+              <div class="rd-form-group">
+                <label class="rd-form-label" for="name">Nome completo</label>
+                <input class="rd-form-input" type="text" id="name" name="name" placeholder="Ex: Maria Silva" required>
+              </div>
 
-    <!-- SOBRE A CLINICA / PROFISSIONAL -->
-    <section class="rd-about">
-        <div class="rd-container">
-            <div class="rd-about-wrapper">
-                <div class="rd-about-content">
-                    <span class="rd-about-badge">Nutrição Baseada em Evidências</span>
-                    <h2>Sobre o Ganime Nutri</h2>
-                    <p>O Ganime Nutri nasceu do propósito de desmistificar a nutrição clínica e esportiva. Acreditamos que a alimentação saudável não deve ser uma punição, mas sim uma ferramenta de liberdade, energia e performance física.</p>
-                    <p>Todos os nossos atendimentos seguem as diretrizes mais recentes das principais entidades de nutrologia e nutrição esportiva globais, garantindo segurança e eficácia ao paciente.</p>
-                </div>
-            </div>
-        </div>
-    </section>
+              <div class="rd-form-group">
+                <label class="rd-form-label" for="email">E-mail</label>
+                <input class="rd-form-input" type="email" id="email" name="email" placeholder="Ex: mariasilva@email.com" required>
+              </div>
 
-    <!-- RODAPÉ INSTITUCIONAL (REGRAS LEGAIS) -->
-    <footer class="rd-footer">
-        <div class="rd-container">
-            <p>&copy; 2024 Ganime Nutri. Todos os direitos reservados.</p>
-            <p>Responsável Técnico: Ganime Nutri - CRN correspondente ativo.</p>
-            <p>Política de Privacidade | Termos de Uso</p>
+              <div class="rd-form-group">
+                <label class="rd-form-label" for="whatsapp">WhatsApp</label>
+                <input class="rd-form-input" type="tel" id="whatsapp" name="whatsapp" placeholder="(00) 00000-0000" required>
+              </div>
+
+              <button type="submit" class="rd-btn-cta">QUERO AGENDAR AGORA</button>
+              
+              <p class="rd-form-privacy">Prometemos não utilizar suas informações para envio de SPAM.</p>
+            </form>
+          </div>
         </div>
-    </footer>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- DIFERENCIAIS / MÉTODO GANIME NUTRI -->
+  <section class="rd-section rd-section-gray">
+    <div class="rd-container">
+      <h2 class="rd-section-title">O Método Ganime Nutri</h2>
+      <p class="rd-section-subtitle">Acreditamos que o melhor planejamento alimentar é aquele que você consegue manter. Descubra os pilares que garantem o sucesso de nossos pacientes.</p>
+      
+      <div class="rd-features-grid">
+        
+        <!-- Diferencial 1 -->
+        <div class="rd-feature-card">
+          <div class="rd-feature-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+          </div>
+          <h3 class="rd-feature-title">Foco na Individualidade</h3>
+          <p class="rd-feature-text">Seu cardápio é calculado exclusivamente com base nos seus exames, biotipo, objetivos e, principalmente, suas preferências pessoais.</p>
+        </div>
+
+        <!-- Diferencial 2 -->
+        <div class="rd-feature-card">
+          <div class="rd-feature-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-2 10h-4v4h-2v-4H7v-2h4V7h2v4h4v2z"/></svg>
+          </div>
+          <h3 class="rd-feature-title">Suporte e Canal Direto</h3>
+          <p class="rd-feature-text">Você não ficará sem respostas após sair da consulta. Nosso canal de atendimento rápido está sempre ativo para tirar suas dúvidas diárias.</p>
+        </div>
+
+        <!-- Diferencial 3 -->
+        <div class="rd-feature-card">
+          <div class="rd-feature-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9 21c0 .55.45 1 1 1h4c.55 0 1-.45 1-1v-1H9v1zm3-19C8.14 2 5 5.14 5 9c0 2.38 1.19 4.47 3 5.74V17c0 .55.45 1 1 1h6c.55 0 1-.45 1-1v-2.26c1.81-1.27 3-3.36 3-5.74 0-3.86-3.14-7-7-7zm2.85 11.1l-.85.6V16h-4v-3.3l-.85-.6C7.8 11.1 7 9.85 7 9c0-2.76 2.24-5 5-5s5 2.24 5 5c0 .85-.8 2.1-2.15 3.1z"/></svg>
+          </div>
+          <h3 class="rd-feature-title">Ciência Sem Terrorismo</h3>
+          <p class="rd-feature-text">Nutrição baseada em evidências científicas sólidas, sem modismos passageiros ou restrições alimentares extremas que prejudicam sua mente.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="rd-footer">
+    <div class="rd-container">
+      <div class="rd-footer-wrapper">
+        <div class="rd-footer-info">
+          <a href="#" class="rd-footer-logo">GANIME<span>NUTRI</span></a>
+          <p style="margin-top: 10px;">Ganime Nutrição e Performance Ltda.</p>
+          <p>CNPJ: 00.000.000/0001-00 | RT: CRN-4 000000/X</p>
+        </div>
+        <div class="rd-footer-legal">
+          <p>&copy; 2024 Ganime Nutri. Todos os direitos reservados.</p>
+          <p>Feito em conformidade com as diretrizes do CRN.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
 
 </body>
 </html>
