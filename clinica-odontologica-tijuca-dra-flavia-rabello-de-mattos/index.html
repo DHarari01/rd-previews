@@ -3,133 +3,143 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dra. Flávia Rabello de Mattos | Dentista na Tijuca RJ</title>
+    <title>Clínica Odontológica Tijuca | Dra. Flavia Rabello de Mattos</title>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..600&family=Inter:wght@300;400;500;600;700&display=swap');
+        /* Importação de Fontes Premium */
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap');
 
+        /* Design System & Variáveis */
         :root {
-            --primary: #6495ED;
-            --primary-hover: #4d82e2;
-            --primary-light: #f0f5ff;
-            --dark: #1e293b;
-            --dark-muted: #475569;
-            --light: #f8fafc;
-            --border: #e2e8f0;
-            --white: #ffffff;
-            --gold: #bca374;
-            --shadow: 0 4px 20px -2px rgba(100, 149, 237, 0.08);
-            --shadow-lg: 0 10px 30px -5px rgba(100, 149, 237, 0.12);
-            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            --bg-warm: #FAF7F2;
+            --primary: #1F3A34;
+            --primary-light: #2c5249;
+            --accent: #C9A227;
+            --accent-hover: #b08d1f;
+            --text-dark: #1A1A1A;
+            --text-muted: #5A5A5A;
+            --white: #FFFFFF;
+            --shadow-subtle: 0 12px 40px rgba(31, 58, 52, 0.04);
+            --shadow-medium: 0 16px 48px rgba(31, 58, 52, 0.08);
+            --transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+            --border-radius: 12px;
         }
 
-        * {
+        /* Reset e Estilos Globais */
+        *, *::before, *::after {
+            box-sizing: border-box;
             margin: 0;
             padding: 0;
-            box-sizing: border-box;
-            -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
         }
 
         html {
             scroll-behavior: smooth;
+            -webkit-text-size-adjust: 100%;
         }
 
         body {
             font-family: 'Inter', sans-serif;
-            color: var(--dark-muted);
-            background-color: var(--white);
-            line-height: 1.6;
+            background-color: var(--bg-warm);
+            color: var(--text-dark);
+            line-height: 1.65;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
         }
 
+        /* Tipografia */
         h1, h2, h3, h4 {
-            font-family: 'Fraunces', serif;
-            color: var(--dark);
-            font-weight: 500;
+            font-family: 'Playfair Display', serif;
+            color: var(--primary);
+            font-weight: 600;
             line-height: 1.25;
         }
 
-        section {
-            padding: 80px 24px;
+        p {
+            font-size: 1rem;
+            color: var(--text-muted);
+            font-weight: 300;
         }
 
+        /* Container Responsivo */
         .container {
-            max-width: 1140px;
+            width: 100%;
+            max-width: 1200px;
             margin: 0 auto;
-            position: relative;
+            padding: 0 24px;
         }
 
-        /* Elements & Buttons */
+        /* Botões Premium */
         .btn {
             display: inline-flex;
             align-items: center;
             justify-content: center;
-            padding: 16px 32px;
-            border-radius: 50px;
-            font-size: 15px;
-            font-weight: 600;
+            padding: 16px 36px;
+            font-family: 'Inter', sans-serif;
+            font-size: 0.95rem;
+            font-weight: 500;
             text-decoration: none;
+            border-radius: var(--border-radius);
             transition: var(--transition);
-            gap: 10px;
             cursor: pointer;
+            letter-spacing: 0.5px;
         }
 
         .btn-primary {
             background-color: var(--primary);
             color: var(--white);
-            box-shadow: 0 4px 14px rgba(100, 149, 237, 0.3);
+            border: 1px solid var(--primary);
         }
 
         .btn-primary:hover {
-            background-color: var(--primary-hover);
+            background-color: var(--primary-light);
+            border-color: var(--primary-light);
             transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(100, 149, 237, 0.4);
+            box-shadow: 0 8px 24px rgba(31, 58, 52, 0.15);
+        }
+
+        .btn-accent {
+            background-color: var(--accent);
+            color: var(--white);
+            border: 1px solid var(--accent);
+        }
+
+        .btn-accent:hover {
+            background-color: var(--accent-hover);
+            border-color: var(--accent-hover);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(201, 162, 39, 0.2);
         }
 
         .btn-outline {
-            background-color: transparent;
+            border: 1px solid var(--primary);
             color: var(--primary);
-            border: 2px solid var(--primary);
+            background: transparent;
         }
 
         .btn-outline:hover {
-            background-color: var(--primary-light);
+            background-color: var(--primary);
+            color: var(--white);
             transform: translateY(-2px);
         }
 
-        .badge {
-            display: inline-block;
-            background-color: var(--primary-light);
-            color: var(--primary);
-            padding: 8px 18px;
-            border-radius: 50px;
-            font-size: 13px;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-            margin-bottom: 20px;
-        }
-
-        /* Header */
+        /* Header / Navegação */
         header {
+            background-color: rgba(250, 247, 242, 0.95);
+            backdrop-filter: blur(10px);
             position: sticky;
             top: 0;
             z-index: 1000;
-            background-color: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(8px);
-            border-bottom: 1px solid var(--border);
-            padding: 16px 24px;
+            border-bottom: 1px solid rgba(31, 58, 52, 0.05);
             transition: var(--transition);
         }
 
-        .header-container {
+        .nav-wrapper {
             display: flex;
-            justify-content: space-between;
             align-items: center;
-            max-width: 1140px;
-            margin: 0 auto;
+            justify-content: space-between;
+            height: 90px;
         }
 
-        .logo-box {
+        .logo-area {
             display: flex;
             align-items: center;
             gap: 12px;
@@ -137,12 +147,9 @@
         }
 
         .logo-img {
-            width: 44px;
-            height: 44px;
-            border-radius: 50px;
-            border: 2px solid var(--primary-light);
-            background-color: var(--white);
-            padding: 2px;
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
             object-fit: cover;
         }
 
@@ -152,59 +159,34 @@
         }
 
         .logo-title {
-            font-size: 18px;
-            font-weight: 600;
-            color: var(--dark);
-            letter-spacing: -0.02em;
+            font-family: 'Playfair Display', serif;
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--primary);
+            line-height: 1.1;
         }
 
         .logo-subtitle {
-            font-size: 11px;
-            color: var(--primary);
-            font-weight: 500;
+            font-size: 0.75rem;
+            color: var(--accent);
             text-transform: uppercase;
-            letter-spacing: 0.05em;
+            letter-spacing: 1px;
+            margin-top: 2px;
         }
 
-        nav {
+        .nav-menu {
             display: none;
-            gap: 32px;
         }
 
-        nav a {
-            text-decoration: none;
-            color: var(--dark-muted);
-            font-size: 14px;
-            font-weight: 500;
-            transition: var(--transition);
-        }
-
-        nav a:hover {
-            color: var(--primary);
-        }
-
-        .header-cta {
+        .nav-cta {
             display: none;
         }
 
         /* Hero Section */
         .hero {
+            padding: 60px 0 80px 0;
             position: relative;
-            padding: 80px 24px 100px;
-            background: linear-gradient(180deg, var(--white) 0%, var(--primary-light) 100%);
             overflow: hidden;
-        }
-
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: -20%;
-            right: -10%;
-            width: 600px;
-            height: 600px;
-            background: radial-gradient(circle, rgba(100, 149, 237, 0.12) 0%, transparent 70%);
-            border-radius: 50%;
-            z-index: 0;
         }
 
         .hero-grid {
@@ -212,26 +194,32 @@
             grid-template-columns: 1fr;
             gap: 48px;
             align-items: center;
-            position: relative;
-            z-index: 1;
         }
 
         .hero-content {
-            max-width: 580px;
+            z-index: 2;
         }
 
-        .hero h1 {
-            font-size: 42px;
-            line-height: 1.15;
+        .hero-tag {
+            display: inline-block;
+            font-size: 0.8rem;
+            color: var(--accent);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-weight: 600;
+            margin-bottom: 16px;
+        }
+
+        .hero-title {
+            font-size: 2.5rem;
             margin-bottom: 24px;
-            letter-spacing: -0.01em;
+            line-height: 1.2;
         }
 
-        .hero p {
-            font-size: 18px;
-            color: var(--dark-muted);
+        .hero-description {
+            font-size: 1.1rem;
             margin-bottom: 36px;
-            font-weight: 300;
+            max-width: 540px;
         }
 
         .hero-cta-group {
@@ -240,175 +228,226 @@
             gap: 16px;
         }
 
-        .hero-img-wrapper {
+        .hero-image-wrapper {
             position: relative;
-            border-radius: 24px;
+            border-radius: var(--border-radius);
             overflow: hidden;
-            box-shadow: var(--shadow-lg);
-            border: 8px solid var(--white);
-            aspect-ratio: 4/3;
+            box-shadow: var(--shadow-medium);
         }
 
-        .hero-img-wrapper img {
+        .hero-image {
             width: 100%;
-            height: 100%;
+            height: auto;
+            display: block;
             object-fit: cover;
+            aspect-ratio: 4/5;
         }
 
-        /* Social Proof / Trust Section */
-        .trust-section {
-            padding: 50px 24px;
+        /* Prova Social Secundária (Google Reviews) */
+        .social-proof-bar {
             background-color: var(--white);
-            border-bottom: 1px solid var(--border);
+            padding: 24px 0;
+            border-top: 1px solid rgba(31, 58, 52, 0.05);
+            border-bottom: 1px solid rgba(31, 58, 52, 0.05);
         }
 
-        .trust-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 32px;
-            text-align: center;
-        }
-
-        .trust-item {
-            padding: 16px;
-        }
-
-        .trust-number {
-            font-family: 'Fraunces', serif;
-            font-size: 40px;
-            color: var(--primary);
-            font-weight: 600;
-            margin-bottom: 8px;
-        }
-
-        .trust-label {
-            font-size: 13px;
-            font-weight: 500;
-            color: var(--dark-muted);
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-        }
-
-        .trust-google {
-            grid-column: span 2;
-            background-color: var(--light);
-            border-radius: 16px;
-            padding: 24px;
+        .proof-wrapper {
             display: flex;
             flex-direction: column;
             align-items: center;
+            justify-content: center;
+            gap: 16px;
+            text-align: center;
+        }
+
+        .google-rating {
+            display: flex;
+            align-items: center;
             gap: 8px;
-            border: 1px solid var(--border);
         }
 
         .stars {
+            color: var(--accent);
+            font-size: 1.2rem;
+            letter-spacing: 2px;
+        }
+
+        .rating-text {
+            font-size: 0.9rem;
+            color: var(--text-dark);
+            font-weight: 500;
+        }
+
+        .proof-stats {
             display: flex;
-            gap: 4px;
-            color: var(--gold);
+            gap: 32px;
         }
 
-        .stars svg {
-            width: 20px;
-            height: 20px;
-            fill: currentColor;
+        .stat-item {
+            text-align: center;
         }
 
-        /* Specialties / Services Section */
+        .stat-num {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            color: var(--primary);
+            font-weight: 700;
+        }
+
+        .stat-label {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--text-muted);
+        }
+
+        /* Especialidades (Serviços) */
         .specialties {
-            background-color: var(--light);
+            padding: 80px 0;
+            background-color: var(--bg-warm);
         }
 
         .section-header {
             text-align: center;
-            max-width: 680px;
-            margin: 0 auto 60px;
+            max-width: 700px;
+            margin: 0 auto 56px auto;
         }
 
-        .section-header h2 {
-            font-size: 36px;
-            margin-bottom: 16px;
+        .section-subtitle {
+            font-size: 0.8rem;
+            color: var(--accent);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 12px;
+            display: block;
         }
 
-        .section-header p {
-            font-size: 16px;
-            color: var(--dark-muted);
+        .section-title {
+            font-size: 2rem;
+            margin-bottom: 20px;
         }
 
-        .services-grid {
+        .specialties-grid {
             display: grid;
             grid-template-columns: 1fr;
-            gap: 24px;
+            gap: 32px;
         }
 
-        .service-card {
+        .specialty-card {
             background-color: var(--white);
-            border-radius: 20px;
-            padding: 32px;
-            box-shadow: var(--shadow);
-            border: 1px solid rgba(100, 149, 237, 0.05);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--shadow-subtle);
             transition: var(--transition);
             display: flex;
             flex-direction: column;
-            justify-content: space-between;
         }
 
-        .service-card:hover {
-            transform: translateY(-5px);
-            box-shadow: var(--shadow-lg);
-            border-color: var(--primary);
+        .specialty-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-medium);
         }
 
-        .service-icon {
-            width: 48px;
-            height: 48px;
-            background-color: var(--primary-light);
-            color: var(--primary);
-            border-radius: 12px;
+        .card-img-wrapper {
+            position: relative;
+            overflow: hidden;
+            aspect-ratio: 16/10;
+        }
+
+        .card-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+
+        .specialty-card:hover .card-img {
+            transform: scale(1.05);
+        }
+
+        .card-content {
+            padding: 32px;
             display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 24px;
+            flex-direction: column;
+            flex-grow: 1;
         }
 
-        .service-icon svg {
-            width: 24px;
-            height: 24px;
-            fill: none;
-            stroke: currentColor;
-            stroke-width: 2;
-        }
-
-        .service-card h3 {
-            font-size: 20px;
+        .card-title {
+            font-size: 1.3rem;
             margin-bottom: 12px;
         }
 
-        .service-card p {
-            font-size: 14px;
-            color: var(--dark-muted);
+        .card-text {
+            font-size: 0.95rem;
             margin-bottom: 24px;
             flex-grow: 1;
         }
 
-        .service-link {
-            font-size: 14px;
-            font-weight: 600;
-            color: var(--primary);
+        .card-link {
+            color: var(--accent);
+            font-weight: 500;
             text-decoration: none;
+            font-size: 0.9rem;
             display: inline-flex;
             align-items: center;
-            gap: 6px;
+            gap: 8px;
             transition: var(--transition);
         }
 
-        .service-link:hover {
-            color: var(--primary-hover);
+        .card-link:hover {
+            color: var(--primary);
         }
 
-        /* About / Professional Section */
+        /* Lista Secundária de Serviços */
+        .secondary-services {
+            margin-top: 56px;
+            background-color: rgba(31, 58, 52, 0.02);
+            border-radius: var(--border-radius);
+            padding: 40px;
+            border: 1px solid rgba(31, 58, 52, 0.05);
+        }
+
+        .secondary-services-title {
+            font-size: 1.4rem;
+            margin-bottom: 24px;
+            text-align: center;
+        }
+
+        .services-list-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 20px;
+        }
+
+        .service-list-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+        }
+
+        .service-list-icon {
+            color: var(--accent);
+            font-weight: bold;
+            font-size: 1.2rem;
+            line-height: 1;
+        }
+
+        .service-list-content h4 {
+            font-family: 'Inter', sans-serif;
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--primary);
+            margin-bottom: 4px;
+        }
+
+        .service-list-content p {
+            font-size: 0.85rem;
+        }
+
+        /* Sobre a Clínica / Quem Somos */
         .about {
+            padding: 80px 0;
             background-color: var(--white);
-            position: relative;
         }
 
         .about-grid {
@@ -418,192 +457,195 @@
             align-items: center;
         }
 
-        .about-image-column {
+        .about-image-wrapper {
             position: relative;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--shadow-medium);
         }
 
-        .about-img-frame {
-            border-radius: 24px;
-            overflow: hidden;
-            box-shadow: var(--shadow-lg);
-            border: 8px solid var(--light);
+        .about-image {
+            width: 100%;
+            height: auto;
+            display: block;
+            object-fit: cover;
             aspect-ratio: 4/5;
         }
 
-        .about-img-frame img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
+        .about-content {
+            padding-right: 0;
         }
 
-        .experience-badge {
-            position: absolute;
-            bottom: -20px;
-            right: 20px;
-            background-color: var(--dark);
-            color: var(--white);
-            padding: 16px 28px;
-            border-radius: 16px;
-            box-shadow: var(--shadow-lg);
-            display: flex;
-            align-items: center;
-            gap: 12px;
+        .about-title {
+            font-size: 2.2rem;
+            margin-bottom: 24px;
         }
 
-        .experience-badge-number {
-            font-family: 'Fraunces', serif;
-            font-size: 32px;
+        .about-text {
+            font-size: 1rem;
+            margin-bottom: 20px;
+        }
+
+        .about-highlights {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 24px;
+            margin-top: 32px;
+        }
+
+        .highlight-item {
+            border-left: 3px solid var(--accent);
+            padding-left: 16px;
+        }
+
+        .highlight-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.1rem;
             color: var(--primary);
             font-weight: 600;
-            line-height: 1;
+            margin-bottom: 4px;
         }
 
-        .experience-badge-text {
-            font-size: 11px;
-            text-transform: uppercase;
-            letter-spacing: 0.1em;
-            line-height: 1.3;
+        .highlight-text {
+            font-size: 0.85rem;
         }
 
-        .about-content h2 {
-            font-size: 36px;
-            margin-bottom: 24px;
+        /* Diferenciais de Autoridade */
+        .differentials {
+            padding: 80px 0;
+            background-color: var(--bg-warm);
         }
 
-        .about-content p {
-            font-size: 16px;
-            margin-bottom: 24px;
-        }
-
-        .about-features {
-            list-style: none;
-            display: flex;
-            flex-direction: column;
-            gap: 16px;
-            margin-bottom: 36px;
-        }
-
-        .about-features li {
-            display: flex;
-            align-items: flex-start;
-            gap: 12px;
-            font-size: 15px;
-        }
-
-        .about-features li svg {
-            width: 20px;
-            height: 20px;
-            color: var(--primary);
-            flex-shrink: 0;
-            margin-top: 2px;
-        }
-
-        /* Clinic / Gallery Section */
-        .gallery-section {
-            background-color: var(--light);
-            padding-bottom: 100px;
-        }
-
-        .gallery-grid {
+        .differentials-grid {
             display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 16px;
+            grid-template-columns: 1fr;
+            gap: 24px;
         }
 
-        .gallery-item {
-            border-radius: 16px;
-            overflow: hidden;
-            box-shadow: var(--shadow);
-            border: 4px solid var(--white);
-            aspect-ratio: 1/1;
-            transition: var(--transition);
+        .diff-card {
+            background: var(--white);
+            padding: 32px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow-subtle);
+            border: 1px solid rgba(31, 58, 52, 0.02);
+            text-align: center;
         }
 
-        .gallery-item:hover {
-            transform: scale(1.02);
-            box-shadow: var(--shadow-lg);
+        .diff-number {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            color: var(--accent);
+            font-weight: 700;
+            margin-bottom: 12px;
         }
 
-        .gallery-item img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
+        .diff-title {
+            font-family: 'Inter', sans-serif;
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--primary);
+            margin-bottom: 8px;
         }
 
-        /* Call To Action (Final) */
-        .cta-final {
-            background: linear-gradient(135deg, var(--dark) 0%, #111827 100%);
+        .diff-text {
+            font-size: 0.9rem;
+        }
+
+        /* Final CTA */
+        .final-cta {
+            padding: 100px 0;
+            background-color: var(--primary);
             color: var(--white);
             text-align: center;
             position: relative;
             overflow: hidden;
         }
 
-        .cta-final::before {
+        .final-cta::before {
             content: '';
             position: absolute;
-            top: -50%;
-            left: -10%;
-            width: 500px;
-            height: 500px;
-            background: radial-gradient(circle, rgba(100, 149, 237, 0.15) 0%, transparent 70%);
-            border-radius: 50%;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at center, rgba(44, 82, 73, 0.4) 0%, transparent 70%);
+            pointer-events: none;
         }
 
-        .cta-final-box {
+        .cta-content {
             position: relative;
             z-index: 1;
-            max-width: 700px;
+            max-width: 650px;
             margin: 0 auto;
         }
 
-        .cta-final h2 {
+        .cta-title {
             color: var(--white);
-            font-size: 38px;
+            font-size: 2.2rem;
             margin-bottom: 20px;
         }
 
-        .cta-final p {
-            color: rgba(255, 255, 255, 0.8);
-            font-size: 17px;
-            margin-bottom: 36px;
+        .cta-text {
+            color: rgba(250, 247, 242, 0.8);
+            font-size: 1.1rem;
+            margin-bottom: 40px;
             font-weight: 300;
         }
 
-        /* Footer */
+        /* Rodapé */
         footer {
-            background-color: #0f172a;
-            color: #94a3b8;
-            padding: 80px 24px 40px;
-            font-size: 14px;
-            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            background-color: var(--primary);
+            color: var(--white);
+            padding: 80px 0 40px 0;
+            border-top: 1px solid rgba(250, 247, 242, 0.1);
         }
 
         .footer-grid {
             display: grid;
             grid-template-columns: 1fr;
             gap: 48px;
-            margin-bottom: 48px;
+            margin-bottom: 56px;
         }
 
-        .footer-brand .logo-title {
-            color: var(--white);
+        .footer-col-brand {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
         }
 
-        .footer-brand p {
-            margin-top: 16px;
-            font-size: 14px;
-            line-height: 1.6;
+        .footer-logo-img {
+            width: 56px;
+            height: 56px;
+            border-radius: 50%;
+            background-color: var(--white);
+            padding: 2px;
         }
 
-        .footer-column h4 {
-            color: var(--white);
-            font-size: 16px;
-            font-family: 'Inter', sans-serif;
+        .footer-logo-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.3rem;
             font-weight: 600;
-            margin-bottom: 24px;
+            color: var(--white);
+        }
+
+        .footer-logo-subtitle {
+            font-size: 0.8rem;
+            color: var(--accent);
             text-transform: uppercase;
-            letter-spacing: 0.05em;
+            letter-spacing: 1px;
+        }
+
+        .footer-desc {
+            color: rgba(250, 247, 242, 0.7);
+            font-size: 0.9rem;
+            max-width: 300px;
+        }
+
+        .footer-col-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.2rem;
+            color: var(--accent);
+            margin-bottom: 24px;
         }
 
         .footer-links {
@@ -614,60 +656,69 @@
         }
 
         .footer-links a {
-            color: #94a3b8;
+            color: rgba(250, 247, 242, 0.7);
             text-decoration: none;
+            font-size: 0.9rem;
             transition: var(--transition);
         }
 
         .footer-links a:hover {
-            color: var(--primary);
+            color: var(--accent);
+            padding-left: 4px;
         }
 
-        .footer-contact-item {
-            display: flex;
-            align-items: flex-start;
-            gap: 12px;
-            margin-bottom: 16px;
-        }
-
-        .footer-contact-item svg {
-            width: 20px;
-            height: 20px;
-            color: var(--primary);
-            flex-shrink: 0;
-            margin-top: 2px;
-        }
-
-        .footer-bottom {
-            padding-top: 40px;
-            border-top: 1px solid rgba(255, 255, 255, 0.05);
+        .footer-contact-info {
             display: flex;
             flex-direction: column;
             gap: 16px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+        }
+
+        .contact-icon {
+            color: var(--accent);
+            font-weight: bold;
+        }
+
+        .contact-text {
+            color: rgba(250, 247, 242, 0.7);
+            font-size: 0.9rem;
+            line-height: 1.5;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(250, 247, 242, 0.1);
+            padding-top: 32px;
             text-align: center;
         }
 
-        .footer-bottom p {
-            font-size: 13px;
+        .copyright {
+            font-size: 0.8rem;
+            color: rgba(250, 247, 242, 0.5);
         }
 
-        /* Floating WhatsApp Button */
+        /* Botão Flutuante do WhatsApp */
         .whatsapp-float {
             position: fixed;
-            bottom: 24px;
-            right: 24px;
-            z-index: 999;
-            background-color: #25d366;
-            color: var(--white);
+            bottom: 32px;
+            right: 32px;
+            background-color: #25D366;
+            color: white;
             width: 60px;
             height: 60px;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
-            transition: var(--transition);
+            box-shadow: 0 8px 32px rgba(37, 211, 102, 0.3);
+            z-index: 999;
             text-decoration: none;
+            transition: var(--transition);
+            animation: pulse-ring 2s infinite;
         }
 
         .whatsapp-float:hover {
@@ -681,52 +732,64 @@
             fill: currentColor;
         }
 
-        /* Responsive Breakpoints */
-        @media (min-width: 768px) {
-            section {
-                padding: 100px 48px;
+        @keyframes pulse-ring {
+            0% {
+                box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
             }
+            70% {
+                box-shadow: 0 0 0 15px rgba(37, 211, 102, 0);
+            }
+            100% {
+                box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+            }
+        }
 
+        /* Responsividade (Desktop-First Overrides) */
+        @media (min-width: 768px) {
             .hero {
-                padding: 100px 48px;
+                padding: 100px 0 120px 0;
             }
 
             .hero-grid {
-                grid-template-columns: 1.2fr 0.8fr;
-                gap: 48px;
+                grid-template-columns: 1.1fr 0.9fr;
+                gap: 64px;
             }
 
-            .hero h1 {
-                font-size: 54px;
+            .hero-title {
+                font-size: 3.5rem;
             }
 
             .hero-cta-group {
                 flex-direction: row;
             }
 
-            .trust-section {
-                padding: 60px 48px;
+            .proof-wrapper {
+                flex-direction: row;
+                justify-content: space-between;
+                text-align: left;
             }
 
-            .trust-grid {
-                grid-template-columns: repeat(3, 1fr);
-            }
-
-            .trust-google {
-                grid-column: span 1;
-            }
-
-            .services-grid {
+            .specialties-grid {
                 grid-template-columns: repeat(2, 1fr);
+                gap: 40px;
+            }
+
+            .services-list-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 24px;
             }
 
             .about-grid {
-                grid-template-columns: 1fr 1fr;
-                gap: 64px;
+                grid-template-columns: 0.9fr 1.1fr;
+                gap: 80px;
             }
 
-            .gallery-grid {
-                grid-template-columns: repeat(4, 1fr);
+            .about-highlights {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .differentials-grid {
+                grid-template-columns: repeat(3, 1fr);
             }
 
             .footer-grid {
@@ -734,355 +797,334 @@
                 gap: 64px;
             }
 
-            .footer-bottom {
-                flex-direction: row;
-                justify-content: space-between;
-                text-align: left;
+            .nav-menu {
+                display: flex;
+                align-items: center;
+                gap: 32px;
+                list-style: none;
+            }
+
+            .nav-menu a {
+                text-decoration: none;
+                color: var(--primary);
+                font-size: 0.95rem;
+                font-weight: 500;
+                transition: var(--transition);
+            }
+
+            .nav-menu a:hover {
+                color: var(--accent);
+            }
+
+            .nav-cta {
+                display: block;
             }
         }
 
         @media (min-width: 1024px) {
-            header {
-                padding: 18px 48px;
-            }
-
-            nav {
-                display: flex;
-            }
-
-            .header-cta {
-                display: block;
-            }
-
-            .services-grid {
+            .specialties-grid {
                 grid-template-columns: repeat(3, 1fr);
+            }
+            
+            .services-list-grid {
+                grid-template-columns: repeat(4, 1fr);
             }
         }
     </style>
 </head>
 <body>
 
-    <!-- Header -->
+    <!-- Header / Navegação -->
     <header>
-        <div class="header-container">
-            <a href="#" class="logo-box">
-                <img src="https://www.google.com/s2/favicons?domain=flaviarabellodemattos.com.br&sz=128" alt="Logo Dra. Flávia Rabello de Mattos" class="logo-img">
+        <div class="container nav-wrapper">
+            <a href="#" class="logo-area">
+                <img src="https://ui-avatars.com/api/?name=Cl%C3%ADnica%20Odontol%C3%B3gica%20Tijuca%20%2F%20Dra.%20Flavia%20Rabello%20de%20Mattos&background=1F3A34&color=fff&bold=true&size=128&font-size=0.4" alt="Logo" class="logo-img">
                 <div class="logo-text">
-                    <span class="logo-title">CORR</span>
-                    <span class="logo-subtitle">Reabilitação Rabello</span>
+                    <span class="logo-title">CORR Rabello</span>
+                    <span class="logo-subtitle">Reabilitação Oral</span>
                 </div>
             </a>
-            <nav>
-                <a href="#inicio">Início</a>
-                <a href="#especialidades">Especialidades</a>
-                <a href="#sobre">Quem Somos</a>
-                <a href="#galeria">Estrutura</a>
-                <a href="#contato">Contato</a>
-            </nav>
-            <div class="header-cta">
-                <a href="#" class="btn btn-outline" style="padding: 10px 24px; font-size: 13px; border-width: 1.5px;">
-                    <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16" style="margin-right: 4px;"><path d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.68.68 0 0 0 .178.643l2.457 2.457a.68.68 0 0 0 .644.178l2.189-.547a1.75 1.75 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.6 18.6 0 0 1-7.01-4.42 18.6 18.6 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z"/></svg>
-                    (21) 3978-3331
-                </a>
+            
+            <ul class="nav-menu">
+                <li><a href="#inicio">Início</a></li>
+                <li><a href="#especialidades">Especialidades</a></li>
+                <li><a href="#sobre">Quem Somos</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+
+            <div class="nav-cta">
+                <a href="#" class="btn btn-primary" style="padding: 10px 24px; font-size: 0.85rem;">Agendar Consulta</a>
             </div>
         </div>
     </header>
 
     <!-- Hero Section -->
-    <section id="inicio" class="hero">
-        <div class="container">
-            <div class="hero-grid">
-                <div class="hero-content">
-                    <span class="badge">Referência na Tijuca</span>
-                    <h1>Procurando Dentista de Confiança na Tijuca?</h1>
-                    <p>Liderado pela Dra. Flávia Rabello de Mattos, o Centro Odontológico de Reabilitação Rabello une mais de 30 anos de experiência, excelência e dedicação científica para transformar a sua saúde bucal.</p>
-                    <div class="hero-cta-group">
-                        <a href="#" class="btn btn-primary">
-                            Agendar sua Consulta
-                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-                        </a>
-                        <a href="#especialidades" class="btn btn-outline">Conhecer Tratamentos</a>
-                    </div>
+    <section class="hero" id="inicio">
+        <div class="container hero-grid">
+            <div class="hero-content">
+                <span class="hero-tag">Referência na Tijuca</span>
+                <h1 class="hero-title">Seu sorriso restaurado com arte e excelência técnica.</h1>
+                <p class="hero-description">Com mais de 30 anos de atuação, o Centro Odontológico de Reabilitação Rabello, liderado pela Dra. Flávia Rabello de Mattos, oferece tratamentos humanizados e tecnologia de ponta para sua reabilitação oral.</p>
+                <div class="hero-cta-group">
+                    <a href="#" class="btn btn-primary">Agende sua Consulta</a>
+                    <a href="#especialidades" class="btn btn-outline">Ver Especialidades</a>
                 </div>
-                <div class="hero-img-wrapper">
-                    <img src="https://media.atomicatmedia.net/u/xutOKgz7UAO78tXwHNUKx8b6hoX2/Pictures/share/pageABKq27o/NRbNkB3032368.png?quality=87#60289" alt="Dra. Flávia Rabello no Centro Odontológico de Reabilitação Rabello">
+            </div>
+            <div class="hero-image-wrapper">
+                <img src="https://media.atomicatmedia.net/u/xutOKgz7UAO78tXwHNUKx8b6hoX2/Pictures/share/pageABKq27o/NRbNkB3032368.png?quality=87#60289" alt="Dra Flávia Rabello de Mattos Sua Dentista na Tijuca RJ" class="hero-image">
+            </div>
+        </div>
+    </section>
+
+    <!-- Prova Social (Google Reviews) -->
+    <section class="social-proof-bar">
+        <div class="container proof-wrapper">
+            <div class="google-rating">
+                <span class="rating-text">Avaliação excelente no Google</span>
+                <span class="stars">★★★★★</span>
+                <span class="rating-text" style="font-weight: 600;">(4.9 / 5.0)</span>
+            </div>
+            <div class="proof-stats">
+                <div class="stat-item">
+                    <div class="stat-num">30+</div>
+                    <div class="stat-label">Anos de atuação</div>
+                </div>
+                <div class="stat-item" style="border-left: 1px solid rgba(31, 58, 52, 0.1); padding-left: 24px;">
+                    <div class="stat-num">Milhares</div>
+                    <div class="stat-label">Sorrisos transformados</div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Trust / Authority Indicators -->
-    <section class="trust-section">
-        <div class="container">
-            <div class="trust-grid">
-                <div class="trust-item">
-                    <div class="trust-number">30+</div>
-                    <div class="trust-label">Anos de Experiência</div>
-                </div>
-                <div class="trust-item">
-                    <div class="trust-number">Mestrado</div>
-                    <div class="trust-label">& Doutorado Científico</div>
-                </div>
-                <div class="trust-google">
-                    <div class="stars">
-                        <svg viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
-                        <svg viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
-                        <svg viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
-                        <svg viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
-                        <svg viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
-                    </div>
-                    <div class="trust-label">Nota 4.9 no Google</div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Specialties Section -->
-    <section id="especialidades" class="specialties">
+    <!-- Especialidades (Cards com imagens reais) -->
+    <section class="specialties" id="especialidades">
         <div class="container">
             <div class="section-header">
-                <span class="badge">Especialidades</span>
-                <h2>Seu sorriso merece o melhor tratamento</h2>
-                <p>Oferecemos soluções odontológicas modernas para devolver a saúde, a beleza e a total funcionalidade ao seu sorriso, na Tijuca RJ.</p>
+                <span class="section-subtitle">O seu sorriso merece o melhor</span>
+                <h2 class="section-title">Especialidades e Tratamentos</h2>
+                <p>Oferecemos soluções integradas com as tecnologias mais modernas da odontologia para restabelecer a saúde, estética e função do seu sorriso.</p>
             </div>
-            <div class="services-grid">
+
+            <div class="specialties-grid">
                 <!-- Implante Dentário -->
-                <div class="service-card">
-                    <div>
-                        <div class="service-icon">
-                            <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 17h-2v-2h2v2zm2.07-7.75l-.9.92C13.45 12.9 13 13.5 13 15h-2v-.5c0-1.1.45-2.1 1.17-2.83l1.24-1.26c.37-.36.59-.86.59-1.41 0-1.1-.9-2-2-2s-2 .9-2 2H7c0-2.76 2.24-5 5-5s5 2.24 5 5c0 1.04-.42 1.99-1.07 2.25z"/></svg>
-                        </div>
-                        <h3>Implante Dentário</h3>
-                        <p>Recupere dentes perdidos com segurança absoluta e um resultado estético natural que devolve sua qualidade de vida.</p>
+                <div class="specialty-card">
+                    <div class="card-img-wrapper">
+                        <img src="https://media.atomicatmedia.net/u/xutOKgz7UAO78tXwHNUKx8b6hoX2/Pictures/share/pageABKq27o/jYvJbH1147268.png?quality=79#743457" alt="Implante Dentário" class="card-img">
                     </div>
-                    <a href="#" class="service-link">Saiba mais &rarr;</a>
+                    <div class="card-content">
+                        <h3 class="card-title">Implante Dentário</h3>
+                        <p class="card-text">Recupere dentes perdidos com máxima segurança, fixação e um resultado extremamente natural que devolve sua qualidade de vida e prazer ao mastigar.</p>
+                        <a href="#" class="card-link">Saiba Mais ➔</a>
+                    </div>
                 </div>
 
-                <!-- Facetas e Lentes Dentais -->
-                <div class="service-card">
-                    <div>
-                        <div class="service-icon">
-                            <svg viewBox="0 0 24 24"><path d="M12 22c5.52 0 10-4.48 10-10S17.52 2 12 2 2 6.48 2 12s4.48 10 10 10zm1-10h-2V7h2v5zm0 4h-2v-2h2v2z"/></svg>
-                        </div>
-                        <h3>Facetas e Lentes Dentais</h3>
-                        <p>Transforme seu sorriso com máxima naturalidade, corrigindo coloração, espaçamento, formato e imperfeições estéticas.</p>
+                <!-- Facetas e Lentes -->
+                <div class="specialty-card">
+                    <div class="card-img-wrapper">
+                        <img src="https://media.atomicatmedia.net/u/xutOKgz7UAO78tXwHNUKx8b6hoX2/Pictures/share/pageABKq27o/inNiAj1296269.png?quality=76#810937" alt="Facetas e Lentes Dentais" class="card-img">
                     </div>
-                    <a href="#" class="service-link">Saiba mais &rarr;</a>
-                </div>
-
-                <!-- Alinhadores Bucais -->
-                <div class="service-card">
-                    <div>
-                        <div class="service-icon">
-                            <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
-                        </div>
-                        <h3>Alinhadores Bucais</h3>
-                        <p>Alinhe seus dentes com extremo conforto e altíssima tecnologia invisível, sem interferir em nada na sua rotina diária.</p>
+                    <div class="card-content">
+                        <h3 class="card-title">Facetas e Lentes Dentais</h3>
+                        <p class="card-text">Transforme completamente a harmonia do seu sorriso de forma rápida e segura, corrigindo cor, formato e pequenas imperfeições com finas lâminas ultra-resistentes.</p>
+                        <a href="#" class="card-link">Saiba Mais ➔</a>
                     </div>
-                    <a href="#" class="service-link">Saiba mais &rarr;</a>
-                </div>
-
-                <!-- Limpeza Dentária -->
-                <div class="service-card">
-                    <div>
-                        <div class="service-icon">
-                            <svg viewBox="0 0 24 24"><path d="M12 3v18M3 12h18"/></svg>
-                        </div>
-                        <h3>Limpeza Dentária</h3>
-                        <p>Prevenção ativa contra cáries e doenças gengivais, com eliminação de tártaro para manter dentes sempre saudáveis.</p>
-                    </div>
-                    <a href="#" class="service-link">Saiba mais &rarr;</a>
-                </div>
-
-                <!-- Clareamento Dental -->
-                <div class="service-card">
-                    <div>
-                        <div class="service-icon">
-                            <svg viewBox="0 0 24 24"><path d="M12 2.24l2.9 6.4 7 .6-5.3 4.6 1.6 6.9-6.2-3.8-6.2 3.8 1.6-6.9-5.3-4.6 7-.6z"/></svg>
-                        </div>
-                        <h3>Clareamento Dental</h3>
-                        <p>Conquiste um sorriso visivelmente mais branco através de técnicas seguras, monitoradas e com resultados naturais.</p>
-                    </div>
-                    <a href="#" class="service-link">Saiba mais &rarr;</a>
                 </div>
 
                 <!-- Emergência Dentária -->
-                <div class="service-card">
-                    <div>
-                        <div class="service-icon">
-                            <svg viewBox="0 0 24 24"><path d="M19 10.5V20H5V4h9.5L19 10.5z"/></svg>
-                        </div>
-                        <h3>Emergência Dentária</h3>
-                        <p>Recuperação imediata de dores agudas, dentes fraturados ou traumas, preservando a função e estética com rapidez.</p>
+                <div class="specialty-card">
+                    <div class="card-img-wrapper">
+                        <img src="https://media.atomicatmedia.net/u/xutOKgz7UAO78tXwHNUKx8b6hoX2/Pictures/share/pageABKq27o/kYIyPQ2258554.png?quality=83#656544" alt="Restauração Dentária" class="card-img">
                     </div>
-                    <a href="#" class="service-link">Saiba mais &rarr;</a>
+                    <div class="card-content">
+                        <h3 class="card-title">Restauração e Emergência</h3>
+                        <p class="card-text">Recupere dentes afetados por cáries, traumas ou fraturas em sessões focadas na preservação da estrutura natural, estética, resistência e funcionalidade biológica.</p>
+                        <a href="#" class="card-link">Saiba Mais ➔</a>
+                    </div>
                 </div>
 
-                <!-- Tratamento de Canal -->
-                <div class="service-card">
-                    <div>
-                        <div class="service-icon">
-                            <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg>
-                        </div>
-                        <h3>Tratamento de Canal</h3>
-                        <p>Tratamento especializado e indolor para inflamações decorrentes de cáries profundas ou traumas no nervo do dente.</p>
+                <!-- Limpeza Dentária -->
+                <div class="specialty-card">
+                    <div class="card-img-wrapper">
+                        <img src="https://media.atomicatmedia.net/u/xutOKgz7UAO78tXwHNUKx8b6hoX2/Pictures/share/pageABKq27o/BJMPKo2416031.png?quality=78#727712" alt="Limpeza Dentária" class="card-img">
                     </div>
-                    <a href="#" class="service-link">Saiba mais &rarr;</a>
-                </div>
-
-                <!-- Prótese Dentária -->
-                <div class="service-card">
-                    <div>
-                        <div class="service-icon">
-                            <svg viewBox="0 0 24 24"><path d="M4 10h16v2H4zm0 4h16v2H4z"/></svg>
-                        </div>
-                        <h3>Prótese Dentária</h3>
-                        <p>Recupere a mastigação integral e a estética do sorriso com próteses altamente personalizadas, seguras e confortáveis.</p>
+                    <div class="card-content">
+                        <h3 class="card-title">Limpeza e Profilaxia</h3>
+                        <p class="card-text">Prevenção completa com eliminação profissional de tártaro e placas bacterianas para blindar seus dentes e manter suas gengivas saudáveis a longo prazo.</p>
+                        <a href="#" class="card-link">Saiba Mais ➔</a>
                     </div>
-                    <a href="#" class="service-link">Saiba mais &rarr;</a>
                 </div>
 
                 <!-- Cirurgia de Gengiva -->
-                <div class="service-card">
-                    <div>
-                        <div class="service-icon">
-                            <svg viewBox="0 0 24 24"><path d="M12 2c1.1 0 2 .9 2 2s-.9 2-2 2-2-.9-2-2 .9-2 2-2zm9 7h-6v13h-2v-6h-2v6H9V9H3V7h18v2z"/></svg>
+                <div class="specialty-card">
+                    <div class="card-img-wrapper">
+                        <img src="https://media.atomicatmedia.net/u/xutOKgz7UAO78tXwHNUKx8b6hoX2/Pictures/share/pageABKq27o/wLoLCf9738792.png?quality=88#328737" alt="Cirurgia de Gengiva" class="card-img">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Cirurgia de Gengiva</h3>
+                        <p class="card-text">Tratamentos especializados para correção de retração, excesso gengival ou infecções periodontais complexas, devolvendo a moldura perfeita ao seu sorriso.</p>
+                        <a href="#" class="card-link">Saiba Mais ➔</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Outras especialidades em formato de lista minimalista -->
+            <div class="secondary-services">
+                <h3 class="secondary-services-title">Mais tratamentos de excelência que oferecemos:</h3>
+                <div class="services-list-grid">
+                    <div class="service-list-item">
+                        <span class="service-list-icon">♦</span>
+                        <div class="service-list-content">
+                            <h4>Alinhadores Bucais</h4>
+                            <p>Ortodontia invisível e rápida para alinhar seus dentes sem metal ou desconforto.</p>
                         </div>
-                        <h3>Cirurgia de Gengiva</h3>
-                        <p>Tratamentos corretivos e reconstrutivos que protegem a estrutura de sustentação bucal e otimizam a simetria do sorriso.</p>
                     </div>
-                    <a href="#" class="service-link">Saiba mais &rarr;</a>
+                    <div class="service-list-item">
+                        <span class="service-list-icon">♦</span>
+                        <div class="service-list-content">
+                            <h4>Tratamento de Canal</h4>
+                            <p>Endodontia moderna e segura para tratar cáries profundas e eliminar focos de dor.</p>
+                        </div>
+                    </div>
+                    <div class="service-list-item">
+                        <span class="service-list-icon">♦</span>
+                        <div class="service-list-content">
+                            <h4>Prótese Dentária</h4>
+                            <p>Peças personalizadas, fixas ou móveis, com encaixe sob medida e estabilidade.</p>
+                        </div>
+                    </div>
+                    <div class="service-list-item">
+                        <span class="service-list-icon">♦</span>
+                        <div class="service-list-content">
+                            <h4>Clareamento Dental</h4>
+                            <p>Técnicas seguras, no consultório ou de uso caseiro orientado, para um brilho natural.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- About / Clinic Section -->
-    <section id="sobre" class="about">
-        <div class="container">
-            <div class="about-grid">
-                <div class="about-image-column">
-                    <div class="about-img-frame">
-                        <img src="https://media.atomicatmedia.net/u/xutOKgz7UAO78tXwHNUKx8b6hoX2/Pictures/share/pageABKq27o/kYIyPQ2258554.png?quality=83#656544" alt="Dra. Flávia Rabello de Mattos - Dentista Responsável na Tijuca">
+    <!-- Sobre a Clínica -->
+    <section class="about" id="sobre">
+        <div class="container about-grid">
+            <div class="about-image-wrapper">
+                <img src="https://media.atomicatmedia.net/u/xutOKgz7UAO78tXwHNUKx8b6hoX2/Pictures/share/pageABKq27o/NRbNkB3032368.png?quality=87#60289" alt="Dra Flávia Rabello de Mattos" class="about-image">
+            </div>
+            <div class="about-content">
+                <span class="section-subtitle">Mais de 30 anos de Tradição</span>
+                <h2 class="about-title">Liderado pela Dra. Flávia Rabello de Mattos</h2>
+                <p class="about-text">O <strong>Centro Odontológico de Reabilitação Rabello</strong>, estrategicamente localizado na Tijuca, Rio de Janeiro, é sinônimo de excelência profissional e carinho no atendimento.</p>
+                <p class="about-text">Nossa clínica conta com uma estrutura moderna projetada para oferecer diagnósticos precisos e planos de tratamento assertivos. Sob a liderança clínica da Dra. Flávia — que possui formação de destaque como mestre e doutora, além de ampla especialização reconhecida nacionalmente — unimos a sabedoria clínica acumulada em três décadas com as tecnologias biomédicas de última geração.</p>
+                
+                <div class="about-highlights">
+                    <div class="highlight-item">
+                        <h4 class="highlight-title">Atendimento Humanizado</h4>
+                        <p class="highlight-text">Aqui você não é apenas um paciente. Estudamos seu caso de forma holística para entender suas reais necessidades e dores.</p>
                     </div>
-                    <div class="experience-badge">
-                        <span class="experience-badge-number">30</span>
-                        <span class="experience-badge-text">Anos de<br>Atuação Clínica</span>
+                    <div class="highlight-item">
+                        <h4 class="highlight-title">Qualificação Acadêmica</h4>
+                        <p class="highlight-text">Tratamentos conduzidos por especialista, mestre e doutora na área de reabilitação estética e implantes.</p>
                     </div>
-                </div>
-                <div class="about-content">
-                    <span class="badge">A Profissional</span>
-                    <h2>Dra. Flávia Rabello de Mattos</h2>
-                    <p>O <strong>Centro Odontológico de Reabilitação Rabello</strong>, localizado na Tijuca – Rio de Janeiro, é sinônimo de odontologia de alta performance técnica e acolhimento humano personalizado.</p>
-                    <p>Sob a coordenação da <strong>Dra. Flávia Rabello de Mattos</strong> — especialista, mestre, doutora e expoente em reabilitação estética oral — nossa clínica entrega tratamentos orientados pela precisão científica e pelo bem-estar pleno dos pacientes.</p>
-                    <ul class="about-features">
-                        <li>
-                            <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
-                            <span><strong>Formação de Alto Nível:</strong> Especialista, Mestre e Doutora</span>
-                        </li>
-                        <li>
-                            <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
-                            <span><strong>Estrutura Completa:</strong> Tecnologia diagnóstica moderna e segura</span>
-                        </li>
-                        <li>
-                            <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
-                            <span><strong>Atendimento Integrado:</strong> Da prevenção básica à reabilitação estética complexa</span>
-                        </li>
-                    </ul>
-                    <a href="#" class="btn btn-primary">Falar Diretamente com Especialista</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Clinic Gallery Section -->
-    <section id="galeria" class="gallery-section">
+    <!-- Diferenciais de Autoridade (Substitui Depoimentos sem inventar textos) -->
+    <section class="differentials">
         <div class="container">
             <div class="section-header">
-                <span class="badge">Nossa Estrutura</span>
-                <h2>Conforto e segurança em cada detalhe</h2>
-                <p>Nossa clínica foi estrategicamente planejada para proporcionar um atendimento biosseguro, tranquilo e com suporte tecnológico premium aos nossos pacientes.</p>
+                <span class="section-subtitle">Segurança e Compromisso</span>
+                <h2 class="section-title">Por que escolher nossa clínica?</h2>
+                <p>Nossos pilares fundamentais garantem uma experiência tranquila e resultados duradouros para sua saúde bucal.</p>
             </div>
-            <div class="gallery-grid">
-                <div class="gallery-item">
-                    <img src="https://media.atomicatmedia.net/u/xutOKgz7UAO78tXwHNUKx8b6hoX2/Pictures/share/pageABKq27o/jYvJbH1147268.png?quality=79#743457" alt="Consultório moderno e equipado - CORR">
+            <div class="differentials-grid">
+                <div class="diff-card">
+                    <div class="diff-number">30+</div>
+                    <h3 class="diff-title">Anos de Experiência</h3>
+                    <p class="diff-text">Casos complexos solucionados com segurança por profissionais experientes de alto nível técnico na Tijuca.</p>
                 </div>
-                <div class="gallery-item">
-                    <img src="https://media.atomicatmedia.net/u/xutOKgz7UAO78tXwHNUKx8b6hoX2/Pictures/share/pageABKq27o/BJMPKo2416031.png?quality=78#727712" alt="Equipamentos tecnológicos e odontologia de ponta">
+                <div class="diff-card">
+                    <div class="diff-number">100%</div>
+                    <h3 class="diff-title">Biossegurança Estrita</h3>
+                    <p class="diff-text">Processos de esterilização rigorosos e infraestrutura que obedece estritamente às normas da vigilância sanitária.</p>
                 </div>
-                <div class="gallery-item">
-                    <img src="https://media.atomicatmedia.net/u/xutOKgz7UAO78tXwHNUKx8b6hoX2/Pictures/share/pageABKq27o/inNiAj1296269.png?quality=76#810937" alt="Estrutura de reabilitação estética e implantes">
+                <div class="diff-card">
+                    <div class="diff-number">Premium</div>
+                    <h3 class="diff-title">Tecnologia Avançada</h3>
+                    <p class="diff-text">Utilização de materiais modernos e técnicas de ponta que reduzem o desconforto e aceleram a recuperação pós-tratamento.</p>
                 </div>
-                <div class="gallery-item">
-                    <img src="https://media.atomicatmedia.net/u/xutOKgz7UAO78tXwHNUKx8b6hoX2/Pictures/share/pageABKq27o/wLoLCf9738792.png?quality=88#328737" alt="Sala de atendimento confortável e humanizada">
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Final CTA -->
-    <section class="cta-final">
-        <div class="container">
-            <div class="cta-final-box">
-                <h2>Pronto para recuperar a saúde e a estética do seu sorriso?</h2>
-                <p>Agende agora mesmo uma avaliação com a Dra. Flávia Rabello de Mattos na Tijuca e descubra o plano de tratamento ideal para você.</p>
-                <a href="#" class="btn btn-primary" style="background-color: var(--primary); color: var(--white); box-shadow: 0 4px 20px rgba(100, 149, 237, 0.4);">
-                    <svg width="20" height="20" fill="currentColor" viewBox="0 0 16 16"><path d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.68.68 0 0 0 .178.643l2.457 2.457a.68.68 0 0 0 .644.178l2.189-.547a1.75 1.75 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.6 18.6 0 0 1-7.01-4.42 18.6 18.6 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z"/></svg>
-                    Falar com Atendimento
-                </a>
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
+    <!-- CTA Final -->
+    <section class="final-cta">
+        <div class="container cta-content">
+            <h2 class="cta-title">Pronto para dar o próximo passo rumo ao sorriso dos seus sonhos?</h2>
+            <p class="cta-text">Fale diretamente com nossa equipe de atendimento na Tijuca. Agende sua avaliação personalizada e redescubra o prazer de sorrir livremente.</p>
+            <a href="#" class="btn btn-accent">Falar com Especialista Agora</a>
+        </div>
+    </section>
+
+    <!-- Rodapé -->
     <footer id="contato">
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-brand">
-                    <a href="#" class="logo-box">
-                        <img src="https://www.google.com/s2/favicons?domain=flaviarabellodemattos.com.br&sz=128" alt="Logo Dra. Flávia" class="logo-img">
-                        <div class="logo-text">
-                            <span class="logo-title">CORR</span>
-                            <span class="logo-subtitle" style="color: var(--primary-light);">Reabilitação Rabello</span>
-                        </div>
-                    </a>
-                    <p>Centro de excelência em saúde bucal, estética facial e reabilitação na Tijuca. Atendimento diferenciado fundamentado na ciência e no bem-estar do paciente.</p>
+        <div class="container footer-grid">
+            <div class="footer-col-brand">
+                <div style="display: flex; align-items: center; gap: 12px;">
+                    <img src="https://ui-avatars.com/api/?name=Cl%C3%ADnica%20Odontol%C3%B3gica%20Tijuca%20%2F%20Dra.%20Flavia%20Rabello%20de%20Mattos&background=1F3A34&color=fff&bold=true&size=128&font-size=0.4" alt="Logo Footer" class="footer-logo-img">
+                    <div>
+                        <span class="footer-logo-title">CORR Rabello</span><br>
+                        <span class="footer-logo-subtitle">Odontologia</span>
+                    </div>
                 </div>
-                <div class="footer-column">
-                    <h4>Navegação</h4>
-                    <ul class="footer-links">
-                        <li><a href="#inicio">Início</a></li>
-                        <li><a href="#especialidades">Especialidades</a></li>
-                        <li><a href="#sobre">Quem Somos</a></li>
-                        <li><a href="#galeria">Estrutura Clínica</a></li>
-                    </ul>
-                </div>
-                <div class="footer-column">
-                    <h4>Contato & Endereço</h4>
-                    <div class="footer-contact-item">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-                        <span>
-                            (21) 3978-3331<br>
-                            (21) 99220-0768
+                <p class="footer-desc">Centro Odontológico de Reabilitação Rabello. Devolvendo funcionalidade, estética e qualidade de vida de forma acolhedora.</p>
+            </div>
+
+            <div>
+                <h3 class="footer-col-title">Links Rápidos</h3>
+                <ul class="footer-links">
+                    <li><a href="#inicio">Início</a></li>
+                    <li><a href="#especialidades">Especialidades</a></li>
+                    <li><a href="#sobre">Quem Somos</a></li>
+                    <li><a href="#">Política de Privacidade</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h3 class="footer-col-title">Contato & Localização</h3>
+                <div class="footer-contact-info">
+                    <div class="contact-item">
+                        <span class="contact-icon">📍</span>
+                        <span class="contact-text">
+                            Tijuca, Rio de Janeiro - RJ<br>
+                            Atendimento com hora marcada
                         </span>
                     </div>
-                    <div class="footer-contact-item">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a8 8 0 0 0-8 8c0 5.25 8 12 8 12s8-6.75 8-12a8 8 0 0 0-8-8z"/><circle cx="12" cy="10" r="3"/></svg>
-                        <span>Tijuca, Rio de Janeiro - RJ<br>Atendimento com agendamento prévio.</span>
+                    <div class="contact-item">
+                        <span class="contact-icon">📞</span>
+                        <span class="contact-text">
+                            (21) 3978-3331<br>
+                            (21) 99220-0768 (WhatsApp)
+                        </span>
                     </div>
                 </div>
             </div>
-            <div class="footer-bottom">
-                <p>&copy; 2026 Centro Odontológico de Reabilitação Rabello. Todos os direitos reservados. Responsável Técnica: Dra. Flávia Rabello de Mattos | Registro Profissional: CRO-RJ</p>
-                <p>Desenvolvido com Rigor Ético & de Conversão.</p>
-            </div>
+        </div>
+
+        <div class="container footer-bottom">
+            <p class="copyright">
+                &copy; 2026 Centro Odontológico de Reabilitação Rabello / Dra. Flavia Rabello de Mattos. Todos os direitos reservados. <br>
+                CRO-RJ 20235 - Responsável Técnica: Dra. Flávia Rabello de Mattos.
+            </p>
         </div>
     </footer>
 
-    <!-- Floating WhatsApp Button -->
-    <a href="#" class="whatsapp-float" aria-label="Fale conosco via WhatsApp">
+    <!-- Botão de WhatsApp Flutuante Fixo -->
+    <a href="#" class="whatsapp-float" aria-label="Fale conosco pelo WhatsApp">
         <svg viewBox="0 0 24 24">
-            <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.513 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.724-1.457L0 24zm6.59-4.846c1.6.95 3.188 1.449 4.825 1.451 5.436 0 9.86-4.37 9.863-9.73.001-2.597-1.002-5.038-2.825-6.864-1.823-1.825-4.243-2.83-6.839-2.83-5.439 0-9.865 4.372-9.87 9.732-.002 1.773.475 3.501 1.378 5.027L2.11 21.53l5.537-1.443a9.716 9.716 0 0 0-1.0 1.066zM17.5 14.156c-.3-.15-1.774-.875-2.046-.975-.27-.1-.468-.15-.665.15-.197.3-.765.975-.938 1.175-.173.2-.347.225-.648.075-.3-.15-1.266-.467-2.41-1.485-.89-.794-1.49-1.775-1.665-2.075-.173-.3-.018-.462.13-.61.135-.133.3-.35.45-.525.15-.175.2-.3.3-.5.1-.2.05-.375-.025-.525-.075-.15-.665-1.604-.912-2.198-.24-.58-.487-.5-.665-.51-.173-.008-.371-.01-.57-.01-.2 0-.52.075-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.2 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.774-.725 2.02-1.425.248-.7.248-1.3.173-1.425-.076-.125-.27-.2-.57-.35z"/>
+            <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.514 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.724-1.457L0 24zm6.59-4.846c1.6.95 3.188 1.449 4.825 1.451 5.436 0 9.86-4.37 9.864-9.799.002-2.63-1.023-5.101-2.885-6.965C16.57 2.038 14.105.812 11.48.812 6.042.812 1.62 5.181 1.615 10.612c-.001 1.702.463 3.364 1.341 4.8l-.999 3.648 3.75-.98c1.511.82 3.19 1.254 4.836 1.254zm12.188-6.685c-.33-.165-1.951-.951-2.251-1.059-.3-.109-.518-.163-.735.163-.217.326-.84 1.059-1.03 1.276-.188.218-.378.245-.708.08-1.012-.486-1.933-.896-2.705-1.554-.607-.518-.946-1.127-1.065-1.323-.119-.197-.013-.303.086-.402.09-.089.197-.23.296-.346.099-.115.133-.196.198-.327.065-.13.032-.244-.017-.342-.049-.098-.436-1.047-.596-1.433-.156-.376-.328-.325-.45-.331-.115-.006-.247-.007-.379-.007-.133 0-.349.05-.532.247-.183.197-.698.674-.698 1.644 0 .97.715 1.91 0 1.911.815 1.058 1.6 1.71 2.4 2.3.8.59 1.6 1.05 2.5 1.34 1.2.39 2.1.34 2.8.23.8-.12 1.9-.78 2.2-1.5.3-.7.3-1.3.2-1.4-.1-.1-.3-.2-.6-.3z"/>
         </svg>
     </a>
 
