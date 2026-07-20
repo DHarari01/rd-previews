@@ -3,68 +3,74 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ganime Nutri | Nutrição Funcional e Acolhimento</title>
+    <title>Ganime Nutri - Nutrição Funcional e Acolhimento</title>
     
-    <!-- Google Fonts -->
+    <!-- Fontes Premium -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Configuração de Pixel de Anúncios (Simulado / Pronto para Produção) -->
+    <script>
+        // RD Exclusive - Rastreamento e Conversão Avançada
+        !function(f,b,e,v,n,t,s)
+        {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+        n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+        n.queue=[];t=b.createElement(e);t.async=!0;
+        t.src=v;s=b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t,s)}(window, document,'script',
+        'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', 'PIXEL_ID_REPLACE');
+        fbq('track', 'PageView');
+    </script>
+    
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap');
-    </style>
-
-    <!-- Design System & Reset -->
-    <style>
+        /* DESIGN SYSTEM - GANIME NUTRI */
         :root {
-            --bg-color: #FAF7F2;
-            --primary-color: #1F3A34;
-            --primary-light: #2D544B;
-            --accent-color: #C9A227;
-            --accent-hover: #B08D1E;
-            --text-color: #1A1A1A;
+            --bg-color: #FAF7F2;      /* Off-white quente */
+            --primary: #1F3A34;       /* Verde Petróleo Premium */
+            --primary-light: #2c4e46;
+            --accent: #C9A227;        /* Doutado Destaque */
+            --text-dark: #1A1A1A;     /* Quase preto para legibilidade */
             --text-muted: #555555;
             --white: #FFFFFF;
-            --border-color: rgba(31, 58, 52, 0.08);
-            --font-serif: 'Playfair Display', Georgia, serif;
-            --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
-            --shadow-sm: 0 4px 12px rgba(31, 58, 52, 0.03);
-            --shadow-md: 0 12px 32px rgba(31, 58, 52, 0.06);
+            --font-serif: 'Fraunces', serif;
+            --font-sans: 'Inter', sans-serif;
             --transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+            --shadow-subtle: 0 4px 20px rgba(31, 58, 52, 0.05);
+            --shadow-medium: 0 12px 30px rgba(31, 58, 52, 0.08);
+            --border-radius: 16px;
         }
 
+        /* RESET & SETUP */
         * {
-            box-sizing: border-box;
             margin: 0;
             padding: 0;
+            box-sizing: border-box;
+            outline: none;
+        }
+
+        html {
             scroll-behavior: smooth;
+            -webkit-font-smoothing: antialiased;
         }
 
         body {
             background-color: var(--bg-color);
-            color: var(--text-color);
+            color: var(--text-dark);
             font-family: var(--font-sans);
             line-height: 1.6;
-            -webkit-font-smoothing: antialiased;
             overflow-x: hidden;
         }
 
-        h1, h2, h3, h4 {
-            font-family: var(--font-serif);
-            color: var(--primary-color);
-            font-weight: 600;
-            line-height: 1.25;
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
         }
 
-        p {
-            font-size: 1rem;
-            color: var(--text-muted);
-            font-weight: 300;
-        }
-
-        a {
-            text-decoration: none;
-            color: inherit;
-            transition: var(--transition);
-        }
-
-        /* Container & Layout */
+        /* CONTAINER GLOBAL */
         .container {
             width: 100%;
             max-width: 1200px;
@@ -72,162 +78,104 @@
             padding: 0 24px;
         }
 
-        .section {
-            padding: 80px 0;
-        }
-
-        @media (min-width: 768px) {
-            .section {
-                padding: 120px 0;
-            }
-        }
-
-        /* Buttons */
+        /* BOTOES */
         .btn {
             display: inline-flex;
             align-items: center;
             justify-content: center;
             padding: 16px 32px;
             border-radius: 50px;
-            font-weight: 500;
-            font-size: 0.95rem;
-            letter-spacing: 0.5px;
-            cursor: pointer;
+            font-family: var(--font-sans);
+            font-weight: 600;
+            text-decoration: none;
             transition: var(--transition);
+            cursor: pointer;
             border: none;
-            gap: 8px;
+            font-size: 1rem;
+            letter-spacing: -0.01em;
         }
 
         .btn-primary {
-            background-color: var(--primary-color);
-            color: var(--bg-color);
-            box-shadow: var(--shadow-sm);
+            background-color: var(--primary);
+            color: var(--white);
+            box-shadow: 0 4px 15px rgba(31, 58, 52, 0.2);
         }
 
         .btn-primary:hover {
-            background-color: var(--primary-light);
+            background-color: var(--accent);
+            color: var(--primary);
             transform: translateY(-2px);
-            box-shadow: var(--shadow-md);
+            box-shadow: 0 6px 20px rgba(201, 162, 39, 0.3);
         }
 
-        .btn-outline {
-            border: 1px solid var(--primary-color);
-            color: var(--primary-color);
-            background: transparent;
+        .btn-secondary {
+            background-color: transparent;
+            color: var(--primary);
+            border: 2px solid var(--primary);
         }
 
-        .btn-outline:hover {
-            background-color: rgba(31, 58, 52, 0.04);
+        .btn-secondary:hover {
+            background-color: rgba(31, 58, 52, 0.05);
             transform: translateY(-2px);
         }
 
-        /* Header / Navbar */
-        .header {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            z-index: 1000;
-            background-color: rgba(250, 247, 242, 0.9);
+        /* HEADER & NAVBAR */
+        header {
+            background-color: rgba(250, 247, 242, 0.95);
             backdrop-filter: blur(10px);
-            border-bottom: 1px solid var(--border-color);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            border-bottom: 1px solid rgba(31, 58, 52, 0.05);
             transition: var(--transition);
         }
 
-        .nav-container {
+        .nav-wrapper {
             display: flex;
             align-items: center;
             justify-content: space-between;
             height: 80px;
         }
 
-        .logo {
-            font-family: var(--font-serif);
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: var(--primary-color);
-            display: flex;
-            align-items: center;
-            gap: 10px;
+        .logo-container img {
+            max-height: 48px;
+            width: auto;
         }
 
-        .logo span {
-            color: var(--accent-color);
+        .logo-text {
+            font-family: var(--font-serif);
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--primary);
+            text-decoration: none;
         }
 
         .nav-menu {
-            display: none;
+            display: none; /* Mobile first hidden */
         }
 
-        .menu-toggle {
-            display: flex;
-            flex-direction: column;
-            gap: 6px;
-            cursor: pointer;
-            border: none;
-            background: none;
-            padding: 4px;
-        }
-
-        .menu-toggle span {
-            display: block;
-            width: 24px;
-            height: 2px;
-            background-color: var(--primary-color);
+        .contact-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 16px;
+            background-color: rgba(31, 58, 52, 0.05);
+            border-radius: 100px;
+            text-decoration: none;
+            color: var(--primary);
+            font-weight: 500;
+            font-size: 0.875rem;
             transition: var(--transition);
         }
 
-        /* Active Mobile Menu Styles */
-        .nav-menu.active {
-            display: flex;
-            flex-direction: column;
-            position: absolute;
-            top: 80px;
-            left: 0;
-            width: 100%;
-            background-color: var(--bg-color);
-            padding: 24px;
-            border-bottom: 1px solid var(--border-color);
-            gap: 16px;
-            box-shadow: var(--shadow-md);
+        .contact-pill:hover {
+            background-color: var(--primary);
+            color: var(--white);
         }
 
-        @media (min-width: 992px) {
-            .nav-menu {
-                display: flex;
-                align-items: center;
-                gap: 32px;
-            }
-            .nav-menu.active {
-                position: static;
-                display: flex;
-                flex-direction: row;
-                padding: 0;
-                border: none;
-                box-shadow: none;
-                width: auto;
-            }
-            .menu-toggle {
-                display: none;
-            }
-        }
-
-        .nav-link {
-            font-size: 0.95rem;
-            font-weight: 500;
-            color: var(--primary-color);
-            opacity: 0.8;
-        }
-
-        .nav-link:hover, .nav-link.active {
-            opacity: 1;
-            color: var(--accent-color);
-        }
-
-        /* Hero Section */
+        /* HERO SECTION */
         .hero {
-            padding-top: 140px;
-            padding-bottom: 80px;
+            padding: 60px 0;
             position: relative;
             overflow: hidden;
         }
@@ -235,376 +183,387 @@
         .hero-grid {
             display: grid;
             grid-template-columns: 1fr;
-            gap: 48px;
+            gap: 40px;
             align-items: center;
         }
 
-        @media (min-width: 992px) {
-            .hero-grid {
-                grid-template-columns: 1.1fr 0.9fr;
-                gap: 80px;
-            }
+        .hero-content {
+            text-align: center;
         }
 
         .hero-tag {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            background-color: rgba(31, 58, 52, 0.05);
-            padding: 8px 16px;
-            border-radius: 30px;
-            font-size: 0.85rem;
-            font-weight: 500;
-            color: var(--primary-color);
-            margin-bottom: 24px;
+            font-family: var(--font-sans);
+            font-size: 0.875rem;
+            font-weight: 600;
+            color: var(--accent);
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: 16px;
+            display: inline-block;
         }
 
-        .hero-tag span {
-            width: 6px;
-            height: 6px;
-            border-radius: 50%;
-            background-color: var(--accent-color);
-        }
-
-        .hero h1 {
+        .hero-title {
+            font-family: var(--font-serif);
             font-size: 2.5rem;
+            line-height: 1.15;
+            color: var(--primary);
             margin-bottom: 24px;
-            letter-spacing: -0.5px;
+            font-weight: 500;
         }
 
-        @media (min-width: 768px) {
-            .hero h1 {
-                font-size: 3.5rem;
-            }
+        .hero-title span {
+            font-style: italic;
         }
 
-        .hero p {
-            font-size: 1.15rem;
-            margin-bottom: 40px;
-            max-width: 580px;
+        .hero-description {
+            font-size: 1.125rem;
+            color: var(--text-muted);
+            margin-bottom: 32px;
+            max-width: 540px;
+            margin-left: auto;
+            margin-right: auto;
         }
 
         .hero-actions {
             display: flex;
             flex-direction: column;
             gap: 16px;
-        }
-
-        @media (min-width: 480px) {
-            .hero-actions {
-                flex-direction: row;
-            }
-        }
-
-        .hero-image-container {
-            position: relative;
-            display: flex;
             justify-content: center;
         }
 
         .hero-image-wrapper {
-            width: 100%;
-            max-width: 450px;
-            aspect-ratio: 1;
-            background-color: var(--white);
-            border-radius: 40px;
             position: relative;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border: 1px solid var(--border-color);
-            box-shadow: var(--shadow-md);
+            border-radius: var(--border-radius);
             overflow: hidden;
+            box-shadow: var(--shadow-medium);
         }
 
-        .hero-bg-accent {
-            position: absolute;
-            width: 120%;
-            height: 120%;
-            background: radial-gradient(circle, rgba(201,162,39,0.08) 0%, rgba(250,247,242,0) 70%);
-            z-index: -1;
-            top: -10%;
-            left: -10%;
+        .hero-image {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            aspect-ratio: 1/1;
+            transition: var(--transition);
         }
 
-        /* Abstract Premium SVG Illustration instead of generic broken image */
-        .hero-illustration {
-            width: 80%;
-            height: 80%;
-            opacity: 0.95;
+        .hero-image-wrapper:hover .hero-image {
+            transform: scale(1.03);
         }
 
-        /* Social Proof / Trust Banner */
-        .trust-banner {
-            background-color: var(--white);
-            border-top: 1px solid var(--border-color);
-            border-bottom: 1px solid var(--border-color);
+        /* PROVA SOCIAL (GOOGLE RATING) */
+        .social-proof {
             padding: 40px 0;
+            background-color: var(--white);
+            border-top: 1px solid rgba(31, 58, 52, 0.05);
+            border-bottom: 1px solid rgba(31, 58, 52, 0.05);
         }
 
-        .trust-grid {
+        .proof-wrapper {
             display: flex;
             flex-direction: column;
-            gap: 32px;
             align-items: center;
+            gap: 24px;
             text-align: center;
         }
 
-        @media (min-width: 768px) {
-            .trust-grid {
-                flex-direction: row;
-                justify-content: space-between;
-                text-align: left;
-            }
-        }
-
-        .trust-rating {
-            display: flex;
-            flex-direction: column;
-            gap: 8px;
-        }
-
-        .stars {
+        .stars-container {
             display: flex;
             gap: 4px;
-            color: var(--accent-color);
-            justify-content: center;
+            color: var(--accent);
+            font-size: 1.25rem;
         }
 
-        @media (min-width: 768px) {
-            .stars {
-                justify-content: flex-start;
-            }
+        .proof-text {
+            font-family: var(--font-serif);
+            font-size: 1.25rem;
+            color: var(--primary);
+            font-weight: 500;
         }
 
-        .trust-metrics {
-            display: flex;
-            gap: 48px;
+        .stats-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 24px;
+            width: 100%;
+            max-width: 500px;
+            margin-top: 16px;
         }
 
-        .metric-item {
-            display: flex;
-            flex-direction: column;
+        .stat-card {
+            padding: 16px;
+            background-color: var(--bg-color);
+            border-radius: 12px;
         }
 
-        .metric-number {
+        .stat-num {
             font-family: var(--font-serif);
             font-size: 2rem;
-            color: var(--primary-color);
-            font-weight: 700;
+            font-weight: 600;
+            color: var(--primary);
+            display: block;
+            margin-bottom: 4px;
         }
 
-        .metric-label {
-            font-size: 0.85rem;
+        .stat-label {
+            font-size: 0.875rem;
             color: var(--text-muted);
             font-weight: 500;
         }
 
-        /* Services / Differentials */
-        .services-header {
-            text-align: center;
-            max-width: 700px;
-            margin: 0 auto 64px auto;
+        /* INTERACTIVE CONVERSION QUIZ (RD EXCLUSIVE EXCLUSIVE) */
+        .quiz-section {
+            padding: 80px 0;
+            background-color: #F3ECE2;
         }
 
-        .services-header h2 {
-            font-size: 2.2rem;
+        .quiz-container {
+            max-width: 680px;
+            margin: 0 auto;
+            background-color: var(--white);
+            border-radius: 24px;
+            padding: 32px;
+            box-shadow: var(--shadow-medium);
+            border: 1px solid rgba(31, 58, 52, 0.03);
+        }
+
+        .quiz-header {
+            text-align: center;
+            margin-bottom: 24px;
+        }
+
+        .quiz-title {
+            font-family: var(--font-serif);
+            font-size: 1.75rem;
+            color: var(--primary);
+            margin-bottom: 8px;
+        }
+
+        .quiz-subtitle {
+            font-size: 0.95rem;
+            color: var(--text-muted);
+        }
+
+        .quiz-progress {
+            height: 4px;
+            background-color: #E6DFD5;
+            border-radius: 2px;
+            margin-bottom: 32px;
+            overflow: hidden;
+        }
+
+        .quiz-progress-bar {
+            height: 100%;
+            background-color: var(--accent);
+            width: 33%;
+            transition: width 0.4s ease;
+        }
+
+        .quiz-step {
+            display: none;
+        }
+
+        .quiz-step.active {
+            display: block;
+            animation: fadeIn 0.4s ease;
+        }
+
+        .quiz-question {
+            font-family: var(--font-serif);
+            font-size: 1.25rem;
+            color: var(--primary);
+            margin-bottom: 20px;
+            font-weight: 500;
+        }
+
+        .quiz-options {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 12px;
+        }
+
+        .quiz-option {
+            background-color: var(--bg-color);
+            border: 2px solid transparent;
+            border-radius: 12px;
+            padding: 16px 20px;
+            cursor: pointer;
+            transition: var(--transition);
+            font-weight: 500;
+            text-align: left;
+            color: var(--text-dark);
+        }
+
+        .quiz-option:hover {
+            border-color: rgba(31, 58, 52, 0.2);
+            background-color: var(--white);
+        }
+
+        .quiz-option.selected {
+            border-color: var(--accent);
+            background-color: rgba(201, 162, 39, 0.08);
+            color: var(--primary);
+        }
+
+        .quiz-nav {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 24px;
+        }
+
+        /* DIFERENCIAIS / SERVICOS */
+        .services {
+            padding: 80px 0;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 48px;
+        }
+
+        .section-title {
+            font-family: var(--font-serif);
+            font-size: 2.25rem;
+            color: var(--primary);
             margin-bottom: 16px;
+        }
+
+        .section-desc {
+            font-size: 1.1rem;
+            color: var(--text-muted);
+            max-width: 600px;
+            margin: 0 auto;
         }
 
         .services-grid {
             display: grid;
             grid-template-columns: 1fr;
-            gap: 32px;
-        }
-
-        @media (min-width: 768px) {
-            .services-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-        }
-
-        @media (min-width: 1024px) {
-            .services-grid {
-                grid-template-columns: repeat(3, 1fr);
-            }
+            gap: 24px;
         }
 
         .service-card {
             background-color: var(--white);
-            border: 1px solid var(--border-color);
             border-radius: var(--border-radius);
-            padding: 40px;
+            padding: 32px;
+            box-shadow: var(--shadow-subtle);
+            border: 1px solid rgba(31, 58, 52, 0.03);
             transition: var(--transition);
-            display: flex;
-            flex-direction: column;
-            height: 100%;
         }
 
         .service-card:hover {
-            transform: translateY(-8px);
-            box-shadow: var(--shadow-md);
-            border-color: rgba(31, 58, 52, 0.15);
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-medium);
+            border-color: rgba(201, 162, 39, 0.2);
         }
 
         .service-icon {
             width: 48px;
             height: 48px;
-            border-radius: 12px;
             background-color: rgba(31, 58, 52, 0.05);
+            border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
+            color: var(--primary);
+            font-size: 1.5rem;
             margin-bottom: 24px;
-            color: var(--primary-color);
-            transition: var(--transition);
         }
 
-        .service-card:hover .service-icon {
-            background-color: var(--primary-color);
-            color: var(--white);
-        }
-
-        .service-card h3 {
+        .service-card-title {
+            font-family: var(--font-serif);
             font-size: 1.35rem;
-            margin-bottom: 16px;
+            color: var(--primary);
+            margin-bottom: 12px;
+            font-weight: 550;
         }
 
-        .service-card p {
+        .service-card-desc {
             font-size: 0.95rem;
-            line-height: 1.6;
-            flex-grow: 1;
+            color: var(--text-muted);
         }
 
-        /* About / Storytelling Section */
+        /* CLINICA / QUEM SOU EU */
         .about {
+            padding: 80px 0;
             background-color: var(--white);
-            border-top: 1px solid var(--border-color);
-            border-bottom: 1px solid var(--border-color);
-            position: relative;
         }
 
         .about-grid {
             display: grid;
             grid-template-columns: 1fr;
-            gap: 48px;
+            gap: 40px;
             align-items: center;
         }
 
-        @media (min-width: 992px) {
-            .about-grid {
-                grid-template-columns: 0.9fr 1.1fr;
-                gap: 80px;
-            }
-        }
-
-        .about-image-container {
-            display: flex;
-            justify-content: center;
+        .about-image-wrapper {
             position: relative;
-        }
-
-        .about-image-frame {
-            width: 100%;
-            max-width: 420px;
-            aspect-ratio: 0.85;
-            border-radius: 40px;
-            border: 1px solid var(--border-color);
-            padding: 16px;
-            background-color: var(--bg-color);
-            box-shadow: var(--shadow-md);
-        }
-
-        .about-image-inner {
-            width: 100%;
-            height: 100%;
-            border-radius: 28px;
-            background-color: var(--primary-color);
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            border-radius: var(--border-radius);
             overflow: hidden;
-            position: relative;
+            box-shadow: var(--shadow-medium);
         }
 
-        /* Abstract portrait illustration placeholder */
-        .about-illustration {
-            width: 70%;
-            height: 70%;
-            opacity: 0.85;
+        .about-image {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            aspect-ratio: 1/1;
         }
 
-        .about-content h2 {
-            font-size: 2.2rem;
-            margin-bottom: 8px;
+        .about-content {
+            text-align: left;
         }
 
-        .about-subtitle {
-            font-family: var(--font-sans);
+        .crn-badge {
+            display: inline-block;
+            background-color: rgba(201, 162, 39, 0.1);
+            color: #b08d1e;
+            padding: 4px 12px;
+            border-radius: 50px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            margin-bottom: 16px;
+        }
+
+        .about-story {
             font-size: 1rem;
-            font-weight: 500;
-            color: var(--accent-color);
-            margin-bottom: 32px;
-            text-transform: uppercase;
-            letter-spacing: 1px;
+            color: var(--text-muted);
+            margin-bottom: 20px;
         }
 
-        .about-text {
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-        }
-
-        .about-text p {
-            font-size: 1rem;
-            line-height: 1.7;
-        }
-
-        .about-story-highlight {
-            border-left: 3px solid var(--accent-color);
+        .highlighted-quote {
+            border-left: 3px solid var(--accent);
             padding-left: 20px;
-            font-style: italic;
-            color: var(--primary-color);
-            font-size: 1.1rem;
+            margin: 24px 0;
             font-family: var(--font-serif);
-            margin: 10px 0;
+            font-size: 1.15rem;
+            font-style: italic;
+            color: var(--primary);
         }
 
-        /* Testimonials Section */
+        /* TESTIMONIALS / CASOS */
         .testimonials {
+            padding: 80px 0;
             background-color: var(--bg-color);
         }
 
-        .testimonial-slider {
+        .testimonial-carousel {
             display: grid;
             grid-template-columns: 1fr;
-            gap: 32px;
-            margin-top: 48px;
-        }
-
-        @media (min-width: 768px) {
-            .testimonial-slider {
-                grid-template-columns: repeat(2, 1fr);
-            }
+            gap: 24px;
         }
 
         .testimonial-card {
             background-color: var(--white);
-            border: 1px solid var(--border-color);
             border-radius: var(--border-radius);
-            padding: 40px;
-            box-shadow: var(--shadow-sm);
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
+            padding: 32px;
+            box-shadow: var(--shadow-subtle);
         }
 
         .testimonial-text {
+            font-family: var(--font-sans);
             font-size: 1rem;
-            line-height: 1.7;
-            font-style: italic;
-            color: var(--text-muted);
+            color: var(--text-dark);
             margin-bottom: 24px;
+            font-style: italic;
         }
 
         .testimonial-author {
@@ -617,184 +576,86 @@
             width: 48px;
             height: 48px;
             border-radius: 50%;
-            background-color: rgba(31, 58, 52, 0.05);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: 600;
-            color: var(--primary-color);
+            object-fit: cover;
         }
 
         .author-info h4 {
-            font-family: var(--font-sans);
-            font-size: 0.95rem;
-            font-weight: 600;
-            color: var(--primary-color);
+            font-family: var(--font-serif);
+            font-size: 1rem;
+            color: var(--primary);
         }
 
-        .author-info p {
+        .author-info span {
             font-size: 0.8rem;
-            color: var(--accent-color);
-            font-weight: 500;
+            color: var(--text-muted);
         }
 
-        /* Final CTA Section */
-        .cta-section {
-            background-color: var(--primary-color);
-            color: var(--bg-color);
-            position: relative;
-            overflow: hidden;
+        /* CTA FINAL */
+        .cta-final {
+            padding: 100px 0;
+            background: linear-gradient(rgba(31, 58, 52, 0.95), rgba(31, 58, 52, 0.95)), 
+                        url('https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=768,h=763,fit=crop/mjEG1pPpraCy2kRr/whatsapp-image-2024-12-11-at-18.23.08-AR03DjxrWzH0O0PP.jpeg') no-repeat center center / cover;
+            color: var(--white);
             text-align: center;
         }
 
-        .cta-section::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: radial-gradient(circle, rgba(201,162,39,0.15) 0%, rgba(31,58,52,0) 70%);
-            pointer-events: none;
+        .cta-final .section-title {
+            color: var(--white);
         }
 
-        .cta-content {
-            max-width: 750px;
-            margin: 0 auto;
-            position: relative;
-            z-index: 1;
-        }
-
-        .cta-content h2 {
-            color: var(--bg-color);
-            font-size: 2.5rem;
-            margin-bottom: 24px;
-        }
-
-        @media (min-width: 768px) {
-            .cta-content h2 {
-                font-size: 3.2rem;
-            }
-        }
-
-        .cta-content p {
-            color: rgba(250, 247, 242, 0.85);
-            font-size: 1.15rem;
+        .cta-final .section-desc {
+            color: rgba(250, 247, 242, 0.8);
             margin-bottom: 40px;
         }
 
-        .cta-content .btn-primary {
-            background-color: var(--accent-color);
-            color: var(--primary-color);
-            font-weight: 600;
-        }
-
-        .cta-content .btn-primary:hover {
-            background-color: var(--accent-hover);
-            transform: translateY(-2px);
-        }
-
-        /* Footer */
-        .footer {
-            background-color: #152622;
+        /* FOOTER */
+        footer {
+            background-color: var(--primary);
             color: rgba(250, 247, 242, 0.7);
-            padding: 80px 0 40px 0;
-            border-top: 1px solid rgba(250, 247, 242, 0.05);
-            font-size: 0.9rem;
+            padding: 60px 0 30px;
+            border-top: 1px solid rgba(250, 247, 242, 0.1);
         }
 
         .footer-grid {
             display: grid;
             grid-template-columns: 1fr;
-            gap: 48px;
-            margin-bottom: 64px;
+            gap: 40px;
+            margin-bottom: 40px;
         }
 
-        @media (min-width: 768px) {
-            .footer-grid {
-                grid-template-columns: 1.5fr repeat(2, 1fr);
-            }
-        }
-
-        .footer-brand h3 {
-            color: var(--bg-color);
-            font-size: 1.6rem;
+        .footer-logo {
+            font-family: var(--font-serif);
+            font-size: 1.75rem;
+            color: var(--white);
             margin-bottom: 16px;
         }
 
-        .footer-brand p {
-            color: rgba(250, 247, 242, 0.6);
-            margin-bottom: 24px;
-            max-width: 320px;
-        }
-
-        .footer-title {
-            color: var(--bg-color);
-            font-family: var(--font-sans);
-            font-size: 0.95rem;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            margin-bottom: 24px;
-        }
-
-        .footer-links {
-            list-style: none;
-            display: flex;
-            flex-direction: column;
-            gap: 12px;
-        }
-
-        .footer-links a:hover {
-            color: var(--accent-color);
-        }
-
-        .footer-contact-info {
-            display: flex;
-            flex-direction: column;
-            gap: 16px;
-        }
-
-        .contact-item {
+        .footer-info-item {
             display: flex;
             align-items: flex-start;
             gap: 12px;
+            margin-bottom: 16px;
+            font-size: 0.95rem;
         }
 
-        .contact-item svg {
+        .footer-info-item svg {
             flex-shrink: 0;
-            margin-top: 3px;
-            color: var(--accent-color);
+            margin-top: 4px;
+            color: var(--accent);
         }
 
         .footer-bottom {
-            border-top: 1px solid rgba(250, 247, 242, 0.05);
-            padding-top: 40px;
-            display: flex;
-            flex-direction: column;
-            gap: 16px;
-            align-items: center;
-            justify-content: space-between;
+            border-top: 1px solid rgba(250, 247, 242, 0.1);
+            padding-top: 30px;
             text-align: center;
+            font-size: 0.875rem;
         }
 
-        @media (min-width: 768px) {
-            .footer-bottom {
-                flex-direction: row;
-                text-align: left;
-            }
-        }
-
-        .footer-bottom p {
-            font-size: 0.8rem;
-            color: rgba(250, 247, 242, 0.4);
-        }
-
-        /* Floating WhatsApp Button */
+        /* WHATSAPP FLOAT BUTTON */
         .whatsapp-float {
             position: fixed;
-            bottom: 32px;
-            right: 32px;
+            bottom: 24px;
+            right: 24px;
             background-color: #25D366;
             color: white;
             width: 60px;
@@ -803,340 +664,452 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            box-shadow: 0 8px 32px rgba(37, 211, 102, 0.3);
-            z-index: 999;
+            box-shadow: 0 4px 20px rgba(37, 211, 102, 0.3);
+            z-index: 1000;
             transition: var(--transition);
         }
 
         .whatsapp-float:hover {
-            transform: scale(1.1) translateY(-4px);
-            box-shadow: 0 12px 40px rgba(37, 211, 102, 0.45);
+            transform: scale(1.1);
+            box-shadow: 0 6px 24px rgba(37, 211, 102, 0.45);
         }
 
         .whatsapp-float svg {
-            width: 28px;
-            height: 28px;
+            width: 30px;
+            height: 30px;
             fill: currentColor;
+        }
+
+        /* RESPONSIVIDADE (DESKTOP) */
+        @media (min-width: 768px) {
+            .hero-grid {
+                grid-template-columns: 1fr 1fr;
+                gap: 60px;
+            }
+
+            .hero-content {
+                text-align: left;
+            }
+
+            .hero-title {
+                font-size: 3.5rem;
+            }
+
+            .hero-description {
+                margin-left: 0;
+            }
+
+            .hero-actions {
+                flex-direction: row;
+                justify-content: flex-start;
+            }
+
+            .proof-wrapper {
+                flex-direction: row;
+                justify-content: space-between;
+                text-align: left;
+            }
+
+            .stats-grid {
+                margin-top: 0;
+                width: auto;
+            }
+
+            .services-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+            .about-grid {
+                grid-template-columns: 1fr 1.2fr;
+                gap: 80px;
+            }
+
+            .testimonial-carousel {
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+            .footer-grid {
+                grid-template-columns: 1.5fr 1fr 1fr;
+            }
+
+            .nav-menu {
+                display: flex;
+                align-items: center;
+                gap: 32px;
+            }
+
+            .nav-menu a {
+                color: var(--primary);
+                text-decoration: none;
+                font-weight: 500;
+                font-size: 0.95rem;
+                transition: var(--transition);
+            }
+
+            .nav-menu a:hover {
+                color: var(--accent);
+            }
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
         }
     </style>
 </head>
 <body>
 
-    <!-- Header / Navbar -->
-    <header class="header">
-        <div class="container nav-container">
-            <a href="#" class="logo">
-                Ganime<span>Nutri</span>
+    <!-- HEADER / NAVBAR -->
+    <header>
+        <div class="container nav-wrapper">
+            <a href="#" class="logo-text">
+                Ganime Nutri
             </a>
-            <nav class="nav-menu" id="navMenu">
-                <a href="#inicio" class="nav-link active">Início</a>
-                <a href="#como-ajudar" class="nav-link">Como posso ajudar?</a>
-                <a href="#quem-sou" class="nav-link">Quem sou eu</a>
-                <a href="#depoimentos" class="nav-link">Depoimentos</a>
-                <a href="#contato" class="nav-link">Contato</a>
+            
+            <nav class="nav-menu">
+                <a href="#sobre">Quem sou eu</a>
+                <a href="#ajuda">Como posso ajudar?</a>
+                <a href="#depoimentos">Depoimentos</a>
+                <a href="#contato">Contato</a>
             </nav>
-            <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
+
+            <a href="#" class="contact-pill" onclick="triggerPixelAndRedirect('Header_CTA')">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                Falar com Vanessa
+            </a>
         </div>
     </header>
 
-    <!-- Hero Section -->
-    <section class="hero" id="inicio">
-        <div class="hero-bg-accent"></div>
-        <div class="container">
-            <div class="hero-grid">
+    <main>
+        <!-- HERO SECTION -->
+        <section class="hero">
+            <div class="container hero-grid">
                 <div class="hero-content">
-                    <div class="hero-tag">
-                        <span></span> Nutrição Funcional e Acolhimento
-                    </div>
-                    <h1>Nutrição Funcional para o Seu Bem-Estar</h1>
-                    <p>Não é sobre dieta. É sobre finalmente se escutar, se entender, se acolher, e escolher viver com mais leveza, energia e verdade.</p>
+                    <span class="hero-tag">Nutrição Funcional e Acolhimento</span>
+                    <h1 class="hero-title">Não é sobre dieta. É sobre finalmente se <span>escutar e se acolher</span>.</h1>
+                    <p class="hero-description">Escolha viver com mais leveza, energia e verdade. Um acompanhamento nutricional de verdade, que respeita suas emoções e história.</p>
                     <div class="hero-actions">
-                        <a href="#" class="btn btn-primary">
-                            Agendar Consulta
-                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-                        </a>
-                        <a href="#como-ajudar" class="btn btn-outline">Saiba mais</a>
+                        <a href="#" class="btn btn-primary" onclick="triggerPixelAndRedirect('Hero_CTA_Agendar')">Agendar Consulta</a>
+                        <a href="#ajuda" class="btn btn-secondary">Saiba Mais</a>
                     </div>
                 </div>
-                <div class="hero-image-container">
-                    <div class="hero-image-wrapper">
-                        <!-- Elegant premium abstract vector/graphic representing harmony and nutrition -->
-                        <svg class="hero-illustration" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <circle cx="100" cy="100" r="80" fill="#1F3A34" fill-opacity="0.03"/>
-                            <path d="M100 30C125 30 145 50 145 75C145 110 100 170 100 170C100 170 55 110 55 75C55 50 75 30 100 30Z" stroke="#1F3A34" stroke-width="1.5" stroke-miterlimit="10"/>
-                            <circle cx="100" cy="75" r="15" stroke="#C9A227" stroke-width="1.5"/>
-                            <path d="M70 115C85 130 115 130 130 115" stroke="#1F3A34" stroke-width="1.5" stroke-linecap="round"/>
-                        </svg>
+                <div class="hero-image-wrapper">
+                    <img src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=768,h=763,fit=crop/mjEG1pPpraCy2kRr/whatsapp-image-2024-12-11-at-18.23.08-AR03DjxrWzH0O0PP.jpeg" alt="Dra. Vanessa Ganime" class="hero-image">
+                </div>
+            </div>
+        </section>
+
+        <!-- PROVA SOCIAL -->
+        <section class="social-proof">
+            <div class="container proof-wrapper">
+                <div>
+                    <div class="stars-container">★★★★★</div>
+                    <p class="proof-text">Clínica de Nutrição de Alto Padrão avaliada com Nota Máxima</p>
+                </div>
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <span class="stat-num">200+</span>
+                        <span class="stat-label">Pacientes Satisfeitos</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-num">+150</span>
+                        <span class="stat-label">Depoimentos Reais</span>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Social Proof / Trust Banner -->
-    <div class="trust-banner">
-        <div class="container">
-            <div class="trust-grid">
-                <div class="trust-rating">
-                    <div class="stars">
-                        <!-- 5 Stars SVG -->
-                        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
-                        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
-                        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
-                        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
-                        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+        <!-- FUNNEL INTERATIVO / QUIZ DE SINTOMAS -->
+        <section class="quiz-section">
+            <div class="container">
+                <div class="quiz-container">
+                    <div class="quiz-header">
+                        <span style="font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--accent); font-weight:600;">Triagem de Saúde</span>
+                        <h3 class="quiz-title">Identifique Seus Desequilíbrios</h3>
+                        <p class="quiz-subtitle">Descubra em menos de 1 minuto se os seus sintomas exigem um acompanhamento personalizado.</p>
                     </div>
-                    <p style="font-weight: 500; color: var(--primary-color);">Avaliação 5.0 estrelas no Google</p>
-                </div>
-                <div class="trust-metrics">
-                    <div class="metric-item">
-                        <span class="metric-number">200+</span>
-                        <span class="metric-label">Pacientes Satisfeitos</span>
+                    
+                    <div class="quiz-progress">
+                        <div class="quiz-progress-bar" id="quiz-progress-bar"></div>
                     </div>
-                    <div class="metric-item">
-                        <span class="metric-number">+150</span>
-                        <span class="metric-label">Depoimentos Reais</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
 
-    <!-- Services / Differentials -->
-    <section class="section" id="como-ajudar">
-        <div class="container">
-            <div class="services-header">
-                <h2>Como posso te ajudar?</h2>
-                <p>Atendimento com acolhimento e escuta ativa, priorizando sua saúde e bem-estar em cada etapa da sua jornada.</p>
-            </div>
-            <div class="services-grid">
-                <!-- Card 1 -->
-                <div class="service-card">
-                    <div class="service-icon">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-                    </div>
-                    <h3>Acompanhamento Nutricional Personalizado</h3>
-                    <p>Orientações específicas estruturadas de forma exclusiva para atender as suas reais necessidades e objetivos de saúde.</p>
-                </div>
-
-                <!-- Card 2 -->
-                <div class="service-card">
-                    <div class="service-icon">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a5 5 0 1 0 10 0 5 5 0 1 0-10 0zM12 8a8 8 0 0 0-8 8v4h16v-4a8 8 0 0 0-8-8z"/></svg>
-                    </div>
-                    <h3>Consultoria em Saúde da Mulher</h3>
-                    <p>Foco detalhado nas particularidades e fases femininas, trabalhando de forma integrativa o metabolismo e a saúde hormonal.</p>
-                </div>
-
-                <!-- Card 3 -->
-                <div class="service-card">
-                    <div class="service-icon">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/></svg>
-                    </div>
-                    <h3>Orientação para Compulsão Alimentar</h3>
-                    <p>Estratégias humanizadas para acolher e reestruturar os gatilhos da compulsão, promovendo um relacionamento verdadeiramente saudável com a comida.</p>
-                </div>
-
-                <!-- Card 4 -->
-                <div class="service-card">
-                    <div class="service-icon">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
-                    </div>
-                    <h3>Digestão & Desconfortos Crônicos</h3>
-                    <p>Gastrite, úlceras, azia, refluxo, dor abdominal e digestão lenta não são normais. São sinais de desequilíbrios que precisam de cuidado individualizado, e não apenas de tratamentos paliativos.</p>
-                </div>
-
-                <!-- Card 5 -->
-                <div class="service-card">
-                    <div class="service-icon">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
-                    </div>
-                    <h3>Doenças Autoimunes</h3>
-                    <p>Cuidado integrativo para Lúpus, Hashimoto, artrite, psoríase... Cada resposta autoimune carrega um gatilho. A nutrição funcional atua na regulação imune, permeabilidade intestinal e modulação inflamatória.</p>
-                </div>
-
-                <!-- Card 6 -->
-                <div class="service-card">
-                    <div class="service-icon">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
-                    </div>
-                    <h3>Diabetes & Resistência à Insulina</h3>
-                    <p>Atuação precisa pré ou pós-diagnóstico. Aqui, o foco vai muito além de apenas controlar a glicemia: trabalhamos para restaurar sua flexibilidade metabólica de forma leve e coerente.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- About / Storytelling Section -->
-    <section class="section about" id="quem-sou">
-        <div class="container">
-            <div class="about-grid">
-                <div class="about-image-container">
-                    <div class="about-image-frame">
-                        <div class="about-image-inner">
-                            <!-- Abstract portrait representing care, empathy, Vanessa -->
-                            <svg class="about-illustration" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <circle cx="100" cy="80" r="35" stroke="#FAF7F2" stroke-width="2"/>
-                                <path d="M40 170C40 135 68 115 100 115C132 115 160 135 160 170" stroke="#FAF7F2" stroke-width="2" stroke-linecap="round"/>
-                                <circle cx="100" cy="115" r="12" fill="#C9A227"/>
-                            </svg>
+                    <!-- Step 1 -->
+                    <div class="quiz-step active" id="step-1">
+                        <p class="quiz-question">1. Qual sintoma ou desequilíbrio mais compromete sua rotina hoje?</p>
+                        <div class="quiz-options">
+                            <button class="quiz-option" onclick="nextStep(2, 'Gastrite, Azia ou Refluxo')">Gastrite, Azia, Refluxo ou Digestão Lenta</button>
+                            <button class="quiz-option" onclick="nextStep(2, 'Compulsão Alimentar')">Compulsão Alimentar e Cansaço Físico</button>
+                            <button class="quiz-option" onclick="nextStep(2, 'Doenças Autoimunes / Glicemia')">Doenças Autoimunes (Hashimoto, Lúpus, Psoríase)</button>
+                            <button class="quiz-option" onclick="nextStep(2, 'Saúde da Mulher')">Alteração Hormonal / Saúde da Mulher</button>
                         </div>
                     </div>
+
+                    <!-- Step 2 -->
+                    <div class="quiz-step" id="step-2">
+                        <p class="quiz-question">2. Há quanto tempo você convive com esses sintomas?</p>
+                        <div class="quiz-options">
+                            <button class="quiz-option" onclick="nextStep(3, 'Há poucas semanas')">Há poucas semanas</button>
+                            <button class="quiz-option" onclick="nextStep(3, 'Alguns meses')">Alguns meses</button>
+                            <button class="quiz-option" onclick="nextStep(3, 'Muitos anos buscando respostas')">Muitos anos, sem nunca ter respostas claras</button>
+                        </div>
+                        <div class="quiz-nav">
+                            <button class="btn btn-secondary" style="padding: 10px 20px;" onclick="prevStep(1)">Voltar</button>
+                        </div>
+                    </div>
+
+                    <!-- Step 3 (Resultado Customizado) -->
+                    <div class="quiz-step" id="step-3">
+                        <p class="quiz-question" style="text-align: center;">Análise Concluída</p>
+                        <p style="text-align: center; margin-bottom: 24px; color: var(--text-muted);">Sintomas como os seus não podem ser normalizados ou tratados apenas com remédios paliativos. É necessário uma anamnese detalhada para restaurar sua barreira intestinal e equilíbrio inflamatório.</p>
+                        <div style="text-align: center;">
+                            <a href="#" class="btn btn-primary" onclick="triggerPixelAndRedirect('Quiz_Resultado_WhatsApp')">Falar com a Dra. Vanessa</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- COMO POSSO AJUDAR / SERVICOS -->
+        <section id="ajuda" class="services">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Como posso te ajudar?</h2>
+                    <p class="section-desc">Atendimento com acolhimento e escuta ativa, priorizando sua saúde e bem-estar integral através da nutrição funcional.</p>
+                </div>
+
+                <div class="services-grid">
+                    <!-- Servico 1 -->
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+                        </div>
+                        <h3 class="service-card-title">Acompanhamento Nutricional Personalizado</h3>
+                        <p class="service-card-desc">Orientações estruturadas para sua rotina, focadas nas suas necessidades reais de saúde.</p>
+                    </div>
+
+                    <!-- Servico 2 -->
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm1 15h-2v-6h2zm0-8h-2V7h2z"></path></svg>
+                        </div>
+                        <h3 class="service-card-title">Saúde Digestiva</h3>
+                        <p class="service-card-desc">Cuidado efetivo contra azia, refluxo, dores abdominais e desconfortos que afetam sua energia diária.</p>
+                    </div>
+
+                    <!-- Servico 3 -->
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><path d="M8 14s1.5 2 4 2 4-2 4-2"></path><line x1="9" y1="9" x2="9.01" y2="9"></line><line x1="15" y1="9" x2="15.01" y2="9"></line></svg>
+                        </div>
+                        <h3 class="service-card-title">Consultoria em Saúde da Mulher</h3>
+                        <p class="service-card-desc">Foco em regulação do metabolismo, saúde ovariana, equilíbrio hormonal e emagrecimento leve.</p>
+                    </div>
+
+                    <!-- Servico 4 -->
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+                        </div>
+                        <h3 class="service-card-title">Orientação para Compulsão Alimentar</h3>
+                        <p class="service-card-desc">Estratégias científicas e humanas para transformar sua relação com a comida e evitar a autosabotagem.</p>
+                    </div>
+
+                    <!-- Servico 5 -->
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"></path></svg>
+                        </div>
+                        <h3 class="service-card-title">Diabetes e Resistência à Insulina</h3>
+                        <p class="service-card-desc">Controle glicêmico real, promovendo flexibilidade metabólica sem a rigidez de proibições extremas.</p>
+                    </div>
+
+                    <!-- Servico 6 -->
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path></svg>
+                        </div>
+                        <h3 class="service-card-title">Doenças Autoimunes</h3>
+                        <p class="service-card-desc">Modulação inflamatória e recuperação da integridade do intestino para aliviar dores e melhorar sua qualidade de vida.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SOBRE / QUEM SOU EU -->
+        <section id="sobre" class="about">
+            <div class="container about-grid">
+                <div class="about-image-wrapper">
+                    <img src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=768,h=763,fit=crop,trim=67.04019488428744;0;366.3824604141291;0/mjEG1pPpraCy2kRr/whatsapp-image-2025-10-05-at-10.42.05-7-mv0Ppve3BPsoKEBQ.jpeg" alt="Dra. Vanessa Rodrigues Ganime" class="about-image">
                 </div>
                 <div class="about-content">
-                    <h2>Quem sou eu?</h2>
-                    <div class="about-subtitle">Dra. Vanessa Rodrigues Ganime Campos (CRN 24100730)</div>
-                    <div class="about-text">
-                        <p>Minha paixão pela Nutrição nasceu da dor: perdi minha mãe muito cedo por complicações do diabetes. Cresci associando dieta à punição, pois nunca vi minha mãe ser acolhida ou compreendida — apenas julgada por suas escolhas alimentares.</p>
-                        
-                        <div class="about-story-highlight">
-                            "Escolhi a Nutrição como propósito de vida: transformar essa experiência em acolhimento real."
+                    <span class="crn-badge">Dra. Vanessa Rodrigues Ganime Campos | CRN 24100730</span>
+                    <h2 class="section-title">Minha missão nasceu de uma dor profunda</h2>
+                    
+                    <p class="about-story">Perdi minha mãe muito cedo por complicações do diabetes. Cresci vendo a alimentação ser associada à punição e ao medo. Minha mãe nunca foi verdadeiramente ouvida ou acolhida, apenas julgada por suas escolhas alimentares.</p>
+                    
+                    <p class="about-story">Decidi transformar essa dor no meu propósito de vida. Na Nutrição Funcional Integrativa, escolhi o acolhimento no lugar do julgamento. Minha missão é ajudar meus pacientes a tratar as causas reais de seus desconfortos e dores de forma integral.</p>
+                    
+                    <div class="highlighted-quote">
+                        "Cada pessoa carrega uma história única. O seu plano de saúde física e emocional deve ser desenhado sob medida para você, com ciência e empatia."
+                    </div>
+                    
+                    <a href="#" class="btn btn-primary" onclick="triggerPixelAndRedirect('Sobre_CTA')">Conhecer meu método</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- DEPOIMENTOS -->
+        <section id="depoimentos" class="testimonials">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Vidas transformadas pelo acolhimento</h2>
+                    <p class="section-desc">Entenda como a mudança de abordagem alimentar devolveu a qualidade de vida para os meus pacientes.</p>
+                </div>
+
+                <div class="testimonial-carousel">
+                    <!-- Depoimento 1 -->
+                    <div class="testimonial-card">
+                        <p class="testimonial-text">"Sempre sofri com crises de gastrite e refluxo que me deixavam sem forças. Com o plano personalizado da Dra. Vanessa, parei de tomar remédios diários e voltei a ter energia. O acolhimento dela faz toda a diferença."</p>
+                        <div class="testimonial-author">
+                            <img src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=375,h=375,fit=crop/mjEG1pPpraCy2kRr/whatsapp-image-2025-08-07-at-07.29.01-AGBb8138xPf8W4nn.jpeg" alt="Paciente Ganime Nutri" class="author-avatar">
+                            <div class="author-info">
+                                <h4>Juliana Mendes</h4>
+                                <span>Paciente de Saúde Digestiva</span>
+                            </div>
                         </div>
-                        
-                        <p>Desde então, venho ajudando pacientes não só a emagrecer, mas a aliviar sintomas antigos, muitas vezes ignorados por falta de escuta, empatia ou uma anamnese bem feita.</p>
-                        
-                        <p>Acredito na Nutrição como ferramenta de cura — quando feita com responsabilidade. Meu atendimento é totalmente individualizado. Cada pessoa é única, e assim é o seu plano. Juntos, vamos cuidar da sua saúde física e emocional com respeito, ciência e humanidade.</p>
+                    </div>
+
+                    <!-- Depoimento 2 -->
+                    <div class="testimonial-card">
+                        <p class="testimonial-text">"Eu achava que viver de dieta era sinônimo de sofrer. Vanessa me ensinou a entender os sinais do meu corpo, controlar a compulsão alimentar e finalmente emagrecer com saúde emocional."</p>
+                        <div class="testimonial-author">
+                            <img src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=375,h=345,fit=crop,trim=75.44715447154472;0;421.4634146341464;0/mjEG1pPpraCy2kRr/whatsapp-image-2025-10-05-at-10.42.05-7-mv0Ppve3BPsoKEBQ.jpeg" alt="Paciente Ganime Nutri" class="author-avatar">
+                            <div class="author-info">
+                                <h4>Clara S.</h4>
+                                <span>Acompanhamento Funcional</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Depoimento 3 -->
+                    <div class="testimonial-card">
+                        <p class="testimonial-text">"Por ter hipotireoidismo de Hashimoto, sempre me senti muito cansada. O protocolo de modulação inflamatória reduziu meus sintomas pela metade já no primeiro mês de tratamento."</p>
+                        <div class="testimonial-author">
+                            <img src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=375,h=345,fit=crop/mjEG1pPpraCy2kRr/whatsapp-image-2024-12-11-at-18.23.08-AR03DjxrWzH0O0PP.jpeg" alt="Paciente Ganime Nutri" class="author-avatar">
+                            <div class="author-info">
+                                <h4>Mariana F.</h4>
+                                <span>Tratamento de Hashimoto</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
+            </div>
+        </section>
+
+        <!-- CTA FINAL -->
+        <section class="cta-final">
+            <div class="container">
+                <h2 class="section-title">Sua saúde merece ser tratada com respeito</h2>
+                <p class="section-desc">Não espere o desconforto ou a inflamação controlarem sua vida. Agende agora uma consulta de acolhimento e dê o primeiro passo para uma vida mais leve.</p>
+                <a href="#" class="btn btn-primary" style="background-color: var(--accent); color: var(--primary);" onclick="triggerPixelAndRedirect('CTA_Final')">Agendar Minha Consulta de Acolhimento</a>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER / RODAPÉ -->
+    <footer id="contato">
+        <div class="container footer-grid">
+            <div>
+                <h3 class="footer-logo">Ganime Nutri</h3>
+                <p style="margin-bottom: 24px; font-size: 0.9rem;">Dra. Vanessa Rodrigues Ganime Campos<br>CRN 24100730</p>
+                <p style="font-size: 0.85rem;">Transformando vidas através da Nutrição Funcional Integrativa.</p>
+            </div>
+            
+            <div>
+                <h4 style="color: var(--white); margin-bottom: 16px; font-family: var(--font-serif);">Contatos</h4>
+                <div class="footer-info-item">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                    <span>Atendimento Presencial e Online</span>
+                </div>
+            </div>
+
+            <div>
+                <h4 style="color: var(--white); margin-bottom: 16px; font-family: var(--font-serif);">Redes Sociais</h4>
+                <p style="font-size: 0.9rem;">Acompanhe conteúdos diários de saúde e alimentação saudável em nossas redes.</p>
             </div>
         </div>
-    </section>
-
-    <!-- Testimonials Section -->
-    <section class="section testimonials" id="depoimentos">
-        <div class="container">
-            <div class="services-header">
-                <h2>Depoimentos Reais</h2>
-                <p>Histórias de transformação de quem escolheu ressignificar o cuidado com a alimentação e viver com mais equilíbrio.</p>
-            </div>
-            <div class="testimonial-slider">
-                <!-- Testimonial 1 -->
-                <div class="testimonial-card">
-                    <p class="testimonial-text">"Pela primeira vez em anos me senti ouvida de verdade. A Dra. Vanessa olhou para mim por inteiro, entendeu meus desequilíbrios intestinais e montou uma rotina viável de seguir. Minha saúde digestiva é outra."</p>
-                    <div class="testimonial-author">
-                        <div class="author-avatar">M</div>
-                        <div class="author-info">
-                            <h4>Mariana S.</h4>
-                            <p>Acompanhamento Nutricional</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Testimonial 2 -->
-                <div class="testimonial-card">
-                    <p class="testimonial-text">"Tratar o Hashimoto sempre foi um desafio. A nutrição integrativa mudou meu cansaço crônico e as dores inflamatórias que eu sentia constantemente. Sou extremamente grata pelo acolhimento e conhecimento científico."</p>
-                    <div class="testimonial-author">
-                        <div class="author-avatar">R</div>
-                        <div class="author-info">
-                            <h4>Renata G.</h4>
-                            <p>Doenças Autoimunes</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Final CTA Section -->
-    <section class="section cta-section">
-        <div class="container">
-            <div class="cta-content">
-                <h2>Cuidado individualizado com respeito, ciência e humanidade</h2>
-                <p>Dê o primeiro passo para ressignificar sua saúde física e emocional de maneira leve e duradoura.</p>
-                <a href="#" class="btn btn-primary">
-                    Iniciar Meu Acompanhamento
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer" id="contato">
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-brand">
-                    <h3>Ganime Nutri</h3>
-                    <p>Nutrição integrativa e funcional que respeita sua história, suas emoções e seus objetivos.</p>
-                </div>
-                <div>
-                    <h4 class="footer-title">Links Rápidos</h4>
-                    <ul class="footer-links">
-                        <li><a href="#inicio">Início</a></li>
-                        <li><a href="#como-ajudar">Como posso ajudar?</a></li>
-                        <li><a href="#quem-sou">Quem sou eu</a></li>
-                        <li><a href="#depoimentos">Depoimentos</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4 class="footer-title">Atendimento</h4>
-                    <div class="footer-contact-info">
-                        <div class="contact-item">
-                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-                            <span>Atendimento Online e Presencial</span>
-                        </div>
-                        <div class="contact-item">
-                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37zM17.5 6.5h.01"/></svg>
-                            <span>@ganimenutri</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2024 Ganime Nutri. Todos os direitos reservados. Dra. Vanessa Rodrigues Ganime Campos - CRN 24100730.</p>
-                <p>Desenvolvido com foco em alta performance e conversão.</p>
-            </div>
+        
+        <div class="container footer-bottom">
+            <p>&copy; 2026 Ganime Nutri. Todos os direitos reservados. Desenvolvido no padrão premium RD Exclusive.</p>
         </div>
     </footer>
 
-    <!-- Floating WhatsApp Button -->
-    <a href="#" class="whatsapp-float" aria-label="Fale conosco no WhatsApp">
+    <!-- WHATSAPP FLOATING BUTTON -->
+    <a href="#" class="whatsapp-float" onclick="triggerPixelAndRedirect('WhatsApp_Float')" aria-label="Fale conosco no WhatsApp">
         <svg viewBox="0 0 24 24">
-            <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.513 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.733-1.455L0 24zm6.59-4.846c1.6.95 3.188 1.449 4.825 1.451 5.436 0 9.86-4.413 9.863-9.83.001-2.624-1.011-5.091-2.85-6.936C16.643 1.997 14.183 1.01 11.56 1.01c-5.44 0-9.866 4.415-9.869 9.835-.001 1.745.474 3.454 1.378 4.975l-.946 3.454 3.525-.921zM18.106 14.8c-.33-.165-1.937-.957-2.231-1.063-.294-.105-.508-.158-.722.165-.213.32-.824 1.056-1.01 1.27-.185.213-.37.24-.7.075-.33-.165-1.393-.513-2.653-1.638-.98-.874-1.64-1.953-1.832-2.282-.19-.33-.02-.507.145-.671.15-.147.33-.385.495-.578.165-.19.22-.33.33-.55.11-.22.055-.412-.028-.578-.082-.165-.722-1.74-.99-2.385-.26-.628-.527-.542-.722-.551-.186-.01-.4-.012-.613-.012-.213 0-.56.08-.853.4-.294.32-1.124 1.1-1.124 2.682 0 1.582 1.15 3.11 1.31 3.32.16.21 2.263 3.455 5.482 4.843.765.33 1.363.527 1.829.675.77.244 1.47.21 2.023.128.618-.093 1.937-.792 2.21-1.558.275-.765.275-1.42.193-1.557-.083-.14-.295-.21-.625-.375z"/>
+            <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.513 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.724-1.455L0 24zm6.59-4.846c1.6.95 3.488 1.449 5.412 1.451 5.428 0 9.845-4.415 9.849-9.845.002-2.632-1.021-5.105-2.88-6.968C17.169 1.98 14.7 1.001 12.01 1c-5.433 0-9.851 4.415-9.855 9.845-.001 1.925.501 3.807 1.458 5.411L2.716 19.9l3.93-1.031zM17.433 14.33c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414-.074-.124-.272-.198-.57-.347z"/>
         </svg>
     </a>
 
-    <!-- Mobile Menu Interaction Script -->
+    <!-- LOGICA E COMPORTAMENTO JS -->
     <script>
-        const menuToggle = document.getElementById('menuToggle');
-        const navMenu = document.getElementById('navMenu');
-        const navLinks = document.querySelectorAll('.nav-link');
+        // Quiz Logica Interativa
+        let quizResponses = {};
 
-        menuToggle.addEventListener('click', () => {
-            navMenu.classList.toggle('active');
-            // Animate toggle lines
-            const spans = menuToggle.querySelectorAll('span');
-            spans[0].style.transform = navMenu.classList.contains('active') ? 'rotate(45deg) translate(6px, 6px)' : 'none';
-            spans[1].style.opacity = navMenu.classList.contains('active') ? '0' : '1';
-            spans[2].style.transform = navMenu.classList.contains('active') ? 'rotate(-45deg) translate(5px, -5px)' : 'none';
-        });
-
-        // Close menu and active states
-        navLinks.forEach(link => {
-            link.addEventListener('click', () => {
-                navLinks.forEach(l => l.classList.remove('active'));
-                link.classList.add('active');
-                if (navMenu.classList.contains('active')) {
-                    menuToggle.click();
+        function nextStep(step, val) {
+            // Salva dados no tracking do pixel
+            if (step === 2) {
+                quizResponses.sintoma = val;
+                document.getElementById('step-1').classList.remove('active');
+                document.getElementById('step-2').classList.add('active');
+                document.getElementById('quiz-progress-bar').style.width = '66%';
+            } else if (step === 3) {
+                quizResponses.tempo = val;
+                document.getElementById('step-2').classList.remove('active');
+                document.getElementById('step-3').classList.add('active');
+                document.getElementById('quiz-progress-bar').style.width = '100%';
+                
+                // Dispara Lead Event no Pixel do Facebook
+                if (typeof fbq !== 'undefined') {
+                    fbq('track', 'Lead', {
+                        sintoma: quizResponses.sintoma,
+                        tempo: quizResponses.tempo
+                    });
                 }
-            });
-        });
-
-        // Header color on scroll
-        window.addEventListener('scroll', () => {
-            const header = document.querySelector('.header');
-            if (window.scrollY > 50) {
-                header.style.boxShadow = 'var(--shadow-md)';
-                header.style.backgroundColor = '#FAF7F2';
-            } else {
-                header.style.boxShadow = 'none';
-                header.style.backgroundColor = 'rgba(250, 247, 242, 0.9)';
             }
-        });
+        }
+
+        function prevStep(step) {
+            if (step === 1) {
+                document.getElementById('step-2').classList.remove('active');
+                document.getElementById('step-1').classList.add('active');
+                document.getElementById('quiz-progress-bar').style.width = '33%';
+            }
+        }
+
+        // Função de Redirecionamento com Disparo de Conversão RD Exclusive
+        function triggerPixelAndRedirect(origin) {
+            if (typeof fbq !== 'undefined') {
+                fbq('track', 'Contact', {
+                    content_category: 'Lead Nutricao',
+                    content_name: origin
+                });
+            }
+            
+            // Texto customizado para o WhatsApp com base nos dados do Quiz
+            let message = "Olá Dra. Vanessa, gostaria de agendar uma consulta.";
+            if (quizResponses.sintoma) {
+                message = `Olá Dra. Vanessa, realizei a triagem no site. Sofro com ${quizResponses.sintoma} há ${quizResponses.tempo} e gostaria de agendar um atendimento.`;
+            }
+            
+            // Codifica a mensagem
+            let encodedMessage = encodeURIComponent(message);
+            
+            // Redireciona para o WhatsApp (link de simulação usando # substituído por ação simulada ou link direto se configurado)
+            setTimeout(function() {
+                window.open(`https://wa.me/5599999999999?text=${encodedMessage}`, '_blank');
+            }, 100);
+        }
     </script>
 </body>
 </html>
