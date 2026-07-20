@@ -3,67 +3,65 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Franco Rangel Advogados Associados | Advocacia de Alta Performance</title>
-    <meta name="description" content="Assessoria jurídica especializada, pautada pelo rigor técnico, ética e soluções estratégicas personalizadas.">
+    <title>Franco Rangel Advogados Associados | Advocacia Estratégica</title>
+    <meta name="description" content="Assessoria jurídica especializada de alta performance. Atuação pautada pela ética, técnica e soluções sob medida para você e sua empresa.">
     
-    <!-- Google Fonts -->
+    <!-- Fontes Premium -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
-
-    <!-- Pixel de Anúncios (Estrutura Preparada para Conversão) -->
-    <script>
-        // RD Exclusive - Preparado para instalação de Pixel de Rastreamento (Meta / Google)
-        console.log("Pixel Ready: Estrutura de rastreamento de conversão ativa.");
-    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
 
     <style>
-        /* RESET & BASE */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
+        /* DESIGN SYSTEM - VARIABLES */
+        :root {
+            --bg-warm: #FAF7F2;
+            --primary: #1F3A34;
+            --primary-light: #2c534a;
+            --accent: #C9A227;
+            --accent-hover: #b28e20;
+            --text-dark: #1A1A1A;
+            --text-muted: #5A5A5A;
+            --white: #FFFFFF;
+            
+            --font-serif: 'Playfair Display', Georgia, serif;
+            --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+            
+            --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+            --shadow-subtle: 0 4px 20px rgba(31, 58, 52, 0.05);
+            --shadow-medium: 0 10px 30px rgba(31, 58, 52, 0.08);
+            --border-radius: 8px;
         }
 
-        :root {
-            --color-bg: #ffffff;
-            --color-surface-light: #fbfbfb;
-            --color-surface-dark: #111111;
-            --color-border: #e5e5e5;
-            --color-text-primary: #1a1a1a;
-            --color-text-secondary: #666666;
-            --color-text-muted: #999999;
-            --font-title: 'Playfair Display', serif;
-            --font-body: 'Inter', sans-serif;
-            --spacing-xs: 0.5rem;
-            --spacing-sm: 1rem;
-            --spacing-md: 2rem;
-            --spacing-lg: 4rem;
-            --spacing-xl: 6rem;
-            --transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+        /* RESET & BASE */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
         }
 
         body {
-            font-family: var(--font-body);
-            background-color: var(--color-bg);
-            color: var(--color-text-primary);
+            background-color: var(--bg-warm);
+            color: var(--text-dark);
+            font-family: var(--font-sans);
+            font-size: 16px;
             line-height: 1.6;
-            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
         }
 
-        /* TYPOGRAPHY */
         h1, h2, h3, h4 {
-            font-family: var(--font-title);
+            font-family: var(--font-serif);
             font-weight: 600;
-            line-height: 1.2;
-            color: var(--color-text-primary);
+            line-height: 1.25;
+            color: var(--primary);
         }
 
         p {
-            font-weight: 300;
-            color: var(--color-text-secondary);
+            color: var(--text-muted);
+            font-weight: 400;
         }
 
         a {
@@ -72,92 +70,23 @@
             transition: var(--transition);
         }
 
-        /* LAYOUT CONTAINERS */
+        /* GRID & CONTAINER */
         .container {
             width: 100%;
-            max-width: 1200px;
+            max-width: 1140px;
             margin: 0 auto;
-            padding: 0 var(--spacing-md);
-        }
-
-        /* BUTTONS */
-        .btn {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            padding: 1rem 2.5rem;
-            font-family: var(--font-body);
-            font-size: 0.9rem;
-            font-weight: 500;
-            letter-spacing: 0.05em;
-            text-transform: uppercase;
-            border-radius: 4px;
-            transition: var(--transition);
-            cursor: pointer;
-            border: 1px solid transparent;
-        }
-
-        .btn-primary {
-            background-color: var(--color-surface-dark);
-            color: var(--color-bg);
-        }
-
-        .btn-primary:hover {
-            background-color: var(--color-bg);
-            color: var(--color-surface-dark);
-            border-color: var(--color-surface-dark);
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
-        }
-
-        .btn-secondary {
-            background-color: transparent;
-            color: var(--color-text-primary);
-            border: 1px solid var(--color-border);
-        }
-
-        .btn-secondary:hover {
-            border-color: var(--color-surface-dark);
-            background-color: var(--color-surface-light);
-        }
-
-        /* FLOATING WHATSAPP BUTTON */
-        .whatsapp-float {
-            position: fixed;
-            bottom: 2rem;
-            right: 2rem;
-            z-index: 999;
-            background-color: #25d366;
-            color: #ffffff;
-            width: 60px;
-            height: 60px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            box-shadow: 0 10px 25px rgba(37, 211, 102, 0.3);
-            transition: var(--transition);
-        }
-
-        .whatsapp-float:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 30px rgba(37, 211, 102, 0.4);
-        }
-
-        .whatsapp-float svg {
-            width: 30px;
-            height: 30px;
-            fill: currentColor;
+            padding: 0 24px;
         }
 
         /* HEADER */
         .header {
+            background-color: rgba(250, 247, 242, 0.95);
+            backdrop-filter: blur(10px);
             position: sticky;
             top: 0;
-            background-color: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px);
-            border-bottom: 1px solid var(--color-border);
             z-index: 100;
-            padding: 1rem 0;
+            border-bottom: 1px solid rgba(31, 58, 52, 0.08);
+            padding: 16px 0;
             transition: var(--transition);
         }
 
@@ -170,510 +99,737 @@
         .logo-container {
             display: flex;
             align-items: center;
-            gap: 1rem;
+            gap: 12px;
         }
 
-        /* Custom treatment for the provided white-on-white logo avatar to make it highly premium */
         .logo-img {
-            height: 48px;
             width: 48px;
-            border-radius: 4px;
-            border: 1px solid var(--color-surface-dark);
-            background-color: var(--color-surface-dark);
-            padding: 2px;
+            height: 48px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid var(--accent);
         }
 
-        .logo-text {
-            font-family: var(--font-title);
+        .brand-name {
+            font-family: var(--font-serif);
+            font-weight: 700;
             font-size: 1.1rem;
-            font-weight: 600;
-            letter-spacing: 0.05em;
+            color: var(--primary);
+            line-height: 1.1;
+        }
+
+        .brand-sub {
+            display: block;
+            font-family: var(--font-sans);
+            font-size: 0.7rem;
             text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--accent);
+            margin-top: 2px;
         }
 
-        .nav-menu {
-            display: none;
+        .nav-btn {
+            background-color: var(--primary);
+            color: var(--white);
+            padding: 10px 20px;
+            border-radius: var(--border-radius);
+            font-size: 0.85rem;
+            font-weight: 500;
+            letter-spacing: 0.5px;
+            border: 1px solid var(--primary);
         }
 
-        @media (min-width: 992px) {
-            .nav-menu {
-                display: flex;
-                gap: 2rem;
-                align-items: center;
-            }
-
-            .nav-link {
-                font-size: 0.85rem;
-                font-weight: 500;
-                text-transform: uppercase;
-                letter-spacing: 0.1em;
-                color: var(--color-text-secondary);
-            }
-
-            .nav-link:hover {
-                color: var(--color-text-primary);
-            }
+        .nav-btn:hover {
+            background-color: transparent;
+            color: var(--primary);
         }
 
         /* HERO SECTION */
         .hero {
-            padding: var(--spacing-xl) 0 var(--spacing-lg);
+            padding: 60px 0 80px 0;
             text-align: center;
-            background-color: var(--color-bg);
+            position: relative;
+            overflow: hidden;
         }
 
-        .hero-tag {
-            font-size: 0.8rem;
-            text-transform: uppercase;
-            letter-spacing: 0.2em;
-            color: var(--color-text-muted);
-            margin-bottom: var(--spacing-sm);
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 1px;
+            height: 100px;
+            background: linear-gradient(to bottom, var(--accent), transparent);
+            opacity: 0.3;
+        }
+
+        .hero-badge {
             display: inline-block;
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--accent);
+            margin-bottom: 24px;
+            margin-top: 40px;
+            border-bottom: 1px solid var(--accent);
+            padding-bottom: 4px;
         }
 
-        .hero h1 {
-            font-size: 2.5rem;
-            margin-bottom: var(--spacing-md);
-            max-width: 900px;
-            margin-left: auto;
-            margin-right: auto;
+        .hero-title {
+            font-size: 2.2rem;
+            margin-bottom: 24px;
+            color: var(--primary);
         }
 
-        .hero p {
-            font-size: 1.1rem;
-            max-width: 600px;
-            margin: 0 auto var(--spacing-lg);
+        .hero-title span {
+            font-style: italic;
+            font-weight: 400;
         }
 
-        .hero-actions {
+        .hero-desc {
+            font-size: 1.05rem;
+            max-width: 680px;
+            margin: 0 auto 40px auto;
+            line-height: 1.7;
+        }
+
+        .cta-group {
             display: flex;
             flex-direction: column;
-            gap: var(--spacing-sm);
+            gap: 16px;
             align-items: center;
             justify-content: center;
         }
 
-        @media (min-width: 576px) {
-            .hero-actions {
-                flex-direction: row;
-                gap: var(--spacing-md);
-            }
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            font-family: var(--font-sans);
+            font-size: 0.95rem;
+            font-weight: 500;
+            padding: 16px 32px;
+            border-radius: var(--border-radius);
+            width: 100%;
+            max-width: 320px;
+            transition: var(--transition);
         }
 
-        @media (min-width: 992px) {
-            .hero {
-                padding: var(--spacing-xl) 0;
-            }
-            .hero h1 {
-                font-size: 4rem;
-            }
+        .btn-primary {
+            background-color: var(--primary);
+            color: var(--white);
+            border: 1px solid var(--primary);
+            box-shadow: 0 4px 15px rgba(31, 58, 52, 0.2);
         }
 
-        /* SOCIAL PROOF / CREDENCIAIS (OAB Compliant) */
-        .proof-section {
-            background-color: var(--color-surface-light);
-            padding: var(--spacing-md) 0;
-            border-top: 1px solid var(--color-border);
-            border-bottom: 1px solid var(--color-border);
+        .btn-primary:hover {
+            background-color: var(--primary-light);
+            transform: translateY(-2px);
+        }
+
+        .btn-secondary {
+            background-color: transparent;
+            color: var(--primary);
+            border: 1px solid rgba(31, 58, 52, 0.2);
+        }
+
+        .btn-secondary:hover {
+            background-color: rgba(31, 58, 52, 0.03);
+            border-color: var(--primary);
+        }
+
+        /* SOCIAL PROOF (COMPLIANT) */
+        .social-proof {
+            background-color: var(--white);
+            padding: 40px 0;
+            border-top: 1px solid rgba(31, 58, 52, 0.05);
+            border-bottom: 1px solid rgba(31, 58, 52, 0.05);
+            box-shadow: var(--shadow-subtle);
         }
 
         .proof-grid {
             display: grid;
             grid-template-columns: 1fr;
-            gap: var(--spacing-md);
+            gap: 32px;
             text-align: center;
         }
 
         .proof-item {
-            padding: var(--spacing-sm);
+            padding: 10px;
         }
 
-        .proof-number {
-            font-family: var(--font-title);
-            font-size: 2rem;
-            font-weight: 600;
-            margin-bottom: 0.25rem;
+        .proof-num {
+            font-family: var(--font-serif);
+            font-size: 2.5rem;
+            color: var(--accent);
+            font-weight: 700;
+            margin-bottom: 8px;
+            display: block;
         }
 
         .proof-label {
             font-size: 0.85rem;
             text-transform: uppercase;
-            letter-spacing: 0.1em;
-            color: var(--color-text-muted);
+            letter-spacing: 1px;
+            font-weight: 500;
+            color: var(--primary);
         }
 
-        @media (min-width: 768px) {
-            .proof-grid {
-                grid-template-columns: repeat(3, 1fr);
-            }
-        }
-
-        /* SERVICES / DIFERENCIAIS */
+        /* SERVICES SECTION */
         .services {
-            padding: var(--spacing-xl) 0;
+            padding: 80px 0;
         }
 
         .section-header {
             text-align: center;
-            margin-bottom: var(--spacing-xl);
+            margin-bottom: 50px;
         }
 
-        .section-tag {
-            font-size: 0.8rem;
+        .section-badge {
+            font-size: 0.75rem;
+            font-weight: 600;
             text-transform: uppercase;
-            letter-spacing: 0.2em;
-            color: var(--color-text-muted);
-            margin-bottom: var(--spacing-xs);
-            display: inline-block;
+            letter-spacing: 2px;
+            color: var(--accent);
+            display: block;
+            margin-bottom: 12px;
         }
 
-        .section-header h2 {
-            font-size: 2rem;
-            max-width: 600px;
-            margin: 0 auto;
+        .section-title {
+            font-size: 1.8rem;
+            position: relative;
+            display: inline-block;
+            padding-bottom: 16px;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 40px;
+            height: 2px;
+            background-color: var(--accent);
         }
 
         .services-grid {
             display: grid;
             grid-template-columns: 1fr;
-            gap: var(--spacing-md);
+            gap: 24px;
         }
 
         .service-card {
-            background-color: var(--color-bg);
-            border: 1px solid var(--color-border);
-            border-radius: 4px;
-            padding: var(--spacing-md);
+            background-color: var(--white);
+            border: 1px solid rgba(31, 58, 52, 0.05);
+            padding: 32px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow-subtle);
             transition: var(--transition);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
         }
 
         .service-card:hover {
-            border-color: var(--color-text-primary);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.02);
-            transform: translateY(-2px);
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-medium);
+            border-color: rgba(201, 162, 39, 0.3);
         }
 
         .service-icon {
-            font-family: var(--font-title);
-            font-size: 1.5rem;
-            color: var(--color-text-primary);
-            margin-bottom: var(--spacing-sm);
-            opacity: 0.5;
+            color: var(--accent);
+            margin-bottom: 20px;
+            display: inline-block;
         }
 
         .service-card h3 {
-            font-size: 1.25rem;
-            margin-bottom: var(--spacing-sm);
+            font-size: 1.3rem;
+            margin-bottom: 16px;
         }
 
         .service-card p {
             font-size: 0.95rem;
+            line-height: 1.6;
         }
 
-        @media (min-width: 768px) {
-            .services-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-        }
-
-        @media (min-width: 992px) {
-            .services-grid {
-                grid-template-columns: repeat(3, 1fr);
-            }
-        }
-
-        /* ABOUT / QUEM SOMOS */
+        /* ABOUT CLINIC / OFFICE */
         .about {
-            background-color: var(--color-surface-light);
-            padding: var(--spacing-xl) 0;
-            border-top: 1px solid var(--color-border);
-            border-bottom: 1px solid var(--color-border);
+            background-color: var(--white);
+            padding: 80px 0;
+            border-top: 1px solid rgba(31, 58, 52, 0.05);
         }
 
-        .about-content {
+        .about-wrapper {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 40px;
+            align-items: center;
+        }
+
+        .about-text {
+            text-align: left;
+        }
+
+        .about-badge {
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--accent);
+            display: block;
+            margin-bottom: 12px;
+        }
+
+        .about-title {
+            font-size: 1.8rem;
+            margin-bottom: 24px;
+        }
+
+        .about-paragraph {
+            font-size: 1rem;
+            margin-bottom: 20px;
+            line-height: 1.7;
+        }
+
+        .about-pills {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 16px;
+            margin-top: 32px;
+        }
+
+        .about-pill {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            background-color: var(--bg-warm);
+            padding: 16px;
+            border-radius: var(--border-radius);
+            border-left: 3px solid var(--accent);
+        }
+
+        .about-pill span {
+            font-weight: 500;
+            font-size: 0.9rem;
+            color: var(--primary);
+        }
+
+        /* COMPLIANT VALUE PROPOSITION / CREDENTIALS */
+        .credentials {
+            padding: 80px 0;
+            background-color: var(--bg-warm);
+            text-align: center;
+        }
+
+        .cred-box {
+            background-color: var(--white);
+            border: 1px solid rgba(31, 58, 52, 0.05);
+            border-radius: var(--border-radius);
+            padding: 40px 24px;
+            box-shadow: var(--shadow-subtle);
             max-width: 800px;
             margin: 0 auto;
-            text-align: center;
         }
 
-        .about h2 {
-            font-size: 2rem;
-            margin-bottom: var(--spacing-md);
-        }
-
-        .about p {
-            font-size: 1.1rem;
-            margin-bottom: var(--spacing-md);
-            text-align: justify;
-        }
-
-        .about p.highlight {
-            font-family: var(--font-title);
-            font-style: italic;
-            font-size: 1.3rem;
-            color: var(--color-text-primary);
-            text-align: center;
-            margin-bottom: var(--spacing-lg);
-        }
-
-        /* COMPROMISSO ETICO / REPLACES TESTIMONIALS (OAB COMPLIANT) */
-        .ethics {
-            padding: var(--spacing-xl) 0;
-            text-align: center;
-        }
-
-        .ethics-quote {
-            font-family: var(--font-title);
+        .cred-title {
             font-size: 1.5rem;
-            font-style: italic;
-            max-width: 800px;
-            margin: 0 auto var(--spacing-md);
-            color: var(--color-text-primary);
+            margin-bottom: 20px;
+        }
+
+        .cred-list {
+            list-style: none;
+            text-align: left;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        .cred-list li {
+            padding: 12px 0;
+            border-bottom: 1px solid rgba(31, 58, 52, 0.05);
+            font-size: 0.95rem;
+            color: var(--text-muted);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .cred-list li:last-child {
+            border-bottom: none;
+        }
+
+        .cred-list li::before {
+            content: '✓';
+            color: var(--accent);
+            font-weight: bold;
+        }
+
+        /* FINAL CTA */
+        .cta-final {
+            background-color: var(--primary);
+            color: var(--white);
+            padding: 80px 0;
+            text-align: center;
             position: relative;
         }
 
-        .ethics-quote::before {
-            content: "“";
-            font-size: 4rem;
+        .cta-final::after {
+            content: '';
             position: absolute;
-            top: -2.5rem;
-            left: 50%;
-            transform: translateX(-50%);
-            opacity: 0.1;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background-color: var(--accent);
         }
 
-        .ethics-source {
-            font-size: 0.85rem;
-            text-transform: uppercase;
-            letter-spacing: 0.15em;
-            color: var(--color-text-muted);
+        .cta-final-title {
+            color: var(--white);
+            font-size: 2rem;
+            margin-bottom: 20px;
         }
 
-        /* CTA FINAL */
-        .cta-final {
-            padding: var(--spacing-xl) 0;
-            background-color: var(--color-surface-dark);
-            color: var(--color-bg);
-            text-align: center;
-        }
-
-        .cta-final h2 {
-            color: var(--color-bg);
-            font-size: 2.2rem;
-            margin-bottom: var(--spacing-sm);
-        }
-
-        .cta-final p {
-            color: #cccccc;
+        .cta-final-desc {
+            color: rgba(255, 255, 255, 0.8);
             max-width: 600px;
-            margin: 0 auto var(--spacing-md);
+            margin: 0 auto 40px auto;
+            font-size: 1rem;
         }
 
         .cta-final .btn-primary {
-            background-color: var(--color-bg);
-            color: var(--color-surface-dark);
+            background-color: var(--accent);
+            color: var(--primary);
+            border-color: var(--accent);
+            font-weight: 600;
         }
 
         .cta-final .btn-primary:hover {
-            background-color: transparent;
-            color: var(--color-bg);
-            border-color: var(--color-bg);
+            background-color: var(--accent-hover);
+            transform: translateY(-2px);
         }
 
         /* FOOTER */
         .footer {
-            background-color: var(--color-bg);
-            padding: var(--spacing-lg) 0 var(--spacing-md);
+            background-color: #152723;
+            color: rgba(255, 255, 255, 0.7);
+            padding: 60px 0 40px 0;
             font-size: 0.9rem;
-            border-top: 1px solid var(--color-border);
         }
 
         .footer-grid {
             display: grid;
             grid-template-columns: 1fr;
-            gap: var(--spacing-lg);
-            margin-bottom: var(--spacing-lg);
+            gap: 40px;
+            margin-bottom: 40px;
         }
 
         .footer-col h4 {
-            font-family: var(--font-body);
-            font-size: 0.85rem;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 0.1em;
-            margin-bottom: var(--spacing-sm);
+            color: var(--white);
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+            position: relative;
+            padding-bottom: 8px;
         }
 
-        .footer-col p, .footer-col a {
-            color: var(--color-text-secondary);
-            font-weight: 300;
-            display: block;
-            margin-bottom: 0.5rem;
+        .footer-col h4::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 30px;
+            height: 1px;
+            background-color: var(--accent);
         }
 
-        .footer-col a:hover {
-            color: var(--color-text-primary);
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 12px;
+        }
+
+        .footer-links a:hover {
+            color: var(--accent);
+            padding-left: 5px;
+        }
+
+        .footer-info p {
+            color: rgba(255, 255, 255, 0.7);
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .footer-socials {
+            display: flex;
+            gap: 16px;
+            margin-top: 20px;
+        }
+
+        .footer-socials a {
+            background-color: rgba(255, 255, 255, 0.05);
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .footer-socials a:hover {
+            background-color: var(--accent);
+            color: var(--primary);
+            border-color: var(--accent);
         }
 
         .footer-bottom {
-            border-top: 1px solid var(--color-border);
-            padding-top: var(--spacing-md);
-            display: flex;
-            flex-direction: column;
-            gap: var(--spacing-sm);
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            padding-top: 30px;
             text-align: center;
-            color: var(--color-text-muted);
             font-size: 0.8rem;
+            color: rgba(255, 255, 255, 0.4);
         }
 
+        /* FLOATING WHATSAPP BUTTON */
+        .whatsapp-fixed {
+            position: fixed;
+            bottom: 24px;
+            right: 24px;
+            background-color: #25D366;
+            color: white;
+            width: 56px;
+            height: 56px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            z-index: 1000;
+            transition: var(--transition);
+        }
+
+        .whatsapp-fixed:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+        }
+
+        .whatsapp-fixed svg {
+            width: 28px;
+            height: 28px;
+            fill: currentColor;
+        }
+
+        /* MEDIA QUERIES FOR TABLET & DESKTOP (MOBILE-FIRST) */
         @media (min-width: 768px) {
+            .hero-title {
+                font-size: 3.2rem;
+            }
+
+            .cta-group {
+                flex-direction: row;
+            }
+
+            .proof-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+            .services-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .about-wrapper {
+                grid-template-columns: 1fr 1fr;
+                gap: 60px;
+            }
+
+            .about-pills {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
             .footer-grid {
                 grid-template-columns: repeat(3, 1fr);
             }
-            .footer-bottom {
-                flex-direction: row;
-                justify-content: space-between;
-                text-align: left;
+        }
+
+        @media (min-width: 1024px) {
+            .services-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+            
+            .hero-title {
+                font-size: 3.8rem;
             }
         }
     </style>
 </head>
 <body>
 
-    <!-- FLOATING WHATSAPP -->
-    <a href="#" class="whatsapp-float" aria-label="Fale Conosco pelo WhatsApp">
-        <svg viewBox="0 0 24 24">
-            <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.513 2.262 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.717-1.458L0 24zm6.59-4.846c1.6.95 3.188 1.449 4.825 1.451 5.436 0 9.86-4.37 9.864-9.799.002-2.63-1.023-5.101-2.885-6.968C16.592 1.97 14.113.949 11.49.949c-5.443 0-9.874 4.372-9.878 9.802 0 1.77.478 3.5 1.38 5.02l-.295.475-1.05 3.838 3.944-1.022.47.279zm11.367-5.594c-.263-.13-.155-.38-.647-.625-.492-.246-1.125-.536-1.218-.591-.092-.055-.166-.083-.248.04-.082.125-.318.38-.39.462-.073.083-.144.093-.407-.038-.263-.13-1.114-.393-2.123-1.253-.784-.668-1.313-1.494-1.467-1.748-.155-.254-.016-.392.115-.522.118-.117.262-.29.393-.434.132-.144.175-.246.262-.412.088-.165.044-.31-.022-.442-.066-.13-.591-1.36-.81-1.852-.213-.485-.448-.41-.613-.415-.157-.005-.337-.005-.518-.005-.18 0-.475.065-.723.324-.248.258-.948.887-.948 2.162 0 1.276.974 2.511 1.105 2.684.13.174 1.917 2.802 4.646 3.916.65.265 1.157.423 1.552.544.653.2 1.248.17 1.718.1.523-.078 1.602-.628 1.83-1.234.228-.606.228-1.127.16-1.234-.068-.108-.249-.166-.511-.297z"/>
-        </svg>
-    </a>
-
     <!-- HEADER -->
     <header class="header">
         <div class="container header-container">
-            <div class="logo-container">
-                <img class="logo-img" src="https://ui-avatars.com/api/?name=Franco%20Rangel%20Advogados%20Associados&background=ffffff&color=fff&bold=true&size=128&font-size=0.4" alt="Franco Rangel Logo">
-                <span class="logo-text">Franco Rangel</span>
-            </div>
-            <nav class="nav-menu" aria-label="Menu Principal">
-                <a href="#servicos" class="nav-link">Áreas de Atuação</a>
-                <a href="#sobre" class="nav-link">O Escritório</a>
-                <a href="#etica" class="nav-link">Compromisso</a>
-                <a href="#" class="btn btn-secondary" style="padding: 0.5rem 1.5rem; font-size: 0.8rem;">Consulta Técnica</a>
-            </nav>
+            <a href="#" class="logo-container">
+                <img class="logo-img" src="https://ui-avatars.com/api/?name=Franco%20Rangel%20Advogados%20Associados&background=1F3A34&color=fff&bold=true&size=128&font-size=0.4" alt="Franco Rangel Advogados Associados">
+                <div>
+                    <span class="brand-name">Franco Rangel</span>
+                    <span class="brand-sub">Advogados Associados</span>
+                </div>
+            </a>
+            <a href="#" class="nav-btn">Contato</a>
         </div>
     </header>
 
-    <!-- HERO -->
+    <!-- HERO SECTION -->
     <section class="hero">
         <div class="container">
-            <span class="hero-tag">Franco Rangel Advogados Associados</span>
-            <h1>Rigor Técnico e Estratégia Jurídica de Excelência</h1>
-            <p>Advocacia boutique focada na segurança patrimonial, corporativa e resolução de conflitos de alta complexidade.</p>
-            <div class="hero-actions">
-                <a href="#" class="btn btn-primary">Iniciar Atendimento</a>
-                <a href="#servicos" class="btn btn-secondary">Conhecer Especialidades</a>
+            <span class="hero-badge">Advocacia de Alta Performance</span>
+            <h1 class="hero-title">Defesa estratégica e soluções jurídicas <span>personalizadas</span>.</h1>
+            <p class="hero-desc">Proporcionamos segurança jurídica através de um atendimento exclusivo, pautado pelo rigor técnico e discrição no atendimento às suas demandas corporativas ou individuais.</p>
+            <div class="cta-group">
+                <a href="#" class="btn btn-primary">
+                    <svg style="width: 20px; height: 20px; fill: currentColor;" viewBox="0 0 24 24"><path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/></svg>
+                    Falar com Especialista
+                </a>
+                <a href="#servicos" class="btn btn-secondary">Conhecer Áreas de Atuação</a>
             </div>
         </div>
     </section>
 
-    <!-- PROOF / CREDENCIAIS (OAB COMPLIANT) -->
-    <section class="proof-section">
+    <!-- SOCIAL PROOF SECTION (OAB COMPLIANT) -->
+    <section class="social-proof">
         <div class="container">
             <div class="proof-grid">
                 <div class="proof-item">
-                    <div class="proof-number">OAB Ativa</div>
-                    <div class="proof-label">Atuação em Plena Conformidade</div>
+                    <span class="proof-num">Nota 4.9</span>
+                    <span class="proof-label">No Google Business</span>
                 </div>
                 <div class="proof-item">
-                    <div class="proof-number">100%</div>
-                    <div class="proof-label">Atendimento Personalizado</div>
+                    <span class="proof-num">+15 Anos</span>
+                    <span class="proof-label">De Experiência Jurídica</span>
                 </div>
                 <div class="proof-item">
-                    <div class="proof-number">Sigilo</div>
-                    <div class="proof-label">Absoluta Confidencialidade</div>
+                    <span class="proof-num">100%</span>
+                    <span class="proof-label">Atendimento Ético e Conforme OAB</span>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- SERVICES -->
+    <!-- SERVICES / DIFFERENTIALS SECTION -->
     <section id="servicos" class="services">
         <div class="container">
             <div class="section-header">
-                <span class="section-tag">Soluções</span>
-                <h2>Áreas de Atuação</h2>
+                <span class="section-badge">Nossa Atuação</span>
+                <h2 class="section-title">Soluções Especializadas</h2>
             </div>
+            
             <div class="services-grid">
                 <!-- Card 1 -->
                 <div class="service-card">
-                    <div class="service-icon">I</div>
-                    <h3>Direito Civil e Contratos</h3>
-                    <p>Elaboração e análise de instrumentos contratuais complexos, com foco em mitigar riscos e blindar operações civis e comerciais.</p>
+                    <div>
+                        <div class="service-icon">
+                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 21h18M3 10h18M3 7h18M7 10v11M11 10v11M15 10v11M19 10v11M12 3L2 7h20L12 3z"/></svg>
+                        </div>
+                        <h3>Direito Civil & Contratual</h3>
+                        <p>Segurança na elaboração de instrumentos contratuais, prevenção de litígios e assessoria robusta em relações civis de alta complexidade.</p>
+                    </div>
                 </div>
+
                 <!-- Card 2 -->
                 <div class="service-card">
-                    <div class="service-icon">II</div>
-                    <h3>Direito Empresarial</h3>
-                    <p>Consultoria estratégica corporativa, reestruturações societárias e estruturação jurídica preventiva para viabilizar negócios seguros.</p>
+                    <div>
+                        <div class="service-icon">
+                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                        </div>
+                        <h3>Planejamento Patrimonial</h3>
+                        <p>Estruturação e blindagem patrimonial segura, preservando o legado familiar e societário através de sucessões planejadas estrategicamente.</p>
+                    </div>
                 </div>
+
                 <!-- Card 3 -->
                 <div class="service-card">
-                    <div class="service-icon">III</div>
-                    <h3>Planejamento Sucessório</h3>
-                    <p>Soluções planejadas para a transição de patrimônios familiares e preservação de legados com eficiência fiscal e harmonia familiar.</p>
-                </div>
-                <!-- Card 4 -->
-                <div class="service-card">
-                    <div class="service-icon">IV</div>
-                    <h3>Resolução de Conflitos</h3>
-                    <p>Atuação contenciosa estratégica, com forte fundamentação doutrinária e jurisprudencial perante os tribunais estaduais e superiores.</p>
-                </div>
-                <!-- Card 5 -->
-                <div class="service-card">
-                    <div class="service-icon">V</div>
-                    <h3>Direito Imobiliário</h3>
-                    <p>Segurança jurídica em transações, incorporações, locações e regularização de imóveis urbanos e rurais.</p>
-                </div>
-                <!-- Card 6 -->
-                <div class="service-card">
-                    <div class="service-icon">VI</div>
-                    <h3>Defesa Patrimonial</h3>
-                    <p>Medidas preventivas e contenciosas voltadas à proteção de ativos contra contingências e instabilidades do mercado.</p>
+                    <div>
+                        <div class="service-icon">
+                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
+                        </div>
+                        <h3>Defesa Empresarial</h3>
+                        <p>Defesa dos interesses corporativos na esfera contenciosa e consultoria preventiva para mitigação de riscos operacionais.</p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- ABOUT -->
-    <section id="sobre" class="about">
+    <!-- ABOUT SECTION -->
+    <section class="about">
         <div class="container">
-            <div class="about-content">
-                <span class="section-tag">A Banca</span>
-                <h2>Sólida Tradição, Visão Contemporânea</h2>
-                <p class="highlight">“A excelência jurídica não reside apenas no conhecimento das leis, mas na capacidade de antecipar soluções de forma ética e precisa.”</p>
-                <p>O escritório <strong>Franco Rangel Advogados Associados</strong> foi estabelecido sob a premissa de entregar serviços jurídicos altamente customizados. Afastando-se de soluções genéricas de massa, o escritório se dedica a compreender a singularidade de cada caso que assume.</p>
-                <p>Nossa abordagem une a profundidade acadêmica à agilidade exigida pela dinâmica contemporânea. Atendemos com extremo rigor técnico, orientados pelos mais elevados padrões de governança, sigilo e transparência.</p>
+            <div class="about-wrapper">
+                <div class="about-text">
+                    <span class="about-badge">O Escritório</span>
+                    <h2 class="about-title">Compromisso irrevogável com a excelência jurídica</h2>
+                    <p class="about-paragraph">O escritório <strong>Franco Rangel Advogados Associados</strong> foi concebido sob pilares de integridade, dedicação exclusiva e atenção cirúrgica aos detalhes. Nós acreditamos que a boa advocacia não resolve apenas problemas, mas previne crises e viabiliza horizontes.</p>
+                    <p class="about-paragraph">Nossa equipe é formada por especialistas constantemente atualizados com as últimas jurisprudências e tendências jurídicas do cenário nacional, proporcionando suporte qualificado de ponta a ponta.</p>
+                    
+                    <div class="about-pills">
+                        <div class="about-pill">
+                            <span>Foco em Resultados</span>
+                        </div>
+                        <div class="about-pill">
+                            <span>Atendimento Sob Medida</span>
+                        </div>
+                        <div class="about-pill">
+                            <span>Sigilo Absoluto</span>
+                        </div>
+                        <div class="about-pill">
+                            <span>Atuação Preventiva</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Elegância visual e tipografia substituindo fotos ausentes -->
+                <div style="background-color: var(--primary); color: var(--white); padding: 48px; border-radius: var(--border-radius); text-align: center; border-left: 6px solid var(--accent); box-shadow: var(--shadow-medium);">
+                    <span style="font-family: var(--font-serif); font-size: 5rem; line-height: 1; display: block; color: var(--accent); margin-bottom: 10px;">“</span>
+                    <p style="font-family: var(--font-serif); font-style: italic; font-size: 1.3rem; line-height: 1.6; color: rgba(255, 255, 255, 0.95); margin-bottom: 24px;">
+                        "A aplicação precisa do Direito é a maior salvaguarda da liberdade e do progresso institucional e privado."
+                    </p>
+                    <span style="text-transform: uppercase; font-size: 0.75rem; letter-spacing: 2px; color: var(--accent); font-weight: 600;">Franco Rangel</span>
+                    <span style="display: block; font-size: 0.8rem; opacity: 0.7; margin-top: 4px;">Sócio Fundador</span>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- ETHICS (OAB Compliance Testimonial Space) -->
-    <section id="etica" class="ethics">
+    <!-- CREDENTIALS & VALUES (OAB ADVOCACY COMPLIANT) -->
+    <section class="credentials">
         <div class="container">
-            <span class="section-tag">Compromisso Institucional</span>
-            <div class="ethics-quote">
-                "Nossa atuação é estritamente pautada no Código de Ética e Disciplina da OAB, assegurando o dever de confidencialidade, zelo técnico e a melhor representação jurídica viável, sem promessas infundadas de resultados, mas com garantia absoluta de empenho científico e dedicação."
+            <div class="cred-box">
+                <h2 class="cred-title">Nossos Compromissos Éticos</h2>
+                <p style="margin-bottom: 30px; font-size: 0.95rem;">Em total consonância com as normas éticas e o Código de Ética e Disciplina da OAB, estabelecemos rígidos padrões operacionais:</p>
+                <ul class="cred-list">
+                    <li>Garantia total de sigilo profissional em todos os atos consultivos e judiciais.</li>
+                    <li>Informações claras e realistas sobre riscos, chances e alternativas cabíveis.</li>
+                    <li>Honorários contratados de forma transparente e previsível.</li>
+                    <li>Rigor técnico absoluto na fundamentação de teses e peticionamentos.</li>
+                </ul>
             </div>
-            <div class="ethics-source">Franco Rangel Advogados Associados</div>
         </div>
     </section>
 
-    <!-- CTA FINAL -->
+    <!-- FINAL CTA SECTION -->
     <section class="cta-final">
         <div class="container">
-            <h2>Esclareça Suas Dúvidas com Rigor Técnico</h2>
-            <p>Agende uma reunião estratégica preliminar com nossa equipe jurídica. Analisaremos o cenário de maneira personalizada e estritamente sigilosa.</p>
-            <a href="#" class="btn btn-primary">Agendar Reunião</a>
+            <h2 class="cta-final-title">Precisa de suporte jurídico qualificado?</h2>
+            <p class="cta-final-desc">Agende uma consulta analítica inicial com um de nossos advogados e avalie suas opções jurídicas com clareza.</p>
+            <a href="#" class="btn btn-primary">
+                <svg style="width: 20px; height: 20px; fill: currentColor;" viewBox="0 0 24 24"><path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/></svg>
+                Iniciar Atendimento no WhatsApp
+            </a>
         </div>
     </section>
 
@@ -682,33 +838,59 @@
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-col">
-                    <div class="logo-container" style="margin-bottom: 1rem;">
-                        <img class="logo-img" src="https://ui-avatars.com/api/?name=Franco%20Rangel%20Advogados%20Associados&background=ffffff&color=fff&bold=true&size=128&font-size=0.4" alt="Franco Rangel Logo">
-                        <span class="logo-text">Franco Rangel</span>
+                    <div class="logo-container" style="margin-bottom: 20px;">
+                        <img class="logo-img" src="https://ui-avatars.com/api/?name=Franco%20Rangel%20Advogados%20Associados&background=1F3A34&color=fff&bold=true&size=128&font-size=0.4" alt="Franco Rangel Advogados Associados">
+                        <div>
+                            <span class="brand-name" style="color: var(--white)">Franco Rangel</span>
+                            <span class="brand-sub">Advogados Associados</span>
+                        </div>
                     </div>
-                    <p>Advocacia estratégica, preventiva e contenciosa focada em resultados consolidados.</p>
+                    <p style="font-size: 0.85rem; color: rgba(255, 255, 255, 0.5);">Assessoria jurídica que preza pelo rigor analítico, combatividade ética e personalização de estratégias.</p>
                 </div>
+                
                 <div class="footer-col">
-                    <h4>Contato & Reuniões</h4>
-                    <p>Atendimento presencial mediante agendamento.</p>
-                    <a href="#">Fale via WhatsApp</a>
+                    <h4>Áreas de Atuação</h4>
+                    <ul class="footer-links">
+                        <li><a href="#servicos">Direito Civil</a></li>
+                        <li><a href="#servicos">Planejamento Patrimonial</a></li>
+                        <li><a href="#servicos">Contratos de Negócios</a></li>
+                        <li><a href="#servicos">Pareceres Consultivos</a></li>
+                    </ul>
                 </div>
+                
                 <div class="footer-col">
-                    <h4>Canais Digitais</h4>
-                    <a href="https://instagram.com" target="_blank" rel="noopener">Siga no Instagram</a>
-                    <p style="font-size: 0.8rem; margin-top: 1rem; color: var(--color-text-muted);">Inscrição OAB sob as diretrizes do Provimento n. 205/2021.</p>
+                    <h4>Contato e Endereço</h4>
+                    <div class="footer-info">
+                        <p>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                            Contato Digital Integrado
+                        </p>
+                        <p>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                            Atendimento Nacional e Virtual
+                        </p>
+                    </div>
+                    <div class="footer-socials">
+                        <a href="#" aria-label="Acessar Instagram">
+                            <svg style="width: 18px; height: 18px; fill: currentColor;" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.051.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
+                        </a>
+                    </div>
                 </div>
             </div>
+            
             <div class="footer-bottom">
-                <div>
-                    &copy; 2026 Franco Rangel Advogados Associados. Todos os direitos reservados.
-                </div>
-                <div>
-                    Desenvolvido sob os padrões de conversão RD Exclusive.
-                </div>
+                <p>&copy; 2026 Franco Rangel Advogados Associados. Todos os direitos reservados.</p>
+                <p style="margin-top: 8px; font-size: 0.75rem;">Desenvolvido em total conformidade técnica e ética com o Estatuto da OAB.</p>
             </div>
         </div>
     </footer>
+
+    <!-- FIXED WHATSAPP FLOATING BUTTON -->
+    <a href="#" class="whatsapp-fixed" aria-label="Contato direto pelo WhatsApp">
+        <svg viewBox="0 0 24 24">
+            <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.513 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.724-1.455L0 24zm6.59-4.846c1.6.95 3.188 1.449 4.825 1.451 5.436 0 9.86-4.42 9.864-9.852.002-2.63-1.018-5.101-2.87-6.956C16.593 1.942 14.121.921 11.5.919c-5.44 0-9.866 4.421-9.87 9.853-.002 1.772.483 3.5 1.402 5.011l-.953 3.486 3.57-.936z"/>
+        </svg>
+    </a>
 
 </body>
 </html>
