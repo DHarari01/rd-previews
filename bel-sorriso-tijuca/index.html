@@ -1,0 +1,1291 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <!-- Preconnect tags para otimização de performance -->
+    <link rel="preconnect" href="https://belsorrisotijuca.com.br">
+    <link rel="preconnect" href="https://www.facebook.com">
+    <link rel="preconnect" href="https://www.google.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bel Sorriso Tijuca | Implantes e Odontologia Premium</title>
+    <meta name="description" content="Ter um sorriso renovado nunca foi tão fácil! Com nossos tratamentos que envolvem qualidade, excelência e tecnologia avançada, criamos sorrisos perfeitos e saudáveis que transformam vidas.">
+
+    <!-- Open Graph para compartilhamento em redes sociais -->
+    <meta property="og:title" content="Bel Sorriso Tijuca | Implantes e Odontologia Premium">
+    <meta property="og:description" content="Ter um sorriso renovado nunca foi tão fácil! Com nossos tratamentos que envolvem qualidade, excelência e tecnologia avançada, criamos sorrisos perfeitos e saudáveis que transformam vidas.">
+    <meta property="og:image" content="img/foto-1.webp">
+    <meta property="og:type" content="website">
+
+    <!-- Favicon Oficial -->
+    <link rel="icon" href="img/foto-6.png">
+
+    <!-- Fontes do Google -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+
+    <style>
+        /* CSS RESET & VARIAVEIS DE DESIGN SYSTEM */
+        :root {
+            --primary: #32373C;
+            --primary-light: #4E545A;
+            --primary-dark: #1E2124;
+            --accent: #C5A880; /* Tom dourado sutil para realçar o premium */
+            --bg-light: #F9FAFB;
+            --bg-pure: #FFFFFF;
+            --text-dark: #1F2937;
+            --text-muted: #4B5563;
+            --text-light: #9CA3AF;
+            --border-color: #E5E7EB;
+            --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+            --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            --radius-sm: 8px;
+            --radius-md: 16px;
+            --radius-lg: 24px;
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+            line-height: 1.6;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 600;
+            color: var(--primary);
+            line-height: 1.2;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: var(--transition);
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            object-fit: cover;
+        }
+
+        /* UTILITARIOS */
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        .section-padding {
+            padding: 80px 0;
+        }
+
+        @media (max-width: 768px) {
+            .section-padding {
+                padding: 48px 0;
+            }
+        }
+
+        .text-center { text-align: center; }
+        .flex { display: flex; }
+        .grid { display: grid; }
+        
+        /* BOTÕES */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 16px 32px;
+            border-radius: var(--radius-sm);
+            font-weight: 500;
+            font-size: 15px;
+            letter-spacing: 0.5px;
+            transition: var(--transition);
+            cursor: pointer;
+            border: none;
+            gap: 10px;
+        }
+
+        .btn-primary {
+            background-color: var(--primary);
+            color: var(--bg-pure);
+        }
+
+        .btn-primary:hover {
+            background-color: var(--primary-light);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .btn-accent {
+            background-color: var(--accent);
+            color: var(--primary-dark);
+        }
+
+        .btn-accent:hover {
+            opacity: 0.95;
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .btn-whatsapp {
+            background-color: #25D366;
+            color: white;
+        }
+
+        .btn-whatsapp:hover {
+            background-color: #20ba5a;
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
+        }
+
+        /* HEADER & NAV */
+        header {
+            background-color: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+            box-shadow: var(--shadow-sm);
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 80px;
+        }
+
+        .logo-area {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .logo-img {
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            background-color: var(--bg-light);
+            border: 1px solid var(--border-color);
+        }
+
+        .logo-text {
+            font-size: 1.15rem;
+            letter-spacing: 1.5px;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+
+        .nav-links {
+            display: none;
+            gap: 32px;
+        }
+
+        .nav-link {
+            font-size: 14px;
+            font-weight: 500;
+            color: var(--text-dark);
+            position: relative;
+        }
+
+        .nav-link:hover {
+            color: var(--accent);
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -6px;
+            left: 0;
+            background-color: var(--accent);
+            transition: var(--transition);
+        }
+
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        .header-cta {
+            display: none;
+        }
+
+        @media (min-width: 1024px) {
+            .nav-links { display: flex; }
+            .header-cta { display: block; }
+        }
+
+        /* HERO SECTION */
+        .hero-section {
+            background-color: var(--bg-pure);
+            position: relative;
+            overflow: hidden;
+            padding: 60px 0;
+        }
+
+        .hero-grid {
+            grid-template-columns: 1fr;
+            gap: 40px;
+            align-items: center;
+        }
+
+        @media (min-width: 992px) {
+            .hero-grid {
+                grid-template-columns: 1.1fr 0.9fr;
+                gap: 60px;
+            }
+        }
+
+        .hero-content {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+
+        .hero-badge {
+            align-self: flex-start;
+            background-color: rgba(197, 168, 128, 0.12);
+            color: #8C7355;
+            padding: 8px 16px;
+            border-radius: 100px;
+            font-size: 13px;
+            font-weight: 600;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .hero-title {
+            font-size: 2.5rem;
+            line-height: 1.15;
+        }
+
+        @media (min-width: 768px) {
+            .hero-title { font-size: 3.5rem; }
+        }
+
+        .hero-description {
+            font-size: 1.1rem;
+            color: var(--text-muted);
+            max-width: 540px;
+        }
+
+        .hero-cta-group {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        @media (min-width: 480px) {
+            .hero-cta-group {
+                flex-direction: row;
+            }
+        }
+
+        .hero-media {
+            position: relative;
+        }
+
+        .hero-img-wrapper {
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow-lg);
+            position: relative;
+            aspect-ratio: 4/5;
+        }
+
+        .hero-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* PROVA SOCIAL / GOOGLE RATING */
+        .trust-bar {
+            background-color: var(--bg-light);
+            border-top: 1px solid var(--border-color);
+            border-bottom: 1px solid var(--border-color);
+            padding: 24px 0;
+        }
+
+        .trust-wrapper {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            gap: 24px;
+        }
+
+        .trust-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .google-stars {
+            display: flex;
+            gap: 4px;
+            color: #FBBF24;
+        }
+
+        .trust-text {
+            font-size: 14px;
+            color: var(--text-muted);
+            font-weight: 500;
+        }
+
+        /* SEÇÃO IMPLANTES (DESTAQUE) */
+        .implantes-destaque {
+            background-color: var(--bg-pure);
+        }
+
+        .implante-grid {
+            grid-template-columns: 1fr;
+            gap: 48px;
+            align-items: center;
+        }
+
+        @media (min-width: 992px) {
+            .implante-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+            .implante-media {
+                order: 2;
+            }
+            .implante-content {
+                order: 1;
+            }
+        }
+
+        .implante-media-wrapper {
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow-lg);
+            aspect-ratio: 4/3;
+        }
+
+        .implante-media-wrapper img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .implante-title {
+            font-size: 2.2rem;
+            margin-bottom: 20px;
+        }
+
+        .implante-desc {
+            color: var(--text-muted);
+            font-size: 1.05rem;
+            margin-bottom: 24px;
+        }
+
+        /* SERVIÇOS EM CARDS */
+        .services-section {
+            background-color: var(--bg-light);
+        }
+
+        .section-header {
+            max-width: 650px;
+            margin: 0 auto 56px auto;
+            text-align: center;
+        }
+
+        .section-header h2 {
+            font-size: 2.25rem;
+            margin-bottom: 16px;
+        }
+
+        .section-header p {
+            color: var(--text-muted);
+            font-size: 1.1rem;
+        }
+
+        .services-grid {
+            grid-template-columns: 1fr;
+            gap: 24px;
+        }
+
+        @media (min-width: 640px) {
+            .services-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+
+        @media (min-width: 1024px) {
+            .services-grid { grid-template-columns: repeat(3, 1fr); }
+        }
+
+        .service-card {
+            background-color: var(--bg-pure);
+            padding: 36px;
+            border-radius: var(--radius-md);
+            box-shadow: var(--shadow-sm);
+            transition: var(--transition);
+            border: 1px solid rgba(0, 0, 0, 0.03);
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+
+        .service-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-lg);
+            border-color: var(--accent);
+        }
+
+        .service-icon {
+            width: 48px;
+            height: 48px;
+            background-color: rgba(50, 55, 60, 0.05);
+            border-radius: var(--radius-sm);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 24px;
+            color: var(--primary);
+        }
+
+        .service-card:hover .service-icon {
+            background-color: var(--primary);
+            color: var(--bg-pure);
+            transition: var(--transition);
+        }
+
+        .service-card h3 {
+            font-size: 1.4rem;
+            margin-bottom: 12px;
+            font-family: 'Playfair Display', serif;
+        }
+
+        .service-card p {
+            color: var(--text-muted);
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        /* SOBRE A CLÍNICA */
+        .sobre-section {
+            background-color: var(--bg-pure);
+        }
+
+        .sobre-grid {
+            grid-template-columns: 1fr;
+            gap: 48px;
+            align-items: center;
+        }
+
+        @media (min-width: 992px) {
+            .sobre-grid {
+                grid-template-columns: 1fr 1.1fr;
+            }
+        }
+
+        .sobre-content {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .sobre-title {
+            font-size: 2.25rem;
+        }
+
+        .sobre-desc {
+            color: var(--text-muted);
+            font-size: 1.05rem;
+        }
+
+        .sobre-media {
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow-lg);
+            aspect-ratio: 4/3;
+        }
+
+        /* FAQ ACCORDION */
+        .faq-section {
+            background-color: var(--bg-light);
+        }
+
+        .faq-wrapper {
+            max-width: 800px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .faq-item {
+            background-color: var(--bg-pure);
+            border-radius: var(--radius-sm);
+            box-shadow: var(--shadow-sm);
+            overflow: hidden;
+            border: 1px solid rgba(0, 0, 0, 0.02);
+            transition: var(--transition);
+        }
+
+        .faq-trigger {
+            width: 100%;
+            padding: 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: none;
+            border: none;
+            text-align: left;
+            cursor: pointer;
+            font-family: 'Playfair Display', serif;
+            font-size: 1.15rem;
+            font-weight: 600;
+            color: var(--primary);
+        }
+
+        .faq-icon {
+            flex-shrink: 0;
+            width: 24px;
+            height: 24px;
+            position: relative;
+            transition: var(--transition);
+        }
+
+        .faq-icon::before, .faq-icon::after {
+            content: '';
+            position: absolute;
+            background-color: var(--primary);
+            transition: var(--transition);
+        }
+
+        /* Horizontal line */
+        .faq-icon::before {
+            top: 11px;
+            left: 4px;
+            width: 16px;
+            height: 2px;
+        }
+
+        /* Vertical line */
+        .faq-icon::after {
+            top: 4px;
+            left: 11px;
+            width: 2px;
+            height: 16px;
+        }
+
+        .faq-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+            padding: 0 24px;
+        }
+
+        .faq-content p {
+            padding-bottom: 24px;
+            color: var(--text-muted);
+            font-size: 15px;
+        }
+
+        /* Active State Accordion */
+        .faq-item.active .faq-icon {
+            transform: rotate(45deg);
+        }
+
+        .faq-item.active .faq-content {
+            max-height: 200px;
+        }
+
+        /* BANNER CTA FINAL */
+        .cta-banner {
+            position: relative;
+            background-color: var(--primary);
+            color: var(--bg-pure);
+            overflow: hidden;
+            text-align: center;
+        }
+
+        .cta-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0.15;
+            z-index: 1;
+        }
+
+        .cta-container {
+            position: relative;
+            z-index: 2;
+            max-width: 700px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 24px;
+        }
+
+        .cta-banner h2 {
+            color: var(--bg-pure);
+            font-size: 2.5rem;
+        }
+
+        .cta-banner p {
+            color: rgba(255, 255, 255, 0.85);
+            font-size: 1.15rem;
+        }
+
+        /* MAPA & LOCALIZAÇÃO */
+        .location-section {
+            background-color: var(--bg-pure);
+        }
+
+        .location-grid {
+            grid-template-columns: 1fr;
+            gap: 40px;
+            align-items: stretch;
+        }
+
+        @media (min-width: 992px) {
+            .location-grid {
+                grid-template-columns: 1.1fr 0.9fr;
+            }
+        }
+
+        .location-info {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 24px;
+        }
+
+        .location-details {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .detail-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 16px;
+        }
+
+        .detail-icon {
+            color: var(--accent);
+            flex-shrink: 0;
+            margin-top: 4px;
+        }
+
+        .detail-text h4 {
+            font-family: 'Inter', sans-serif;
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 4px;
+        }
+
+        .detail-text p {
+            color: var(--text-muted);
+            font-size: 14px;
+        }
+
+        .map-wrapper {
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow-md);
+            min-height: 350px;
+        }
+
+        .map-wrapper iframe {
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+
+        /* RESPONSAVEL TECNICO */
+        .cro-badge {
+            background-color: var(--bg-light);
+            border: 1px solid var(--border-color);
+            padding: 16px 24px;
+            border-radius: var(--radius-sm);
+            display: inline-flex;
+            flex-direction: column;
+            gap: 4px;
+            font-size: 13px;
+        }
+
+        .cro-badge .name {
+            font-weight: 600;
+            color: var(--primary);
+        }
+
+        /* FOOTER */
+        footer {
+            background-color: var(--primary-dark);
+            color: rgba(255, 255, 255, 0.7);
+            padding: 60px 0 30px 0;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .footer-grid {
+            grid-template-columns: 1fr;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        @media (min-width: 768px) {
+            .footer-grid {
+                grid-template-columns: 1.5fr repeat(2, 1fr);
+            }
+        }
+
+        .footer-about {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .footer-logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            color: var(--bg-pure);
+        }
+
+        .footer-title {
+            color: var(--bg-pure);
+            font-family: 'Inter', sans-serif;
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+
+        .footer-links {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .footer-link {
+            font-size: 14px;
+        }
+
+        .footer-link:hover {
+            color: var(--bg-pure);
+        }
+
+        .social-links {
+            display: flex;
+            gap: 16px;
+        }
+
+        .social-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: rgba(255, 255, 255, 0.05);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--bg-pure);
+            transition: var(--transition);
+        }
+
+        .social-icon:hover {
+            background-color: var(--accent);
+            transform: translateY(-2px);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            padding-top: 30px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 16px;
+            text-align: center;
+            font-size: 13px;
+        }
+
+        @media (min-width: 768px) {
+            .footer-bottom {
+                flex-direction: row;
+                justify-content: space-between;
+                text-align: left;
+            }
+        }
+
+        /* WHATSAPP FLOAT BUTTON */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 32px;
+            right: 32px;
+            z-index: 99;
+            width: 60px;
+            height: 60px;
+            background-color: #25D366;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+            transition: var(--transition);
+        }
+
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+            background-color: #20ba5a;
+        }
+
+        .whatsapp-float svg {
+            width: 32px;
+            height: 32px;
+            fill: white;
+        }
+
+        @media (max-width: 768px) {
+            .whatsapp-float {
+                bottom: 20px;
+                right: 20px;
+                width: 50px;
+                height: 50px;
+            }
+            .whatsapp-float svg {
+                width: 26px;
+                height: 26px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- PIXEL FACEBOOK NOSCRIPT TRACKER -->
+    <noscript>
+        <img height="1" width="1" style="display:none" src="img/foto-5.jpg" alt="fb-pixel" />
+    </noscript>
+
+    <!-- HEADER / NAVIGATION -->
+    <header>
+        <div class="container nav-container">
+            <a href="#home" class="logo-area">
+                <img class="logo-img" src="img/foto-6.png" alt="Bel Sorriso Logo">
+                <span class="logo-text">Bel Sorriso</span>
+            </a>
+            <nav class="nav-links">
+                <a href="#home" class="nav-link">Home</a>
+                <a href="#clinica" class="nav-link">Nossa Clínica</a>
+                <a href="#implante" class="nav-link">Implantes</a>
+                <a href="#servicos" class="nav-link">Procedimentos</a>
+                <a href="#localizacao" class="nav-link">Localização</a>
+            </nav>
+            <div class="header-cta">
+                <a href="https://wa.me/5521988381362?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." class="btn btn-primary" style="padding: 10px 20px; font-size: 14px;">Agendar agora!</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- MAIN CONTENT -->
+    <main>
+
+        <!-- HERO SECTION -->
+        <section id="home" class="hero-section">
+            <div class="container hero-grid grid">
+                <div class="hero-content">
+                    <div class="hero-badge">Referência na Tijuca</div>
+                    <h1 class="hero-title">Ter um sorriso renovado nunca foi tão fácil!</h1>
+                    <p class="hero-description">Com nossos tratamentos que envolvem qualidade, excelência e tecnologia avançada, criamos sorrisos perfeitos e saudáveis que transformam vidas. Experimente a diferença de um atendimento humanizado.</p>
+                    <div class="hero-cta-group">
+                        <a href="https://wa.me/5521988381362?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." class="btn btn-primary">
+                            <span>Agendar Avaliação</span>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                        </a>
+                        <a href="#servicos" class="btn" style="border: 1px solid var(--border-color); color: var(--text-dark);">Ver Serviços</a>
+                    </div>
+                </div>
+                <div class="hero-media">
+                    <div class="hero-img-wrapper">
+                        <!-- Imagem principal do Hero - Sem lazy loading por ser a primeira imagem visível -->
+                        <img class="hero-img" src="img/foto-1.webp" alt="Estrutura e bem-estar na Bel Sorriso Tijuca">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PROVA SOCIAL / TRUST BAR -->
+        <section class="trust-bar">
+            <div class="container">
+                <div class="trust-wrapper">
+                    <div class="trust-item">
+                        <div class="google-stars">
+                            <!-- SVG Estrela (5x) -->
+                            <svg width="18" height="18" viewBox="0 0 20 20" fill="currentColor"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                            <svg width="18" height="18" viewBox="0 0 20 20" fill="currentColor"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                            <svg width="18" height="18" viewBox="0 0 20 20" fill="currentColor"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                            <svg width="18" height="18" viewBox="0 0 20 20" fill="currentColor"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                            <svg width="18" height="18" viewBox="0 0 20 20" fill="currentColor"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                        </div>
+                        <span class="trust-text">Avaliação Máxima no Google</span>
+                    </div>
+                    <div style="width: 1px; height: 24px; background-color: var(--border-color);" class="hidden-mobile"></div>
+                    <div class="trust-item">
+                        <span class="trust-text"><strong>Atendimento Humanizado</strong></span>
+                    </div>
+                    <div style="width: 1px; height: 24px; background-color: var(--border-color);" class="hidden-mobile"></div>
+                    <div class="trust-item">
+                        <span class="trust-text"><strong>Tecnologia de Ponta</strong></span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SEÇÃO SOBRE A CLÍNICA -->
+        <section id="clinica" class="sobre-section section-padding">
+            <div class="container sobre-grid grid">
+                <div class="sobre-media">
+                    <img loading="lazy" src="img/foto-2.webp" alt="Ambiente interno da Bel Sorriso Tijuca">
+                </div>
+                <div class="sobre-content">
+                    <div class="hero-badge" style="background-color: rgba(50, 55, 60, 0.05); color: var(--primary);">Nossa Clínica</div>
+                    <h2 class="sobre-title">Sobre a Belsorriso Tijuca</h2>
+                    <p class="sobre-desc">Localizada na Rua General Roca, 947, Sobreloja A, no coração da Tijuca, a Belsorriso é referência em cuidado odontológico de alta qualidade.</p>
+                    <p class="sobre-desc">Contamos com uma infraestrutura moderna, tecnologia de ponta e uma equipe de profissionais altamente qualificados, treinados nas mais recentes técnicas de saúde bucal. Tudo isso para garantir um atendimento humanizado e resultados que transformam o seu sorriso.</p>
+                    <p class="sobre-desc" style="font-weight: 500; color: var(--primary);">Venha conhecer a clínica perfeita para redescobrir sua confiança e bem-estar!</p>
+                    <div>
+                        <a href="https://wa.me/5521988381362?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." class="btn btn-primary">Fale Conosco</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SEÇÃO DESTAQUE: IMPLANTES -->
+        <section id="implante" class="implantes-destaque section-padding" style="background-color: var(--bg-light); border-top: 1px solid var(--border-color); border-bottom: 1px solid var(--border-color);">
+            <div class="container implante-grid grid">
+                <div class="implante-media">
+                    <div class="implante-media-wrapper">
+                        <img loading="lazy" src="img/foto-3.webp" alt="Procedimento de Implante Dentário Premium">
+                    </div>
+                </div>
+                <div class="implante-content">
+                    <div class="hero-badge" style="background-color: rgba(197, 168, 128, 0.12); color: #8C7355;">Especialidade</div>
+                    <h2 class="implante-title">Sorria Sem Limites: Implantes Dentários para Uma Vida Sem Restrições!</h2>
+                    <p class="implante-desc">Implantes dentários transformam a qualidade de vida, oferecendo uma base segura para dentes artificiais que parecem e funcionam como reais.</p>
+                    <p class="implante-desc">Além de devolver a estética, eles melhoram a fala, a mastigação e evitam a perda óssea. Viva com mais confiança e celebre cada momento sem restrições!</p>
+                    <a href="https://wa.me/5521988381362?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." class="btn btn-primary">Agendar Minha Avaliação</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- SEÇÃO PROCEDIMENTOS (SERVICES CARD GRID) -->
+        <section id="servicos" class="services-section section-padding">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Nossos Procedimentos</h2>
+                    <p>Cuidado completo com tecnologia, conforto e precisão para todas as necessidades da sua saúde bucal.</p>
+                </div>
+
+                <div class="services-grid grid">
+                    <!-- Implantes -->
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+                        </div>
+                        <h3>Implantes</h3>
+                        <p>Traga de volta a funcionalidade e beleza do seu sorriso com implantes dentários duráveis.</p>
+                    </div>
+
+                    <!-- Facetas (Lentes de Contato) -->
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"/></svg>
+                        </div>
+                        <h3>Facetas (Lentes)</h3>
+                        <p>Transformação instantânea com facetas/lentes que proporcionam um sorriso harmônico e deslumbrante.</p>
+                    </div>
+
+                    <!-- Estética -->
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                        </div>
+                        <h3>Estética</h3>
+                        <p>Realce do seu sorriso com clareamentos e procedimentos estéticos modernos que transformam sua aparência.</p>
+                    </div>
+
+                    <!-- Dentística -->
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"/></svg>
+                        </div>
+                        <h3>Dentística</h3>
+                        <p>Restaure e melhore a estrutura e aparência dos seus dentes com as soluções clínicas mais modernas do mercado.</p>
+                    </div>
+
+                    <!-- Prótese Dentária -->
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4"/></svg>
+                        </div>
+                        <h3>Prótese Dentária</h3>
+                        <p>Restauração completa do seu sorriso com próteses sob medida feitas para garantir conforto e naturalidade.</p>
+                    </div>
+
+                    <!-- Endodontia -->
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg>
+                        </div>
+                        <h3>Endodontia (Canal)</h3>
+                        <p>Procedimentos de canal precisos para alívio imediato da dor e manutenção da saúde do dente comprometido.</p>
+                    </div>
+
+                    <!-- Ortodontia -->
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/></svg>
+                        </div>
+                        <h3>Ortodontia</h3>
+                        <p>Alinhe seus dentes com aparelhos tradicionais ou modernos alinhadores personalizados para a estética perfeita.</p>
+                    </div>
+
+                    <!-- Periodontia -->
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+                        </div>
+                        <h3>Periodontia</h3>
+                        <p>Tratamentos especializados para a qualidade das gengivas e prevenção ativa de doenças periodontais.</p>
+                    </div>
+
+                    <!-- Odontopediatria -->
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                        </div>
+                        <h3>Odontopediatria</h3>
+                        <p>Atendimento infantil com carinho, sensibilidade e técnicas lúdicas para tornar o cuidado preventivo muito divertido.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PERGUNTAS FREQUENTES (FAQ ACCORDION) -->
+        <section class="faq-section section-padding">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Perguntas Frequentes</h2>
+                    <p>Tire suas dúvidas sobre implantes e procedimentos realizados na Bel Sorriso Tijuca.</p>
+                </div>
+
+                <div class="faq-wrapper">
+                    <!-- FAQ Item 1 -->
+                    <div class="faq-item">
+                        <button class="faq-trigger">
+                            <span>Por que os implantes dentários são feitos de titânio?</span>
+                            <span class="faq-icon"></span>
+                        </button>
+                        <div class="faq-content">
+                            <p>O titânio é biocompatível, ou seja, o corpo humano aceita bem o material, e ele se integra com o osso (osseointegração), proporcionando uma base estável e duradoura para o dente artificial.</p>
+                        </div>
+                    </div>
+
+                    <!-- FAQ Item 2 -->
+                    <div class="faq-item">
+                        <button class="faq-trigger">
+                            <span>Quanto tempo dura a cirurgia de implante?</span>
+                            <span class="faq-icon"></span>
+                        </button>
+                        <div class="faq-content">
+                            <p>A cirurgia pode durar entre 1 a 2 horas, dependendo do número de implantes. O tempo total inclui a preparação cuidadosa, colocação do implante e finalização rápida.</p>
+                        </div>
+                    </div>
+
+                    <!-- FAQ Item 3 -->
+                    <div class="faq-item">
+                        <button class="faq-trigger">
+                            <span>Implantes dentários exigem manutenção especial?</span>
+                            <span class="faq-icon"></span>
+                        </button>
+                        <div class="faq-content">
+                            <p>A manutenção é semelhante à dos dentes naturais: escovação regular, uso de fio dental e visitas periódicas ao seu dentista para acompanhamento e higienização clínica profissional. O cuidado adequado evita infecções e garante a longevidade permanente do implante.</p>
+                        </div>
+                    </div>
+
+                    <!-- FAQ Item 4 -->
+                    <div class="faq-item">
+                        <button class="faq-trigger">
+                            <span>Existe algum alimento que devo evitar após o implante?</span>
+                            <span class="faq-icon"></span>
+                        </button>
+                        <div class="faq-content">
+                            <p>Sim, evite alimentos muito quentes, duros ou crocantes nas primeiras semanas após o procedimento. Isso ajuda a prevenir qualquer tipo de dano térmico ou deslocamento físico precoce do implante durante a cicatrização.</p>
+                        </div>
+                    </div>
+
+                    <!-- FAQ Item 5 -->
+                    <div class="faq-item">
+                        <button class="faq-trigger">
+                            <span>Implantes dentários podem falhar?</span>
+                            <span class="faq-icon"></span>
+                        </button>
+                        <div class="faq-content">
+                            <p>Embora raro, pode ocorrer falha se o implante não se integrar perfeitamente ao osso. Condições adversas como tabagismo, doenças periodontais descontroladas ou má higiene bucal aumentam esse risco, mas a grande maioria dos casos clínicos tem extremo sucesso.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA FINAL BANNER -->
+        <section class="cta-banner section-padding">
+            <img class="cta-bg" loading="lazy" src="img/foto-4.webp" alt="Background decorativo de odontologia estética premium">
+            <div class="container cta-container">
+                <h2>Pronto para transformar seu sorriso?</h2>
+                <p>Nossa equipe está preparada para planejar e realizar os melhores tratamentos com conforto e segurança absoluta.</p>
+                <a href="https://wa.me/5521988381362?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." class="btn btn-accent" style="font-weight: 600; padding: 18px 40px;">Agendar minha avaliação!</a>
+            </div>
+        </section>
+
+        <!-- LOCALIZAÇÃO & CONTATO -->
+        <section id="localizacao" class="location-section section-padding">
+            <div class="container location-grid grid">
+                <div class="location-info">
+                    <div class="hero-badge" style="background-color: rgba(50, 55, 60, 0.05); color: var(--primary);">Onde Estamos</div>
+                    <h2 style="font-size: 2.25rem;">Esperamos por você em nossa clínica!</h2>
+                    <p style="color: var(--text-muted);">Com uma localização estratégica e um ambiente acolhedor, estamos prontos para oferecer tratamentos odontológicos que vão além das suas expectativas.</p>
+                    
+                    <div class="location-details">
+                        <!-- Endereço -->
+                        <div class="detail-item">
+                            <svg class="detail-icon" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+                            <div class="detail-text">
+                                <h4>Endereço</h4>
+                                <p>Rua General Roca, 947, Sobreloja A, Tijuca, Rio de Janeiro - RJ</p>
+                            </div>
+                        </div>
+
+                        <!-- Telefones -->
+                        <div class="detail-item">
+                            <svg class="detail-icon" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.94.725l.548 2.2a1 1 0 01-.321.988l-1.305.98a10.582 10.582 0 004.872 4.872l.98-1.305a1 1 0 01.988-.321l2.2.548a1 1 0 01.725.94V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+                            <div class="detail-text">
+                                <h4>Telefones para Contato</h4>
+                                <p>Ligue para nós: (21) 98691 - 2492</p>
+                                <p>WhatsApp: (21) 98838 - 1362</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Responsável Técnico -->
+                    <div class="cro-badge">
+                        <span class="name">Dra. Carolina de Oliveira Avila</span>
+                        <span>CRO: 45123/RJ – EPAO: 5814</span>
+                    </div>
+                </div>
+
+                <div class="map-wrapper">
+                    <!-- Mapa real no coração da Rua General Roca, Tijuca -->
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3674.341857904439!2d-43.2351912!3d-22.9210664!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x997e594d48a159%3A0xcb1a2083236e7ee5!2sR.%20Gen.%20Roca%2C%20947%20-%20Tijuca%2C%20Rio%20de%20Janeiro%20-%20RJ%2C%2020521-070!5e0!3m2!1spt-BR!2sbr!4v1700000000000!5m2!1spt-BR!2sbr" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container footer-grid grid">
+            <div class="footer-about">
+                <div class="footer-logo">
+                    <img class="logo-img" src="img/foto-6.png" alt="Bel Sorriso Logo Rodapé">
+                    <span class="logo-text" style="color: white;">Bel Sorriso</span>
+                </div>
+                <p style="font-size: 14px; line-height: 1.6;">Referência em cuidado odontológico de alta qualidade e reabilitação oral na Tijuca. Uma clínica planejada para o seu bem-estar.</p>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/odctijuca" target="_blank" class="social-icon" aria-label="Facebook">
+                        <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.95c5.05-.5 9-4.76 9-9.95z"/></svg>
+                    </a>
+                    <a href="https://www.instagram.com/odctijuca" target="_blank" class="social-icon" aria-label="Instagram">
+                        <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.051.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+                    </a>
+                </div>
+            </div>
+
+            <div>
+                <h3 class="footer-title">Links Úteis</h3>
+                <ul class="footer-links">
+                    <li><a href="#home" class="footer-link">Início</a></li>
+                    <li><a href="#clinica" class="footer-link">Nossa Clínica</a></li>
+                    <li><a href="#implante" class="footer-link">Implantes</a></li>
+                    <li><a href="#servicos" class="footer-link">Serviços</a></li>
+                    <li><a href="#localizacao" class="footer-link">Contato</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h3 class="footer-title">Contatos Rápidos</h3>
+                <ul class="footer-links">
+                    <li class="footer-link">Rua General Roca, 947, Sobreloja A, Tijuca</li>
+                    <li class="footer-link">T: (21) 98691-2492</li>
+                    <li class="footer-link">W: (21) 98838-1362</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="container footer-bottom">
+            <p>2026 © Todos os direitos reservados – Políticas de Privacidade – Termos – BELSORRISO TIJUCA</p>
+            <p style="opacity: 0.5;">Desenvolvido por BeHype Media</p>
+        </div>
+    </footer>
+
+    <!-- WHATSAPP FLOATING BUTTON -->
+    <a href="https://wa.me/5521988381362?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." class="whatsapp-float" target="_blank" aria-label="Fale conosco no WhatsApp">
+        <svg viewBox="0 0 24 24">
+            <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.513 2.262 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.724-1.455L0 24zm6.59-4.846c1.6.95 3.188 1.449 4.725 1.451 5.4 0 9.794-4.392 9.797-9.799.002-2.618-1.01-5.08-2.854-6.927C16.471 2.03 14.017 1.016 11.4 1.015c-5.402 0-9.798 4.394-9.802 9.802-.001 1.637.479 3.236 1.39 4.673l-.997 3.637 3.733-.978c1.396.822 2.923 1.258 4.316 1.258h.017zM17.48 14.54c-.3-.15-1.776-.875-2.05-.974-.275-.1-.475-.15-.675.15-.2.3-.775.974-.95 1.174-.175.2-.35.225-.65.075-.3-.15-1.265-.467-2.41-1.485-.89-.794-1.49-1.774-1.665-2.074-.175-.3-.018-.463.132-.612.135-.135.3-.35.45-.525.15-.175.2-.3.3-.5.1-.2.05-.375-.025-.525-.075-.15-.675-1.625-.925-2.225-.244-.589-.493-.51-.675-.52l-.575-.01c-.2 0-.525.075-.8.375-.275.3-1.05 1.025-1.05 2.5s1.075 2.9 1.225 3.1c.15.2 2.11 3.223 5.11 4.523.714.31 1.272.495 1.706.633.718.228 1.37.196 1.885.119.574-.085 1.776-.725 2.025-1.425.25-.7.25-1.3 1.75-1.425-.075-.125-.225-.2-.525-.35z"/>
+        </svg>
+    </a>
+
+    <!-- CUSTOM VANILLA JAVASCRIPT -->
+    <script>
+        // Sistema de Accordion Simples e Leve para o FAQ
+        document.querySelectorAll('.faq-trigger').forEach(trigger => {
+            trigger.addEventListener('click', () => {
+                const item = trigger.parentElement;
+                
+                // Fecha outros itens (efeito de sanfona pura)
+                document.querySelectorAll('.faq-item').forEach(otherItem => {
+                    if (otherItem !== item) {
+                        otherItem.classList.remove('active');
+                        otherItem.querySelector('.faq-content').style.maxHeight = null;
+                    }
+                });
+
+                // Alterna o estado do item clicado
+                item.classList.toggle('active');
+                const content = item.querySelector('.faq-content');
+                if (item.classList.contains('active')) {
+                    content.style.maxHeight = content.scrollHeight + "px";
+                } else {
+                    content.style.maxHeight = null;
+                }
+            });
+        });
+    </script>
+</body>
+</html>
