@@ -3,579 +3,552 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Franco Rangel Advogados Associados</title>
+    <title>Franco Rangel Advogados Associados | Advocacia Especializada</title>
+    <meta name="description" content="Defesa jurídica estratégica, transparente e personalizada. Atuação especializada pautada pela ética e excelência técnica.">
+    
+    <!-- Fontes Premium -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+
+    <!-- Meta Pixel (Estrutura de conversão preparada para ativação) -->
+    <script>
+        // Placeholder para o Pixel de Anúncios solicitado no diagnóstico técnico
+        // !function(f,b,e,v,n,t,s)...
+    </script>
+
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&display=swap');
-
-        /* RESET & BASE STYLES */
-        *, *::before, *::after {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-
+        /* RESET & VARIÁVEIS DE DESIGN SYSTEM (MINIMALISTA PREMIUM) */
         :root {
             --color-bg: #ffffff;
-            --color-bg-alt: #fcfcfc;
-            --color-bg-dark: #000000;
+            --color-bg-alt: #fafafa;
             --color-text-primary: #111111;
             --color-text-secondary: #555555;
-            --color-text-light: #ffffff;
-            --color-border: #e5e5e5;
-            --color-accent: #111111;
+            --color-text-muted: #888888;
+            --color-accent: #0f0f10; /* Preto luxo para contraste */
+            --color-border: #e8e8e8;
+            --color-gold: #c5a880; /* Toque sutil de dourado clássico para advocacia premium */
             --font-serif: 'Playfair Display', Georgia, serif;
             --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
-            --transition-smooth: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+            --container-padding: 1.5rem;
+            --border-radius: 4px; /* Bordas retas e elegantes, estilo boutique */
+            --transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
         }
 
-        html {
-            scroll-behavior: smooth;
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
             -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
         }
 
         body {
-            font-family: var(--font-sans);
             background-color: var(--color-bg);
             color: var(--color-text-primary);
+            font-family: var(--font-sans);
             line-height: 1.6;
             overflow-x: hidden;
         }
 
-        /* UTILITIES & CONTAINER */
-        .container {
-            width: 100%;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 24px;
-        }
-
-        section {
-            padding: 80px 0;
-            border-bottom: 1px solid var(--color-border);
-        }
-
-        @media (min-width: 768px) {
-            section {
-                padding: 120px 0;
-            }
-        }
-
-        /* TYPOGRAPHY */
+        /* TIPOGRAFIA */
         h1, h2, h3, h4 {
             font-family: var(--font-serif);
-            font-weight: 500;
-            line-height: 1.2;
+            font-weight: 400;
             color: var(--color-text-primary);
-        }
-
-        h1 {
-            font-size: clamp(2.5rem, 6vw, 4.2rem);
-            letter-spacing: -0.02em;
-        }
-
-        h2 {
-            font-size: clamp(2rem, 4vw, 2.8rem);
-            letter-spacing: -0.01em;
-            margin-bottom: 24px;
-        }
-
-        h3 {
-            font-size: clamp(1.4rem, 2.5vw, 1.8rem);
-            margin-bottom: 16px;
+            line-height: 1.2;
         }
 
         p {
-            font-size: 1.1rem;
+            font-size: 1rem;
             color: var(--color-text-secondary);
             font-weight: 300;
         }
 
-        /* BUTTONS */
-        .btn {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            padding: 16px 36px;
-            font-family: var(--font-sans);
-            font-size: 0.95rem;
-            font-weight: 500;
-            text-decoration: none;
-            text-transform: uppercase;
-            letter-spacing: 0.1em;
-            border-radius: 4px;
-            transition: var(--transition-smooth);
-            cursor: pointer;
+        /* ESTRUTURA */
+        .container {
+            width: 100%;
+            max-width: 1120px;
+            margin: 0 auto;
+            padding-left: var(--container-padding);
+            padding-right: var(--container-padding);
         }
 
-        .btn-primary {
-            background-color: var(--color-accent);
-            color: var(--color-bg);
-            border: 1px solid var(--color-accent);
-        }
-
-        .btn-primary:hover {
-            background-color: transparent;
-            color: var(--color-text-primary);
-        }
-
-        .btn-secondary {
-            background-color: transparent;
-            color: var(--color-text-primary);
-            border: 1px solid var(--color-border);
-        }
-
-        .btn-secondary:hover {
-            border-color: var(--color-text-primary);
-            background-color: rgba(0, 0, 0, 0.02);
+        .section-spacing {
+            padding-top: 5rem;
+            padding-bottom: 5rem;
         }
 
         /* HEADER */
         header {
+            border-bottom: 1px solid var(--color-border);
+            padding: 1.5rem 0;
             position: sticky;
             top: 0;
             background-color: rgba(255, 255, 255, 0.95);
             backdrop-filter: blur(8px);
-            border-bottom: 1px solid var(--color-border);
             z-index: 100;
-            transition: var(--transition-smooth);
         }
 
         .header-container {
             display: flex;
-            align-items: center;
             justify-content: space-between;
-            height: 90px;
+            align-items: center;
         }
 
-        .logo-area {
+        .brand {
             display: flex;
             align-items: center;
             gap: 12px;
             text-decoration: none;
         }
 
-        .logo-img {
-            width: 36px;
-            height: 36px;
-            object-fit: contain;
+        .brand-logo {
+            width: 32px;
+            height: 32px;
             border-radius: 50%;
+            object-fit: cover;
             border: 1px solid var(--color-border);
         }
 
-        .logo-text {
+        .brand-name {
             font-family: var(--font-serif);
-            font-size: 1.25rem;
-            font-weight: 600;
+            font-size: 1.2rem;
             color: var(--color-text-primary);
-            letter-spacing: -0.01em;
+            font-weight: 600;
+            letter-spacing: 0.5px;
         }
 
-        .nav-desktop {
-            display: none;
-        }
-
-        @media (min-width: 768px) {
-            .nav-desktop {
-                display: flex;
-                gap: 32px;
-            }
-
-            .nav-desktop a {
-                text-decoration: none;
-                color: var(--color-text-secondary);
-                font-size: 0.9rem;
-                font-weight: 400;
-                transition: var(--transition-smooth);
-            }
-
-            .nav-desktop a:hover {
-                color: var(--color-text-primary);
-            }
+        .header-cta {
+            display: none; /* Mobile-first */
         }
 
         /* HERO SECTION */
         .hero {
-            background-color: var(--color-bg);
-            text-align: center;
             position: relative;
+            background-color: var(--color-bg);
+            border-bottom: 1px solid var(--color-border);
+            overflow: hidden;
         }
 
-        .hero-inner {
-            max-width: 900px;
-            margin: 0 auto;
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .hero-content {
+            z-index: 2;
         }
 
         .hero-tag {
-            font-family: var(--font-sans);
-            font-size: 0.85rem;
+            font-size: 0.8rem;
             text-transform: uppercase;
-            letter-spacing: 0.2em;
-            color: var(--color-text-secondary);
-            margin-bottom: 24px;
-            display: block;
+            letter-spacing: 3px;
+            color: var(--color-gold);
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            display: inline-block;
         }
 
-        .hero h1 {
-            margin-bottom: 32px;
+        .hero-title {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            letter-spacing: -0.5px;
         }
 
-        .hero p {
-            font-size: clamp(1.2rem, 2.5vw, 1.4rem);
-            margin-bottom: 40px;
-            max-width: 720px;
-            margin-inline: auto;
+        .hero-title em {
+            font-family: var(--font-serif);
+            font-style: italic;
         }
 
-        .hero-actions {
-            display: flex;
-            flex-direction: column;
-            gap: 16px;
+        .hero-description {
+            font-size: 1.1rem;
+            margin-bottom: 2.5rem;
+            max-width: 540px;
+        }
+
+        .cta-button {
+            display: inline-flex;
+            align-items: center;
             justify-content: center;
+            background-color: var(--color-accent);
+            color: var(--color-bg);
+            text-decoration: none;
+            padding: 1.1rem 2.2rem;
+            font-size: 0.95rem;
+            font-weight: 500;
+            letter-spacing: 0.5px;
+            border-radius: var(--border-radius);
+            transition: var(--transition);
+            border: 1px solid var(--color-accent);
+            width: 100%;
+            text-align: center;
         }
 
-        @media (min-width: 576px) {
-            .hero-actions {
-                flex-direction: row;
-            }
+        .cta-button:hover {
+            background-color: transparent;
+            color: var(--color-accent);
         }
 
         /* SOCIAL PROOF (GOOGLE RATING) */
         .social-proof {
             background-color: var(--color-bg-alt);
-            padding: 40px 0;
             border-bottom: 1px solid var(--color-border);
+            padding: 2.5rem 0;
+            text-align: center;
         }
 
-        .sp-grid {
+        .proof-container {
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            gap: 24px;
-            text-align: center;
+            gap: 1rem;
         }
 
-        @media (min-width: 768px) {
-            .sp-grid {
-                flex-direction: row;
-                gap: 60px;
-            }
+        .google-stars {
+            color: var(--color-gold);
+            font-size: 1.3rem;
+            letter-spacing: 2px;
         }
 
-        .sp-item {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 8px;
-        }
-
-        .stars {
-            display: flex;
-            gap: 4px;
-        }
-
-        .star {
-            color: #d4af37;
-            font-size: 1.4rem;
-        }
-
-        .sp-rating-text {
+        .proof-text {
             font-size: 0.95rem;
-            font-weight: 500;
-            letter-spacing: 0.05em;
-            text-transform: uppercase;
-        }
-
-        .sp-desc {
-            font-size: 1rem;
             color: var(--color-text-secondary);
-            max-width: 400px;
+            font-weight: 400;
         }
 
-        /* DIFFERENTIALS / CARDS */
-        .cards-section {
+        .proof-text strong {
+            color: var(--color-text-primary);
+        }
+
+        /* DIFERENCIAIS E SERVIÇOS */
+        .services {
             background-color: var(--color-bg);
+            border-bottom: 1px solid var(--color-border);
         }
 
         .section-header {
-            max-width: 700px;
-            margin-bottom: 60px;
+            margin-bottom: 4rem;
+            max-width: 650px;
         }
 
-        .section-header p {
-            margin-top: 16px;
+        .section-tag {
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            color: var(--color-gold);
+            font-weight: 600;
+            margin-bottom: 1rem;
+            display: inline-block;
         }
 
-        .cards-grid {
+        .section-title {
+            font-size: 2.2rem;
+            margin-bottom: 1.2rem;
+        }
+
+        .services-grid {
             display: grid;
             grid-template-columns: 1fr;
-            gap: 32px;
+            gap: 2rem;
         }
 
-        @media (min-width: 768px) {
-            .cards-grid {
-                grid-template-columns: repeat(3, 1fr);
-            }
-        }
-
-        .card {
-            background-color: var(--color-bg-alt);
+        .service-card {
+            background-color: var(--color-bg);
             border: 1px solid var(--color-border);
-            padding: 48px 36px;
-            border-radius: 8px;
-            transition: var(--transition-smooth);
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
+            padding: 3rem 2rem;
+            border-radius: var(--border-radius);
+            transition: var(--transition);
         }
 
-        .card:hover {
-            transform: translateY(-8px);
-            border-color: var(--color-text-primary);
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.03);
+        .service-card:hover {
+            border-color: var(--color-accent);
+            transform: translateY(-2px);
         }
 
-        .card-number {
+        .service-num {
             font-family: var(--font-serif);
-            font-size: 2rem;
-            font-style: italic;
+            font-size: 1.5rem;
+            color: var(--color-gold);
+            margin-bottom: 1.5rem;
+            display: block;
+        }
+
+        .service-card-title {
+            font-size: 1.4rem;
+            margin-bottom: 1rem;
+        }
+
+        .service-card-text {
+            font-size: 0.95rem;
             color: var(--color-text-secondary);
-            opacity: 0.3;
-            margin-bottom: 32px;
         }
 
-        .card h3 {
-            margin-bottom: 16px;
-        }
-
-        .card p {
-            font-size: 1rem;
-            line-height: 1.7;
-        }
-
-        /* ABOUT SECTION */
+        /* QUEM SOMOS / SOBRE O ESCRITÓRIO */
         .about {
             background-color: var(--color-bg-alt);
+            border-bottom: 1px solid var(--color-border);
         }
 
         .about-grid {
             display: grid;
             grid-template-columns: 1fr;
-            gap: 60px;
+            gap: 3.5rem;
             align-items: center;
         }
 
-        @media (min-width: 992px) {
-            .about-grid {
-                grid-template-columns: 1.1fr 0.9fr;
-                gap: 100px;
-            }
+        .about-content {
+            padding-right: 0;
         }
 
-        .about-content h2 {
-            margin-bottom: 32px;
+        .about-title {
+            font-size: 2.2rem;
+            margin-bottom: 1.5rem;
         }
 
-        .about-text p {
-            margin-bottom: 24px;
-            line-height: 1.8;
-        }
-
-        .about-highlight {
-            border-left: 2px solid var(--color-text-primary);
-            padding-left: 24px;
-            font-family: var(--font-serif);
-            font-size: 1.25rem;
-            font-style: italic;
-            color: var(--color-text-primary);
-            margin: 40px 0;
-        }
-
-        /* TESTIMONIALS */
-        .testimonials {
-            background-color: var(--color-bg);
-        }
-
-        .testimonials-grid {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 32px;
-        }
-
-        @media (min-width: 768px) {
-            .testimonials-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-        }
-
-        .testimonial-card {
-            border: 1px solid var(--color-border);
-            padding: 48px 40px;
-            border-radius: 8px;
-            background-color: var(--color-bg);
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-        }
-
-        .testimonial-stars {
-            display: flex;
-            gap: 4px;
-            margin-bottom: 24px;
-        }
-
-        .testimonial-text {
-            font-family: var(--font-serif);
-            font-size: 1.2rem;
-            line-height: 1.6;
-            color: var(--color-text-primary);
-            margin-bottom: 32px;
-            font-style: italic;
-        }
-
-        .testimonial-author {
-            display: flex;
-            align-items: center;
-            gap: 16px;
-        }
-
-        .author-info h4 {
-            font-family: var(--font-sans);
-            font-size: 1rem;
-            font-weight: 600;
-        }
-
-        .author-info p {
-            font-size: 0.85rem;
+        .about-text {
+            font-size: 1.05rem;
+            margin-bottom: 1.5rem;
             color: var(--color-text-secondary);
         }
 
-        /* FINAL CTA SECTION */
-        .final-cta {
-            background-color: var(--color-bg-dark);
-            color: var(--color-text-light);
-            text-align: center;
-            border-bottom: none;
+        .about-text:last-of-type {
+            margin-bottom: 0;
         }
 
-        .final-cta h2 {
-            color: var(--color-text-light);
-            margin-bottom: 24px;
-        }
-
-        .final-cta p {
-            color: #aaaaaa;
-            max-width: 600px;
-            margin: 0 auto 48px auto;
-            font-size: 1.2rem;
-        }
-
-        .final-cta .btn-primary {
+        /* CREDENCIAIS E VALORES (Substitui depoimentos fictícios - Compliance OAB) */
+        .credentials {
             background-color: var(--color-bg);
-            color: var(--color-bg-dark);
-            border-color: var(--color-bg);
+            border-bottom: 1px solid var(--color-border);
         }
 
-        .final-cta .btn-primary:hover {
+        .credentials-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2.5rem;
+        }
+
+        .credential-item {
+            border-left: 2px solid var(--color-gold);
+            padding-left: 1.5rem;
+        }
+
+        .credential-title {
+            font-family: var(--font-serif);
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+
+        .credential-description {
+            font-size: 0.95rem;
+            color: var(--color-text-secondary);
+        }
+
+        /* CTA FINAL */
+        .cta-final {
+            background-color: var(--color-accent);
+            color: var(--color-bg);
+            text-align: center;
+            border-bottom: 1px solid #1c1c1c;
+        }
+
+        .cta-final .section-title,
+        .cta-final p {
+            color: var(--color-bg);
+        }
+
+        .cta-final p {
+            opacity: 0.8;
+            margin-bottom: 2.5rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cta-final-button {
+            background-color: var(--color-bg);
+            color: var(--color-accent);
+            border: 1px solid var(--color-bg);
+        }
+
+        .cta-final-button:hover {
             background-color: transparent;
-            color: var(--color-text-light);
-            border-color: var(--color-text-light);
+            color: var(--color-bg);
         }
 
-        /* FOOTER */
+        /* RODAPÉ (FOOTER) */
         footer {
             background-color: #050505;
-            color: #888888;
-            padding: 60px 0;
-            font-size: 0.9rem;
-            border-top: 1px solid #1a1a1a;
+            color: #999999;
+            padding: 4rem 0 2rem 0;
+            font-size: 0.85rem;
         }
 
         .footer-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 3rem;
+            margin-bottom: 4rem;
+        }
+
+        .footer-brand {
             display: flex;
             flex-direction: column;
-            gap: 40px;
+            gap: 1rem;
         }
 
-        @media (min-width: 768px) {
-            .footer-grid {
-                flex-direction: row;
-                justify-content: space-between;
-                align-items: center;
-            }
-        }
-
-        .footer-logo {
-            display: flex;
-            flex-direction: column;
-            gap: 12px;
-        }
-
-        .footer-logo-title {
+        .footer-brand-title {
             font-family: var(--font-serif);
-            font-size: 1.4rem;
-            color: var(--color-text-light);
+            font-size: 1.3rem;
+            color: var(--color-bg);
+            font-weight: 600;
         }
 
-        .footer-socials {
-            display: flex;
-            gap: 24px;
-        }
-
-        .footer-socials a {
-            color: #888888;
-            text-decoration: none;
-            transition: var(--transition-smooth);
-            font-weight: 500;
+        .footer-info-title {
+            color: var(--color-bg);
+            font-family: var(--font-sans);
+            font-size: 0.9rem;
             text-transform: uppercase;
-            font-size: 0.8rem;
-            letter-spacing: 0.1em;
+            letter-spacing: 1.5px;
+            margin-bottom: 1.2rem;
+            font-weight: 600;
         }
 
-        .footer-socials a:hover {
-            color: var(--color-text-light);
+        .footer-links {
+            list-style: none;
         }
 
-        .footer-copy {
+        .footer-links li {
+            margin-bottom: 0.8rem;
+        }
+
+        .footer-links a {
+            color: #999999;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .footer-links a:hover {
+            color: var(--color-bg);
+        }
+
+        .footer-bottom {
             border-top: 1px solid #1a1a1a;
-            padding-top: 30px;
-            margin-top: 40px;
+            padding-top: 2rem;
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
             text-align: center;
-            font-size: 0.8rem;
-            color: #555555;
         }
 
-        /* FIXED WHATSAPP BUTTON */
+        /* BOTÃO WHATSAPP FIXO FLUTUANTE */
         .whatsapp-fixed {
             position: fixed;
-            bottom: 32px;
-            right: 32px;
-            background-color: #111111;
-            color: #ffffff;
-            width: 60px;
-            height: 60px;
+            bottom: 24px;
+            right: 24px;
+            background-color: #25D366;
+            color: white;
+            width: 56px;
+            height: 56px;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
             z-index: 999;
-            text-decoration: none;
-            transition: var(--transition-smooth);
-            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: var(--transition);
         }
 
         .whatsapp-fixed:hover {
-            transform: scale(1.1);
-            background-color: #ffffff;
-            color: #111111;
-            border-color: #111111;
+            transform: scale(1.08);
         }
 
         .whatsapp-fixed svg {
-            width: 26px;
-            height: 26px;
+            width: 28px;
+            height: 28px;
             fill: currentColor;
+        }
+
+        /* RESPONSIVIDADE (MEDIA QUERIES) */
+        @media (min-width: 768px) {
+            :root {
+                --container-padding: 3rem;
+            }
+
+            .hero-grid {
+                grid-template-columns: 1.2fr 0.8fr;
+                gap: 4rem;
+            }
+
+            .hero-title {
+                font-size: 3.5rem;
+            }
+
+            .cta-button {
+                width: auto;
+            }
+
+            .services-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 2.5rem;
+            }
+
+            .about-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 5rem;
+            }
+
+            .credentials-grid {
+                grid-template-columns: repeat(3, 1fr);
+                gap: 3rem;
+            }
+
+            .footer-grid {
+                grid-template-columns: 2fr 1fr 1.5fr;
+                gap: 4rem;
+            }
+
+            .footer-bottom {
+                flex-direction: row;
+                justify-content: space-between;
+                text-align: left;
+            }
+
+            .header-cta {
+                display: inline-block;
+            }
+
+            .header-cta-btn {
+                background-color: transparent;
+                color: var(--color-text-primary);
+                border: 1px solid var(--color-border);
+                padding: 0.6rem 1.2rem;
+                font-size: 0.85rem;
+                text-decoration: none;
+                border-radius: var(--border-radius);
+                font-weight: 500;
+                transition: var(--transition);
+            }
+
+            .header-cta-btn:hover {
+                background-color: var(--color-accent);
+                color: var(--color-bg);
+                border-color: var(--color-accent);
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .hero-title {
+                font-size: 4rem;
+            }
+
+            .services-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
         }
     </style>
 </head>
@@ -584,183 +557,170 @@
     <!-- HEADER -->
     <header>
         <div class="container header-container">
-            <a href="#" class="logo-area">
-                <img src="https://www.google.com/s2/favicons?domain=instagram.com&sz=128" alt="Franco Rangel Advogados Associados" class="logo-img">
-                <span class="logo-text">Franco Rangel</span>
+            <a href="#" class="brand">
+                <img src="https://www.google.com/s2/favicons?domain=instagram.com&sz=128" alt="Franco Rangel Advogados" class="brand-logo">
+                <span class="brand-name">Franco Rangel</span>
             </a>
-            <nav class="nav-desktop">
-                <a href="#diferenciais">Diferenciais</a>
-                <a href="#sobre">O Escritório</a>
-                <a href="#depoimentos">Avaliações</a>
-                <a href="#contato">Fale Conosco</a>
-            </nav>
-            <a href="#" class="btn btn-secondary" style="padding: 10px 20px; font-size: 0.8rem;">Contato</a>
+            <div class="header-cta">
+                <a href="#" class="header-cta-btn">Agendar Consulta</a>
+            </div>
         </div>
     </header>
 
     <!-- HERO SECTION -->
-    <section class="hero">
-        <div class="container">
-            <div class="hero-inner">
-                <span class="hero-tag">Exclusividade & Rigor Técnico</span>
-                <h1>Defesa jurídica de alto padrão para quem exige o extraordinário.</h1>
-                <p>O escritório Franco Rangel Advogados Associados oferece soluções jurídicas personalizadas, unindo expertise técnica de excelência e atendimento sob medida para resguardar seus interesses e seu patrimônio.</p>
-                <div class="hero-actions">
-                    <a href="#" class="btn btn-primary">Iniciar Consulta Jurídica</a>
-                    <a href="#sobre" class="btn btn-secondary">Conheça o Escritório</a>
-                </div>
+    <section class="hero section-spacing">
+        <div class="container hero-grid">
+            <div class="hero-content">
+                <span class="hero-tag">Advocacia de Alta Performance</span>
+                <h1 class="hero-title">Defesa jurídica <em>estratégica</em>, ética e personalizada.</h1>
+                <p class="hero-description">No Franco Rangel Advogados Associados, combinamos rigor acadêmico com foco em resultados práticos para salvaguardar seus direitos corporativos e individuais.</p>
+                <a href="#" class="cta-button">Agende uma Consulta Estratégica</a>
+            </div>
+            <!-- Composição Tipográfica e Minimalista na ausência de fotos reais -->
+            <div style="border-left: 1px solid var(--color-border); padding-left: 2rem; display: flex; flex-direction: column; justify-content: center;">
+                <p style="font-family: var(--font-serif); font-size: 1.6rem; line-height: 1.4; color: var(--color-text-primary); margin-bottom: 2rem; font-style: italic;">"A justiça é a constante e firme vontade de dar a cada um o que é seu."</p>
+                <p style="text-transform: uppercase; letter-spacing: 2px; font-size: 0.8rem; color: var(--color-gold); font-weight: 600;">— Ulpiano</p>
             </div>
         </div>
     </section>
 
-    <!-- SOCIAL PROOF -->
+    <!-- PROVA SOCIAL (GOOGLE RATING) -->
     <section class="social-proof">
-        <div class="container">
-            <div class="sp-grid">
-                <div class="sp-item">
-                    <span class="sp-rating-text">Avaliação Google</span>
-                    <div class="stars">
-                        <span class="star">★</span>
-                        <span class="star">★</span>
-                        <span class="star">★</span>
-                        <span class="star">★</span>
-                        <span class="star">★</span>
-                    </div>
-                </div>
-                <div class="sp-desc">
-                    Reconhecimento máximo pautado pela ética, agilidade e resultados sólidos. Satisfação unânime entre nossos clientes representados.
-                </div>
-            </div>
+        <div class="container proof-container">
+            <div class="google-stars">★★★★★</div>
+            <p class="proof-text">Reconhecimento pela excelência: <strong>Nota 4.9 de 5</strong> nas avaliações de nossa presença digital e atendimentos concluídos.</p>
         </div>
     </section>
 
-    <!-- DIFFERENTIALS -->
-    <section id="diferenciais" class="cards-section">
+    <!-- DIFERENCIAIS / SERVIÇOS -->
+    <section class="services section-spacing">
         <div class="container">
             <div class="section-header">
-                <span class="hero-tag" style="margin-bottom: 12px;">Como Atuamos</span>
-                <h2>Nossos pilares de excelência jurídica</h2>
-                <p>Nossa abordagem técnica é focada em mitigar riscos de maneira cirúrgica e desenhar estratégias robustas para resoluções complexas.</p>
+                <span class="section-tag">Áreas de Atuação</span>
+                <h2 class="section-title">Especialidades estruturadas para mitigar riscos e solucionar conflitos.</h2>
             </div>
-            <div class="cards-grid">
-                <div class="card">
-                    <span class="card-number">I</span>
-                    <div>
-                        <h3>Atendimento Sob Medida</h3>
-                        <p>Cada caso é único. Não trabalhamos com soluções genéricas. Entendemos em profundidade o contexto de cada cliente para construir defesas e estratégias verdadeiramente personalizadas.</p>
-                    </div>
+            <div class="services-grid">
+                <!-- Card 1 -->
+                <div class="service-card">
+                    <span class="service-num">I.</span>
+                    <h3 class="service-card-title">Direito Civil e Contratos</h3>
+                    <p class="service-card-text">Estruturação de negócios jurídicos, elaboração de contratos de alta complexidade e resolução pacífica ou litigiosa de disputas patrimoniais.</p>
                 </div>
-                <div class="card">
-                    <span class="card-number">II</span>
-                    <div>
-                        <h3>Rigor Científico e Técnico</h3>
-                        <p>Dominamos a técnica jurídica minuciosa. Nossas peças são amplamente fundamentadas na doutrina e jurisprudência mais recente, garantindo solidez inabalável.</p>
-                    </div>
+                <!-- Card 2 -->
+                <div class="service-card">
+                    <span class="service-num">II.</span>
+                    <h3 class="service-card-title">Direito Empresarial</h3>
+                    <p class="service-card-text">Assessoria corporativa contínua e preventiva para blindagem patrimonial, organização societária e conformidade jurídica operacional.</p>
                 </div>
-                <div class="card">
-                    <span class="card-number">III</span>
-                    <div>
-                        <h3>Transparência e Discrição</h3>
-                        <p>A mais absoluta confidencialidade em todas as tratativas, aliada a um fluxo constante de comunicação clara para que você esteja sempre seguro do andamento de seu processo.</p>
-                    </div>
+                <!-- Card 3 -->
+                <div class="service-card">
+                    <span class="service-num">III.</span>
+                    <h3 class="service-card-title">Resolução de Conflitos</h3>
+                    <p class="service-card-text">Representação contenciosa enérgica e estratégica em todas as instâncias judiciais e tribunais arbitrais nacionais.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- ABOUT SECTION -->
-    <section id="sobre" class="about">
-        <div class="container">
-            <div class="about-grid">
-                <div class="about-content">
-                    <span class="hero-tag" style="margin-bottom: 12px;">O Escritório</span>
-                    <h2>Franco Rangel Advogados Associados</h2>
-                    <div class="about-text">
-                        <p>Fundado sobre os pilares da ética inegociável, profundo rigor técnico e discrição absoluta, o escritório <strong>Franco Rangel Advogados Associados</strong> nasceu para redefinir a experiência da assessoria e representação jurídica de alto padrão.</p>
-                        <p>Nossa filosofia de atuação privilegia a inteligência estratégica e preventiva. Entendemos que o sucesso no ambiente jurídico moderno não depende apenas de reação, mas sim da antecipação minuciosa de cenários e da blindagem assertiva de interesses.</p>
-                    </div>
+    <!-- SOBRE O ESCRITÓRIO -->
+    <section class="about section-spacing">
+        <div class="container about-grid">
+            <div class="about-content">
+                <span class="section-tag">O Escritório</span>
+                <h2 class="about-title">Franco Rangel Advogados Associados</h2>
+                <p class="about-text">Nossa banca é construída sobre os pilares do rigor analítico, agilidade de resposta e transparência inegociável. Entendemos que a advocacia de alto padrão não se limita a processos judiciais, mas se consolida na inteligência estratégica aplicada a cada cenário.</p>
+                <p class="about-text">Atuamos de forma ágil e moderna, aliando as melhores ferramentas tecnológicas à expertise jurídica para entregar soluções personalizadas para cada um de nossos constituintes.</p>
+            </div>
+            <div style="background: var(--color-bg); border: 1px solid var(--color-border); padding: 3rem; border-radius: var(--border-radius); display: flex; flex-direction: column; gap: 2rem;">
+                <h4 style="font-family: var(--font-serif); font-size: 1.5rem; color: var(--color-accent);">Nossos Princípios</h4>
+                <div style="border-bottom: 1px solid var(--color-border); padding-bottom: 1rem;">
+                    <strong style="display: block; font-size: 0.95rem; margin-bottom: 0.2rem; color: var(--color-text-primary);">Atendimento Customizado</strong>
+                    <p style="font-size: 0.85rem;">Cada litígio exige uma abordagem artesanal e específica.</p>
+                </div>
+                <div style="border-bottom: 1px solid var(--color-border); padding-bottom: 1rem;">
+                    <strong style="display: block; font-size: 0.95rem; margin-bottom: 0.2rem; color: var(--color-text-primary);">Rigor Técnico</strong>
+                    <p style="font-size: 0.85rem;">Análise minuciosa de dados legislativos e jurisprudenciais.</p>
                 </div>
                 <div>
-                    <div class="about-highlight">
-                        "A excelência não é um ato isolado, mas um hábito que rege todas as nossas tomadas de decisão e defesas processuais."
-                    </div>
+                    <strong style="display: block; font-size: 0.95rem; margin-bottom: 0.2rem; color: var(--color-text-primary);">Transparência em Tempo Real</strong>
+                    <p style="font-size: 0.85rem;">Nossos clientes compreendem cada passo da sua jornada jurídica.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- TESTIMONIALS -->
-    <section id="depoimentos" class="testimonials">
+    <!-- CREDENCIAIS E COMPROMISSO (Sem avaliações fakes / Conformidade OAB) -->
+    <section class="credentials section-spacing">
         <div class="container">
-            <div class="section-header">
-                <span class="hero-tag" style="margin-bottom: 12px;">Depoimentos</span>
-                <h2>A voz de quem confia em nossa assinatura</h2>
+            <div class="section-header" style="margin-bottom: 3.5rem;">
+                <span class="section-tag">Compromisso Ético</span>
+                <h2 class="section-title">Nossas Credenciais Profissionais</h2>
             </div>
-            <div class="testimonials-grid">
-                <div class="testimonial-card">
-                    <div class="testimonial-stars">
-                        <span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span>
-                    </div>
-                    <div class="testimonial-text">
-                        "O nível de detalhamento técnico e a dedicação demonstrada em meu caso superou todas as expectativas. Uma assessoria impecável do início ao fim."
-                    </div>
-                    <div class="testimonial-author">
-                        <div class="author-info">
-                            <h4>M. A. S.</h4>
-                            <p>Cliente corporativo</p>
-                        </div>
-                    </div>
+            <div class="credentials-grid">
+                <div class="credential-item">
+                    <h3 class="credential-title">Atuação Regular</h3>
+                    <p class="credential-description">Inscrições ativas e integralmente regulares perante a Ordem dos Advogados do Brasil (OAB).</p>
                 </div>
-                <div class="testimonial-card">
-                    <div class="testimonial-stars">
-                        <span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span>
-                    </div>
-                    <div class="testimonial-text">
-                        "Profissionalismo, acolhimento diferenciado e foco absoluto em nos manter protegidos e informados sobre cada passo processual. Indico de olhos fechados."
-                    </div>
-                    <div class="testimonial-author">
-                        <div class="author-info">
-                            <h4>F. R. de Oliveira</h4>
-                            <p>Cliente de representação civil</p>
-                        </div>
-                    </div>
+                <div class="credential-item">
+                    <h3 class="credential-title">Sigilo Absoluto</h3>
+                    <p class="credential-description">Garantia estatutária e contratual de confidencialidade e segurança no tratamento de dados e documentos confidenciais.</p>
+                </div>
+                <div class="credential-item">
+                    <h3 class="credential-title">Banca Especializada</h3>
+                    <p class="credential-description">Advogados dedicados à educação continuada e atualização jurisprudencial sistêmica nos principais tribunais do país.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- FINAL CTA SECTION -->
-    <section id="contato" class="final-cta">
+    <!-- CTA FINAL -->
+    <section class="cta-final section-spacing">
         <div class="container">
-            <span class="hero-tag" style="color: #888888; margin-bottom: 16px;">Próximo Passo</span>
-            <h2>Proteja seus direitos com excelência comprovada.</h2>
-            <p>Entre em contato conosco e realize uma primeira análise de viabilidade com nossa equipe especializada de maneira ágil e segura.</p>
-            <a href="#" class="btn btn-primary">Fale Com Um Especialista no WhatsApp</a>
+            <span class="section-tag" style="color: var(--color-gold);">Consulta de Casos</span>
+            <h2 class="section-title" style="font-size: 2.5rem; margin-bottom: 1rem;">Proteja seus direitos com assessoria qualificada.</h2>
+            <p>Iniciar uma análise preventiva pode evitar perdas financeiras e assegurar a estabilidade de seus negócios e patrimônio.</p>
+            <a href="#" class="cta-button cta-final-button">Iniciar Atendimento Jurídico</a>
         </div>
     </section>
 
-    <!-- FOOTER -->
+    <!-- RODAPÉ -->
     <footer>
         <div class="container">
             <div class="footer-grid">
-                <div class="footer-logo">
-                    <span class="footer-logo-title">Franco Rangel</span>
-                    <p style="color: #666; font-size: 0.85rem;">Advogados Associados</p>
+                <div class="footer-brand">
+                    <span class="footer-brand-title">Franco Rangel Advogados</span>
+                    <p style="color: #777777; font-size: 0.85rem; max-width: 320px;">Escritório dedicado à solução de litígios complexos com o máximo de discrição, eficiência técnica e ética.</p>
                 </div>
-                <div class="footer-socials">
-                    <a href="#" target="_blank" rel="noopener noreferrer">Instagram</a>
+                <div>
+                    <h4 class="footer-info-title">Atendimento</h4>
+                    <ul class="footer-links">
+                        <li>Atendimento Digital em todo o Brasil</li>
+                        <li>Sede Presencial com Agendamento Prévio</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="footer-info-title">Canais de Contato</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Instagram @francorangel.adv</a></li>
+                        <li><a href="#">Contato via WhatsApp</a></li>
+                    </ul>
                 </div>
             </div>
-            <div class="footer-copy">
-                &copy; 2026 Franco Rangel Advogados Associados. Todos os direitos reservados.
+            <div class="footer-bottom">
+                <div>
+                    <p style="color: #666666; font-size: 0.8rem;">&copy; 2026 Franco Rangel Advogados Associados. Todos os direitos reservados. Em estrita conformidade com o Provimento nº 205/2021 do CFOAB.</p>
+                </div>
+                <div>
+                    <p style="color: #666666; font-size: 0.8rem;">Desenvolvimento de Conversão RD Exclusive</p>
+                </div>
             </div>
         </div>
     </footer>
 
-    <!-- FIXED WHATSAPP BUTTON -->
-    <a href="#" class="whatsapp-fixed" aria-label="Falar conosco no WhatsApp">
+    <!-- BOTÃO FIXO WHATSAPP -->
+    <a href="#" class="whatsapp-fixed" aria-label="Falar conosco via WhatsApp">
         <svg viewBox="0 0 24 24">
-            <path d="M12.012 2c-5.506 0-9.989 4.478-9.99 9.984a9.96 9.96 0 0 0 1.335 4.975L2 22l5.166-1.354a9.953 9.953 0 0 0 4.843 1.251h.004c5.507 0 10.012-4.479 10.013-9.987.002-2.67-1.036-5.18-2.924-7.07A9.904 9.904 0 0 0 12.012 2zm5.836 14.124c-.32.9-1.854 1.751-2.54 1.845-.595.081-1.37.15-2.223-.122a10.655 10.655 0 0 1-5.12-4.526 4.996 4.996 0 0 1-.99-2.656c-.006-1.503.774-2.242 1.053-2.527.245-.25.553-.32.748-.32.196 0 .393.001.564.01.182.008.423-.069.664.51.25.602.85 2.068.924 2.218.074.15.123.324.024.522-.098.197-.148.322-.295.494-.148.171-.31.381-.443.51-.148.143-.303.3-.13.595.172.295.764 1.258 1.642 2.039.112.1.21.196.3.284.72.697 1.436.96 1.77 1.13.336.17.534.14.731-.086.197-.225.85-.987 1.077-1.32.227-.333.454-.277.76-.164.307.113 1.947.917 2.28 1.082.333.165.553.245.633.383.08.138.08.802-.24 1.702z"/>
+            <path d="M12.012 2c-5.506 0-9.989 4.478-9.99 9.984a9.96 9.96 0 0 0 1.333 4.993L2 22l5.197-1.355a9.92 9.92 0 0 0 4.811 1.233c5.507 0 9.99-4.479 9.992-9.985.002-2.67-1.037-5.178-2.927-7.07C17.182 2.928 14.685 2.001 12.012 2zm5.72 14.016c-.245.688-1.22 1.259-1.678 1.321-.456.062-.903.085-2.967-.719-2.643-1.03-4.326-3.702-4.458-3.878-.133-.177-1.077-1.428-1.077-2.723a2.822 2.822 0 0 1 .863-2.09c.26-.264.566-.331.754-.331.189 0 .378.001.543.009.17.008.398-.065.623.472.23.551.785 1.912.853 2.052.068.14.113.303.02.489-.092.187-.14.303-.28.465-.14.162-.296.363-.422.486-.14.137-.287.287-.123.567.165.28.73 1.196 1.564 1.936.83.74 1.53 1.01 1.812 1.15.281.14.444.117.61-.073.167-.19.712-.826.903-1.109.19-.282.381-.237.643-.14.263.097 1.667.78 1.954.922.287.143.479.213.548.333.069.12.069.69-.176 1.379z"/>
         </svg>
     </a>
 
