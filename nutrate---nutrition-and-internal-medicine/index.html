@@ -1,50 +1,52 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nutrate | Nutrição e Clínica Médica Integrada no Rio de Janeiro</title>
-    <meta name="description" content="Clínica multidisciplinar especializada em Nutrição, Endocrinologia, Cardiologia, Psiquiatria e Psicologia no Rio de Janeiro (Centro e Copacabana).">
-    
-    <!-- Performance Preconnect Tags -->
     <link rel="preconnect" href="https://abrirlink.com.br">
     <link rel="preconnect" href="https://ui-avatars.com">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nutrate - Nutrição e Clínica Médica | Rio de Janeiro</title>
+    <meta name="description" content="Especialistas em Nutrição, Endocrinologia, Cardiologia, Psicologia e Psiquiatria no Rio de Janeiro. Agende sua consulta online ou presencial.">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Nutrate - Nutrição e Clínica Médica | Rio de Janeiro">
+    <meta property="og:description" content="Especialistas em Nutrição, Endocrinologia, Cardiologia, Psicologia e Psiquiatria no Rio de Janeiro. Agende sua consulta online ou presencial.">
+    <meta property="og:image" content="https://rd-previews-dharari01s-projects.vercel.app/nutrate---nutrition-and-internal-medicine/img/foto-1.png">
+    
     <!-- Favicon -->
     <link rel="icon" href="img/foto-2.png">
-
-    <!-- Open Graph Meta Tags -->
-    <meta property="og:title" content="Nutrate | Nutrição e Clínica Médica Integrada no Rio de Janeiro">
-    <meta property="og:description" content="Clínica multidisciplinar especializada em Nutrição, Endocrinologia, Cardiologia, Psiquiatria e Psicologia no Rio de Janeiro (Centro e Copacabana).">
-    <meta property="og:image" content="https://rd-previews-dharari01s-projects.vercel.app/nutrate---nutrition-and-internal-medicine/img/foto-1.png">
-    <meta property="og:type" content="website">
-
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
-
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    
     <style>
-        /* CSS Reset & Variables */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
+        /* DESIGN SYSTEM & VARIABLES */
+        :root {
+            --bg-color: #FAF7F2; /* Off-white quente */
+            --primary: #004F1C; /* Verde Nutrate */
+            --primary-dark: #003613;
+            --accent: #C9A227; /* Dourado */
+            --text-color: #1A1A1A; /* Escuro funcional */
+            --text-light: #5A5A5A;
+            --white: #FFFFFF;
+            --font-title: 'Inter', sans-serif;
+            --font-body: 'Open Sans', sans-serif;
+            --transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+            --shadow-sm: 0 4px 12px rgba(0, 0, 0, 0.03);
+            --shadow-md: 0 12px 30px rgba(0, 0, 0, 0.06);
+            --border-radius: 12px;
         }
 
-        :root {
-            --bg-color: #FAF7F2;
-            --primary-color: #004F1C;
-            --primary-dark: #003613;
-            --accent-color: #C9A227;
-            --text-color: #1A1A1A;
-            --text-light: #555555;
-            --white: #FFFFFF;
-            --shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
-            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-            --border-radius: 12px;
+        /* RESET & BASE */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
         }
 
         html {
@@ -52,17 +54,17 @@
         }
 
         body {
-            font-family: 'Open Sans', sans-serif;
             background-color: var(--bg-color);
             color: var(--text-color);
+            font-family: var(--font-body);
             line-height: 1.6;
         }
 
         h1, h2, h3, h4 {
-            font-family: 'Montserrat', sans-serif;
+            font-family: var(--font-title);
+            color: var(--primary);
             font-weight: 700;
-            color: var(--primary-color);
-            line-height: 1.2;
+            line-height: 1.25;
         }
 
         a {
@@ -71,22 +73,68 @@
             transition: var(--transition);
         }
 
-        /* Container helper */
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
         .container {
             width: 100%;
             max-width: 1200px;
             margin: 0 auto;
-            padding: 0 24px;
+            padding: 0 1.5rem;
         }
 
-        /* Header Style */
+        /* BUTTONS */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 1rem 2rem;
+            border-radius: 8px;
+            font-family: var(--font-title);
+            font-weight: 600;
+            font-size: 1rem;
+            transition: var(--transition);
+            cursor: pointer;
+            border: none;
+            text-align: center;
+        }
+
+        .btn-primary {
+            background-color: var(--accent);
+            color: var(--white);
+            box-shadow: 0 4px 14px rgba(201, 162, 39, 0.4);
+        }
+
+        .btn-primary:hover {
+            background-color: #b28e20;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(201, 162, 39, 0.6);
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            color: var(--white);
+            border: 2px solid var(--white);
+        }
+
+        .btn-outline:hover {
+            background-color: var(--white);
+            color: var(--primary);
+            transform: translateY(-2px);
+        }
+
+        /* HEADER */
         header {
             background-color: rgba(250, 247, 242, 0.95);
+            backdrop-filter: blur(10px);
             position: sticky;
             top: 0;
             z-index: 100;
-            border-bottom: 1px solid rgba(0, 79, 28, 0.08);
-            backdrop-filter: blur(8px);
+            border-bottom: 1px solid rgba(0, 79, 116, 0.08);
+            box-shadow: var(--shadow-sm);
         }
 
         .header-container {
@@ -96,512 +144,499 @@
             height: 80px;
         }
 
-        .logo {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-        }
-
         .logo img {
-            width: 48px;
-            height: 48px;
-            border-radius: 50%;
-            object-fit: cover;
+            height: 50px;
+            width: auto;
+            border-radius: 8px;
         }
 
-        .logo-text {
-            font-family: 'Montserrat', sans-serif;
-            font-weight: 800;
-            font-size: 1.2rem;
-            color: var(--primary-color);
-            letter-spacing: -0.5px;
-        }
-
-        .logo-text span {
-            color: var(--accent-color);
-        }
-
-        .nav-links {
+        .header-cta {
             display: none;
         }
 
-        .btn-header {
-            background-color: var(--primary-color);
-            color: var(--white);
-            padding: 10px 20px;
-            border-radius: 30px;
-            font-weight: 600;
-            font-size: 0.9rem;
-            border: 2px solid var(--primary-color);
+        @media (min-width: 768px) {
+            .header-cta {
+                display: block;
+            }
+            .header-cta .btn {
+                padding: 0.7rem 1.5rem;
+                font-size: 0.9rem;
+            }
         }
 
-        .btn-header:hover {
-            background-color: transparent;
-            color: var(--primary-color);
-        }
-
-        /* Editorial Clássico Hero Section */
+        /* HERO - EDITORIAL CLÁSSICO */
         .hero {
             position: relative;
             min-height: 85vh;
             display: flex;
             align-items: center;
-            overflow: hidden;
-            background-color: var(--primary-dark);
-        }
-
-        .hero-bg {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            z-index: 1;
-        }
-
-        .hero-overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(180deg, rgba(0, 79, 28, 0.9) 0%, rgba(0, 79, 28, 0.7) 60%, rgba(0, 79, 28, 0.4) 100%);
-            z-index: 2;
+            background: linear-gradient(135deg, rgba(0, 79, 28, 0.95) 0%, rgba(0, 79, 28, 0.8) 50%, rgba(0, 79, 28, 0.4) 100%), 
+                        url('img/foto-1.png') no-repeat center center/cover;
+            color: var(--white);
+            padding: 4rem 0;
         }
 
         .hero-content {
-            position: relative;
-            z-index: 3;
+            max-width: 700px;
+        }
+
+        .hero h1 {
             color: var(--white);
-            max-width: 680px;
-            padding: 60px 0;
-        }
-
-        .hero-badge {
-            background-color: var(--accent-color);
-            color: var(--primary-dark);
-            padding: 6px 14px;
-            border-radius: 30px;
-            font-size: 0.8rem;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            display: inline-block;
-            margin-bottom: 20px;
-        }
-
-        .hero-title {
             font-size: 2.5rem;
-            color: var(--white);
-            margin-bottom: 20px;
-            line-height: 1.15;
+            font-weight: 800;
+            margin-bottom: 1.5rem;
+            letter-spacing: -0.02em;
         }
 
-        .hero-description {
-            font-size: 1.1rem;
-            color: rgba(255, 255, 255, 0.9);
-            margin-bottom: 35px;
-            font-weight: 300;
+        .hero p {
+            font-size: 1.125rem;
+            margin-bottom: 2.5rem;
+            opacity: 0.9;
+            font-family: var(--font-body);
         }
 
-        .hero-actions {
+        .hero-ctas {
             display: flex;
             flex-direction: column;
-            gap: 15px;
+            gap: 1rem;
         }
 
-        .btn-primary {
-            background-color: var(--accent-color);
-            color: var(--primary-dark);
-            padding: 16px 32px;
-            border-radius: 30px;
-            font-weight: 700;
-            font-size: 1rem;
-            text-align: center;
-            box-shadow: 0 4px 15px rgba(201, 162, 39, 0.3);
-            border: 2px solid var(--accent-color);
+        @media (min-width: 576px) {
+            .hero-ctas {
+                flex-direction: row;
+            }
         }
 
-        .btn-primary:hover {
-            background-color: transparent;
-            color: var(--white);
-            transform: translateY(-2px);
+        @media (min-width: 992px) {
+            .hero {
+                min-height: 90vh;
+            }
+            .hero h1 {
+                font-size: 3.75rem;
+            }
+            .hero p {
+                font-size: 1.25rem;
+            }
         }
 
-        .btn-secondary {
-            background-color: transparent;
-            color: var(--white);
-            padding: 16px 32px;
-            border-radius: 30px;
-            font-weight: 600;
-            font-size: 1rem;
-            text-align: center;
-            border: 2px solid rgba(255, 255, 255, 0.3);
-        }
-
-        .btn-secondary:hover {
-            border-color: var(--white);
-            background-color: rgba(255, 255, 255, 0.05);
-        }
-
-        /* Social Proof Section */
+        /* PROVA SOCIAL */
         .social-proof {
             background-color: var(--white);
-            padding: 40px 0;
-            border-bottom: 1px solid rgba(0, 79, 28, 0.05);
+            padding: 2.5rem 0;
+            box-shadow: var(--shadow-sm);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
         }
 
-        .proof-container {
-            display: flex;
-            flex-direction: column;
+        .sp-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
             align-items: center;
-            justify-content: center;
-            gap: 20px;
             text-align: center;
         }
 
-        .google-badge {
+        .sp-rating {
             display: flex;
+            flex-direction: column;
             align-items: center;
-            gap: 15px;
-            background-color: var(--bg-color);
-            padding: 12px 24px;
-            border-radius: 50px;
+            gap: 0.5rem;
         }
 
-        .google-logo {
-            font-family: 'Montserrat', sans-serif;
+        .sp-rating .stars {
+            display: flex;
+            gap: 4px;
+        }
+
+        .sp-rating svg {
+            width: 24px;
+            height: 24px;
+            fill: var(--accent);
+        }
+
+        .sp-rating-text {
+            font-family: var(--font-title);
+            font-weight: 700;
+            font-size: 1.1rem;
+            color: var(--primary);
+        }
+
+        .sp-stats {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+        }
+
+        .stat-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .stat-number {
+            font-family: var(--font-title);
+            font-size: 2rem;
             font-weight: 800;
-            font-size: 1.3rem;
-            letter-spacing: -1px;
-        }
-        .g-blue { color: #4285F4; }
-        .g-red { color: #EA4335; }
-        .g-yellow { color: #FBBC05; }
-        .g-green { color: #34A853; }
-
-        .stars {
-            color: var(--accent-color);
-            font-size: 1.2rem;
-            letter-spacing: 2px;
+            color: var(--primary);
+            line-height: 1;
         }
 
-        .proof-text {
-            font-size: 0.95rem;
+        .stat-label {
+            font-size: 0.875rem;
             color: var(--text-light);
+            margin-top: 0.25rem;
             font-weight: 600;
         }
 
-        /* Services Grid Section (Editorial Clássico) */
+        @media (min-width: 768px) {
+            .sp-grid {
+                grid-template-columns: 1fr 2fr;
+                text-align: left;
+            }
+            .sp-rating {
+                align-items: flex-start;
+            }
+            .sp-stats {
+                justify-content: flex-end;
+                gap: 4rem;
+            }
+        }
+
+        /* SERVIÇOS & DIFERENCIAIS */
         .services {
-            padding: 80px 0;
-            background-color: var(--bg-color);
+            padding: 6rem 0;
         }
 
         .section-header {
             text-align: center;
             max-width: 700px;
-            margin: 0 auto 60px auto;
+            margin: 0 auto 4rem auto;
         }
 
         .section-tag {
-            color: var(--accent-color);
+            font-family: var(--font-title);
+            color: var(--accent);
             font-weight: 700;
-            font-size: 0.9rem;
             text-transform: uppercase;
-            letter-spacing: 1.5px;
-            margin-bottom: 10px;
-            display: block;
+            font-size: 0.85rem;
+            letter-spacing: 0.1em;
+            margin-bottom: 0.75rem;
+            display: inline-block;
         }
 
-        .section-title {
-            font-size: 2.2rem;
-            color: var(--primary-color);
-            margin-bottom: 15px;
-        }
-
-        .section-subtitle {
-            color: var(--text-light);
-            font-size: 1.05rem;
+        .section-header h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
         }
 
         .services-grid {
             display: grid;
             grid-template-columns: 1fr;
-            gap: 30px;
+            gap: 2rem;
         }
 
         .service-card {
             background-color: var(--white);
             border-radius: var(--border-radius);
-            padding: 40px 30px;
-            box-shadow: var(--shadow);
-            border: 1px solid rgba(0, 79, 28, 0.03);
+            padding: 2.5rem;
+            box-shadow: var(--shadow-sm);
             transition: var(--transition);
+            border: 1px solid rgba(0, 79, 28, 0.04);
             display: flex;
             flex-direction: column;
-            justify-content: space-between;
+            height: 100%;
         }
 
         .service-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 15px 40px rgba(0, 79, 28, 0.08);
-            border-color: rgba(0, 79, 28, 0.1);
-        }
-
-        .service-header-card {
-            margin-bottom: 25px;
+            box-shadow: var(--shadow-md);
+            border-color: rgba(201, 162, 39, 0.2);
         }
 
         .service-icon {
-            width: 60px;
-            height: 60px;
-            border-radius: 50%;
-            background-color: rgba(0, 79, 28, 0.06);
+            width: 50px;
+            height: 50px;
+            background-color: rgba(0, 79, 28, 0.08);
+            border-radius: 8px;
             display: flex;
             align-items: center;
             justify-content: center;
-            margin-bottom: 25px;
-            color: var(--primary-color);
+            margin-bottom: 1.5rem;
+            color: var(--primary);
         }
 
-        .service-card-title {
+        .service-icon svg {
+            width: 26px;
+            height: 26px;
+        }
+
+        .service-card h3 {
             font-size: 1.35rem;
-            color: var(--primary-color);
-            margin-bottom: 15px;
+            margin-bottom: 1rem;
         }
 
-        .service-list {
+        .service-card ul {
             list-style: none;
-            display: flex;
-            flex-direction: column;
-            gap: 12px;
+            padding: 0;
+            margin-top: auto;
         }
 
-        .service-list li {
+        .service-card li {
+            position: relative;
+            padding-left: 1.5rem;
+            margin-bottom: 0.75rem;
             font-size: 0.95rem;
             color: var(--text-light);
-            display: flex;
-            align-items: flex-start;
-            gap: 10px;
         }
 
-        .service-list li::before {
-            content: "✓";
-            color: var(--accent-color);
-            font-weight: bold;
+        .service-card li::before {
+            content: "•";
+            color: var(--accent);
+            font-size: 1.5rem;
+            position: absolute;
+            left: 0;
+            top: -0.25rem;
         }
 
-        /* Promo Highlight Block */
-        .promo-block {
-            background-color: var(--white);
-            border-left: 5px solid var(--accent-color);
-            border-radius: var(--border-radius);
-            padding: 30px;
-            margin-top: 60px;
-            box-shadow: var(--shadow);
+        @media (min-width: 768px) {
+            .services-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
         }
 
-        .promo-header {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-            margin-bottom: 15px;
+        @media (min-width: 1024px) {
+            .services-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+            .section-header h2 {
+                font-size: 2.5rem;
+            }
         }
 
-        .promo-tag {
-            background-color: rgba(201, 162, 39, 0.1);
-            color: #a4811a;
-            padding: 4px 12px;
-            border-radius: 20px;
-            font-weight: 700;
-            font-size: 0.8rem;
-            text-transform: uppercase;
-        }
-
-        .promo-title {
-            font-size: 1.25rem;
-            color: var(--primary-color);
-        }
-
-        .promo-text {
-            color: var(--text-light);
-            font-size: 0.95rem;
-            line-height: 1.6;
-        }
-
-        /* About Section */
+        /* SOBRE NÓS */
         .about {
-            padding: 80px 0;
             background-color: var(--white);
-            border-top: 1px solid rgba(0, 79, 28, 0.05);
+            padding: 6rem 0;
         }
 
         .about-grid {
             display: grid;
             grid-template-columns: 1fr;
-            gap: 50px;
+            gap: 4rem;
             align-items: center;
         }
 
-        .about-content {
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
+        .about-content h2 {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
         }
 
-        .about-text {
+        .about-content p {
+            margin-bottom: 1.5rem;
             color: var(--text-light);
             font-size: 1.05rem;
-            line-height: 1.7;
         }
 
-        .objectives-box {
-            background-color: var(--bg-color);
-            padding: 30px;
-            border-radius: var(--border-radius);
-            border: 1px solid rgba(0, 79, 28, 0.03);
-        }
-
-        .objectives-title {
-            font-size: 1.2rem;
-            color: var(--primary-color);
-            margin-bottom: 15px;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        /* Testimonials Custom Google Block */
-        .testimonials {
-            padding: 80px 0;
-            background-color: var(--bg-color);
-            text-align: center;
-        }
-
-        .badge-grid {
+        .about-features {
             display: grid;
             grid-template-columns: 1fr;
-            gap: 25px;
-            margin-top: 40px;
+            gap: 1.5rem;
+            margin-top: 2rem;
         }
 
-        .badge-card {
-            background: var(--white);
-            padding: 30px;
-            border-radius: var(--border-radius);
-            box-shadow: var(--shadow);
-            border: 1px solid rgba(0, 79, 28, 0.03);
+        .about-feature-item {
+            display: flex;
+            gap: 1rem;
         }
 
-        .badge-value {
-            font-size: 2.5rem;
-            font-weight: 800;
-            color: var(--primary-color);
-            font-family: 'Montserrat', sans-serif;
+        .about-feature-icon {
+            flex-shrink: 0;
+            width: 24px;
+            height: 24px;
+            color: var(--accent);
         }
 
-        .badge-label {
-            font-weight: 600;
-            color: var(--text-light);
-            margin-top: 5px;
+        .about-feature-text h4 {
+            font-size: 1.1rem;
+            margin-bottom: 0.25rem;
+        }
+
+        .about-feature-text p {
             font-size: 0.95rem;
+            margin-bottom: 0;
         }
 
-        /* Final CTA Section */
-        .final-cta {
-            background-color: var(--primary-color);
-            color: var(--white);
-            padding: 80px 0;
+        @media (min-width: 992px) {
+            .about-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+            .about-content h2 {
+                font-size: 2.5rem;
+            }
+            .about-features {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        /* CONVÊNIOS E VALORES */
+        .insurance-pricing {
+            padding: 6rem 0;
+            background-color: var(--bg-color);
+        }
+
+        .ip-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 3rem;
+        }
+
+        .ip-card {
+            background-color: var(--white);
+            padding: 3rem;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow-sm);
+            border: 1px solid rgba(0, 79, 28, 0.04);
+        }
+
+        .ip-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+            border-bottom: 2px solid rgba(0, 79, 28, 0.08);
+            padding-bottom: 0.75rem;
+        }
+
+        .insurance-list {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+        }
+
+        .insurance-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-weight: 600;
+            color: var(--primary);
+        }
+
+        .insurance-item svg {
+            width: 18px;
+            height: 18px;
+            color: var(--accent);
+            flex-shrink: 0;
+        }
+
+        .pricing-list {
+            display: flex;
+            flex-direction: column;
+            gap: 1.25rem;
+        }
+
+        .pricing-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-bottom: 1rem;
+            border-bottom: 1px dashed rgba(0, 0, 0, 0.1);
+        }
+
+        .pricing-item:last-child {
+            border-bottom: none;
+            padding-bottom: 0;
+        }
+
+        .pricing-name {
+            font-weight: 600;
+            color: var(--text-color);
+        }
+
+        .pricing-value {
+            font-family: var(--font-title);
+            font-weight: 700;
+            color: var(--primary);
+        }
+
+        .pricing-note {
+            font-size: 0.85rem;
+            color: var(--text-light);
+            margin-top: 1.5rem;
             text-align: center;
-            position: relative;
-            overflow: hidden;
         }
 
-        .final-cta::before {
-            content: "";
-            position: absolute;
-            top: -50%;
-            left: -50%;
-            width: 200%;
-            height: 200%;
-            background: radial-gradient(circle, rgba(201, 162, 39, 0.15) 0%, transparent 60%);
-            z-index: 1;
+        @media (min-width: 992px) {
+            .ip-grid {
+                grid-template-columns: 1fr 1fr;
+            }
         }
 
-        .cta-container {
-            position: relative;
-            z-index: 2;
+        /* CTA FINAL */
+        .cta-section {
+            background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 100%);
+            color: var(--white);
+            padding: 6rem 0;
+            text-align: center;
+        }
+
+        .cta-wrapper {
             max-width: 800px;
             margin: 0 auto;
         }
 
-        .cta-title {
+        .cta-section h2 {
             color: var(--white);
-            font-size: 2.2rem;
-            margin-bottom: 20px;
+            font-size: 2.25rem;
+            margin-bottom: 1.5rem;
         }
 
-        .cta-description {
-            color: rgba(255, 255, 255, 0.9);
-            font-size: 1.1rem;
-            margin-bottom: 40px;
+        .cta-section p {
+            font-size: 1.15rem;
+            margin-bottom: 2.5rem;
+            opacity: 0.9;
         }
 
-        /* Footer Section */
+        @media (min-width: 768px) {
+            .cta-section h2 {
+                font-size: 3rem;
+            }
+        }
+
+        /* FOOTER */
         footer {
-            background-color: var(--primary-dark);
+            background-color: #112216;
             color: rgba(255, 255, 255, 0.8);
-            padding: 80px 0 30px 0;
+            padding: 5rem 0 2rem 0;
             font-size: 0.95rem;
         }
 
         .footer-grid {
             display: grid;
             grid-template-columns: 1fr;
-            gap: 40px;
-            margin-bottom: 60px;
+            gap: 3rem;
+            margin-bottom: 4rem;
         }
 
-        .footer-col-title {
-            color: var(--white);
-            font-family: 'Montserrat', sans-serif;
-            font-size: 1.15rem;
-            margin-bottom: 20px;
-            border-bottom: 2px solid var(--accent-color);
-            padding-bottom: 8px;
-            display: inline-block;
+        .footer-brand img {
+            height: 55px;
+            margin-bottom: 1.5rem;
+            border-radius: 8px;
         }
 
-        .footer-contact-list, .footer-address-list {
-            list-style: none;
+        .footer-brand p {
+            margin-bottom: 1.5rem;
+            max-width: 320px;
+            font-size: 0.9rem;
+            line-height: 1.6;
+        }
+
+        .social-links {
             display: flex;
-            flex-direction: column;
-            gap: 15px;
+            gap: 1rem;
         }
 
-        .footer-contact-list a, .footer-address-list p {
-            color: rgba(255, 255, 255, 0.8);
-            display: flex;
-            align-items: flex-start;
-            gap: 10px;
-        }
-
-        .footer-contact-list a:hover {
-            color: var(--accent-color);
-        }
-
-        .footer-socials {
-            display: flex;
-            gap: 15px;
-            margin-top: 20px;
-        }
-
-        .social-link {
+        .social-icon {
             width: 40px;
             height: 40px;
-            background-color: rgba(255, 255, 255, 0.1);
+            background-color: rgba(255, 255, 255, 0.05);
             border-radius: 50%;
             display: flex;
             align-items: center;
@@ -610,383 +645,449 @@
             transition: var(--transition);
         }
 
-        .social-link:hover {
-            background-color: var(--accent-color);
-            color: var(--primary-dark);
+        .social-icon:hover {
+            background-color: var(--accent);
             transform: translateY(-3px);
         }
 
-        .copyright-bar {
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-            padding-top: 30px;
-            text-align: center;
-            font-size: 0.85rem;
-            color: rgba(255, 255, 255, 0.5);
-        }
-
-        /* Floating Contact Button */
-        .floating-cta {
-            position: fixed;
-            bottom: 24px;
-            right: 24px;
-            background-color: #25D366;
-            color: var(--white);
-            padding: 12px 24px;
-            border-radius: 50px;
-            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
-            z-index: 999;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            font-weight: 700;
-            font-size: 0.95rem;
-            border: 2px solid #25D366;
-            transition: var(--transition);
-        }
-
-        .floating-cta:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 25px rgba(37, 211, 102, 0.6);
-            background-color: var(--white);
-            color: #25D366;
-        }
-
-        .floating-cta svg {
-            fill: currentColor;
+        .social-icon svg {
             width: 20px;
             height: 20px;
         }
 
-        /* Responsive Breakpoints */
+        .footer-title {
+            color: var(--white);
+            font-family: var(--font-title);
+            font-weight: 700;
+            font-size: 1.1rem;
+            margin-bottom: 1.5rem;
+            position: relative;
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 0.75rem;
+        }
+
+        .footer-links a:hover {
+            color: var(--accent);
+        }
+
+        .footer-address-box {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .address-item {
+            display: flex;
+            gap: 0.75rem;
+        }
+
+        .address-icon {
+            color: var(--accent);
+            flex-shrink: 0;
+            width: 20px;
+            height: 20px;
+            margin-top: 0.25rem;
+        }
+
+        .address-text strong {
+            color: var(--white);
+            display: block;
+            margin-bottom: 0.25rem;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 2rem;
+            text-align: center;
+            font-size: 0.85rem;
+            opacity: 0.7;
+        }
+
         @media (min-width: 768px) {
-            .hero-title {
-                font-size: 3.5rem;
-            }
-
-            .hero-actions {
-                flex-direction: row;
-            }
-
-            .services-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-
-            .badge-grid {
-                grid-template-columns: repeat(3, 1fr);
-            }
-
             .footer-grid {
                 grid-template-columns: repeat(2, 1fr);
             }
         }
 
         @media (min-width: 1024px) {
-            .nav-links {
-                display: flex;
-                align-items: center;
-                gap: 32px;
-            }
-
-            .nav-link {
-                font-family: 'Montserrat', sans-serif;
-                font-weight: 600;
-                font-size: 0.95rem;
-                color: var(--primary-color);
-            }
-
-            .nav-link:hover {
-                color: var(--accent-color);
-            }
-
-            .hero {
-                min-height: 90vh;
-            }
-
-            .hero-content {
-                max-width: 750px;
-                padding-left: 5%;
-            }
-
-            .hero-overlay {
-                background: linear-gradient(90deg, rgba(0, 79, 28, 0.95) 0%, rgba(0, 79, 28, 0.8) 45%, rgba(0, 79, 28, 0.2) 100%);
-            }
-
-            .services-grid {
-                grid-template-columns: repeat(3, 1fr);
-            }
-
-            .about-grid {
-                grid-template-columns: 1.1fr 0.9fr;
-                gap: 80px;
-            }
-
             .footer-grid {
-                grid-template-columns: 1.5fr 1fr 1fr;
-                gap: 60px;
+                grid-template-columns: 1.5fr 1fr 1.5fr;
+            }
+        }
+
+        /* FLOATING ACTION BUTTON (FAB) */
+        .fab {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            background-color: var(--accent);
+            color: var(--white);
+            padding: 1rem 1.75rem;
+            border-radius: 50px;
+            box-shadow: 0 8px 24px rgba(201, 162, 39, 0.4);
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            font-family: var(--font-title);
+            font-weight: 700;
+            z-index: 99;
+            transition: var(--transition);
+        }
+
+        .fab:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 30px rgba(201, 162, 39, 0.6);
+            background-color: #b28e20;
+        }
+
+        .fab svg {
+            width: 20px;
+            height: 20px;
+        }
+
+        @media (max-width: 576px) {
+            .fab {
+                bottom: 1rem;
+                right: 1rem;
+                padding: 0.85rem 1.25rem;
+                font-size: 0.9rem;
             }
         }
     </style>
 </head>
 <body>
 
-    <!-- Header -->
+    <!-- HEADER -->
     <header>
         <div class="container header-container">
             <a href="#" class="logo">
                 <img src="img/foto-2.png" alt="Nutrate Logo">
-                <span class="logo-text">Nutrate<span>.</span></span>
             </a>
-            
-            <nav class="nav-links">
-                <a href="#servicos" class="nav-link">Serviços</a>
-                <a href="#clinica" class="nav-link">A Clínica</a>
-                <a href="#enderecos" class="nav-link">Unidades</a>
-            </nav>
-
-            <a href="http://paciente.nutrate.com.br/" class="btn-header">Agende Online</a>
+            <div class="header-cta">
+                <a href="http://paciente.nutrate.com.br/" class="btn btn-primary" style="background-color: var(--primary); padding: 0.6rem 1.25rem;">Agende sua Consulta</a>
+            </div>
         </div>
     </header>
 
-    <!-- Editorial Hero Section (Full-bleed Background) -->
+    <!-- HERO SECTION (EDITORIAL CLÁSSICO) -->
     <section class="hero">
-        <img class="hero-bg" src="img/foto-1.png" alt="Nutrate Nutrition and Internal Medicine Banner Principal">
-        <div class="hero-overlay"></div>
-        <div class="container" style="position: relative; z-index: 3; width: 100%;">
+        <div class="container">
             <div class="hero-content">
-                <span class="hero-badge">Nutrição e Clínica Médica</span>
-                <h1 class="hero-title">Sua saúde integrada em um único lugar.</h1>
-                <p class="hero-description">
-                    Uma equipe de especialistas de ponta dedicada ao estímulo de hábitos de vida saudáveis, prevenção e controle de doenças. Reconquiste sua qualidade de vida.
-                </p>
-                <div class="hero-actions">
-                    <a href="http://paciente.nutrate.com.br/" class="btn-primary">Marcar Consulta Online</a>
-                    <a href="#servicos" class="btn-secondary">Conhecer Serviços</a>
+                <h1>Nutrate: Hábitos saudáveis, prevenção e controle de doenças.</h1>
+                <p>Equipe multidisciplinar especializada em Nutrição, Medicina e Saúde Mental dedicada à sua reeducação alimentar e bem-estar integral.</p>
+                <div class="hero-ctas">
+                    <a href="http://paciente.nutrate.com.br/" class="btn btn-primary">Agendar Consulta</a>
+                    <a href="#servicos" class="btn btn-outline">Conhecer Serviços</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Trust / Google Rating Banner -->
+    <!-- PROVA SOCIAL -->
     <section class="social-proof">
-        <div class="container proof-container">
-            <div class="google-badge">
-                <span class="google-logo">
-                    <span class="g-blue">G</span><span class="g-red">o</span><span class="g-yellow">o</span><span class="g-blue">g</span><span class="g-green">l</span><span class="g-red">e</span>
-                </span>
-                <div class="stars">★★★★★</div>
-                <span class="proof-text">Avaliado com nota máxima por nossos pacientes</span>
+        <div class="container">
+            <div class="sp-grid">
+                <div class="sp-rating">
+                    <div class="stars">
+                        <!-- 5 Stars SVGs -->
+                        <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                        <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                        <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                        <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                        <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                    </div>
+                    <span class="sp-rating-text">Avaliação Google 5 Estrelas</span>
+                </div>
+                <div class="sp-stats">
+                    <div class="stat-item">
+                        <span class="stat-number">16+</span>
+                        <span class="stat-label">Anos de Experiência</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">100%</span>
+                        <span class="stat-label">Multidisciplinar</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">2</span>
+                        <span class="stat-label">Unidades no RJ</span>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Services Grid Section -->
-    <section id="servicos" class="services">
+    <!-- SERVIÇOS & DIFERENCIAIS -->
+    <section class="services" id="servicos">
         <div class="container">
             <div class="section-header">
-                <span class="section-tag">Tratamentos & Especialidades</span>
-                <h2 class="section-title">Nossos Serviços Especializados</h2>
-                <p class="section-subtitle">Oferecemos atendimento médico e nutricional integrado com o máximo de qualidade para a sua saúde física e mental.</p>
+                <span class="section-tag">Nossos Serviços</span>
+                <h2>Especialidades Integradas para sua Saúde</h2>
             </div>
-
             <div class="services-grid">
                 <!-- Card 1: Nutrição -->
                 <div class="service-card">
-                    <div class="service-header-card">
-                        <div class="service-icon">
-                            <!-- Custom inline SVG for nutrition/lifestyle -->
-                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
-                        </div>
-                        <h3 class="service-card-title">Nutrição & Emagrecimento</h3>
+                    <div class="service-icon">
+                        <svg fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 3c-1.2 0-2.4.4-3.4 1.1C7.6 4.8 7 6 7 7.2c0 2.2 1.8 4 4 4h2c2.2 0 4-1.8 4-4 0-1.2-.6-2.4-1.6-3.1C14.4 3.4 13.2 3 12 3zm0 10.2c-2.9 0-8.8 1.4-8.8 4.3v2.5h17.6v-2.5c0-2.9-5.9-4.3-8.8-4.3z"/>
+                        </svg>
                     </div>
-                    <ul class="service-list">
-                        <li>Reeducação alimentar personalizada</li>
-                        <li>Perda de peso saudável</li>
-                        <li>Nutrição esportiva e ganho de massa magra</li>
-                        <li>Nutrição para gestantes, crianças, adultos e idosos</li>
-                        <li>Avaliação precisa de percentual de gordura (Bioimpedância)</li>
+                    <h3>Nutrição & Reeducação</h3>
+                    <ul>
+                        <li>Reeducação alimentar individualizada</li>
+                        <li>Tratamento para perda de peso de forma saudável</li>
+                        <li>Controle nutricional de obesidade e diabetes</li>
+                        <li>Nutrição especializada para adultos, idosos, crianças e gestantes</li>
+                        <li>Bioimpedância para avaliação corporal precisa</li>
                     </ul>
                 </div>
-
-                <!-- Card 2: Medicina Interna -->
+                
+                <!-- Card 2: Medicina -->
                 <div class="service-card">
-                    <div class="service-header-card">
-                        <div class="service-icon">
-                            <!-- Custom inline SVG for medicine/heart -->
-                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
-                        </div>
-                        <h3 class="service-card-title">Especialidades Médicas</h3>
+                    <div class="service-icon">
+                        <svg fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-2 10h-4v4h-2v-4H7v-2h4V7h2v4h4v2z"/>
+                        </svg>
                     </div>
-                    <ul class="service-list">
-                        <li>Endocrinologia (Hormônios e Metabolismo)</li>
-                        <li>Cardiologia (Prevenção cardiovascular)</li>
-                        <li>Controle de obesidade, diabetes e colesterol</li>
-                        <li>Controle de hipertensão arterial e distúrbios da tireoide</li>
+                    <h3>Clínica Médica Especializada</h3>
+                    <ul>
+                        <li>Endocrinologia para controle de tireoide e metabolismo</li>
+                        <li>Cardiologia com foco em prevenção e controle de riscos cardiovasculares</li>
+                        <li>Avaliação médica focada em estilo de vida saudável</li>
+                        <li>Acompanhamento clínico integrado</li>
                     </ul>
                 </div>
 
-                <!-- Card 3: Saúde Mental -->
+                <!-- Card 3: Saúde Mental & Esporte -->
                 <div class="service-card">
-                    <div class="service-header-card">
-                        <div class="service-icon">
-                            <!-- Custom inline SVG for mind/psychology -->
-                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2M9 9h.01M15 9h.01"/></svg>
-                        </div>
-                        <h3 class="service-card-title">Mente & Comportamento</h3>
+                    <div class="service-icon">
+                        <svg fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/>
+                        </svg>
                     </div>
-                    <ul class="service-list">
-                        <li>Acompanhamento psicológico</li>
-                        <li>Tratamento de ansiedade e transtornos</li>
-                        <li>Avaliação neuropsicológica detalhada</li>
-                        <li>Psiquiatria geral e de suporte</li>
+                    <h3>Saúde Mental & Atividade Física</h3>
+                    <ul>
+                        <li>Acompanhamento psicológico individualizado</li>
+                        <li>Psiquiatria geral e tratamento para controle da ansiedade</li>
+                        <li>Avaliação neuropsicológica completa</li>
+                        <li>Suporte de Educadores Físicos para a prática correta de atividade física</li>
+                        <li>Nutrição esportiva e ganho de massa muscular</li>
                     </ul>
                 </div>
-            </div>
-
-            <!-- Promo/Social Conditions Highlight Box -->
-            <div class="promo-block">
-                <div class="promo-header">
-                    <span class="promo-tag">Acessibilidade</span>
-                    <h4 class="promo-title">Compromisso Social Nutrate</h4>
-                </div>
-                <p class="promo-text">
-                    Acreditamos que o acesso à saúde deve ser para todos. Por isso, oferecemos <strong>atendimentos presenciais e online sob regime de valor social</strong> para consultas com nutricionistas, psicólogos, psiquiatras e endocrinologistas. Consulte as condições especiais vigentes com nossa central de agendamento.
-                </p>
             </div>
         </div>
     </section>
 
-    <!-- About Section -->
-    <section id="clinica" class="about">
+    <!-- SOBRE O NEGÓCIO -->
+    <section class="about">
         <div class="container">
             <div class="about-grid">
                 <div class="about-content">
-                    <span class="section-tag">Quem Somos</span>
-                    <h2 class="section-title">Seja bem-vindo à Nutrate</h2>
-                    <p class="about-text">
-                        A Nutrate Nutrição e Clínica Médica é uma empresa totalmente voltada para o estímulo a hábitos de vida saudáveis. Estamos altamente preocupados em atender nossos pacientes com o máximo de qualidade, visando sempre a prevenção e o controle eficaz de doenças crônicas e metabólicas.
-                    </p>
-                    <p class="about-text">
-                        Sabemos que a má alimentação, o sedentarismo e a falta de cuidados preventivos com a saúde são as principais causas de doenças na nossa sociedade atual. Para ser o benefício que falta na sua rotina, contamos com uma equipe multidisciplinar (Nutricionistas, Endocrinologistas, Cardiologistas, Psicólogos, Psiquiatras e Educadores Físicos) pronta para acolher você.
-                    </p>
+                    <span class="section-tag">A Nutrate</span>
+                    <h2>Comprometimento com sua longevidade</h2>
+                    <p>A Nutrate Nutrição e Clínica Médica é uma empresa focada em estimular hábitos de vida saudáveis de maneira integrada. Nosso compromisso é atender cada paciente com o máximo de acolhimento e excelência técnica, promovendo a prevenção ativa e o tratamento de doenças de forma integrada.</p>
+                    <p>Sabemos que o sedentarismo, a alimentação desequilibrada e o estresse contemporâneo são os maiores desafios da saúde moderna. Por isso, oferecemos uma equipe de especialistas de ponta para fornecer um acompanhamento de alto padrão.</p>
                 </div>
-                <div>
-                    <div class="objectives-box">
-                        <h3 class="objectives-title">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: var(--accent-color);"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/><path d="M12 6v6l4 2"/></svg>
-                            Nosso Grande Objetivo
-                        </h3>
-                        <p class="about-text" style="font-size: 0.95rem;">
-                            Incentivar a reeducação alimentar contínua, orientar sobre a prática correta de atividade física e estruturar o controle rígido dos riscos cardiovasculares, metabólicos e da saúde mental. Entregamos muito além de consultas: oferecemos uma vida verdadeiramente saudável.
-                        </p>
+                <div class="about-features">
+                    <div class="about-feature-item">
+                        <div class="about-feature-icon">
+                            <svg fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                        </div>
+                        <div class="about-feature-text">
+                            <h4>Multidisciplinaridade Real</h4>
+                            <p>Médicos, nutricionistas, psicólogos e educadores físicos alinhados no mesmo propósito.</p>
+                        </div>
+                    </div>
+                    <div class="about-feature-item">
+                        <div class="about-feature-icon">
+                            <svg fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                        </div>
+                        <div class="about-feature-text">
+                            <h4>Foco Preventivo</h4>
+                            <p>Abordagens baseadas em reeducação e fortalecimento metabólico.</p>
+                        </div>
+                    </div>
+                    <div class="about-feature-item">
+                        <div class="about-feature-icon">
+                            <svg fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                        </div>
+                        <div class="about-feature-text">
+                            <h4>Estrutura Premium</h4>
+                            <p>Consultórios modernos em Copacabana e no Centro do Rio de Janeiro.</p>
+                        </div>
+                    </div>
+                    <div class="about-feature-item">
+                        <div class="about-feature-icon">
+                            <svg fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                        </div>
+                        <div class="about-feature-text">
+                            <h4>Presencial ou Online</h4>
+                            <p>Escolha a modalidade de atendimento que melhor se adapta à sua rotina.</p>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Testimonials / Custom Trust Section -->
-    <section class="testimonials">
+    <!-- CONVÊNIOS E VALORES SOCIAIS -->
+    <section class="insurance-pricing">
         <div class="container">
             <div class="section-header">
-                <span class="section-tag">Excelência Comprovada</span>
-                <h2 class="section-title">Por que confiar na Nutrate?</h2>
-                <p class="section-subtitle">Construímos nossa história sobre pilares éticos e rigor técnico-científico na saúde integrado.</p>
+                <span class="section-tag">Acessibilidade</span>
+                <h2>Atendimento Flexível para Você</h2>
             </div>
-            
-            <div class="badge-grid">
-                <div class="badge-card">
-                    <div class="badge-value">100%</div>
-                    <div class="badge-label">Foco em Medicina Preventiva</div>
+            <div class="ip-grid">
+                <!-- Box Convênios -->
+                <div class="ip-card">
+                    <h3>Atendimento via Convênios</h3>
+                    <p style="margin-bottom: 1.5rem; color: var(--text-light);">Aceitamos diversos planos de saúde para garantir que seu tratamento continue sem interrupções. Consulte sua operadora.</p>
+                    <div class="insurance-list">
+                        <div class="insurance-item">
+                            <svg fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg>
+                            Amil
+                        </div>
+                        <div class="insurance-item">
+                            <svg fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg>
+                            Bradesco
+                        </div>
+                        <div class="insurance-item">
+                            <svg fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg>
+                            SulAmérica
+                        </div>
+                        <div class="insurance-item">
+                            <svg fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg>
+                            Golden Cross
+                        </div>
+                        <div class="insurance-item">
+                            <svg fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg>
+                            Unimed
+                        </div>
+                        <div class="insurance-item">
+                            <svg fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg>
+                            E mais planos...
+                        </div>
+                    </div>
                 </div>
-                <div class="badge-card">
-                    <div class="badge-value">Multi</div>
-                    <div class="badge-label">Profissionais Integrados</div>
-                </div>
-                <div class="badge-card">
-                    <div class="badge-value">4.9★</div>
-                    <div class="badge-label">Avaliação no Google</div>
+
+                <!-- Box Valores Diferenciados -->
+                <div class="ip-card">
+                    <h3>Consultas Particulares & Sociais</h3>
+                    <p style="margin-bottom: 1.5rem; color: var(--text-light);">Oferecemos valores acessíveis tanto para consultas presenciais quanto online nas diversas especialidades da clínica.</p>
+                    <div class="pricing-list">
+                        <div class="pricing-item">
+                            <span class="pricing-name">Nutricionista (Social / Online ou Presencial)</span>
+                            <span class="pricing-value">R$ 120,00</span>
+                        </div>
+                        <div class="pricing-item">
+                            <span class="pricing-name">Psicólogo(a) (Sessão Social)</span>
+                            <span class="pricing-value">R$ 70,00</span>
+                        </div>
+                        <div class="pricing-item">
+                            <span class="pricing-name">Psiquiatra ou Endocrinologista</span>
+                            <span class="pricing-value">R$ 180,00</span>
+                        </div>
+                        <div class="pricing-item">
+                            <span class="pricing-name">Cardiologista (Somente Presencial)</span>
+                            <span class="pricing-value">R$ 180,00</span>
+                        </div>
+                    </div>
+                    <p class="pricing-note">* Os valores especiais de atendimento social estão sujeitos à disponibilidade de agenda dos profissionais parceiros.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Final CTA Section -->
-    <section class="final-cta">
-        <div class="container cta-container">
-            <h2 class="cta-title">Transforme sua saúde a partir de hoje.</h2>
-            <p class="cta-description">Não espere o aparecimento de sintomas para cuidar de você. Agende agora sua consulta online ou presencial com nossa equipe integrada.</p>
-            <a href="http://paciente.nutrate.com.br/" class="btn-primary" style="padding: 18px 45px; font-size: 1.1rem;">Agendar Minha Consulta Agora</a>
+    <!-- CTA FINAL -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-wrapper">
+                <h2>Pronto para iniciar sua jornada de saúde?</h2>
+                <p>Nossa equipe médica e de nutrição está de prontidão para ajudar você a atingir seus objetivos de qualidade de vida, controle metabólico e reeducação.</p>
+                <a href="http://paciente.nutrate.com.br/" class="btn btn-primary">Agendar minha Consulta</a>
+            </div>
         </div>
     </section>
 
-    <!-- Footer Section -->
-    <footer id="enderecos">
-        <div class="container footer-grid">
-            <!-- Col 1: Brand & Contact -->
-            <div>
-                <h3 class="footer-col-title">Central de Atendimento</h3>
-                <ul class="footer-contact-list">
-                    <li>
-                        <strong>Telefones:</strong><br>
-                        <a href="tel:+552130053014">(21) 3005-3014</a> | <a href="tel:+552120423042">(21) 2042-3042</a>
-                    </li>
-                    <li>
-                        <strong>E-mail:</strong><br>
-                        <a href="mailto:contato@nutrate.com.br">contato@nutrate.com.br</a>
-                    </li>
-                </ul>
-                <div class="footer-socials">
-                    <a href="https://www.instagram.com/nutrateclinica" class="social-link" aria-label="Instagram Nutrate" target="_blank" rel="noopener">
-                        <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.051.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
-                    </a>
-                    <a href="https://www.facebook.com/nutrate" class="social-link" aria-label="Facebook Nutrate" target="_blank" rel="noopener">
-                        <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.95c4.56-.93 8-4.96 8-9.75z"/></svg>
-                    </a>
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <!-- Col 1: Brand -->
+                <div class="footer-brand">
+                    <img src="img/foto-2.png" alt="Nutrate Logo" loading="lazy">
+                    <p>Nutrate Nutrição e Clínica Médica é uma empresa voltada para o estímulo de hábitos de vida saudáveis e prevenção ativa de patologias.</p>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/nutrate" class="social-icon" aria-label="Facebook">
+                            <svg fill="currentColor" viewBox="0 0 24 24"><path d="M9 8H7v3h2v9h4v-9h3.6l.4-3H13V6c0-.5.5-1 1-1h3V2h-4c-2.5 0-4 1.5-4 4v2z"/></svg>
+                        </a>
+                        <a href="https://www.instagram.com/nutrateclinica" class="social-icon" aria-label="Instagram">
+                            <svg fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.051.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Col 2: Central de Atendimento -->
+                <div>
+                    <h3 class="footer-title">Central de Atendimento</h3>
+                    <ul class="footer-links">
+                        <li style="margin-bottom: 1.5rem;">
+                            <strong>Telefones de Contato:</strong>
+                            <div style="margin-top: 0.5rem; display: flex; flex-direction: column; gap: 0.5rem;">
+                                <a href="tel:+552130053014" style="color: var(--white); font-weight: 600; font-size: 1.1rem;">(21) 3005-3014</a>
+                                <a href="tel:+552120423042" style="color: var(--white); font-weight: 600; font-size: 1.1rem;">(21) 2042-3042</a>
+                            </div>
+                        </li>
+                        <li>
+                            <strong>E-mail:</strong><br>
+                            <a href="mailto:contato@nutrate.com.br" style="color: var(--white);">contato@nutrate.com.br</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Col 3: Localizações e Horários -->
+                <div class="footer-address-box">
+                    <h3 class="footer-title">Nossos Endereços</h3>
+                    
+                    <div class="address-item">
+                        <div class="address-icon">
+                            <svg fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"></path></svg>
+                        </div>
+                        <div class="address-text">
+                            <strong>Copacabana</strong>
+                            Av. N. S. de Copacabana, 195 - s/l 211<br>Copacabana - Rio de Janeiro - RJ<br>
+                            <span style="font-size: 0.8rem; opacity: 0.8; display: block; margin-top: 0.25rem;">Segunda à Sexta de 08h às 20h | Sábado de 9h às 13h</span>
+                        </div>
+                    </div>
+
+                    <div class="address-item">
+                        <div class="address-icon">
+                            <svg fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"></path></svg>
+                        </div>
+                        <div class="address-text">
+                            <strong>Centro</strong>
+                            Av. Rio Branco, 181 - sala 102<br>Centro - Rio de Janeiro - RJ<br>
+                            <span style="font-size: 0.8rem; opacity: 0.8; display: block; margin-top: 0.25rem;">Segunda à Sexta de 08h às 20h</span>
+                        </div>
+                    </div>
                 </div>
             </div>
 
-            <!-- Col 2: Endereços -->
-            <div>
-                <h3 class="footer-col-title">Nossas Unidades</h3>
-                <ul class="footer-address-list">
-                    <li>
-                        <strong>Unidade Centro:</strong><br>
-                        Av. Rio Branco, 181 - sala 102<br>Centro - Rio de Janeiro - RJ
-                    </li>
-                    <li>
-                        <strong>Unidade Copacabana:</strong><br>
-                        Av. N. S. de Copacabana, 195 - s/l 211<br>Copacabana - Rio de Janeiro - RJ
-                    </li>
-                </ul>
+            <!-- Bottom -->
+            <div class="footer-bottom">
+                <p>Nutrate - Nutrição e Clínica Médica Copyright © 2026 • Todos os direitos reservados</p>
             </div>
-
-            <!-- Col 3: Horários -->
-            <div>
-                <h3 class="footer-col-title">Horários de Atendimento</h3>
-                <ul class="footer-address-list" style="font-size: 0.9rem;">
-                    <li>
-                        <strong>Centro:</strong><br>
-                        Segunda à Sexta: 08h às 20h
-                    </li>
-                    <li>
-                        <strong>Copacabana:</strong><br>
-                        Segunda à Sexta: 08h às 20h<br>
-                        Sábado: 09h às 13h
-                    </li>
-                </ul>
-            </div>
-        </div>
-
-        <div class="container copyright-bar">
-            <p>Nutrate - Nutrição e Clínica Médica &copy; 2026 • Todos os direitos reservados.</p>
         </div>
     </footer>
 
-    <!-- Floating Fixed Button (Points exactly to customer's reservation system link) -->
-    <a href="http://paciente.nutrate.com.br/" class="floating-cta" aria-label="Agendar Consulta">
-        <svg viewBox="0 0 24 24">
-            <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 14H4V8h16v10zM12 10H8v2h4v-2zm4 0h-2v2h2v-2zm-4 4H8v2h4v-2zm4 0h-2v2h2v-2z"/>
-        </svg>
+    <!-- FLOATING ACTION BUTTON -->
+    <a href="http://paciente.nutrate.com.br/" class="fab" aria-label="Agendar Consulta">
+        <svg fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd"></path></svg>
         <span>Agendar Consulta</span>
     </a>
 
