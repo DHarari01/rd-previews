@@ -1,214 +1,241 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
     <link rel="preconnect" href="https://www.google.com">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nutricionista Anne Viana - Nutricionista em Copacabana</title>
-    <meta name="description" content="A Jornada para o Corpo e a Saúde que Você Sempre Sonhou Começa Aqui! Descubra um acompanhamento focado na confiança e no respeito que o seu corpo merece em Copacabana.">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
     
-    <meta property="og:title" content="Nutricionista Anne Viana - Nutricionista em Copacabana">
-    <meta property="og:description" content="A Jornada para o Corpo e a Saúde que Você Sempre Sonhou Começa Aqui! Descubra um acompanhamento focado na confiança e no respeito que o seu corpo merece em Copacabana.">
-    <meta property="og:image" content="https://www.google.com/s2/favicons?domain=anneviananutricionista.my.canva.site&sz=128">
+    <title>Nutricionista Anne Viana - Nutricionista em Copacabana</title>
+    <meta name="description" content="A Jornada para o Corpo e a Saúde que Você Sempre Sonhou Começa Aqui! Confiança e o cuidado que o seu corpo merece em Copacabana.">
     
     <link rel="icon" href="https://www.google.com/s2/favicons?domain=anneviananutricionista.my.canva.site&sz=128">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
-    
+    <meta property="og:title" content="Nutricionista Anne Viana - Nutricionista em Copacabana">
+    <meta property="og:description" content="A Jornada para o Corpo e a Saúde que Você Sempre Sonhou Começa Aqui! Confiança e o cuidado que o seu corpo merece em Copacabana.">
+    <meta property="og:image" content="https://www.google.com/s2/favicons?domain=anneviananutricionista.my.canva.site&sz=128">
+
     <style>
         :root {
-            --bg-primary: #F8F7F2;
-            --bg-secondary: #FFFFFF;
-            --text-main: #1C231F;
-            --text-muted: #5A655F;
-            --accent-color: #2F3E33;
-            --accent-light: #EBEAE1;
-            --gold-accent: #C2A378;
-            --transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+            --color-bg: #F8F7F2;
+            --color-surface: #FFFFFF;
+            --color-text-main: #1A1917;
+            --color-text-muted: #5A5852;
+            --color-border: rgba(26, 25, 23, 0.1);
+            --color-accent: #1A1917;
+            --color-accent-hover: #3D3C37;
+            --max-width: 1100px;
+            --transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
         }
 
         * {
             box-sizing: border-box;
             margin: 0;
             padding: 0;
-            scroll-behavior: smooth;
         }
 
         body {
-            background-color: var(--bg-primary);
-            color: var(--text-main);
-            font-family: 'Inter', sans-serif;
-            line-height: 1.6;
+            background-color: var(--color-bg);
+            color: var(--color-text-main);
+            font-family: 'Inter', system-ui, -apple-system, sans-serif;
             -webkit-font-smoothing: antialiased;
+            line-height: 1.6;
         }
 
+        /* Typography */
+        h1, h2, h3, h4 {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-weight: 400;
+            line-height: 1.2;
+            letter-spacing: -0.02em;
+        }
+
+        p {
+            font-size: 1rem;
+            color: var(--color-text-muted);
+            font-weight: 300;
+            line-height: 1.7;
+        }
+
+        /* Layout Utilities */
         .container {
             width: 100%;
-            max-width: 1100px;
+            max-width: var(--max-width);
             margin: 0 auto;
             padding: 0 1.5rem;
         }
 
-        /* HEADER */
+        .section-padding {
+            padding: 5rem 0;
+        }
+
+        @media (min-width: 768px) {
+            .section-padding {
+                padding: 8rem 0;
+            }
+        }
+
+        /* Header */
         header {
-            background-color: rgba(248, 247, 242, 0.85);
-            backdrop-filter: blur(10px);
-            position: fixed;
+            position: absolute;
             top: 0;
             left: 0;
             width: 100%;
             z-index: 100;
-            border-bottom: 1px solid rgba(47, 62, 51, 0.06);
-            transition: var(--transition);
+            padding: 1.5rem 0;
+            border-bottom: 1px solid var(--color-border);
         }
 
         .header-container {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            height: 80px;
         }
 
-        .logo-container {
+        .logo-wrapper {
             display: flex;
             align-items: center;
             gap: 0.75rem;
             text-decoration: none;
-            color: var(--text-main);
+            color: var(--color-text-main);
         }
 
         .logo-img {
-            width: 38px;
-            height: 38px;
+            width: 32px;
+            height: 32px;
             border-radius: 50%;
             object-fit: cover;
-            border: 1px solid var(--accent-light);
         }
 
         .logo-text {
-            font-family: 'Playfair Display', serif;
-            font-weight: 500;
-            font-size: 1.15rem;
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 1.1rem;
+            font-weight: 600;
             letter-spacing: 0.05em;
         }
 
         .header-cta {
-            background-color: var(--accent-color);
-            color: var(--bg-primary);
-            text-decoration: none;
-            padding: 0.65rem 1.25rem;
-            border-radius: 2rem;
             font-size: 0.85rem;
-            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--color-text-main);
+            text-decoration: none;
+            border-bottom: 1px solid var(--color-text-main);
+            padding-bottom: 2px;
             transition: var(--transition);
-            letter-spacing: 0.03em;
         }
 
         .header-cta:hover {
-            background-color: var(--text-main);
-            transform: translateY(-2px);
+            color: var(--color-text-muted);
+            border-bottom-color: var(--color-text-muted);
         }
 
-        /* HERO - Minimalista Tipográfico */
+        /* Hero Section (Minimalista Tipográfico) */
         .hero {
             position: relative;
-            padding-top: 180px;
-            padding-bottom: 110px;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            padding-top: 7rem;
+            padding-bottom: 4rem;
             overflow: hidden;
-            background: radial-gradient(circle at 90% 10%, rgba(194, 163, 120, 0.08) 0%, rgba(248, 247, 242, 0) 60%);
+            background: radial-gradient(circle at 80% 20%, #FFFFFF 0%, #F8F7F2 100%);
         }
 
+        /* Subtle Geometric Background Elements */
         .hero::before {
             content: '';
             position: absolute;
-            top: -20%;
-            left: -10%;
-            width: 600px;
-            height: 600px;
-            background: radial-gradient(circle, rgba(47, 62, 51, 0.03) 0%, rgba(248, 247, 242, 0) 70%);
-            z-index: -1;
-            pointer-events: none;
+            top: -10%;
+            right: -10%;
+            width: 50vw;
+            height: 50vw;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.6);
+            filter: blur(80px);
+            z-index: 1;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 800px;
         }
 
         .hero-tag {
-            font-size: 0.75rem;
+            font-size: 0.85rem;
             text-transform: uppercase;
-            letter-spacing: 0.2em;
-            color: var(--gold-accent);
-            font-weight: 600;
-            display: block;
+            letter-spacing: 0.15em;
+            color: var(--color-text-muted);
             margin-bottom: 1.5rem;
+            display: inline-block;
         }
 
-        .hero-title {
-            font-family: 'Playfair Display', serif;
-            font-size: 2.8rem;
-            line-height: 1.15;
-            color: var(--accent-color);
+        .hero h1 {
+            font-size: 2.5rem;
             margin-bottom: 2rem;
-            font-weight: 400;
-            max-width: 900px;
+            color: var(--color-text-main);
         }
 
-        .hero-title em {
-            font-family: 'Playfair Display', serif;
-            font-style: italic;
-            font-weight: 400;
+        @media (min-width: 768px) {
+            .hero h1 {
+                font-size: 4rem;
+                line-height: 1.1;
+            }
         }
 
         .hero-desc {
-            font-size: 1.1rem;
-            color: var(--text-muted);
+            font-size: 1.15rem;
+            margin-bottom: 2.5rem;
             max-width: 600px;
-            margin-bottom: 3rem;
-            font-weight: 300;
-            line-height: 1.7;
         }
 
-        .hero-cta-btn {
+        /* Buttons */
+        .btn {
             display: inline-flex;
             align-items: center;
             justify-content: center;
-            background-color: var(--accent-color);
-            color: var(--bg-primary);
+            background-color: var(--color-accent);
+            color: #FFFFFF;
+            padding: 1.1rem 2.2rem;
+            border-radius: 4px;
             text-decoration: none;
-            padding: 1.15rem 2.5rem;
-            border-radius: 3rem;
-            font-weight: 500;
             font-size: 0.95rem;
+            font-weight: 500;
+            letter-spacing: 0.05em;
             transition: var(--transition);
-            box-shadow: 0 4px 15px rgba(47, 62, 51, 0.12);
-            letter-spacing: 0.02em;
+            border: 1px solid var(--color-accent);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
         }
 
-        .hero-cta-btn:hover {
-            background-color: var(--text-main);
-            transform: translateY(-3px);
-            box-shadow: 0 6px 20px rgba(47, 62, 51, 0.18);
+        .btn:hover {
+            background-color: var(--color-accent-hover);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 24px rgba(0, 0, 0, 0.1);
         }
 
-        /* GOOGLE SOCIAL PROOF BADGE */
+        /* Social Proof Banner */
         .social-proof {
-            background-color: var(--bg-secondary);
-            padding: 2.5rem 0;
-            border-top: 1px solid rgba(47, 62, 51, 0.05);
-            border-bottom: 1px solid rgba(47, 62, 51, 0.05);
+            border-top: 1px solid var(--color-border);
+            border-bottom: 1px solid var(--color-border);
+            background-color: #FFFFFF;
+            padding: 2rem 0;
         }
 
-        .proof-container {
+        .social-proof-grid {
             display: flex;
             flex-direction: column;
             align-items: center;
-            justify-content: center;
-            gap: 1rem;
+            justify-content: space-between;
+            gap: 1.5rem;
             text-align: center;
         }
 
         @media (min-width: 768px) {
-            .proof-container {
+            .social-proof-grid {
                 flex-direction: row;
-                gap: 3rem;
                 text-align: left;
             }
         }
@@ -220,587 +247,469 @@
         }
 
         .stars {
-            color: var(--gold-accent);
+            color: #D4AF37;
             font-size: 1.2rem;
-            letter-spacing: 2px;
         }
 
         .proof-text {
-            font-size: 0.9rem;
-            color: var(--text-muted);
-            font-weight: 400;
-            letter-spacing: 0.02em;
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 1.1rem;
+            color: var(--color-text-main);
         }
 
-        .proof-text strong {
-            color: var(--text-main);
-        }
-
-        /* SERVICES - Elegant Numbered List */
-        .services {
-            padding: 7rem 0;
-            background-color: var(--bg-secondary);
+        /* Services & Differentials Section (Minimalist List) */
+        .services-section {
+            background-color: #FFFFFF;
         }
 
         .section-header {
-            margin-bottom: 5rem;
-            max-width: 650px;
-        }
-
-        .section-tag {
-            font-size: 0.75rem;
-            text-transform: uppercase;
-            letter-spacing: 0.15em;
-            color: var(--gold-accent);
-            font-weight: 600;
-            margin-bottom: 1rem;
-            display: block;
+            max-width: 600px;
+            margin-bottom: 4rem;
         }
 
         .section-title {
-            font-family: 'Playfair Display', serif;
-            font-size: 2.25rem;
-            color: var(--accent-color);
-            font-weight: 400;
-            line-height: 1.25;
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        @media (min-width: 768px) {
+            .section-title {
+                font-size: 2.75rem;
+            }
         }
 
         .services-list {
-            display: flex;
-            flex-direction: column;
+            margin-top: 3rem;
         }
 
         .service-item {
             display: grid;
             grid-template-columns: 1fr;
-            padding: 3rem 0;
-            border-bottom: 1px solid var(--accent-light);
-            transition: var(--transition);
+            padding: 2.5rem 0;
+            border-bottom: 1px solid var(--color-border);
+            align-items: start;
+            gap: 1rem;
         }
 
         @media (min-width: 768px) {
             .service-item {
-                grid-template-columns: 80px 1.2fr 2fr;
+                grid-template-columns: 80px 1fr 2fr;
                 gap: 2rem;
                 padding: 3.5rem 0;
             }
         }
 
         .service-number {
-            font-family: 'Playfair Display', serif;
+            font-family: 'Playfair Display', Georgia, serif;
             font-size: 2.5rem;
-            color: var(--gold-accent);
-            font-weight: 400;
             line-height: 1;
-            margin-bottom: 1rem;
-        }
-
-        @media (min-width: 768px) {
-            .service-number {
-                margin-bottom: 0;
-            }
+            color: var(--color-text-muted);
+            opacity: 0.4;
         }
 
         .service-title {
-            font-family: 'Playfair Display', serif;
+            font-family: 'Playfair Display', Georgia, serif;
             font-size: 1.5rem;
-            color: var(--accent-color);
+            color: var(--color-text-main);
             font-weight: 500;
-            margin-bottom: 1rem;
-        }
-
-        @media (min-width: 768px) {
-            .service-title {
-                margin-bottom: 0;
-                padding-right: 1.5rem;
-            }
         }
 
         .service-desc {
             font-size: 1rem;
-            color: var(--text-muted);
-            line-height: 1.7;
-            font-weight: 300;
+            max-width: 600px;
         }
 
-        /* ABOUT */
-        .about {
-            padding: 7rem 0;
-            background-color: var(--bg-primary);
+        /* About Section (Sobre a Clínica / Profissional) */
+        .about-section {
+            background-color: var(--color-bg);
+            position: relative;
         }
 
         .about-grid {
             display: grid;
             grid-template-columns: 1fr;
-            gap: 3.5rem;
+            gap: 3rem;
             align-items: center;
         }
 
         @media (min-width: 768px) {
             .about-grid {
-                grid-template-columns: 1fr 1.1fr;
+                grid-template-columns: 1fr 1fr;
+                gap: 5rem;
             }
         }
 
-        .about-illustration {
-            background-color: var(--bg-secondary);
-            border: 1px solid var(--accent-light);
-            border-radius: 0.5rem;
+        .about-visual {
+            background-color: #EAE8E1;
             padding: 4rem 2rem;
+            border-radius: 8px;
             text-align: center;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.02);
+            border: 1px solid var(--color-border);
         }
 
-        .about-monogram {
-            font-family: 'Playfair Display', serif;
-            font-size: 4rem;
-            color: var(--gold-accent);
-            line-height: 1;
-            margin-bottom: 1.5rem;
+        .about-quote {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 1.5rem;
             font-style: italic;
+            color: var(--color-text-main);
+            line-height: 1.4;
+            margin-bottom: 1rem;
         }
 
-        .about-decor-line {
-            width: 40px;
-            height: 1px;
-            background-color: var(--accent-light);
+        .about-author {
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--color-text-muted);
+        }
+
+        .about-content h2 {
+            font-size: 2rem;
             margin-bottom: 1.5rem;
         }
 
-        .about-decor-text {
-            font-size: 0.75rem;
-            text-transform: uppercase;
-            letter-spacing: 0.15em;
-            color: var(--text-muted);
-        }
-
-        .about-content {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
+        @media (min-width: 768px) {
+            .about-content h2 {
+                font-size: 2.75rem;
+            }
         }
 
         .about-text {
-            font-size: 1.05rem;
-            color: var(--text-muted);
-            line-height: 1.8;
-            margin-bottom: 2rem;
-            font-weight: 300;
-        }
-
-        .about-text p {
             margin-bottom: 1.5rem;
         }
 
-        .about-text p:last-child {
-            margin-bottom: 0;
+        /* Core Values / Commitments */
+        .commitments-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+            margin-top: 4rem;
         }
 
-        /* FINAL CTA */
-        .cta-final {
-            padding: 8rem 0;
-            background-color: var(--accent-color);
-            color: var(--bg-primary);
+        @media (min-width: 768px) {
+            .commitments-grid {
+                grid-template-columns: 1fr 1fr 1fr;
+            }
+        }
+
+        .commitment-card {
+            background: #FFFFFF;
+            padding: 2.5rem;
+            border-radius: 8px;
+            border: 1px solid var(--color-border);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.02);
+        }
+
+        .commitment-title {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 1.25rem;
+            margin-bottom: 1rem;
+            color: var(--color-text-main);
+        }
+
+        /* Final Call To Action (Efeito Uau) */
+        .final-cta {
+            background-color: #1A1917;
+            color: #F8F7F2;
             text-align: center;
             position: relative;
             overflow: hidden;
         }
 
-        .cta-final::after {
+        .final-cta::before {
             content: '';
             position: absolute;
-            bottom: -50%;
-            right: -20%;
-            width: 500px;
-            height: 500px;
-            background: radial-gradient(circle, rgba(194, 163, 120, 0.1) 0%, rgba(0, 0, 0, 0) 70%);
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at 50% 120%, #2A2925 0%, #1A1917 100%);
             z-index: 1;
-            pointer-events: none;
         }
 
-        .cta-box {
+        .final-cta .container {
             position: relative;
             z-index: 2;
-            max-width: 750px;
-            margin: 0 auto;
+            max-width: 700px;
         }
 
-        .cta-final-title {
-            font-family: 'Playfair Display', serif;
-            font-size: 2.6rem;
-            line-height: 1.2;
+        .final-cta h2 {
+            font-size: 2.25rem;
             margin-bottom: 1.5rem;
-            font-weight: 400;
+            color: #F8F7F2;
         }
 
-        .cta-final-desc {
-            font-size: 1.05rem;
-            color: rgba(248, 247, 242, 0.8);
-            margin-bottom: 3rem;
-            font-weight: 300;
-            max-width: 550px;
-            margin-left: auto;
-            margin-right: auto;
+        @media (min-width: 768px) {
+            .final-cta h2 {
+                font-size: 3.5rem;
+            }
         }
 
-        .cta-final-btn {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            background-color: var(--bg-primary);
-            color: var(--accent-color);
-            text-decoration: none;
-            padding: 1.15rem 2.5rem;
-            border-radius: 3rem;
-            font-weight: 500;
-            font-size: 0.95rem;
-            transition: var(--transition);
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
-            letter-spacing: 0.02em;
+        .final-cta p {
+            color: #C3C1BC;
+            margin-bottom: 2.5rem;
+            font-size: 1.1rem;
         }
 
-        .cta-final-btn:hover {
-            background-color: var(--bg-secondary);
-            color: var(--text-main);
-            transform: translateY(-3px);
-            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+        .final-cta .btn {
+            background-color: #F8F7F2;
+            color: #1A1917;
+            border-color: #F8F7F2;
         }
 
-        /* FOOTER */
+        .final-cta .btn:hover {
+            background-color: #FFFFFF;
+            transform: translateY(-2px);
+        }
+
+        /* Footer */
         footer {
-            background-color: var(--bg-primary);
-            padding: 5rem 0 3rem 0;
-            border-top: 1px solid var(--accent-light);
+            background-color: #FFFFFF;
+            padding: 4rem 0 2rem 0;
+            border-top: 1px solid var(--color-border);
+            font-size: 0.9rem;
         }
 
         .footer-grid {
             display: grid;
             grid-template-columns: 1fr;
-            gap: 3.5rem;
-            margin-bottom: 4rem;
+            gap: 3rem;
+            margin-bottom: 3rem;
         }
 
         @media (min-width: 768px) {
             .footer-grid {
-                grid-template-columns: 1.5fr 1fr;
+                grid-template-columns: 2fr 1fr;
             }
         }
 
         .footer-brand {
-            display: flex;
-            flex-direction: column;
-            gap: 1.25rem;
+            max-width: 350px;
         }
 
         .footer-logo {
             display: flex;
             align-items: center;
             gap: 0.75rem;
+            margin-bottom: 1.5rem;
             text-decoration: none;
-            color: var(--text-main);
+            color: var(--color-text-main);
         }
 
-        .footer-logo-img {
-            width: 32px;
-            height: 32px;
+        .footer-logo img {
+            width: 28px;
+            height: 28px;
             border-radius: 50%;
-            object-fit: cover;
         }
 
-        .footer-logo-text {
-            font-family: 'Playfair Display', serif;
-            font-size: 1.1rem;
-            font-weight: 500;
-            letter-spacing: 0.05em;
-        }
-
-        .footer-tagline {
-            font-size: 0.9rem;
-            color: var(--text-muted);
-            max-width: 320px;
-            font-weight: 300;
-        }
-
-        .footer-contact {
-            display: flex;
-            flex-direction: column;
-            gap: 1.5rem;
-        }
-
-        .footer-contact-title {
-            font-size: 0.75rem;
-            text-transform: uppercase;
-            letter-spacing: 0.15em;
-            color: var(--gold-accent);
+        .footer-logo span {
+            font-family: 'Playfair Display', Georgia, serif;
             font-weight: 600;
+            font-size: 1.1rem;
         }
 
-        .footer-contact-list {
-            list-style: none;
-            display: flex;
-            flex-direction: column;
-            gap: 1rem;
+        .footer-title {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+            color: var(--color-text-main);
         }
 
-        .footer-contact-item {
-            font-size: 0.9rem;
-            color: var(--text-muted);
-            display: flex;
-            flex-direction: column;
-            gap: 0.25rem;
-        }
-
-        .footer-contact-item strong {
-            color: var(--text-main);
-            font-weight: 500;
-        }
-
-        .footer-contact-link {
-            color: var(--text-muted);
-            text-decoration: none;
-            transition: var(--transition);
-        }
-
-        .footer-contact-link:hover {
-            color: var(--accent-color);
+        .footer-info p {
+            margin-bottom: 0.5rem;
+            font-size: 0.95rem;
         }
 
         .footer-bottom {
-            border-top: 1px solid var(--accent-light);
             padding-top: 2rem;
+            border-top: 1px solid var(--color-border);
             display: flex;
             flex-direction: column;
             gap: 1rem;
-            align-items: center;
-            text-align: center;
+            justify-content: space-between;
+            color: var(--color-text-muted);
+            font-size: 0.8rem;
         }
 
         @media (min-width: 768px) {
             .footer-bottom {
                 flex-direction: row;
-                justify-content: space-between;
-                text-align: left;
             }
         }
 
-        .copyright {
-            font-size: 0.8rem;
-            color: var(--text-muted);
-        }
-
-        .footer-legal-tag {
-            font-size: 0.75rem;
-            color: var(--text-muted);
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-        }
-
-        /* WHATSAPP FLUTUANTE */
+        /* Floating WhatsApp Button */
         .whatsapp-float {
             position: fixed;
             bottom: 2rem;
             right: 2rem;
             background-color: #25D366;
-            color: white;
+            color: #FFFFFF;
             width: 60px;
             height: 60px;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.35);
-            z-index: 99;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+            z-index: 999;
             transition: var(--transition);
+            text-decoration: none;
         }
 
         .whatsapp-float:hover {
-            transform: scale(1.1) translateY(-3px);
-            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.5);
+            transform: scale(1.08) translateY(-4px);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
         }
 
-        .whatsapp-float svg {
+        .whatsapp-icon {
             width: 32px;
             height: 32px;
             fill: currentColor;
-        }
-
-        /* RESPONSIVE ADJUSTMENTS */
-        @media (max-width: 767px) {
-            .hero-title {
-                font-size: 2.2rem;
-            }
-            .section-title {
-                font-size: 1.85rem;
-            }
-            .cta-final-title {
-                font-size: 2rem;
-            }
-            .hero {
-                padding-top: 140px;
-                padding-bottom: 80px;
-            }
         }
     </style>
 </head>
 <body>
 
-    <!-- HEADER -->
+    <!-- Header -->
     <header>
         <div class="container header-container">
-            <a href="#" class="logo-container">
+            <a href="#" class="logo-wrapper">
                 <img src="https://www.google.com/s2/favicons?domain=anneviananutricionista.my.canva.site&sz=128" alt="Logo Anne Viana" class="logo-img">
-                <span class="logo-text">Anne Viana</span>
+                <span class="logo-text">ANNE VIANA</span>
             </a>
-            <a href="https://wa.me/5561937271438?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." class="header-cta">Consultar</a>
+            <a href="https://wa.me/5561937271438?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." class="header-cta">Agendar Consulta</a>
         </div>
     </header>
 
-    <main>
-        <!-- HERO -->
-        <section class="hero">
-            <div class="container">
-                <span class="hero-tag">Nutrição Clínica & Estética</span>
-                <h1 class="hero-title">
-                    A jornada para o <em>corpo</em> e a <em>saúde</em> que você sempre sonhou começa aqui.
-                </h1>
-                <p class="hero-desc">
-                    Você já tentou de tudo e sente que os resultados nunca chegam? Descubra uma abordagem focada na confiança, com planos personalizados que dão ao seu corpo o respeito que ele verdadeiramente merece.
-                </p>
-                <a href="https://wa.me/5561937271438?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." class="hero-cta-btn">
-                    Começar minha jornada
-                </a>
-            </div>
-        </section>
-
-        <!-- SOCIAL PROOF BADGE -->
-        <section class="social-proof">
-            <div class="container proof-container">
-                <div class="proof-rating">
-                    <span class="stars">★★★★★</span>
-                </div>
-                <div class="proof-text">
-                    Consultório com <strong>avaliação máxima de excelência</strong>. Cuidado individualizado e pautado na ciência em Copacabana.
-                </div>
-            </div>
-        </section>
-
-        <!-- SERVICES - Elegant Numbered List -->
-        <section class="services">
-            <div class="container">
-                <div class="section-header">
-                    <span class="section-tag">Seu Acompanhamento</span>
-                    <h2 class="section-title">Como construímos seus resultados de forma duradoura</h2>
-                </div>
-                
-                <div class="services-list">
-                    <div class="service-item">
-                        <div class="service-number">01</div>
-                        <h3 class="service-title">Planejamento Individualizado</h3>
-                        <p class="service-desc">
-                            Planos alimentares que respeitam sua individualidade, rotina de trabalho, preferências e restrições. Uma estratégia desenhada para você conseguir aderir de verdade e sentir prazer no processo.
-                        </p>
-                    </div>
-
-                    <div class="service-item">
-                        <div class="service-number">02</div>
-                        <h3 class="service-title">Apoio e Confiança Diários</h3>
-                        <p class="service-desc">
-                            Acompanhamento consistente focado em entender os seus desafios reais. Juntos, adaptamos o percurso para que você mantenha a constância e conquiste a saúde dos seus sonhos.
-                        </p>
-                    </div>
-
-                    <div class="service-item">
-                        <div class="service-number">03</div>
-                        <h3 class="service-title">Resultados Consistentes</h3>
-                        <p class="service-desc">
-                            Chega de oscilações e dietas milagrosas. Alinhamos ciência nutricional e respeito biológico para promover emagrecimento, hipertrofia ou equilíbrio metabólico definitivo.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- ABOUT -->
-        <section class="about">
-            <div class="container about-grid">
-                <div class="about-illustration">
-                    <div class="about-monogram">AV</div>
-                    <div class="about-decor-line"></div>
-                    <span class="about-decor-text">Nutricionista Clínica</span>
-                </div>
-                <div class="about-content">
-                    <span class="section-tag">A Profissional</span>
-                    <h2 class="section-title" style="margin-bottom: 2rem;">Nutricionista Anne Viana</h2>
-                    <div class="about-text">
-                        <p>
-                            Atuando no coração de Copacabana, meu objetivo é desmistificar a nutrição e restabelecer uma relação de confiança entre você e o seu corpo.
-                        </p>
-                        <p>
-                            Seja qual for a sua meta — resgatar sua autoestima, melhorar seu rendimento físico ou garantir mais longevidade —, seu tratamento é conduzido com máxima atenção técnica e acolhimento em cada etapa.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- FINAL CTA -->
-        <section class="cta-final">
-            <div class="container cta-box">
-                <h2 class="cta-final-title">Pronto para dar ao seu corpo o cuidado que ele merece?</h2>
-                <p class="cta-final-desc">
-                    As vagas para novos acompanhamentos este mês em Copacabana são limitadas. Garanta o seu atendimento personalizado hoje mesmo.
-                </p>
-                <a href="https://wa.me/5561937271438?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." class="cta-final-btn">
-                    Agendar minha consulta
-                </a>
-            </div>
-        </section>
-    </main>
-
-    <!-- FOOTER -->
-    <footer>
-        <div class="container footer-grid">
-            <div class="footer-brand">
-                <a href="#" class="footer-logo">
-                    <img src="https://www.google.com/s2/favicons?domain=anneviananutricionista.my.canva.site&sz=128" alt="Logo Anne Viana" class="footer-logo-img" loading="lazy">
-                    <span class="footer-logo-text">Anne Viana</span>
-                </a>
-                <p class="footer-tagline">
-                    Nutrição personalizada focada em longevidade, confiança e no respeito que o seu corpo merece.
-                </p>
-            </div>
-            <div class="footer-contact">
-                <span class="footer-contact-title">Localização & Contato</span>
-                <ul class="footer-contact-list">
-                    <li class="footer-contact-item">
-                        <strong>Atendimento Presencial</strong>
-                        Copacabana, Rio de Janeiro - RJ
-                    </li>
-                    <li class="footer-contact-item">
-                        <strong>Agendamentos</strong>
-                        <a href="https://wa.me/5561937271438?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." class="footer-contact-link">Clique para iniciar contato</a>
-                    </li>
-                </ul>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <span class="hero-tag">Nutricionista em Copacabana</span>
+                <h1>A Jornada para o Corpo e a Saúde que Você Sempre Sonhou Começa Aqui!</h1>
+                <p class="hero-desc">Você já tentou de tudo e sente que os resultados não acompanham o seu esforço? Descubra o método focado em gerar a confiança e o cuidado que o seu corpo verdadeiramente merece.</p>
+                <a href="https://wa.me/5561937271438?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." class="btn">Dar o Primeiro Passo</a>
             </div>
         </div>
-        <div class="container footer-bottom">
-            <div class="copyright">
-                &copy; 2026 Anne Viana Nutricionista. Todos os direitos reservados.
+    </section>
+
+    <!-- Social Proof Banner -->
+    <section class="social-proof">
+        <div class="container">
+            <div class="social-proof-grid">
+                <div class="proof-rating">
+                    <span class="stars">★★★★★</span>
+                    <span class="proof-text">Classificação Excelente no Google</span>
+                </div>
+                <div class="proof-text" style="font-style: italic;">
+                    "Ciência, acolhimento e resultados reais em Copacabana."
+                </div>
             </div>
-            <div class="footer-legal-tag">
-                Nutrição Ética e Responsável
+        </div>
+    </section>
+
+    <!-- Services / Differentials -->
+    <section class="services-section section-padding">
+        <div class="container">
+            <div class="section-header">
+                <span class="hero-tag">Tratamentos & Foco</span>
+                <h2 class="section-title">Como construímos a sua transformação juntos</h2>
+                <p>Uma metodologia que une rigor técnico, respeito à sua individualidade e foco na sustentabilidade dos resultados.</p>
+            </div>
+            
+            <div class="services-list">
+                <div class="service-item">
+                    <span class="service-number">01</span>
+                    <h3 class="service-title">Emagrecimento com Saúde</h3>
+                    <p class="service-desc">Estratégias nutricionais eficientes e descomplicadas para que você conquiste o corpo que deseja, priorizando a manutenção da massa magra e o bem-estar diário.</p>
+                </div>
+                <div class="service-item">
+                    <span class="service-number">02</span>
+                    <h3 class="service-title">Reeducação Alimentar</h3>
+                    <p class="service-desc">Resgate a sua relação saudável com os alimentos. Planos alimentares adaptados à sua rotina real, sem proibições desnecessárias ou fórmulas milagrosas.</p>
+                </div>
+                <div class="service-item">
+                    <span class="service-number">03</span>
+                    <h3 class="service-title">Nutrição Clínica & Performance</h3>
+                    <p class="service-desc">Otimização metabólica voltada para a melhoria de sintomas clínicos, aumento de disposição física e melhora da saúde digestiva e hormonal.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about-section section-padding">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-visual">
+                    <p class="about-quote">"Confiança e o cuidado que o seu corpo merece."</p>
+                    <span class="about-author">Anne Viana — Nutrição Personalizada</span>
+                </div>
+                <div class="about-content">
+                    <span class="hero-tag">Sua Nutricionista</span>
+                    <h2>Compromisso com o seu bem-estar</h2>
+                    <p class="about-text">Entendo que a nutrição vai muito além de calorias descritas em uma planilha. Trata-se de reestabelecer o equilíbrio e a autoestima que você merece ter todos os dias.</p>
+                    <p class="about-text">Atuando em Copacabana, meu atendimento é estruturado para acolher as suas dificuldades, decifrar os sinais do seu organismo e aplicar a ciência da nutrição de forma prática e viável para o seu estilo de vida.</p>
+                    <a href="https://wa.me/5561937271438?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." class="btn" style="margin-top: 1rem;">Conhecer Método</a>
+                </div>
+            </div>
+
+            <!-- Pillars / Commitments -->
+            <div class="commitments-grid">
+                <div class="commitment-card">
+                    <h3 class="commitment-title">Acolhimento Individualizado</h3>
+                    <p>Suas metas são únicas. Por isso, cada plano alimentar é elaborado do absoluto zero, respeitando suas preferências e cultura alimentar.</p>
+                </div>
+                <div class="commitment-card">
+                    <h3 class="commitment-title">Fidelidade Científica</h3>
+                    <p>Sem dietas da moda ou modismos sem fundamentos. Todo o tratamento é baseado em evidências científicas sólidas e seguras.</p>
+                </div>
+                <div class="commitment-card">
+                    <h3 class="commitment-title">Suporte Contínuo</h3>
+                    <p>Você não estará só durante essa jornada. Oferecemos acompanhamento focado na manutenção do seu foco e evolução consistente.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA Section (Efeito Uau) -->
+    <section class="final-cta section-padding">
+        <div class="container">
+            <h2>Pronto para iniciar a sua melhor versão?</h2>
+            <p>Se você já tentou de tudo e sente que os resultados nunca chegam, permita-se vivenciar uma experiência nutricional personalizada de verdade.</p>
+            <a href="https://wa.me/5561937271438?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." class="btn">Agende sua Consulta pelo WhatsApp</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="#" class="footer-logo">
+                        <img src="https://www.google.com/s2/favicons?domain=anneviananutricionista.my.canva.site&sz=128" alt="Logo Anne Viana" loading="lazy">
+                        <span>ANNE VIANA</span>
+                    </a>
+                    <p>Nutrição com base científica, ética e foco na saúde integral do paciente.</p>
+                </div>
+                <div class="footer-info">
+                    <h4 class="footer-title">Localização & Contato</h4>
+                    <p>Copacabana, Rio de Janeiro - RJ</p>
+                    <p>Atendimentos presenciais e online</p>
+                    <p style="margin-top: 1rem; font-weight: 500;">Dúvidas ou agendamentos diretamente pelo canal oficial do WhatsApp.</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Nutricionista Anne Viana. Todos os direitos reservados.</p>
+                <p>Desenvolvido com ética e transparência profissional.</p>
             </div>
         </div>
     </footer>
 
-    <!-- WHATSAPP FLOATING BUTTON -->
-    <a href="https://wa.me/5561937271438?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." class="whatsapp-float" aria-label="Fale conosco no WhatsApp">
-        <svg viewBox="0 0 24 24">
-            <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.514 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.724-1.455L0 24zm6.59-4.846c1.665.989 3.3.15 5.36.15 5.548 0 10.062-4.51 10.066-10.059.002-2.688-1.043-5.214-2.942-7.114C17.172 2.23 14.653 1.185 11.96 1.185 6.417 1.185 1.903 5.69 1.899 11.234c0 1.912.524 3.78 1.517 5.397l-.993 3.63 3.723-.977zM17.58 14.3c-.3-.15-1.782-.88-2.052-.98-.27-.1-.468-.15-.663.15-.197.3-.757.98-.93 1.178-.17.195-.34.22-.64.07-1.345-.674-2.22-1.18-3.097-2.68-.23-.396.23-.367.66-.22.12.04.25.1.36.12.3.15.34.25.4.37.06.13.03.25-.01.35-.05.1-.47 1.127-.64 1.543-.17.404-.34.348-.47.34-.13-.005-.27-.007-.4-.007-.14 0-.36.05-.55.25-.19.2-.73.714-.73 1.74 0 1.027.75 2.017.85 2.152.1.135 1.472 2.247 3.566 3.148 1.114.48 1.964.663 2.645.52.75-.157 2.29-.937 2.614-1.84.32-.9.32-1.68.22-1.84-.1-.16-.36-.26-.66-.41z"/>
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/5561937271438?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." class="whatsapp-float" aria-label="Falar conosco no WhatsApp">
+        <svg class="whatsapp-icon" viewBox="0 0 24 24">
+            <path d="M12.012 2c-5.506 0-9.989 4.478-9.99 9.984a9.96 9.96 0 0 0 1.335 4.991L2 22l5.137-1.343a9.923 9.923 0 0 0 4.875 1.28h.005c5.507 0 9.99-4.478 9.99-9.985 0-2.667-1.037-5.176-2.923-7.062A9.916 9.916 0 0 0 12.012 2zm5.82 14.156c-.244.686-1.42 1.251-1.954 1.332-.489.074-.99.094-3.136-.788-2.744-1.129-4.514-3.896-4.651-4.077-.137-.181-1.11-1.467-1.11-2.8a2.915 2.915 0 0 1 .904-2.146c.244-.244.534-.305.77-.305h.549c.168 0 .389-.061.61.458.229.534.786 1.907.854 2.044.069.137.115.305.023.488-.092.183-.137.305-.274.458-.137.153-.29.336-.412.458-.137.137-.282.29-.122.564.16.274.71 1.16 1.526 1.885.105.093.203.143.301.192.641.511 1.135.549 1.417.267.214-.214.534-.61.763-.915.229-.305.458-.244.763-.122.305.122 1.938.908 2.274 1.076.336.168.564.244.648.397.084.153.084.885-.16 1.57z"/>
         </svg>
     </a>
 
