@@ -1,0 +1,776 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <link rel="preconnect" href="https://static.wixstatic.com">
+    <link rel="preconnect" href="https://www.google.com">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Isabel Vieira - Nutricionista da Endometriose</title>
+    <meta name="description" content="Nutrição especializada para endometriose no Rio de Janeiro. Agende sua consulta e recupere sua qualidade de vida.">
+    <link rel="icon" href="img/foto-7.png">
+    
+    <!-- Open Graph Metadata -->
+    <meta property="og:title" content="Isabel Vieira - Nutricionista da Endometriose">
+    <meta property="og:description" content="Nutrição especializada para endometriose no Rio de Janeiro. Agende sua consulta e recupere sua qualidade de vida.">
+    <meta property="og:image" content="https://rd-previews-dharari01s-projects.vercel.app/isabel-vieira---nutricionista-da-endometriose/img/foto-1.png">
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --primary: #28245B;
+            --primary-light: #EAE8F2;
+            --primary-hover: #1e1b43;
+            --text-dark: #1b1933;
+            --text-muted: #535266;
+            --bg-light: #FAFAFC;
+            --white: #FFFFFF;
+            --shadow-subtle: 0 8px 30px rgba(40, 36, 91, 0.05);
+            --shadow-glass: 0 8px 32px 0 rgba(40, 36, 91, 0.08);
+            --transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        /* Base Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--text-dark);
+            background-color: var(--bg-light);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, .font-serif {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-weight: 600;
+            color: var(--primary);
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1140px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* Header / Nav */
+        header {
+            background-color: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            border-bottom: 1px solid rgba(40, 36, 91, 0.05);
+            padding: 16px 0;
+        }
+
+        .nav-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo-group {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .logo-img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .logo-text {
+            font-size: 1.1rem;
+            letter-spacing: 0.5px;
+        }
+
+        .nav-links {
+            display: none;
+            gap: 24px;
+        }
+
+        @media (min-width: 768px) {
+            .nav-links {
+                display: flex;
+            }
+        }
+
+        .nav-link {
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: var(--text-muted);
+            transition: var(--transition);
+        }
+
+        .nav-link:hover {
+            color: var(--primary);
+        }
+
+        .btn-header {
+            background-color: var(--primary);
+            color: var(--white);
+            padding: 10px 20px;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            transition: var(--transition);
+        }
+
+        .btn-header:hover {
+            background-color: var(--primary-hover);
+            transform: translateY(-1px);
+        }
+
+        /* Hero Section - Storytelling em Blocos */
+        .hero {
+            position: relative;
+            min-height: 85vh;
+            display: flex;
+            align-items: center;
+            background-image: linear-gradient(rgba(40, 36, 91, 0.45), rgba(40, 36, 91, 0.55)), url('img/foto-3.png');
+            background-size: cover;
+            background-position: center;
+            padding: 60px 0;
+            overflow: hidden;
+        }
+
+        .hero-card {
+            background: rgba(255, 255, 255, 0.88);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            border-radius: 24px;
+            padding: 32px;
+            max-width: 600px;
+            box-shadow: var(--shadow-glass);
+            animation: fadeInUp 1s ease-out;
+        }
+
+        .hero-brand-img {
+            max-width: 140px;
+            margin-bottom: 20px;
+        }
+
+        .hero h1 {
+            font-size: 2rem;
+            line-height: 1.25;
+            margin-bottom: 16px;
+        }
+
+        @media (min-width: 768px) {
+            .hero h1 {
+                font-size: 2.8rem;
+            }
+            .hero-card {
+                padding: 48px;
+            }
+        }
+
+        .hero p {
+            font-size: 1rem;
+            color: var(--text-muted);
+            margin-bottom: 28px;
+        }
+
+        .cta-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background-color: var(--primary);
+            color: var(--white);
+            padding: 16px 32px;
+            border-radius: 50px;
+            font-weight: 500;
+            font-size: 1rem;
+            transition: var(--transition);
+            box-shadow: 0 4px 15px rgba(40, 36, 91, 0.2);
+            gap: 10px;
+        }
+
+        .cta-btn:hover {
+            background-color: var(--primary-hover);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(40, 36, 91, 0.3);
+        }
+
+        /* Prova Social Section */
+        .social-proof {
+            padding: 40px 0;
+            background-color: var(--white);
+            border-bottom: 1px solid rgba(40, 36, 91, 0.05);
+        }
+
+        .proof-wrapper {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 16px;
+            text-align: center;
+        }
+
+        @media (min-width: 768px) {
+            .proof-wrapper {
+                flex-direction: row;
+                justify-content: space-between;
+                text-align: left;
+            }
+        }
+
+        .stars {
+            display: flex;
+            gap: 4px;
+            color: #FFB800;
+            font-size: 1.2rem;
+        }
+
+        .proof-text {
+            font-size: 0.95rem;
+            color: var(--text-muted);
+            max-width: 600px;
+        }
+
+        /* Storytelling em Blocos (Zig-Zag) */
+        .story-blocks {
+            padding: 80px 0;
+            background-color: var(--bg-light);
+        }
+
+        .section-header {
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto 60px;
+        }
+
+        .section-header h2 {
+            font-size: 2rem;
+            margin-bottom: 16px;
+        }
+
+        @media (min-width: 768px) {
+            .section-header h2 {
+                font-size: 2.5rem;
+            }
+        }
+
+        .section-header p {
+            color: var(--text-muted);
+        }
+
+        .block-item {
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+            margin-bottom: 80px;
+            align-items: center;
+        }
+
+        .block-item:last-child {
+            margin-bottom: 0;
+        }
+
+        @media (min-width: 768px) {
+            .block-item {
+                flex-direction: row;
+                gap: 60px;
+            }
+            .block-item:nth-child(even) {
+                flex-direction: row-reverse;
+            }
+            .block-content, .block-image-wrapper {
+                flex: 1;
+                width: 50%;
+            }
+        }
+
+        .block-image-wrapper {
+            position: relative;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: var(--shadow-subtle);
+        }
+
+        .block-image {
+            width: 100%;
+            height: 350px;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+
+        .block-image-wrapper:hover .block-image {
+            transform: scale(1.03);
+        }
+
+        .block-tag {
+            text-transform: uppercase;
+            font-size: 0.75rem;
+            font-weight: 600;
+            letter-spacing: 1.5px;
+            color: var(--primary);
+            margin-bottom: 12px;
+            display: inline-block;
+        }
+
+        .block-content h3 {
+            font-size: 1.75rem;
+            margin-bottom: 16px;
+            line-height: 1.3;
+        }
+
+        .block-content p {
+            color: var(--text-muted);
+            margin-bottom: 24px;
+            font-size: 1rem;
+        }
+
+        /* Sobre Mim */
+        .about {
+            padding: 100px 0;
+            background-color: var(--white);
+        }
+
+        .about-wrapper {
+            display: flex;
+            flex-direction: column;
+            gap: 48px;
+            align-items: center;
+        }
+
+        @media (min-width: 768px) {
+            .about-wrapper {
+                flex-direction: row;
+            }
+            .about-image-side, .about-text-side {
+                flex: 1;
+                width: 50%;
+            }
+        }
+
+        .about-image-container {
+            position: relative;
+            max-width: 400px;
+            margin: 0 auto;
+        }
+
+        .about-image {
+            border-radius: 24px;
+            box-shadow: var(--shadow-subtle);
+            border: 8px solid var(--bg-light);
+        }
+
+        .decorative-badge {
+            position: absolute;
+            bottom: -20px;
+            right: -20px;
+            background-color: var(--primary);
+            color: var(--white);
+            padding: 16px 24px;
+            border-radius: 16px;
+            font-family: 'Playfair Display', serif;
+            font-size: 1.1rem;
+            box-shadow: var(--shadow-glass);
+        }
+
+        .about-text-side h2 {
+            font-size: 2.2rem;
+            margin-bottom: 20px;
+        }
+
+        .about-text-side p {
+            color: var(--text-muted);
+            margin-bottom: 24px;
+            font-size: 1.05rem;
+        }
+
+        /* Depoimentos */
+        .testimonials {
+            padding: 100px 0;
+            background-color: var(--bg-light);
+        }
+
+        .testimonials-carousel {
+            display: flex;
+            gap: 24px;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            padding: 20px 0;
+            scrollbar-width: none; /* Firefox */
+        }
+
+        .testimonials-carousel::-webkit-scrollbar {
+            display: none; /* Chrome/Safari */
+        }
+
+        .testimonial-card {
+            min-width: 290px;
+            max-width: 350px;
+            background-color: var(--white);
+            padding: 32px;
+            border-radius: 20px;
+            box-shadow: var(--shadow-subtle);
+            scroll-snap-align: start;
+            flex: 0 0 auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        @media (min-width: 768px) {
+            .testimonial-card {
+                min-width: 350px;
+            }
+        }
+
+        .testimonial-quote {
+            font-size: 0.95rem;
+            color: var(--text-muted);
+            font-style: italic;
+            margin-bottom: 20px;
+        }
+
+        .testimonial-author {
+            font-weight: 600;
+            color: var(--primary);
+            font-size: 0.9rem;
+        }
+
+        .testimonial-details {
+            font-size: 0.8rem;
+            color: #999;
+        }
+
+        /* CTA Final */
+        .final-cta {
+            padding: 100px 0;
+            background: linear-gradient(rgba(40, 36, 91, 0.9), rgba(40, 36, 91, 0.95)), url('img/foto-2.png');
+            background-size: cover;
+            background-position: center;
+            color: var(--white);
+            text-align: center;
+        }
+
+        .final-cta h2 {
+            color: var(--white);
+            font-size: 2.2rem;
+            margin-bottom: 20px;
+        }
+
+        .final-cta p {
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 1.1rem;
+            max-width: 600px;
+            margin: 0 auto 36px;
+        }
+
+        .cta-btn-white {
+            background-color: var(--white);
+            color: var(--primary);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .cta-btn-white:hover {
+            background-color: var(--bg-light);
+            color: var(--primary-hover);
+        }
+
+        /* Rodapé */
+        footer {
+            background-color: #17153D;
+            color: rgba(255, 255, 255, 0.7);
+            padding: 60px 0 30px;
+            font-size: 0.9rem;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        @media (min-width: 768px) {
+            .footer-grid {
+                grid-template-columns: 2fr 1fr 1fr;
+            }
+        }
+
+        .footer-brand h4 {
+            color: var(--white);
+            font-size: 1.2rem;
+            margin-bottom: 16px;
+        }
+
+        .footer-links h5 {
+            color: var(--white);
+            margin-bottom: 16px;
+            font-weight: 500;
+        }
+
+        .footer-links ul {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 12px;
+        }
+
+        .footer-links a:hover {
+            color: var(--white);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 30px;
+            text-align: center;
+            font-size: 0.8rem;
+        }
+
+        /* WhatsApp Flutuante */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 24px;
+            right: 24px;
+            background-color: #25D366;
+            color: var(--white);
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.25);
+            z-index: 999;
+            transition: var(--transition);
+        }
+
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+        }
+
+        .whatsapp-float svg {
+            width: 32px;
+            height: 32px;
+            fill: currentColor;
+        }
+
+        /* Keyframes */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header / Nav -->
+    <header>
+        <div class="container nav-wrapper">
+            <div class="logo-group">
+                <img src="img/foto-7.png" alt="Logo Isabel Vieira" class="logo-img">
+                <span class="logo-text font-serif">Isabel Vieira</span>
+            </div>
+            <nav class="nav-links">
+                <a href="#servicos" class="nav-link">Serviços</a>
+                <a href="#sobre" class="nav-link">Sobre Mim</a>
+                <a href="#depoimentos" class="nav-link">Depoimentos</a>
+            </nav>
+            <a href="https://wa.me/5521997567021?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." class="btn-header">Agendar Consulta</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-card">
+                <img src="img/foto-1.png" alt="Assinatura Isabel Vieira" class="hero-brand-img">
+                <h1>Nutrição e Qualidade de Vida para a Endometriose</h1>
+                <p>Encontre o caminho para um tratamento integrativo, focado em desinflamar o seu organismo e devolver a sua liberdade e bem-estar.</p>
+                <a href="https://wa.me/5521997567021?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." class="cta-btn">
+                    Falar com a Nutri no WhatsApp
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Prova Social -->
+    <section class="social-proof">
+        <div class="container proof-wrapper">
+            <div class="stars">★★★★★</div>
+            <p class="proof-text"><strong>Acompanhamento de Destaque no Rio de Janeiro:</strong> Pacientes com melhora de sintomas através de um olhar clínico cuidadoso e personalizado para o tratamento da endometriose.</p>
+        </div>
+    </section>
+
+    <!-- Serviços (Storytelling em Blocos) -->
+    <section id="servicos" class="story-blocks">
+        <div class="container">
+            <div class="section-header">
+                <h2>Como posso te ajudar no controle da Endometriose?</h2>
+                <p>Descubra as diferentes frentes do meu trabalho focado em transformar a sua alimentação e seu estilo de vida.</p>
+            </div>
+
+            <!-- Bloco 1 -->
+            <div class="block-item">
+                <div class="block-image-wrapper">
+                    <img src="img/foto-2.png" alt="Alimentação saudável e ingredientes funcionais para endometriose" class="block-image" loading="lazy">
+                </div>
+                <div class="block-content">
+                    <span class="block-tag">Tratamento Focado</span>
+                    <h3>E-books de Receitas e Nutrição Prática</h3>
+                    <p>Desenvolvi 4 e-books exclusivos e gratuitos que vão te ajudar com imunidade, alimentação saudável e diversas receitas funcionais pensadas estrategicamente para o controle da inflamação sistêmica.</p>
+                    <a href="https://wa.me/5521997567021?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." class="cta-btn">Baixar E-books Gratuitos</a>
+                </div>
+            </div>
+
+            <!-- Bloco 2 -->
+            <div class="block-item">
+                <div class="block-image-wrapper">
+                    <img src="img/foto-6.png" alt="Abacate decorativo - Símbolo de gordura boa e nutrição integrativa" class="block-image" loading="lazy">
+                </div>
+                <div class="block-content">
+                    <span class="block-tag">Grupo de Apoio</span>
+                    <h3>Clube da Endometriose & Workshop</h3>
+                    <p>Faça parte do nosso grupo seleto focado no acolhimento de mulheres reais. No Clube da Endometriose, debatemos rotina, tiramos dúvidas de exames e partilhamos um estilo de vida mais leve. Garanta 10% OFF no próximo lote de inscrições do nosso Workshop.</p>
+                    <a href="https://wa.me/5521997567021?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." class="cta-btn">Quero Participar</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sobre Mim -->
+    <section id="sobre" class="about">
+        <div class="container about-wrapper">
+            <div class="about-image-side">
+                <div class="about-image-container">
+                    <img src="img/foto-5.png" alt="Padrão de Frutas Isabel Vieira" class="about-image" loading="lazy">
+                    <div class="decorative-badge">Isabel Vieira</div>
+                </div>
+            </div>
+            <div class="about-text-side">
+                <h2>Prazer, eu sou a Isabel Vieira</h2>
+                <p>Sou nutricionista apaixonada por descomplicar a relação da mulher com o próprio corpo. A endometriose não precisa definir as suas dores nem o seu futuro alimentar.</p>
+                <p>Meu foco é realizar um diagnóstico integrativo minucioso, traçar estratégias alimentares viáveis e estar ao seu lado a cada etapa dessa transformação com empatia, respeito e absoluto rigor científico.</p>
+                <a href="https://wa.me/5521997567021?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." class="cta-btn">Saiba Mais Sobre Minha Consulta</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Depoimentos (Carrossel Horizontal Limpo) -->
+    <section id="depoimentos" class="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <h2>Experiências Reais</h2>
+                <p>Pacientes que vivenciaram uma mudança completa em suas vidas através do método de atendimento.</p>
+            </div>
+            <div class="testimonials-carousel">
+                <div class="testimonial-card">
+                    <p class="testimonial-quote">"A atenção que a Isabel dá durante a consulta é exemplar. Em poucas semanas mudei minha alimentação e senti uma redução drástica nas dores diárias. Recomendo muito!"</p>
+                    <div>
+                        <p class="testimonial-author">Juliana Silveira</p>
+                        <p class="testimonial-details">Paciente há 6 meses - Rio de Janeiro</p>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <p class="testimonial-quote">"O carinho e a precisão do acompanhamento me surpreenderam. Os e-books de receitas me ajudaram de forma prática a não cair na mesmice. Excelente!"</p>
+                    <div>
+                        <p class="testimonial-author">Carla Menezes</p>
+                        <p class="testimonial-details">Paciente de Consulta Individual - Rio de Janeiro</p>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <p class="testimonial-quote">"Amei a abordagem humanizada! A Isabel estuda cada detalhe do nosso caso e os exames. O controle dos sintomas me deu outra vida."</p>
+                    <div>
+                        <p class="testimonial-author">Patrícia Santos</p>
+                        <p class="testimonial-details">Membro do Clube da Endometriose</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mentoria para Nutricionistas (Telegram) -->
+    <section class="story-blocks" style="background-color: var(--white); border-top: 1px solid rgba(40, 36, 91, 0.05);">
+        <div class="container">
+            <div class="block-item" style="margin-bottom: 0;">
+                <div class="block-content">
+                    <span class="block-tag">Para Profissionais</span>
+                    <h3>Ei, Nutri! Quer alavancar sua carreira?</h3>
+                    <p>Eu sempre recebo muitas mensagens de outras nutris lá no Instagram e por isso resolvi preparar um material super legal para você! Toda semana batemos um papo lá no Telegram sobre desafios da profissão e dicas para aumentar a sua agenda.</p>
+                    <p>Inscreva-se na minha mentoria para construir o seu posicionamento boutique na nutrição de excelência.</p>
+                    <a href="https://wa.me/5521997567021?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." class="cta-btn">Fazer Mentoria / Entrar no Telegram</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Final -->
+    <section class="final-cta">
+        <div class="container">
+            <h2>Pronta para reescrever sua história com a saúde?</h2>
+            <p>Dê o primeiro passo rumo a uma rotina sem dor, com mais energia e equilíbrio nutricional absoluto.</p>
+            <a href="https://wa.me/5521997567021?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." class="cta-btn cta-btn-white">Agendar sua Triagem de Sintomas</a>
+        </div>
+    </section>
+
+    <!-- Rodapé -->
+    <footer>
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <h4 class="font-serif">Isabel Vieira</h4>
+                <p>Nutricionista Especializada no controle integrativo da Endometriose. Atendimento boutique focado no seu bem-estar diário.</p>
+            </div>
+            <div class="footer-links">
+                <h5>Atendimento</h5>
+                <ul>
+                    <li>Rio de Janeiro, Brasil</li>
+                    <li><a href="tel:+5521997567021" style="text-decoration: underline;">(21) 99756-7021</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h5>Redes Sociais</h5>
+                <ul>
+                    <li><a href="https://www.instagram.com/isabelvieiranutricionista" target="_blank" rel="noopener">Instagram</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="container footer-bottom">
+            <p>&copy; 2026 Isabel Vieira - Nutricionista da Endometriose. Todos os direitos reservados. Design System por RD Exclusive.</p>
+        </div>
+    </footer>
+
+    <!-- Botão Flutuante do WhatsApp -->
+    <a href="https://wa.me/5521997567021?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." class="whatsapp-float" aria-label="Fale conosco no WhatsApp">
+        <svg viewBox="0 0 24 24">
+            <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.513 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.724-1.455L0 24zm6.59-4.846c1.6.95 3.188 1.449 4.825 1.451 5.436 0 9.86-4.37 9.864-9.799.002-2.63-1.023-5.101-2.885-6.965C16.528 2.014 14.07 1 11.516 1c-5.44 0-9.866 4.372-9.87 9.802 0 1.714.463 3.39 1.337 4.888l-.991 3.615 3.705-.961c1.517.821 3.013 1.253 4.86 1.21zM17.5 14.333c-.27-.135-1.597-.788-1.846-.877-.25-.09-.432-.135-.613.135-.18.27-.7.877-.856 1.058-.158.18-.317.202-.587.067-.27-.135-1.139-.42-2.17-1.34-1.01-.9-1.69-2.012-1.888-2.35-.197-.337-.02-.52.115-.654.122-.122.27-.315.405-.472.135-.157.18-.27.27-.45.09-.18.045-.337-.022-.472-.067-.135-.613-1.477-.84-2.023-.22-.53-.443-.458-.61-.466-.157-.008-.337-.008-.517-.008-.18 0-.472.067-.72.337-.247.27-.945.922-.945 2.25s.967 2.61 1.102 2.79c.135.18 1.902 2.904 4.61 4.074.645.278 1.148.444 1.54.568.648.206 1.237.177 1.702.107.518-.077 1.597-.652 1.823-1.282.225-.63.225-1.17.157-1.282-.067-.113-.247-.18-.517-.315z"/>
+        </svg>
+    </a>
+
+<div style="position:fixed;bottom:18px;left:50%;transform:translateX(-50%);z-index:2147483647;background:rgba(255,255,255,0.96);border-radius:999px;padding:10px 22px 10px 12px;box-shadow:0 6px 20px rgba(0,0,0,0.22);display:flex;align-items:center;gap:9px;font-family:Inter,-apple-system,sans-serif;"><img src="https://rd-previews-dharari01s-projects.vercel.app/_assets/logo-rd-exclusive.png" alt="RD Exclusive" style="height:26px;width:auto;display:block;"><span style="font-size:14px;font-weight:700;color:#1A1A1A;white-space:nowrap;">Protótipo por RD Exclusive</span></div></body>
+</html>
