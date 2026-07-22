@@ -1,0 +1,741 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <link rel="preconnect" href="https://ui-avatars.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fernanda Guimarães — Nutrição de Alta Performance & Longevidade</title>
+    <meta name="description" content="Acompanhamento nutricional premium focado em longevidade, performance e bem-estar. Atendimento exclusivo e individualizado.">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Fernanda Guimarães — Nutrição de Alta Performance & Longevidade">
+    <meta property="og:description" content="Acompanhamento nutricional premium focado em longevidade, performance e bem-estar. Atendimento exclusivo e individualizado.">
+    <meta property="og:image" content="https://rd-previews-dharari01s-projects.vercel.app/nutricionista-fernanda-guimaraes/img/foto-1.png">
+    <meta property="og:type" content="website">
+
+    <!-- Favicon -->
+    <link rel="icon" href="img/foto-1.png">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,600;1,9..144,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <style>
+        /* CSS Reset & Variables */
+        :root {
+            --brand-color: #ECF3FF;
+            --brand-dark: #111625;
+            --text-main: #1C2230;
+            --text-muted: #5C6479;
+            --white: #FFFFFF;
+            --border-light: #E2EAF8;
+            --transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            -webkit-text-size-adjust: 100%;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--white);
+            color: var(--text-main);
+            line-height: 1.6;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* Typography */
+        h1, h2, h3, h4 {
+            font-family: 'Fraunces', serif;
+            font-weight: 400;
+            line-height: 1.15;
+            color: var(--brand-dark);
+        }
+
+        p {
+            font-size: 1rem;
+            color: var(--text-muted);
+            font-weight: 300;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: var(--transition);
+        }
+
+        /* Container */
+        .container {
+            width: 100%;
+            max-width: 1140px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* Header */
+        header {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 100;
+            padding: 24px 0;
+        }
+
+        .header-nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .logo-img {
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .logo-text {
+            font-family: 'Fraunces', serif;
+            font-size: 1.1rem;
+            font-weight: 600;
+            letter-spacing: -0.02em;
+            color: var(--brand-dark);
+        }
+
+        .header-cta {
+            font-size: 0.9rem;
+            font-weight: 500;
+            padding: 10px 20px;
+            border-radius: 50px;
+            background-color: var(--brand-color);
+            color: var(--brand-dark);
+            border: 1px solid var(--border-light);
+        }
+
+        .header-cta:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(236, 243, 255, 0.5);
+        }
+
+        /* Hero Section (Minimalista Tipográfico) */
+        .hero {
+            position: relative;
+            padding: 160px 0 100px 0;
+            background: radial-gradient(circle at 80% 20%, var(--brand-color) 0%, var(--white) 60%);
+            min-height: 90vh;
+            display: flex;
+            align-items: center;
+        }
+
+        .hero-content {
+            max-width: 800px;
+        }
+
+        .hero-tag {
+            display: inline-block;
+            font-size: 0.85rem;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--text-muted);
+            margin-bottom: 24px;
+        }
+
+        .hero h1 {
+            font-size: clamp(2.5rem, 6vw, 4.5rem);
+            letter-spacing: -0.03em;
+            margin-bottom: 24px;
+            font-weight: 300;
+        }
+
+        .hero h1 span {
+            font-style: italic;
+            font-weight: 400;
+        }
+
+        .hero-description {
+            font-size: clamp(1.1rem, 2vw, 1.3rem);
+            margin-bottom: 40px;
+            max-width: 600px;
+            font-weight: 300;
+            line-height: 1.5;
+        }
+
+        .hero-actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 16px;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 16px 36px;
+            font-size: 1rem;
+            font-weight: 500;
+            border-radius: 50px;
+            transition: var(--transition);
+            cursor: pointer;
+        }
+
+        .btn-primary {
+            background-color: var(--brand-dark);
+            color: var(--white);
+            border: 1px solid var(--brand-dark);
+        }
+
+        .btn-primary:hover {
+            background-color: var(--white);
+            color: var(--brand-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(17, 22, 37, 0.1);
+        }
+
+        /* Social Proof Section */
+        .social-proof {
+            padding: 60px 0;
+            border-top: 1px solid var(--border-light);
+            border-bottom: 1px solid var(--border-light);
+            background-color: var(--white);
+        }
+
+        .proof-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 32px;
+            align-items: center;
+            text-align: center;
+        }
+
+        @media (min-width: 768px) {
+            .proof-grid {
+                flex-direction: row;
+                justify-content: space-between;
+                text-align: left;
+            }
+        }
+
+        .proof-item {
+            max-width: 450px;
+        }
+
+        .stars {
+            display: flex;
+            gap: 4px;
+            margin-bottom: 12px;
+            justify-content: center;
+        }
+
+        @media (min-width: 768px) {
+            .stars {
+                justify-content: flex-start;
+            }
+        }
+
+        .stars svg {
+            width: 20px;
+            height: 20px;
+            fill: #FFC107;
+        }
+
+        .proof-text {
+            font-family: 'Fraunces', serif;
+            font-size: 1.3rem;
+            color: var(--brand-dark);
+            line-height: 1.4;
+        }
+
+        .google-badge {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .google-icon {
+            width: 32px;
+            height: 32px;
+        }
+
+        .google-badge-text {
+            text-align: left;
+        }
+
+        .google-badge-text p {
+            font-size: 0.85rem;
+            font-weight: 500;
+            color: var(--text-muted);
+        }
+
+        .google-badge-text strong {
+            font-family: 'Fraunces', serif;
+            font-size: 1.1rem;
+            color: var(--brand-dark);
+        }
+
+        /* Services / Diferenciais (Elegant Numbered List) */
+        .services {
+            padding: 100px 0;
+            background-color: var(--white);
+        }
+
+        .section-header {
+            margin-bottom: 80px;
+            max-width: 600px;
+        }
+
+        .section-tag {
+            font-size: 0.85rem;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--text-muted);
+            margin-bottom: 16px;
+            display: block;
+        }
+
+        .section-title {
+            font-size: clamp(2rem, 4vw, 3rem);
+            letter-spacing: -0.02em;
+        }
+
+        .services-list {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .service-item {
+            display: grid;
+            grid-template-columns: 1fr;
+            padding: 40px 0;
+            border-bottom: 1px solid var(--border-light);
+            gap: 16px;
+            align-items: start;
+        }
+
+        @media (min-width: 768px) {
+            .service-item {
+                grid-template-columns: 80px 1.5fr 2fr;
+                gap: 40px;
+            }
+        }
+
+        .service-number {
+            font-family: 'Fraunces', serif;
+            font-size: 2rem;
+            font-style: italic;
+            color: var(--text-muted);
+            opacity: 0.5;
+            line-height: 1;
+        }
+
+        .service-title {
+            font-size: 1.5rem;
+            font-weight: 400;
+            color: var(--brand-dark);
+        }
+
+        .service-desc {
+            font-size: 1.05rem;
+            line-height: 1.6;
+        }
+
+        /* Sobre Section */
+        .about {
+            padding: 100px 0;
+            background-color: var(--brand-color);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .about::before {
+            content: '';
+            position: absolute;
+            top: -20%;
+            right: -10%;
+            width: 600px;
+            height: 600px;
+            background-radius: 50%;
+            background: radial-gradient(circle, rgba(255,255,255,0.6) 0%, rgba(255,255,255,0) 70%);
+            pointer-events: none;
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        @media (min-width: 768px) {
+            .about-grid {
+                grid-template-columns: 1fr 1.2fr;
+            }
+        }
+
+        .about-badge {
+            background-color: var(--white);
+            padding: 40px;
+            border-radius: 24px;
+            box-shadow: 0 10px 30px rgba(17, 22, 37, 0.03);
+            border: 1px solid var(--border-light);
+            display: inline-block;
+            width: 100%;
+        }
+
+        .about-badge h3 {
+            font-size: 2rem;
+            margin-bottom: 12px;
+        }
+
+        .about-badge p {
+            font-size: 1.1rem;
+            margin-bottom: 24px;
+        }
+
+        .about-badge-footer {
+            border-top: 1px solid var(--border-light);
+            padding-top: 24px;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .about-badge-footer span {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            font-weight: 500;
+        }
+
+        .about-content h2 {
+            font-size: clamp(2rem, 4vw, 3rem);
+            margin-bottom: 24px;
+            letter-spacing: -0.02em;
+        }
+
+        .about-text {
+            font-size: 1.1rem;
+            margin-bottom: 32px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        /* CTA Final Section */
+        .cta-final {
+            padding: 120px 0;
+            background-color: var(--white);
+            text-align: center;
+        }
+
+        .cta-box {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 60px 24px;
+            background: linear-gradient(135deg, var(--brand-color) 0%, var(--white) 100%);
+            border-radius: 32px;
+            border: 1px solid var(--border-light);
+            box-shadow: 0 15px 40px rgba(236, 243, 255, 0.4);
+        }
+
+        .cta-box h2 {
+            font-size: clamp(2rem, 4vw, 3.2rem);
+            margin-bottom: 20px;
+            letter-spacing: -0.02em;
+        }
+
+        .cta-box p {
+            font-size: 1.15rem;
+            max-width: 550px;
+            margin: 0 auto 40px auto;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--brand-dark);
+            color: var(--white);
+            padding: 80px 0 40px 0;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 48px;
+            margin-bottom: 60px;
+        }
+
+        @media (min-width: 768px) {
+            .footer-grid {
+                grid-template-columns: 2fr 1fr 1fr;
+            }
+        }
+
+        .footer-brand h4 {
+            color: var(--white);
+            font-size: 1.6rem;
+            margin-bottom: 16px;
+        }
+
+        .footer-brand p {
+            color: #8E9AA8;
+            max-width: 320px;
+            font-size: 0.95rem;
+            margin-bottom: 24px;
+        }
+
+        .footer-title {
+            font-size: 0.9rem;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: #8E9AA8;
+            margin-bottom: 20px;
+        }
+
+        .footer-links {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .footer-links a {
+            color: #BAC7D5;
+            font-size: 0.95rem;
+            font-weight: 300;
+        }
+
+        .footer-links a:hover {
+            color: var(--white);
+            padding-left: 4px;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid #232C3F;
+            padding-top: 40px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            align-items: center;
+            text-align: center;
+        }
+
+        @media (min-width: 768px) {
+            .footer-bottom {
+                flex-direction: row;
+                justify-content: space-between;
+                text-align: left;
+            }
+        }
+
+        .footer-bottom p {
+            font-size: 0.85rem;
+            color: #8E9AA8;
+        }
+
+        /* Floating WhatsApp Button */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background-color: #25D366;
+            color: var(--white);
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 16px rgba(37, 211, 102, 0.4);
+            z-index: 999;
+            transition: var(--transition);
+        }
+
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.6);
+        }
+
+        .whatsapp-float svg {
+            width: 32px;
+            height: 32px;
+            fill: currentColor;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="container header-nav">
+            <div class="logo-container">
+                <img class="logo-img" src="img/foto-1.png" alt="Nutricionista Fernanda Guimarães">
+                <span class="logo-text">Fernanda Guimarães</span>
+            </div>
+            <a href="https://wa.me/5561974339245?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." class="header-cta">Agendar Consulta</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <span class="hero-tag">Nutrição Premium & Longevidade</span>
+                <h1>A ciência da nutrição traduzida para o seu <span>estilo de vida</span>.</h1>
+                <p class="hero-description">Abordagem individualizada e de alto padrão clínico para quem busca performance metabólica, longevidade e saúde duradoura.</p>
+                <div class="hero-actions">
+                    <a href="https://wa.me/5561974339245?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." class="btn btn-primary">Iniciar sua Transformação</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Proof Section -->
+    <section class="social-proof">
+        <div class="container">
+            <div class="proof-grid">
+                <div class="proof-item">
+                    <div class="stars">
+                        <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                        <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                        <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                        <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                        <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                    </div>
+                    <p class="proof-text">“Atendimento individualizado com metodologia baseada em rigor científico e viabilidade prática.”</p>
+                </div>
+                <div class="google-badge">
+                    <svg class="google-icon" viewBox="0 0 24 24">
+                        <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
+                        <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
+                        <path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z"/>
+                        <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z"/>
+                    </svg>
+                    <div class="google-badge-text">
+                        <strong>Avaliação Excelente</strong>
+                        <p>Feedback e reconhecimento máximo dos pacientes</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Metodologia Exclusiva</span>
+                <h2 class="section-title">Direcionamento clínico com foco nos seus objetivos.</h2>
+            </div>
+            
+            <div class="services-list">
+                <div class="service-item">
+                    <span class="service-number">01</span>
+                    <h3 class="service-title">Planejamento Nutricional de Alta Precisão</h3>
+                    <p class="service-desc">Análise profunda da sua rotina, preferências alimentares e exames para criar uma estratégia altamente personalizada e de fácil aderência.</p>
+                </div>
+                <div class="service-item">
+                    <span class="service-number">02</span>
+                    <h3 class="service-title">Modulação Hormonal & Metabólica</h3>
+                    <p class="service-desc">Estratégias nutricionais focadas no equilíbrio endócrino, regulação do sono, controle do estresse e otimização da queima de gordura e ganho de massa magra.</p>
+                </div>
+                <div class="service-item">
+                    <span class="service-number">03</span>
+                    <h3 class="service-title">Longevidade Ativa & Saúde Integrativa</h3>
+                    <p class="service-desc">Prescrição focada na prevenção do envelhecimento celular, redução da inflamação sistêmica crônica e melhora substancial da imunidade e disposição.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sobre Section -->
+    <section class="about">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-badge">
+                    <h3>Abordagem Clínica Premium</h3>
+                    <p>Foco total no acompanhamento fidedigno de cada caso, garantindo suporte personalizado em todas as etapas da sua evolução.</p>
+                    <div class="about-badge-footer">
+                        <span>Fernanda Guimarães</span>
+                        <span>Nutricionista Responsável</span>
+                    </div>
+                </div>
+                <div class="about-content">
+                    <span class="section-tag">A Profissional</span>
+                    <h2>A ciência aplicada ao seu bem-estar diário.</h2>
+                    <div class="about-text">
+                        <p>Acredito que a verdadeira nutrição não se baseia em restrições severas, mas sim na adequação perfeita dos nutrientes à sua rotina, individualidade biológica e objetivos.</p>
+                        <p>Cada planejamento é desenhado de forma científica, visando não apenas resultados estéticos, mas a garantia de uma saúde forte, performance mental otimizada e longevidade.</p>
+                    </div>
+                    <a href="https://wa.me/5561974339245?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." class="btn btn-primary">Conhecer de Perto</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Final Section -->
+    <section class="cta-final">
+        <div class="container">
+            <div class="cta-box">
+                <h2>Pronto para reescrever sua trajetória de saúde?</h2>
+                <p>Garanta um acompanhamento exclusivo com foco real no seu estilo de vida e metas.</p>
+                <a href="https://wa.me/5561974339245?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." class="btn btn-primary">Agende Sua Consulta</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <h4>Fernanda Guimarães</h4>
+                    <p>Nutrição clínica avançada, performance e longevidade de forma individualizada e premium.</p>
+                </div>
+                <div>
+                    <h5 class="footer-title">Atendimento</h5>
+                    <ul class="footer-links">
+                        <li>Consultas Online</li>
+                        <li>Consultas Presenciais (Sob Consulta)</li>
+                    </ul>
+                </div>
+                <div>
+                    <h5 class="footer-title">Contato</h5>
+                    <ul class="footer-links">
+                        <li><a href="tel:+5561974339245">(61) 97433-9245</a></li>
+                        <li><a href="https://www.instagram.com/accounts/login" target="_blank" rel="noopener">Instagram</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Nutricionista Fernanda Guimarães. Todos os direitos reservados.</p>
+                <p>Desenvolvido com padrão de qualidade RD Exclusive</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/5561974339245?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." class="whatsapp-float" aria-label="Fale conosco no WhatsApp">
+        <svg viewBox="0 0 24 24">
+            <path d="M12.031 6c-3.313 0-6 2.691-6 6 0 1.258.391 2.422 1.055 3.391l-.816 2.973 3.064-.803c.854.498 1.848.784 2.912.784 3.313 0 6-2.691 6-6s-2.687-6-6-6zm0 1.094c2.71 0 4.906 2.193 4.906 4.906 0 2.71-2.196 4.906-4.906 4.906-.995 0-1.921-.301-2.702-.816l-.193-.116-1.808.473.483-1.758-.135-.213c-.569-.893-.901-1.956-.901-3.096.001-2.71 2.197-4.906 4.906-4.906zm-1.808 1.808c-.13 0-.256.027-.373.082-.283.13-.483.398-.535.704-.15.86.136 1.777.674 2.5.545.733 1.266 1.309 2.062 1.666.27.121.574.148.86.074.303-.077.545-.303.626-.605.08-.303-.04-.627-.291-.806-.21-.15-.461-.229-.714-.224-.132.003-.263.023-.391.06-.067.02-.132.012-.193-.021-.144-.08-.278-.178-.398-.291l-.312-.34c-.218-.283-.375-.609-.459-.958-.02-.083-.008-.172.033-.247.1-.186.23-.352.385-.494.067-.061.09-.158.058-.244-.105-.286-.241-.558-.403-.811-.087-.134-.251-.205-.407-.15z"/>
+        </svg>
+    </a>
+
+<div style="position:fixed;bottom:18px;left:50%;transform:translateX(-50%);z-index:2147483647;background:rgba(255,255,255,0.96);border-radius:999px;padding:10px 22px 10px 12px;box-shadow:0 6px 20px rgba(0,0,0,0.22);display:flex;align-items:center;gap:9px;font-family:Inter,-apple-system,sans-serif;"><img src="https://rd-previews-dharari01s-projects.vercel.app/_assets/logo-rd-exclusive.png" alt="RD Exclusive" style="height:26px;width:auto;display:block;"><span style="font-size:14px;font-weight:700;color:#1A1A1A;white-space:nowrap;">Protótipo por RD Exclusive</span></div></body>
+</html>
