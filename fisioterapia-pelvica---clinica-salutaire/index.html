@@ -3,53 +3,58 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Clínica Salutaire - Fisioterapia Pélvica, Urologia e Sexualidade RJ</title>
-    <meta name="description" content="A maior clínica de fisioterapia pélvica do Rio de Janeiro. Tratamento humanizado e especializado para disfunções miccionais, sexuais e preparação para o parto.">
+    <title>Fisioterapia Pélvica RJ | Urologista RJ – Clínica Salutaire</title>
+    <meta name="description" content="Referência em Fisioterapia Pélvica, Urologia e Sexualidade no Rio de Janeiro. Tratamentos especializados para homens e mulheres em Copacabana.">
     
-    <!-- Open Graph Metatags -->
-    <meta property="og:title" content="Clínica Salutaire - Fisioterapia Pélvica e Urologia no Rio de Janeiro">
-    <meta property="og:description" content="A maior clínica de fisioterapia pélvica do Rio de Janeiro. Tratamento humanizado e especializado para disfunções miccionais, sexuais e preparação para o parto.">
+    <!-- Open Graph Metadata -->
+    <meta property="og:title" content="Fisioterapia Pélvica RJ | Urologista RJ – Clínica Salutaire">
+    <meta property="og:description" content="Referência em Fisioterapia Pélvica, Urologia e Sexualidade no Rio de Janeiro. Tratamentos especializados para homens e mulheres em Copacabana.">
     <meta property="og:image" content="https://rd-previews-dharari01s-projects.vercel.app/fisioterapia-pelvica---clinica-salutaire/img/foto-1.png">
     <meta property="og:type" content="website">
-    
-    <!-- Favicon -->
-    <link rel="icon" href="img/foto-7.png">
 
-    <!-- Performance Preconnects -->
+    <!-- Preconnect Domains -->
     <link rel="preconnect" href="https://salutaire.com.br">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,400&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
 
+    <!-- Embedded Favicon (SVG data-URI) -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3D%22www.w3.org%22%20viewBox%3D%220%200%2032%2032%22%3E%3Crect%20width%3D%2232%22%20height%3D%2232%22%20rx%3D%226%22%20fill%3D%22%232E2262%22%2F%3E%3Ctext%20x%3D%2250%25%22%20y%3D%2255%25%22%20font-family%3D%22Montserrat%2C%20sans-serif%22%20font-weight%3D%22bold%22%20font-size%3D%2214%22%20fill%3D%22%23C9A227%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%3ECS%3C%2text%3E%3C%2Fsvg%3E">
+
     <style>
-        /* CSS Reset & Variables */
+        /* Design System CSS variables */
         :root {
-            --primary: #2E2562;
-            --primary-light: #3F3385;
+            --primary: #2E2262;
+            --primary-dark: #1F1545;
             --accent: #C9A227;
-            --accent-hover: #B28F20;
-            --bg-warm: #FAF7F2;
-            --text-dark: #1A1A1A;
-            --text-light: #FFFFFF;
+            --accent-light: #F4E8C1;
+            --bg: #FAF7F2;
+            --text: #1A1A1A;
             --text-muted: #555555;
             --white: #FFFFFF;
-            --glass: rgba(46, 37, 98, 0.45);
-            --border-radius: 12px;
-            --shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
-            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            --glass-bg: rgba(46, 34, 98, 0.75);
+            --border-radius: 16px;
+            --shadow: 0 10px 30px rgba(46, 34, 98, 0.05);
+            --transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
         }
 
+        /* Base Resets & Global Styles */
         * {
             box-sizing: border-box;
             margin: 0;
             padding: 0;
+        }
+
+        html {
             scroll-behavior: smooth;
         }
 
         body {
             font-family: 'Lato', sans-serif;
-            background-color: var(--bg-warm);
-            color: var(--text-dark);
+            background-color: var(--bg);
+            color: var(--text);
             line-height: 1.6;
             overflow-x: hidden;
             -webkit-font-smoothing: antialiased;
@@ -57,23 +62,22 @@
 
         h1, h2, h3, h4 {
             font-family: 'Montserrat', sans-serif;
-            font-weight: 700;
+            font-weight: 600;
             color: var(--primary);
-            line-height: 1.2;
+            line-height: 1.25;
+        }
+
+        p {
+            font-size: 1.05rem;
+            color: var(--text-muted);
         }
 
         a {
-            color: inherit;
             text-decoration: none;
+            color: inherit;
+            transition: var(--transition);
         }
 
-        img {
-            max-width: 100%;
-            height: auto;
-            display: block;
-        }
-
-        /* Container & Utilities */
         .container {
             width: 100%;
             max-width: 1200px;
@@ -81,75 +85,47 @@
             padding: 0 24px;
         }
 
-        .section-padding {
-            padding: 80px 0;
-        }
-
-        .text-center {
-            text-align: center;
-        }
-
+        /* Buttons & CTAs */
         .btn {
             display: inline-flex;
             align-items: center;
             justify-content: center;
-            padding: 16px 32px;
+            padding: 16px 36px;
             border-radius: 50px;
             font-family: 'Montserrat', sans-serif;
             font-weight: 600;
-            text-transform: uppercase;
-            font-size: 14px;
+            font-size: 1rem;
             letter-spacing: 0.5px;
-            transition: var(--transition);
             cursor: pointer;
+            transition: var(--transition);
             border: none;
-            width: 100%;
+            gap: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
         }
 
-        @media (min-width: 576px) {
-            .btn {
-                width: auto;
-            }
-        }
-
-        .btn-accent {
+        .btn-primary {
             background-color: var(--accent);
-            color: var(--white);
-            box-shadow: 0 4px 15px rgba(201, 162, 39, 0.3);
+            color: var(--primary-dark);
         }
 
-        .btn-accent:hover {
-            background-color: var(--accent-hover);
+        .btn-primary:hover {
+            background-color: #B28E1D;
             transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(201, 162, 39, 0.4);
+            box-shadow: 0 8px 25px rgba(201, 162, 39, 0.35);
         }
 
-        .btn-outline {
-            border: 2px solid var(--primary);
-            color: var(--primary);
-            background: transparent;
-        }
-
-        .btn-outline:hover {
-            background-color: var(--primary);
+        .btn-whatsapp {
+            background-color: #25D366;
             color: var(--white);
+        }
+
+        .btn-whatsapp:hover {
+            background-color: #128C7E;
             transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(37, 211, 102, 0.35);
         }
 
-        .badge {
-            display: inline-block;
-            background: rgba(46, 37, 98, 0.08);
-            color: var(--primary);
-            padding: 6px 16px;
-            border-radius: 50px;
-            font-size: 12px;
-            font-weight: 700;
-            letter-spacing: 1px;
-            text-transform: uppercase;
-            margin-bottom: 16px;
-        }
-
-        /* Header / Navbar */
+        /* Header Navigation */
         header {
             position: absolute;
             top: 0;
@@ -157,10 +133,10 @@
             width: 100%;
             z-index: 100;
             padding: 20px 0;
-            background: linear-gradient(to bottom, rgba(46, 37, 98, 0.8), transparent);
+            background: linear-gradient(to bottom, rgba(46, 34, 98, 0.4), transparent);
         }
 
-        .nav-container {
+        header .container {
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -169,364 +145,354 @@
         .logo img {
             height: 48px;
             width: auto;
+            display: block;
         }
 
-        .nav-menu {
+        .menu-toggle-input {
             display: none;
         }
 
-        @media (min-width: 992px) {
-            .nav-menu {
-                display: flex;
-                gap: 30px;
-                list-style: none;
-            }
-
-            .nav-link {
-                color: var(--white);
-                font-family: 'Montserrat', sans-serif;
-                font-size: 14px;
-                font-weight: 500;
-                transition: var(--transition);
-            }
-
-            .nav-link:hover {
-                color: var(--accent);
-            }
+        .menu-toggle-btn {
+            display: none;
+            cursor: pointer;
+            z-index: 110;
         }
 
-        /* Hero Section (Storytelling em Blocos) */
+        .nav-menu {
+            display: flex;
+            gap: 32px;
+            align-items: center;
+        }
+
+        .nav-menu a {
+            color: var(--white);
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 500;
+            font-size: 0.95rem;
+            letter-spacing: 0.5px;
+            position: relative;
+        }
+
+        .nav-menu a::after {
+            content: '';
+            position: absolute;
+            bottom: -6px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--accent);
+            transition: var(--transition);
+        }
+
+        .nav-menu a:hover::after {
+            width: 100%;
+        }
+
+        /* Hero Section (Storytelling em Blocos Variant) */
         .hero {
             position: relative;
             min-height: 100vh;
             display: flex;
             align-items: center;
-            background: url('img/foto-1.png') center/cover no-repeat;
-            padding-top: 120px;
-            padding-bottom: 60px;
-        }
-
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(135deg, rgba(46, 37, 98, 0.85) 0%, rgba(26, 26, 26, 0.6) 100%);
-            z-index: 1;
-        }
-
-        .hero .container {
-            position: relative;
-            z-index: 2;
+            background-image: linear-gradient(135deg, rgba(46, 34, 98, 0.9) 0%, rgba(31, 21, 69, 0.6) 100%), url('img/foto-1.png');
+            background-size: cover;
+            background-position: center;
+            padding: 140px 0 80px 0;
+            color: var(--white);
         }
 
         .hero-card {
-            background: var(--glass);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
+            background: var(--glass-bg);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
             border: 1px solid rgba(255, 255, 255, 0.15);
+            padding: 48px;
             border-radius: var(--border-radius);
-            padding: 35px 24px;
-            max-width: 680px;
-            margin: 0 auto;
-            text-align: center;
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+            max-width: 650px;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
+            animation: fadeInUp 0.8s ease-out;
         }
 
-        @media (min-width: 768px) {
-            .hero-card {
-                padding: 50px 45px;
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
             }
         }
 
-        .hero-title {
-            font-size: 28px;
+        .hero-tag {
+            background-color: rgba(201, 162, 39, 0.2);
+            border: 1px solid var(--accent);
+            color: var(--accent-light);
+            display: inline-block;
+            padding: 6px 16px;
+            border-radius: 50px;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 24px;
+        }
+
+        .hero h1 {
             color: var(--white);
-            margin-bottom: 16px;
-            font-weight: 700;
+            font-size: 2.5rem;
+            line-height: 1.2;
+            margin-bottom: 20px;
         }
 
-        @media (min-width: 768px) {
-            .hero-title {
-                font-size: 40px;
-            }
-        }
-
-        .hero-subtitle {
-            font-size: 16px;
+        .hero p {
             color: rgba(255, 255, 255, 0.9);
-            margin-bottom: 24px;
-            font-weight: 300;
+            font-size: 1.15rem;
+            margin-bottom: 32px;
         }
 
-        .hero-banner-alert {
-            background: rgba(201, 162, 39, 0.2);
-            border-left: 4px solid var(--accent);
-            padding: 12px 16px;
-            border-radius: 4px;
-            margin-bottom: 24px;
-            font-size: 14px;
-            color: var(--white);
-            text-align: left;
-        }
-
-        /* Social Proof Bar */
-        .social-proof-bar {
+        /* Social Proof / Google Section */
+        .google-proof {
             background-color: var(--white);
-            border-bottom: 1px solid rgba(46, 37, 98, 0.05);
-            padding: 24px 0;
+            padding: 30px 0;
+            border-bottom: 1px solid rgba(46, 34, 98, 0.05);
             box-shadow: var(--shadow);
+            position: relative;
+            z-index: 10;
         }
 
-        .proof-container {
+        .google-proof .container {
             display: flex;
-            flex-direction: column;
-            align-items: center;
             justify-content: center;
-            gap: 15px;
-            text-align: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 24px 60px;
         }
 
-        @media (min-width: 768px) {
-            .proof-container {
-                flex-direction: row;
-                gap: 40px;
-            }
+        .google-badge {
+            display: flex;
+            align-items: center;
+            gap: 16px;
         }
 
-        .google-stars {
+        .google-icon svg {
+            width: 32px;
+            height: 32px;
+        }
+
+        .rating-stars {
             display: flex;
             align-items: center;
             gap: 4px;
-            color: var(--accent);
         }
 
-        .google-stars svg {
-            width: 20px;
-            height: 20px;
-            fill: currentColor;
+        .rating-stars svg {
+            width: 18px;
+            height: 18px;
+            fill: var(--accent);
         }
 
-        .proof-text {
-            font-size: 15px;
-            color: var(--text-dark);
-            font-weight: 600;
-        }
-
-        .proof-logo {
+        .rating-text {
             font-family: 'Montserrat', sans-serif;
-            font-weight: 700;
+            font-weight: 600;
             color: var(--primary);
-            font-size: 18px;
-            letter-spacing: -0.5px;
+            font-size: 1.1rem;
         }
 
-        /* Services & Differentials Section (Storytelling em Blocos - Zig Zag) */
-        .services-section {
-            background-color: var(--bg-warm);
-        }
-
-        .section-title {
-            font-size: 28px;
-            margin-bottom: 40px;
-            position: relative;
-        }
-
-        @media (min-width: 768px) {
-            .section-title {
-                font-size: 36px;
-                margin-bottom: 60px;
-            }
-        }
-
-        .section-title::after {
-            content: '';
+        .rating-sub {
+            font-size: 0.85rem;
+            color: var(--text-muted);
             display: block;
-            width: 60px;
-            height: 3px;
-            background-color: var(--accent);
-            margin: 15px auto 0;
-            border-radius: 2px;
         }
 
-        .zigzag-row {
-            display: flex;
-            flex-direction: column;
-            gap: 30px;
+        /* Services Section (Zig-Zag Storytelling Blocks) */
+        .services-zigzag {
+            padding: 100px 0;
+            background-color: var(--bg);
+        }
+
+        .section-header {
+            text-align: center;
             margin-bottom: 80px;
         }
 
-        .zigzag-row:last-child {
+        .section-header h2 {
+            font-size: 2.25rem;
+            margin-bottom: 16px;
+            position: relative;
+            display: inline-block;
+            padding-bottom: 12px;
+        }
+
+        .section-header h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 3px;
+            background-color: var(--accent);
+        }
+
+        .zigzag-block {
+            display: flex;
+            align-items: center;
+            gap: 60px;
+            margin-bottom: 100px;
+        }
+
+        .zigzag-block:last-child {
             margin-bottom: 0;
         }
 
-        .zigzag-col-img {
-            border-radius: var(--border-radius);
-            overflow: hidden;
-            box-shadow: var(--shadow);
-            height: 300px;
+        .zigzag-block:nth-child(even) {
+            flex-direction: row-reverse;
         }
 
-        .zigzag-col-img img {
+        .zigzag-img-col {
+            flex: 1;
+            position: relative;
+        }
+
+        .zigzag-img-wrapper {
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: 0 15px 40px rgba(46, 34, 98, 0.12);
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            aspect-ratio: 4 / 3;
+        }
+
+        .zigzag-img-wrapper img {
             width: 100%;
             height: 100%;
             object-fit: cover;
             transition: var(--transition);
         }
 
-        .zigzag-col-img:hover img {
+        .zigzag-img-wrapper:hover img {
             transform: scale(1.03);
         }
 
-        .zigzag-col-text {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            padding: 20px 0;
+        .zigzag-text-col {
+            flex: 1;
         }
 
-        .zigzag-col-text h3 {
-            font-size: 24px;
-            margin-bottom: 16px;
+        .block-tag {
+            color: var(--accent);
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            margin-bottom: 12px;
+            display: block;
         }
 
-        .zigzag-desc {
-            color: var(--text-muted);
-            margin-bottom: 24px;
+        .zigzag-text-col h3 {
+            font-size: 1.85rem;
+            margin-bottom: 20px;
         }
 
-        .service-list {
+        .zigzag-list {
             list-style: none;
-            margin-bottom: 30px;
+            margin-bottom: 36px;
         }
 
-        .service-item {
+        .zigzag-list li {
             position: relative;
             padding-left: 28px;
-            margin-bottom: 12px;
-            font-weight: 500;
-            color: var(--text-dark);
+            margin-bottom: 14px;
+            font-size: 1.05rem;
+            color: var(--text-muted);
         }
 
-        .service-item::before {
-            content: "✓";
+        .zigzag-list li svg {
             position: absolute;
             left: 0;
-            top: 0;
-            color: var(--accent);
-            font-weight: 700;
-            font-size: 16px;
+            top: 4px;
+            width: 18px;
+            height: 18px;
+            fill: var(--accent);
         }
 
-        @media (min-width: 768px) {
-            .zigzag-row {
-                flex-direction: row;
-                align-items: center;
-                gap: 60px;
-            }
-
-            .zigzag-row:nth-child(even) {
-                flex-direction: row-reverse;
-            }
-
-            .zigzag-col-img {
-                flex: 1;
-                height: 480px;
-            }
-
-            .zigzag-col-text {
-                flex: 1;
-                padding: 40px;
-            }
+        /* Discrete Symptom Triage Tool */
+        .triage-section {
+            background-color: #FAF7F2;
+            padding: 80px 0;
+            border-top: 1px solid rgba(46, 34, 98, 0.05);
+            border-bottom: 1px solid rgba(46, 34, 98, 0.05);
         }
 
-        /* Interactive Private Self-Assessment / Triagem Quiz */
-        .triagem-section {
-            background-color: var(--primary);
-            color: var(--white);
-            position: relative;
-        }
-
-        .triagem-card {
-            background: rgba(255, 255, 255, 0.05);
-            border: 1px solid rgba(255, 255, 255, 0.1);
+        .triage-card {
+            background-color: var(--white);
             border-radius: var(--border-radius);
-            padding: 30px 20px;
-            max-width: 750px;
-            margin: 0 auto;
+            box-shadow: var(--shadow);
+            padding: 48px;
+            border: 1px solid rgba(46, 34, 98, 0.03);
             text-align: center;
-            box-shadow: 0 15px 35px rgba(0,0,0,0.2);
         }
 
-        @media (min-width: 768px) {
-            .triagem-card {
-                padding: 50px 40px;
-            }
-        }
-
-        .triagem-card h3 {
-            color: var(--white);
-            font-size: 24px;
+        .triage-card h3 {
+            font-size: 1.75rem;
             margin-bottom: 12px;
         }
 
-        .triagem-card p {
-            color: rgba(255, 255, 255, 0.8);
-            font-size: 15px;
-            margin-bottom: 30px;
+        .triage-card p {
+            max-width: 600px;
+            margin: 0 auto 36px auto;
         }
 
-        .triagem-step {
+        .triage-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 16px;
+            margin-bottom: 40px;
+        }
+
+        .triage-option {
+            display: block;
+            cursor: pointer;
+        }
+
+        .triage-input {
             display: none;
         }
 
-        .triagem-step.active {
-            display: block;
-            animation: fadeIn 0.4s ease-out;
-        }
-
-        .triagem-options {
-            display: flex;
-            flex-direction: column;
-            gap: 12px;
-            margin-top: 20px;
-        }
-
-        .triagem-btn {
-            background: rgba(255, 255, 255, 0.1);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            color: var(--white);
-            padding: 16px 20px;
-            border-radius: 8px;
-            cursor: pointer;
-            font-family: 'Lato', sans-serif;
-            font-size: 15px;
-            font-weight: 500;
-            transition: var(--transition);
-            text-align: left;
-        }
-
-        .triagem-btn:hover {
-            background: rgba(255, 255, 255, 0.25);
-            border-color: var(--accent);
-            transform: translateX(3px);
-        }
-
-        .result-box {
-            background: rgba(255, 255, 255, 0.07);
-            border-left: 4px solid var(--accent);
+        .triage-content {
+            background-color: #FAF7F2;
+            border: 1px solid rgba(46, 34, 98, 0.08);
+            border-radius: 12px;
             padding: 20px;
-            border-radius: 4px;
-            text-align: left;
-            margin-bottom: 25px;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 500;
+            font-size: 0.95rem;
+            color: var(--primary);
+            transition: var(--transition);
         }
 
-        .result-box p {
+        .triage-input:checked + .triage-content {
+            background-color: var(--primary);
             color: var(--white);
-            margin-bottom: 0;
-            line-height: 1.5;
+            border-color: var(--primary);
+        }
+
+        .triage-feedback {
+            display: none;
+            animation: fadeIn 0.5s ease-out forwards;
+            background-color: #F0EDFA;
+            border-left: 4px solid var(--primary);
+            padding: 24px;
+            border-radius: 8px;
+            text-align: left;
+            margin-bottom: 40px;
+        }
+
+        /* CSS hack showing feedback if any triage checkbox is active */
+        .triage-input:checked ~ .triage-feedback,
+        .triage-grid:has(.triage-input:checked) + .triage-feedback {
+            display: block;
         }
 
         @keyframes fadeIn {
@@ -536,244 +502,268 @@
 
         /* About Section (Quem Somos) */
         .about-section {
+            padding: 100px 0;
             background-color: var(--white);
         }
 
-        .about-wrapper {
+        .about-content {
             max-width: 800px;
             margin: 0 auto;
+            text-align: center;
+        }
+
+        .about-content h2 {
+            font-size: 2.25rem;
+            margin-bottom: 24px;
         }
 
         .about-text {
-            font-size: 18px;
-            color: var(--text-muted);
+            font-size: 1.15rem;
             line-height: 1.8;
-            margin-bottom: 30px;
-            text-align: center;
+            margin-bottom: 40px;
+            color: var(--text-muted);
         }
 
-        .founders-row {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 30px;
-            margin-top: 50px;
-        }
-
-        @media (min-width: 576px) {
-            .founders-row {
-                grid-template-columns: 1fr 1fr;
-            }
-        }
-
-        .founder-card {
-            background-color: var(--bg-warm);
-            padding: 30px;
-            border-radius: var(--border-radius);
-            text-align: center;
-            border: 1px solid rgba(46, 37, 98, 0.05);
-            box-shadow: var(--shadow);
-        }
-
-        .founder-card h4 {
-            font-size: 18px;
-            color: var(--primary);
-            margin-bottom: 6px;
-        }
-
-        .founder-card p {
-            font-size: 14px;
-            color: var(--accent);
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
-
-        /* Convênios (Insurances) */
-        .insurance-section {
-            background-color: var(--bg-warm);
-            border-top: 1px solid rgba(46, 37, 98, 0.05);
-            border-bottom: 1px solid rgba(46, 37, 98, 0.05);
-        }
-
-        .insurance-grid {
+        .about-leaders {
             display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin-top: 48px;
             flex-wrap: wrap;
+        }
+
+        .leader-card {
+            background-color: var(--bg);
+            padding: 24px 36px;
+            border-radius: 12px;
+            border-top: 3px solid var(--accent);
+            box-shadow: var(--shadow);
+            min-width: 280px;
+        }
+
+        .leader-card h4 {
+            font-size: 1.15rem;
+            color: var(--primary);
+            margin-bottom: 4px;
+        }
+
+        .leader-card span {
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--accent);
+            font-weight: 600;
+        }
+
+        /* Insurance Section (Convênios) */
+        .insurance-section {
+            padding: 80px 0;
+            background-color: #F3ECE2;
+            border-top: 1px solid rgba(46, 34, 98, 0.05);
+            text-align: center;
+        }
+
+        .insurance-section h3 {
+            font-size: 1.75rem;
+            margin-bottom: 12px;
+        }
+
+        .insurance-section p {
+            margin-bottom: 40px;
+        }
+
+        .insurance-logos {
+            display: flex;
             justify-content: center;
             align-items: center;
-            gap: 40px;
-            margin-top: 40px;
+            gap: 48px;
+            flex-wrap: wrap;
         }
 
         .insurance-logo-wrapper {
-            background: var(--white);
-            padding: 20px;
-            border-radius: var(--border-radius);
-            box-shadow: var(--shadow);
+            background-color: var(--white);
+            border-radius: 12px;
+            padding: 20px 32px;
             display: flex;
             align-items: center;
             justify-content: center;
-            width: 180px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.03);
+            border: 1px solid rgba(255, 255, 255, 0.8);
             height: 90px;
+            width: 180px;
         }
 
         .insurance-logo-wrapper img {
-            max-height: 100%;
             max-width: 100%;
+            max-height: 100%;
             object-fit: contain;
         }
 
-        /* Testimonials Section (Carousel Scroll-Snap) */
-        .testimonials-section {
+        /* Testimonials Section (Depoimentos REAIS) */
+        .testimonials {
+            padding: 100px 0;
             background-color: var(--white);
             overflow: hidden;
         }
 
-        .testimonials-grid {
-            display: flex;
-            overflow-x: auto;
-            scroll-snap-type: x mandatory;
-            gap: 20px;
-            padding: 20px 10px 40px;
-            scrollbar-width: none; /* Firefox */
+        .testimonials-slider {
+            position: relative;
+            width: 100%;
         }
 
-        .testimonials-grid::-webkit-scrollbar {
-            display: none; /* Chrome/Safari */
+        .testimonials-track {
+            display: flex;
+            gap: 24px;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            padding: 20px 10px;
+            scrollbar-width: thin;
+            scrollbar-color: var(--accent) transparent;
+        }
+
+        /* Webkit specific scroll bar optimization */
+        .testimonials-track::-webkit-scrollbar {
+            height: 6px;
+        }
+        .testimonials-track::-webkit-scrollbar-thumb {
+            background-color: var(--accent);
+            border-radius: 10px;
         }
 
         .testimonial-card {
-            flex: 0 0 85%;
-            scroll-snap-align: center;
-            background: var(--bg-warm);
+            flex: 0 0 100%;
+            scroll-snap-align: start;
+            background-color: var(--bg);
             border-radius: var(--border-radius);
-            padding: 30px;
+            padding: 40px;
             box-shadow: var(--shadow);
-            border-top: 4px solid var(--accent);
+            border: 1px solid rgba(46, 34, 98, 0.02);
             display: flex;
             flex-direction: column;
             justify-content: space-between;
         }
 
         @media (min-width: 768px) {
-            .testimonials-grid {
-                overflow-x: visible;
-                display: grid;
-                grid-template-columns: repeat(3, 1fr);
-                scroll-snap-type: none;
-                padding: 20px 0;
-            }
-
             .testimonial-card {
-                flex: none;
+                flex: 0 0 calc(50% - 12px);
             }
         }
 
-        .test-content {
+        @media (min-width: 1024px) {
+            .testimonial-card {
+                flex: 0 0 calc(33.333% - 16px);
+            }
+        }
+
+        .testimonial-body {
+            font-size: 1.05rem;
             font-style: italic;
             color: var(--text-muted);
-            font-size: 15px;
-            margin-bottom: 20px;
-            line-height: 1.6;
+            margin-bottom: 24px;
+            line-height: 1.7;
         }
 
-        .test-author {
+        .testimonial-footer {
             display: flex;
             align-items: center;
             gap: 12px;
+            border-top: 1px solid rgba(46, 34, 98, 0.06);
+            padding-top: 16px;
         }
 
-        .test-info h4 {
-            font-size: 15px;
+        .testimonial-author {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
             color: var(--primary);
-            margin-bottom: 2px;
+            font-size: 1rem;
         }
 
-        .test-info span {
-            font-size: 12px;
+        .testimonial-source {
+            font-size: 0.8rem;
             color: var(--accent);
-            font-weight: 700;
-        }
-
-        .carousel-tip {
-            text-align: center;
-            font-size: 13px;
-            color: var(--text-muted);
-            margin-top: -15px;
-            margin-bottom: 20px;
-        }
-
-        @media (min-width: 768px) {
-            .carousel-tip {
-                display: none;
-            }
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            display: block;
+            margin-top: 2px;
         }
 
         /* Final CTA Section */
-        .cta-final {
-            background: linear-gradient(135deg, var(--primary) 0%, #1c1542 100%);
+        .final-cta {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            padding: 100px 0;
             color: var(--white);
             text-align: center;
+            position: relative;
         }
 
-        .cta-final h2 {
+        .final-cta::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background-image: radial-gradient(circle at 20% 30%, rgba(201, 162, 39, 0.05) 0%, transparent 40%),
+                              radial-gradient(circle at 80% 70%, rgba(201, 162, 39, 0.05) 0%, transparent 40%);
+            pointer-events: none;
+        }
+
+        .final-cta-content {
+            max-width: 750px;
+            margin: 0 auto;
+        }
+
+        .final-cta h2 {
             color: var(--white);
-            font-size: 28px;
-            margin-bottom: 16px;
+            font-size: 2.5rem;
+            margin-bottom: 20px;
         }
 
-        @media (min-width: 768px) {
-            .cta-final h2 {
-                font-size: 38px;
-            }
-        }
-
-        .cta-final p {
+        .final-cta p {
             color: rgba(255, 255, 255, 0.85);
-            font-size: 16px;
-            max-width: 600px;
-            margin: 0 auto 30px;
+            font-size: 1.2rem;
+            margin-bottom: 40px;
         }
 
         /* Footer */
         footer {
-            background-color: var(--text-dark);
+            background-color: var(--primary-dark);
             color: rgba(255, 255, 255, 0.7);
-            padding: 60px 0 30px;
-            font-size: 14px;
+            padding: 80px 0 30px 0;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
         }
 
         .footer-grid {
             display: grid;
-            grid-template-columns: 1fr;
-            gap: 40px;
-            margin-bottom: 40px;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 48px;
+            margin-bottom: 60px;
         }
 
-        @media (min-width: 768px) {
-            .footer-grid {
-                grid-template-columns: 2fr 1fr 1.5fr;
-            }
+        .footer-logo img {
+            height: 54px;
+            margin-bottom: 24px;
         }
 
-        .footer-brand img {
-            height: 40px;
-            width: auto;
-            margin-bottom: 20px;
+        .footer-about p {
+            color: rgba(255, 255, 255, 0.65);
+            font-size: 0.95rem;
+            line-height: 1.7;
         }
 
-        .footer-brand p {
-            line-height: 1.6;
-            margin-bottom: 20px;
-        }
-
-        .footer-title {
+        .footer-col h4 {
             color: var(--white);
-            font-family: 'Montserrat', sans-serif;
-            font-size: 16px;
-            font-weight: 600;
-            margin-bottom: 20px;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
+            font-size: 1.15rem;
+            margin-bottom: 24px;
+            position: relative;
+            padding-bottom: 8px;
+        }
+
+        .footer-col h4::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 30px;
+            height: 2px;
+            background-color: var(--accent);
         }
 
         .footer-links {
@@ -781,269 +771,426 @@
         }
 
         .footer-links li {
-            margin-bottom: 12px;
+            margin-bottom: 14px;
+        }
+
+        .footer-links a {
+            color: rgba(255, 255, 255, 0.65);
+            font-size: 0.95rem;
         }
 
         .footer-links a:hover {
             color: var(--accent);
+            padding-left: 4px;
         }
 
-        .footer-contact p {
-            margin-bottom: 12px;
+        .footer-contact-list {
+            list-style: none;
+        }
+
+        .footer-contact-list li {
             display: flex;
             align-items: flex-start;
-            gap: 10px;
+            gap: 12px;
+            margin-bottom: 16px;
+            font-size: 0.95rem;
         }
 
-        .footer-contact a:hover {
+        .footer-contact-list svg {
+            width: 18px;
+            height: 18px;
+            fill: var(--accent);
+            flex-shrink: 0;
+            margin-top: 3px;
+        }
+
+        .footer-contact-list a {
+            color: rgba(255, 255, 255, 0.65);
+        }
+
+        .footer-contact-list a:hover {
             color: var(--accent);
-            text-decoration: underline;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 16px;
+            margin-top: 20px;
+        }
+
+        .social-link {
+            background-color: rgba(255, 255, 255, 0.05);
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: var(--transition);
+        }
+
+        .social-link svg {
+            width: 18px;
+            height: 18px;
+            fill: var(--white);
+        }
+
+        .social-link:hover {
+            background-color: var(--accent);
+            transform: translateY(-3px);
         }
 
         .footer-bottom {
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
             padding-top: 30px;
-            text-align: center;
-            font-size: 13px;
-        }
-
-        .tech-responsibles {
-            margin-top: 8px;
-            color: rgba(255, 255, 255, 0.4);
-        }
-
-        .social-icons-footer {
             display: flex;
-            gap: 15px;
-            margin-top: 15px;
-        }
-
-        .social-icons-footer a {
-            display: flex;
+            justify-content: space-between;
             align-items: center;
-            justify-content: center;
-            width: 36px;
-            height: 36px;
-            border-radius: 50%;
-            background: rgba(255, 255, 255, 0.08);
-            color: var(--white);
-            transition: var(--transition);
+            flex-wrap: wrap;
+            gap: 16px;
+            font-size: 0.85rem;
         }
 
-        .social-icons-footer a:hover {
-            background: var(--accent);
-            transform: translateY(-2px);
-        }
-
-        .social-icons-footer svg {
-            width: 18px;
-            height: 18px;
-            fill: currentColor;
-        }
-
-        /* Fixed WhatsApp Button */
-        .whatsapp-fixed {
+        /* Floating WhatsApp Button */
+        .whatsapp-float {
             position: fixed;
-            bottom: 24px;
-            right: 24px;
-            z-index: 999;
-            background-color: #25D366;
-            color: var(--white);
+            bottom: 30px;
+            right: 30px;
             width: 60px;
             height: 60px;
+            background-color: #25D366;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
+            z-index: 999;
             transition: var(--transition);
         }
 
-        .whatsapp-fixed:hover {
-            transform: scale(1.1);
-            background-color: #20BA5A;
+        .whatsapp-float svg {
+            width: 32px;
+            height: 32px;
+            fill: var(--white);
         }
 
-        .whatsapp-fixed svg {
-            width: 30px;
-            height: 30px;
-            fill: currentColor;
+        .whatsapp-float:hover {
+            transform: scale(1.1) translateY(-3px);
+            background-color: #128C7E;
+        }
+
+        /* Responsive Breakpoints (Mobile First) */
+        @media (max-width: 767px) {
+            header {
+                padding: 16px 0;
+                background: rgba(46, 34, 98, 0.95);
+                position: fixed;
+                box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            }
+
+            .menu-toggle-btn {
+                display: block;
+            }
+
+            .nav-menu {
+                position: fixed;
+                top: 80px;
+                left: 0;
+                width: 100%;
+                background-color: var(--primary);
+                flex-direction: column;
+                padding: 40px 24px;
+                gap: 24px;
+                height: 0;
+                opacity: 0;
+                visibility: hidden;
+                overflow: hidden;
+                transition: var(--transition);
+                box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+            }
+
+            /* Menu Toggle Logic (CSS Hack) */
+            .menu-toggle-input:checked ~ .nav-menu {
+                height: calc(100vh - 80px);
+                opacity: 1;
+                visibility: visible;
+            }
+
+            .menu-toggle-input:checked ~ .menu-toggle-btn svg path:nth-child(1) {
+                transform: rotate(45deg) translate(5px, 5px);
+            }
+            .menu-toggle-input:checked ~ .menu-toggle-btn svg path:nth-child(2) {
+                opacity: 0;
+            }
+            .menu-toggle-input:checked ~ .menu-toggle-btn svg path:nth-child(3) {
+                transform: rotate(-45deg) translate(7px, -6px);
+            }
+
+            .hero {
+                padding-top: 140px;
+                min-height: auto;
+            }
+
+            .hero-card {
+                padding: 24px;
+            }
+
+            .hero h1 {
+                font-size: 1.85rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+
+            .zigzag-block {
+                flex-direction: column !important;
+                gap: 32px;
+                margin-bottom: 60px;
+            }
+
+            .section-header h2 {
+                font-size: 1.75rem;
+            }
+
+            .zigzag-text-col h3 {
+                font-size: 1.45rem;
+            }
+
+            .about-leaders {
+                gap: 20px;
+            }
+
+            .leader-card {
+                width: 100%;
+            }
+
+            .footer-bottom {
+                flex-direction: column;
+                text-align: center;
+            }
         }
     </style>
 </head>
 <body>
 
-    <!-- Header -->
-    <header>
-        <div class="container nav-container">
-            <a href="#" class="logo">
+    <!-- Header Navigation -->
+    <header role="banner">
+        <div class="container">
+            <a href="#" class="logo" aria-label="Home Clínica Salutaire">
                 <img src="img/foto-7.png" alt="Clínica Salutaire">
             </a>
-            <ul class="nav-menu">
-                <li><a href="#" class="nav-link">Home</a></li>
-                <li><a href="#sobre" class="nav-link">Quem Somos</a></li>
-                <li><a href="#tratamentos" class="nav-link">Tratamentos</a></li>
-                <li><a href="#convenios" class="nav-link">Convênios</a></li>
-                <li><a href="#depoimentos" class="nav-link">Avaliações</a></li>
-                <li><a href="#contato" class="nav-link">Contato</a></li>
-            </ul>
+
+            <input type="checkbox" id="menu-toggle" class="menu-toggle-input" aria-hidden="true">
+            <label for="menu-toggle" class="menu-toggle-btn" aria-label="Abrir menu" role="button" aria-expanded="false">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round">
+                    <path d="M4 6h16"></path>
+                    <path d="M4 12h16"></path>
+                    <path d="M4 18h16"></path>
+                </svg>
+            </label>
+
+            <nav class="nav-menu" role="navigation" aria-label="Menu principal">
+                <a href="#tratamentos">Tratamentos</a>
+                <a href="#sobre">Quem Somos</a>
+                <a href="#convenios">Convênios</a>
+                <a href="#contato">Contato</a>
+                <a href="https://wa.me/5521988051154?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." class="btn btn-primary" style="padding: 10px 24px; font-size: 0.9rem;" aria-label="Agendar Consulta pelo WhatsApp">Agendar Consulta</a>
+            </nav>
         </div>
     </header>
 
-    <!-- Hero Section -->
-    <section class="hero">
+    <!-- Hero Section (Storytelling em Blocos) -->
+    <section class="hero" aria-label="Apresentação Clínica Salutaire">
         <div class="container">
             <div class="hero-card">
-                <h1 class="hero-title">A maior clínica de fisioterapia pélvica do Rio de Janeiro</h1>
-                <p class="hero-subtitle">Clínica Salutaire — Excelência, discrição e acolhimento em Fisioterapia Pélvica, Urologia e Sexualidade.</p>
-                
-                <div class="hero-banner-alert">
-                    <strong>Atenção:</strong> Já tentou tratar uma falha na ereção e não resolveu? Nossa abordagem multidisciplinar em Urologia e Fisioterapia Pélvica pode ser a resposta que você procura.
-                </div>
-
-                <a href="https://wa.me/5521988051154?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." class="btn btn-accent">
+                <span class="hero-tag">Clínica Salutaire</span>
+                <h1>A maior clínica de fisioterapia pélvica do Rio de Janeiro</h1>
+                <p>Já tentou tratar uma FALHA NA EREÇÃO E NÃO RESOLVEU? Nossa abordagem multidisciplinar em Fisioterapia Pélvica, Urologia e Sexualidade pode ser a resposta.</p>
+                <a href="https://wa.me/5521988051154?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." class="btn btn-primary" aria-label="Agendar Consulta pelo WhatsApp">
                     Agende sua Consulta
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                        <polyline points="12 5 19 12 12 19"></polyline>
+                    </svg>
                 </a>
             </div>
         </div>
     </section>
 
-    <!-- Social Proof Bar -->
-    <section class="social-proof-bar">
-        <div class="container proof-container">
-            <div class="proof-logo">Google Reviews</div>
-            <div class="google-stars">
-                <!-- Stars -->
-                <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
-                <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
-                <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
-                <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
-                <svg viewBox="0 0 24 24" style="opacity: 0.5;"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+    <!-- Social Proof Section -->
+    <section class="google-proof" aria-label="Avaliações do Google">
+        <div class="container">
+            <div class="google-badge">
+                <div class="google-icon">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/>
+                        <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/>
+                        <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z" fill="#FBBC05"/>
+                        <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z" fill="#EA4335"/>
+                    </svg>
+                </div>
+                <div>
+                    <div class="rating-stars" aria-label="Nota 4.5 estrelas">
+                        <!-- 5 Stars SVG -->
+                        <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                        <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                        <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                        <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                        <svg viewBox="0 0 24 24" style="fill: #E0E0E0;"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                    </div>
+                </div>
+                <div>
+                    <span class="rating-text">Nota 4.5 no Google</span>
+                    <span class="rating-sub">baseado em 55 avaliações auditadas</span>
+                </div>
             </div>
-            <div class="proof-text">Nota 4.5/5 com 55 avaliações reais auditadas</div>
         </div>
     </section>
 
-    <!-- Services / Differentials Section (Storytelling em Blocos - Alternados) -->
-    <section class="services-section section-padding" id="tratamentos">
+    <!-- Services Section (Storytelling em Blocos / Zig-Zag Layout) -->
+    <section class="services-zigzag" id="tratamentos">
         <div class="container">
-            <h2 class="section-title text-center">Tratamentos Especializados</h2>
-            
-            <!-- Block 1: Fisioterapia Pélvica -->
-            <div class="zigzag-row">
-                <div class="zigzag-col-img">
-                    <img src="img/foto-2.png" alt="Atendimento de Fisioterapia Pélvica">
+            <div class="section-header">
+                <h2>Nossos Tratamentos Especializados</h2>
+                <p>Abordagem multidisciplinar e focada no restabelecimento da sua qualidade de vida.</p>
+            </div>
+
+            <!-- Block 1: Fisioterapia Pélvica (Image Left, Text Right) -->
+            <div class="zigzag-block">
+                <div class="zigzag-img-col">
+                    <div class="zigzag-img-wrapper">
+                        <img src="img/foto-2.png" alt="Tratamento de Fisioterapia Pélvica" loading="lazy">
+                    </div>
                 </div>
-                <div class="zigzag-col-text">
-                    <span class="badge">Especialidade</span>
-                    <h3>Fisioterapia Pélvica</h3>
-                    <p class="zigzag-desc">Dedicada ao tratamento de disfunções dos músculos do assoalho pélvico, proporcionando reabilitação, alívio de sintomas e melhora expressiva na qualidade de vida.</p>
-                    <ul class="service-list">
-                        <li class="service-item">Incontinência urinária (Feminina & Masculina)</li>
-                        <li class="service-item">Incontinência fecal (Feminina & Masculina)</li>
-                        <li class="service-item">Constipação intestinal</li>
-                        <li class="service-item">Preparação completa pré e pós-parto</li>
-                        <li class="service-item">Disfunções sexuais femininas (Dispareunia, Vaginismo, Vulvodínia)</li>
+                <div class="zigzag-text-col">
+                    <span class="block-tag">Fisioterapia Pélvica</span>
+                    <h3>Saúde Íntima Feminina e Masculina</h3>
+                    <ul class="zigzag-list">
+                        <li>
+                            <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                            Incontinência Urinária Feminina e Masculina
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                            Incontinência Fecal e Constipação Intestinal
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                            Preparação Pré e Pós-parto
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                            Disfunções Sexuais Femininas (Dispaurenia, Vaginismo, Vulvodínia)
+                        </li>
                     </ul>
-                    <a href="https://wa.me/5521988051154?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." class="btn btn-outline">Consultar Especialista</a>
+                    <a href="https://wa.me/5521988051154?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." class="btn btn-primary" aria-label="Falar com especialista em Fisioterapia Pélvica">Agendar Minha Consulta</a>
                 </div>
             </div>
 
-            <!-- Block 2: Urologia / Andrologia -->
-            <div class="zigzag-row">
-                <div class="zigzag-col-img">
-                    <img src="img/foto-3.png" alt="Atendimento de Urologia e Andrologia">
+            <!-- Block 2: Urologia (Text Left, Image Right) -->
+            <div class="zigzag-block">
+                <div class="zigzag-img-col">
+                    <div class="zigzag-img-wrapper">
+                        <img src="img/foto-3.png" alt="Atendimento de Urologia" loading="lazy">
+                    </div>
                 </div>
-                <div class="zigzag-col-text">
-                    <span class="badge">Especialidade</span>
-                    <h3>Urologia & Andrologia</h3>
-                    <p class="zigzag-desc">Foco na saúde sexual e miccional masculina. Uma abordagem científica e atenta para diagnosticar e tratar problemas complexos com o máximo de discrição.</p>
-                    <ul class="service-list">
-                        <li class="service-item">Reabilitação sexual pós-prostatectomia</li>
-                        <li class="service-item">Tratamento avançado para disfunção erétil</li>
-                        <li class="service-item">Tratamento direcionado para ejaculação precoce</li>
-                        <li class="service-item">Tratamento e acompanhamento da andropausa</li>
-                        <li class="service-item">Aplicação de toxina botulínica para bexiga hiperativa</li>
-                        <li class="service-item">Exames de urodinâmica e Doppler peniano</li>
+                <div class="zigzag-text-col">
+                    <span class="block-tag">Urologia / Andrologia</span>
+                    <h3>Saúde Miccional e Sexual Masculina</h3>
+                    <ul class="zigzag-list">
+                        <li>
+                            <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                            Reabilitação Sexual Pós-prostatectomia
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                            Tratamentos Avançados para Disfunção Erétil e Ejaculação Precoce
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                            Tratamento de Andropausa e Bexiga Hiperativa (Toxina Botulínica)
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                            Exames de Urodinâmica e Doppler Peniano
+                        </li>
                     </ul>
-                    <a href="https://wa.me/5521988051154?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." class="btn btn-outline">Agendar uma Consulta</a>
+                    <a href="https://wa.me/5521988051154?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." class="btn btn-primary" aria-label="Falar com especialista em Urologia">Agendar Minha Consulta</a>
                 </div>
             </div>
-
         </div>
     </section>
 
-    <!-- Interactive Self-Assessment (Triagem Privada) -->
-    <section class="triagem-section section-padding">
+    <!-- Discrete Symptom Triage Section -->
+    <section class="triage-section" aria-label="Triagem Prévia de Sintomas">
         <div class="container">
-            <div class="triagem-card">
-                <h3>Autoavaliação de Sintomas Pélvicos & Urinários</h3>
-                <p>Identifique sua necessidade de forma 100% confidencial. Suas respostas não são salvas e o resultado é totalmente discreto.</p>
+            <div class="triage-card">
+                <h3>Orientação Prévia de Saúde</h3>
+                <p>Selecione abaixo o tema de seu interesse para obter uma resposta acolhedora de nossa equipe de forma rápida e totalmente discreta.</p>
                 
-                <!-- Step 1 -->
-                <div id="step-1" class="triagem-step active">
-                    <h4 style="color:var(--white); margin-bottom: 20px;">1. Qual é o foco da sua consulta hoje?</h4>
-                    <div class="triagem-options">
-                        <button class="triagem-btn" onclick="nextStep(2, 'Feminino')">Saúde Íntima Feminina / Preparação para o Parto</button>
-                        <button class="triagem-btn" onclick="nextStep(2, 'Masculino')">Saúde Íntima / Miccional Masculina</button>
-                        <button class="triagem-btn" onclick="nextStep(2, 'Outros')">Prevenção / Outras Opções</button>
-                    </div>
+                <div class="triage-grid">
+                    <label class="triage-option">
+                        <input type="checkbox" class="triage-input">
+                        <div class="triage-content">Incontinência Urinária</div>
+                    </label>
+                    <label class="triage-option">
+                        <input type="checkbox" class="triage-input">
+                        <div class="triage-content">Preparação de Parto</div>
+                    </label>
+                    <label class="triage-option">
+                        <input type="checkbox" class="triage-input">
+                        <div class="triage-content">Saúde Masculina</div>
+                    </label>
+                    <label class="triage-option">
+                        <input type="checkbox" class="triage-input">
+                        <div class="triage-content">Disfunção Sexual</div>
+                    </label>
                 </div>
 
-                <!-- Step 2 -->
-                <div id="step-2" class="triagem-step">
-                    <h4 style="color:var(--white); margin-bottom: 20px;">2. Qual desconforto mais afeta o seu dia a dia?</h4>
-                    <div class="triagem-options">
-                        <button class="triagem-btn" onclick="nextStep(3)">Perda involuntária de urina ou fezes</button>
-                        <button class="triagem-btn" onclick="nextStep(3)">Dores pélvicas ou incômodos na região íntima</button>
-                        <button class="triagem-btn" onclick="nextStep(3)">Dificuldade ou dor durante as relações sexuais</button>
-                        <button class="triagem-btn" onclick="nextStep(3)">Desejo de prevenção ou preparação gestacional</button>
-                    </div>
+                <div class="triage-feedback">
+                    <h4 style="color: var(--primary); margin-bottom: 8px;">Próximo passo recomendado:</h4>
+                    <p style="margin-bottom: 0; font-size: 0.95rem;">Um profissional de nossa equipe multidisciplinar pode avaliar detalhadamente as suas necessidades. Convidamos você a entrar em contato via WhatsApp para uma triagem acolhedora e agendamento seguro.</p>
                 </div>
 
-                <!-- Step 3 (Outcome Neutral) -->
-                <div id="step-3" class="triagem-step">
-                    <div class="result-box">
-                        <p><strong>Orientação Recomendada:</strong> A saúde pélvica e urológica envolve aspectos delicados que necessitam de uma avaliação diagnóstica individualizada por um profissional especializado.</p>
-                    </div>
-                    <p style="margin-bottom: 25px;">Nossos profissionais estão à disposição para entender o seu caso em um ambiente acolhedor e com absoluto sigilo profissional. Fale diretamente com a nossa equipe especializada.</p>
-                    <a href="https://wa.me/5521988051154?text=Ol%C3%A1!%20Fiz%20a%20autoavalia%C3%A7%C3%A3o%20no%20site%20e%20gostaria%20de%20agendar%20um%20acolhimento." class="btn btn-accent">Falar com Especialista</a>
-                </div>
+                <a href="https://wa.me/5521988051154?text=Ol%C3%A1!%20Gostaria%20de%20receber%20orientações%20personalizadas%20sobre%20meu%20caso." class="btn btn-whatsapp" aria-label="Falar pelo WhatsApp">
+                    <svg viewBox="0 0 24 24"><path d="M12.012 2c-5.506 0-9.989 4.478-9.99 9.984a9.96 9.96 0 0 0 1.335 4.963L2 22l5.233-1.371a9.936 9.936 0 0 0 4.779 1.218h.004c5.502 0 9.985-4.479 9.986-9.986a9.94 9.94 0 0 0-2.926-7.062A9.94 9.94 0 0 0 12.012 2zm5.834 14.17c-.244.686-1.42 1.258-1.95 1.314-.49.052-.976.246-3.138-.603-2.766-1.084-4.537-3.905-4.675-4.087-.138-.181-1.12-1.492-1.12-2.846 0-1.354.71-2.016.963-2.288.252-.272.553-.34.737-.34h.527c.168 0 .393-.063.614.47.227.546.776 1.895.843 2.03.067.137.112.296.02.48-.092.185-.14.3-.277.462-.138.16-.29.359-.415.482-.138.136-.283.284-.122.56.162.277.72 1.185 1.543 1.916.822.73 1.517.954 1.733 1.046.216.09.34.077.466-.067.125-.146.537-.626.68-.838.143-.213.286-.18.482-.107.197.073 1.248.588 1.463.696.215.109.359.163.412.256.053.092.053.535-.19 1.22z"/></svg>
+                    Falar com Atendimento
+                </a>
             </div>
         </div>
     </section>
 
-    <!-- About Section (Quem Somos) -->
-    <section class="about-section section-padding" id="sobre">
+    <!-- Quem Somos (About) Section -->
+    <section class="about-section" id="sobre">
         <div class="container">
-            <div class="about-wrapper">
-                <span class="badge" style="display: table; margin: 0 auto 16px;">Nossa Origem</span>
-                <h2 class="section-title text-center">Clínica Salutaire</h2>
+            <div class="about-content">
+                <span class="block-tag" style="margin-bottom: 16px;">Quem Somos</span>
+                <h2>Sinergia Perfeita Para o Seu Bem-Estar</h2>
                 <p class="about-text">
-                    A Clínica SALUTAIRE nasceu da união de duas áreas extremamente harmônicas. De um lado a Urologia, com destaque nas disfunções miccionais e sexuais masculinas, e de outro a Fisioterapia Pélvica, que bem como a Urologia, cuida de homens e mulheres com incontinência urinária e cada vez mais se mostra como grande aliada no tratamento das disfunções sexuais femininas.
+                    A Clínica SALUTAIRE nasceu da união de duas áreas harmônicas. De um lado a Urologia, com destaque nas disfunções miccionais e sexuais masculinas, e de outro a Fisioterapia Pélvica, que cuida de homens e mulheres com incontinência urinária e cada vez mais se mostra como grande aliada no tratamento das disfunções sexuais femininas.
                 </p>
                 
-                <div class="founders-row">
-                    <div class="founder-card">
+                <div class="about-leaders">
+                    <div class="leader-card">
                         <h4>Drª Mônica Lopes</h4>
-                        <p>Fisioterapia Pélvica</p>
+                        <span>Responsável Técnica</span>
                     </div>
-                    <div class="founder-card">
+                    <div class="leader-card">
                         <h4>Dr. Francisco Coutinho</h4>
-                        <p>Urologia / Andrologia</p>
+                        <span>Responsável Técnico</span>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Convênios Section -->
-    <section class="insurance-section section-padding" id="convenios">
-        <div class="container text-center">
-            <span class="badge">Facilidades</span>
-            <h2 class="section-title">Convênios Aceitos</h2>
-            <p style="color: var(--text-muted); max-width: 600px; margin: 0 auto 30px;">Aceitamos diversos planos de saúde para garantir o seu acesso ao melhor tratamento com toda a conveniência.</p>
-            <div class="insurance-grid">
+    <!-- Insurance Section (Convênios) -->
+    <section class="insurance-section" id="convenios">
+        <div class="container">
+            <h3>Convênios Atendidos</h3>
+            <p class="text-muted">Consulte sua operadora para informações de cobertura em nossa clínica.</p>
+            <div class="insurance-logos">
                 <div class="insurance-logo-wrapper">
                     <img src="img/foto-6.png" alt="Convênio Caberj" loading="lazy">
                 </div>
@@ -1058,98 +1205,92 @@
     </section>
 
     <!-- Testimonials Section -->
-    <section class="testimonials-section section-padding" id="depoimentos">
+    <section class="testimonials" aria-label="Depoimentos de Clientes">
         <div class="container">
-            <span class="badge" style="display: table; margin: 0 auto 16px;">Depoimentos</span>
-            <h2 class="section-title text-center">A voz dos nossos pacientes</h2>
+            <div class="section-header">
+                <h2>A Opinião dos Nossos Pacientes</h2>
+                <p>Histórias reais de quem recuperou a qualidade de vida conosco.</p>
+            </div>
             
-            <p class="carousel-tip">Arraste para os lados para ler mais ➜</p>
-            
-            <div class="testimonials-grid">
-                <!-- Testimonial 1 -->
-                <div class="testimonial-card">
-                    <p class="test-content">"Dr. Mônica altamente profissional e sua equipe muito eficiente e prestativa."</p>
-                    <div class="test-author">
-                        <div class="test-info">
-                            <h4>Paulo Bragatto</h4>
-                            <span>Google Review</span>
+            <div class="testimonials-slider">
+                <div class="testimonials-track">
+                    <div class="testimonial-card">
+                        <p class="testimonial-body">"Dr. Mônica altamente profissional e sua equipe muito eficiente e prestativa."</p>
+                        <div class="testimonial-footer">
+                            <div>
+                                <span class="testimonial-author">Paulo Bragatto</span>
+                                <span class="testimonial-source">Google Avaliações</span>
+                            </div>
                         </div>
                     </div>
-                </div>
 
-                <!-- Testimonial 2 -->
-                <div class="testimonial-card">
-                    <p class="test-content">"Quero agradecer a Dra. Monica pelo trato cuidadoso e profissional durante o meu tratamento. A clinica como um todo me fez sentir bem e consequentemente senti confiança. Recomendo a Dra. Monica sem dúvida ela irá fazer o possível para conseguir o melhor tratamento e resultado final."</p>
-                    <div class="test-author">
-                        <div class="test-info">
-                            <h4>Zamira Froio</h4>
-                            <span>Google Review</span>
+                    <div class="testimonial-card">
+                        <p class="testimonial-body">"Quero agradecer a Dra. Monica pelo trato cuidadoso e profissional durante o meu tratamento. A clinica como um todo me fez sentir bem e consequentemente senti confiança. Recomendo a Dra. Monica sem dúvida ela irá fazer o possível para conseguir o melhor tratamento e resultado final."</p>
+                        <div class="testimonial-footer">
+                            <div>
+                                <span class="testimonial-author">Zamira Froio</span>
+                                <span class="testimonial-source">Google Avaliações</span>
+                            </div>
                         </div>
                     </div>
-                </div>
 
-                <!-- Testimonial 3 -->
-                <div class="testimonial-card">
-                    <p class="test-content">"Excelente Profissional Michele, muito dedicada e preparada para atender bem os pacientes. Fui premiada🥰 Me chamo Tania Moreira da Silva"</p>
-                    <div class="test-author">
-                        <div class="test-info">
-                            <h4>Tania Moreira da Silva</h4>
-                            <span>Google Review</span>
+                    <div class="testimonial-card">
+                        <p class="testimonial-body">"Excelente Profissional Michele, muito dedicada e preparada para atender bem os pacientes. Fui premiada🥰 Me chamo Tania Moreira da Silva"</p>
+                        <div class="testimonial-footer">
+                            <div>
+                                <span class="testimonial-author">Tania Moreira da Silva</span>
+                                <span class="testimonial-source">Google Avaliações</span>
+                            </div>
                         </div>
                     </div>
-                </div>
 
-                <!-- Testimonial 4 -->
-                <div class="testimonial-card">
-                    <p class="test-content">"Mônica fez meu atendimento de preparação para o parto sempre muito atenciosa e carinhosa. Profissional super competente e humana, recomendo muito!"</p>
-                    <div class="test-author">
-                        <div class="test-info">
-                            <h4>Camila Ribeiro Lima</h4>
-                            <span>Google Review</span>
+                    <div class="testimonial-card">
+                        <p class="testimonial-body">"Mônica fez meu atendimento de preparação para o parto sempre muito atenciosa e carinhosa. Profissional super competente e humana, recomendo muito!"</p>
+                        <div class="testimonial-footer">
+                            <div>
+                                <span class="testimonial-author">Camila Ribeiro Lima</span>
+                                <span class="testimonial-source">Google Avaliações</span>
+                            </div>
                         </div>
                     </div>
-                </div>
 
-                <!-- Testimonial 5 -->
-                <div class="testimonial-card">
-                    <p class="test-content">"Clínica com ótimos profissionais e atendimento cordial. Destaque para a Dra. Monica Lopes que é super competente e atualizada no que faz, além de ser uma pessoa incrível. Traz segurança para o seu tratamento com todo carinho e atenção! Super recomendo."</p>
-                    <div class="test-author">
-                        <div class="test-info">
-                            <h4>Carolina Mascarenhas</h4>
-                            <span>Google Review</span>
+                    <div class="testimonial-card">
+                        <p class="testimonial-body">"Clínica com ótimos profissionais e atendimento cordial. Destaque para a Dra. Monica Lopes que é super competente e atualizada no que faz, além de ser uma pessoa incrível. Traz segurança para o seu tratamento com todo carinho e atenção! Super recomendo."</p>
+                        <div class="testimonial-footer">
+                            <div>
+                                <span class="testimonial-author">Carolina Mascarenhas</span>
+                                <span class="testimonial-source">Google Avaliações</span>
+                            </div>
                         </div>
                     </div>
-                </div>
 
-                <!-- Testimonial 6 -->
-                <div class="testimonial-card">
-                    <p class="test-content">"Excelente clinica! Me cuido la ha 7 anos! Impecaveis! Dra monica maravilhosa cuidou de mim durante minhas duas gestações! E seguimos os cuidados no pós gestacao!"</p>
-                    <div class="test-author">
-                        <div class="test-info">
-                            <h4>Luciana Diniz</h4>
-                            <span>Google Review</span>
+                    <div class="testimonial-card">
+                        <p class="testimonial-body">"Excelente clinica! Me cuido la ha 7 anos! Impecaveis! Dra monica maravilhosa cuidou de mim durante minhas duas gestações! E seguimos os cuidados no pós gestacao!"</p>
+                        <div class="testimonial-footer">
+                            <div>
+                                <span class="testimonial-author">Luciana Diniz</span>
+                                <span class="testimonial-source">Google Avaliações</span>
+                            </div>
                         </div>
                     </div>
-                </div>
 
-                <!-- Testimonial 7 -->
-                <div class="testimonial-card">
-                    <p class="test-content">"Excelente atendimento, ambiente Top, pontualidade, super indico!!!👏"</p>
-                    <div class="test-author">
-                        <div class="test-info">
-                            <h4>Kaysa Sarmanho</h4>
-                            <span>Google Review</span>
+                    <div class="testimonial-card">
+                        <p class="testimonial-body">"Excelente atendimento, ambiente Top, pontualidade, super indico!!!👏"</p>
+                        <div class="testimonial-footer">
+                            <div>
+                                <span class="testimonial-author">Kaysa Sarmanho</span>
+                                <span class="testimonial-source">Google Avaliações</span>
+                            </div>
                         </div>
                     </div>
-                </div>
 
-                <!-- Testimonial 8 -->
-                <div class="testimonial-card">
-                    <p class="test-content">"Excelente atendimento, ambiente agradável e confortável. E profissionais muito competentes."</p>
-                    <div class="test-author">
-                        <div class="test-info">
-                            <h4>Fatima Sarmanho</h4>
-                            <span>Google Review</span>
+                    <div class="testimonial-card">
+                        <p class="testimonial-body">"Excelente atendimento, ambiente agradável e confortável. E profissionais muito competentes."</p>
+                        <div class="testimonial-footer">
+                            <div>
+                                <span class="testimonial-author">Fatima Sarmanho</span>
+                                <span class="testimonial-source">Google Avaliações</span>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -1158,79 +1299,87 @@
     </section>
 
     <!-- Final CTA Section -->
-    <section class="cta-final section-padding">
+    <section class="final-cta">
         <div class="container">
-            <h2>Cuide da sua saúde pélvica e íntima com especialistas</h2>
-            <p>Escolha um acolhimento humanizado, profissional e científico. Estamos prontos para ajudar você a reconquistar o controle e o conforto da sua rotina.</p>
-            <a href="https://wa.me/5521988051154?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." class="btn btn-accent">Agende seu Acolhimento</a>
+            <div class="final-cta-content">
+                <h2>Pronto para recuperar o seu bem-estar?</h2>
+                <p>Nossa equipe de especialistas altamente capacitados está pronta para te atender de forma acolhedora, discreta e altamente profissional.</p>
+                <a href="https://wa.me/5521988051154?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." class="btn btn-primary" aria-label="Agendar Consulta pelo WhatsApp">
+                    Fale Conosco no WhatsApp
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                        <polyline points="12 5 19 12 12 19"></polyline>
+                    </svg>
+                </a>
+            </div>
         </div>
     </section>
 
     <!-- Footer -->
     <footer id="contato">
-        <div class="container footer-grid">
-            <div class="footer-brand">
-                <img src="img/foto-7.png" alt="Clínica Salutaire" loading="lazy">
-                <p>Nossa missão é unir a excelência da Urologia e da Fisioterapia Pélvica para oferecer saúde, qualidade de vida e restabelecimento seguro aos nossos pacientes.</p>
-                <div class="social-icons-footer">
-                    <a href="https://www.instagram.com/clinica.salutaire" target="_blank" aria-label="Instagram">
-                        <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.051.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
-                    </a>
-                    <a href="https://www.youtube.com/channel/UCe-7kpJXAoErXkIe7lv3POA" target="_blank" aria-label="YouTube">
-                        <svg viewBox="0 0 24 24"><path d="M23.498 6.163a3.003 3.003 0 0 0-2.11-2.11C19.518 3.545 12 3.545 12 3.545s-7.518 0-9.388.508a3.003 3.003 0 0 0-2.11 2.11C0 8.033 0 12 0 12s0 3.967.502 5.837a3.003 3.003 0 0 0 2.11 2.11c1.87.508 9.388.508 9.388.508s7.518 0 9.388-.508a3.003 3.003 0 0 0 2.11-2.11C24 15.967 24 12 24 12s0-3.967-.502-5.837zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
-                    </a>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col footer-about">
+                    <div class="footer-logo">
+                        <img src="img/foto-7.png" alt="Clínica Salutaire">
+                    </div>
+                    <p>Referência em Urologia, Fisioterapia Pélvica e Sexualidade no Rio de Janeiro. Cuidado qualificado e atendimento seguro.</p>
+                    <div class="social-links">
+                        <a href="https://www.instagram.com/clinica.salutaire" class="social-link" aria-label="Instagram da Clínica Salutaire">
+                            <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.051.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
+                        </a>
+                        <a href="https://www.youtube.com/channel/UCe-7kpJXAoErXkIe7lv3POA" class="social-link" aria-label="YouTube da Clínica Salutaire">
+                            <svg viewBox="0 0 24 24"><path d="M23.498 6.163a3.003 3.003 0 0 0-2.11-2.11C19.518 3.545 12 3.545 12 3.545s-7.517 0-9.388.508a3.003 3.003 0 0 0-2.11 2.11C0 8.033 0 12 0 12s0 3.967.502 5.837a3.003 3.003 0 0 0 2.11 2.11c1.871.507 9.388.507 9.388.507s7.518 0 9.388-.507a3.003 3.003 0 0 0 2.11-2.11C24 15.967 24 12 24 12s0-3.967-.502-5.837zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Navegação</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#tratamentos">Tratamentos</a></li>
+                        <li><a href="#sobre">Quem Somos</a></li>
+                        <li><a href="#convenios">Convênios</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Contatos</h4>
+                    <ul class="footer-contact-list">
+                        <li>
+                            <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+                            <span>Av. Nossa Sra. de Copacabana, Nº 788 - Consultório 505<br>Copacabana - Rio de Janeiro/RJ</span>
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24"><path d="M6.62 10.79a15.15 15.15 0 0 0 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+                            <div>
+                                <a href="tel:+552125457352">(21) 2545-7352</a><br>
+                                <a href="tel:+552136477352">(21) 3647-7352</a><br>
+                                <a href="tel:+5521988051154">(21) 98805-1154</a>
+                            </div>
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+                            <a href="mailto:c.salutaire@gmail.com">c.salutaire@gmail.com</a>
+                        </li>
+                    </ul>
                 </div>
             </div>
-            
-            <div>
-                <h4 class="footer-title">Navegação</h4>
-                <ul class="footer-links">
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#sobre">Quem Somos</a></li>
-                    <li><a href="#tratamentos">Tratamentos</a></li>
-                    <li><a href="#convenios">Convênios</a></li>
-                    <li><a href="#depoimentos">Avaliações</a></li>
-                </ul>
-            </div>
 
-            <div class="footer-contact">
-                <h4 class="footer-title">Contatos</h4>
-                <p><strong>Telefone:</strong> <a href="tel:+552125457352">(21) 2545-7352</a></p>
-                <p><strong>Telefone:</strong> <a href="tel:+552136477352">(21) 3647-7352</a></p>
-                <p><strong>WhatsApp:</strong> <a href="tel:+5521988051154">(21) 98805-1154</a></p>
-                <p><strong>E-mail:</strong> <a href="mailto:c.salutaire@gmail.com">c.salutaire@gmail.com</a></p>
-                <p><strong>Endereço:</strong> Av. Nossa Sra. de Copacabana, Nº 788, Consultório 505 - Copacabana, Rio de Janeiro/RJ</p>
-            </div>
-        </div>
-
-        <div class="footer-bottom">
-            <div class="container">
+            <div class="footer-bottom">
                 <p>&copy; 2026 Clínica Salutaire. Todos os direitos reservados.</p>
-                <p class="tech-responsibles">Responsáveis técnicos: Mônica Lopes e Francisco Coutinho</p>
+                <p>Responsáveis Técnicos: Drª Mônica Lopes & Dr. Francisco Coutinho</p>
             </div>
         </div>
     </footer>
 
-    <!-- WhatsApp Fixed Button -->
-    <a href="https://wa.me/5521988051154?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." class="whatsapp-fixed" target="_blank" aria-label="Fale conosco no WhatsApp">
+    <!-- Fixed Floating WhatsApp Button -->
+    <a href="https://wa.me/5521988051154?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." class="whatsapp-float" target="_blank" aria-label="Fale conosco pelo WhatsApp">
         <svg viewBox="0 0 24 24">
-            <path d="M12.012 2c-5.506 0-9.989 4.478-9.99 9.984a9.96 9.96 0 0 0 1.335 4.978L2 22l5.177-1.356a9.95 9.95 0 0 0 4.83 1.254h.005c5.507 0 9.991-4.479 9.992-9.985A9.99 9.99 0 0 0 12.012 2zm5.835 14.16c-.242.684-1.42 1.336-1.95 1.422-.483.078-.971.116-2.906-.65-2.479-.981-4.072-3.504-4.195-3.668-.124-.165-1.007-1.343-1.007-2.558 0-1.215.637-1.81.863-2.057.227-.247.495-.31.66-.31.165 0 .33.003.475.01.15.006.353-.058.552.422.203.492.695 1.696.755 1.821.06.124.1.268.017.433-.082.164-.124.268-.247.412-.124.144-.26.324-.37.437-.125.124-.254.26-.11.51.145.247.643 1.058 1.38 1.714.95.845 1.752 1.107 2.002 1.23.25.124.397.103.546-.07.15-.174.643-.746.815-1.002.174-.256.347-.214.585-.124.24.088 1.517.715 1.777.845.26.13.43.195.495.31.065.113.065.653-.177 1.336z"/>
+            <path d="M12.012 2c-5.506 0-9.989 4.478-9.99 9.984a9.96 9.96 0 0 0 1.335 4.963L2 22l5.233-1.371a9.936 9.936 0 0 0 4.779 1.218h.004c5.502 0 9.985-4.479 9.986-9.986a9.94 9.94 0 0 0-2.926-7.062A9.94 9.94 0 0 0 12.012 2zm5.834 14.17c-.244.686-1.42 1.258-1.95 1.314-.49.052-.976.246-3.138-.603-2.766-1.084-4.537-3.905-4.675-4.087-.138-.181-1.12-1.492-1.12-2.846 0-1.354.71-2.016.963-2.288.252-.272.553-.34.737-.34h.527c.168 0 .393-.063.614.47.227.546.776 1.895.843 2.03.067.137.112.296.02.48-.092.185-.14.3-.277.462-.138.16-.29.359-.415.482-.138.136-.283.284-.122.56.162.277.72 1.185 1.543 1.916.822.73 1.517.954 1.733 1.046.216.09.34.077.466-.067.125-.146.537-.626.68-.838.143-.213.286-.18.482-.107.197.073 1.248.588 1.463.696.215.109.359.163.412.256.053.092.053.535-.19 1.22z"/>
         </svg>
     </a>
 
-    <!-- Interactive Script -->
-    <script>
-        function nextStep(step, val) {
-            // Hide all steps
-            const steps = document.querySelectorAll('.triagem-step');
-            steps.forEach(s => s.classList.remove('active'));
-
-            // Show targets
-            const target = document.getElementById('step-' + step);
-            if (target) {
-                target.classList.add('active');
-            }
-        }
-    </script>
 <div style="position:fixed;bottom:18px;left:50%;transform:translateX(-50%);z-index:2147483647;background:rgba(255,255,255,0.96);border-radius:999px;padding:10px 22px 10px 12px;box-shadow:0 6px 20px rgba(0,0,0,0.22);display:flex;align-items:center;gap:9px;font-family:Inter,-apple-system,sans-serif;"><img src="https://rd-previews-dharari01s-projects.vercel.app/_assets/logo-rd-exclusive.png" alt="RD Exclusive" style="height:26px;width:auto;display:block;"><span style="font-size:14px;font-weight:700;color:#1A1A1A;white-space:nowrap;">Protótipo por RD Exclusive</span></div></body>
 </html>
