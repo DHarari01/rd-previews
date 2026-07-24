@@ -3,53 +3,64 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Clínica Salutaire - Fisioterapia Pélvica, Urologia e Sexualidade no Rio de Janeiro</title>
-    <meta name="description" content="Referência em Fisioterapia Pélvica e Urologia no Rio de Janeiro. Tratamento humanizado para incontinência urinária, preparação para o parto e disfunções sexuais.">
+    <title>Fisioterapia Pélvica e Urologia RJ | Clínica Salutaire</title>
+    <meta name="description" content="A maior clínica de fisioterapia pélvica do Rio de Janeiro. Especialistas em urologia, saúde íntima e sexualidade para homens e mulheres.">
     
-    <link rel="preconnect" href="https://salutaire.com.br">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
-    
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20100%20100%22%3E%3Crect%20width=%22100%22%20height=%22100%22%20rx=%2220%22%20fill=%22%232E2261%22/%3E%3Ctext%20x=%2250%22%20y=%2265%22%20font-size=%2255%22%20font-family=%22Georgia,serif%22%20fill=%22%23C9A227%22%20text-anchor=%22middle%22%3ES%3C/text%3E%3C/svg%3E">
-    
-    <meta property="og:title" content="Clínica Salutaire - Fisioterapia Pélvica, Urologia e Sexualidade no Rio de Janeiro">
-    <meta property="og:description" content="Referência em Fisioterapia Pélvica e Urologia no Rio de Janeiro. Tratamento humanizado para incontinência urinária, preparação para o parto e disfunções sexuais.">
+    <!-- Open Graph Metadata -->
+    <meta property="og:title" content="Fisioterapia Pélvica e Urologia RJ | Clínica Salutaire">
+    <meta property="og:description" content="A maior clínica de fisioterapia pélvica do Rio de Janeiro. Especialistas em urologia, saúde íntima e sexualidade para homens e mulheres.">
     <meta property="og:image" content="https://rd-previews-dharari01s-projects.vercel.app/fisioterapia-pelvica---clinica-salutaire/img/foto-1.png">
+    <meta property="og:type" content="website">
+    
+    <!-- Performance Preconnect -->
+    <link rel="preconnect" href="https://salutaire.com.br">
+    
+    <!-- Embedded SVG Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20xmlns=%22http%20%3A//www.w3.org/2000/svg%22%20viewBox=%220%200%20100%20100%22%3E%3Ccircle%20cx=%2250%22%20cy=%2250%22%20r=%2250%22%20fill=%22%232E245E%22/%3E%3Ctext%20x=%2250%25%22%20y=%2255%25%22%20font-size=%2240%22%20font-weight=%22bold%22%20font-family=%22sans-serif%22%20fill=%22%23C9A227%22%20text-anchor=%22middle%22%20dominant-baseline=%22middle%22%3ECS%3C/text%3E%3C/svg%3E">
     
     <style>
+        /* Google Fonts Import */
+        @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,400&family=Montserrat:wght@400;500;600;700;800&display=swap');
+
+        /* Design System Variables */
         :root {
-            --primary: #2E2261;
+            --primary: #2E245E;
             --accent: #C9A227;
             --bg: #FAF7F2;
             --text: #1A1A1A;
             --white: #FFFFFF;
             --gray-light: #EFECE6;
-            --sans: 'Montserrat', sans-serif;
-            --serif: 'Playfair Display', Georgia, serif;
-            --shadow: 0 10px 30px rgba(46, 34, 97, 0.05);
-            --transition: all 0.3s ease;
+            --shadow: 0 10px 30px rgba(46, 36, 94, 0.06);
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            --font-title: 'Montserrat', sans-serif;
+            --font-body: 'Lato', sans-serif;
         }
 
-        * {
+        /* Base & Reset */
+        *, *::before, *::after {
             box-sizing: border-box;
             margin: 0;
             padding: 0;
         }
 
+        html {
+            scroll-behavior: smooth;
+            -webkit-text-size-adjust: 100%;
+        }
+
         body {
-            font-family: var(--sans);
+            font-family: var(--font-body);
             background-color: var(--bg);
             color: var(--text);
             line-height: 1.6;
             overflow-x: hidden;
-            -webkit-font-smoothing: antialiased;
         }
 
         h1, h2, h3, h4 {
-            font-family: var(--serif);
+            font-family: var(--font-title);
             color: var(--primary);
-            font-weight: 600;
+            font-weight: 700;
+            line-height: 1.2;
         }
 
         a {
@@ -68,107 +79,131 @@
             width: 100%;
             max-width: 1200px;
             margin: 0 auto;
-            padding: 0 24px;
+            padding: 0 1.5rem;
         }
 
+        /* Buttons & CTAs */
         .btn {
             display: inline-flex;
             align-items: center;
             justify-content: center;
-            gap: 12px;
+            gap: 0.5rem;
             background-color: var(--accent);
             color: var(--white);
-            padding: 16px 36px;
-            border-radius: 50px;
-            font-size: 0.95rem;
+            font-family: var(--font-title);
             font-weight: 600;
-            letter-spacing: 0.5px;
-            border: 2px solid transparent;
-            cursor: pointer;
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            box-shadow: 0 4px 15px rgba(201, 162, 39, 0.3);
             transition: var(--transition);
-            box-shadow: 0 4px 15px rgba(201, 162, 39, 0.2);
+            border: none;
+            cursor: pointer;
         }
 
         .btn:hover {
-            background-color: var(--primary);
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(46, 34, 97, 0.25);
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(201, 162, 39, 0.5);
+            background-color: #bfa025;
         }
 
         .btn-outline {
             background-color: transparent;
-            border: 2px solid var(--accent);
-            color: var(--accent);
+            color: var(--primary);
+            border: 2px solid var(--primary);
             box-shadow: none;
         }
 
         .btn-outline:hover {
-            background-color: var(--accent);
+            background-color: var(--primary);
             color: var(--white);
+            transform: translateY(-3px);
         }
 
-        /* HEADER */
-        header {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            z-index: 100;
-            padding: 24px 0;
-        }
-
-        header .container {
+        /* Floating WhatsApp */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            background-color: #25D366;
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
             display: flex;
             align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+            z-index: 1000;
+            transition: var(--transition);
+        }
+
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+        }
+
+        /* Header Navigation */
+        .header {
+            position: sticky;
+            top: 0;
+            background-color: rgba(250, 247, 242, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 999;
+            box-shadow: 0 2px 20px rgba(46, 36, 94, 0.05);
+            border-bottom: 1px solid rgba(46, 36, 94, 0.05);
+        }
+
+        .header-container {
+            display: flex;
             justify-content: space-between;
+            align-items: center;
+            height: 80px;
         }
 
         .logo img {
-            height: 48px;
+            height: 45px;
             width: auto;
+            filter: brightness(0) saturate(100%) invert(14%) sepia(35%) saturate(2250%) max-hue(260deg) brightness(95%) contrast(90%); /* Color filter matching primary brand color */
         }
 
-        /* MENU MOBILE HACK (NO JS) */
+        /* CSS-Only Mobile Menu Hack */
         .menu-toggle-input {
             position: absolute;
             opacity: 0;
-            width: 0;
-            height: 0;
+            pointer-events: none;
         }
 
         .menu-toggle-btn {
             display: none;
             cursor: pointer;
-            z-index: 101;
-            padding: 8px;
+            padding: 0.5rem;
+            z-index: 1001;
         }
 
         .menu-toggle-btn svg {
-            width: 28px;
-            height: 28px;
-            fill: var(--white);
-            transition: var(--transition);
+            width: 30px;
+            height: 30px;
+            fill: var(--primary);
         }
 
         .nav-menu {
             display: flex;
+            gap: 2rem;
             align-items: center;
-            gap: 32px;
+            list-style: none;
         }
 
-        .nav-menu a {
-            color: var(--white);
-            font-size: 0.9rem;
+        .nav-link {
+            font-family: var(--font-title);
             font-weight: 500;
-            letter-spacing: 0.5px;
+            font-size: 0.95rem;
+            color: var(--primary);
             position: relative;
-            opacity: 0.9;
         }
 
-        .nav-menu a::after {
+        .nav-link::after {
             content: '';
             position: absolute;
-            bottom: -6px;
+            bottom: -5px;
             left: 0;
             width: 0;
             height: 2px;
@@ -176,545 +211,698 @@
             transition: var(--transition);
         }
 
-        .nav-menu a:hover::after {
+        .nav-link:hover::after {
             width: 100%;
         }
 
-        .nav-menu a:hover {
-            opacity: 1;
-        }
-
-        /* HERO - Storytelling em Blocos Variant */
+        /* Hero Section (Variant: Storytelling em Blocos / Efeito Glass) */
         .hero {
             position: relative;
-            min-height: 95vh;
+            min-height: 85vh;
             display: flex;
             align-items: center;
-            background-image: linear-gradient(135deg, rgba(46, 34, 97, 0.85) 0%, rgba(46, 34, 97, 0.5) 100%), url('img/foto-1.png');
-            background-size: cover;
-            background-position: center;
-            padding: 160px 0 80px 0;
+            overflow: hidden;
+            padding: 4rem 0;
         }
 
-        .hero-glass-card {
-            background: rgba(46, 34, 97, 0.65);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-            border: 1px solid rgba(255, 255, 255, 0.15);
-            border-radius: 24px;
-            padding: 48px;
-            max-width: 680px;
-            color: var(--white);
-            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
-            animation: fadeIn 1s ease-out;
+        .hero-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: 1;
         }
 
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(46, 36, 94, 0.8) 0%, rgba(46, 36, 94, 0.4) 100%);
+            z-index: 2;
         }
 
-        .hero-glass-card h1 {
-            color: var(--white);
-            font-size: 2.8rem;
-            line-height: 1.2;
-            margin-bottom: 20px;
-        }
-
-        .hero-glass-card p {
-            font-size: 1.1rem;
-            opacity: 0.95;
-            margin-bottom: 32px;
-            font-weight: 300;
-        }
-
-        /* GOOGLE RATING BANNER */
-        .rating-banner {
-            background-color: var(--white);
-            padding: 24px 0;
-            border-bottom: 1px solid var(--gray-light);
-            box-shadow: var(--shadow);
+        .hero .container {
             position: relative;
-            z-index: 10;
+            z-index: 3;
+            display: flex;
+            justify-content: flex-start;
         }
 
-        .rating-container {
+        .hero-card {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            border-radius: 20px;
+            padding: 2.5rem;
+            max-width: 600px;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+        }
+
+        .hero-tag {
+            background-color: var(--primary);
+            color: var(--white);
+            display: inline-block;
+            padding: 0.3rem 1rem;
+            border-radius: 50px;
+            font-size: 0.75rem;
+            font-family: var(--font-title);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 1.5rem;
+        }
+
+        .hero h1 {
+            font-size: 2.2rem;
+            margin-bottom: 1rem;
+            color: var(--primary);
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+            color: var(--text);
+        }
+
+        /* Google Social Proof Bar */
+        .social-proof {
+            background-color: var(--primary);
+            color: var(--white);
+            padding: 1.5rem 0;
+            text-align: center;
+            border-bottom: 4px solid var(--accent);
+        }
+
+        .proof-container {
             display: flex;
+            flex-direction: column;
             align-items: center;
             justify-content: center;
-            flex-wrap: wrap;
-            gap: 24px;
-            text-align: center;
+            gap: 0.5rem;
         }
 
-        .stars {
+        @media (min-width: 768px) {
+            .proof-container {
+                flex-direction: row;
+                gap: 2rem;
+            }
+        }
+
+        .stars-container {
             display: flex;
-            gap: 4px;
+            gap: 0.2rem;
         }
 
-        .stars svg {
+        .stars-container svg {
             width: 20px;
             height: 20px;
             fill: var(--accent);
         }
 
-        .rating-text {
-            font-size: 1.05rem;
+        .proof-text {
+            font-family: var(--font-title);
+            font-size: 1.1rem;
             font-weight: 500;
-            color: var(--primary);
         }
 
-        /* SECTION COMMON */
-        section {
-            padding: 100px 0;
+        /* Triagem / Conversão Interativa */
+        .triagem {
+            padding: 6rem 0;
+            background-color: var(--bg);
         }
 
-        .section-title {
+        .section-header {
             text-align: center;
-            margin-bottom: 64px;
+            max-width: 700px;
+            margin: 0 auto 4rem;
         }
 
-        .section-title span {
-            font-family: var(--sans);
-            font-size: 0.85rem;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            color: var(--accent);
-            font-weight: 600;
-            display: block;
-            margin-bottom: 12px;
-        }
-
-        .section-title h2 {
+        .section-header h2 {
             font-size: 2.2rem;
-            position: relative;
-            padding-bottom: 20px;
+            margin-bottom: 1rem;
         }
 
-        .section-title h2::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 60px;
-            height: 2px;
-            background-color: var(--accent);
-        }
-
-        /* SERVICES - Storytelling em Blocos Variant */
-        .story-blocks {
-            display: flex;
-            flex-direction: column;
-            gap: 120px;
-        }
-
-        .story-block {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 64px;
-            align-items: center;
-        }
-
-        .story-block:nth-child(even) {
-            direction: rtl;
-        }
-
-        .story-block:nth-child(even) .block-content {
-            direction: ltr;
-        }
-
-        .block-image {
-            position: relative;
-            border-radius: 24px;
-            overflow: hidden;
-            box-shadow: var(--shadow);
-        }
-
-        .block-image img {
-            width: 100%;
-            height: 480px;
-            object-fit: cover;
-            transition: var(--transition);
-        }
-
-        .story-block:hover .block-image img {
-            transform: scale(1.03);
-        }
-
-        .block-content h3 {
-            font-size: 2rem;
-            margin-bottom: 24px;
-        }
-
-        .service-list {
-            list-style: none;
-            margin-bottom: 32px;
-        }
-
-        .service-list li {
-            position: relative;
-            padding-left: 28px;
-            margin-bottom: 14px;
-            font-weight: 400;
-            font-size: 1.05rem;
-        }
-
-        .service-list li svg {
-            position: absolute;
-            left: 0;
-            top: 4px;
-            width: 18px;
-            height: 18px;
-            fill: var(--accent);
-        }
-
-        /* AUTOAVALIAÇÃO DE SINTOMAS - Conversion Widget */
-        .triagem-section {
-            background-color: var(--primary);
-            color: var(--white);
-        }
-
-        .triagem-section .section-title h2 {
-            color: var(--white);
+        .section-header p {
+            font-size: 1.1rem;
+            color: rgba(26, 26, 26, 0.7);
         }
 
         .triagem-box {
-            background: rgba(255, 255, 255, 0.05);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: 24px;
-            padding: 48px;
+            background-color: var(--white);
+            border-radius: 20px;
+            box-shadow: var(--shadow);
+            padding: 2.5rem;
             max-width: 800px;
             margin: 0 auto;
         }
 
-        .triagem-intro {
-            text-align: center;
-            font-size: 1.1rem;
-            margin-bottom: 32px;
-            font-weight: 300;
-        }
-
-        .symptom-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 16px;
-            margin-bottom: 32px;
-        }
-
-        .symptom-label {
-            background: rgba(255, 255, 255, 0.03);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            padding: 16px 20px;
-            border-radius: 12px;
-            cursor: pointer;
+        .triagem-tabs-container {
             display: flex;
-            align-items: center;
-            gap: 12px;
-            font-size: 0.95rem;
-            transition: var(--transition);
+            justify-content: center;
+            gap: 1rem;
+            margin-bottom: 2rem;
+            border-bottom: 2px solid var(--gray-light);
+            padding-bottom: 1rem;
         }
 
-        .symptom-label:hover {
-            background: rgba(255, 255, 255, 0.08);
-            border-color: var(--accent);
-        }
-
-        .symptom-input {
-            appearance: none;
-            -webkit-appearance: none;
-            width: 20px;
-            height: 20px;
-            border: 2px solid rgba(255, 255, 255, 0.4);
-            border-radius: 4px;
+        .triagem-tab-label {
+            padding: 0.8rem 1.5rem;
+            font-family: var(--font-title);
+            font-weight: 600;
             cursor: pointer;
-            display: grid;
-            place-content: center;
+            border-radius: 8px;
             transition: var(--transition);
+            color: rgba(46, 36, 94, 0.6);
         }
 
-        .symptom-input:checked {
-            border-color: var(--accent);
-            background: var(--accent);
+        #tab-fem:checked ~ .triagem-tabs-container label[for="tab-fem"],
+        #tab-masc:checked ~ .triagem-tabs-container label[for="tab-masc"] {
+            background-color: var(--primary);
+            color: var(--white);
         }
 
-        .symptom-input:checked::before {
-            content: "";
-            width: 10px;
-            height: 10px;
-            transform: scale(1);
-            background: var(--white);
-            clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
-        }
-
-        .triagem-box button {
-            width: 100%;
-        }
-
-        .triagem-outcome {
+        .triagem-content {
             display: none;
-            margin-top: 32px;
-            padding-top: 32px;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        #tab-fem:checked ~ .triagem-panels #panel-fem,
+        #tab-masc:checked ~ .triagem-panels #panel-masc {
+            display: block;
+            animation: fadeIn 0.5s ease-in-out;
+        }
+
+        .triagem-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        @media (min-width: 600px) {
+            .triagem-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        .triagem-item {
+            background-color: var(--bg);
+            padding: 1rem;
+            border-radius: 10px;
+            border-left: 4px solid var(--accent);
+            font-weight: 500;
+            color: var(--primary);
+        }
+
+        .triagem-result {
             text-align: center;
-            animation: fadeIn 0.5s ease-out;
+            background-color: rgba(46, 36, 94, 0.03);
+            border: 1px dashed rgba(46, 36, 94, 0.2);
+            border-radius: 12px;
+            padding: 2rem;
         }
 
-        .triagem-outcome p {
-            font-size: 1.1rem;
-            margin-bottom: 24px;
-            font-weight: 300;
+        .triagem-result h4 {
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
         }
 
-        /* ABOUT SECTION */
-        .about-section {
+        .triagem-result p {
+            margin-bottom: 1.5rem;
+            font-size: 0.95rem;
+        }
+
+        /* Alternating Storytelling Blocks (Variant: Storytelling em Blocos) */
+        .story-blocks {
+            padding: 4rem 0;
             background-color: var(--white);
         }
 
-        .about-grid {
-            display: grid;
-            grid-template-columns: 1fr 1.2fr;
-            gap: 64px;
+        .block-row {
+            display: flex;
+            flex-direction: column;
+            gap: 3rem;
+            margin-bottom: 6rem;
             align-items: center;
         }
 
-        .about-text h3 {
-            font-size: 2rem;
-            margin-bottom: 24px;
-        }
-
-        .about-text p {
-            margin-bottom: 24px;
-            font-size: 1.05rem;
-            color: #4A4A4A;
-        }
-
-        .about-meta {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 24px;
-            margin-top: 32px;
-            border-top: 1px solid var(--gray-light);
-            padding-top: 32px;
-        }
-
-        .meta-item h4 {
-            font-size: 1.1rem;
-            margin-bottom: 8px;
-        }
-
-        .meta-item p {
-            font-size: 0.9rem;
+        .block-row:last-child {
             margin-bottom: 0;
         }
 
-        /* TESTIMONIALS SECTION (CSS Snap Slider) */
-        .testimonials-section {
+        .block-col-text {
+            flex: 1;
+        }
+
+        .block-col-img {
+            flex: 1;
+            width: 100%;
+        }
+
+        .block-image-wrapper {
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            aspect-ratio: 4/3;
+        }
+
+        .block-image-wrapper img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .block-row h3 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            position: relative;
+            padding-bottom: 0.5rem;
+        }
+
+        .block-row h3::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 60px;
+            height: 3px;
+            background-color: var(--accent);
+        }
+
+        .block-desc {
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+            color: rgba(26, 26, 26, 0.8);
+        }
+
+        .block-list {
+            list-style: none;
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 0.8rem;
+            margin-bottom: 2.5rem;
+        }
+
+        @media (min-width: 600px) {
+            .block-list {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        .block-list-item {
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+            font-size: 0.95rem;
+            font-weight: 500;
+        }
+
+        .block-list-item svg {
+            width: 18px;
+            height: 18px;
+            fill: var(--accent);
+            flex-shrink: 0;
+        }
+
+        @media (min-width: 992px) {
+            .block-row {
+                flex-direction: row;
+                gap: 5rem;
+            }
+
+            .block-row:nth-child(even) {
+                flex-direction: row-reverse;
+            }
+        }
+
+        /* About Section */
+        .about {
+            padding: 6rem 0;
             background-color: var(--bg);
         }
 
-        .testimonials-slider {
+        .about-content {
             display: flex;
-            gap: 24px;
+            flex-direction: column;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        @media (min-width: 992px) {
+            .about-content {
+                flex-direction: row;
+            }
+        }
+
+        .about-text {
+            flex: 1.2;
+        }
+
+        .about-text h2 {
+            font-size: 2.2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .about-subtitle {
+            font-family: var(--font-title);
+            font-weight: 600;
+            color: var(--accent);
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+        }
+
+        .about-desc {
+            font-size: 1.1rem;
+            color: rgba(26, 26, 26, 0.8);
+            margin-bottom: 2rem;
+        }
+
+        .about-team {
+            border-top: 1px solid var(--gray-light);
+            padding-top: 2rem;
+        }
+
+        .about-team-title {
+            font-family: var(--font-title);
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+
+        .about-members {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        @media (min-width: 600px) {
+            .about-members {
+                flex-direction: row;
+            }
+        }
+
+        .member-badge {
+            background-color: var(--white);
+            padding: 1rem 1.5rem;
+            border-radius: 12px;
+            box-shadow: var(--shadow);
+            border-left: 4px solid var(--primary);
+            flex: 1;
+        }
+
+        .member-badge span {
+            font-family: var(--font-title);
+            font-weight: 700;
+            color: var(--primary);
+            display: block;
+        }
+
+        .member-badge small {
+            color: rgba(26, 26, 26, 0.6);
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* Insurance (Convênios) Section */
+        .insurances {
+            padding: 6rem 0;
+            background-color: var(--white);
+            border-bottom: 1px solid var(--gray-light);
+        }
+
+        .insurances-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.5rem;
+            align-items: center;
+        }
+
+        @media (min-width: 600px) {
+            .insurances-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        @media (min-width: 992px) {
+            .insurances-grid {
+                grid-template-columns: repeat(5, 1fr);
+            }
+        }
+
+        .insurance-card {
+            background-color: var(--bg);
+            border: 1px solid var(--gray-light);
+            border-radius: 12px;
+            padding: 1.5rem;
+            height: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            transition: var(--transition);
+        }
+
+        .insurance-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow);
+            border-color: var(--accent);
+        }
+
+        .insurance-logo {
+            max-height: 50px;
+            max-width: 100%;
+            object-fit: contain;
+        }
+
+        .insurance-text {
+            font-family: var(--font-title);
+            font-weight: 700;
+            color: var(--primary);
+            font-size: 1rem;
+        }
+
+        /* Testimonials CSS-Only Scroll Snap Carousel */
+        .testimonials {
+            padding: 6rem 0;
+            background-color: var(--bg);
+            overflow: hidden;
+        }
+
+        .carousel-container {
+            position: relative;
+            padding: 1rem 0;
+        }
+
+        .carousel-track {
+            display: flex;
             overflow-x: auto;
             scroll-snap-type: x mandatory;
-            padding-bottom: 32px;
-            scrollbar-width: thin;
-            scrollbar-color: var(--accent) var(--gray-light);
+            gap: 1.5rem;
+            scrollbar-width: none; /* Firefox */
+            -ms-overflow-style: none;  /* IE and Edge */
+            padding-bottom: 1.5rem;
         }
 
-        .testimonials-slider::-webkit-scrollbar {
-            height: 6px;
-        }
-
-        .testimonials-slider::-webkit-scrollbar-track {
-            background: var(--gray-light);
-        }
-
-        .testimonials-slider::-webkit-scrollbar-thumb {
-            background-color: var(--accent);
-            border-radius: 3px;
+        .carousel-track::-webkit-scrollbar {
+            display: none; /* Chrome, Safari, Opera */
         }
 
         .testimonial-card {
-            flex: 0 0 350px;
+            flex: 0 0 85%;
             scroll-snap-align: start;
             background-color: var(--white);
-            padding: 32px;
-            border-radius: 16px;
+            border-radius: 20px;
+            padding: 2.5rem;
             box-shadow: var(--shadow);
+            border-top: 5px solid var(--accent);
             display: flex;
             flex-direction: column;
             justify-content: space-between;
+        }
+
+        @media (min-width: 768px) {
+            .testimonial-card {
+                flex: 0 0 45%;
+            }
+        }
+
+        @media (min-width: 992px) {
+            .testimonial-card {
+                flex: 0 0 31%;
+            }
         }
 
         .testimonial-header {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            margin-bottom: 20px;
+            margin-bottom: 1.5rem;
         }
 
-        .patient-name {
-            font-weight: 600;
+        .reviewer-info {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .reviewer-name {
+            font-family: var(--font-title);
+            font-weight: 700;
             color: var(--primary);
+            font-size: 1.1rem;
         }
 
-        .verification {
-            font-size: 0.75rem;
-            color: #777;
+        .verification-badge {
             display: flex;
             align-items: center;
-            gap: 4px;
+            gap: 0.3rem;
+            font-size: 0.75rem;
+            color: #555;
+            margin-top: 0.2rem;
         }
 
-        .verification svg {
+        .verification-badge svg {
             width: 12px;
             height: 12px;
-            fill: #4CAF50;
+            fill: #4285F4;
         }
 
-        .testimonial-quote {
-            font-family: var(--serif);
-            font-style: italic;
-            font-size: 1.05rem;
+        .testimonial-stars {
+            display: flex;
+            gap: 0.1rem;
+        }
+
+        .testimonial-stars svg {
+            width: 16px;
+            height: 16px;
+            fill: var(--accent);
+        }
+
+        .testimonial-text {
+            font-size: 0.95rem;
             color: var(--text);
-            line-height: 1.5;
-            position: relative;
+            font-style: italic;
+            line-height: 1.6;
         }
 
-        /* INSURANCE SECTION */
-        .insurance-section {
-            background-color: var(--white);
-            border-top: 1px solid var(--gray-light);
-            border-bottom: 1px solid var(--gray-light);
-        }
-
-        .insurance-grid {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            align-items: center;
-            gap: 40px;
-            margin-bottom: 48px;
-        }
-
-        .insurance-logo {
-            height: 50px;
-            width: auto;
-            object-fit: contain;
-            opacity: 0.85;
-            transition: var(--transition);
-        }
-
-        .insurance-logo:hover {
-            opacity: 1;
-        }
-
-        .insurance-chips {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 12px;
-            max-width: 900px;
-            margin: 0 auto;
-        }
-
-        .insurance-chip {
-            background-color: var(--bg);
-            border: 1px solid var(--gray-light);
-            color: var(--primary);
-            padding: 10px 20px;
-            border-radius: 50px;
+        .carousel-instructions {
+            text-align: center;
+            margin-top: 1.5rem;
             font-size: 0.9rem;
-            font-weight: 500;
+            color: rgba(26, 26, 26, 0.5);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
         }
 
-        /* FINAL CTA SECTION */
-        .cta-section {
-            background-image: linear-gradient(135deg, rgba(46, 34, 97, 0.95) 0%, rgba(46, 34, 97, 0.8) 100%), url('img/foto-1.png');
-            background-size: cover;
-            background-position: center;
-            background-attachment: fixed;
+        .carousel-instructions svg {
+            width: 20px;
+            height: 20px;
+            fill: rgba(26, 26, 26, 0.3);
+        }
+
+        /* Final CTA */
+        .cta-final {
+            padding: 8rem 0;
+            background-color: var(--primary);
             color: var(--white);
             text-align: center;
-            padding: 120px 0;
+            position: relative;
+            overflow: hidden;
         }
 
-        .cta-content {
-            max-width: 700px;
-            margin: 0 auto;
+        .cta-final::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle, rgba(201, 162, 39, 0.1) 0%, transparent 80%);
+            pointer-events: none;
         }
 
-        .cta-content h2 {
+        .cta-final h2 {
             color: var(--white);
             font-size: 2.5rem;
-            margin-bottom: 24px;
+            margin-bottom: 1rem;
         }
 
-        .cta-content p {
-            font-size: 1.15rem;
-            margin-bottom: 40px;
-            opacity: 0.9;
-            font-weight: 300;
+        .cta-final p {
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin: 0 auto 2.5rem;
+            color: rgba(250, 247, 242, 0.9);
         }
 
-        /* FOOTER */
-        footer {
-            background-color: #1F1742;
-            color: rgba(255, 255, 255, 0.8);
-            padding: 80px 0 30px 0;
-            font-size: 0.9rem;
+        /* Footer */
+        .footer {
+            background-color: #1c153a;
+            color: var(--white);
+            padding: 5rem 0 2rem;
+            font-size: 0.95rem;
+            border-top: 1px solid rgba(250, 247, 242, 0.1);
         }
 
         .footer-grid {
             display: grid;
-            grid-template-columns: 1.2fr 1fr 1fr;
-            gap: 64px;
-            margin-bottom: 64px;
+            grid-template-columns: 1fr;
+            gap: 3rem;
+            margin-bottom: 4rem;
+        }
+
+        @media (min-width: 768px) {
+            .footer-grid {
+                grid-template-columns: 1.2fr 1fr 1fr;
+            }
         }
 
         .footer-col h4 {
             color: var(--white);
-            font-family: var(--sans);
-            font-size: 1.05rem;
-            font-weight: 600;
-            margin-bottom: 24px;
-            text-transform: uppercase;
-            letter-spacing: 1px;
+            font-size: 1.1rem;
+            margin-bottom: 1.5rem;
+            position: relative;
+            padding-bottom: 0.5rem;
         }
 
-        .footer-about img {
-            height: 48px;
-            margin-bottom: 24px;
+        .footer-col h4::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 30px;
+            height: 2px;
+            background-color: var(--accent);
         }
 
-        .footer-about p {
-            margin-bottom: 24px;
-            line-height: 1.7;
+        .footer-col p {
+            color: rgba(250, 247, 242, 0.8);
+            margin-bottom: 1rem;
         }
 
-        .social-links {
-            display: flex;
-            gap: 16px;
-        }
-
-        .social-links a {
+        .contact-link {
             display: flex;
             align-items: center;
-            justify-content: center;
-            width: 40px;
-            height: 40px;
-            background-color: rgba(255, 255, 255, 0.05);
-            border-radius: 50%;
-            fill: var(--white);
+            gap: 0.8rem;
+            margin-bottom: 1rem;
+            color: rgba(250, 247, 242, 0.8);
             transition: var(--transition);
         }
 
-        .social-links a:hover {
-            background-color: var(--accent);
-            fill: var(--white);
-            transform: translateY(-3px);
+        .contact-link:hover {
+            color: var(--accent);
+        }
+
+        .contact-link svg {
+            width: 20px;
+            height: 20px;
+            fill: var(--accent);
+            flex-shrink: 0;
         }
 
         .footer-links {
@@ -722,630 +910,660 @@
         }
 
         .footer-links li {
-            margin-bottom: 12px;
+            margin-bottom: 0.8rem;
+        }
+
+        .footer-links a {
+            color: rgba(250, 247, 242, 0.8);
         }
 
         .footer-links a:hover {
             color: var(--accent);
+            padding-left: 5px;
         }
 
-        .footer-contact li {
+        .social-icons {
             display: flex;
-            align-items: flex-start;
-            gap: 12px;
-            margin-bottom: 16px;
+            gap: 1rem;
+            margin-top: 1.5rem;
         }
 
-        .footer-contact li svg {
-            width: 20px;
-            height: 20px;
-            fill: var(--accent);
-            flex-shrink: 0;
-            margin-top: 2px;
-        }
-
-        .footer-contact a {
-            color: inherit;
-        }
-
-        .footer-contact a:hover {
-            color: var(--accent);
-        }
-
-        .footer-bottom {
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-            padding-top: 30px;
-            display: flex;
-            justify-content: space-between;
-            flex-wrap: wrap;
-            gap: 20px;
-        }
-
-        /* FLOATING WHATSAPP BUTTON */
-        .whatsapp-fixed {
-            position: fixed;
-            bottom: 32px;
-            right: 32px;
-            z-index: 999;
-            background-color: #25D366;
+        .social-icon {
+            background-color: rgba(250, 247, 242, 0.1);
             color: var(--white);
-            width: 60px;
-            height: 60px;
+            width: 40px;
+            height: 40px;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.3);
             transition: var(--transition);
         }
 
-        .whatsapp-fixed:hover {
-            transform: scale(1.1) translateY(-3px);
-            background-color: #128C7E;
+        .social-icon:hover {
+            background-color: var(--accent);
+            transform: translateY(-3px);
         }
 
-        .whatsapp-fixed svg {
-            width: 32px;
-            height: 32px;
-            fill: var(--white);
+        .social-icon svg {
+            width: 20px;
+            height: 20px;
+            fill: currentColor;
         }
 
-        /* RESPONSIVE DESIGN */
-        @media (max-width: 1024px) {
-            .story-block {
-                gap: 40px;
-            }
-            .block-image img {
-                height: 380px;
-            }
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(250, 247, 242, 0.1);
+            font-size: 0.85rem;
+            color: rgba(250, 247, 242, 0.5);
         }
 
+        /* Fade-In Animation */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Responsive Mechanics CSS Menu Hack */
         @media (max-width: 768px) {
-            header {
-                padding: 16px 0;
-            }
-
             .menu-toggle-btn {
-                display: flex;
+                display: block;
             }
 
             .nav-menu {
                 position: fixed;
-                top: 0;
-                right: -100%;
-                width: 80%;
-                max-width: 300px;
-                height: 100vh;
+                top: 80px;
+                left: -100%;
+                width: 100%;
+                height: calc(100vh - 80px);
                 background-color: var(--primary);
                 flex-direction: column;
-                justify-content: center;
-                align-items: flex-start;
-                padding: 48px;
-                gap: 24px;
-                transition: right 0.4s ease;
-                box-shadow: -10px 0 30px rgba(0,0,0,0.3);
+                justify-content: flex-start;
+                padding: 3rem 1.5rem;
+                gap: 2rem;
+                transition: var(--transition);
+                z-index: 998;
             }
 
-            .nav-menu a {
-                font-size: 1.1rem;
+            .nav-link {
+                color: var(--white);
+                font-size: 1.2rem;
             }
 
-            .menu-toggle-input:checked ~ .nav-menu {
-                right: 0;
+            /* Checked logic opens the menu */
+            .menu-toggle-input:checked ~ .header-container .nav-menu {
+                left: 0;
             }
 
-            .menu-toggle-input:checked ~ .menu-toggle-btn svg {
+            .menu-toggle-input:checked ~ .header-container .menu-toggle-btn svg {
                 fill: var(--accent);
             }
 
             .hero {
                 min-height: auto;
-                padding: 120px 0 60px 0;
-                background-attachment: scroll;
+                padding: 6rem 0;
             }
 
-            .hero-glass-card {
-                padding: 32px 24px;
-            }
-
-            .hero-glass-card h1 {
-                font-size: 2rem;
-            }
-
-            section {
-                padding: 60px 0;
-            }
-
-            .section-title h2 {
+            .hero h1 {
                 font-size: 1.8rem;
             }
 
-            .story-blocks {
-                gap: 60px;
+            .hero-card {
+                padding: 1.5rem;
             }
 
-            .story-block, .story-block:nth-child(even) {
-                grid-template-columns: 1fr;
-                gap: 24px;
-                direction: ltr;
-            }
-
-            .story-block:nth-child(even) .block-content {
-                direction: ltr;
-            }
-
-            .block-image img {
-                height: 280px;
-            }
-
-            .about-grid {
-                grid-template-columns: 1fr;
-                gap: 40px;
-            }
-
-            .symptom-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .triagem-box {
-                padding: 24px;
-            }
-
-            .footer-grid {
-                grid-template-columns: 1fr;
-                gap: 40px;
-            }
-
-            .testimonial-card {
-                flex: 0 0 280px;
-                padding: 24px;
-            }
-
-            .whatsapp-fixed {
-                bottom: 24px;
-                right: 24px;
-                width: 50px;
-                height: 50px;
-            }
-
-            .whatsapp-fixed svg {
-                width: 26px;
-                height: 26px;
+            .section-header h2 {
+                font-size: 1.8rem;
             }
         }
     </style>
 </head>
 <body>
 
-    <!-- HEADER -->
-    <header role="navigation" aria-label="Menu Principal">
-        <div class="container">
-            <a href="#" class="logo">
-                <img src="img/foto-7.png" alt="Clínica Salutaire">
+    <!-- CSS-Only Hamburger Activator -->
+    <input type="checkbox" id="menu-toggle" class="menu-toggle-input" aria-hidden="true">
+
+    <!-- Header Navigation -->
+    <header class="header">
+        <div class="container header-container">
+            <a href="#" class="logo" aria-label="Página Inicial - Clínica Salutaire">
+                <img src="img/foto-7.png" alt="Logo Clínica Salutaire">
             </a>
 
-            <input type="checkbox" id="menu-toggle" class="menu-toggle-input" aria-hidden="true">
-            <label for="menu-toggle" class="menu-toggle-btn" aria-label="Abrir menu" role="button" aria-expanded="false">
+            <!-- Mobile Hamburger Button -->
+            <label for="menu-toggle" class="menu-toggle-btn" aria-label="Abrir menu de navegação" role="button" aria-expanded="false">
                 <svg viewBox="0 0 24 24">
                     <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
                 </svg>
             </label>
 
-            <nav class="nav-menu">
-                <a href="#inicio">Início</a>
-                <a href="#tratamentos">Tratamentos</a>
-                <a href="#sobre">Quem Somos</a>
-                <a href="#convenios">Convênios</a>
-                <a href="#contato">Contato</a>
-                <a href="https://wa.me/5521988051154?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." class="btn btn-outline" style="color:var(--white); border-color:var(--white);">Agendar Consulta</a>
+            <!-- Navigation Links -->
+            <nav class="nav-menu" role="navigation" aria-label="Navegação Principal">
+                <a href="#inicio" class="nav-link">Início</a>
+                <a href="#triagem" class="nav-link">Autoavaliação</a>
+                <a href="#tratamentos" class="nav-link">Tratamentos</a>
+                <a href="#sobre" class="nav-link">Quem Somos</a>
+                <a href="#convenios" class="nav-link">Convênios</a>
+                <a href="#contato" class="btn btn-outline" style="padding: 0.6rem 1.5rem;">Fale Conosco</a>
             </nav>
         </div>
     </header>
 
-    <!-- HERO SECTION (Storytelling em Blocos Variant: Full bleed + glassmorphism overlay card) -->
-    <section id="inicio" class="hero">
-        <div class="container">
-            <div class="hero-glass-card">
-                <h1>Fisioterapia Pélvica e Urologia de Alta Performance</h1>
-                <p>Nossa abordagem multidisciplinar na Clínica Salutaire é a resposta que você busca para recuperar sua qualidade de vida e tratar disfunções miccionais e sexuais de forma humanizada e discreta.</p>
-                <a href="https://wa.me/5521988051154?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." class="btn">
-                    Agende sua Consulta
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- PROVA SOCIAL BANNER -->
-    <div class="rating-banner">
-        <div class="container rating-container">
-            <div class="stars">
-                <!-- 5 Estrelas SVG -->
-                <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
-                <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
-                <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
-                <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
-                <svg viewBox="0 0 24 24"><path d="M12 15.4L8.24 17.65l.99-4.32-3.35-2.9 4.41-.38L12 6.02l1.71 4.04 4.41.38-3.35 2.9.99 4.32z" opacity="0.5"/></svg>
-            </div>
-            <div class="rating-text">
-                Nota 4.5 de excelência no Google baseada em 55 avaliações auditadas
-            </div>
-        </div>
-    </div>
-
-    <!-- SERVICES (Storytelling em Blocos - Zig Zag layout) -->
-    <section id="tratamentos" class="container">
-        <div class="section-title">
-            <span>Especialidades</span>
-            <h2>Tratamentos Especializados</h2>
-        </div>
-
-        <div class="story-blocks">
-            <!-- Block 1: Fisioterapia Pélvica -->
-            <div class="story-block">
-                <div class="block-image">
-                    <img src="img/foto-2.png" alt="Atendimento de Fisioterapia Pélvica" loading="lazy">
-                </div>
-                <div class="block-content">
-                    <h3>Fisioterapia Pélvica</h3>
-                    <p style="margin-bottom: 24px; color:#4A4A4A;">Tratamento especializado e acolhedor para as disfunções pélvicas, urinárias e intestinais de homens e mulheres, bem como o acompanhamento gestacional integral.</p>
-                    <ul class="service-list">
-                        <li>
-                            <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
-                            Incontinência urinária (Feminina / Masculina)
-                        </li>
-                        <li>
-                            <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
-                            Incontinência fecal e constipação intestinal
-                        </li>
-                        <li>
-                            <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
-                            Preparação pré e pós-parto personalizada
-                        </li>
-                        <li>
-                            <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
-                            Disfunções sexuais femininas (Dispareunia, Vaginismo, Vulvodínia)
-                        </li>
-                    </ul>
-                    <a href="https://wa.me/5521988051154?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20falar%20sobre%20Fisioterapia%20P%C3%A9lvica." class="btn">Agendar Consulta</a>
+    <main>
+        <!-- Hero Section (Variant: Storytelling em Blocos / Efeito Glass) -->
+        <section id="inicio" class="hero">
+            <img class="hero-bg" src="img/foto-1.png" alt="Dra. Mônica Lopes e Dr. Francisco Coutinho no consultório da Clínica Salutaire">
+            <div class="hero-overlay"></div>
+            <div class="container">
+                <div class="hero-card">
+                    <span class="hero-tag">Clínica de Referência</span>
+                    <h1>A maior clínica de fisioterapia pélvica do Rio de Janeiro</h1>
+                    <p>Já tentou tratar uma falha na ereção, incontinência urinária ou disfunção íntima e não resolveu? Nossa abordagem multidisciplinar, unindo Urologia e Fisioterapia Pélvica, é a resposta definitiva para sua saúde.</p>
+                    <a href="https://wa.me/5521988051154?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." class="btn" aria-label="Falar com especialista no WhatsApp">
+                        Agendar sua Consulta
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12.01 2.019C6.5 2.019 2 6.519 2 12.03c0 1.9.53 3.68 1.46 5.22L2 22l4.9-1.43c1.47.8 3.14 1.26 4.93 1.26 5.5 0 10-4.5 10-10.01s-4.5-10.01-10.01-10.01zm0 1.5c4.68 0 8.5 3.82 8.5 8.51s-3.82 8.5-8.5 8.5c-1.57 0-3.05-.43-4.32-1.18l-.31-.18-3.15.92.94-3.04-.2-.32C4.21 15.18 3.79 13.66 3.79 12.03c0-4.69 3.82-8.51 8.5-8.51z"/></svg>
+                    </a>
                 </div>
             </div>
+        </section>
 
-            <!-- Block 2: Urologia / Andrologia -->
-            <div class="story-block">
-                <div class="block-image">
-                    <img src="img/foto-3.png" alt="Atendimento de Urologia e Andrologia" loading="lazy">
+        <!-- Google Social Proof Bar -->
+        <section class="social-proof">
+            <div class="container proof-container">
+                <div class="stars-container">
+                    <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                    <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                    <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                    <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                    <svg viewBox="0 0 24 24"><path d="M12 15.4V6.1l1.71 4.04 4.38.37-3.32 2.88 1 4.28z" opacity="0.3"/><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21zm0-1.87l-3.71 2.2 1-4.28-3.32-2.88 4.38-.37L12 6.1v9.3z"/></svg>
                 </div>
-                <div class="block-content">
-                    <h3>Urologia e Andrologia</h3>
-                    <p style="margin-bottom: 24px; color:#4A4A4A;">Voltada para o diagnóstico preciso e tratamento das disfunções miccionais e sexuais masculinas, integrando tecnologia e cuidado individualizado.</p>
-                    <ul class="service-list">
-                        <li>
-                            <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
-                            Reabilitação sexual pós-prostatectomia
-                        </li>
-                        <li>
-                            <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
-                            Tratamento focado para disfunção erétil e ejaculação precoce
-                        </li>
-                        <li>
-                            <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
-                            Tratamento da andropausa e exames de urodinâmica
-                        </li>
-                        <li>
-                            <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
-                            Doppler peniano e aplicação de toxina botulínica para bexiga hiperativa
-                        </li>
-                    </ul>
-                    <a href="https://wa.me/5521988051154?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20falar%20sobre%20Urologia." class="btn">Agendar Consulta</a>
+                <div class="proof-text">
+                    Excelente • Nota 4.5 de 5 baseada em 55 avaliações auditadas no Google
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- AUTOAVALIAÇÃO DE SINTOMAS (Conversion Interactive Widget) -->
-    <section class="triagem-section">
-        <div class="container">
-            <div class="section-title">
-                <span>Triagem Discreta</span>
-                <h2>Autoavaliação de Sintomas</h2>
-            </div>
-            
-            <div class="triagem-box">
-                <p class="triagem-intro">Selecione os sintomas que você tem vivenciado recentemente para obter uma orientação neutra e discreta.</p>
-                
-                <div class="symptom-grid">
-                    <label class="symptom-label">
-                        <input type="checkbox" class="symptom-input" value="1">
-                        Perda involuntária de urina ao tossir ou fazer esforço
-                    </label>
-                    <label class="symptom-label">
-                        <input type="checkbox" class="symptom-input" value="2">
-                        Dificuldade ou dor durante as relações sexuais
-                    </label>
-                    <label class="symptom-label">
-                        <input type="checkbox" class="symptom-input" value="3">
-                        Urgência súbita e incontrolável de ir ao banheiro
-                    </label>
-                    <label class="symptom-label">
-                        <input type="checkbox" class="symptom-input" value="4">
-                        Disfunção erétil ou alterações pós-cirúrgicas prostáticas
-                    </label>
-                    <label class="symptom-label">
-                        <input type="checkbox" class="symptom-input" value="5">
-                        Necessidade de preparação ou reabilitação gestacional
-                    </label>
-                    <label class="symptom-label">
-                        <input type="checkbox" class="symptom-input" value="6">
-                        Constipação persistente ou desconforto pélvico geral
-                    </label>
+        <!-- Symptom Triagem (Discreet Interactive Conversion Element) -->
+        <section id="triagem" class="triagem">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Autoavaliação de Sintomas</h2>
+                    <p>Selecione seu perfil e identifique sintomas comuns que tratamos na Clínica Salutaire com total sigilo e acolhimento.</p>
                 </div>
 
-                <button class="btn" onclick="mostrarRecomendacao()">
-                    Ver Recomendação
-                </button>
+                <div class="triagem-box">
+                    <input type="radio" id="tab-fem" name="triagem-tab" class="menu-toggle-input" checked>
+                    <input type="radio" id="tab-masc" name="triagem-tab" class="menu-toggle-input">
 
-                <div id="outcome" class="triagem-outcome">
-                    <p>Nossa equipe técnica, liderada pelos especialistas <strong>Dra. Mônica Lopes</strong> e <strong>Dr. Francisco Coutinho</strong>, está amplamente qualificada para avaliar o seu caso de forma altamente personalizada, respeitando sua privacidade.</p>
-                    <a href="https://wa.me/5521988051154?text=Ol%C3%A1!%20Realizei%20a%20autoavalia%C3%A7%C3%A3o%20de%20sintomas%20no%20site%20e%20gostaria%20de%20conversar." class="btn">Conversar com Especialista de Forma Discreta</a>
-                </div>
-            </div>
-        </div>
-    </section>
+                    <div class="triagem-tabs-container">
+                        <label for="tab-fem" class="triagem-tab-label">Saúde Íntima Feminina</label>
+                        <label for="tab-masc" class="triagem-tab-label">Saúde Íntima Masculina</label>
+                    </div>
 
-    <!-- SOBRE O NEGÓCIO / MARCA -->
-    <section id="sobre" class="about-section">
-        <div class="container">
-            <div class="about-grid">
-                <div>
-                    <!-- No structural or decorative placeholder used. Showing brand essence elements and directors names -->
-                    <div class="section-title" style="text-align: left;">
-                        <span>Nossa Essência</span>
-                        <h2 style="padding-bottom: 20px; text-align: left;">Clínica Salutaire</h2>
+                    <div class="triagem-panels">
+                        <div id="panel-fem" class="triagem-content">
+                            <div class="triagem-grid">
+                                <div class="triagem-item">Perda involuntária de urina ao tossir ou pular</div>
+                                <div class="triagem-item">Dor ou desconforto durante a relação íntima</div>
+                                <div class="triagem-item">Preparação preventiva para o parto / pós-parto</div>
+                                <div class="triagem-item">Flacidez ou urgência miccional constante</div>
+                            </div>
+                        </div>
+
+                        <div id="panel-masc" class="triagem-content">
+                            <div class="triagem-grid">
+                                <div class="triagem-item">Dificuldade de ereção ou perda de rigidez</div>
+                                <div class="triagem-item">Ejaculação precoce ou perda do controle</div>
+                                <div class="triagem-item">Recuperação urinária e sexual pós-prostatectomia</div>
+                                <div class="triagem-item">Urgência urinária noturna excessiva</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="triagem-result">
+                        <h4>Quer dar o primeiro passo para o seu bem-estar?</h4>
+                        <p>Nossos tratamentos integrados e baseados em ciência oferecem soluções reais. Agende uma avaliação discreta com nossa equipe técnica.</p>
+                        <a href="https://wa.me/5521988051154?text=Ol%C3%A1!%20Fiz%20a%20autoavalia%C3%A7%C3%A3o%20no%20site%20e%20gostaria%20de%20saber%20mais%20sobre%20tratamentos." class="btn">Solicitar Análise de Especialista</a>
                     </div>
                 </div>
-                <div class="about-text">
-                    <h3>A União de Duas Áreas Harmônicas</h3>
-                    <p>A Clínica Salutaire nasceu da visão integrada entre a <strong>Urologia</strong> e a <strong>Fisioterapia Pélvica</strong>. Unimos forças para suprir a necessidade de um espaço qualificado e sensível às particularidades das disfunções íntimas.</p>
-                    <p>De um lado, a Urologia foca no diagnóstico preciso das disfunções miccionais e sexuais masculinas. De outro, a Fisioterapia Pélvica acolhe e reabilita homens, mulheres e gestantes que buscam excelência clínica para a recuperação do assoalho pélvico e bem-estar sexual.</p>
-                    
-                    <div class="about-meta">
-                        <div class="meta-item">
-                            <h4>Dra. Mônica Lopes</h4>
-                            <p>Responsável Técnica e Especialista em Fisioterapia Pélvica</p>
+            </div>
+        </section>
+
+        <!-- Alternating Storytelling Blocks Section -->
+        <section id="tratamentos" class="story-blocks">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Especialidades Clínicas Integradas</h2>
+                    <p>Combinamos técnicas científicas de ponta e reabilitação avançada para restabelecer sua qualidade de vida.</p>
+                </div>
+
+                <!-- Block 1: Fisioterapia Pélvica -->
+                <div class="block-row">
+                    <div class="block-col-text">
+                        <h3>Fisioterapia Pélvica</h3>
+                        <p class="block-desc">Fisioterapia especializada na prevenção e tratamento de disfunções musculares da região pélvica, garantindo o fortalecimento de homens e mulheres em todas as fases da vida.</p>
+                        <ul class="block-list">
+                            <li class="block-list-item">
+                                <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                                Incontinência Urinária (F/M)
+                            </li>
+                            <li class="block-list-item">
+                                <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                                Disfunções Sexuais Femininas
+                            </li>
+                            <li class="block-list-item">
+                                <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                                Preparação Pré e Pós Parto
+                            </li>
+                            <li class="block-list-item">
+                                <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                                Dispareunia, Vaginismo e Vulvodínia
+                            </li>
+                            <li class="block-list-item">
+                                <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                                Constipação Intestinal (F/M)
+                            </li>
+                            <li class="block-list-item">
+                                <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                                Incontinência Fecal (F/M)
+                            </li>
+                        </ul>
+                        <a href="https://wa.me/5521988051154?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20fisioterapia%20p%C3%A9lvica." class="btn">Consultar Fisioterapia Pélvica</a>
+                    </div>
+                    <div class="block-col-img">
+                        <div class="block-image-wrapper">
+                            <img src="img/foto-2.png" alt="Sessão de Fisioterapia Pélvica na Clínica Salutaire" loading="lazy">
                         </div>
-                        <div class="meta-item">
-                            <h4>Dr. Francisco Coutinho</h4>
-                            <p>Responsável Técnico e Especialista em Urologia</p>
+                    </div>
+                </div>
+
+                <!-- Block 2: Urologia / Andrologia -->
+                <div class="block-row">
+                    <div class="block-col-text">
+                        <h3>Urologia e Andrologia</h3>
+                        <p class="block-desc">Abordagem médica direcionada para o diagnóstico preciso e reabilitação de disfunções miccionais e sexuais masculinas com ética e eficácia clínica.</p>
+                        <ul class="block-list">
+                            <li class="block-list-item">
+                                <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                                Reabilitação Pós-Prostatectomia
+                            </li>
+                            <li class="block-list-item">
+                                <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                                Tratamento para Disfunção Erétil
+                            </li>
+                            <li class="block-list-item">
+                                <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                                Controle da Ejaculação Precoce
+                            </li>
+                            <li class="block-list-item">
+                                <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                                Reposição Hormonal / Andropausa
+                            </li>
+                            <li class="block-list-item">
+                                <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                                Toxina Botulínica para Bexiga Hiperativa
+                            </li>
+                            <li class="block-list-item">
+                                <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                                Exames de Urodinâmica e Doppler Peniano
+                            </li>
+                        </ul>
+                        <a href="https://wa.me/5521988051154?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20consulta%20com%20Urologista." class="btn">Consultar Urologia</a>
+                    </div>
+                    <div class="block-col-img">
+                        <div class="block-image-wrapper">
+                            <img src="img/foto-3.png" alt="Atendimento de urologia masculina na Clínica Salutaire" loading="lazy">
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- DEPOIMENTOS REALISTAS AUDITADOS (Google Reviews Trustindex) -->
-    <section class="testimonials-section">
-        <div class="container">
-            <div class="section-title">
-                <span>Depoimentos Reais</span>
-                <h2>O que dizem nossos pacientes</h2>
-            </div>
-
-            <div class="testimonials-slider">
-                <!-- Card 1 -->
-                <div class="testimonial-card">
-                    <div class="testimonial-header">
-                        <span class="patient-name">Paulo Bragatto</span>
-                        <span class="verification">
-                            <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
-                            Google / Trustindex
-                        </span>
+        <!-- About Section (Sobre a Marca) -->
+        <section id="sobre" class="about">
+            <div class="container">
+                <div class="about-content">
+                    <div class="about-text">
+                        <h2>Clínica Salutaire</h2>
+                        <div class="about-subtitle">Fisioterapia Pélvica, Urologia e Sexualidade</div>
+                        <p class="about-desc">Nascemos da união inteligente de duas especialidades vitais. De um lado a Urologia, com destaque nas disfunções miccionais e sexuais masculinas, e de outro a Fisioterapia Pélvica, que cuida de homens e mulheres com disfunções físicas, além de ser aliada no tratamento de dores e disfunções sexuais femininas.</p>
+                        <p class="about-desc">Proporcionamos aos nossos pacientes um espaço discreto, acolhedor e com equipamentos diagnósticos adequados para restabelecer seu equilíbrio corporal.</p>
+                        
+                        <div class="about-team">
+                            <h3 class="about-team-title">Responsabilidade Técnica</h3>
+                            <div class="about-members">
+                                <div class="member-badge">
+                                    <span>Drª Mônica Lopes</span>
+                                    <small>Responsável Técnica - Fisioterapia Pélvica</small>
+                                </div>
+                                <div class="member-badge">
+                                    <span>Dr. Francisco Coutinho</span>
+                                    <small>Responsável Técnico - Urologia</small>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <p class="testimonial-quote">"Dr. Mônica altamente profissional e sua equipe muito eficiente e prestativa."</p>
-                </div>
-
-                <!-- Card 2 -->
-                <div class="testimonial-card">
-                    <div class="testimonial-header">
-                        <span class="patient-name">Zamira Froio</span>
-                        <span class="verification">
-                            <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
-                            Google / Trustindex
-                        </span>
-                    </div>
-                    <p class="testimonial-quote">"Quero agradecer a Dra. Monica pelo trato cuidadoso e profissional durante o meu tratamento. A clinica como um todo me fez sentir bem e consequentemente senti confiança. Recomendo a Dra. Monica sem dúvida ela irá fazer o possível para conseguir o melhor tratamento e resultado final."</p>
-                </div>
-
-                <!-- Card 3 -->
-                <div class="testimonial-card">
-                    <div class="testimonial-header">
-                        <span class="patient-name">Oscar Silva (Tania Moreira)</span>
-                        <span class="verification">
-                            <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
-                            Google / Trustindex
-                        </span>
-                    </div>
-                    <p class="testimonial-quote">"Excelente Profissional Michele, muito dedicada e preparada para atender bem os pacientes. Fui premiada. Me chamo Tania Moreira da Silva"</p>
-                </div>
-
-                <!-- Card 4 -->
-                <div class="testimonial-card">
-                    <div class="testimonial-header">
-                        <span class="patient-name">Camila Ribeiro Lima</span>
-                        <span class="verification">
-                            <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
-                            Google / Trustindex
-                        </span>
-                    </div>
-                    <p class="testimonial-quote">"Mônica fez meu atendimento de preparação para o parto sempre muito atenciosa e carinhosa. Profissional super competente e humana, recomendo muito!"</p>
-                </div>
-
-                <!-- Card 5 -->
-                <div class="testimonial-card">
-                    <div class="testimonial-header">
-                        <span class="patient-name">Carolina Mascarenhas</span>
-                        <span class="verification">
-                            <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
-                            Google / Trustindex
-                        </span>
-                    </div>
-                    <p class="testimonial-quote">"Clínica com ótimos profissionais e atendimento cordial. Destaque para a Dra. Monica Lopes que é super competente e atualizada no que faz, além de ser uma pessoa incrível. Traz segurança para o seu tratamento com todo carinho e atenção! Super recomendo."</p>
-                </div>
-
-                <!-- Card 6 -->
-                <div class="testimonial-card">
-                    <div class="testimonial-header">
-                        <span class="patient-name">Luciana Diniz</span>
-                        <span class="verification">
-                            <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
-                            Google / Trustindex
-                        </span>
-                    </div>
-                    <p class="testimonial-quote">"Excelente clinica! Me cuido la ha 7 anos! Impecaveis! Dra monica maravilhosa cuidou de mim durante minhas duas gestações! E seguimos os cuidados no pós gestacao!"</p>
-                </div>
-
-                <!-- Card 7 -->
-                <div class="testimonial-card">
-                    <div class="testimonial-header">
-                        <span class="patient-name">Kaysa Sarmanho</span>
-                        <span class="verification">
-                            <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
-                            Google / Trustindex
-                        </span>
-                    </div>
-                    <p class="testimonial-quote">"Excelente atendimento, ambiente Top, pontualidade, super indico!!!"</p>
-                </div>
-
-                <!-- Card 8 -->
-                <div class="testimonial-card">
-                    <div class="testimonial-header">
-                        <span class="patient-name">Fatima Sarmanho</span>
-                        <span class="verification">
-                            <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
-                            Google / Trustindex
-                        </span>
-                    </div>
-                    <p class="testimonial-quote">"Excelente atendimento, ambiente agradável e confortável. E profissionais muito competentes."</p>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- CONVÊNIOS / PLANOS DE SAÚDE -->
-    <section id="convenios" class="insurance-section">
-        <div class="container">
-            <div class="section-title">
-                <span>Atendimento Facilitado</span>
-                <h2>Convênios Aceitos</h2>
+        <!-- Insurance (Convênios) Section -->
+        <section id="convenios" class="insurances">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Convênios e Planos de Saúde</h2>
+                    <p>Facilitamos o seu acesso aos melhores tratamentos do Rio de Janeiro. Confira a lista exata de operadoras atendidas:</p>
+                </div>
+
+                <div class="insurances-grid">
+                    <!-- Image Insurance 1 -->
+                    <div class="insurance-card">
+                        <img src="img/foto-4.png" alt="Logo AMS Petrobras" class="insurance-logo" loading="lazy">
+                    </div>
+                    <!-- Image Insurance 2 -->
+                    <div class="insurance-card">
+                        <img src="img/foto-5.png" alt="Logo Bradesco Saúde" class="insurance-logo" loading="lazy">
+                    </div>
+                    <!-- Image Insurance 3 -->
+                    <div class="insurance-card">
+                        <img src="img/foto-6.png" alt="Logo Caberj" class="insurance-logo" loading="lazy">
+                    </div>
+                    <!-- Text Insurances 4 to 10 -->
+                    <div class="insurance-card">
+                        <span class="insurance-text">Camarj</span>
+                    </div>
+                    <div class="insurance-card">
+                        <span class="insurance-text">Camperj</span>
+                    </div>
+                    <div class="insurance-card">
+                        <span class="insurance-text">Eletros Saúde</span>
+                    </div>
+                    <div class="insurance-card">
+                        <span class="insurance-text">Mediservice</span>
+                    </div>
+                    <div class="insurance-card">
+                        <span class="insurance-text">Omint</span>
+                    </div>
+                    <div class="insurance-card">
+                        <span class="insurance-text">Real Grandeza</span>
+                    </div>
+                    <div class="insurance-card">
+                        <span class="insurance-text">Unafisco</span>
+                    </div>
+                </div>
             </div>
+        </section>
 
-            <!-- Imagens de convênios permitidas -->
-            <div class="insurance-grid">
-                <img class="insurance-logo" src="img/foto-4.png" alt="Plano AMS Petrobras" loading="lazy">
-                <img class="insurance-logo" src="img/foto-5.png" alt="Bradesco Saúde" loading="lazy">
-                <img class="insurance-logo" src="img/foto-6.png" alt="Caberj" loading="lazy">
+        <!-- Testimonials Carousel (Depoimentos Auditados) -->
+        <section class="testimonials">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Opinião de Nossos Pacientes</h2>
+                    <p>Depoimentos públicos e verificados de quem confiou em nossa dedicação para retomar a qualidade de vida pélvica e sexual.</p>
+                </div>
+
+                <div class="carousel-container">
+                    <div class="carousel-track">
+                        <!-- Review 1 -->
+                        <div class="testimonial-card">
+                            <div class="testimonial-header">
+                                <div class="reviewer-info">
+                                    <span class="reviewer-name">Paulo Bragatto</span>
+                                    <span class="verification-badge">
+                                        <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+                                        Avaliação Google Verificada
+                                    </span>
+                                </div>
+                                <div class="testimonial-stars">
+                                    <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                                    <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                                    <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                                    <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                                    <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                                </div>
+                            </div>
+                            <p class="testimonial-text">"Dra. Mônica altamente profissional e sua equipe muito eficiente e prestativa."</p>
+                        </div>
+
+                        <!-- Review 2 -->
+                        <div class="testimonial-card">
+                            <div class="testimonial-header">
+                                <div class="reviewer-info">
+                                    <span class="reviewer-name">Zamira Froio</span>
+                                    <span class="verification-badge">
+                                        <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+                                        Avaliação Google Verificada
+                                    </span>
+                                </div>
+                                <div class="testimonial-stars">
+                                    <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                                    <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                                    <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                                    <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                                    <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                                </div>
+                            </div>
+                            <p class="testimonial-text">"Quero agradecer a Dra. Monica pelo trato cuidadoso e profissional durante o meu tratamento. A clinica como um todo me fez sentir bem e consequentemente senti confiança. Recomendo a Dra. Monica sem dúvida ela irá fazer o possível para conseguir o melhor tratamento e resultado final."</p>
+                        </div>
+
+                        <!-- Review 3 -->
+                        <div class="testimonial-card">
+                            <div class="testimonial-header">
+                                <div class="reviewer-info">
+                                    <span class="reviewer-name">Oscar Silva (Tania Moreira)</span>
+                                    <span class="verification-badge">
+                                        <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+                                        Avaliação Google Verificada
+                                    </span>
+                                </div>
+                                <div class="testimonial-stars">
+                                    <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                                    <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                                    <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                                    <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                                    <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                                </div>
+                            </div>
+                            <p class="testimonial-text">"Excelente Profissional Michele, muito dedicada e preparada para atender bem os pacientes. Fui premiada🥰 Me chamo Tania Moreira da Silva"</p>
+                        </div>
+
+                        <!-- Review 4 -->
+                        <div class="testimonial-card">
+                            <div class="testimonial-header">
+                                <div class="reviewer-info">
+                                    <span class="reviewer-name">Camila Ribeiro Lima</span>
+                                    <span class="verification-badge">
+                                        <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+                                        Avaliação Google Verificada
+                                    </span>
+                                </div>
+                                <div class="testimonial-stars">
+                                    <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                                    <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                                    <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                                    <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                                    <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                                </div>
+                            </div>
+                            <p class="testimonial-text">"Mônica fez meu atendimento de preparação para o parto sempre muito atenciosa e carinhosa. Profissional super competente e humana, recomendo muito!"</p>
+                        </div>
+
+                        <!-- Review 5 -->
+                        <div class="testimonial-card">
+                            <div class="testimonial-header">
+                                <div class="reviewer-info">
+                                    <span class="reviewer-name">Carolina Mascarenhas</span>
+                                    <span class="verification-badge">
+                                        <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+                                        Avaliação Google Verificada
+                                    </span>
+                                </div>
+                                <div class="testimonial-stars">
+                                    <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                                    <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                                    <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                                    <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                                    <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                                </div>
+                            </div>
+                            <p class="testimonial-text">"Clínica com ótimos profissionais e atendimento cordial. Destaque para a Dra. Monica Lopes que é super competente e atualizada no que faz, além de ser uma pessoa incrível. Traz segurança para o seu tratamento com todo carinho e atenção!"</p>
+                        </div>
+
+                        <!-- Review 6 -->
+                        <div class="testimonial-card">
+                            <div class="testimonial-header">
+                                <div class="reviewer-info">
+                                    <span class="reviewer-name">Luciana Diniz</span>
+                                    <span class="verification-badge">
+                                        <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+                                        Avaliação Google Verificada
+                                    </span>
+                                </div>
+                                <div class="testimonial-stars">
+                                    <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                                    <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                                    <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                                    <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                                    <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                                </div>
+                            </div>
+                            <p class="testimonial-text">"Excelente clinica! Me cuido la ha 7 anos! Impecaveis! Dra monica maravilhosa cuidou de mim durante minhas duas gestações! E seguimos os cuidados no pós gestacao!"</p>
+                        </div>
+
+                        <!-- Review 7 -->
+                        <div class="testimonial-card">
+                            <div class="testimonial-header">
+                                <div class="reviewer-info">
+                                    <span class="reviewer-name">Kaysa Sarmanho</span>
+                                    <span class="verification-badge">
+                                        <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+                                        Avaliação Google Verificada
+                                    </span>
+                                </div>
+                                <div class="testimonial-stars">
+                                    <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                                    <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                                    <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                                    <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                                    <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                                </div>
+                            </div>
+                            <p class="testimonial-text">"Excelente atendimento, ambiente Top, pontualidade, super indico!!!👏"</p>
+                        </div>
+
+                        <!-- Review 8 -->
+                        <div class="testimonial-card">
+                            <div class="testimonial-header">
+                                <div class="reviewer-info">
+                                    <span class="reviewer-name">Fatima Sarmanho</span>
+                                    <span class="verification-badge">
+                                        <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+                                        Avaliação Google Verificada
+                                    </span>
+                                </div>
+                                <div class="testimonial-stars">
+                                    <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                                    <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                                    <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                                    <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                                    <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                                </div>
+                            </div>
+                            <p class="testimonial-text">"Excelente atendimento, ambiente agradável e confortável. E profissionais muito competentes."</p>
+                        </div>
+                    </div>
+
+                    <div class="carousel-instructions">
+                        <svg viewBox="0 0 24 24"><path d="M10 9V5l-7 7 7 7v-4.1c5 0 8.5 1.6 11 5.1-1-5-4-10-11-11z"/></svg>
+                        Arraste para os lados para ver mais depoimentos
+                    </div>
+                </div>
             </div>
+        </section>
 
-            <!-- Chips de convênio em texto limpo para o restante da lista -->
-            <div class="insurance-chips">
-                <div class="insurance-chip">Camarj</div>
-                <div class="insurance-chip">Camperj</div>
-                <div class="insurance-chip">Eletros Saúde</div>
-                <div class="insurance-chip">Mediservice</div>
-                <div class="insurance-chip">Omint</div>
-                <div class="insurance-chip">Real Grandeza</div>
-                <div class="insurance-chip">Unafisco</div>
-            </div>
-        </div>
-    </section>
-
-    <!-- FINAL CTA -->
-    <section class="cta-section">
-        <div class="container">
-            <div class="cta-content">
-                <h2>Recupere sua saúde, segurança e bem-estar íntimo</h2>
-                <p>Nossa equipe médica e fisioterapêutica está pronta para desenhar uma jornada de tratamento focada no seu alívio e qualidade de vida diária.</p>
+        <!-- Final CTA Section -->
+        <section class="cta-final">
+            <div class="container">
+                <h2>Recupere sua Liberdade e Autoconfiança</h2>
+                <p>Agende hoje mesmo uma consulta com nossa equipe de especialistas. Atendimento humanizado, ético e totalmente focado no seu resultado.</p>
                 <a href="https://wa.me/5521988051154?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." class="btn">
-                    Agende sua Consulta via WhatsApp
+                    Agendar pelo WhatsApp
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12.01 2.019C6.5 2.019 2 6.519 2 12.03c0 1.9.53 3.68 1.46 5.22L2 22l4.9-1.43c1.47.8 3.14 1.26 4.93 1.26 5.5 0 10-4.5 10-10.01s-4.5-10.01-10.01-10.01zm0 1.5c4.68 0 8.5 3.82 8.5 8.51s-3.82 8.5-8.5 8.5c-1.57 0-3.05-.43-4.32-1.18l-.31-.18-3.15.92.94-3.04-.2-.32C4.21 15.18 3.79 13.66 3.79 12.03c0-4.69 3.82-8.51 8.5-8.51z"/></svg>
                 </a>
             </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer id="contato" class="footer">
+        <div class="container footer-grid">
+            <!-- Col 1: About and Social -->
+            <div class="footer-col">
+                <a href="#" class="logo" style="margin-bottom: 1.5rem; display: block;" aria-label="Voltar ao início">
+                    <img src="img/foto-7.png" alt="Logo Clínica Salutaire" style="filter: brightness(0) invert(1);">
+                </a>
+                <p>Harmonia científica entre Fisioterapia Pélvica e Urologia para promover qualidade de vida íntima e miccional de forma ética e integrada.</p>
+                <div class="social-icons">
+                    <a href="https://www.instagram.com/clinica.salutaire" class="social-icon" aria-label="Instagram da Clínica Salutaire" target="_blank" rel="noopener">
+                        <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.051.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+                    </a>
+                    <a href="https://www.youtube.com/channel/UCe-7kpJXAoErXkIe7lv3POA" class="social-icon" aria-label="Canal no YouTube da Clínica Salutaire" target="_blank" rel="noopener">
+                        <svg viewBox="0 0 24 24"><path d="M23.498 6.163a3.003 3.003 0 00-2.11-2.11C19.517 3.545 12 3.545 12 3.545s-7.517 0-9.388.508a3.003 3.003 0 00-2.11 2.11C0 8.033 0 12 0 12s0 3.967.502 5.837a3.003 3.003 0 002.11 2.11c1.871.507 9.388.507 9.388.507s7.517 0 9.388-.507a3.003 3.003 0 002.11-2.11C24 15.967 24 12 24 12s0-3.967-.502-5.837zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Col 2: Useful Links -->
+            <div class="footer-col">
+                <h4>Navegação</h4>
+                <ul class="footer-links">
+                    <li><a href="#inicio">Início</a></li>
+                    <li><a href="#triagem">Autoavaliação</a></li>
+                    <li><a href="#tratamentos">Especialidades</a></li>
+                    <li><a href="#sobre">Quem Somos</a></li>
+                    <li><a href="#convenios">Convênios</a></li>
+                </ul>
+            </div>
+
+            <!-- Col 3: Contact Info -->
+            <div class="footer-col">
+                <h4>Contato</h4>
+                <a href="tel:+5521988051154" class="contact-link">
+                    <svg viewBox="0 0 24 24"><path d="M20 15.5c-1.25 0-2.45-.2-3.57-.57a1.02 1.02 0 00-1.02.24l-2.2 2.2a15.045 15.045 0 01-6.59-6.59l2.2-2.2c.28-.28.36-.67.25-1.02A11.36 11.36 0 018.5 4c0-.55-.45-1-1-1H4c-.55 0-1 .45-1 1 0 9.39 7.61 17 17 17 .55 0 1-.45 1-1v-3.5c0-.55-.45-1-1-1z"/></svg>
+                    <span>(21) 98805-1154 (WhatsApp)</span>
+                </a>
+                <a href="tel:+552125457352" class="contact-link">
+                    <svg viewBox="0 0 24 24"><path d="M20.01 15.38c-1.23 0-2.42-.2-3.53-.56a.977.977 0 00-1.01.24l-1.57 1.57c-2.83-1.44-5.15-3.76-6.59-6.59l1.57-1.57c.28-.28.36-.67.25-1.02A11.36 11.36 0 018.5 4c0-.55-.45-1-1-1H4.11c-.49 0-.93.36-.99.85C2.64 12.3 8.3 19.95 15.93 21.01c.49.06.85-.38.85-.86v-3.77c0-.55-.45-1-1-.1c-.4.1-.77.1-1.18.1z"/></svg>
+                    <span>(21) 2545-7352</span>
+                </a>
+                <a href="tel:+552136477352" class="contact-link">
+                    <svg viewBox="0 0 24 24"><path d="M20.01 15.38c-1.23 0-2.42-.2-3.53-.56a.977.977 0 00-1.01.24l-1.57 1.57c-2.83-1.44-5.15-3.76-6.59-6.59l1.57-1.57c.28-.28.36-.67.25-1.02A11.36 11.36 0 018.5 4c0-.55-.45-1-1-1H4.11c-.49 0-.93.36-.99.85C2.64 12.3 8.3 19.95 15.93 21.01c.49.06.85-.38.85-.86v-3.77c0-.55-.45-1-1-.1c-.4.1-.77.1-1.18.1z"/></svg>
+                    <span>(21) 3647-7352</span>
+                </a>
+                <a href="mailto:c.salutaire@gmail.com" class="contact-link">
+                    <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+                    <span>c.salutaire@gmail.com</span>
+                </a>
+                <div class="contact-link" style="align-items: flex-start;">
+                    <svg viewBox="0 0 24 24" style="margin-top: 0.2rem;"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+                    <span>Av. Nossa Sra. de Copacabana, Nº 788<br>Consultório 505<br>Copacabana, Rio de Janeiro/RJ</span>
+                </div>
+            </div>
         </div>
-    </section>
 
-    <!-- FOOTER -->
-    <footer id="contato">
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-col footer-about">
-                    <img src="img/foto-7.png" alt="Clínica Salutaire">
-                    <p>Referência em saúde pélvica, urológica e sexual no Rio de Janeiro. Tratamento ético, focado no paciente e respaldado por especialistas dedicados.</p>
-                    <div class="social-links">
-                        <a href="https://www.instagram.com/clinica.salutaire" target="_blank" rel="noopener" aria-label="Instagram da Clínica Salutaire">
-                            <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.051.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
-                        </a>
-                        <a href="https://www.youtube.com/channel/UCe-7kpJXAoErXkIe7lv3POA" target="_blank" rel="noopener" aria-label="YouTube da Clínica Salutaire">
-                            <svg viewBox="0 0 24 24"><path d="M23.498 6.163a3.003 3.003 0 00-2.11-2.11C19.517 3.545 12 3.545 12 3.545s-7.517 0-9.388.508a3.003 3.003 0 00-2.11 2.11C0 8.033 0 12 0 12s0 3.967.502 5.837a3.003 3.003 0 002.11 2.11c1.871.508 9.388.508 9.388.508s7.517 0 9.388-.508a3.003 3.003 0 002.11-2.11C24 15.967 24 12 24 12s0-3.967-.502-5.837zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="footer-col">
-                    <h4>Menu de Navegação</h4>
-                    <ul class="footer-links">
-                        <li><a href="#inicio">Início</a></li>
-                        <li><a href="#tratamentos">Especialidades</a></li>
-                        <li><a href="#sobre">Quem Somos</a></li>
-                        <li><a href="#convenios">Convênios</a></li>
-                    </ul>
-                </div>
-
-                <div class="footer-col">
-                    <h4>Central de Atendimento</h4>
-                    <ul class="footer-contact">
-                        <li>
-                            <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
-                            <span>Av. Nossa Sra. de Copacabana, Nº 788 - Consultório 505<br>Copacabana - Rio de Janeiro/RJ</span>
-                        </li>
-                        <li>
-                            <svg viewBox="0 0 24 24"><path d="M6.62 10.79a15.149 15.149 0 006.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
-                            <span>
-                                Tel: <a href="tel:+552125457352">(21) 2545-7352</a><br>
-                                Tel: <a href="tel:+552136477352">(21) 3647-7352</a>
-                            </span>
-                        </li>
-                        <li>
-                            <svg viewBox="0 0 24 24"><path d="M20 2H4c-1.1 0-1.99.9-1.99 2L2 22l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zM6 9h12v2H6V9zm8 5H6v-2h8v2zm4-6H6V6h12v2z"/></svg>
-                            <span>WhatsApp: <a href="tel:+5521988051154">(21) 98805-1154</a></span>
-                        </li>
-                        <li>
-                            <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
-                            <span><a href="mailto:c.salutaire@gmail.com">c.salutaire@gmail.com</a></span>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="footer-bottom">
-                <p>&copy; 2026 Clínica Salutaire. Todos os direitos reservados.</p>
-                <p>Responsáveis Técnicos: Dra. Mônica Lopes e Dr. Francisco Coutinho</p>
-            </div>
+        <div class="footer-bottom">
+            <p>Clínica Salutaire | Todos os direitos reservados. © 2026.</p>
+            <p style="margin-top: 0.5rem; font-size: 0.75rem; opacity: 0.6;">Responsáveis técnicos: Drª Mônica Lopes e Dr. Francisco Coutinho</p>
         </div>
     </footer>
 
-    <!-- STICKY WHATSAPP BUTTON -->
-    <a href="https://wa.me/5521988051154?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." class="whatsapp-fixed" aria-label="Falar no WhatsApp" target="_blank" rel="noopener">
-        <svg viewBox="0 0 24 24">
-            <path d="M12.012 2.25c-5.385 0-9.75 4.365-9.75 9.75 0 1.72.446 3.332 1.223 4.743L2.25 21.75l5.176-1.357c1.372.748 2.936 1.177 4.586 1.177 5.385 0 9.75-4.365 9.75-9.75s-4.365-9.75-9.75-9.75zm5.17 13.784c-.21.595-1.22 1.096-1.685 1.14-.45.044-.9.083-2.887-.704-2.54-.997-4.173-3.567-4.298-3.734-.124-.167-1.012-1.344-1.012-2.564 0-1.22.637-1.817.863-2.06.226-.243.495-.304.66-.304s.33.003.472.01c.148.006.347-.056.543.414.2.483.684 1.662.746 1.785.062.124.103.268.02.433-.082.165-.124.268-.247.412-.124.145-.26.323-.372.434-.124.124-.253.258-.11.5.145.242.64 1.053 1.37 1.704.94.84 1.733 1.1 1.98 1.224.248.124.392.103.537-.062.144-.165.62-.722.784-.968.165-.247.33-.206.557-.123.226.082 1.443.68 1.69.804.247.124.412.185.474.288.06.103.06.598-.15 1.193z"/>
+    <!-- Fixed Floating WhatsApp Button -->
+    <a href="https://wa.me/5521988051154?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." class="whatsapp-float" aria-label="Falar com a Clínica Salutaire no WhatsApp">
+        <svg width="35" height="35" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.513 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.724-1.457L0 24zm6.59-4.846c1.6.95 3.188 1.449 4.825 1.451 5.436 0 9.86-4.37 9.864-9.799.002-2.63-1.023-5.101-2.885-6.965C16.528 1.977 14.07 1.951 11.47 1.951c-5.436 0-9.86 4.37-9.864 9.8.001 1.713.473 3.393 1.371 4.869l-.997 3.64 3.731-.969c1.45.82 2.94 1.25 4.54 1.25zm11.31-7.258c-.31-.154-1.834-.894-2.119-.997-.285-.104-.492-.154-.7.154-.207.31-.8 1.012-.98 1.218-.18.207-.36.233-.67.079-.312-.156-1.317-.48-2.51-1.531-.926-.815-1.55-1.823-1.73-2.13-.18-.31-.019-.477.136-.632.14-.139.312-.361.468-.542.156-.18.207-.31.311-.517.104-.207.052-.388-.026-.543-.078-.154-.7-1.666-.959-2.285-.252-.601-.508-.52-.7-.53-.18-.01-.388-.011-.595-.011-.207 0-.544.078-.828.388-.285.31-1.088 1.053-1.088 2.567s1.102 2.975 1.257 3.182c.155.207 2.17 3.274 5.257 4.587.734.313 1.307.5 1.753.64.737.23 1.41.197 1.942.118.593-.088 1.834-.741 2.093-1.459.258-.718.258-1.334.18-1.459-.078-.125-.285-.203-.595-.357z"/>
         </svg>
     </a>
 
-    <script>
-        function mostrarRecomendacao() {
-            document.getElementById('outcome').style.display = 'block';
-        }
-    </script>
 <div style="position:fixed;bottom:18px;left:50%;transform:translateX(-50%);z-index:2147483647;background:rgba(255,255,255,0.96);border-radius:999px;padding:10px 22px 10px 12px;box-shadow:0 6px 20px rgba(0,0,0,0.22);display:flex;align-items:center;gap:9px;font-family:Inter,-apple-system,sans-serif;"><img src="https://rd-previews-dharari01s-projects.vercel.app/_assets/logo-rd-exclusive.png" alt="RD Exclusive" style="height:26px;width:auto;display:block;"><span style="font-size:14px;font-weight:700;color:#1A1A1A;white-space:nowrap;">Protótipo por RD Exclusive</span></div></body>
 </html>
