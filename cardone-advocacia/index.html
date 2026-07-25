@@ -1,1099 +1,1154 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cardone Advocacia | Escritório Especializado em Direito Trabalhista</title>
-    <meta name="description" content="Advocacia trabalhista especializada. Com mais de 20 anos de atuação na defesa dedicada dos direitos do trabalhador com atendimento criterioso em todo o Brasil.">
-    
-    <!-- Preconnects de Performance -->
-    <link rel="preconnect" href="https://cardone.adv.br">
-    <link rel="preconnect" href="https://www.google.com">
-    
-    <!-- Open Graph Social Preview -->
-    <meta property="og:title" content="Cardone Advocacia | Especialista em Direito Trabalhista">
-    <meta property="og:description" content="Advocacia trabalhista especializada. Mais de 20 anos de atuação na defesa dedicada dos direitos do trabalhador.">
-    <meta property="og:image" content="https://rd-previews-dharari01s-projects.vercel.app/cardone-advocacia/img/foto-1.webp">
-    <meta property="og:type" content="website">
-    
-    <!-- Favicon SVG Embutido Data-URI -->
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2064%2064%22%3E%3Crect%20width%3D%2264%22%20height%3D%2264%22%20rx%3D%2212%22%20fill%3D%22%2332373C%22%2F%3E%3Ctext%20x%3D%2232%22%20y%3D%2242%22%20font-family%3D%22sans-serif%22%20font-size%3D%2232%22%20font-weight%3D%22bold%22%20fill%3D%22%23C5A059%22%20text-anchor%3D%22middle%22%3EC%3C%2Ftext%3E%3C%2Fsvg%3E">
-
-    <style>
-        :root {
-            --primary: #32373C;
-            --primary-dark: #1E2225;
-            --primary-light: #4A5056;
-            --accent: #C5A059;
-            --accent-hover: #B08C46;
-            --bg-light: #F8F9FA;
-            --bg-card: #FFFFFF;
-            --text-dark: #1A1D20;
-            --text-muted: #5A626A;
-            --border-color: #E2E8F0;
-            --shadow-sm: 0 2px 8px rgba(0,0,0,0.05);
-            --shadow-md: 0 10px 30px rgba(0,0,0,0.08);
-            --shadow-lg: 0 18px 40px rgba(0,0,0,0.14);
-            --radius-sm: 8px;
-            --radius-md: 14px;
-            --radius-lg: 20px;
-            --font-stack: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-            --max-width: 1200px;
-        }
-
-        *, *::before, *::after {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-
-        html {
-            scroll-behavior: smooth;
-            font-size: 16px;
-        }
-
-        body {
-            font-family: var(--font-stack);
-            color: var(--text-dark);
-            background-color: var(--bg-light);
-            line-height: 1.6;
-            -webkit-font-smoothing: antialiased;
-        }
-
-        h1, h2, h3, h4 {
-            color: var(--primary);
-            font-weight: 800;
-            line-height: 1.25;
-            letter-spacing: -0.02em;
-        }
-
-        h1 { font-size: clamp(2rem, 4vw, 3.2rem); }
-        h2 { font-size: clamp(1.6rem, 3vw, 2.4rem); }
-        h3 { font-size: clamp(1.2rem, 2vw, 1.5rem); }
-
-        p {
-            margin-bottom: 1rem;
-            color: var(--text-muted);
-        }
-
-        a {
-            text-decoration: none;
-            color: inherit;
-        }
-
-        .container {
-            width: 100%;
-            max-width: var(--max-width);
-            margin: 0 auto;
-            padding: 0 1.25rem;
-        }
-
-        .section {
-            padding: 4.5rem 0;
-        }
-
-        .text-center { text-align: center; }
-
-        /* Header Fixado com Efeito Translucido */
-        header {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            z-index: 1000;
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px);
-            border-bottom: 1px solid rgba(0,0,0,0.06);
-        }
-
-        .header-container {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            height: 75px;
-        }
-
-        .logo-wrapper {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            font-weight: 800;
-            font-size: 1.25rem;
-            color: var(--primary);
-        }
-
-        .logo-img {
-            width: 38px;
-            height: 38px;
-            border-radius: 6px;
-            object-fit: contain;
-        }
-
-        /* Checkbox Hack Menu Mobile */
-        .menu-toggle-input {
-            position: absolute;
-            opacity: 0;
-            pointer-events: none;
-        }
-
-        .menu-toggle-btn {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 44px;
-            height: 44px;
-            cursor: pointer;
-            z-index: 1001;
-        }
-
-        .hamburger-icon {
-            width: 26px;
-            height: 26px;
-            fill: var(--primary);
-        }
-
-        nav {
-            position: fixed;
-            top: 75px;
-            left: 0;
-            width: 100%;
-            background: #FFFFFF;
-            padding: 2rem 1.5rem;
-            box-shadow: var(--shadow-lg);
-            display: flex;
-            flex-direction: column;
-            gap: 1.25rem;
-            transform: translateY(-150%);
-            transition: transform 0.4s ease;
-        }
-
-        .menu-toggle-input:checked ~ nav {
-            transform: translateY(0);
-        }
-
-        .nav-link {
-            font-weight: 600;
-            color: var(--primary);
-            font-size: 1.05rem;
-            transition: color 0.2s ease;
-        }
-
-        .nav-link:hover {
-            color: var(--accent);
-        }
-
-        /* Botões Estilizados */
-        .btn {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            gap: 0.6rem;
-            padding: 0.95rem 1.8rem;
-            font-weight: 700;
-            border-radius: var(--radius-sm);
-            transition: all 0.25s ease;
-            cursor: pointer;
-            text-align: center;
-            border: none;
-            font-size: 1rem;
-        }
-
-        .btn-primary {
-            background-color: var(--accent);
-            color: #FFFFFF;
-            box-shadow: 0 4px 14px rgba(197, 160, 89, 0.35);
-        }
-
-        .btn-primary:hover {
-            background-color: var(--accent-hover);
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(197, 160, 89, 0.45);
-        }
-
-        .btn-whatsapp {
-            background-color: #25D366;
-            color: #FFFFFF;
-            box-shadow: 0 4px 14px rgba(37, 211, 102, 0.3);
-        }
-
-        .btn-whatsapp:hover {
-            background-color: #20ba5a;
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
-        }
-
-        .btn-icon {
-            width: 20px;
-            height: 20px;
-            fill: currentColor;
-        }
-
-        /* Hero com Cartão Translúcido em Vidro (Glassmorphic) */
-        .hero {
-            position: relative;
-            padding-top: 130px;
-            padding-bottom: 5rem;
-            min-height: 88vh;
-            display: flex;
-            align-items: center;
-            background: linear-gradient(135deg, rgba(50, 55, 60, 0.88), rgba(26, 29, 32, 0.92)),
-                        url('img/foto-1.webp') center/cover no-repeat;
-            color: #FFFFFF;
-        }
-
-        .hero-glass-card {
-            background: rgba(50, 55, 60, 0.78);
-            backdrop-filter: blur(14px);
-            -webkit-backdrop-filter: blur(14px);
-            border: 1px solid rgba(255, 255, 255, 0.18);
-            border-radius: var(--radius-lg);
-            padding: 2.5rem 2rem;
-            max-width: 780px;
-            box-shadow: var(--shadow-lg);
-        }
-
-        .hero-tag {
-            display: inline-block;
-            background: rgba(197, 160, 89, 0.22);
-            color: #EAD096;
-            border: 1px solid rgba(197, 160, 89, 0.4);
-            padding: 0.35rem 0.9rem;
-            border-radius: 50px;
-            font-size: 0.85rem;
-            font-weight: 700;
-            letter-spacing: 0.05em;
-            text-transform: uppercase;
-            margin-bottom: 1.25rem;
-        }
-
-        .hero h1 {
-            color: #FFFFFF;
-            margin-bottom: 1.25rem;
-        }
-
-        .hero p {
-            color: #E2E8F0;
-            font-size: 1.15rem;
-            margin-bottom: 2rem;
-        }
-
-        /* Prova Social auditada no Google */
-        .google-badge {
-            display: inline-flex;
-            align-items: center;
-            gap: 12px;
-            background: #FFFFFF;
-            padding: 0.65rem 1.25rem;
-            border-radius: 50px;
-            box-shadow: var(--shadow-md);
-            margin-top: 1.5rem;
-        }
-
-        .google-stars {
-            display: flex;
-            gap: 2px;
-        }
-
-        .google-star-icon {
-            width: 18px;
-            height: 18px;
-            fill: #FBBC05;
-        }
-
-        .google-badge-text {
-            font-size: 0.88rem;
-            font-weight: 700;
-            color: var(--primary);
-        }
-
-        /* Seção de Autoridade Credenciada */
-        .authority-bar {
-            background: #FFFFFF;
-            border-bottom: 1px solid var(--border-color);
-            padding: 2.5rem 0;
-        }
-
-        .authority-grid {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 1.5rem;
-            text-align: center;
-        }
-
-        .authority-item {
-            padding: 0.5rem;
-        }
-
-        .authority-number {
-            font-size: 2.2rem;
-            font-weight: 900;
-            color: var(--accent);
-            line-height: 1;
-            margin-bottom: 0.4rem;
-        }
-
-        .authority-label {
-            font-size: 0.95rem;
-            font-weight: 700;
-            color: var(--primary);
-        }
-
-        /* Variante: Storytelling em Blocos Alternados (Zig-Zag) */
-        .story-block {
-            padding: 4.5rem 0;
-        }
-
-        .story-block:nth-child(even) {
-            background-color: #FFFFFF;
-        }
-
-        .story-grid {
-            display: flex;
-            flex-direction: column;
-            gap: 2.5rem;
-            align-items: center;
-        }
-
-        .story-image-wrap {
-            width: 100%;
-            border-radius: var(--radius-md);
-            overflow: hidden;
-            box-shadow: var(--shadow-md);
-        }
-
-        .story-img {
-            width: 100%;
-            height: 380px;
-            object-fit: cover;
-            display: block;
-            transition: transform 0.5s ease;
-        }
-
-        .story-image-wrap:hover .story-img {
-            transform: scale(1.03);
-        }
-
-        .story-content {
-            width: 100%;
-        }
-
-        .story-badge {
-            color: var(--accent);
-            font-weight: 800;
-            font-size: 0.88rem;
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-            margin-bottom: 0.5rem;
-            display: block;
-        }
-
-        .story-content h2 {
-            margin-bottom: 1.25rem;
-        }
-
-        .story-content p {
-            font-size: 1.05rem;
-            margin-bottom: 1.5rem;
-        }
-
-        .feature-list {
-            list-style: none;
-            margin-bottom: 2rem;
-        }
-
-        .feature-item {
-            display: flex;
-            align-items: flex-start;
-            gap: 10px;
-            margin-bottom: 0.8rem;
-            font-weight: 600;
-            color: var(--primary);
-        }
-
-        .feature-check {
-            width: 20px;
-            height: 20px;
-            fill: var(--accent);
-            flex-shrink: 0;
-            margin-top: 2px;
-        }
-
-        /* Seção de Áreas de Atuação */
-        .services-section {
-            background-color: var(--bg-light);
-        }
-
-        .section-header {
-            max-width: 680px;
-            margin: 0 auto 3.5rem auto;
-            text-align: center;
-        }
-
-        .section-header h2 {
-            margin-bottom: 0.8rem;
-        }
-
-        .services-grid {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 1.5rem;
-        }
-
-        .service-card {
-            background: #FFFFFF;
-            border-radius: var(--radius-md);
-            padding: 2rem;
-            border: 1px solid var(--border-color);
-            transition: all 0.3s ease;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-        }
-
-        .service-card:hover {
-            transform: translateY(-5px);
-            box-shadow: var(--shadow-md);
-            border-color: var(--accent);
-        }
-
-        .service-icon-box {
-            width: 48px;
-            height: 48px;
-            border-radius: 10px;
-            background: rgba(50, 55, 60, 0.06);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 1.25rem;
-            color: var(--primary);
-        }
-
-        .service-card h3 {
-            margin-bottom: 0.75rem;
-        }
-
-        .service-card p {
-            font-size: 0.95rem;
-            line-height: 1.5;
-        }
-
-        /* Componente Neutro de Triagem de Situação */
-        .assessment-section {
-            background: var(--primary);
-            color: #FFFFFF;
-            padding: 4.5rem 0;
-        }
-
-        .assessment-card {
-            background: rgba(255, 255, 255, 0.05);
-            border: 1px solid rgba(255, 255, 255, 0.12);
-            border-radius: var(--radius-lg);
-            padding: 2.5rem 1.5rem;
-            max-width: 820px;
-            margin: 0 auto;
-        }
-
-        .assessment-card h2 {
-            color: #FFFFFF;
-            margin-bottom: 1rem;
-        }
-
-        .assessment-card p {
-            color: #CBD5E1;
-        }
-
-        .assessment-options {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 1rem;
-            margin: 2rem 0;
-        }
-
-        .assessment-opt {
-            background: rgba(255, 255, 255, 0.08);
-            border: 1px solid rgba(255, 255, 255, 0.15);
-            padding: 1.2rem;
-            border-radius: var(--radius-sm);
-            color: #FFFFFF;
-            font-weight: 600;
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            cursor: pointer;
-            transition: all 0.2s ease;
-        }
-
-        .assessment-opt:hover {
-            background: rgba(197, 160, 89, 0.2);
-            border-color: var(--accent);
-        }
-
-        .opt-radio {
-            width: 18px;
-            height: 18px;
-            border-radius: 50%;
-            border: 2px solid var(--accent);
-            flex-shrink: 0;
-        }
-
-        .assessment-result {
-            background: rgba(255, 255, 255, 0.1);
-            border-left: 4px solid var(--accent);
-            padding: 1.25rem;
-            border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
-            margin-top: 1.5rem;
-            text-align: left;
-        }
-
-        .assessment-result p {
-            color: #F1F5F9;
-            margin-bottom: 0;
-            font-size: 0.95rem;
-        }
-
-        /* Quem Somos */
-        .about-section {
-            background: #FFFFFF;
-        }
-
-        .about-card {
-            background: var(--bg-light);
-            border-radius: var(--radius-lg);
-            padding: 3.5rem 2rem;
-            border: 1px solid var(--border-color);
-        }
-
-        /* CTA Final */
-        .cta-final {
-            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
-            color: #FFFFFF;
-            text-align: center;
-            padding: 5rem 0;
-        }
-
-        .cta-final h2 {
-            color: #FFFFFF;
-            margin-bottom: 1rem;
-        }
-
-        .cta-final p {
-            color: #CBD5E1;
-            font-size: 1.15rem;
-            max-width: 620px;
-            margin: 0 auto 2rem auto;
-        }
-
-        /* Rodapé */
-        footer {
-            background-color: var(--primary-dark);
-            color: #94A3B8;
-            padding: 4rem 0 2rem 0;
-            border-top: 1px solid rgba(255,255,255,0.08);
-            font-size: 0.9rem;
-        }
-
-        .footer-grid {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 2.5rem;
-            margin-bottom: 3rem;
-        }
-
-        .footer-brand h4 {
-            color: #FFFFFF;
-            font-size: 1.2rem;
-            margin-bottom: 1rem;
-        }
-
-        .footer-links h5, .footer-contact h5 {
-            color: #FFFFFF;
-            font-size: 1rem;
-            margin-bottom: 1.2rem;
-        }
-
-        .footer-links ul {
-            list-style: none;
-        }
-
-        .footer-links li {
-            margin-bottom: 0.6rem;
-        }
-
-        .footer-links a:hover {
-            color: var(--accent);
-        }
-
-        .social-links {
-            display: flex;
-            gap: 12px;
-            margin-top: 1.2rem;
-        }
-
-        .social-btn {
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            background: rgba(255,255,255,0.08);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #FFFFFF;
-            transition: all 0.3s ease;
-        }
-
-        .social-btn:hover {
-            background: var(--accent);
-            color: #FFFFFF;
-        }
-
-        .social-icon {
-            width: 20px;
-            height: 20px;
-            fill: currentColor;
-        }
-
-        .footer-bottom {
-            padding-top: 2rem;
-            border-top: 1px solid rgba(255,255,255,0.08);
-            text-align: center;
-            font-size: 0.85rem;
-        }
-
-        /* Botão Flutuante Fixado de WhatsApp */
-        .whatsapp-float {
-            position: fixed;
-            bottom: 24px;
-            right: 24px;
-            width: 60px;
-            height: 60px;
-            background-color: #25D366;
-            color: #FFFFFF;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            box-shadow: 0 8px 24px rgba(37, 211, 102, 0.45);
-            z-index: 9999;
-            transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-        }
-
-        .whatsapp-float:hover {
-            transform: scale(1.1);
-            background-color: #20ba5a;
-        }
-
-        .whatsapp-float-icon {
-            width: 32px;
-            height: 32px;
-            fill: currentColor;
-        }
-
-        /* Media Queries para Desktop */
-        @media (min-width: 768px) {
-            .menu-toggle-btn {
-                display: none;
-            }
-
-            nav {
-                position: static;
-                transform: none;
-                background: transparent;
-                padding: 0;
-                box-shadow: none;
-                flex-direction: row;
-                align-items: center;
-                gap: 2rem;
-                width: auto;
-            }
-
-            .authority-grid {
-                grid-template-columns: repeat(3, 1fr);
-            }
-
-            .story-grid {
-                flex-direction: row;
-                gap: 4rem;
-            }
-
-            .story-block:nth-child(even) .story-grid {
-                flex-direction: row-reverse;
-            }
-
-            .story-image-wrap, .story-content {
-                width: 50%;
-            }
-
-            .story-img {
-                height: 440px;
-            }
-
-            .services-grid {
-                grid-template-columns: repeat(3, 1fr);
-            }
-
-            .assessment-options {
-                grid-template-columns: repeat(2, 1fr);
-            }
-
-            .footer-grid {
-                grid-template-columns: 2fr 1fr 1fr;
-            }
-        }
-    </style>
+  <link rel="preconnect" href="https://cardone.adv.br">
+  <link rel="preconnect" href="https://www.google.com">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cardone Advocacia | Escritório Especializado em Direito Trabalhista</title>
+  <meta name="description" content="Escritório boutique especializado em Direito Trabalhista. Mais de 20 anos de atuação na defesa e orientação técnica dos direitos do trabalhador em todo o Brasil.">
+  
+  <!-- Open Graph -->
+  <meta property="og:title" content="Cardone Advocacia | Especialista em Direito Trabalhista">
+  <meta property="og:description" content="Mais de 20 anos de atuação em defesa dos direitos trabalhistas. Atendimento personalizado e consultoria jurídica especializada.">
+  <meta property="og:image" content="https://rd-previews-dharari01s-projects.vercel.app/cardone-advocacia/img/foto-1.webp">
+  <meta property="og:type" content="website">
+
+  <!-- Favicon SVG Data-URI -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2064%2064%22%3E%3Ccircle%20cx%3D%2232%22%20cy%3D%2232%22%20r%3D%2232%22%20fill%3D%22%2332373C%22%2F%3E%3Ctext%20x%3D%2232%22%20y%3D%2242%22%20font-family%3D%22system-ui%2C%20sans-serif%22%20font-size%3D%2230%22%20font-weight%3D%22bold%22%20fill%3D%22%23FFFFFF%22%20text-anchor%3D%22middle%22%3EC%3C%2Ftext%3E%3C%2Fsvg%3E">
+
+  <style>
+    /* RESET & VARS */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    :root {
+      --primary: #32373C;
+      --primary-dark: #1E2225;
+      --primary-light: #4D5359;
+      --accent: #D4AF37;
+      --whatsapp: #25D366;
+      --whatsapp-hover: #20bd5a;
+      --bg-body: #FAFAFA;
+      --bg-surface: #FFFFFF;
+      --bg-alt: #F1F3F5;
+      --text-main: #212529;
+      --text-muted: #6C757D;
+      --border-color: #E9ECEF;
+      --radius-sm: 8px;
+      --radius-md: 16px;
+      --radius-lg: 24px;
+      --shadow-sm: 0 4px 12px rgba(0, 0, 0, 0.04);
+      --shadow-md: 0 12px 32px rgba(50, 55, 60, 0.08);
+      --shadow-lg: 0 20px 40px rgba(0, 0, 0, 0.12);
+      --font-main: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      font-family: var(--font-main);
+      background-color: var(--bg-body);
+      color: var(--text-main);
+      line-height: 1.6;
+    }
+
+    body {
+      overflow-x: hidden;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 1.25rem;
+    }
+
+    /* HEADER & NAVIGATION */
+    .menu-toggle-input {
+      position: absolute;
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    .header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background-color: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--border-color);
+      transition: all 0.3s ease;
+    }
+
+    .header-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 72px;
+    }
+
+    .brand-logo {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      font-weight: 700;
+      font-size: 1.15rem;
+      color: var(--primary);
+      letter-spacing: -0.02em;
+    }
+
+    .brand-logo img {
+      width: 36px;
+      height: 36px;
+      border-radius: var(--radius-sm);
+    }
+
+    .menu-toggle-btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 44px;
+      height: 44px;
+      background: transparent;
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-sm);
+      cursor: pointer;
+      color: var(--primary);
+    }
+
+    .nav-menu {
+      position: fixed;
+      top: 72px;
+      left: 0;
+      right: 0;
+      background-color: var(--bg-surface);
+      border-bottom: 1px solid var(--border-color);
+      padding: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+      transform: translateY(-150%);
+      opacity: 0;
+      transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.3s ease;
+      box-shadow: var(--shadow-md);
+    }
+
+    .menu-toggle-input:checked ~ .header .nav-menu {
+      transform: translateY(0);
+      opacity: 1;
+    }
+
+    .nav-menu a {
+      font-weight: 500;
+      font-size: 1rem;
+      color: var(--primary);
+      transition: color 0.2s;
+    }
+
+    .nav-menu a:hover {
+      color: var(--accent);
+    }
+
+    .btn-nav-cta {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      background-color: var(--primary);
+      color: #FFFFFF !important;
+      padding: 0.75rem 1.25rem;
+      border-radius: var(--radius-sm);
+      font-weight: 600;
+      text-align: center;
+    }
+
+    /* HERO SECTION (Split Assimétrico) */
+    .hero-section {
+      padding: 2.5rem 0 3.5rem;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2rem;
+      align-items: center;
+    }
+
+    .hero-content-card {
+      background-color: var(--bg-surface);
+      padding: 2rem 1.5rem;
+      border-radius: var(--radius-lg);
+      border: 1px solid var(--border-color);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .badge-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.35rem 0.85rem;
+      background-color: var(--bg-alt);
+      color: var(--primary);
+      font-size: 0.85rem;
+      font-weight: 600;
+      border-radius: 50px;
+      margin-bottom: 1.25rem;
+      border: 1px solid var(--border-color);
+    }
+
+    .badge-tag span {
+      width: 8px;
+      height: 8px;
+      background-color: var(--accent);
+      border-radius: 50%;
+    }
+
+    .hero-title {
+      font-size: 1.85rem;
+      line-height: 1.2;
+      font-weight: 800;
+      color: var(--primary);
+      letter-spacing: -0.03em;
+      margin-bottom: 1rem;
+    }
+
+    .hero-subtitle {
+      font-size: 1rem;
+      color: var(--text-muted);
+      margin-bottom: 1.75rem;
+      line-height: 1.6;
+    }
+
+    .hero-bullets {
+      list-style: none;
+      margin-bottom: 2rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+
+    .hero-bullets li {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.75rem;
+      font-size: 0.95rem;
+      font-weight: 500;
+      color: var(--primary);
+    }
+
+    .hero-bullets svg {
+      flex-shrink: 0;
+      margin-top: 3px;
+      color: var(--primary);
+    }
+
+    .btn-primary-cta {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.75rem;
+      width: 100%;
+      background-color: var(--whatsapp);
+      color: #FFFFFF;
+      padding: 1.1rem 1.5rem;
+      border-radius: var(--radius-md);
+      font-size: 1.05rem;
+      font-weight: 700;
+      box-shadow: 0 8px 20px rgba(37, 211, 102, 0.25);
+      transition: transform 0.2s, background-color 0.2s;
+      text-align: center;
+    }
+
+    .btn-primary-cta:hover {
+      background-color: var(--whatsapp-hover);
+      transform: translateY(-2px);
+    }
+
+    .hero-media-card {
+      position: relative;
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: var(--shadow-md);
+      border: 1px solid var(--border-color);
+      max-height: 520px;
+    }
+
+    .hero-media-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center top;
+    }
+
+    /* STATS STRIP */
+    .stats-strip {
+      background-color: var(--primary);
+      color: #FFFFFF;
+      padding: 1.75rem 0;
+      margin-top: 1rem;
+    }
+
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.5rem 1rem;
+      text-align: center;
+    }
+
+    .stat-item-number {
+      font-size: 1.6rem;
+      font-weight: 800;
+      color: var(--accent);
+      line-height: 1.1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.3rem;
+    }
+
+    .stat-item-label {
+      font-size: 0.825rem;
+      color: #E2E8F0;
+      margin-top: 0.35rem;
+      font-weight: 500;
+    }
+
+    /* TRIAGEM INTERATIVA (Funil) */
+    .section-padding {
+      padding: 4rem 0;
+    }
+
+    .section-header {
+      text-align: center;
+      max-width: 720px;
+      margin: 0 auto 3rem;
+    }
+
+    .section-subtitle {
+      font-size: 0.875rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--primary-light);
+      margin-bottom: 0.5rem;
+    }
+
+    .section-title {
+      font-size: 1.75rem;
+      font-weight: 800;
+      color: var(--primary);
+      line-height: 1.25;
+      letter-spacing: -0.02em;
+    }
+
+    .triagem-box {
+      background-color: var(--bg-surface);
+      border-radius: var(--radius-lg);
+      padding: 2rem 1.5rem;
+      border: 1px solid var(--border-color);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .triagem-intro {
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: var(--primary);
+      margin-bottom: 1.5rem;
+      text-align: center;
+    }
+
+    .triagem-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1rem;
+      margin-bottom: 2rem;
+    }
+
+    .triagem-item {
+      background-color: var(--bg-body);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-md);
+      padding: 1.25rem;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .triagem-item:hover {
+      border-color: var(--primary);
+      background-color: #FFFFFF;
+    }
+
+    .triagem-item-title {
+      font-weight: 700;
+      font-size: 1rem;
+      color: var(--primary);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.5rem;
+    }
+
+    .triagem-item-desc {
+      font-size: 0.885rem;
+      color: var(--text-muted);
+      margin-top: 0.5rem;
+    }
+
+    .triagem-outcome {
+      background-color: var(--bg-alt);
+      border-radius: var(--radius-md);
+      padding: 1.5rem;
+      text-align: center;
+      border: 1px dashed var(--primary-light);
+    }
+
+    .triagem-outcome-text {
+      font-size: 0.95rem;
+      color: var(--primary);
+      margin-bottom: 1.25rem;
+      font-weight: 500;
+    }
+
+    /* SERVIÇOS - BENTO GRID */
+    .bento-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.25rem;
+    }
+
+    .bento-card {
+      background-color: var(--bg-surface);
+      border-radius: var(--radius-lg);
+      padding: 1.75rem;
+      border: 1px solid var(--border-color);
+      box-shadow: var(--shadow-sm);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .bento-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-md);
+    }
+
+    .bento-card.featured {
+      background-color: var(--primary);
+      color: #FFFFFF;
+      border: none;
+    }
+
+    .bento-card.featured .bento-title,
+    .bento-card.featured .bento-text {
+      color: #FFFFFF;
+    }
+
+    .bento-card.featured .bento-text {
+      opacity: 0.9;
+    }
+
+    .bento-icon {
+      width: 48px;
+      height: 48px;
+      border-radius: var(--radius-sm);
+      background-color: var(--bg-alt);
+      color: var(--primary);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 1.25rem;
+    }
+
+    .bento-card.featured .bento-icon {
+      background-color: rgba(255, 255, 255, 0.15);
+      color: #FFFFFF;
+    }
+
+    .bento-title {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--primary);
+      margin-bottom: 0.75rem;
+      letter-spacing: -0.01em;
+    }
+
+    .bento-text {
+      font-size: 0.925rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+
+    /* SOBRE O ESCRITÓRIO */
+    .about-section {
+      background-color: var(--bg-alt);
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2.5rem;
+      align-items: center;
+    }
+
+    .about-image-card {
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: var(--shadow-md);
+      border: 1px solid var(--border-color);
+    }
+
+    .about-image-card img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .about-content-title {
+      font-size: 1.75rem;
+      font-weight: 800;
+      color: var(--primary);
+      margin-bottom: 1.25rem;
+      letter-spacing: -0.02em;
+    }
+
+    .about-paragraph {
+      font-size: 0.975rem;
+      color: var(--text-main);
+      margin-bottom: 1rem;
+      line-height: 1.7;
+    }
+
+    /* PROVA SOCIAL INSTITUCIONAL / AUTORIDADE */
+    .social-proof-strip {
+      background-color: var(--bg-surface);
+      border-top: 1px solid var(--border-color);
+      border-bottom: 1px solid var(--border-color);
+      padding: 3rem 0;
+    }
+
+    .proof-card {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding: 1.5rem;
+      background-color: var(--bg-body);
+      border-radius: var(--radius-md);
+      border: 1px solid var(--border-color);
+    }
+
+    .google-stars {
+      display: flex;
+      gap: 4px;
+      color: #FFC107;
+      margin-bottom: 0.5rem;
+    }
+
+    .proof-title {
+      font-size: 1.2rem;
+      font-weight: 800;
+      color: var(--primary);
+    }
+
+    .proof-desc {
+      font-size: 0.875rem;
+      color: var(--text-muted);
+      margin-top: 0.25rem;
+    }
+
+    /* CTA FINAL */
+    .cta-final-section {
+      background-color: var(--primary-dark);
+      color: #FFFFFF;
+      padding: 4.5rem 0;
+      text-align: center;
+      position: relative;
+    }
+
+    .cta-final-title {
+      font-size: 2rem;
+      font-weight: 800;
+      margin-bottom: 1rem;
+      letter-spacing: -0.02em;
+    }
+
+    .cta-final-desc {
+      font-size: 1.05rem;
+      color: #E2E8F0;
+      max-width: 640px;
+      margin: 0 auto 2rem;
+      line-height: 1.6;
+    }
+
+    .cta-final-btn-wrapper {
+      max-width: 400px;
+      margin: 0 auto;
+    }
+
+    /* RODAPÉ */
+    .footer {
+      background-color: var(--primary);
+      color: #E2E8F0;
+      padding: 3.5rem 0 2rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      font-size: 0.9rem;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2.5rem;
+      margin-bottom: 3rem;
+    }
+
+    .footer-brand {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .footer-brand-title {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: #FFFFFF;
+    }
+
+    .footer-text {
+      color: #A0AEC0;
+      line-height: 1.6;
+    }
+
+    .footer-heading {
+      font-size: 1rem;
+      font-weight: 700;
+      color: #FFFFFF;
+      margin-bottom: 1rem;
+    }
+
+    .footer-links {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.65rem;
+    }
+
+    .footer-links a {
+      color: #A0AEC0;
+      transition: color 0.2s;
+    }
+
+    .footer-links a:hover {
+      color: #FFFFFF;
+    }
+
+    .social-links {
+      display: flex;
+      gap: 1rem;
+    }
+
+    .social-btn {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background-color: rgba(255, 255, 255, 0.08);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #FFFFFF;
+      transition: background-color 0.2s;
+    }
+
+    .social-btn:hover {
+      background-color: var(--accent);
+      color: var(--primary);
+    }
+
+    .footer-bottom {
+      padding-top: 2rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      text-align: center;
+      color: #A0AEC0;
+      font-size: 0.825rem;
+    }
+
+    /* BOTÃO WHATSAPP FLUTUANTE */
+    .whatsapp-float {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 999;
+      width: 60px;
+      height: 60px;
+      background-color: var(--whatsapp);
+      color: #FFFFFF;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 10px 25px rgba(37, 211, 102, 0.4);
+      transition: transform 0.25s ease, background-color 0.2s;
+    }
+
+    .whatsapp-float:hover {
+      transform: scale(1.08);
+      background-color: var(--whatsapp-hover);
+    }
+
+    /* RESPONSIVIDADE (MOBILE-FIRST BREAKPOINTS) */
+    @media (min-width: 768px) {
+      .menu-toggle-btn {
+        display: none;
+      }
+
+      .nav-menu {
+        position: static;
+        transform: none;
+        opacity: 1;
+        padding: 0;
+        flex-direction: row;
+        align-items: center;
+        gap: 1.75rem;
+        box-shadow: none;
+        border-bottom: none;
+        background-color: transparent;
+      }
+
+      .hero-section {
+        padding: 4rem 0 5rem;
+      }
+
+      .hero-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 3rem;
+      }
+
+      .hero-title {
+        font-size: 2.35rem;
+      }
+
+      .stats-grid {
+        grid-template-columns: repeat(4, 1fr);
+      }
+
+      .triagem-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .bento-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      .bento-card.span-2 {
+        grid-column: span 2;
+      }
+
+      .bento-card.span-3 {
+        grid-column: span 3;
+      }
+
+      .about-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .footer-grid {
+        grid-template-columns: 2fr 1fr 1fr;
+      }
+    }
+  </style>
 </head>
 <body>
 
-    <!-- Cabeçalho -->
-    <header>
-        <div class="container header-container">
-            <a href="#" class="logo-wrapper" aria-label="Cardone Advocacia - Página Inicial">
-                <img src="img/foto-4.jpg" alt="Monograma da Cardone Advocacia" class="logo-img">
-                <span>Cardone Advocacia</span>
-            </a>
+  <!-- Input Hack para Menu Mobile -->
+  <input type="checkbox" id="menu-toggle" class="menu-toggle-input" aria-hidden="true">
 
-            <input type="checkbox" id="menu-toggle" class="menu-toggle-input" aria-hidden="true">
-            <label for="menu-toggle" class="menu-toggle-btn" aria-label="Abrir menu de navegação" role="button" aria-expanded="false">
-                <svg class="hamburger-icon" viewBox="0 0 24 24">
-                    <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
-                </svg>
-            </label>
+  <!-- HEADER -->
+  <header class="header">
+    <div class="container header-container">
+      <a href="#" class="brand-logo" aria-label="Cardone Advocacia Página Inicial">
+        <img src="img/foto-4.jpg" alt="Logo Cardone Advocacia" width="36" height="36">
+        <span>Cardone Advocacia</span>
+      </a>
 
-            <nav role="navigation" aria-label="Menu principal">
-                <a href="#diferenciais" class="nav-link">Diferenciais</a>
-                <a href="#atuacao" class="nav-link">Áreas de Atuação</a>
-                <a href="#triagem" class="nav-link">Triagem Inicial</a>
-                <a href="#sobre" class="nav-link">Quem Somos</a>
-                <a href="https://wa.me/5521996042087?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." class="btn btn-primary" target="_blank" rel="noopener">
-                    <span>Falar com Advogado</span>
-                </a>
-            </nav>
-        </div>
-    </header>
-
-    <!-- Hero Section (Tratamento Glassmorphic / Storytelling) -->
-    <section class="hero">
-        <div class="container">
-            <div class="hero-glass-card">
-                <span class="hero-tag">Boutique de Advocacia Trabalhista</span>
-                <h1>Precisando de um Advogado Especialista em Direito Trabalhista?</h1>
-                <p>Oferecemos suporte completo em cada fase do seu processo trabalhista. Nosso compromisso é garantir que seus direitos sejam protegidos, com representação dedicada e orientação jurídica especializada a todo momento.</p>
-                
-                <div>
-                    <a href="https://wa.me/5521996042087?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." class="btn btn-whatsapp" target="_blank" rel="noopener">
-                        <svg class="btn-icon" viewBox="0 0 24 24">
-                            <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/>
-                        </svg>
-                        <span>Clique Para Falar Conosco Agora</span>
-                    </a>
-                </div>
-
-                <div class="google-badge">
-                    <div class="google-stars">
-                        <svg class="google-star-icon" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
-                        <svg class="google-star-icon" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
-                        <svg class="google-star-icon" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
-                        <svg class="google-star-icon" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
-                        <svg class="google-star-icon" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
-                    </div>
-                    <span class="google-badge-text">Nota 5 no Google com 16 avaliações</span>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Barra de Autoridade Credenciada -->
-    <section class="authority-bar">
-        <div class="container">
-            <div class="authority-grid">
-                <div class="authority-item">
-                    <div class="authority-number">Mais de 20 Anos</div>
-                    <div class="authority-label">De Atuação em Defesa dos Direitos Trabalhistas</div>
-                </div>
-                <div class="authority-item">
-                    <div class="authority-number">Boutique Jurídica</div>
-                    <div class="authority-label">Atendimento Criterioso e Planejamento Estratégico</div>
-                </div>
-                <div class="authority-item">
-                    <div class="authority-number">Abrangência Nacional</div>
-                    <div class="authority-label">Consultoria e Defesa em Todo o Brasil</div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Storytelling em Blocos Alternados (Zig-Zag) -->
-    <section id="diferenciais" class="story-section">
-        
-        <!-- Bloco 1: Assédio Moral -->
-        <article class="story-block">
-            <div class="container">
-                <div class="story-grid">
-                    <div class="story-image-wrap">
-                        <img src="img/foto-2.jpg" alt="Atendimento jurídico especializado no escritório Cardone Advocacia" class="story-img" loading="lazy">
-                    </div>
-                    <div class="story-content">
-                        <span class="story-badge">Defesa da Dignidade</span>
-                        <h2>Sofreu Humilhações, Ameaças ou Constrangimentos no Trabalho?</h2>
-                        <p>Nenhum trabalhador é obrigado a suportar ofensas, gritos ou pressões abusivas no ambiente de trabalho. Isso é assédio moral, e a lei garante o direito à reparação por danos morais e materiais.</p>
-                        <p>Com mais de 20 anos de atuação, nosso escritório acolhe, orienta e defende trabalhadores vítimas de abuso, buscando indenizações justas e respeito à sua dignidade.</p>
-                        <ul class="feature-list">
-                            <li class="feature-item">
-                                <svg class="feature-check" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg>
-                                Acolhimento humano e totalmente sigiloso
-                            </li>
-                            <li class="feature-item">
-                                <svg class="feature-check" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg>
-                                Análise criteriosa de provas e abusos no ambiente de trabalho
-                            </li>
-                            <li class="feature-item">
-                                <svg class="feature-check" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg>
-                                Busca firme por reparação jurídica proporcional
-                            </li>
-                        </ul>
-                        <a href="https://wa.me/5521996042087?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." class="btn btn-primary" target="_blank" rel="noopener">
-                            <span>Converse Agora com um Advogado e Saiba Como Agir</span>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </article>
-
-        <!-- Bloco 2: Reconstituição e Análise Rescisória -->
-        <article class="story-block">
-            <div class="container">
-                <div class="story-grid">
-                    <div class="story-image-wrap">
-                        <img src="img/foto-3.webp" alt="Consultoria e análise de direitos contratuais Cardone Advocacia" class="story-img" loading="lazy">
-                    </div>
-                    <div class="story-content">
-                        <span class="story-badge">Análise Rescisória Detalhada</span>
-                        <h2>Demissão sem Saber Se Recebeu Tudo o Que Tinha Direito?</h2>
-                        <p>Muitos trabalhadores saem da empresa sem saber que deixaram de receber valores importantes como: horas extras, adicional noturno, férias proporcionais e até indenizações.</p>
-                        <p>Nosso escritório atua há mais de 20 anos defendendo os direitos de quem foi injustiçado no trabalho, analisando cada detalhe do seu caso para recuperar o que é seu por direito.</p>
-                        <ul class="feature-list">
-                            <li class="feature-item">
-                                <svg class="feature-check" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg>
-                                Conferência individualizada de verbas e saldo salarial
-                            </li>
-                            <li class="feature-item">
-                                <svg class="feature-check" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg>
-                                Identificação de irregularidades em banco de horas e intervalos
-                            </li>
-                            <li class="feature-item">
-                                <svg class="feature-check" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg>
-                                Verificação de depósitos de FGTS e seguro-desemprego
-                            </li>
-                        </ul>
-                        <a href="https://wa.me/5521996042087?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." class="btn btn-primary" target="_blank" rel="noopener">
-                            <span>Solicite a Revisão das Suas Horas Extras Agora</span>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </article>
-
-    </section>
-
-    <!-- Áreas de Atuação -->
-    <section id="atuacao" class="section services-section">
-        <div class="container">
-            <div class="section-header">
-                <h2>Áreas de Atuação — Conheça Nossos Serviços</h2>
-                <p>Tenha um Especialista em Direito do Trabalho para cuidar de todo o seu processo, desde a fase inicial até a sentença final.</p>
-            </div>
-
-            <div class="services-grid">
-                <div class="service-card">
-                    <div>
-                        <div class="service-icon-box">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-                        </div>
-                        <h3>Acidentes de Trabalho</h3>
-                        <p>Questões relacionadas à segurança no local de trabalho, garantindo estabilidade no emprego, indenizações por danos e suporte em direitos previdenciários.</p>
-                    </div>
-                </div>
-
-                <div class="service-card">
-                    <div>
-                        <div class="service-icon-box">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
-                        </div>
-                        <h3>Trabalho sem Registro</h3>
-                        <p>Mesmo sem carteira assinada, o trabalhador tem direito a férias, 13º, FGTS e demais benefícios. Atuamos na comprovação do vínculo empregatício.</p>
-                    </div>
-                </div>
-
-                <div class="service-card">
-                    <div>
-                        <div class="service-icon-box">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-                        </div>
-                        <h3>Reversão de Justa Causa</h3>
-                        <p>Análise técnica para verificar se a penalidade aplicada foi abusiva, entrando com ação para reverter e garantir todos os valores devidos por lei.</p>
-                    </div>
-                </div>
-
-                <div class="service-card">
-                    <div>
-                        <div class="service-icon-box">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
-                        </div>
-                        <h3>Rescisão Indireta</h3>
-                        <p>Ocorre quando o empregador descumpre o contrato de trabalho, permitindo que o funcionário solicite o desligamento com os mesmos direitos de uma demissão sem justa causa.</p>
-                    </div>
-                </div>
-
-                <div class="service-card">
-                    <div>
-                        <div class="service-icon-box">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
-                        </div>
-                        <h3>Verbas Rescisórias</h3>
-                        <p>Análise de saldo de salário, aviso prévio, férias proporcionais + 1/3, décimo terceiro e aplicação da multa de um salário por atraso no pagamento do acerto.</p>
-                    </div>
-                </div>
-
-                <div class="service-card">
-                    <div>
-                        <div class="service-icon-box">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg>
-                        </div>
-                        <h3>Horas Extras e Banco de Horas</h3>
-                        <p>Identificação de irregularidades no pagamento de horas trabalhadas além da jornada regular, intervalos não concedidos e compensações ilegais.</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="text-center" style="margin-top: 3rem;">
-                <a href="https://wa.me/5521996042087?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." class="btn btn-primary" target="_blank" rel="noopener">
-                    <span>Clique Para Falar Conosco Agora</span>
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Componente Neutro de Triagem de Situação Trabalhista -->
-    <section id="triagem" class="assessment-section">
-        <div class="container text-center">
-            <div class="assessment-card">
-                <h2>Para Quem É Esse Atendimento?</h2>
-                <p>Identifique se a sua situação profissional atual se enquadra em um destes cenários jurídicos:</p>
-
-                <div class="assessment-options">
-                    <div class="assessment-opt">
-                        <div class="opt-radio"></div>
-                        <span>Demissão sem justa causa com dúvidas sobre as verbas rescisórias</span>
-                    </div>
-                    <div class="assessment-opt">
-                        <div class="opt-radio"></div>
-                        <span>Prestação de serviço sem carteira assina (reconhecimento de vínculo)</span>
-                    </div>
-                    <div class="assessment-opt">
-                        <div class="opt-radio"></div>
-                        <span>Sofreu humilhação, cobrança excessiva ou assédio moral</span>
-                    </div>
-                    <div class="assessment-opt">
-                        <div class="opt-radio"></div>
-                        <span>Sofreu acidente no trabalho e não teve suporte adequado</span>
-                    </div>
-                </div>
-
-                <div class="assessment-result">
-                    <p><strong>Análise Individualizada:</strong> Realizamos o estudo detalhado da sua categoria, convenção coletiva e legislação específica para avaliar o seu caso com total sigilo e responsabilidade. Entre em contato com a nossa equipe.</p>
-                </div>
-
-                <div style="margin-top: 2rem;">
-                    <a href="https://wa.me/5521996042087?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." class="btn btn-whatsapp" target="_blank" rel="noopener">
-                        <svg class="btn-icon" viewBox="0 0 24 24">
-                            <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/>
-                        </svg>
-                        <span>Falar com um Especialista no WhatsApp</span>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Quem Somos -->
-    <section id="sobre" class="section about-section">
-        <div class="container">
-            <div class="about-card">
-                <div class="section-header" style="margin-bottom: 2rem;">
-                    <h2>Quem Somos — Conheça Nosso Escritório</h2>
-                    <p>Cardone Advocacia & Consultoria Jurídica</p>
-                </div>
-                <div style="max-width: 820px; margin: 0 auto; text-align: center;">
-                    <p>Desde sua fundação, o escritório <strong>Cardone Advocacia & Consultoria Jurídica</strong> se destacou como uma boutique de advocacia especializada em Direito Trabalhista, oferecendo consultoria e defesa de direitos com excelência em todo o Brasil.</p>
-                    <p>O diferencial do escritório é o atendimento criterioso e personalizado para cada cliente, com a elaboração de estratégias jurídicas cuidadosamente planejadas, refletindo o verdadeiro conceito de uma boutique de advocacia.</p>
-                    <p>Nos últimos anos, o escritório tem obtido êxito em diversos casos, destacando-se pela qualidade e dedicação da equipe, confirmando a eficácia de sua filosofia de atuação.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Chamada Final (CTA) -->
-    <section class="cta-final">
-        <div class="container">
-            <h2>Por Que Escolher Nosso Escritório?</h2>
-            <p>Com atuação especializada e criteriosa, estamos prontos para acolher sua demanda e defender seus direitos trabalhistas.</p>
-            <a href="https://wa.me/5521996042087?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." class="btn btn-whatsapp" target="_blank" rel="noopener">
-                <svg class="btn-icon" viewBox="0 0 24 24">
-                    <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/>
-                </svg>
-                <span>Clique Para Falar Conosco Agora</span>
-            </a>
-        </div>
-    </section>
-
-    <!-- Rodapé -->
-    <footer>
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-brand">
-                    <h4>Cardone Advocacia</h4>
-                    <p>Boutique de advocacia especializada em Direito Trabalhista. Estratégias jurídicas personalizadas e defesa dedicada de direitos em todo o território nacional.</p>
-                    <div class="social-links">
-                        <a href="https://www.instagram.com/CardoneAdvocacia" target="_blank" rel="noopener" class="social-btn" aria-label="Acessar perfil no Instagram da Cardone Advocacia">
-                            <svg class="social-icon" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
-                        </a>
-                        <a href="https://www.facebook.com/CardoneAdvocacia" target="_blank" rel="noopener" class="social-btn" aria-label="Acessar página no Facebook da Cardone Advocacia">
-                            <svg class="social-icon" viewBox="0 0 24 24"><path d="M9 8H6v4h3v12h5V12h3.642L18 8h-4V6.333C14 5.374 14.5 5 15.5 5H18V0h-3.808C10.592 0 9 1.583 9 4.615V8z"/></svg>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="footer-links">
-                    <h5>Navegação</h5>
-                    <ul>
-                        <li><a href="#diferenciais">Diferenciais</a></li>
-                        <li><a href="#atuacao">Áreas de Atuação</a></li>
-                        <li><a href="#triagem">Avalie seu Caso</a></li>
-                        <li><a href="#sobre">Quem Somos</a></li>
-                    </ul>
-                </div>
-
-                <div class="footer-contact">
-                    <h5>Atendimento</h5>
-                    <p>Atendimento jurídico com abrangência em todo o Brasil.</p>
-                    <p style="margin-top: 0.8rem;">
-                        <strong>Canal de Atendimento:</strong><br>
-                        <a href="https://wa.me/5521996042087?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." style="color: var(--accent); font-weight: 700;">Atendimento via WhatsApp</a>
-                    </p>
-                </div>
-            </div>
-
-            <div class="footer-bottom">
-                <p>&copy; 2026 Cardone Advocacia & Consultoria Jurídica. Todos os direitos reservados.</p>
-            </div>
-        </div>
-    </footer>
-
-    <!-- Botão Flutuante Fixado do WhatsApp -->
-    <a href="https://wa.me/5521996042087?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." class="whatsapp-float" target="_blank" rel="noopener" aria-label="Falar no WhatsApp com Cardone Advocacia">
-        <svg class="whatsapp-float-icon" viewBox="0 0 24 24">
-            <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/>
+      <label for="menu-toggle" class="menu-toggle-btn" aria-label="Abrir menu de navegação" role="button">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
         </svg>
-    </a>
+      </label>
+
+      <nav class="nav-menu" role="navigation" aria-label="Navegação Principal">
+        <a href="#inicio">Início</a>
+        <a href="#triagem">Sua Situação</a>
+        <a href="#atuacao">Áreas de Atuação</a>
+        <a href="#sobre">Quem Somos</a>
+        <a href="https://wa.me/5521996042087?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." class="btn-nav-cta" target="_blank" rel="noopener">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+          Falar com Advogado
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO SECTION (VARIANTE SPLIT ASSIMÉTRICO) -->
+  <section id="inicio" class="hero-section">
+    <div class="container">
+      <div class="hero-grid">
+        
+        <!-- Coluna Esquerda: Texto e CTA -->
+        <div class="hero-content-card">
+          <div class="badge-tag">
+            <span></span> Boutique de Advocacia Trabalhista
+          </div>
+          <h1 class="hero-title">Advocacia Especializada em Direitos Trabalhistas</h1>
+          <p class="hero-subtitle">
+            Oferecemos suporte completo em cada fase do seu processo trabalhista. Nosso compromisso é garantir que seus direitos sejam protegidos, com representação dedicada e orientação jurídica especializada.
+          </p>
+          <ul class="hero-bullets">
+            <li>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>Atendimento criterioso e 100% personalizado</span>
+            </li>
+            <li>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>Estratégias jurídicas cuidadosamente planejadas</span>
+            </li>
+            <li>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>Defesa e consultoria jurídica em todo o Brasil</span>
+            </li>
+          </ul>
+          <a href="https://wa.me/5521996042087?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." class="btn-primary-cta" target="_blank" rel="noopener">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
+            CLIQUE PARA FALAR CONOSCO AGORA
+          </a>
+        </div>
+
+        <!-- Coluna Direita: Primeira Foto Real Exclusiva -->
+        <div class="hero-media-card">
+          <img src="img/foto-2.jpg" alt="Atendimento Especializado Cardone Advocacia">
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FAIXA DE ESTATÍSTICAS / NÚMEROS REAIS -->
+  <div class="stats-strip">
+    <div class="container">
+      <div class="stats-grid">
+        <div>
+          <div class="stat-item-number">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="#FFC107" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+            5.0
+          </div>
+          <div class="stat-item-label">Nota no Google (16 Avaliações)</div>
+        </div>
+        <div>
+          <div class="stat-item-number">+20 Anos</div>
+          <div class="stat-item-label">De Atuação Defendendo Trabalhadores</div>
+        </div>
+        <div>
+          <div class="stat-item-number">Boutique</div>
+          <div class="stat-item-label">Atendimento Exclusivo e Criterioso</div>
+        </div>
+        <div>
+          <div class="stat-item-number">Brasil</div>
+          <div class="stat-item-label">Atuação Jurídica Nacional</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SEÇÃO DE TRIAGEM INTERATIVA (Para quem é esse atendimento) -->
+  <section id="triagem" class="section-padding">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-subtitle">Triagem de Direitos</span>
+        <h2 class="section-title">Para quem é este atendimento?</h2>
+      </div>
+
+      <div class="triagem-box">
+        <p class="triagem-intro">Identifique a situação na qual você se encontra atualmente:</p>
+        
+        <div class="triagem-grid">
+          <div class="triagem-item">
+            <div class="triagem-item-title">
+              <span>Assédio Moral no Trabalho</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+            </div>
+            <div class="triagem-item-desc">Sofreu humilhações, ofensas, gritos, ameaças ou pressões abusivas no ambiente de trabalho.</div>
+          </div>
+
+          <div class="triagem-item">
+            <div class="triagem-item-title">
+              <span>Demissão e Valores Pendentes</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+            </div>
+            <div class="triagem-item-desc">Sente que foi demitido sem receber horas extras, adicional noturno, férias ou verbas rescisórias.</div>
+          </div>
+
+          <div class="triagem-item">
+            <div class="triagem-item-title">
+              <span>Trabalho Sem Carteira Assinada</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+            </div>
+            <div class="triagem-item-desc">Prestou serviços sem registro formal e necessita comprovar o vínculo empregatício e receber FGTS e férias.</div>
+          </div>
+
+          <div class="triagem-item">
+            <div class="triagem-item-title">
+              <span>Demissão por Justa Causa Abusiva</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+            </div>
+            <div class="triagem-item-desc">Foi penalizado indevidamente com justa causa e precisa reverter a punição para garantir seus direitos.</div>
+          </div>
+
+          <div class="triagem-item">
+            <div class="triagem-item-title">
+              <span>Acidente ou Doença de Trabalho</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+            </div>
+            <div class="triagem-item-desc">Ficou desamparado após acidente profissional, sem suporte médico, estabilidade ou indenização devida.</div>
+          </div>
+
+          <div class="triagem-item">
+            <div class="triagem-item-title">
+              <span>Horas Extras Não Pagas</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+            </div>
+            <div class="triagem-item-desc">Trabalhou além da jornada regular ou teve compensações ilegais no banco de horas.</div>
+          </div>
+        </div>
+
+        <div class="triagem-outcome">
+          <p class="triagem-outcome-text">Cada situação trabalhista possui especificidades que exigem uma análise minuciosa da legislação e da convenção coletiva da sua categoria.</p>
+          <a href="https://wa.me/5521996042087?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." class="btn-primary-cta" target="_blank" rel="noopener">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
+            CONVERSE AGORA COM UM ADVOGADO E SAIBA COMO AGIR
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVIÇOS EM GRID BENTO -->
+  <section id="atuacao" class="section-padding" style="background-color: var(--bg-alt);">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-subtitle">Especialização Técnica</span>
+        <h2 class="section-title">Conheça Nossas Áreas de Atuação</h2>
+      </div>
+
+      <div class="bento-grid">
+        
+        <!-- Bento Card 1 (Destaque Principal - Bento Grande) -->
+        <div class="bento-card featured span-2">
+          <div>
+            <div class="bento-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+            </div>
+            <h3 class="bento-title">Combate ao Assédio Moral no Trabalho</h3>
+            <p class="bento-text">
+              Nenhum trabalhador é obrigado a suportar ofensas, gritos ou pressões abusivas no ambiente de trabalho. Isso caracteriza assédio moral e a lei garante o direito à reparação por danos morais e materiais. O escritório acolhe, orienta e defende trabalhadores buscando indenizações justas e o respeito à sua dignidade.
+            </p>
+          </div>
+        </div>
+
+        <!-- Bento Card 2 (Médio) -->
+        <div class="bento-card">
+          <div>
+            <div class="bento-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+            </div>
+            <h3 class="bento-title">Análise de Verbas Rescisórias</h3>
+            <p class="bento-text">
+              Exame detalhado de saldo de salário, aviso prévio, férias proporcionais com 1/3, 13º salário e aplicação de multa por atraso no pagamento do acerto contratual.
+            </p>
+          </div>
+        </div>
+
+        <!-- Bento Card 3 (Médio) -->
+        <div class="bento-card">
+          <div>
+            <div class="bento-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="8.5" cy="7" r="4"></circle><line x1="20" y1="8" x2="20" y2="14"></line><line x1="23" y1="11" x2="17" y2="11"></line></svg>
+            </div>
+            <h3 class="bento-title">Reconhecimento de Vínculo (Sem Registro)</h3>
+            <p class="bento-text">
+              Ações voltadas à comprovação do vínculo empregatício de quem trabalhou sem carteira assinada, assegurando direitos como FGTS, 13º, férias e demais indenizações.
+            </p>
+          </div>
+        </div>
+
+        <!-- Bento Card 4 (Médio) -->
+        <div class="bento-card">
+          <div>
+            <div class="bento-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+            </div>
+            <h3 class="bento-title">Horas Extras & Banco de Horas</h3>
+            <p class="bento-text">
+              Revisão técnica de jornadas de trabalho, intervalos intrajornada desrespeitados, adicional noturno e compensações irregulares em banco de horas.
+            </p>
+          </div>
+        </div>
+
+        <!-- Bento Card 5 (Médio) -->
+        <div class="bento-card">
+          <div>
+            <div class="bento-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"></path></svg>
+            </div>
+            <h3 class="bento-title">Acidentes de Trabalho & Estabilidade</h3>
+            <p class="bento-text">
+              Garantia de suporte médico, estabilidade acidentária no emprego, indenização por danos decorrentes de acidentes e auxílio em direitos previdenciários.
+            </p>
+          </div>
+        </div>
+
+        <!-- Bento Card 6 (Bento Grande / Span 3) -->
+        <div class="bento-card span-3">
+          <div>
+            <h3 class="bento-title">Demais Demandas e Contratos de Trabalho</h3>
+            <p class="bento-text">
+              Atuação completa em Rescisão Indireta (quando a empresa descumpre o contrato), reversão de Demissão por Justa Causa indevida, fiscalização de depósitos de FGTS, equiparação salarial, regras de trabalho temporário, terceirização e direitos sobre férias e licenças.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- QUEM SOMOS (SOBRE O ESCRITÓRIO) -->
+  <section id="sobre" class="section-padding about-section">
+    <div class="container">
+      <div class="about-grid">
+        
+        <!-- Imagem Real do Escritório -->
+        <div class="about-image-card">
+          <img src="img/foto-3.webp" alt="Escritório Cardone Advocacia & Consultoria Jurídica" loading="lazy">
+        </div>
+
+        <!-- Texto Institucional Real -->
+        <div>
+          <span class="section-subtitle">Quem Somos</span>
+          <h2 class="about-content-title">Cardone Advocacia & Consultoria Jurídica</h2>
+          <p class="about-paragraph">
+            Desde sua fundação, o escritório <strong>Cardone Advocacia & Consultoria Jurídica</strong> se destacou como uma boutique de advocacia especializada em direito trabalhista, oferecendo consultoria e defesa de direitos com excelência em todo o Brasil.
+          </p>
+          <p class="about-paragraph">
+            O diferencial do escritório é o atendimento criterioso e personalizado para cada cliente, com a elaboração de estratégias jurídicas cuidadosamente planejadas, refletindo o verdadeiro conceito de uma boutique de advocacia.
+          </p>
+          <p class="about-paragraph">
+            Nos últimos anos, o escritório tem obtido êxito em diversos casos, destacando-se pela qualidade e dedicação da equipe, confirmando a eficácia de sua filosofia de atuação.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- SEÇÃO DE AUTORIDADE INSTITUCIONAL -->
+  <section class="social-proof-strip">
+    <div class="container">
+      <div class="proof-card">
+        <div class="google-stars">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="#FFC107" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="#FFC107" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="#FFC107" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="#FFC107" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="#FFC107" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+        </div>
+        <div class="proof-title">Nota 5.0 de Avaliação no Google</div>
+        <div class="proof-desc">Reconhecimento auditado por clientes atendidos com transparência e ética profissional.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA FINAL -->
+  <section id="contato" class="cta-final-section">
+    <div class="container">
+      <h2 class="cta-final-title">Precisa da Ajuda de um Advogado Trabalhista?</h2>
+      <p class="cta-final-desc">
+        Tenha um especialista para cuidar de todo o seu processo, desde a fase inicial até a sentença final. Entre em contato para avaliar seu caso com sigilo e rapidez.
+      </p>
+      <div class="cta-final-btn-wrapper">
+        <a href="https://wa.me/5521996042087?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." class="btn-primary-cta" target="_blank" rel="noopener">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
+          FALE COM NOSSO ESCRITÓRIO
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- RODAPÉ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        
+        <div class="footer-brand">
+          <div class="footer-brand-title">Cardone Advocacia</div>
+          <p class="footer-text">
+            Boutique de advocacia especializada em Direito do Trabalho. Atendimento individualizado e personalizado em todo o território nacional.
+          </p>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">Central de Atendimento</h4>
+          <ul class="footer-links">
+            <li>
+              Atendimento via WhatsApp:
+            </li>
+            <li>
+              <a href="tel:+5521996042087" style="font-weight: 700; color: #FFFFFF;">(21) 99604-2087</a>
+            </li>
+            <li style="margin-top: 0.5rem;">
+              Atuação: Defesa Técnica Jurídica em todo o Brasil
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">Redes Sociais</h4>
+          <div class="social-links">
+            <a href="https://www.instagram.com/CardoneAdvocacia" class="social-btn" target="_blank" rel="noopener" aria-label="Instagram da Cardone Advocacia">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+            </a>
+            <a href="https://www.facebook.com/CardoneAdvocacia" class="social-btn" target="_blank" rel="noopener" aria-label="Facebook da Cardone Advocacia">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 Cardone Advocacia & Consultoria Jurídica. Todos os direitos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- BOTÃO FLUTUANTE DO WHATSAPP -->
+  <a href="https://wa.me/5521996042087?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." class="whatsapp-float" target="_blank" rel="noopener" aria-label="Falar pelo WhatsApp com Cardone Advocacia">
+    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
+  </a>
 
 <div style="position:fixed;bottom:18px;left:50%;transform:translateX(-50%);z-index:2147483647;background:rgba(255,255,255,0.96);border-radius:999px;padding:10px 22px 10px 12px;box-shadow:0 6px 20px rgba(0,0,0,0.22);display:flex;align-items:center;gap:9px;font-family:Inter,-apple-system,sans-serif;"><img src="https://rd-previews-dharari01s-projects.vercel.app/_assets/logo-rd-exclusive.png" alt="RD Exclusive" style="height:26px;width:auto;display:block;"><span style="font-size:14px;font-weight:700;color:#1A1A1A;white-space:nowrap;">Protótipo por RD Exclusive</span></div></body>
 </html>
