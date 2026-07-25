@@ -1,484 +1,375 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <link rel="preconnect" href="https://cardone.adv.br">
-    <link rel="preconnect" href="https://www.google.com">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cardone Advocacia | Escritório Especializado em Direito Trabalhista</title>
-    <meta name="description" content="Escritório de advocacia especializado em Direito Trabalhista. Mais de 20 anos de atuação na defesa e orientação de trabalhadores em todo o Brasil.">
+    <meta name="description" content="Advocacia trabalhista especializada. Com mais de 20 anos de atuação na defesa dedicada dos direitos do trabalhador com atendimento criterioso em todo o Brasil.">
     
-    <!-- Open Graph -->
-    <meta property="og:title" content="Cardone Advocacia | Escritório Especializado em Direito Trabalhista">
-    <meta property="og:description" content="Escritório de advocacia especializado em Direito Trabalhista. Mais de 20 anos de atuação na defesa e orientação de trabalhadores em todo o Brasil.">
+    <!-- Preconnects de Performance -->
+    <link rel="preconnect" href="https://cardone.adv.br">
+    <link rel="preconnect" href="https://www.google.com">
+    
+    <!-- Open Graph Social Preview -->
+    <meta property="og:title" content="Cardone Advocacia | Especialista em Direito Trabalhista">
+    <meta property="og:description" content="Advocacia trabalhista especializada. Mais de 20 anos de atuação na defesa dedicada dos direitos do trabalhador.">
     <meta property="og:image" content="https://rd-previews-dharari01s-projects.vercel.app/cardone-advocacia/img/foto-1.webp">
     <meta property="og:type" content="website">
-
-    <!-- Favicon SVG Embutido -->
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20100%20100%22%3E%3Crect%20width%3D%22100%22%20height%3D%22100%22%20rx%3D%2220%22%20fill%3D%22%2332373C%22%2F%3E%3Ctext%20x%3D%2250%25%22%20y%3D%2255%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20fill%3D%22%23C5A059%22%20font-size%3D%2250%22%20font-weight%3D%22bold%22%20font-family%3D%22sans-serif%22%3EC%3C%2Ftext%3E%3C%2Fsvg%3E">
+    
+    <!-- Favicon SVG Embutido Data-URI -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2064%2064%22%3E%3Crect%20width%3D%2264%22%20height%3D%2264%22%20rx%3D%2212%22%20fill%3D%22%2332373C%22%2F%3E%3Ctext%20x%3D%2232%22%20y%3D%2242%22%20font-family%3D%22sans-serif%22%20font-size%3D%2232%22%20font-weight%3D%22bold%22%20fill%3D%22%23C5A059%22%20text-anchor%3D%22middle%22%3EC%3C%2Ftext%3E%3C%2Fsvg%3E">
 
     <style>
-        /* CSS RESET & VARIABLES */
+        :root {
+            --primary: #32373C;
+            --primary-dark: #1E2225;
+            --primary-light: #4A5056;
+            --accent: #C5A059;
+            --accent-hover: #B08C46;
+            --bg-light: #F8F9FA;
+            --bg-card: #FFFFFF;
+            --text-dark: #1A1D20;
+            --text-muted: #5A626A;
+            --border-color: #E2E8F0;
+            --shadow-sm: 0 2px 8px rgba(0,0,0,0.05);
+            --shadow-md: 0 10px 30px rgba(0,0,0,0.08);
+            --shadow-lg: 0 18px 40px rgba(0,0,0,0.14);
+            --radius-sm: 8px;
+            --radius-md: 14px;
+            --radius-lg: 20px;
+            --font-stack: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            --max-width: 1200px;
+        }
+
         *, *::before, *::after {
             box-sizing: border-box;
             margin: 0;
             padding: 0;
         }
 
-        :root {
-            --primary: #32373C;
-            --primary-dark: #222629;
-            --accent: #C5A059;
-            --accent-hover: #B08B46;
-            --whatsapp: #25D366;
-            --whatsapp-hover: #20BA5A;
-            --bg-light: #F8F9FA;
-            --bg-white: #FFFFFF;
-            --text-dark: #1A1D20;
-            --text-muted: #5A626A;
-            --border-color: #E2E8F0;
-            --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.05);
-            --shadow-md: 0 10px 25px rgba(0, 0, 0, 0.08);
-            --shadow-lg: 0 20px 40px rgba(0, 0, 0, 0.12);
-            --radius-sm: 8px;
-            --radius-md: 16px;
-            --radius-lg: 24px;
-            --font-main: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-            --font-heading: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-        }
-
         html {
             scroll-behavior: smooth;
-            font-family: var(--font-main);
-            color: var(--text-dark);
-            background-color: var(--bg-light);
-            line-height: 1.6;
+            font-size: 16px;
         }
 
         body {
-            overflow-x: hidden;
+            font-family: var(--font-stack);
+            color: var(--text-dark);
+            background-color: var(--bg-light);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        h1, h2, h3, h4 {
+            color: var(--primary);
+            font-weight: 800;
+            line-height: 1.25;
+            letter-spacing: -0.02em;
+        }
+
+        h1 { font-size: clamp(2rem, 4vw, 3.2rem); }
+        h2 { font-size: clamp(1.6rem, 3vw, 2.4rem); }
+        h3 { font-size: clamp(1.2rem, 2vw, 1.5rem); }
+
+        p {
+            margin-bottom: 1rem;
+            color: var(--text-muted);
         }
 
         a {
-            color: inherit;
             text-decoration: none;
+            color: inherit;
         }
 
-        img {
-            max-width: 100%;
-            height: auto;
-            display: block;
+        .container {
+            width: 100%;
+            max-width: var(--max-width);
+            margin: 0 auto;
+            padding: 0 1.25rem;
         }
 
-        /* TYPOGRAPHY */
-        h1, h2, h3, h4 {
-            font-family: var(--font-heading);
-            font-weight: 700;
-            line-height: 1.25;
-            color: var(--primary);
+        .section {
+            padding: 4.5rem 0;
         }
 
-        .section-tag {
-            display: inline-block;
-            font-size: 0.85rem;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 1.5px;
-            color: var(--accent);
-            margin-bottom: 0.75rem;
-        }
+        .text-center { text-align: center; }
 
-        .section-title {
-            font-size: 1.85rem;
-            margin-bottom: 1rem;
-        }
-
-        @media (min-width: 768px) {
-            .section-title {
-                font-size: 2.5rem;
-            }
-        }
-
-        .section-subtitle {
-            font-size: 1.05rem;
-            color: var(--text-muted);
-            max-width: 700px;
-            margin: 0 auto 2.5rem auto;
-        }
-
-        /* BUTTONS & CTAS */
-        .btn {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            gap: 10px;
-            padding: 14px 28px;
-            font-size: 1rem;
-            font-weight: 600;
-            border-radius: var(--radius-sm);
-            transition: all 0.3s ease;
-            cursor: pointer;
-            border: none;
-            text-align: center;
-        }
-
-        .btn-whatsapp {
-            background-color: var(--whatsapp);
-            color: #FFFFFF;
-            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
-        }
-
-        .btn-whatsapp:hover {
-            background-color: var(--whatsapp-hover);
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
-        }
-
-        .btn-primary {
-            background-color: var(--primary);
-            color: #FFFFFF;
-        }
-
-        .btn-primary:hover {
-            background-color: var(--primary-dark);
-            transform: translateY(-2px);
-        }
-
-        .btn-outline {
-            background: transparent;
-            color: var(--primary);
-            border: 2px solid var(--primary);
-        }
-
-        .btn-outline:hover {
-            background: var(--primary);
-            color: #FFFFFF;
-        }
-
-        /* HEADER & NAVIGATION */
-        .header {
-            position: sticky;
+        /* Header Fixado com Efeito Translucido */
+        header {
+            position: fixed;
             top: 0;
+            left: 0;
+            width: 100%;
             z-index: 1000;
-            background-color: rgba(255, 255, 255, 0.95);
+            background: rgba(255, 255, 255, 0.95);
             backdrop-filter: blur(10px);
-            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-            box-shadow: var(--shadow-sm);
+            border-bottom: 1px solid rgba(0,0,0,0.06);
         }
 
         .header-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 12px 20px;
             display: flex;
             align-items: center;
             justify-content: space-between;
+            height: 75px;
         }
 
-        .brand-logo {
+        .logo-wrapper {
             display: flex;
             align-items: center;
             gap: 12px;
-        }
-
-        .brand-logo img {
-            width: 42px;
-            height: 42px;
-            border-radius: 6px;
-        }
-
-        .brand-text {
-            display: flex;
-            flex-direction: column;
-        }
-
-        .brand-name {
-            font-size: 1.15rem;
             font-weight: 800;
+            font-size: 1.25rem;
             color: var(--primary);
-            letter-spacing: -0.5px;
-            line-height: 1.1;
         }
 
-        .brand-sub {
-            font-size: 0.72rem;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            color: var(--accent);
-            font-weight: 600;
+        .logo-img {
+            width: 38px;
+            height: 38px;
+            border-radius: 6px;
+            object-fit: contain;
         }
 
-        /* CSS Mobile Menu Toggle */
+        /* Checkbox Hack Menu Mobile */
         .menu-toggle-input {
-            display: none;
+            position: absolute;
+            opacity: 0;
+            pointer-events: none;
         }
 
         .menu-toggle-btn {
-            display: block;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 44px;
+            height: 44px;
             cursor: pointer;
-            padding: 8px;
-            border-radius: 6px;
-            background: var(--bg-light);
+            z-index: 1001;
         }
 
-        .menu-toggle-btn svg {
-            width: 24px;
-            height: 24px;
-            stroke: var(--primary);
-            display: block;
+        .hamburger-icon {
+            width: 26px;
+            height: 26px;
+            fill: var(--primary);
         }
 
-        .main-nav {
-            position: absolute;
-            top: 100%;
+        nav {
+            position: fixed;
+            top: 75px;
             left: 0;
             width: 100%;
             background: #FFFFFF;
-            padding: 0;
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.35s cubic-bezier(0, 1, 0.5, 1);
-            box-shadow: var(--shadow-md);
-        }
-
-        .menu-toggle-input:checked ~ .main-nav {
-            max-height: 400px;
-            padding: 20px 0;
-            border-bottom: 1px solid var(--border-color);
-        }
-
-        .nav-list {
-            list-style: none;
+            padding: 2rem 1.5rem;
+            box-shadow: var(--shadow-lg);
             display: flex;
             flex-direction: column;
-            align-items: center;
-            gap: 16px;
+            gap: 1.25rem;
+            transform: translateY(-150%);
+            transition: transform 0.4s ease;
+        }
+
+        .menu-toggle-input:checked ~ nav {
+            transform: translateY(0);
         }
 
         .nav-link {
             font-weight: 600;
-            color: var(--text-dark);
-            font-size: 1rem;
-            transition: color 0.2s;
+            color: var(--primary);
+            font-size: 1.05rem;
+            transition: color 0.2s ease;
         }
 
         .nav-link:hover {
             color: var(--accent);
         }
 
-        @media (min-width: 992px) {
-            .menu-toggle-btn {
-                display: none;
-            }
-
-            .main-nav {
-                position: static;
-                width: auto;
-                max-height: none;
-                background: transparent;
-                box-shadow: none;
-                padding: 0;
-            }
-
-            .nav-list {
-                flex-direction: row;
-                gap: 28px;
-            }
-
-            .header-cta {
-                display: inline-flex;
-            }
-        }
-
-        .header-cta {
-            display: none;
-        }
-
-        @media (min-width: 992px) {
-            .header-cta {
-                display: inline-flex;
-            }
-        }
-
-        /* HERO SECTION - STORYTELLING EMBEDDED GLASS */
-        .hero {
-            position: relative;
-            min-height: 85vh;
-            display: flex;
+        /* Botões Estilizados */
+        .btn {
+            display: inline-flex;
             align-items: center;
             justify-content: center;
-            background-image: linear-gradient(135deg, rgba(50, 55, 60, 0.88), rgba(26, 29, 32, 0.82)), url('img/foto-1.webp');
-            background-size: cover;
-            background-position: center;
-            padding: 60px 20px;
+            gap: 0.6rem;
+            padding: 0.95rem 1.8rem;
+            font-weight: 700;
+            border-radius: var(--radius-sm);
+            transition: all 0.25s ease;
+            cursor: pointer;
+            text-align: center;
+            border: none;
+            font-size: 1rem;
         }
 
-        .hero-container {
-            max-width: 900px;
-            width: 100%;
-            margin: 0 auto;
+        .btn-primary {
+            background-color: var(--accent);
+            color: #FFFFFF;
+            box-shadow: 0 4px 14px rgba(197, 160, 89, 0.35);
+        }
+
+        .btn-primary:hover {
+            background-color: var(--accent-hover);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(197, 160, 89, 0.45);
+        }
+
+        .btn-whatsapp {
+            background-color: #25D366;
+            color: #FFFFFF;
+            box-shadow: 0 4px 14px rgba(37, 211, 102, 0.3);
+        }
+
+        .btn-whatsapp:hover {
+            background-color: #20ba5a;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
+        }
+
+        .btn-icon {
+            width: 20px;
+            height: 20px;
+            fill: currentColor;
+        }
+
+        /* Hero com Cartão Translúcido em Vidro (Glassmorphic) */
+        .hero {
+            position: relative;
+            padding-top: 130px;
+            padding-bottom: 5rem;
+            min-height: 88vh;
+            display: flex;
+            align-items: center;
+            background: linear-gradient(135deg, rgba(50, 55, 60, 0.88), rgba(26, 29, 32, 0.92)),
+                        url('img/foto-1.webp') center/cover no-repeat;
+            color: #FFFFFF;
         }
 
         .hero-glass-card {
-            background: rgba(255, 255, 255, 0.92);
-            backdrop-filter: blur(16px);
-            -webkit-backdrop-filter: blur(16px);
-            border: 1px solid rgba(255, 255, 255, 0.4);
+            background: rgba(50, 55, 60, 0.78);
+            backdrop-filter: blur(14px);
+            -webkit-backdrop-filter: blur(14px);
+            border: 1px solid rgba(255, 255, 255, 0.18);
             border-radius: var(--radius-lg);
-            padding: 35px 25px;
+            padding: 2.5rem 2rem;
+            max-width: 780px;
             box-shadow: var(--shadow-lg);
-            text-align: center;
         }
 
-        @media (min-width: 768px) {
-            .hero-glass-card {
-                padding: 55px 45px;
-            }
-        }
-
-        .hero-badge {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            background: rgba(50, 55, 60, 0.08);
-            border: 1px solid rgba(50, 55, 60, 0.15);
-            padding: 6px 16px;
+        .hero-tag {
+            display: inline-block;
+            background: rgba(197, 160, 89, 0.22);
+            color: #EAD096;
+            border: 1px solid rgba(197, 160, 89, 0.4);
+            padding: 0.35rem 0.9rem;
             border-radius: 50px;
             font-size: 0.85rem;
             font-weight: 700;
-            color: var(--primary);
-            margin-bottom: 20px;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            margin-bottom: 1.25rem;
         }
 
-        .hero-title {
-            font-size: 1.8rem;
-            color: var(--primary);
-            margin-bottom: 16px;
-            letter-spacing: -0.5px;
+        .hero h1 {
+            color: #FFFFFF;
+            margin-bottom: 1.25rem;
         }
 
-        @media (min-width: 768px) {
-            .hero-title {
-                font-size: 2.8rem;
-            }
+        .hero p {
+            color: #E2E8F0;
+            font-size: 1.15rem;
+            margin-bottom: 2rem;
         }
 
-        .hero-description {
-            font-size: 1.05rem;
-            color: var(--text-muted);
-            margin-bottom: 30px;
-            line-height: 1.6;
-        }
-
-        .hero-actions {
-            display: flex;
-            flex-direction: column;
-            gap: 12px;
-            align-items: center;
-            justify-content: center;
-        }
-
-        @media (min-width: 576px) {
-            .hero-actions {
-                flex-direction: row;
-            }
-        }
-
-        /* PROVA SOCIAL GOOGLE AUDITADA */
-        .proof-bar {
-            background: var(--bg-white);
-            border-bottom: 1px solid var(--border-color);
-            padding: 20px;
-        }
-
-        .proof-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: flex;
-            flex-wrap: wrap;
-            align-items: center;
-            justify-content: center;
-            gap: 20px 40px;
-            text-align: center;
-        }
-
-        .proof-item {
-            display: flex;
+        /* Prova Social auditada no Google */
+        .google-badge {
+            display: inline-flex;
             align-items: center;
             gap: 12px;
+            background: #FFFFFF;
+            padding: 0.65rem 1.25rem;
+            border-radius: 50px;
+            box-shadow: var(--shadow-md);
+            margin-top: 1.5rem;
         }
 
         .google-stars {
             display: flex;
-            gap: 3px;
-            color: #FFB800;
+            gap: 2px;
         }
 
-        .proof-text {
-            font-size: 0.95rem;
-            font-weight: 600;
+        .google-star-icon {
+            width: 18px;
+            height: 18px;
+            fill: #FBBC05;
+        }
+
+        .google-badge-text {
+            font-size: 0.88rem;
+            font-weight: 700;
             color: var(--primary);
         }
 
-        .proof-text span {
-            color: var(--text-muted);
-            font-weight: 400;
+        /* Seção de Autoridade Credenciada */
+        .authority-bar {
+            background: #FFFFFF;
+            border-bottom: 1px solid var(--border-color);
+            padding: 2.5rem 0;
         }
 
-        /* STORYTELLING EM BLOCOS ZIG-ZAG */
-        .story-section {
-            padding: 70px 20px;
-            background-color: var(--bg-white);
+        .authority-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+            text-align: center;
         }
 
-        .story-container {
-            max-width: 1200px;
-            margin: 0 auto;
+        .authority-item {
+            padding: 0.5rem;
         }
 
+        .authority-number {
+            font-size: 2.2rem;
+            font-weight: 900;
+            color: var(--accent);
+            line-height: 1;
+            margin-bottom: 0.4rem;
+        }
+
+        .authority-label {
+            font-size: 0.95rem;
+            font-weight: 700;
+            color: var(--primary);
+        }
+
+        /* Variante: Storytelling em Blocos Alternados (Zig-Zag) */
         .story-block {
+            padding: 4.5rem 0;
+        }
+
+        .story-block:nth-child(even) {
+            background-color: #FFFFFF;
+        }
+
+        .story-grid {
             display: flex;
             flex-direction: column;
-            gap: 40px;
+            gap: 2.5rem;
             align-items: center;
-            margin-bottom: 70px;
-        }
-
-        .story-block:last-child {
-            margin-bottom: 0;
-        }
-
-        @media (min-width: 992px) {
-            .story-block {
-                flex-direction: row;
-                gap: 60px;
-            }
-
-            .story-block.reverse {
-                flex-direction: row-reverse;
-            }
-
-            .story-image-wrap, .story-content {
-                flex: 1;
-            }
         }
 
         .story-image-wrap {
             width: 100%;
-            position: relative;
             border-radius: var(--radius-md);
             overflow: hidden;
             box-shadow: var(--shadow-md);
         }
 
-        .story-image-wrap img {
+        .story-img {
             width: 100%;
             height: 380px;
             object-fit: cover;
+            display: block;
             transition: transform 0.5s ease;
         }
 
-        .story-image-wrap:hover img {
+        .story-image-wrap:hover .story-img {
             transform: scale(1.03);
         }
 
@@ -486,92 +377,73 @@
             width: 100%;
         }
 
-        .story-title {
-            font-size: 1.6rem;
-            margin-bottom: 16px;
-            color: var(--primary);
+        .story-badge {
+            color: var(--accent);
+            font-weight: 800;
+            font-size: 0.88rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 0.5rem;
+            display: block;
         }
 
-        @media (min-width: 768px) {
-            .story-title {
-                font-size: 2rem;
-            }
+        .story-content h2 {
+            margin-bottom: 1.25rem;
         }
 
-        .story-text {
-            color: var(--text-muted);
-            margin-bottom: 20px;
-            font-size: 1rem;
-            line-height: 1.7;
+        .story-content p {
+            font-size: 1.05rem;
+            margin-bottom: 1.5rem;
         }
 
-        .story-highlights {
+        .feature-list {
             list-style: none;
-            margin-bottom: 28px;
-            display: flex;
-            flex-direction: column;
-            gap: 12px;
+            margin-bottom: 2rem;
         }
 
-        .story-highlight-item {
+        .feature-item {
             display: flex;
             align-items: flex-start;
             gap: 10px;
+            margin-bottom: 0.8rem;
             font-weight: 600;
             color: var(--primary);
-            font-size: 0.95rem;
         }
 
-        .story-highlight-item svg {
+        .feature-check {
             width: 20px;
             height: 20px;
-            fill: none;
-            stroke: var(--accent);
-            stroke-width: 2.5;
+            fill: var(--accent);
             flex-shrink: 0;
             margin-top: 2px;
         }
 
-        /* GRID DE ÁREAS DE ATUAÇÃO (SEM IMAGEM REPETIDA - PURE COMPOSITION) */
-        .services-grid-section {
-            padding: 70px 20px;
+        /* Seção de Áreas de Atuação */
+        .services-section {
             background-color: var(--bg-light);
-            border-top: 1px solid var(--border-color);
-            border-bottom: 1px solid var(--border-color);
         }
 
-        .services-container {
-            max-width: 1200px;
-            margin: 0 auto;
+        .section-header {
+            max-width: 680px;
+            margin: 0 auto 3.5rem auto;
             text-align: center;
+        }
+
+        .section-header h2 {
+            margin-bottom: 0.8rem;
         }
 
         .services-grid {
             display: grid;
             grid-template-columns: 1fr;
-            gap: 24px;
-            margin-top: 40px;
-            text-align: left;
-        }
-
-        @media (min-width: 600px) {
-            .services-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-        }
-
-        @media (min-width: 992px) {
-            .services-grid {
-                grid-template-columns: repeat(3, 1fr);
-            }
+            gap: 1.5rem;
         }
 
         .service-card {
-            background: var(--bg-white);
-            padding: 30px 24px;
+            background: #FFFFFF;
             border-radius: var(--radius-md);
+            padding: 2rem;
             border: 1px solid var(--border-color);
-            box-shadow: var(--shadow-sm);
             transition: all 0.3s ease;
             display: flex;
             flex-direction: column;
@@ -584,691 +456,642 @@
             border-color: var(--accent);
         }
 
-        .service-icon {
+        .service-icon-box {
             width: 48px;
             height: 48px;
             border-radius: 10px;
-            background: rgba(197, 160, 89, 0.12);
+            background: rgba(50, 55, 60, 0.06);
             display: flex;
             align-items: center;
             justify-content: center;
-            margin-bottom: 20px;
-        }
-
-        .service-icon svg {
-            width: 26px;
-            height: 26px;
-            stroke: var(--accent);
-            stroke-width: 2;
-            fill: none;
-        }
-
-        .service-card-title {
-            font-size: 1.2rem;
-            margin-bottom: 10px;
+            margin-bottom: 1.25rem;
             color: var(--primary);
         }
 
-        .service-card-desc {
-            font-size: 0.92rem;
-            color: var(--text-muted);
-            line-height: 1.6;
+        .service-card h3 {
+            margin-bottom: 0.75rem;
         }
 
-        /* TRIAGEM INTERATIVA NEUTRA */
-        .screening-section {
-            padding: 70px 20px;
+        .service-card p {
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+
+        /* Componente Neutro de Triagem de Situação */
+        .assessment-section {
             background: var(--primary);
             color: #FFFFFF;
+            padding: 4.5rem 0;
         }
 
-        .screening-container {
-            max-width: 900px;
-            margin: 0 auto;
-            text-align: center;
-        }
-
-        .screening-card {
+        .assessment-card {
             background: rgba(255, 255, 255, 0.05);
             border: 1px solid rgba(255, 255, 255, 0.12);
             border-radius: var(--radius-lg);
-            padding: 35px 20px;
-            margin-top: 30px;
+            padding: 2.5rem 1.5rem;
+            max-width: 820px;
+            margin: 0 auto;
         }
 
-        @media (min-width: 768px) {
-            .screening-card {
-                padding: 45px 40px;
-            }
+        .assessment-card h2 {
+            color: #FFFFFF;
+            margin-bottom: 1rem;
         }
 
-        .screening-list {
+        .assessment-card p {
+            color: #CBD5E1;
+        }
+
+        .assessment-options {
             display: grid;
             grid-template-columns: 1fr;
-            gap: 14px;
-            margin: 25px 0 35px 0;
-            text-align: left;
+            gap: 1rem;
+            margin: 2rem 0;
         }
 
-        @media (min-width: 600px) {
-            .screening-list {
-                grid-template-columns: repeat(2, 1fr);
-            }
-        }
-
-        .screening-item {
+        .assessment-opt {
             background: rgba(255, 255, 255, 0.08);
             border: 1px solid rgba(255, 255, 255, 0.15);
-            padding: 16px 20px;
+            padding: 1.2rem;
             border-radius: var(--radius-sm);
+            color: #FFFFFF;
+            font-weight: 600;
             display: flex;
             align-items: center;
             gap: 12px;
-            font-size: 0.95rem;
+            cursor: pointer;
+            transition: all 0.2s ease;
         }
 
-        .screening-item svg {
-            width: 20px;
-            height: 20px;
-            stroke: var(--accent);
-            stroke-width: 2.5;
-            fill: none;
+        .assessment-opt:hover {
+            background: rgba(197, 160, 89, 0.2);
+            border-color: var(--accent);
+        }
+
+        .opt-radio {
+            width: 18px;
+            height: 18px;
+            border-radius: 50%;
+            border: 2px solid var(--accent);
             flex-shrink: 0;
         }
 
-        .screening-result-box {
-            background: rgba(197, 160, 89, 0.15);
-            border: 1px solid var(--accent);
-            border-radius: var(--radius-sm);
-            padding: 20px;
-            margin-top: 20px;
-            font-size: 0.95rem;
-            color: #F0E6D2;
-        }
-
-        /* SOBRE O ESCRITÓRIO */
-        .about-section {
-            padding: 70px 20px;
-            background-color: var(--bg-white);
-        }
-
-        .about-container {
-            max-width: 1000px;
-            margin: 0 auto;
-            text-align: center;
-        }
-
-        .about-box {
-            background: var(--bg-light);
+        .assessment-result {
+            background: rgba(255, 255, 255, 0.1);
             border-left: 4px solid var(--accent);
-            padding: 35px 25px;
-            border-radius: 0 var(--radius-md) var(--radius-md) 0;
+            padding: 1.25rem;
+            border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+            margin-top: 1.5rem;
             text-align: left;
-            margin-top: 30px;
-            box-shadow: var(--shadow-sm);
         }
 
-        .about-p {
-            font-size: 1.05rem;
-            color: var(--text-dark);
-            line-height: 1.8;
-            margin-bottom: 16px;
-        }
-
-        .about-p:last-child {
+        .assessment-result p {
+            color: #F1F5F9;
             margin-bottom: 0;
+            font-size: 0.95rem;
         }
 
-        /* CTA FINAL */
-        .final-cta {
-            padding: 70px 20px;
-            background-image: linear-gradient(135deg, var(--primary), var(--primary-dark));
+        /* Quem Somos */
+        .about-section {
+            background: #FFFFFF;
+        }
+
+        .about-card {
+            background: var(--bg-light);
+            border-radius: var(--radius-lg);
+            padding: 3.5rem 2rem;
+            border: 1px solid var(--border-color);
+        }
+
+        /* CTA Final */
+        .cta-final {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
             color: #FFFFFF;
             text-align: center;
+            padding: 5rem 0;
         }
 
-        .final-cta-container {
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        .final-cta h2 {
+        .cta-final h2 {
             color: #FFFFFF;
-            font-size: 2rem;
-            margin-bottom: 16px;
+            margin-bottom: 1rem;
         }
 
-        @media (min-width: 768px) {
-            .final-cta h2 {
-                font-size: 2.5rem;
-            }
+        .cta-final p {
+            color: #CBD5E1;
+            font-size: 1.15rem;
+            max-width: 620px;
+            margin: 0 auto 2rem auto;
         }
 
-        .final-cta p {
-            font-size: 1.1rem;
-            color: rgba(255, 255, 255, 0.85);
-            margin-bottom: 30px;
-        }
-
-        /* FOOTER */
-        .footer {
-            background-color: #1A1D20;
-            color: rgba(255, 255, 255, 0.7);
-            padding: 60px 20px 30px 20px;
+        /* Rodapé */
+        footer {
+            background-color: var(--primary-dark);
+            color: #94A3B8;
+            padding: 4rem 0 2rem 0;
+            border-top: 1px solid rgba(255,255,255,0.08);
             font-size: 0.9rem;
-            border-top: 1px solid rgba(255, 255, 255, 0.08);
         }
 
-        .footer-container {
-            max-width: 1200px;
-            margin: 0 auto;
+        .footer-grid {
             display: grid;
             grid-template-columns: 1fr;
-            gap: 40px;
-            margin-bottom: 40px;
+            gap: 2.5rem;
+            margin-bottom: 3rem;
         }
 
-        @media (min-width: 768px) {
-            .footer-container {
-                grid-template-columns: 2fr 1fr 1fr;
-            }
-        }
-
-        .footer-brand {
-            display: flex;
-            flex-direction: column;
-            gap: 16px;
-        }
-
-        .footer-logo-title {
+        .footer-brand h4 {
             color: #FFFFFF;
-            font-size: 1.3rem;
-            font-weight: 700;
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
         }
 
-        .footer-socials {
-            display: flex;
-            gap: 14px;
-            margin-top: 10px;
-        }
-
-        .social-link {
-            width: 38px;
-            height: 38px;
-            border-radius: 50%;
-            background: rgba(255, 255, 255, 0.1);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transition: background 0.3s ease;
-        }
-
-        .social-link:hover {
-            background: var(--accent);
-        }
-
-        .social-link svg {
-            width: 18px;
-            height: 18px;
-            fill: #FFFFFF;
-        }
-
-        .footer-title {
+        .footer-links h5, .footer-contact h5 {
             color: #FFFFFF;
-            font-size: 1.05rem;
-            margin-bottom: 16px;
-            font-weight: 600;
+            font-size: 1rem;
+            margin-bottom: 1.2rem;
         }
 
-        .footer-links {
+        .footer-links ul {
             list-style: none;
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
+        }
+
+        .footer-links li {
+            margin-bottom: 0.6rem;
         }
 
         .footer-links a:hover {
+            color: var(--accent);
+        }
+
+        .social-links {
+            display: flex;
+            gap: 12px;
+            margin-top: 1.2rem;
+        }
+
+        .social-btn {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.08);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #FFFFFF;
+            transition: all 0.3s ease;
+        }
+
+        .social-btn:hover {
+            background: var(--accent);
             color: #FFFFFF;
         }
 
-        .footer-contact-item {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            margin-bottom: 12px;
-        }
-
-        .footer-contact-item svg {
-            width: 18px;
-            height: 18px;
-            stroke: var(--accent);
-            fill: none;
-            stroke-width: 2;
+        .social-icon {
+            width: 20px;
+            height: 20px;
+            fill: currentColor;
         }
 
         .footer-bottom {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding-top: 25px;
-            border-top: 1px solid rgba(255, 255, 255, 0.08);
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255,255,255,0.08);
             text-align: center;
-            font-size: 0.8rem;
-            color: rgba(255, 255, 255, 0.5);
+            font-size: 0.85rem;
         }
 
-        /* BOTÃO FLUTUANTE WHATSAPP */
+        /* Botão Flutuante Fixado de WhatsApp */
         .whatsapp-float {
             position: fixed;
-            bottom: 20px;
-            right: 20px;
+            bottom: 24px;
+            right: 24px;
             width: 60px;
             height: 60px;
-            background-color: var(--whatsapp);
+            background-color: #25D366;
             color: #FFFFFF;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+            box-shadow: 0 8px 24px rgba(37, 211, 102, 0.45);
             z-index: 9999;
-            transition: all 0.3s ease;
+            transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
         }
 
         .whatsapp-float:hover {
             transform: scale(1.1);
-            background-color: var(--whatsapp-hover);
+            background-color: #20ba5a;
         }
 
-        .whatsapp-float svg {
+        .whatsapp-float-icon {
             width: 32px;
             height: 32px;
-            fill: #FFFFFF;
+            fill: currentColor;
+        }
+
+        /* Media Queries para Desktop */
+        @media (min-width: 768px) {
+            .menu-toggle-btn {
+                display: none;
+            }
+
+            nav {
+                position: static;
+                transform: none;
+                background: transparent;
+                padding: 0;
+                box-shadow: none;
+                flex-direction: row;
+                align-items: center;
+                gap: 2rem;
+                width: auto;
+            }
+
+            .authority-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+            .story-grid {
+                flex-direction: row;
+                gap: 4rem;
+            }
+
+            .story-block:nth-child(even) .story-grid {
+                flex-direction: row-reverse;
+            }
+
+            .story-image-wrap, .story-content {
+                width: 50%;
+            }
+
+            .story-img {
+                height: 440px;
+            }
+
+            .services-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+            .assessment-options {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .footer-grid {
+                grid-template-columns: 2fr 1fr 1fr;
+            }
         }
     </style>
 </head>
 <body>
 
-    <!-- HEADER DE NAVEGAÇÃO -->
-    <header class="header">
-        <div class="header-container">
-            <a href="#" class="brand-logo" aria-label="Cardone Advocacia - Página Inicial">
-                <img src="img/foto-4.jpg" alt="Monograma Cardone Advocacia">
-                <div class="brand-text">
-                    <span class="brand-name">CARDONE</span>
-                    <span class="brand-sub">Advocacia Trabalhista</span>
-                </div>
+    <!-- Cabeçalho -->
+    <header>
+        <div class="container header-container">
+            <a href="#" class="logo-wrapper" aria-label="Cardone Advocacia - Página Inicial">
+                <img src="img/foto-4.jpg" alt="Monograma da Cardone Advocacia" class="logo-img">
+                <span>Cardone Advocacia</span>
             </a>
 
-            <!-- Checkbox Hack para Menu Mobile -->
             <input type="checkbox" id="menu-toggle" class="menu-toggle-input" aria-hidden="true">
-            <label for="menu-toggle" class="menu-toggle-btn" aria-label="Abrir Menu de Navegação" role="button" aria-expanded="false">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <line x1="3" y1="12" x2="21" y2="12"></line>
-                    <line x1="3" y1="6" x2="21" y2="6"></line>
-                    <line x1="3" y1="18" x2="21" y2="18"></line>
+            <label for="menu-toggle" class="menu-toggle-btn" aria-label="Abrir menu de navegação" role="button" aria-expanded="false">
+                <svg class="hamburger-icon" viewBox="0 0 24 24">
+                    <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
                 </svg>
             </label>
 
-            <nav class="main-nav" role="navigation" aria-label="Navegação Principal">
-                <ul class="nav-list">
-                    <li><a href="#inicio" class="nav-link">Início</a></li>
-                    <li><a href="#direitos" class="nav-link">Seus Direitos</a></li>
-                    <li><a href="#atuacao" class="nav-link">Áreas de Atuação</a></li>
-                    <li><a href="#triagem" class="nav-link">Avalie Seu Caso</a></li>
-                    <li><a href="#sobre" class="nav-link">O Escritório</a></li>
-                </ul>
+            <nav role="navigation" aria-label="Menu principal">
+                <a href="#diferenciais" class="nav-link">Diferenciais</a>
+                <a href="#atuacao" class="nav-link">Áreas de Atuação</a>
+                <a href="#triagem" class="nav-link">Triagem Inicial</a>
+                <a href="#sobre" class="nav-link">Quem Somos</a>
+                <a href="https://wa.me/5521996042087?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." class="btn btn-primary" target="_blank" rel="noopener">
+                    <span>Falar com Advogado</span>
+                </a>
             </nav>
-
-            <a href="https://wa.me/21996042087?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." class="btn btn-whatsapp header-cta" target="_blank" rel="noopener">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M12.012 2c-5.506 0-9.989 4.478-9.99 9.984 0 1.762.459 3.48 1.332 5.001l-1.416 5.176 5.297-1.389c1.462.797 3.111 1.216 4.775 1.217h.004c5.507 0 9.99-4.478 9.99-9.985 0-2.667-1.037-5.176-2.922-7.062a9.927 9.927 0 0 0-7.06-2.942zm5.82 14.28c-.247.693-1.439 1.328-1.98 1.382-.505.051-1.156.074-1.85-.148a12.87 12.87 0 0 1-4.223-2.222 13.9 13.9 0 0 1-2.923-3.64c-.426-.732-.03-1.127.202-1.358.203-.203.454-.53.682-.795.228-.266.303-.455.455-.758.152-.303.076-.569-.038-.796-.114-.227-.986-2.378-1.353-3.255-.357-.852-.722-.736-.986-.749l-.84-.015c-.29 0-.758.109-1.152.536-.395.428-1.503 1.468-1.503 3.58 0 2.112 1.54 4.152 1.753 4.437.214.285 3.033 4.632 7.348 6.494 1.026.442 1.827.706 2.451.905 1.03.328 1.968.281 2.71.17.827-.123 2.541-1.039 2.901-2.043.36-1.004.36-1.862.253-2.043-.107-.181-.395-.29-.841-.513z"/>
-                </svg>
-                Falar com Advogado
-            </a>
         </div>
     </header>
 
-    <!-- HERO SECTION (Storytelling com Cartão Traslúcido / Glassmorphism) -->
-    <section id="inicio" class="hero">
-        <div class="hero-container">
+    <!-- Hero Section (Tratamento Glassmorphic / Storytelling) -->
+    <section class="hero">
+        <div class="container">
             <div class="hero-glass-card">
-                <span class="hero-badge">
-                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
-                    </svg>
-                    Boutique em Direito Trabalhista
-                </span>
-                <h1 class="hero-title">Defesa Especializada e Dedicada aos Seus Direitos Trabalhistas</h1>
-                <p class="hero-description">
-                    Oferecemos suporte jurídico completo em cada fase do seu processo trabalhista. Nosso compromisso é garantir que seus direitos sejam integralmente protegidos, com orientação criteriosa e atendimento personalizado em todo o Brasil.
-                </p>
-                <div class="hero-actions">
-                    <a href="https://wa.me/21996042087?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." class="btn btn-whatsapp" target="_blank" rel="noopener">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M12.012 2c-5.506 0-9.989 4.478-9.99 9.984 0 1.762.459 3.48 1.332 5.001l-1.416 5.176 5.297-1.389c1.462.797 3.111 1.216 4.775 1.217h.004c5.507 0 9.99-4.478 9.99-9.985 0-2.667-1.037-5.176-2.922-7.062a9.927 9.927 0 0 0-7.06-2.942zm5.82 14.28c-.247.693-1.439 1.328-1.98 1.382-.505.051-1.156.074-1.85-.148a12.87 12.87 0 0 1-4.223-2.222 13.9 13.9 0 0 1-2.923-3.64c-.426-.732-.03-1.127.202-1.358.203-.203.454-.53.682-.795.228-.266.303-.455.455-.758.152-.303.076-.569-.038-.796-.114-.227-.986-2.378-1.353-3.255-.357-.852-.722-.736-.986-.749l-.84-.015c-.29 0-.758.109-1.152.536-.395.428-1.503 1.468-1.503 3.58 0 2.112 1.54 4.152 1.753 4.437.214.285 3.033 4.632 7.348 6.494 1.026.442 1.827.706 2.451.905 1.03.328 1.968.281 2.71.17.827-.123 2.541-1.039 2.901-2.043.36-1.004.36-1.862.253-2.043-.107-.181-.395-.29-.841-.513z"/>
+                <span class="hero-tag">Boutique de Advocacia Trabalhista</span>
+                <h1>Precisando de um Advogado Especialista em Direito Trabalhista?</h1>
+                <p>Oferecemos suporte completo em cada fase do seu processo trabalhista. Nosso compromisso é garantir que seus direitos sejam protegidos, com representação dedicada e orientação jurídica especializada a todo momento.</p>
+                
+                <div>
+                    <a href="https://wa.me/5521996042087?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." class="btn btn-whatsapp" target="_blank" rel="noopener">
+                        <svg class="btn-icon" viewBox="0 0 24 24">
+                            <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/>
                         </svg>
-                        Falar com Advogado Agora
+                        <span>Clique Para Falar Conosco Agora</span>
                     </a>
-                    <a href="#direitos" class="btn btn-outline">Conhecer Situações Atendidas</a>
+                </div>
+
+                <div class="google-badge">
+                    <div class="google-stars">
+                        <svg class="google-star-icon" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                        <svg class="google-star-icon" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                        <svg class="google-star-icon" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                        <svg class="google-star-icon" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                        <svg class="google-star-icon" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                    </div>
+                    <span class="google-badge-text">Nota 5 no Google com 16 avaliações</span>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- PROVA SOCIAL GOOGLE AUDITADA -->
-    <section class="proof-bar">
-        <div class="proof-container">
-            <div class="proof-item">
-                <div class="google-stars">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+    <!-- Barra de Autoridade Credenciada -->
+    <section class="authority-bar">
+        <div class="container">
+            <div class="authority-grid">
+                <div class="authority-item">
+                    <div class="authority-number">Mais de 20 Anos</div>
+                    <div class="authority-label">De Atuação em Defesa dos Direitos Trabalhistas</div>
                 </div>
-                <div class="proof-text">
-                    Nota 5.0 no Google <span>| 16 avaliações verificadas</span>
+                <div class="authority-item">
+                    <div class="authority-number">Boutique Jurídica</div>
+                    <div class="authority-label">Atendimento Criterioso e Planejamento Estratégico</div>
                 </div>
-            </div>
-            <div class="proof-item">
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2">
-                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
-                </svg>
-                <div class="proof-text">
-                    Mais de 20 anos <span>de atuação e defesa de trabalhadores</span>
+                <div class="authority-item">
+                    <div class="authority-number">Abrangência Nacional</div>
+                    <div class="authority-label">Consultoria e Defesa em Todo o Brasil</div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- SEÇÃO STORYTELLING EM BLOCOS (ZIG-ZAG COM IMAGENS REAIS) -->
-    <section id="direitos" class="story-section">
-        <div class="story-container">
-            <div style="text-align: center; margin-bottom: 50px;">
-                <span class="section-tag">Para Quem é esse Atendimento?</span>
-                <h2 class="section-title">Compreenda a Situação do Seu Caso</h2>
-                <p class="section-subtitle">Analisamos detalhadamente cada circunstância da sua trajetória de trabalho para buscar a devida reparação e proteção legal.</p>
+    <!-- Storytelling em Blocos Alternados (Zig-Zag) -->
+    <section id="diferenciais" class="story-section">
+        
+        <!-- Bloco 1: Assédio Moral -->
+        <article class="story-block">
+            <div class="container">
+                <div class="story-grid">
+                    <div class="story-image-wrap">
+                        <img src="img/foto-2.jpg" alt="Atendimento jurídico especializado no escritório Cardone Advocacia" class="story-img" loading="lazy">
+                    </div>
+                    <div class="story-content">
+                        <span class="story-badge">Defesa da Dignidade</span>
+                        <h2>Sofreu Humilhações, Ameaças ou Constrangimentos no Trabalho?</h2>
+                        <p>Nenhum trabalhador é obrigado a suportar ofensas, gritos ou pressões abusivas no ambiente de trabalho. Isso é assédio moral, e a lei garante o direito à reparação por danos morais e materiais.</p>
+                        <p>Com mais de 20 anos de atuação, nosso escritório acolhe, orienta e defende trabalhadores vítimas de abuso, buscando indenizações justas e respeito à sua dignidade.</p>
+                        <ul class="feature-list">
+                            <li class="feature-item">
+                                <svg class="feature-check" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg>
+                                Acolhimento humano e totalmente sigiloso
+                            </li>
+                            <li class="feature-item">
+                                <svg class="feature-check" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg>
+                                Análise criteriosa de provas e abusos no ambiente de trabalho
+                            </li>
+                            <li class="feature-item">
+                                <svg class="feature-check" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg>
+                                Busca firme por reparação jurídica proporcional
+                            </li>
+                        </ul>
+                        <a href="https://wa.me/5521996042087?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." class="btn btn-primary" target="_blank" rel="noopener">
+                            <span>Converse Agora com um Advogado e Saiba Como Agir</span>
+                        </a>
+                    </div>
+                </div>
             </div>
+        </article>
 
-            <!-- BLOCO 1: Assédio Moral -->
-            <article class="story-block">
-                <div class="story-image-wrap">
-                    <img src="img/foto-2.jpg" alt="Atendimento jurídico e defesa de direitos trabalhistas" loading="lazy">
+        <!-- Bloco 2: Reconstituição e Análise Rescisória -->
+        <article class="story-block">
+            <div class="container">
+                <div class="story-grid">
+                    <div class="story-image-wrap">
+                        <img src="img/foto-3.webp" alt="Consultoria e análise de direitos contratuais Cardone Advocacia" class="story-img" loading="lazy">
+                    </div>
+                    <div class="story-content">
+                        <span class="story-badge">Análise Rescisória Detalhada</span>
+                        <h2>Demissão sem Saber Se Recebeu Tudo o Que Tinha Direito?</h2>
+                        <p>Muitos trabalhadores saem da empresa sem saber que deixaram de receber valores importantes como: horas extras, adicional noturno, férias proporcionais e até indenizações.</p>
+                        <p>Nosso escritório atua há mais de 20 anos defendendo os direitos de quem foi injustiçado no trabalho, analisando cada detalhe do seu caso para recuperar o que é seu por direito.</p>
+                        <ul class="feature-list">
+                            <li class="feature-item">
+                                <svg class="feature-check" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg>
+                                Conferência individualizada de verbas e saldo salarial
+                            </li>
+                            <li class="feature-item">
+                                <svg class="feature-check" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg>
+                                Identificação de irregularidades em banco de horas e intervalos
+                            </li>
+                            <li class="feature-item">
+                                <svg class="feature-check" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg>
+                                Verificação de depósitos de FGTS e seguro-desemprego
+                            </li>
+                        </ul>
+                        <a href="https://wa.me/5521996042087?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." class="btn btn-primary" target="_blank" rel="noopener">
+                            <span>Solicite a Revisão das Suas Horas Extras Agora</span>
+                        </a>
+                    </div>
                 </div>
-                <div class="story-content">
-                    <span class="section-tag">Proteção & Dignidade</span>
-                    <h3 class="story-title">Sofreu Humilhações, Ameaças ou Pressões Abusivas no Trabalho?</h3>
-                    <p class="story-text">
-                        Nenhum trabalhador é obrigado a suportar ofensas, gritos ou constrangimentos no ambiente profissional. Isso caracteriza <strong>assédio moral</strong>, e a lei garante o direito à reparação integral por danos morais e materiais.
-                    </p>
-                    <ul class="story-highlights">
-                        <li class="story-highlight-item">
-                            <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                            Acolhimento humanizado e orientação técnica sigilosa.
-                        </li>
-                        <li class="story-highlight-item">
-                            <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                            Com mais de 20 anos de atuação na busca por indenizações justas.
-                        </li>
-                        <li class="story-highlight-item">
-                            <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                            Defesa ostensiva do respeito à dignidade do trabalhador.
-                        </li>
-                    </ul>
-                    <a href="https://wa.me/21996042087?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." class="btn btn-whatsapp" target="_blank" rel="noopener">
-                        Converse Agora com um Advogado
-                    </a>
-                </div>
-            </article>
+            </div>
+        </article>
 
-            <!-- BLOCO 2: Demissão, Rescisão e Vínculo (Invertido) -->
-            <article class="story-block reverse">
-                <div class="story-image-wrap">
-                    <img src="img/foto-3.webp" alt="Análise técnica de contrato trabalhista" loading="lazy">
-                </div>
-                <div class="story-content">
-                    <span class="section-tag">Verbas & Direitos Rescisórios</span>
-                    <h3 class="story-title">Foi Demitido sem Receber Tudo o que Tinha Direito?</h3>
-                    <p class="story-text">
-                        Muitos trabalhadores deixam a empresa sem saber que deixaram de receber valores essenciais como horas extras, adicional noturno, férias proporcionais ou reflexos em FGTS. Também atuamos em casos sem carteira assinada e em demissões abusivas por justa causa.
-                    </p>
-                    <ul class="story-highlights">
-                        <li class="story-highlight-item">
-                            <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                            <strong>Trabalhou sem registro?</strong> Comprovação de vínculo e busca de FGTS, 13º e férias.
-                        </li>
-                        <li class="story-highlight-item">
-                            <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                            <strong>Justa causa abusiva?</strong> Análise para reverter a penalidade e garantir verbas integrais.
-                        </li>
-                        <li class="story-highlight-item">
-                            <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                            <strong>Acidentes de trabalho:</strong> Garantia de estabilidade, auxílio e reparações decorrentes.
-                        </li>
-                    </ul>
-                    <a href="https://wa.me/21996042087?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." class="btn btn-whatsapp" target="_blank" rel="noopener">
-                        Solicite a Revisão do seu Caso
-                    </a>
-                </div>
-            </article>
-        </div>
     </section>
 
-    <!-- ÁREAS DE ATUAÇÃO (GRID DE SERVIÇOS - DESIGN INSTITUCIONAL) -->
-    <section id="atuacao" class="services-grid-section">
-        <div class="services-container">
-            <span class="section-tag">Conheça Nossos Serviços</span>
-            <h2 class="section-title">Principais Áreas de Atuação Trabalhista</h2>
-            <p class="section-subtitle">Tenha um especialista em Direito do Trabalho cuidando do seu processo do início à sentença final.</p>
+    <!-- Áreas de Atuação -->
+    <section id="atuacao" class="section services-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Áreas de Atuação — Conheça Nossos Serviços</h2>
+                <p>Tenha um Especialista em Direito do Trabalho para cuidar de todo o seu processo, desde a fase inicial até a sentença final.</p>
+            </div>
 
             <div class="services-grid">
-                <!-- Card 1 -->
                 <div class="service-card">
                     <div>
-                        <div class="service-icon">
-                            <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                        <div class="service-icon-box">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
                         </div>
-                        <h3 class="service-card-title">Acidentes de Trabalho</h3>
-                        <p class="service-card-desc">Atuação em questões de segurança no ambiente de trabalho, indenizações por danos e garantias decorrentes de acidentes.</p>
+                        <h3>Acidentes de Trabalho</h3>
+                        <p>Questões relacionadas à segurança no local de trabalho, garantindo estabilidade no emprego, indenizações por danos e suporte em direitos previdenciários.</p>
                     </div>
                 </div>
 
-                <!-- Card 2 -->
                 <div class="service-card">
                     <div>
-                        <div class="service-icon">
-                            <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+                        <div class="service-icon-box">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
                         </div>
-                        <h3 class="service-card-title">Rescisão Indireta</h3>
-                        <p class="service-card-desc">Quando o empregador descumpre o contrato, permitindo a saída do funcionário com os mesmos direitos da demissão sem justa causa.</p>
+                        <h3>Trabalho sem Registro</h3>
+                        <p>Mesmo sem carteira assinada, o trabalhador tem direito a férias, 13º, FGTS e demais benefícios. Atuamos na comprovação do vínculo empregatício.</p>
                     </div>
                 </div>
 
-                <!-- Card 3 -->
                 <div class="service-card">
                     <div>
-                        <div class="service-icon">
-                            <svg viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="8.5" cy="7" r="4"/><line x1="20" y1="8" x2="20" y2="14"/><line x1="23" y1="11" x2="17" y2="11"/></svg>
+                        <div class="service-icon-box">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
                         </div>
-                        <h3 class="service-card-title">Trabalho Sem Registro</h3>
-                        <p class="service-card-desc">Reconhecimento de vínculo empregatício e cobrança das verbas retidas durante o período trabalhado sem assinatura em carteira.</p>
+                        <h3>Reversão de Justa Causa</h3>
+                        <p>Análise técnica para verificar se a penalidade aplicada foi abusiva, entrando com ação para reverter e garantir todos os valores devidos por lei.</p>
                     </div>
                 </div>
 
-                <!-- Card 4 -->
                 <div class="service-card">
                     <div>
-                        <div class="service-icon">
-                            <svg viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M12 8v8"/><path d="M8 12h8"/></svg>
+                        <div class="service-icon-box">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
                         </div>
-                        <h3 class="service-card-title">Verbas Rescisórias</h3>
-                        <p class="service-card-desc">Cálculo e cobrança de saldo de salário, aviso prévio, férias proporcionais com 1/3, 13º e multa de 40% do FGTS.</p>
+                        <h3>Rescisão Indireta</h3>
+                        <p>Ocorre quando o empregador descumpre o contrato de trabalho, permitindo que o funcionário solicite o desligamento com os mesmos direitos de uma demissão sem justa causa.</p>
                     </div>
                 </div>
 
-                <!-- Card 5 -->
                 <div class="service-card">
                     <div>
-                        <div class="service-icon">
-                            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                        <div class="service-icon-box">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
                         </div>
-                        <h3 class="service-card-title">Horas Extras e Banco de Horas</h3>
-                        <p class="service-card-desc">Identificação de não pagamento de horas extras, intervalos suprimidos e irregularidades em compensações de banco de horas.</p>
+                        <h3>Verbas Rescisórias</h3>
+                        <p>Análise de saldo de salário, aviso prévio, férias proporcionais + 1/3, décimo terceiro e aplicação da multa de um salário por atraso no pagamento do acerto.</p>
                     </div>
                 </div>
 
-                <!-- Card 6 -->
                 <div class="service-card">
                     <div>
-                        <div class="service-icon">
-                            <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                        <div class="service-icon-box">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg>
                         </div>
-                        <h3 class="service-card-title">Assédio e Hostilidade</h3>
-                        <p class="service-card-desc">Ações por assédio moral, discriminação, bullying e criação de ambiente de trabalho nocivo e desrespeitoso.</p>
+                        <h3>Horas Extras e Banco de Horas</h3>
+                        <p>Identificação de irregularidades no pagamento de horas trabalhadas além da jornada regular, intervalos não concedidos e compensações ilegais.</p>
                     </div>
                 </div>
             </div>
 
-            <div style="margin-top: 40px;">
-                <a href="https://wa.me/21996042087?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." class="btn btn-whatsapp" target="_blank" rel="noopener">
-                    Falar com um Advogado sobre Seu Serviço
+            <div class="text-center" style="margin-top: 3rem;">
+                <a href="https://wa.me/5521996042087?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." class="btn btn-primary" target="_blank" rel="noopener">
+                    <span>Clique Para Falar Conosco Agora</span>
                 </a>
             </div>
         </div>
     </section>
 
-    <!-- TRIAGEM INTERATIVA NEUTRA -->
-    <section id="triagem" class="screening-section">
-        <div class="screening-container">
-            <span class="section-tag" style="color: var(--accent);">Triagem Rápida</span>
-            <h2 style="color: #FFFFFF; font-size: 2rem;">Identifique se Seus Direitos Foram Violados</h2>
-            <p style="color: rgba(255,255,255,0.8); margin-top: 10px;">Se você vivenciou uma ou mais situações abaixo, recomenda-se uma avaliação jurídica detalhada:</p>
+    <!-- Componente Neutro de Triagem de Situação Trabalhista -->
+    <section id="triagem" class="assessment-section">
+        <div class="container text-center">
+            <div class="assessment-card">
+                <h2>Para Quem É Esse Atendimento?</h2>
+                <p>Identifique se a sua situação profissional atual se enquadra em um destes cenários jurídicos:</p>
 
-            <div class="screening-card">
-                <div class="screening-list">
-                    <div class="screening-item">
-                        <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                        Demitido sem receber rescisão no prazo de lei
+                <div class="assessment-options">
+                    <div class="assessment-opt">
+                        <div class="opt-radio"></div>
+                        <span>Demissão sem justa causa com dúvidas sobre as verbas rescisórias</span>
                     </div>
-                    <div class="screening-item">
-                        <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                        Horas extras não pagas ou banco de horas ilegal
+                    <div class="assessment-opt">
+                        <div class="opt-radio"></div>
+                        <span>Prestação de serviço sem carteira assina (reconhecimento de vínculo)</span>
                     </div>
-                    <div class="screening-item">
-                        <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                        Sofria humilhações ou pressões abusivas
+                    <div class="assessment-opt">
+                        <div class="opt-radio"></div>
+                        <span>Sofreu humilhação, cobrança excessiva ou assédio moral</span>
                     </div>
-                    <div class="screening-item">
-                        <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                        Trabalhou meses ou anos sem registro em carteira
-                    </div>
-                    <div class="screening-item">
-                        <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                        Demissão por justa causa injusta ou abusiva
-                    </div>
-                    <div class="screening-item">
-                        <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                        Acidente de trabalho sem assistência devida
+                    <div class="assessment-opt">
+                        <div class="opt-radio"></div>
+                        <span>Sofreu acidente no trabalho e não teve suporte adequado</span>
                     </div>
                 </div>
 
-                <div class="screening-result-box">
-                    <strong>Como proceder?</strong> Cada caso requer estudo da convenção coletiva, jornada e provas documentais. Um especialista do nosso escritório pode analisar seu cenário de forma criteriosa e totalmente sigilosa.
+                <div class="assessment-result">
+                    <p><strong>Análise Individualizada:</strong> Realizamos o estudo detalhado da sua categoria, convenção coletiva e legislação específica para avaliar o seu caso com total sigilo e responsabilidade. Entre em contato com a nossa equipe.</p>
                 </div>
 
-                <div style="margin-top: 30px;">
-                    <a href="https://wa.me/21996042087?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." class="btn btn-whatsapp" target="_blank" rel="noopener">
-                        Solicitar Avaliação do Meu Caso
+                <div style="margin-top: 2rem;">
+                    <a href="https://wa.me/5521996042087?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." class="btn btn-whatsapp" target="_blank" rel="noopener">
+                        <svg class="btn-icon" viewBox="0 0 24 24">
+                            <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/>
+                        </svg>
+                        <span>Falar com um Especialista no WhatsApp</span>
                     </a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- SOBRE O ESCRITÓRIO -->
-    <section id="sobre" class="about-section">
-        <div class="about-container">
-            <span class="section-tag">Quem Somos</span>
-            <h2 class="section-title">Cardone Advocacia & Consultoria Jurídica</h2>
-            <p class="section-subtitle">Conheça a história e os valores da nossa boutique jurídica.</p>
-
-            <div class="about-box">
-                <p class="about-p">
-                    Desde sua fundação, o escritório <strong>Cardone Advocacia & Consultoria Jurídica</strong> se destacou como uma boutique de advocacia especializada em Direito Trabalhista, oferecendo consultoria e defesa de direitos com excelência em todo o Brasil.
-                </p>
-                <p class="about-p">
-                    O grande diferencial do escritório é o atendimento criterioso e personalizado para cada cliente, com a elaboração de estratégias jurídicas cuidadosamente planejadas, refletindo o verdadeiro conceito de uma boutique jurídica.
-                </p>
-                <p class="about-p">
-                    Nos últimos anos, o escritório tem obtido êxito em diversos casos complexos, destacando-se pela qualidade e dedicação da equipe, confirmando a eficácia de sua filosofia de atuação focada no acolhimento e na máxima defesa dos direitos trabalhistas.
-                </p>
+    <!-- Quem Somos -->
+    <section id="sobre" class="section about-section">
+        <div class="container">
+            <div class="about-card">
+                <div class="section-header" style="margin-bottom: 2rem;">
+                    <h2>Quem Somos — Conheça Nosso Escritório</h2>
+                    <p>Cardone Advocacia & Consultoria Jurídica</p>
+                </div>
+                <div style="max-width: 820px; margin: 0 auto; text-align: center;">
+                    <p>Desde sua fundação, o escritório <strong>Cardone Advocacia & Consultoria Jurídica</strong> se destacou como uma boutique de advocacia especializada em Direito Trabalhista, oferecendo consultoria e defesa de direitos com excelência em todo o Brasil.</p>
+                    <p>O diferencial do escritório é o atendimento criterioso e personalizado para cada cliente, com a elaboração de estratégias jurídicas cuidadosamente planejadas, refletindo o verdadeiro conceito de uma boutique de advocacia.</p>
+                    <p>Nos últimos anos, o escritório tem obtido êxito em diversos casos, destacando-se pela qualidade e dedicação da equipe, confirmando a eficácia de sua filosofia de atuação.</p>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- CTA FINAL -->
-    <section class="final-cta">
-        <div class="final-cta-container">
-            <h2>Precisa de Suporte Jurídico Especializado?</h2>
-            <p>Não deixe que seus direitos sejam ignorados. Entre em contato diretamente com nossa equipe e receba orientação especializada.</p>
-            <a href="https://wa.me/21996042087?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." class="btn btn-whatsapp" target="_blank" rel="noopener">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M12.012 2c-5.506 0-9.989 4.478-9.99 9.984 0 1.762.459 3.48 1.332 5.001l-1.416 5.176 5.297-1.389c1.462.797 3.111 1.216 4.775 1.217h.004c5.507 0 9.99-4.478 9.99-9.985 0-2.667-1.037-5.176-2.922-7.062a9.927 9.927 0 0 0-7.06-2.942zm5.82 14.28c-.247.693-1.439 1.328-1.98 1.382-.505.051-1.156.074-1.85-.148a12.87 12.87 0 0 1-4.223-2.222 13.9 13.9 0 0 1-2.923-3.64c-.426-.732-.03-1.127.202-1.358.203-.203.454-.53.682-.795.228-.266.303-.455.455-.758.152-.303.076-.569-.038-.796-.114-.227-.986-2.378-1.353-3.255-.357-.852-.722-.736-.986-.749l-.84-.015c-.29 0-.758.109-1.152.536-.395.428-1.503 1.468-1.503 3.58 0 2.112 1.54 4.152 1.753 4.437.214.285 3.033 4.632 7.348 6.494 1.026.442 1.827.706 2.451.905 1.03.328 1.968.281 2.71.17.827-.123 2.541-1.039 2.901-2.043.36-1.004.36-1.862.253-2.043-.107-.181-.395-.29-.841-.513z"/>
+    <!-- Chamada Final (CTA) -->
+    <section class="cta-final">
+        <div class="container">
+            <h2>Por Que Escolher Nosso Escritório?</h2>
+            <p>Com atuação especializada e criteriosa, estamos prontos para acolher sua demanda e defender seus direitos trabalhistas.</p>
+            <a href="https://wa.me/5521996042087?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." class="btn btn-whatsapp" target="_blank" rel="noopener">
+                <svg class="btn-icon" viewBox="0 0 24 24">
+                    <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/>
                 </svg>
-                Falar pelo WhatsApp Agora
+                <span>Clique Para Falar Conosco Agora</span>
             </a>
         </div>
     </section>
 
-    <!-- RODAPÉ -->
-    <footer class="footer">
-        <div class="footer-container">
-            <div class="footer-brand">
-                <div class="footer-logo-title">CARDONE ADVOCACIA</div>
-                <p>Boutique de advocacia especializada em Direito Trabalhista. Atendimento criterioso, estratégico e personalizado em todo o território nacional.</p>
-                <div class="footer-socials">
-                    <a href="https://www.instagram.com/CardoneAdvocacia" target="_blank" rel="noopener" class="social-link" aria-label="Instagram da Cardone Advocacia">
-                        <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
-                    </a>
-                    <a href="https://www.facebook.com/CardoneAdvocacia" target="_blank" rel="noopener" class="social-link" aria-label="Facebook da Cardone Advocacia">
-                        <svg viewBox="0 0 24 24"><path d="M9 8H6v4h3v12h5V12h3.642L18 8h-4V6.333C14 5.374 14.5 5 15.5 5H18V0h-3.808C10.592 0 9 1.583 9 4.615V8z"/></svg>
-                    </a>
+    <!-- Rodapé -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <h4>Cardone Advocacia</h4>
+                    <p>Boutique de advocacia especializada em Direito Trabalhista. Estratégias jurídicas personalizadas e defesa dedicada de direitos em todo o território nacional.</p>
+                    <div class="social-links">
+                        <a href="https://www.instagram.com/CardoneAdvocacia" target="_blank" rel="noopener" class="social-btn" aria-label="Acessar perfil no Instagram da Cardone Advocacia">
+                            <svg class="social-icon" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                        </a>
+                        <a href="https://www.facebook.com/CardoneAdvocacia" target="_blank" rel="noopener" class="social-btn" aria-label="Acessar página no Facebook da Cardone Advocacia">
+                            <svg class="social-icon" viewBox="0 0 24 24"><path d="M9 8H6v4h3v12h5V12h3.642L18 8h-4V6.333C14 5.374 14.5 5 15.5 5H18V0h-3.808C10.592 0 9 1.583 9 4.615V8z"/></svg>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="footer-links">
+                    <h5>Navegação</h5>
+                    <ul>
+                        <li><a href="#diferenciais">Diferenciais</a></li>
+                        <li><a href="#atuacao">Áreas de Atuação</a></li>
+                        <li><a href="#triagem">Avalie seu Caso</a></li>
+                        <li><a href="#sobre">Quem Somos</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-contact">
+                    <h5>Atendimento</h5>
+                    <p>Atendimento jurídico com abrangência em todo o Brasil.</p>
+                    <p style="margin-top: 0.8rem;">
+                        <strong>Canal de Atendimento:</strong><br>
+                        <a href="https://wa.me/5521996042087?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." style="color: var(--accent); font-weight: 700;">Atendimento via WhatsApp</a>
+                    </p>
                 </div>
             </div>
 
-            <div>
-                <div class="footer-title">Navegação</div>
-                <ul class="footer-links">
-                    <li><a href="#inicio">Início</a></li>
-                    <li><a href="#direitos">Seus Direitos</a></li>
-                    <li><a href="#atuacao">Áreas de Atuação</a></li>
-                    <li><a href="#triagem">Triagem Rápida</a></li>
-                    <li><a href="#sobre">Quem Somos</a></li>
-                </ul>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Cardone Advocacia & Consultoria Jurídica. Todos os direitos reservados.</p>
             </div>
-
-            <div>
-                <div class="footer-title">Atendimento</div>
-                <div class="footer-contact-item">
-                    <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-                    <a href="tel:+5521996042087">(21) 99604-2087</a>
-                </div>
-                <div class="footer-contact-item">
-                    <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/><path d="M2 12h20"/></svg>
-                    <span>Atendimento Nacional em todo o Brasil</span>
-                </div>
-            </div>
-        </div>
-
-        <div class="footer-bottom">
-            &copy; 2026 Cardone Advocacia & Consultoria Jurídica. Todos os direitos reservados.
         </div>
     </footer>
 
-    <!-- BOTÃO FLUTUANTE DE WHATSAPP FIXO -->
-    <a href="https://wa.me/21996042087?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." class="whatsapp-float" target="_blank" rel="noopener" aria-label="Falar no WhatsApp com Cardone Advocacia">
-        <svg viewBox="0 0 24 24">
-            <path d="M12.012 2c-5.506 0-9.989 4.478-9.99 9.984 0 1.762.459 3.48 1.332 5.001l-1.416 5.176 5.297-1.389c1.462.797 3.111 1.216 4.775 1.217h.004c5.507 0 9.99-4.478 9.99-9.985 0-2.667-1.037-5.176-2.922-7.062a9.927 9.927 0 0 0-7.06-2.942zm5.82 14.28c-.247.693-1.439 1.328-1.98 1.382-.505.051-1.156.074-1.85-.148a12.87 12.87 0 0 1-4.223-2.222 13.9 13.9 0 0 1-2.923-3.64c-.426-.732-.03-1.127.202-1.358.203-.203.454-.53.682-.795.228-.266.303-.455.455-.758.152-.303.076-.569-.038-.796-.114-.227-.986-2.378-1.353-3.255-.357-.852-.722-.736-.986-.749l-.84-.015c-.29 0-.758.109-1.152.536-.395.428-1.503 1.468-1.503 3.58 0 2.112 1.54 4.152 1.753 4.437.214.285 3.033 4.632 7.348 6.494 1.026.442 1.827.706 2.451.905 1.03.328 1.968.281 2.71.17.827-.123 2.541-1.039 2.901-2.043.36-1.004.36-1.862.253-2.043-.107-.181-.395-.29-.841-.513z"/>
+    <!-- Botão Flutuante Fixado do WhatsApp -->
+    <a href="https://wa.me/5521996042087?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." class="whatsapp-float" target="_blank" rel="noopener" aria-label="Falar no WhatsApp com Cardone Advocacia">
+        <svg class="whatsapp-float-icon" viewBox="0 0 24 24">
+            <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/>
         </svg>
     </a>
 
