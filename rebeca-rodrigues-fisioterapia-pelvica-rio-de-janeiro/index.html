@@ -1,882 +1,729 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <link rel="preconnect" href="https://ui-avatars.com">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rebeca Rodrigues | Fisioterapia Pélvica no Rio de Janeiro</title>
-    <meta name="description" content="Atendimento especializado em Fisioterapia Pélvica no Rio de Janeiro. Cuidado individualizado, acolhimento e excelência em saúde íntima e reabilitação.">
-    
-    <!-- Open Graph Tags -->
-    <meta property="og:title" content="Rebeca Rodrigues | Fisioterapia Pélvica no Rio de Janeiro">
-    <meta property="og:description" content="Atendimento especializado em Fisioterapia Pélvica no Rio de Janeiro. Cuidado individualizado, acolhimento e excelência em saúde íntima e reabilitação.">
-    <meta property="og:image" content="https://rd-previews-dharari01s-projects.vercel.app/rebeca-rodrigues-fisioterapia-pelvica-rio-de-janeiro/img/foto-1.png">
-    <meta property="og:type" content="website">
-
-    <!-- Favicon SVG Embutido -->
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20100%20100'%3E%3Crect%20width='100'%20height='100'%20rx='20'%20fill='%23ECF3FF'/%3E%3Ctext%20x='50%25'%20y='58%25'%20dominant-baseline='middle'%20text-anchor='middle'%20font-family='Georgia,%20serif'%20font-size='42'%20font-weight='bold'%20fill='%231E3A8A'%3ERR%3C/text%3E%3C/svg%3E">
-
-    <style>
-        /* RESET & VARIAVEIS DA MARCA */
-        :root {
-            --color-primary-bg: #ECF3FF;
-            --color-primary-accent: #1E3A8A;
-            --color-text-dark: #0F172A;
-            --color-text-muted: #475569;
-            --color-white: #FFFFFF;
-            --color-bg-light: #F8FAFC;
-            --color-border: rgba(15, 23, 42, 0.1);
-            --font-serif: Georgia, 'Playfair Display', 'Times New Roman', serif;
-            --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-            --container-max: 1120px;
-            --transition: all 0.3s ease;
-        }
-
-        *, *::before, *::after {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-
-        html {
-            scroll-behavior: smooth;
-            font-size: 16px;
-        }
-
-        body {
-            font-family: var(--font-sans);
-            color: var(--color-text-dark);
-            background-color: var(--color-white);
-            line-height: 1.6;
-            -webkit-font-smoothing: antialiased;
-        }
-
-        a {
-            color: inherit;
-            text-decoration: none;
-        }
-
-        img {
-            max-width: 100%;
-            height: auto;
-            display: block;
-        }
-
-        .container {
-            width: 100%;
-            max-width: var(--container-max);
-            margin: 0 auto;
-            padding: 0 1.5rem;
-        }
-
-        /* TIPOGRAFIA REGRA DO DESIGN SYSTEM */
-        h1, h2, h3, h4, .serif-font {
-            font-family: var(--font-serif);
-            font-weight: 500;
-            line-height: 1.25;
-            color: var(--color-text-dark);
-        }
-
-        /* HEADER & MENU MOBILE (CHECKBOX HACK CSS PURO) */
-        .site-header {
-            position: sticky;
-            top: 0;
-            background-color: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(8px);
-            z-index: 100;
-            border-bottom: 1px solid var(--color-border);
-            padding: 1rem 0;
-        }
-
-        .header-container {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
-
-        .brand-logo {
-            display: flex;
-            align-items: center;
-            gap: 0.75rem;
-        }
-
-        .brand-logo img {
-            width: 44px;
-            height: 44px;
-            border-radius: 50%;
-        }
-
-        .brand-name {
-            font-family: var(--font-serif);
-            font-size: 1.125rem;
-            font-weight: 600;
-            color: var(--color-text-dark);
-            letter-spacing: -0.02em;
-        }
-
-        /* Checkbox Hack */
-        .menu-toggle-input {
-            position: absolute;
-            opacity: 0;
-            pointer-events: none;
-        }
-
-        .menu-toggle-btn {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 40px;
-            height: 40px;
-            cursor: pointer;
-            border: 1px solid var(--color-border);
-            border-radius: 8px;
-            background: transparent;
-            z-index: 102;
-        }
-
-        .menu-toggle-btn svg {
-            width: 22px;
-            height: 22px;
-            stroke: var(--color-text-dark);
-        }
-
-        .main-nav {
-            position: fixed;
-            top: 0;
-            right: 0;
-            width: 100%;
-            height: 100vh;
-            background-color: var(--color-white);
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            gap: 2rem;
-            transform: translateX(100%);
-            transition: transform 0.3s ease-in-out;
-            z-index: 101;
-            padding: 2rem;
-        }
-
-        .main-nav a {
-            font-size: 1.25rem;
-            font-weight: 500;
-            color: var(--color-text-dark);
-            transition: var(--transition);
-        }
-
-        .main-nav a:hover {
-            color: var(--color-primary-accent);
-        }
-
-        .menu-toggle-input:checked ~ .main-nav {
-            transform: translateX(0);
-        }
-
-        /* HERO - VARIANTE MINIMALISTA TIPOGRÁFICO */
-        .hero {
-            background: linear-gradient(135deg, var(--color-primary-bg) 0%, #FFFFFF 100%);
-            padding: 5rem 0 4rem 0;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .hero-content {
-            max-width: 850px;
-        }
-
-        .tag-badge {
-            display: inline-block;
-            padding: 0.35rem 1rem;
-            background-color: var(--color-white);
-            border: 1px solid var(--color-border);
-            border-radius: 50px;
-            font-size: 0.875rem;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-            color: var(--color-primary-accent);
-            margin-bottom: 1.5rem;
-        }
-
-        .hero-title {
-            font-size: clamp(2.5rem, 6vw, 4.25rem);
-            letter-spacing: -0.03em;
-            margin-bottom: 1.5rem;
-            color: var(--color-text-dark);
-        }
-
-        .hero-description {
-            font-size: clamp(1.125rem, 2.5vw, 1.35rem);
-            color: var(--color-text-muted);
-            margin-bottom: 2.5rem;
-            max-width: 680px;
-            font-weight: 400;
-        }
-
-        .btn-primary {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            gap: 0.75rem;
-            background-color: var(--color-primary-accent);
-            color: var(--color-white);
-            padding: 1.125rem 2.25rem;
-            border-radius: 50px;
-            font-weight: 600;
-            font-size: 1rem;
-            transition: var(--transition);
-            box-shadow: 0 10px 25px -5px rgba(30, 58, 138, 0.25);
-        }
-
-        .btn-primary:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 15px 30px -5px rgba(30, 58, 138, 0.35);
-            background-color: #1A3075;
-        }
-
-        .btn-primary svg {
-            width: 20px;
-            height: 20px;
-            fill: currentColor;
-        }
-
-        /* PROVA SOCIAL TIPOGRÁFICA AUDITADA GOOGLE */
-        .social-proof-bar {
-            border-top: 1px solid var(--color-border);
-            border-bottom: 1px solid var(--color-border);
-            background-color: var(--color-white);
-            padding: 2.5rem 0;
-        }
-
-        .proof-grid {
-            display: flex;
-            flex-direction: column;
-            gap: 1.5rem;
-            align-items: flex-start;
-        }
-
-        .proof-metric {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-        }
-
-        .proof-score {
-            font-family: var(--font-serif);
-            font-size: 3.5rem;
-            font-weight: 700;
-            line-height: 1;
-            color: var(--color-text-dark);
-        }
-
-        .proof-stars-container {
-            display: flex;
-            flex-direction: column;
-            gap: 0.25rem;
-        }
-
-        .stars-row {
-            display: flex;
-            gap: 0.2rem;
-            color: #F59E0B;
-        }
-
-        .stars-row svg {
-            width: 20px;
-            height: 20px;
-            fill: currentColor;
-        }
-
-        .proof-label {
-            font-size: 0.9rem;
-            color: var(--color-text-muted);
-            font-weight: 500;
-        }
-
-        .proof-quote {
-            font-family: var(--font-serif);
-            font-size: 1.25rem;
-            font-style: italic;
-            color: var(--color-text-dark);
-            max-width: 600px;
-            border-left: 2px solid var(--color-primary-accent);
-            padding-left: 1rem;
-        }
-
-        /* SERVIÇOS - LISTA NUMERADA ELEGANTE */
-        .services-section {
-            padding: 6rem 0;
-            background-color: var(--color-white);
-        }
-
-        .section-header {
-            margin-bottom: 4rem;
-        }
-
-        .section-subtitle {
-            font-size: 0.875rem;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 0.1em;
-            color: var(--color-primary-accent);
-            margin-bottom: 0.5rem;
-            display: block;
-        }
-
-        .section-title {
-            font-size: clamp(2rem, 4vw, 3rem);
-            color: var(--color-text-dark);
-        }
-
-        .numbered-services-list {
-            display: flex;
-            flex-direction: column;
-        }
-
-        .service-item {
-            display: grid;
-            grid-template-columns: 1fr;
-            padding: 2.5rem 0;
-            border-bottom: 1px solid var(--color-border);
-            gap: 1rem;
-            transition: var(--transition);
-        }
-
-        .service-item:first-child {
-            border-top: 1px solid var(--color-border);
-        }
-
-        .service-number {
-            font-family: var(--font-serif);
-            font-size: 2rem;
-            font-weight: 400;
-            color: var(--color-primary-accent);
-            opacity: 0.8;
-        }
-
-        .service-title {
-            font-size: 1.5rem;
-            margin-bottom: 0.5rem;
-        }
-
-        .service-desc {
-            font-size: 1rem;
-            color: var(--color-text-muted);
-            max-width: 650px;
-        }
-
-        /* SOBRE / ATENDIMENTO INSTITUCIONAL */
-        .about-section {
-            padding: 6rem 0;
-            background-color: var(--color-bg-light);
-        }
-
-        .about-wrapper {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 3rem;
-        }
-
-        .about-card-hero {
-            background-color: var(--color-primary-bg);
-            border-radius: 24px;
-            padding: 3rem 2rem;
-            border: 1px solid rgba(30, 58, 138, 0.08);
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-        }
-
-        .about-card-title {
-            font-size: clamp(1.75rem, 3vw, 2.5rem);
-            margin-bottom: 1.5rem;
-            color: var(--color-text-dark);
-        }
-
-        .about-text {
-            color: var(--color-text-muted);
-            font-size: 1.1rem;
-            margin-bottom: 1.5rem;
-            line-height: 1.7;
-        }
-
-        .differentials-list {
-            list-style: none;
-            display: flex;
-            flex-direction: column;
-            gap: 1rem;
-            margin-top: 1rem;
-        }
-
-        .differential-item {
-            display: flex;
-            align-items: center;
-            gap: 0.85rem;
-            font-weight: 500;
-            color: var(--color-text-dark);
-        }
-
-        .differential-item svg {
-            width: 20px;
-            height: 20px;
-            stroke: var(--color-primary-accent);
-            flex-shrink: 0;
-        }
-
-        /* TRIAGEM / ORIENTAÇÃO NEUTRA */
-        .triagem-section {
-            padding: 5rem 0;
-            background-color: var(--color-white);
-        }
-
-        .triagem-box {
-            border: 1px solid var(--color-border);
-            border-radius: 20px;
-            padding: 3rem 2rem;
-            background: linear-gradient(180deg, #FFFFFF 0%, var(--color-primary-bg) 100%);
-            text-align: center;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        .triagem-title {
-            font-size: 1.75rem;
-            margin-bottom: 1rem;
-        }
-
-        .triagem-text {
-            color: var(--color-text-muted);
-            margin-bottom: 2rem;
-            font-size: 1.05rem;
-        }
-
-        /* CTA FINAL */
-        .cta-final-section {
-            padding: 6rem 0;
-            background-color: var(--color-primary-accent);
-            color: var(--color-white);
-            text-align: center;
-        }
-
-        .cta-final-title {
-            color: var(--color-white);
-            font-size: clamp(2rem, 4vw, 3.25rem);
-            margin-bottom: 1.5rem;
-        }
-
-        .cta-final-desc {
-            color: rgba(255, 255, 255, 0.85);
-            font-size: 1.2rem;
-            max-width: 600px;
-            margin: 0 auto 2.5rem auto;
-        }
-
-        .btn-light {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            gap: 0.75rem;
-            background-color: var(--color-white);
-            color: var(--color-primary-accent);
-            padding: 1.125rem 2.5rem;
-            border-radius: 50px;
-            font-weight: 600;
-            font-size: 1.05rem;
-            transition: var(--transition);
-        }
-
-        .btn-light:hover {
-            background-color: var(--color-primary-bg);
-            transform: translateY(-2px);
-        }
-
-        .btn-light svg {
-            width: 20px;
-            height: 20px;
-            fill: currentColor;
-        }
-
-        /* RODAPÉ */
-        .site-footer {
-            background-color: #0B1120;
-            color: #94A3B8;
-            padding: 4rem 0 2rem 0;
-            font-size: 0.95rem;
-            border-top: 1px solid rgba(255, 255, 255, 0.05);
-        }
-
-        .footer-grid {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 3rem;
-            margin-bottom: 3rem;
-        }
-
-        .footer-brand .footer-title {
-            font-family: var(--font-serif);
-            color: var(--color-white);
-            font-size: 1.35rem;
-            margin-bottom: 1rem;
-        }
-
-        .footer-info {
-            display: flex;
-            flex-direction: column;
-            gap: 0.75rem;
-        }
-
-        .footer-info-item {
-            display: flex;
-            align-items: center;
-            gap: 0.75rem;
-        }
-
-        .footer-info-item svg {
-            width: 18px;
-            height: 18px;
-            stroke: var(--color-primary-bg);
-            flex-shrink: 0;
-        }
-
-        .social-links {
-            display: flex;
-            gap: 1rem;
-            margin-top: 0.5rem;
-        }
-
-        .social-link-btn {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            background-color: rgba(255, 255, 255, 0.05);
-            color: var(--color-white);
-            transition: var(--transition);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-        }
-
-        .social-link-btn:hover {
-            background-color: var(--color-primary-accent);
-            color: var(--color-white);
-            border-color: var(--color-primary-accent);
-        }
-
-        .social-link-btn svg {
-            width: 20px;
-            height: 20px;
-            fill: currentColor;
-        }
-
-        .footer-bottom {
-            border-top: 1px solid rgba(255, 255, 255, 0.08);
-            padding-top: 2rem;
-            text-align: center;
-            font-size: 0.85rem;
-            color: #64748B;
-        }
-
-        /* BOTÃO WHATSAPP FLUTUANTE */
-        .whatsapp-float {
-            position: fixed;
-            bottom: 2rem;
-            right: 2rem;
-            background-color: #25D366;
-            color: #FFFFFF;
-            width: 60px;
-            height: 60px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            box-shadow: 0 10px 25px rgba(37, 211, 102, 0.4);
-            z-index: 999;
-            transition: var(--transition);
-        }
-
-        .whatsapp-float:hover {
-            transform: scale(1.08);
-            box-shadow: 0 15px 30px rgba(37, 211, 102, 0.5);
-        }
-
-        .whatsapp-float svg {
-            width: 32px;
-            height: 32px;
-            fill: #FFFFFF;
-        }
-
-        /* MEDIA QUERIES (DESKTOP) */
-        @media (min-width: 768px) {
-            .menu-toggle-btn {
-                display: none;
-            }
-
-            .main-nav {
-                position: static;
-                height: auto;
-                width: auto;
-                background-color: transparent;
-                flex-direction: row;
-                gap: 2rem;
-                transform: none;
-                padding: 0;
-            }
-
-            .main-nav a {
-                font-size: 0.95rem;
-            }
-
-            .proof-grid {
-                flex-direction: row;
-                align-items: center;
-                justify-content: space-between;
-            }
-
-            .service-item {
-                grid-template-columns: 80px 1fr 2fr;
-                align-items: baseline;
-            }
-
-            .about-wrapper {
-                grid-template-columns: 1fr 1fr;
-            }
-
-            .footer-grid {
-                grid-template-columns: 2fr 1fr 1fr;
-            }
-        }
-    </style>
+  <link rel="preconnect" href="https://ui-avatars.com">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rebeca Rodrigues | Fisioterapia Pélvica no Rio de Janeiro</title>
+  <meta name="description" content="Atendimento especializado e individualizado em Fisioterapia Pélvica no Rio de Janeiro. Saúde íntima, gestação, pós-parto e reabilitação funcional com acolhimento.">
+  
+  <!-- Open Graph -->
+  <meta property="og:title" content="Rebeca Rodrigues | Fisioterapia Pélvica no Rio de Janeiro">
+  <meta property="og:description" content="Atendimento especializado e individualizado em Fisioterapia Pélvica no Rio de Janeiro. Saúde íntima, gestação, pós-parto e reabilitação funcional com acolhimento.">
+  <meta property="og:image" content="https://rd-previews-dharari01s-projects.vercel.app/rebeca-rodrigues-fisioterapia-pelvica-rio-de-janeiro/img/foto-1.png">
+  <meta property="og:type" content="website">
+
+  <!-- Favicon Embutido -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2032%2032%22%3E%3Crect%20width=%2232%22%20height=%2232%22%20rx=%226%22%20fill=%22%23ECF3FF%22/%3E%3Ctext%20x=%2250%25%22%20y=%2255%25%22%20dominant-baseline=%22middle%22%20text-anchor=%22middle%22%20font-family=%22Georgia,%20serif%22%20font-size=%2214%22%20font-weight=%22bold%22%20fill=%22%231E293B%22%3ERR%3C/text%3E%3C/svg%3E">
+
+  <style>
+    :root {
+      --color-brand: #ECF3FF;
+      --color-brand-dark: #0F172A;
+      --color-accent: #2563EB;
+      --color-bg-light: #FAFBFD;
+      --color-white: #FFFFFF;
+      --color-text-main: #0F172A;
+      --color-text-muted: #475569;
+      --color-border: rgba(15, 23, 42, 0.1);
+      
+      --font-serif: Georgia, 'Times New Roman', serif;
+      --font-sans: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: var(--font-sans);
+      color: var(--color-text-main);
+      background-color: var(--color-bg-light);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* Tipografia de Destaque */
+    h1, h2, h3, .serif-heading {
+      font-family: var(--font-serif);
+      font-weight: 400;
+      letter-spacing: -0.02em;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+
+    /* Header */
+    .header {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background-color: rgba(250, 251, 253, 0.92);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid var(--color-border);
+    }
+
+    .header-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 80px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      font-family: var(--font-serif);
+      font-size: 1.125rem;
+      font-weight: 600;
+      color: var(--color-brand-dark);
+    }
+
+    .brand-logo {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+
+    /* Menu Mobile via Checkbox Hack */
+    .menu-toggle-input {
+      position: absolute;
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    .menu-toggle-btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 44px;
+      height: 44px;
+      cursor: pointer;
+      color: var(--color-brand-dark);
+    }
+
+    .main-nav {
+      display: none;
+      position: absolute;
+      top: 80px;
+      left: 0;
+      width: 100%;
+      background-color: var(--color-white);
+      border-bottom: 1px solid var(--color-border);
+      padding: 1.5rem;
+      flex-direction: column;
+      gap: 1.25rem;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+    }
+
+    .main-nav a {
+      font-size: 1rem;
+      color: var(--color-text-muted);
+      transition: color 0.2s ease;
+    }
+
+    .main-nav a:hover {
+      color: var(--color-brand-dark);
+    }
+
+    .menu-toggle-input:checked ~ .main-nav {
+      display: flex;
+    }
+
+    /* Hero Minimalista Tipográfico */
+    .hero {
+      padding: 4rem 0 5rem;
+      background: linear-gradient(180deg, var(--color-brand) 0%, var(--color-bg-light) 100%);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-content {
+      max-width: 900px;
+    }
+
+    .hero-tag {
+      display: inline-block;
+      font-size: 0.875rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--color-text-muted);
+      margin-bottom: 1.5rem;
+      font-weight: 500;
+    }
+
+    .hero-title {
+      font-size: 2.75rem;
+      line-height: 1.15;
+      color: var(--color-brand-dark);
+      margin-bottom: 2rem;
+    }
+
+    .hero-subtitle {
+      font-size: 1.125rem;
+      color: var(--color-text-muted);
+      max-width: 680px;
+      margin-bottom: 2.5rem;
+      font-weight: 300;
+      line-height: 1.7;
+    }
+
+    /* Botão Principal */
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.75rem;
+      background-color: var(--color-brand-dark);
+      color: var(--color-white);
+      padding: 1rem 2rem;
+      border-radius: 4px;
+      font-size: 1rem;
+      font-weight: 500;
+      transition: transform 0.2s ease, background-color 0.2s ease;
+    }
+
+    .btn-primary:hover {
+      background-color: #1E293B;
+      transform: translateY(-2px);
+    }
+
+    /* Prova Social em Destaque Tipográfico */
+    .social-proof {
+      padding: 4rem 0;
+      border-bottom: 1px solid var(--color-border);
+      background-color: var(--color-white);
+    }
+
+    .proof-wrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 1.5rem;
+    }
+
+    .proof-number-group {
+      display: flex;
+      align-items: baseline;
+      gap: 1rem;
+    }
+
+    .proof-number {
+      font-family: var(--font-serif);
+      font-size: 4.5rem;
+      line-height: 1;
+      color: var(--color-brand-dark);
+    }
+
+    .proof-stars {
+      display: flex;
+      gap: 0.25rem;
+      color: #F59E0B;
+    }
+
+    .proof-text {
+      font-size: 1.25rem;
+      color: var(--color-text-muted);
+      max-width: 650px;
+      font-weight: 300;
+      line-height: 1.5;
+    }
+
+    .proof-source {
+      font-size: 0.875rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: #64748B;
+      margin-top: 0.5rem;
+    }
+
+    /* Seção de Serviços em Lista Numerada */
+    .services {
+      padding: 6rem 0;
+    }
+
+    .section-header {
+      margin-bottom: 4rem;
+    }
+
+    .section-title {
+      font-size: 2.25rem;
+      color: var(--color-brand-dark);
+      margin-bottom: 0.75rem;
+    }
+
+    .section-subtitle {
+      color: var(--color-text-muted);
+      font-size: 1.0625rem;
+    }
+
+    .services-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .service-item {
+      display: grid;
+      grid-template-columns: 1fr;
+      padding: 2.5rem 0;
+      border-bottom: 1px solid var(--color-border);
+      gap: 1rem;
+      transition: background-color 0.2s ease;
+    }
+
+    .service-item:first-child {
+      border-top: 1px solid var(--color-border);
+    }
+
+    .service-number {
+      font-family: var(--font-serif);
+      font-size: 1.75rem;
+      color: #94A3B8;
+    }
+
+    .service-content h3 {
+      font-size: 1.5rem;
+      color: var(--color-brand-dark);
+      margin-bottom: 0.75rem;
+    }
+
+    .service-content p {
+      color: var(--color-text-muted);
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+
+    /* Seção Sobre */
+    .about {
+      padding: 6rem 0;
+      background-color: var(--color-brand);
+    }
+
+    .about-card {
+      max-width: 800px;
+    }
+
+    .about-title {
+      font-size: 2.25rem;
+      color: var(--color-brand-dark);
+      margin-bottom: 1.5rem;
+    }
+
+    .about-text {
+      font-size: 1.125rem;
+      color: var(--color-text-main);
+      line-height: 1.8;
+      margin-bottom: 1.5rem;
+      font-weight: 300;
+    }
+
+    .about-highlights {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      margin-top: 2.5rem;
+    }
+
+    .highlight-item {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      font-size: 1rem;
+      color: var(--color-brand-dark);
+    }
+
+    /* CTA Final */
+    .cta-section {
+      padding: 6rem 0;
+      background-color: var(--color-brand-dark);
+      color: var(--color-white);
+      text-align: center;
+    }
+
+    .cta-container {
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    .cta-title {
+      font-size: 2.5rem;
+      margin-bottom: 1.25rem;
+      color: var(--color-white);
+    }
+
+    .cta-description {
+      font-size: 1.125rem;
+      color: #94A3B8;
+      margin-bottom: 2.5rem;
+      font-weight: 300;
+    }
+
+    .cta-btn {
+      background-color: var(--color-white);
+      color: var(--color-brand-dark);
+      padding: 1.125rem 2.25rem;
+      border-radius: 4px;
+      font-size: 1.0625rem;
+      font-weight: 600;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.75rem;
+      transition: background-color 0.2s ease, transform 0.2s ease;
+    }
+
+    .cta-btn:hover {
+      background-color: var(--color-brand);
+      transform: translateY(-2px);
+    }
+
+    /* Rodapé */
+    .footer {
+      background-color: #0B1120;
+      color: #64748B;
+      padding: 4rem 0 2rem;
+      font-size: 0.9375rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2.5rem;
+      margin-bottom: 3.5rem;
+    }
+
+    .footer-brand {
+      color: var(--color-white);
+      font-family: var(--font-serif);
+      font-size: 1.25rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .footer-socials {
+      display: flex;
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+
+    .social-link {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background-color: rgba(255, 255, 255, 0.05);
+      color: var(--color-white);
+      transition: background-color 0.2s ease;
+    }
+
+    .social-link:hover {
+      background-color: rgba(255, 255, 255, 0.15);
+    }
+
+    .footer-bottom {
+      padding-top: 2rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.05);
+      text-align: center;
+      font-size: 0.875rem;
+    }
+
+    /* WhatsApp Flutuante Fixo */
+    .whatsapp-float {
+      position: fixed;
+      bottom: 1.75rem;
+      right: 1.75rem;
+      width: 60px;
+      height: 60px;
+      background-color: #25D366;
+      color: #FFFFFF;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 16px rgba(37, 211, 102, 0.35);
+      z-index: 99;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .whatsapp-float:hover {
+      transform: scale(1.08);
+      box-shadow: 0 6px 20px rgba(37, 211, 102, 0.45);
+    }
+
+    /* Desktop Breakpoints */
+    @media (min-width: 768px) {
+      .menu-toggle-btn {
+        display: none;
+      }
+
+      .main-nav {
+        display: flex;
+        position: static;
+        width: auto;
+        padding: 0;
+        background: transparent;
+        border-bottom: none;
+        flex-direction: row;
+        align-items: center;
+        gap: 2rem;
+        box-shadow: none;
+      }
+
+      .nav-cta {
+        background-color: var(--color-brand-dark);
+        color: var(--color-white) !important;
+        padding: 0.625rem 1.25rem;
+        border-radius: 4px;
+        font-weight: 500;
+      }
+
+      .hero {
+        padding: 6rem 0 8rem;
+      }
+
+      .hero-title {
+        font-size: 3.75rem;
+      }
+
+      .proof-wrapper {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      .service-item {
+        grid-template-columns: 80px 1fr;
+        align-items: baseline;
+      }
+
+      .footer-grid {
+        grid-template-columns: 2fr 1fr;
+      }
+    }
+  </style>
 </head>
 <body>
 
-    <!-- SITE HEADER -->
-    <header class="site-header">
-        <div class="container header-container">
-            <a href="#" class="brand-logo" aria-label="Página inicial Rebeca Rodrigues Fisioterapia Pélvica">
-                <img src="img/foto-1.png" alt="Monograma Rebeca Rodrigues Fisioterapia Pélvica">
-                <span class="brand-name">Rebeca Rodrigues</span>
-            </a>
+  <!-- Header / NAVEGAÇÃO -->
+  <header class="header">
+    <div class="container header-container">
+      <a href="#" class="brand">
+        <img src="img/foto-1.png" alt="Rebeca Rodrigues Fisioterapia Pélvica" class="brand-logo" width="40" height="40">
+        <span>Rebeca Rodrigues</span>
+      </a>
 
-            <input type="checkbox" id="menu-toggle" class="menu-toggle-input" aria-hidden="true">
-            <label for="menu-toggle" class="menu-toggle-btn" aria-label="Abrir menu de navegação" role="button" aria-expanded="false">
-                <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <line x1="3" y1="12" x2="21" y2="12"></line>
-                    <line x1="3" y1="6" x2="21" y2="6"></line>
-                    <line x1="3" y1="18" x2="21" y2="18"></line>
-                </svg>
-            </label>
-
-            <nav class="main-nav" role="navigation" aria-label="Navegação principal">
-                <a href="#inicio">Início</a>
-                <a href="#servicos">Atendimento</a>
-                <a href="#sobre">Abordagem</a>
-                <a href="#contato">Contato</a>
-            </nav>
-        </div>
-    </header>
-
-    <main>
-        <!-- HERO - MINIMALISTA TIPOGRÁFICO -->
-        <section id="inicio" class="hero">
-            <div class="container">
-                <div class="hero-content">
-                    <span class="tag-badge">Fisioterapia Pélvica • Rio de Janeiro</span>
-                    <h1 class="hero-title">Cuidado integral, individualizado e focado no seu bem-estar.</h1>
-                    <p class="hero-description">
-                        Atendimento especializado em fisioterapia pélvica no Rio de Janeiro. Acolhimento humano, prática baseada em evidências científicas e foco na sua autonomia e qualidade de vida.
-                    </p>
-                    <a href="https://wa.me/5521971860871?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." class="btn-primary" target="_blank" rel="noopener">
-                        <span>Agendar Consulta via WhatsApp</span>
-                        <svg viewBox="0 0 24 24">
-                            <path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
-                        </svg>
-                    </a>
-                </div>
-            </div>
-        </section>
-
-        <!-- PROVA SOCIAL NUMÉRICA AUDITADA GOOGLE -->
-        <section class="social-proof-bar">
-            <div class="container">
-                <div class="proof-grid">
-                    <div class="proof-metric">
-                        <div class="proof-score">5.0</div>
-                        <div class="proof-stars-container">
-                            <div class="stars-row">
-                                <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-                                <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-                                <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-                                <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-                                <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-                            </div>
-                            <span class="proof-label">Nota máxima com 71 avaliações no Google</span>
-                        </div>
-                    </div>
-                    <div class="proof-quote">
-                        "Atendimento pautado pela escuta atenta, ética profissional e dedicação ao tratamento contínuo dos pacientes."
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- SERVIÇOS - LISTA NUMERADA ELEGANTE -->
-        <section id="servicos" class="services-section">
-            <div class="container">
-                <div class="section-header">
-                    <span class="section-subtitle">Áreas de Atuação</span>
-                    <h2 class="section-title">Serviços e Tratamentos Especializados</h2>
-                </div>
-
-                <div class="numbered-services-list">
-                    <article class="service-item">
-                        <span class="service-number">01</span>
-                        <h3 class="service-title">Avaliação Pélvica Funcional</h3>
-                        <p class="service-desc">Investigação detalhada da musculatura do assoalho pélvico, histórico de saúde e rotina, estabelecendo diagnósticos funcionais e metas terapêuticas personalizadas.</p>
-                    </article>
-
-                    <article class="service-item">
-                        <span class="service-number">02</span>
-                        <h3 class="service-title">Reabilitação Pélvica Feminina</h3>
-                        <p class="service-desc">Tratamento focado na prevenção e reabilitação de disfunções urinárias, dores pélvicas crônicas e alteração de tônus muscular, priorizando o conforto e a função.</p>
-                    </article>
-
-                    <article class="service-item">
-                        <span class="service-number">03</span>
-                        <h3 class="service-title">Acompanhamento Gestacional e Pós-Parto</h3>
-                        <p class="service-desc">Preparo físico para as mudanças corporais durante a gestação, auxílio na mobilidade e plano funcional para recuperação segura no período pós-parto.</p>
-                    </article>
-
-                    <article class="service-item">
-                        <span class="service-number">04</span>
-                        <h3 class="service-title">Fortalecimento e Consciência Corporal</h3>
-                        <p class="service-desc">Exercícios direcionados e orientação biomecânica para promover sustentação, controle e prevenção no dia a dia com foco na longevidade da saúde íntima.</p>
-                    </article>
-                </div>
-            </div>
-        </section>
-
-        <!-- SOBRE / DIFERENCIAIS INSTITUCIONAIS -->
-        <section id="sobre" class="about-section">
-            <div class="container">
-                <div class="about-wrapper">
-                    <div class="about-card-hero">
-                        <h2 class="about-card-title">Atendimento Humano e Científico</h2>
-                        <p class="about-text">
-                            A fisioterapia pélvica atua diretamente na prevenção e reabilitação do assoalho pélvico, área responsável por funções essenciais de sustentação e bem-estar.
-                        </p>
-                        <p class="about-text">
-                            No consultório, cada paciente encontra um ambiente reservado, livre de julgamentos, projetado para proporcionar máxima privacidade e segurança durante todo o processo terapêutico.
-                        </p>
-                    </div>
-
-                    <div style="display: flex; flex-direction: column; justify-content: center;">
-                        <span class="section-subtitle">Por que Agendar</span>
-                        <h2 class="section-title" style="margin-bottom: 1.5rem;">Pilares do Atendimento</h2>
-                        
-                        <ul class="differentials-list">
-                            <li class="differential-item">
-                                <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                                <span>Atendimento 100% individual e privativo</span>
-                            </li>
-                            <li class="differential-item">
-                                <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                                <span>Avaliação biomecânica e funcional minuciosa</span>
-                            </li>
-                            <li class="differential-item">
-                                <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                                <span>Planos terapêuticos fundamentados em evidência</span>
-                            </li>
-                            <li class="differential-item">
-                                <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                                <span>Localização estratégica no Rio de Janeiro</span>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- TRIAGEM / AUTOAVALIAÇÃO NEUTRA -->
-        <section class="triagem-section">
-            <div class="container">
-                <div class="triagem-box">
-                    <h2 class="triagem-title">Dúvidas sobre quando procurar tratamento?</h2>
-                    <p class="triagem-text">
-                        Sintomas como dores constantes, incômodos na região pélvica ou alterações na rotina de higiene e treino são sinais para passar por uma consulta de avaliação. Um profissional especializado pode analisar individualmente o seu caso.
-                    </p>
-                    <a href="https://wa.me/5521971860871?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." class="btn-primary" target="_blank" rel="noopener">
-                        <span>Conversar com a Especialista</span>
-                    </a>
-                </div>
-            </div>
-        </section>
-
-        <!-- CTA FINAL -->
-        <section class="cta-final-section">
-            <div class="container">
-                <h2 class="cta-final-title">Cuide da sua saúde pélvica com atenção dedicada</h2>
-                <p class="cta-final-desc">Agende seu horário e tire suas dúvidas sobre a consulta e os métodos de acompanhamento diretamente via WhatsApp.</p>
-                <a href="https://wa.me/5521971860871?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." class="btn-light" target="_blank" rel="noopener">
-                    <svg viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/></svg>
-                    <span>Falar no WhatsApp</span>
-                </a>
-            </div>
-        </section>
-    </main>
-
-    <!-- RODAPÉ -->
-    <footer id="contato" class="site-footer">
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-brand">
-                    <h3 class="footer-title">Rebeca Rodrigues</h3>
-                    <p style="margin-bottom: 1.5rem; max-width: 320px;">Fisioterapia Pélvica especializada no Rio de Janeiro. Reabilitação, acolhimento e saúde preventiva.</p>
-                    <div class="social-links">
-                        <a href="https://www.instagram.com/rebecaf_rodrigues?igsh=MTdubzdkdDJneXIwZw==&utm_source=qr" class="social-link-btn" aria-label="Instagram de Rebeca Rodrigues Fisioterapia Pélvica" target="_blank" rel="noopener">
-                            <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
-                        </a>
-                    </div>
-                </div>
-
-                <div>
-                    <h4 style="color: var(--color-white); font-size: 1rem; margin-bottom: 1.25rem;">Navegação</h4>
-                    <div style="display: flex; flex-direction: column; gap: 0.5rem;">
-                        <a href="#inicio">Início</a>
-                        <a href="#servicos">Serviços</a>
-                        <a href="#sobre">Abordagem</a>
-                        <a href="#contato">Contato</a>
-                    </div>
-                </div>
-
-                <div>
-                    <h4 style="color: var(--color-white); font-size: 1rem; margin-bottom: 1.25rem;">Contato & Local</h4>
-                    <div class="footer-info">
-                        <div class="footer-info-item">
-                            <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
-                            <a href="tel:+5521971860871">(21) 97186-0871</a>
-                        </div>
-                        <div class="footer-info-item">
-                            <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
-                            <span>Rio de Janeiro - RJ</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="footer-bottom">
-                <p>&copy; 2026 Rebeca Rodrigues Fisioterapia Pélvica. Todos os direitos reservados.</p>
-            </div>
-        </div>
-    </footer>
-
-    <!-- BOTÃO FLUTUANTE DO WHATSAPP -->
-    <a href="https://wa.me/5521971860871?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." class="whatsapp-float" aria-label="Falar no WhatsApp com Rebeca Rodrigues" target="_blank" rel="noopener">
-        <svg viewBox="0 0 24 24">
-            <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/>
+      <input type="checkbox" id="menu-toggle" class="menu-toggle-input" aria-hidden="true">
+      <label for="menu-toggle" class="menu-toggle-btn" aria-label="Abrir menu de navegação" role="button" aria-expanded="false">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
         </svg>
-    </a>
+      </label>
+
+      <nav role="navigation" aria-label="Navegação Principal" class="main-nav">
+        <a href="#servicos">Especialidades</a>
+        <a href="#sobre">Sobre a Prática</a>
+        <a href="#avaliacoes">Avaliações</a>
+        <a href="https://wa.me/5521971860871?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." class="nav-cta">Agendar Consulta</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO SECTION (Variante Minimalista Tipográfico) -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-content">
+        <span class="hero-tag">Fisioterapia Pélvica • Rio de Janeiro</span>
+        <h1 class="hero-title">Acolhimento, precisão e cuidado especializado para sua saúde pélvica.</h1>
+        <p class="hero-subtitle">Atendimento individualizado focado na prevenção, reabilitação e promoção do bem-estar íntimo em todas as fases da vida da mulher.</p>
+        <a href="https://wa.me/5521971860871?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." class="btn-primary">
+          <span>Agendar Atendimento</span>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+            <polyline points="12 5 19 12 12 19"></polyline>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROVA SOCIAL NUMÉRICA AUDITADA -->
+  <section id="avaliacoes" class="social-proof">
+    <div class="container">
+      <div class="proof-wrapper">
+        <div class="proof-number-group">
+          <span class="proof-number">5.0</span>
+          <div>
+            <div class="proof-stars">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+            </div>
+            <p class="proof-source">Google Avaliações</p>
+          </div>
+        </div>
+        <div class="proof-text">
+          Reconhecimento fundamentado na excelência clínica e no cuidado humanizado, somando 71 avaliações com nota máxima de satisfação.
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVIÇOS (Lista Numerada Minimalista) -->
+  <section id="servicos" class="services">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Especialidades & Áreas de Atuação</h2>
+        <p class="section-subtitle">Tratamentos condutores de saúde e qualidade de vida, baseados em evidências científicas.</p>
+      </div>
+
+      <ol class="services-list">
+        <li class="service-item">
+          <span class="service-number">01</span>
+          <div class="service-content">
+            <h3>Preparação para o Parto & Gestação</h3>
+            <p>Avaliação funcional pélvica, exercícios específicos de conscientização e mobilidade para prevenção de dores gestacionais e preparo do assoalho pélvico para o parto.</p>
+          </div>
+        </li>
+
+        <li class="service-item">
+          <span class="service-number">02</span>
+          <div class="service-content">
+            <h3>Reabilitação no Pós-Parto</h3>
+            <p>Recuperação funcional do assoalho pélvico, cuidado e avaliação da diástase abdominal, além do tratamento de desconfortos musculares no ciclo pós-parto.</p>
+          </div>
+        </li>
+
+        <li class="service-item">
+          <span class="service-number">03</span>
+          <div class="service-content">
+            <h3>Incontinência Urinária & Disfunções Miccionais</h3>
+            <p>Tratamento para perda involuntária de urina aos esforços ou por urgência, através do fortalecimento e reeducação da musculatura pélvica.</p>
+          </div>
+        </li>
+
+        <li class="service-item">
+          <span class="service-number">04</span>
+          <div class="service-content">
+            <h3>Dores Pélvicas & Saúde Íntima</h3>
+            <p>Abordagem terapêutica para quadros de dor pélvica crônica, vaginismo e desconfortos nas relações íntimas, priorizando a escuta atenta e o conforto.</p>
+          </div>
+        </li>
+
+        <li class="service-item">
+          <span class="service-number">05</span>
+          <div class="service-content">
+            <h3>Acompanhamento Pré e Pós-Cirúrgico</h3>
+            <p>Atendimento voltado para a recuperação de cirurgias ginecológicas e pélvicas, favorecendo o reestabelecimento da mobilidade e função muscular local.</p>
+          </div>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- SOBRE A PRÁTICA -->
+  <section id="sobre" class="about">
+    <div class="container">
+      <div class="about-card">
+        <h2 class="about-title">Rebeca Rodrigues</h2>
+        <p class="about-text">
+          A atuação em Fisioterapia Pélvica é guiada pelo compromisso constante com o respeito à individualidade de cada paciente. No Rio de Janeiro, o consultório é planejado para oferecer um ambiente privativo, seguro e acolhedor.
+        </p>
+        <p class="about-text">
+          Cada plano terapêutico é estruturado após uma avaliação criteriosa e detalhada, combinando técnicas baseadas em evidências com uma escuta sensível às necessidades do corpo em cada etapa da vida.
+        </p>
+
+        <div class="about-highlights">
+          <div class="highlight-item">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            <span>Consultas individuais e totalmente personalizadas</span>
+          </div>
+          <div class="highlight-item">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            <span>Ambiente privativo para seu total conforto</span>
+          </div>
+          <div class="highlight-item">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            <span>Condutas pautadas em evidências científicas</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA FINAL -->
+  <section class="cta-section">
+    <div class="container cta-container">
+      <h2 class="cta-title">Agende sua avaliação pélvica</h2>
+      <p class="cta-description">
+        Entre em contato diretamente pelo WhatsApp para tirar suas dúvidas, obter informações sobre horários disponíveis e iniciar seu acompanhamento.
+      </p>
+      <a href="https://wa.me/5521971860871?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." class="cta-btn">
+        <span>Falar no WhatsApp</span>
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
+        </svg>
+      </a>
+    </div>
+  </section>
+
+  <!-- RODAPÉ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-brand">Rebeca Rodrigues</div>
+          <p>Fisioterapia Pélvica • Rio de Janeiro</p>
+          <p style="margin-top: 0.5rem; color: #94A3B8;">Atendimento especializado focado na saúde e funcionalidade pélvica.</p>
+        </div>
+        <div>
+          <p style="color: #FFFFFF; font-weight: 500; margin-bottom: 0.75rem;">Redes Sociais</p>
+          <div class="footer-socials">
+            <a href="https://www.instagram.com/rebecaf_rodrigues?igsh=MTdubzdkdDJneXIwZw==&utm_source=qr" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Acessar Instagram de Rebeca Rodrigues">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 Rebeca Rodrigues Fisioterapia Pélvica. Todos os direitos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- BOTÃO FLUTUANTE DO WHATSAPP -->
+  <a href="https://wa.me/5521971860871?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." class="whatsapp-float" aria-label="Falar no WhatsApp" target="_blank" rel="noopener noreferrer">
+    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
+    </svg>
+  </a>
 
 <div style="position:fixed;bottom:18px;left:50%;transform:translateX(-50%);z-index:2147483647;background:rgba(255,255,255,0.96);border-radius:999px;padding:10px 22px 10px 12px;box-shadow:0 6px 20px rgba(0,0,0,0.22);display:flex;align-items:center;gap:9px;font-family:Inter,-apple-system,sans-serif;"><img src="https://rd-previews-dharari01s-projects.vercel.app/_assets/logo-rd-exclusive.png" alt="RD Exclusive" style="height:26px;width:auto;display:block;"><span style="font-size:14px;font-weight:700;color:#1A1A1A;white-space:nowrap;">Protótipo por RD Exclusive</span></div></body>
 </html>
