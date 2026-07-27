@@ -1,0 +1,1002 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <link rel="preconnect" href="https://ui-avatars.com">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clinica Gleide Aguiar - Fisioterapia Pélvica e Obstetrícia</title>
+  <meta name="description" content="Atendimento especializado em Fisioterapia Pélvica e Obstetrícia com foco em saúde íntima, gestação, pós-parto e qualidade de vida.">
+  
+  <!-- Open Graph Tags -->
+  <meta property="og:title" content="Clinica Gleide Aguiar - Fisioterapia Pélvica e Obstetrícia">
+  <meta property="og:description" content="Atendimento especializado em Fisioterapia Pélvica e Obstetrícia com foco em saúde íntima, gestação, pós-parto e qualidade de vida.">
+  <meta property="og:image" content="https://rd-previews-dharari01s-projects.vercel.app/clinica-gleide-aguiar---fisioterapia-pelvica-e-obstetricia/img/foto-1.png">
+  
+  <!-- Favicon SVG Data-URI -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20100%20100%22%3E%3Crect%20width%3D%22100%22%20height%3D%22100%22%20rx%3D%2220%22%20fill%3D%22%231F3A34%22%2F%3E%3Ctext%20x%3D%2250%25%22%20y%3D%2255%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20fill%3D%22%23C9A227%22%20font-family%3D%22Georgia%2C%20serif%22%20font-size%3D%2245%22%20font-weight%3D%22bold%22%3EGA%3C%2Ftext%3E%3C%2Fsvg%3E">
+
+  <style>
+    :root {
+      --bg-color: #FAF7F2;
+      --bg-surface: #F2EDE4;
+      --primary-color: #1F3A34;
+      --primary-light: #2A4E46;
+      --accent-color: #C9A227;
+      --text-color: #1A1A1A;
+      --text-muted: #555555;
+      --border-color: rgba(31, 58, 52, 0.15);
+      --font-heading: Georgia, "Times New Roman", serif;
+      --font-body: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      --max-width: 1100px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      font-family: var(--font-body);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* Header & Navigation */
+    header {
+      background-color: var(--bg-color);
+      border-bottom: 1px solid var(--border-color);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .header-container {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 1rem 1.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: relative;
+    }
+
+    .logo-link {
+      display: flex;
+      align-items: center;
+      gap: 0.85rem;
+      text-decoration: none;
+      color: var(--primary-color);
+    }
+
+    .logo-img {
+      width: 46px;
+      height: 46px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+
+    .logo-text-group {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .logo-text {
+      font-family: var(--font-heading);
+      font-weight: 700;
+      font-size: 1.05rem;
+      line-height: 1.2;
+      color: var(--primary-color);
+    }
+
+    .logo-subtext {
+      font-size: 0.75rem;
+      font-weight: 400;
+      color: var(--text-muted);
+    }
+
+    .menu-toggle-input {
+      position: absolute;
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    .menu-toggle-btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 0.5rem;
+      color: var(--primary-color);
+    }
+
+    nav {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      background-color: var(--bg-color);
+      border-bottom: 1px solid var(--border-color);
+      padding: 1.5rem;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+    }
+
+    .menu-toggle-input:checked ~ nav {
+      display: block;
+    }
+
+    .nav-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+    }
+
+    .nav-link {
+      text-decoration: none;
+      color: var(--text-color);
+      font-weight: 500;
+      font-size: 1rem;
+      transition: color 0.2s ease;
+    }
+
+    .nav-link:hover {
+      color: var(--primary-color);
+    }
+
+    .nav-cta {
+      display: inline-block;
+      text-align: center;
+      background-color: var(--primary-color);
+      color: #FAF7F2;
+      padding: 0.75rem 1.25rem;
+      border-radius: 4px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.95rem;
+      transition: background-color 0.2s ease;
+    }
+
+    .nav-cta:hover {
+      background-color: var(--primary-light);
+    }
+
+    @media (min-width: 768px) {
+      .menu-toggle-btn {
+        display: none;
+      }
+      
+      nav {
+        display: block;
+        position: static;
+        background: none;
+        border: none;
+        padding: 0;
+        box-shadow: none;
+      }
+      
+      .nav-list {
+        flex-direction: row;
+        align-items: center;
+        gap: 2rem;
+      }
+    }
+
+    /* Hero Section - Minimalista Tipográfico */
+    .hero {
+      padding: 4.5rem 1.5rem 5.5rem;
+      background: linear-gradient(180deg, var(--bg-color) 0%, var(--bg-surface) 100%);
+      position: relative;
+    }
+
+    .hero-inner {
+      max-width: var(--max-width);
+      margin: 0 auto;
+    }
+
+    .hero-tag {
+      display: inline-block;
+      font-size: 0.85rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: var(--accent-color);
+      margin-bottom: 1.5rem;
+      border-bottom: 1px solid var(--accent-color);
+      padding-bottom: 0.25rem;
+    }
+
+    .hero-title {
+      font-family: var(--font-heading);
+      font-size: 2.6rem;
+      line-height: 1.15;
+      color: var(--primary-color);
+      font-weight: 700;
+      margin-bottom: 1.75rem;
+      max-width: 850px;
+    }
+
+    @media (min-width: 768px) {
+      .hero-title {
+        font-size: 4rem;
+      }
+    }
+
+    .hero-subtitle {
+      font-size: 1.15rem;
+      color: var(--text-muted);
+      line-height: 1.7;
+      max-width: 680px;
+      margin-bottom: 2.5rem;
+    }
+
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.75rem;
+      background-color: var(--primary-color);
+      color: #FAF7F2;
+      font-size: 1rem;
+      font-weight: 600;
+      padding: 1.1rem 2rem;
+      border-radius: 4px;
+      text-decoration: none;
+      transition: all 0.25s ease;
+      border: 1px solid var(--primary-color);
+    }
+
+    .btn-primary:hover {
+      background-color: var(--primary-light);
+      border-color: var(--primary-light);
+      transform: translateY(-2px);
+    }
+
+    /* Social Proof Section */
+    .social-proof {
+      border-top: 1px solid var(--border-color);
+      border-bottom: 1px solid var(--border-color);
+      background-color: var(--bg-color);
+      padding: 3.5rem 1.5rem;
+    }
+
+    .social-proof-inner {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2rem;
+      align-items: center;
+    }
+
+    @media (min-width: 768px) {
+      .social-proof-inner {
+        grid-template-columns: 240px 1fr;
+        gap: 4rem;
+      }
+    }
+
+    .proof-metric {
+      text-align: center;
+      border-bottom: 1px solid var(--border-color);
+      padding-bottom: 1.5rem;
+    }
+
+    @media (min-width: 768px) {
+      .proof-metric {
+        text-align: left;
+        border-bottom: none;
+        padding-bottom: 0;
+        border-right: 1px solid var(--border-color);
+        padding-right: 2.5rem;
+      }
+    }
+
+    .proof-number {
+      font-family: var(--font-heading);
+      font-size: 4.2rem;
+      font-weight: 700;
+      line-height: 1;
+      color: var(--accent-color);
+    }
+
+    .proof-stars {
+      display: flex;
+      gap: 0.25rem;
+      justify-content: center;
+      margin: 0.5rem 0;
+      color: var(--accent-color);
+    }
+
+    @media (min-width: 768px) {
+      .proof-stars {
+        justify-content: flex-start;
+      }
+    }
+
+    .proof-label {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .proof-quote {
+      font-family: var(--font-heading);
+      font-size: 1.35rem;
+      font-style: italic;
+      color: var(--primary-color);
+      line-height: 1.6;
+    }
+
+    /* Services Section - Lista Numerada Elegante */
+    .services {
+      padding: 5.5rem 1.5rem;
+      background-color: var(--bg-color);
+    }
+
+    .services-inner {
+      max-width: var(--max-width);
+      margin: 0 auto;
+    }
+
+    .section-header {
+      margin-bottom: 3.5rem;
+    }
+
+    .section-tag {
+      font-size: 0.8rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: var(--accent-color);
+      display: block;
+      margin-bottom: 0.5rem;
+    }
+
+    .section-title {
+      font-family: var(--font-heading);
+      font-size: 2.2rem;
+      color: var(--primary-color);
+      line-height: 1.25;
+    }
+
+    @media (min-width: 768px) {
+      .section-title {
+        font-size: 3rem;
+      }
+    }
+
+    .numbered-services-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .service-item {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1rem;
+      padding: 2.5rem 0;
+      border-bottom: 1px solid var(--border-color);
+    }
+
+    .service-item:first-child {
+      border-top: 1px solid var(--border-color);
+    }
+
+    @media (min-width: 768px) {
+      .service-item {
+        grid-template-columns: 100px 1.2fr 1.8fr;
+        gap: 2rem;
+        align-items: baseline;
+      }
+    }
+
+    .service-num {
+      font-family: var(--font-heading);
+      font-size: 2.4rem;
+      font-weight: 700;
+      color: var(--accent-color);
+    }
+
+    .service-title {
+      font-family: var(--font-heading);
+      font-size: 1.45rem;
+      color: var(--primary-color);
+      font-weight: 700;
+    }
+
+    .service-desc {
+      font-size: 1.05rem;
+      color: var(--text-muted);
+      line-height: 1.65;
+    }
+
+    /* About Section */
+    .about {
+      padding: 5.5rem 1.5rem;
+      background-color: var(--bg-surface);
+    }
+
+    .about-inner {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 3.5rem;
+    }
+
+    @media (min-width: 768px) {
+      .about-inner {
+        grid-template-columns: 1.2fr 1fr;
+        align-items: center;
+      }
+    }
+
+    .about-text h2 {
+      font-family: var(--font-heading);
+      font-size: 2.2rem;
+      color: var(--primary-color);
+      margin-bottom: 1.5rem;
+      line-height: 1.25;
+    }
+
+    @media (min-width: 768px) {
+      .about-text h2 {
+        font-size: 2.8rem;
+      }
+    }
+
+    .about-text p {
+      color: var(--text-muted);
+      font-size: 1.05rem;
+      line-height: 1.75;
+      margin-bottom: 1.25rem;
+    }
+
+    .about-box {
+      border: 1px solid var(--border-color);
+      padding: 2.5rem;
+      background-color: var(--bg-color);
+      border-radius: 4px;
+    }
+
+    .about-box h3 {
+      font-family: var(--font-heading);
+      font-size: 1.4rem;
+      color: var(--primary-color);
+      margin-bottom: 1.25rem;
+    }
+
+    .about-box ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 1.1rem;
+    }
+
+    .about-box li {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.85rem;
+      font-size: 1rem;
+      color: var(--text-color);
+    }
+
+    .about-box svg {
+      color: var(--accent-color);
+      flex-shrink: 0;
+      margin-top: 3px;
+    }
+
+    /* Neutral Triagem Section */
+    .triagem {
+      padding: 5.5rem 1.5rem;
+      background-color: var(--bg-color);
+    }
+
+    .triagem-inner {
+      max-width: var(--max-width);
+      margin: 0 auto;
+    }
+
+    .triagem-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.25rem;
+      margin-top: 2.5rem;
+    }
+
+    @media (min-width: 768px) {
+      .triagem-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    .triagem-card {
+      border: 1px solid var(--border-color);
+      padding: 1.75rem;
+      border-radius: 4px;
+      background-color: var(--bg-color);
+    }
+
+    .triagem-card h3 {
+      font-family: var(--font-heading);
+      font-size: 1.2rem;
+      color: var(--primary-color);
+      margin-bottom: 0.5rem;
+    }
+
+    .triagem-card p {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+
+    .triagem-conclusion {
+      margin-top: 2.5rem;
+      padding: 2rem;
+      background-color: var(--bg-surface);
+      border-left: 3px solid var(--accent-color);
+      border-radius: 0 4px 4px 0;
+    }
+
+    .triagem-conclusion p {
+      font-size: 1rem;
+      color: var(--text-color);
+      line-height: 1.65;
+    }
+
+    /* Final CTA Section */
+    .cta-final {
+      padding: 6rem 1.5rem;
+      background-color: var(--primary-color);
+      color: #FAF7F2;
+      text-align: center;
+    }
+
+    .cta-final-inner {
+      max-width: 720px;
+      margin: 0 auto;
+    }
+
+    .cta-final h2 {
+      font-family: var(--font-heading);
+      font-size: 2.4rem;
+      margin-bottom: 1.25rem;
+      line-height: 1.2;
+      color: #FAF7F2;
+    }
+
+    @media (min-width: 768px) {
+      .cta-final h2 {
+        font-size: 3.2rem;
+      }
+    }
+
+    .cta-final p {
+      font-size: 1.15rem;
+      color: rgba(250, 247, 242, 0.85);
+      margin-bottom: 2.5rem;
+      line-height: 1.65;
+    }
+
+    .btn-accent {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.75rem;
+      background-color: var(--accent-color);
+      color: var(--primary-color);
+      font-size: 1rem;
+      font-weight: 700;
+      padding: 1.15rem 2.2rem;
+      border-radius: 4px;
+      text-decoration: none;
+      transition: all 0.25s ease;
+    }
+
+    .btn-accent:hover {
+      background-color: #D8B02E;
+      transform: translateY(-2px);
+    }
+
+    /* Footer */
+    footer {
+      background-color: #152723;
+      color: #FAF7F2;
+      padding: 4.5rem 1.5rem 2rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .footer-inner {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 3rem;
+      margin-bottom: 3.5rem;
+    }
+
+    @media (min-width: 768px) {
+      .footer-inner {
+        grid-template-columns: 2fr 1fr 1fr;
+      }
+    }
+
+    .footer-brand .logo-text {
+      color: #FAF7F2;
+      font-size: 1.15rem;
+    }
+
+    .footer-brand .logo-subtext {
+      color: rgba(250, 247, 242, 0.6);
+    }
+
+    .footer-brand p {
+      margin-top: 1.25rem;
+      color: rgba(250, 247, 242, 0.7);
+      font-size: 0.95rem;
+      max-width: 360px;
+      line-height: 1.65;
+    }
+
+    .footer-col h4 {
+      font-family: var(--font-heading);
+      font-size: 1.1rem;
+      color: var(--accent-color);
+      margin-bottom: 1.25rem;
+    }
+
+    .footer-links {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.85rem;
+    }
+
+    .footer-links a {
+      color: rgba(250, 247, 242, 0.8);
+      text-decoration: none;
+      font-size: 0.95rem;
+      transition: color 0.2s ease;
+    }
+
+    .footer-links a:hover {
+      color: var(--accent-color);
+    }
+
+    .footer-bottom {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding-top: 2rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      align-items: center;
+      text-align: center;
+      font-size: 0.85rem;
+      color: rgba(250, 247, 242, 0.5);
+    }
+
+    @media (min-width: 768px) {
+      .footer-bottom {
+        flex-direction: row;
+        justify-content: space-between;
+        text-align: left;
+      }
+    }
+
+    /* Floating WhatsApp Button */
+    .whatsapp-float {
+      position: fixed;
+      bottom: 1.5rem;
+      right: 1.5rem;
+      background-color: #25D366;
+      color: #FFFFFF;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
+      z-index: 999;
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+      text-decoration: none;
+    }
+
+    .whatsapp-float:hover {
+      transform: scale(1.08);
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.35);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="header-container">
+      <a href="#inicio" class="logo-link">
+        <img src="img/foto-1.png" alt="Monograma Clínica Gleide Aguiar" class="logo-img">
+        <div class="logo-text-group">
+          <span class="logo-text">Clínica Gleide Aguiar</span>
+          <span class="logo-subtext">Fisioterapia Pélvica & Obstetrícia</span>
+        </div>
+      </a>
+
+      <input type="checkbox" id="menu-toggle" class="menu-toggle-input" aria-hidden="true">
+      <label for="menu-toggle" class="menu-toggle-btn" aria-label="Abrir menu de navegação" role="button" aria-expanded="false">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+      </label>
+
+      <nav role="navigation" aria-label="Navegação principal">
+        <ul class="nav-list">
+          <li><a href="#servicos" class="nav-link">Serviços</a></li>
+          <li><a href="#sobre" class="nav-link">A Clínica</a></li>
+          <li><a href="#triagem" class="nav-link">Quando Procurar</a></li>
+          <li>
+            <a href="https://wa.me/5521970568181?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." class="nav-cta" target="_blank" rel="noopener noreferrer">
+              Agendar Consulta
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="hero" id="inicio">
+      <div class="hero-inner">
+        <span class="hero-tag">Saúde Íntima & Obstétrica</span>
+        <h1 class="hero-title">Cuidado especializado em Fisioterapia Pélvica e Obstetrícia</h1>
+        <p class="hero-subtitle">
+          Atendimento dedicado e individualizado para acompanhamento gestacional, preparação para o parto, reabilitação pós-parto e tratamento de disfunções pélvicas.
+        </p>
+        <a href="https://wa.me/5521970568181?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." class="btn-primary" target="_blank" rel="noopener noreferrer">
+          <span>Agendar Consulta via WhatsApp</span>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+            <polyline points="12 5 19 12 12 19"></polyline>
+          </svg>
+        </a>
+      </div>
+    </section>
+
+    <!-- Social Proof Section -->
+    <section class="social-proof">
+      <div class="social-proof-inner">
+        <div class="proof-metric">
+          <div class="proof-number">5.0</div>
+          <div class="proof-stars">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          </div>
+          <div class="proof-label">25 Avaliações no Google</div>
+        </div>
+        <blockquote class="proof-quote">
+          "Acolhimento, escuta atenta e conduta técnica focada no bem-estar integral e na recuperação funcional de cada paciente."
+        </blockquote>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="servicos">
+      <div class="services-inner">
+        <div class="section-header">
+          <span class="section-tag">Especialidades</span>
+          <h2 class="section-title">Áreas de atuação especializada</h2>
+        </div>
+
+        <ol class="numbered-services-list">
+          <li class="service-item">
+            <span class="service-num">01</span>
+            <h3 class="service-title">Fisioterapia Pélvica Feminina</h3>
+            <p class="service-desc">
+              Avaliação funcional e fortalecimento dos músculos do assoalho pélvico para prevenção e tratamento de incontinência urinária, prolapsos e desconfortos pélvicos.
+            </p>
+          </li>
+
+          <li class="service-item">
+            <span class="service-num">02</span>
+            <h3 class="service-title">Acompanhamento Gestacional</h3>
+            <p class="service-desc">
+              Exercícios terapêuticos e orientações posturais direcionadas para o alívio de dores lombares e pélvicas durante os trimestres da gestação.
+            </p>
+          </li>
+
+          <li class="service-item">
+            <span class="service-num">03</span>
+            <h3 class="service-title">Preparação para o Parto</h3>
+            <p class="service-desc">
+              Treinamento de mobilidade pélvica, técnicas de relaxamento perineal, conscientização corporal e posicionamentos funcionais para o trabalho de parto.
+            </p>
+          </li>
+
+          <li class="service-item">
+            <span class="service-num">04</span>
+            <h3 class="service-title">Reabilitação Pós-Parto</h3>
+            <p class="service-desc">
+              Recuperação da musculatura abdominal e pélvica, reabilitação perineal e condutas direcionadas para o retorno seguro às atividades do dia a dia.
+            </p>
+          </li>
+
+          <li class="service-item">
+            <span class="service-num">05</span>
+            <h3 class="service-title">Tratamento de Dores Pélvicas Crônicas</h3>
+            <p class="service-desc">
+              Abordagem fisioterapêutica para alívio de sensibilidades, tensões musculares e desconfortos na região pélvica.
+            </p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="sobre">
+      <div class="about-inner">
+        <div class="about-text">
+          <span class="section-tag">A Clínica</span>
+          <h2>Atendimento ético e focado nas suas necessidades</h2>
+          <p>
+            A Clínica Gleide Aguiar é dedicada à promoção da saúde pélvica e ao suporte completo da mulher nas diferentes fases da vida, com especial atenção ao período gestacional e pós-parto.
+          </p>
+          <p>
+            Cada consulta é conduzida em ambiente reservado, garantindo escuta humanizada, avaliação técnica minuciosa e plano terapêutico individualizado.
+          </p>
+        </div>
+
+        <div class="about-box">
+          <h3>Diferenciais do Atendimento</h3>
+          <ul>
+            <li>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>Consultas individuais com tempo dedicado para escuta e avaliação.</span>
+            </li>
+            <li>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>Plano de tratamento personalizado conforme a necessidade específica de cada fase.</span>
+            </li>
+            <li>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>Ambiente acolhedor, privativo e estruturado para o seu conforto.</span>
+            </li>
+            <li>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>Orientação clara para continuidade dos cuidados de forma segura.</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Triagem Section -->
+    <section class="triagem" id="triagem">
+      <div class="triagem-inner">
+        <div class="section-header">
+          <span class="section-tag">Orientação</span>
+          <h2 class="section-title">Quando procurar a Fisioterapia Pélvica?</h2>
+        </div>
+
+        <div class="triagem-grid">
+          <div class="triagem-card">
+            <h3>Durante a Gestação</h3>
+            <p>Para prevenção ou alívio de dores lombares e pélvicas, bem como preparação do corpo e do assoalho pélvico para o parto.</p>
+          </div>
+
+          <div class="triagem-card">
+            <h3>No Pós-Parto</h3>
+            <p>Para avaliação da musculatura abdominal, cicatrização perineal ou cirúrgica e recuperação funcional da região pélvica.</p>
+          </div>
+
+          <div class="triagem-card">
+            <h3>Sintomas Urinários ou Intestinais</h3>
+            <p>Diante de perda involuntária de urina ao tossir, espirrar ou fazer esforço, ou sensações de urgência frequente.</p>
+          </div>
+
+          <div class="triagem-card">
+            <h3>Desconfortos e Dores Pélvicas</h3>
+            <p>Em casos de sensibilidade acentuada ou dores frequentes na região pélvica durante rotinas diárias.</p>
+          </div>
+        </div>
+
+        <div class="triagem-conclusion">
+          <p>
+            <strong>Nota importante:</strong> Se você se identifica com algum dos quadros acima, uma avaliação fisioterapêutica individualizada é indicada para compreender suas necessidades. Entre em contato para tirar suas dúvidas e agendar uma avaliação.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Final CTA Section -->
+    <section class="cta-final">
+      <div class="cta-final-inner">
+        <h2>Priorize sua saúde e bem-estar pélvico</h2>
+        <p>Agende sua consulta de avaliação e receba o acompanhamento especializado que você merece.</p>
+        <a href="https://wa.me/5521970568181?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." class="btn-accent" target="_blank" rel="noopener noreferrer">
+          <span>Falar com a Clínica no WhatsApp</span>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+            <polyline points="12 5 19 12 12 19"></polyline>
+          </svg>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <div class="logo-link" style="margin-bottom: 0.5rem;">
+          <img src="img/foto-1.png" alt="Monograma Clínica Gleide Aguiar" class="logo-img" loading="lazy">
+          <div class="logo-text-group">
+            <span class="logo-text">Clínica Gleide Aguiar</span>
+            <span class="logo-subtext">Fisioterapia Pélvica & Obstetrícia</span>
+          </div>
+        </div>
+        <p>
+          Atendimento especializado e dedicado à saúde íntima, gestação, pós-parto e qualidade de vida da mulher.
+        </p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Navegação</h4>
+        <ul class="footer-links">
+          <li><a href="#inicio">Início</a></li>
+          <li><a href="#servicos">Serviços</a></li>
+          <li><a href="#sobre">A Clínica</a></li>
+          <li><a href="#triagem">Quando Procurar</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Atendimento</h4>
+        <ul class="footer-links">
+          <li>
+            <a href="tel:+5521970568181">(21) 97056-8181</a>
+          </li>
+          <li>
+            <a href="https://wa.me/5521970568181?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." target="_blank" rel="noopener noreferrer">
+              Agendamento via WhatsApp
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2026 Clínica Gleide Aguiar - Fisioterapia Pélvica e Obstetrícia. Todos os direitos reservados.</p>
+      <p>Desenvolvido com foco em clareza, ética e acessibilidade.</p>
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp Button -->
+  <a href="https://wa.me/5521970568181?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Falar no WhatsApp">
+    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
+    </svg>
+  </a>
+
+<div style="position:fixed;bottom:18px;left:50%;transform:translateX(-50%);z-index:2147483647;background:rgba(255,255,255,0.96);border-radius:999px;padding:10px 22px 10px 12px;box-shadow:0 6px 20px rgba(0,0,0,0.22);display:flex;align-items:center;gap:9px;font-family:Inter,-apple-system,sans-serif;"><img src="https://rd-previews-dharari01s-projects.vercel.app/_assets/logo-rd-exclusive.png" alt="RD Exclusive" style="height:26px;width:auto;display:block;"><span style="font-size:14px;font-weight:700;color:#1A1A1A;white-space:nowrap;">Protótipo por RD Exclusive</span></div></body>
+</html>
