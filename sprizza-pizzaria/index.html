@@ -1,0 +1,1603 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sprizza Pizza Bar | Pizzas Artesanais e Drinks na Barra da Tijuca</title>
+  <meta name="description" content="Conheça a Sprizza Pizza Bar na Av. Olegário Maciel. Pizzas artesanais de longa fermentação, foccacias e drinks autorais no salão ou delivery. Avaliação 4.9 no Google.">
+  <meta name="keywords" content="pizzaria na barra da tijuca, pizza bar barra da tijuca, pizza artesanal longa fermentacao rj, drinks autorais barra da tijuca, delivery de pizza artesanal rj">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="restaurant">
+  <meta property="og:title" content="Sprizza Pizza Bar | Pizzas Artesanais e Drinks na Barra da Tijuca">
+  <meta property="og:description" content="Conheça a Sprizza Pizza Bar na Av. Olegário Maciel. Pizzas artesanais de longa fermentação, foccacias e drinks autorais no salão ou delivery. Avaliação 4.9 no Google.">
+  <meta property="og:image" content="https://rd-previews-dharari01s-projects.vercel.app/sprizza-pizzaria/img/foto-1.png">
+  <meta property="og:url" content="https://sprizza.com.br">
+
+  <!-- Preconnect -->
+  <link rel="preconnect" href="https://sprizza.com.br">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Favicon Monograma URI -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%3C32373C'/%3E%3Cpath d='M20 44V20h12c4.4 0 8 3.6 8 8s-3.6 8-8 8h-6v8h-6zm6-14h6c1.1 0 2-.9 2-2s-.9-2-2-2h-6v4z' fill='%3EC84B31'/%3E%3Cpath d='M38 44l8-12-8-12h7l8 12-8 12h-7z' fill='%3EF4F4F6'/%3E%3C/svg%3E">
+
+  <!-- Schema.org JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Restaurant",
+    "name": "Sprizza Pizza Bar",
+    "image": "img/foto-1.png",
+    "url": "https://sprizza.com.br",
+    "servesCuisine": ["Pizza", "Italian", "Bar"],
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Av. Olegário Maciel, 460 - Loja A",
+      "addressLocality": "Barra da Tijuca",
+      "addressRegion": "RJ",
+      "postalCode": "22621-200",
+      "addressCountry": "BR"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.9",
+      "reviewCount": "508"
+    },
+    "sameAs": [
+      "https://www.instagram.com/sprizzapizzabar"
+    ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Onde fica localizada a Sprizza Pizza Bar?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Estamos localizados no polo gastronômico da Barra da Tijuca: Av. Olegário Maciel, 460 - Loja A - Rio de Janeiro - RJ."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "O que caracteriza a pizza de longa fermentação?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Nossas massas passam por um processo lento de descanso e maturação com farinhas especiais, resultando em pizzas mais leves, crocantes e fáceis de digerir."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "É possível pedir drinks autorais pelo delivery?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Sim! Toda a nossa carta de drinks autorais e refrescantes está disponível tanto no salão quanto para entrega no delivery."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Como faço para reservar uma mesa na Sprizza?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Você pode solicitar sua reserva diretamente pelos botões de contato deste site, direcionando para nosso canal oficial de agendamentos."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "A Sprizza possui opções de entradas no cardápio?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Sim, além das pizzas artesanais, servimos foccacias artesanais e acompanhamentos típicos da culinária italiana."
+        }
+      }
+    ]
+  }
+  </script>
+
+  <style>
+    /* RESET & VARS */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    :root {
+      --bg-dark: #000000;
+      --bg-card: #0D0F12;
+      --bg-surface: #14171D;
+      --brand-primary: #32373C;
+      --brand-accent: #C84B31;
+      --brand-accent-hover: #E05338;
+      --brand-gold: #D4A373;
+      --text-main: #F4F4F6;
+      --text-muted: #9EA3B0;
+      --text-dim: #6C727F;
+      --border-subtle: rgba(255, 255, 255, 0.08);
+      --border-light: rgba(255, 255, 255, 0.16);
+      --font-primary: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      --container-max: 1200px;
+      --radius-sm: 4px;
+      --radius-md: 8px;
+      --radius-lg: 16px;
+      --transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    html {
+      scroll-behavior: smooth;
+      font-size: 16px;
+      background-color: var(--bg-dark);
+      color: var(--text-main);
+      font-family: var(--font-primary);
+      -webkit-font-smoothing: antialiased;
+    }
+
+    body {
+      overflow-x: hidden;
+      line-height: 1.6;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+      transition: var(--transition);
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    button, input, select, textarea {
+      font-family: inherit;
+      font-size: inherit;
+    }
+
+    .container {
+      width: 100%;
+      max-width: var(--container-max);
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+
+    /* TYPOGRAPHY UTILS */
+    .eyebrow {
+      display: inline-block;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--brand-accent);
+      margin-bottom: 0.75rem;
+    }
+
+    h1, h2, h3, h4 {
+      font-weight: 700;
+      line-height: 1.15;
+      color: var(--text-main);
+      letter-spacing: -0.02em;
+    }
+
+    .section-title {
+      font-size: clamp(1.875rem, 4vw, 2.75rem);
+      margin-bottom: 1rem;
+    }
+
+    .section-desc {
+      color: var(--text-muted);
+      font-size: clamp(1rem, 2vw, 1.125rem);
+      max-width: 680px;
+    }
+
+    .section-header-center {
+      text-align: center;
+      margin-bottom: 3.5rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    /* BUTTONS & CTAS */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.625rem;
+      padding: 1rem 1.75rem;
+      font-weight: 600;
+      font-size: 0.9375rem;
+      border-radius: var(--radius-sm);
+      transition: var(--transition);
+      cursor: pointer;
+      text-align: center;
+      border: 1px solid transparent;
+    }
+
+    .btn-primary {
+      background-color: var(--brand-accent);
+      color: #FFFFFF;
+    }
+
+    .btn-primary:hover {
+      background-color: var(--brand-accent-hover);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(200, 75, 49, 0.35);
+    }
+
+    .btn-secondary {
+      background-color: rgba(255, 255, 255, 0.05);
+      color: var(--text-main);
+      border-color: var(--border-light);
+    }
+
+    .btn-secondary:hover {
+      background-color: rgba(255, 255, 255, 0.12);
+      border-color: rgba(255, 255, 255, 0.3);
+      transform: translateY(-2px);
+    }
+
+    .btn-full {
+      width: 100%;
+    }
+
+    /* TOPBAR */
+    .topbar {
+      background-color: var(--brand-primary);
+      border-bottom: 1px solid var(--border-subtle);
+      font-size: 0.8125rem;
+      padding: 0.5rem 0;
+      color: var(--text-muted);
+    }
+
+    .topbar-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .topbar-info {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+    }
+
+    .topbar-item {
+      display: flex;
+      align-items: center;
+      gap: 0.375rem;
+    }
+
+    .topbar-item svg {
+      width: 14px;
+      height: 14px;
+      fill: var(--brand-accent);
+    }
+
+    /* HEADER & NAV */
+    .header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background-color: rgba(0, 0, 0, 0.85);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border-subtle);
+      padding: 1rem 0;
+    }
+
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo img {
+      height: 38px;
+      width: auto;
+      object-fit: contain;
+    }
+
+    .nav-menu {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+      list-style: none;
+    }
+
+    .nav-link {
+      font-size: 0.875rem;
+      font-weight: 500;
+      color: var(--text-muted);
+    }
+
+    .nav-link:hover {
+      color: var(--text-main);
+    }
+
+    .nav-cta {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    /* CHECKBOX HACK MOBILE MENU */
+    .menu-toggle-input {
+      display: none;
+    }
+
+    .menu-toggle-label {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      padding: 0.5rem;
+    }
+
+    .menu-toggle-label span {
+      width: 24px;
+      height: 2px;
+      background-color: var(--text-main);
+      transition: var(--transition);
+    }
+
+    /* HERO SECTION */
+    .hero {
+      position: relative;
+      padding: 5rem 0 4rem;
+      min-height: calc(100vh - 110px);
+      display: flex;
+      align-items: center;
+      background: radial-gradient(circle at 70% 30%, rgba(200, 75, 49, 0.12) 0%, rgba(50, 55, 60, 0.2) 45%, rgba(0, 0, 0, 1) 80%);
+      border-bottom: 1px solid var(--border-subtle);
+      overflow: hidden;
+    }
+
+    .hero-bg-pattern {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 50%;
+      height: 100%;
+      opacity: 0.03;
+      pointer-events: none;
+      background-image: radial-gradient(var(--text-main) 1px, transparent 1px);
+      background-size: 24px 24px;
+    }
+
+    .hero-content {
+      max-width: 820px;
+      position: relative;
+      z-index: 2;
+    }
+
+    .hero-h1 {
+      font-size: clamp(2.25rem, 5vw, 3.75rem);
+      font-weight: 800;
+      line-height: 1.1;
+      margin-bottom: 1.25rem;
+      letter-spacing: -0.03em;
+    }
+
+    .hero-text {
+      font-size: clamp(1.0625rem, 2vw, 1.25rem);
+      color: var(--text-muted);
+      margin-bottom: 2rem;
+      max-width: 680px;
+    }
+
+    .hero-actions {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+      margin-bottom: 2.5rem;
+    }
+
+    .micro-proof {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.875rem;
+      color: var(--text-muted);
+      padding: 0.5rem 0.875rem;
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid var(--border-subtle);
+      border-radius: 50px;
+    }
+
+    .micro-proof svg {
+      width: 16px;
+      height: 16px;
+      fill: #FFB800;
+    }
+
+    /* FAIXA CONFIANCA / BIG NUMBERS */
+    .trust-strip {
+      background-color: var(--bg-card);
+      border-bottom: 1px solid var(--border-subtle);
+      padding: 2.5rem 0;
+    }
+
+    .trust-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.5rem;
+      text-align: center;
+    }
+
+    .trust-item {
+      padding: 1rem;
+      border-right: 1px solid var(--border-subtle);
+    }
+
+    .trust-item:last-child {
+      border-right: none;
+    }
+
+    .trust-number {
+      font-size: clamp(1.75rem, 3vw, 2.5rem);
+      font-weight: 800;
+      color: var(--text-main);
+      line-height: 1;
+      margin-bottom: 0.375rem;
+      background: linear-gradient(135deg, #FFFFFF 0%, #A0A5B1 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .trust-label {
+      font-size: 0.84375rem;
+      color: var(--text-muted);
+      font-weight: 500;
+    }
+
+    /* BENEFICIOS */
+    .section-beneficios {
+      padding: 6rem 0;
+      background-color: var(--bg-dark);
+      border-bottom: 1px solid var(--border-subtle);
+    }
+
+    .beneficios-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+    }
+
+    .beneficio-card {
+      background-color: var(--bg-card);
+      padding: 2.5rem 2rem;
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-md);
+      transition: var(--transition);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .beneficio-card:hover {
+      border-color: var(--brand-accent);
+      transform: translateY(-4px);
+    }
+
+    .beneficio-icon {
+      width: 48px;
+      height: 48px;
+      background: rgba(200, 75, 49, 0.1);
+      border-radius: var(--radius-sm);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 1.5rem;
+    }
+
+    .beneficio-icon svg {
+      width: 24px;
+      height: 24px;
+      stroke: var(--brand-accent);
+      fill: none;
+      stroke-width: 2;
+    }
+
+    .beneficio-title {
+      font-size: 1.25rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .beneficio-text {
+      color: var(--text-muted);
+      font-size: 0.9375rem;
+      line-height: 1.6;
+    }
+
+    /* SERVICOS & DIFERENCIAIS (ELEGANT LIST STYLE) */
+    .section-list-style {
+      padding: 6rem 0;
+      background-color: var(--bg-surface);
+      border-bottom: 1px solid var(--border-subtle);
+    }
+
+    .elegant-list {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .list-item {
+      display: grid;
+      grid-template-columns: 80px 1fr 1fr 180px;
+      align-items: center;
+      padding: 2rem 0;
+      border-bottom: 1px solid var(--border-subtle);
+      gap: 1.5rem;
+      transition: var(--transition);
+    }
+
+    .list-item:first-child {
+      border-top: 1px solid var(--border-subtle);
+    }
+
+    .list-item:hover {
+      background-color: rgba(255, 255, 255, 0.015);
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+
+    .list-num {
+      font-size: 1.5rem;
+      font-weight: 800;
+      color: var(--brand-accent);
+    }
+
+    .list-title {
+      font-size: 1.25rem;
+      font-weight: 700;
+
+    }
+
+    .list-desc {
+      color: var(--text-muted);
+      font-size: 0.9375rem;
+    }
+
+    .list-action {
+      text-align: right;
+    }
+
+    /* SOBRE */
+    .section-sobre {
+      padding: 6rem 0;
+      background-color: var(--bg-dark);
+      border-bottom: 1px solid var(--border-subtle);
+    }
+
+    .sobre-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: center;
+    }
+
+    .sobre-content {
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+    }
+
+    .sobre-subtitle {
+      font-size: 1.125rem;
+      color: var(--brand-accent);
+      font-weight: 600;
+    }
+
+    .sobre-box {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-left: 4px solid var(--brand-accent);
+      padding: 2.5rem;
+      border-radius: var(--radius-sm);
+    }
+
+    .sobre-quote {
+      font-size: 1.125rem;
+      font-style: italic;
+      color: var(--text-main);
+      margin-bottom: 1rem;
+    }
+
+    /* DESTAQUE EDITORIAL */
+    .destaque-editorial {
+      padding: 6rem 0;
+      background: linear-gradient(135deg, #181B20 0%, #08090B 100%);
+      border-bottom: 1px solid var(--border-subtle);
+      position: relative;
+    }
+
+    .editorial-card {
+      max-width: 900px;
+      margin: 0 auto;
+      background-color: rgba(255, 255, 255, 0.02);
+      border: 1px solid rgba(200, 75, 49, 0.3);
+      padding: 3.5rem;
+      border-radius: var(--radius-lg);
+      text-align: center;
+      position: relative;
+    }
+
+    .editorial-card::before {
+      content: '"';
+      position: absolute;
+      top: 1rem;
+      left: 2rem;
+      font-size: 8rem;
+      color: rgba(200, 75, 49, 0.1);
+      font-family: Georgia, serif;
+      line-height: 1;
+      pointer-events: none;
+    }
+
+    .editorial-title {
+      font-size: clamp(1.5rem, 3vw, 2.25rem);
+      margin-bottom: 1.25rem;
+    }
+
+    .editorial-text {
+      font-size: 1.0625rem;
+      color: var(--text-muted);
+      line-height: 1.8;
+      margin-bottom: 2rem;
+    }
+
+    /* GALERIA EDITORIAL / VISUAL COMPOSITION (NO INVENTED PHOTOS) */
+    .section-galeria {
+      padding: 6rem 0;
+      background-color: var(--bg-dark);
+      border-bottom: 1px solid var(--border-subtle);
+    }
+
+    .galeria-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+    }
+
+    .galeria-item {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-md);
+      padding: 2.5rem 1.5rem;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 240px;
+      transition: var(--transition);
+    }
+
+    .galeria-item:hover {
+      border-color: var(--brand-accent);
+      background: var(--bg-card);
+    }
+
+    .galeria-icon {
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      background: rgba(200, 75, 49, 0.1);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 1.25rem;
+    }
+
+    .galeria-icon svg {
+      width: 28px;
+      height: 28px;
+      stroke: var(--brand-accent);
+      fill: none;
+      stroke-width: 1.8;
+    }
+
+    .galeria-title {
+      font-size: 1.125rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+    }
+
+    .galeria-desc {
+      font-size: 0.875rem;
+      color: var(--text-muted);
+    }
+
+    /* COMO FUNCIONA */
+    .section-passos {
+      padding: 6rem 0;
+      background-color: var(--bg-surface);
+      border-bottom: 1px solid var(--border-subtle);
+    }
+
+    .passos-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+      position: relative;
+    }
+
+    .passo-card {
+      background-color: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      padding: 2.5rem 2rem;
+      border-radius: var(--radius-md);
+      position: relative;
+    }
+
+    .passo-num {
+      font-size: 2.5rem;
+      font-weight: 800;
+      color: var(--brand-accent);
+      opacity: 0.8;
+      line-height: 1;
+      margin-bottom: 1rem;
+    }
+
+    .passo-title {
+      font-size: 1.25rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .passo-text {
+      color: var(--text-muted);
+      font-size: 0.9375rem;
+    }
+
+    /* FAQ */
+    .section-faq {
+      padding: 6rem 0;
+      background-color: var(--bg-dark);
+      border-bottom: 1px solid var(--border-subtle);
+    }
+
+    .faq-container {
+      max-width: 800px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .faq-item {
+      background-color: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-md);
+      overflow: hidden;
+    }
+
+    .faq-question {
+      padding: 1.25rem 1.5rem;
+      font-weight: 600;
+      font-size: 1.0625rem;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      user-select: none;
+    }
+
+    .faq-question svg {
+      width: 20px;
+      height: 20px;
+      fill: var(--text-muted);
+      transition: var(--transition);
+    }
+
+    .faq-toggle {
+      display: none;
+    }
+
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease-out, padding 0.3s ease;
+      color: var(--text-muted);
+      font-size: 0.9375rem;
+      padding: 0 1.5rem;
+    }
+
+    .faq-toggle:checked ~ .faq-answer {
+      max-height: 300px;
+      padding: 0 1.5rem 1.5rem 1.5rem;
+    }
+
+    .faq-toggle:checked ~ .faq-question svg {
+      transform: rotate(180deg);
+      fill: var(--brand-accent);
+    }
+
+    /* CTA FINAL & FORM */
+    .section-cta-final {
+      padding: 6rem 0;
+      background: radial-gradient(circle at 50% 0%, rgba(200, 75, 49, 0.15) 0%, rgba(0, 0, 0, 1) 70%);
+      border-bottom: 1px solid var(--border-subtle);
+    }
+
+    .cta-final-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: center;
+    }
+
+    .cta-form-card {
+      background-color: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      padding: 2.5rem;
+      border-radius: var(--radius-lg);
+    }
+
+    .form-group {
+      margin-bottom: 1.25rem;
+    }
+
+    .form-label {
+      display: block;
+      font-size: 0.8125rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      margin-bottom: 0.375rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .form-input, .form-select, .form-textarea {
+      width: 100%;
+      padding: 0.875rem 1rem;
+      background-color: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-sm);
+      color: var(--text-main);
+      font-size: 0.9375rem;
+      transition: var(--transition);
+    }
+
+    .form-input:focus, .form-select:focus, .form-textarea:focus {
+      outline: none;
+      border-color: var(--brand-accent);
+      background-color: rgba(255, 255, 255, 0.03);
+    }
+
+    .form-checkbox {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.625rem;
+      font-size: 0.8125rem;
+      color: var(--text-muted);
+      margin-bottom: 1.5rem;
+    }
+
+    .form-checkbox input {
+      margin-top: 0.2rem;
+      accent-color: var(--brand-accent);
+    }
+
+    .form-note {
+      font-size: 0.75rem;
+      color: var(--text-dim);
+      text-align: center;
+      margin-top: 0.75rem;
+    }
+
+    /* RODAPE */
+    .footer {
+      background-color: #050607;
+      padding: 4rem 0 2rem;
+      font-size: 0.875rem;
+      color: var(--text-muted);
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr 1fr 1.25fr;
+      gap: 3rem;
+      margin-bottom: 3.5rem;
+    }
+
+    .footer-col-title {
+      color: var(--text-main);
+      font-weight: 700;
+      font-size: 0.9375rem;
+      margin-bottom: 1.25rem;
+    }
+
+    .footer-links {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+
+    .footer-links a:hover {
+      color: var(--brand-accent);
+    }
+
+    .social-links {
+      display: flex;
+      gap: 1rem;
+      margin-top: 1.25rem;
+    }
+
+    .social-btn {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background-color: rgba(255, 255, 255, 0.05);
+      border: 1px solid var(--border-subtle);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--text-main);
+      transition: var(--transition);
+    }
+
+    .social-btn:hover {
+      background-color: var(--brand-accent);
+      border-color: var(--brand-accent);
+      color: #FFFFFF;
+    }
+
+    .social-btn svg {
+      width: 18px;
+      height: 18px;
+      fill: currentColor;
+    }
+
+    .footer-bottom {
+      border-top: 1px solid var(--border-subtle);
+      padding-top: 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.8125rem;
+      color: var(--text-dim);
+    }
+
+    /* FLOATING AGENDAMENTO BUTTON */
+    .floating-btn {
+      position: fixed;
+      bottom: 2rem;
+      right: 2rem;
+      z-index: 999;
+      background-color: var(--brand-accent);
+      color: #FFFFFF;
+      padding: 0.875rem 1.5rem;
+      border-radius: 50px;
+      font-weight: 700;
+      font-size: 0.875rem;
+      box-shadow: 0 8px 32px rgba(200, 75, 49, 0.4);
+      display: flex;
+      align-items: center;
+      gap: 0.625rem;
+      transition: var(--transition);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .floating-btn:hover {
+      transform: translateY(-4px) scale(1.02);
+      background-color: var(--brand-accent-hover);
+      box-shadow: 0 12px 36px rgba(200, 75, 49, 0.6);
+    }
+
+    .floating-btn svg {
+      width: 20px;
+      height: 20px;
+      fill: currentColor;
+    }
+
+    /* RESPONSIVE MEDIA QUERIES */
+    @media (max-width: 992px) {
+      .trust-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .trust-item:nth-child(2) {
+        border-right: none;
+      }
+      .beneficios-grid, .passos-grid, .galeria-grid {
+        grid-template-columns: 1fr;
+      }
+      .sobre-grid, .cta-final-grid {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+      }
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+      }
+      .list-item {
+        grid-template-columns: 50px 1fr;
+        gap: 0.75rem;
+      }
+      .list-desc {
+        grid-column: 2 / -1;
+      }
+      .list-action {
+        grid-column: 2 / -1;
+        text-align: left;
+        margin-top: 0.5rem;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .topbar {
+        display: none;
+      }
+      .nav-menu {
+        position: fixed;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background-color: var(--bg-card);
+        border-bottom: 1px solid var(--border-subtle);
+        flex-direction: column;
+        padding: 2rem;
+        gap: 1.5rem;
+        transform: translateY(-150%);
+        transition: transform 0.3s ease;
+      }
+      .menu-toggle-label {
+        display: flex;
+      }
+      .menu-toggle-input:checked ~ .nav-menu {
+        transform: translateY(0);
+      }
+      .hero {
+        padding: 3rem 0;
+        min-height: auto;
+      }
+      .trust-grid {
+        grid-template-columns: 1fr;
+      }
+      .trust-item {
+        border-right: none;
+        border-bottom: 1px solid var(--border-subtle);
+      }
+      .trust-item:last-child {
+        border-bottom: none;
+      }
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+      .floating-btn span {
+        display: none;
+      }
+      .floating-btn {
+        padding: 1rem;
+        border-radius: 50%;
+        bottom: 1.5rem;
+        right: 1.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- TOPBAR -->
+  <aside class="topbar">
+    <div class="container topbar-inner">
+      <div class="topbar-info">
+        <div class="topbar-item">
+          <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+          <span>Pizza Bar na Barra da Tijuca • Av. Olegário Maciel, 460</span>
+        </div>
+        <div class="topbar-item">
+          <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+          <span>Avaliação 4.9 no Google (508 avaliações)</span>
+        </div>
+      </div>
+    </div>
+  </aside>
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="container header-inner">
+      <a href="#" class="logo" aria-label="Sprizza Pizza Bar">
+        <img src="img/foto-1.png" alt="Logo Sprizza Pizza Bar" fetchpriority="high">
+      </a>
+
+      <input type="checkbox" id="menu-toggle" class="menu-toggle-input">
+      <label for="menu-toggle" class="menu-toggle-label" aria-label="Abrir Menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </label>
+
+      <ul class="nav-menu">
+        <li><a href="#beneficios" class="nav-link">Benefícios</a></li>
+        <li><a href="#servicos" class="nav-link">Cardápio</a></li>
+        <li><a href="#sobre" class="nav-link">A Sprizza</a></li>
+        <li><a href="#diferenciais" class="nav-link">Diferenciais</a></li>
+        <li><a href="#faq" class="nav-link">Dúvidas</a></li>
+      </ul>
+
+      <div class="nav-cta">
+        <a href="https://sprizza.com.br/reservas/" class="btn btn-primary">Reservar ou Pedir</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section class="hero" id="hero">
+    <div class="hero-bg-pattern"></div>
+    <div class="container hero-content">
+      <span class="eyebrow">PIZZARIA NA BARRA DA TIJUCA</span>
+      <h1 class="hero-h1">Pizzas artesanais de longa fermentação e drinks autorais no coração da Barra</h1>
+      <p class="hero-text">Descubra a combinação perfeita entre a tradição napolitana e a leveza do estilo carioca. Saboreie massas leves e crocantes no nosso Pizza Bar na Av. Olegário Maciel ou receba no delivery.</p>
+      
+      <div class="hero-actions">
+        <a href="https://sprizza.com.br/reservas/" class="btn btn-primary">Reservar Mesa ou Fazer Pedido</a>
+        <a href="https://www.instagram.com/sprizzapizzabar" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">Ver Cardápio no Instagram</a>
+      </div>
+
+      <div class="micro-proof">
+        <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+        <span>★ 4.9 no Google base de 508 avaliações auditadas</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAIXA DE CONFIANÇA / BIG NUMBERS -->
+  <section class="trust-strip">
+    <div class="container trust-grid">
+      <div class="trust-item">
+        <div class="trust-number">4.9★</div>
+        <div class="trust-label">Nota no Google Auditada</div>
+      </div>
+      <div class="trust-item">
+        <div class="trust-number">508+</div>
+        <div class="trust-label">Avaliações Confirmadas</div>
+      </div>
+      <div class="trust-item">
+        <div class="trust-number">Longa</div>
+        <div class="trust-label">Fermentação & Alta Digestibilidade</div>
+      </div>
+      <div class="trust-item">
+        <div class="trust-number">Drinks</div>
+        <div class="trust-label">Autorais no Salão e Delivery</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BENEFÍCIOS -->
+  <section class="section-beneficios" id="beneficios">
+    <div class="container">
+      <div class="section-header-center">
+        <span class="eyebrow">POR QUE A SPRIZZA?</span>
+        <h2 class="section-title">A verdadeira experiência do Pizza Bar</h2>
+        <p class="section-desc">Combinamos técnica clássica italiana e coquetelaria autoral para proporcionar momentos inesquecíveis.</p>
+      </div>
+
+      <div class="beneficios-grid">
+        <div class="beneficio-card">
+          <div class="beneficio-icon">
+            <svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+          </div>
+          <h3 class="beneficio-title">Massa Leve e Crocante</h3>
+          <p class="beneficio-text">A longa fermentação e o processo lento garantem maior digestibilidade, bordas aeradas e a textura ideal para a sua refeição.</p>
+        </div>
+
+        <div class="beneficio-card">
+          <div class="beneficio-icon">
+            <svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+          </div>
+          <h3 class="beneficio-title">Harmonização Exclusiva</h3>
+          <p class="beneficio-text">Carta de drinks autorais e refrescantes desenvolvidos especialmente para harmonizar com os sabores das nossas pizzas artesanais.</p>
+        </div>
+
+        <div class="beneficio-card">
+          <div class="beneficio-icon">
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          </div>
+          <h3 class="beneficio-title">Experiência Completa no Delivery</h3>
+          <p class="beneficio-text">A comodidade de receber na sua casa não apenas pizzas artesanais de alta qualidade, mas também nossa seleção de coquetelaria autoral.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVIÇOS (CARDÁPIO) -->
+  <section class="section-list-style" id="servicos">
+    <div class="container">
+      <div class="section-header-center">
+        <span class="eyebrow">NOSSO MENU E SERVIÇOS</span>
+        <h2 class="section-title">O que servimos na Sprizza</h2>
+        <p class="section-desc">Opções criadas artesanalmente para saborear no nosso salão ou no conforto de casa.</p>
+      </div>
+
+      <div class="elegant-list">
+        <div class="list-item">
+          <div class="list-num">01</div>
+          <div class="list-title">Pizzas Artesanais</div>
+          <div class="list-desc">Pizzas preparadas com massas de fermentação lenta, farinha especial e molho de tomates selecionados, finalizadas com insumos como fior di latte e mozzarella di búfala.</div>
+          <div class="list-action">
+            <a href="https://sprizza.com.br/reservas/" class="btn btn-secondary">Pedir ou Reservar</a>
+          </div>
+        </div>
+
+        <div class="list-item">
+          <div class="list-num">02</div>
+          <div class="list-title">Foccacias Artesanais</div>
+          <div class="list-desc">Entradas e acompanhamentos típicos da gastronomia italiana, preparados artesanalmente para abrir a sua experiência no Pizza Bar.</div>
+          <div class="list-action">
+            <a href="https://sprizza.com.br/reservas/" class="btn btn-secondary">Pedir ou Reservar</a>
+          </div>
+        </div>
+
+        <div class="list-item">
+          <div class="list-num">03</div>
+          <div class="list-title">Menu de Drinks Autorais</div>
+          <div class="list-desc">Coquetelaria moderna e refrescante elaborada para criar a harmonização perfeita entre sabores clássicos e contemporâneos.</div>
+          <div class="list-action">
+            <a href="https://sprizza.com.br/reservas/" class="btn btn-secondary">Pedir ou Reservar</a>
+          </div>
+        </div>
+
+        <div class="list-item">
+          <div class="list-num">04</div>
+          <div class="list-title">Delivery de Pizza Artesanal</div>
+          <div class="list-desc">Entrega prática de pizzas crocantes e drinks autorais embalados com cuidado para você saborear onde estiver.</div>
+          <div class="list-action">
+            <a href="https://sprizza.com.br/reservas/" class="btn btn-primary">Fazer Pedido</a>
+          </div>
+        </div>
+
+        <div class="list-item">
+          <div class="list-num">05</div>
+          <div class="list-title">Atendimento no Local e Reservas</div>
+          <div class="list-desc">Ambiente moderno, aconchegante e descontraído na Av. Olegário Maciel, ideal para encontros, comemorações e reuniões com amigos.</div>
+          <div class="list-action">
+            <a href="https://sprizza.com.br/reservas/" class="btn btn-primary">Reservar Mesa</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SOBRE DA MARCA -->
+  <section class="section-sobre" id="sobre">
+    <div class="container">
+      <div class="sobre-grid">
+        <div class="sobre-content">
+          <span class="eyebrow">CONHEÇA A SPRIZZA</span>
+          <h2 class="section-title">Gastronomia Italiana com Alma Carioca na Barra da Tijuca</h2>
+          <p class="sobre-subtitle">A união perfeita entre a tradição napolitana e a coquetelaria moderna</p>
+          <p class="section-desc">A Sprizza Pizza Bar nasceu na movimentada Av. Olegário Maciel para oferecer uma experiência gastronômica completa. Combinando o respeito aos processos tradicionais da pizza artesanal de longa fermentação com a descontração de um Pizza Bar moderno, servimos receitas preparadas com ingredientes selecionados e uma carta de drinks autorais pronta para transformar qualquer noite em um momento especial.</p>
+        </div>
+
+        <div class="sobre-box">
+          <p class="sobre-quote">"Insumos de extrema qualidade, fermentação paciente e coquetelaria autoral servidos em um ambiente vibrante na Olegário Maciel."</p>
+          <div style="display: flex; align-items: center; gap: 0.5rem; font-size: 0.875rem; color: var(--text-muted);">
+            <svg style="width:16px; height:16px; fill:#FFB800;" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+            <span>Nota 4.9 de 5 baseada em 508 avaliações reais no Google</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DIFERENCIAIS -->
+  <section class="section-list-style" id="diferenciais">
+    <div class="container">
+      <div class="section-header-center">
+        <span class="eyebrow">DIFERENCIAIS REAIS</span>
+        <h2 class="section-title">O que faz a Sprizza ser inigualável</h2>
+        <p class="section-desc">Processos rigorosos que garantem o máximo de sabor e leveza a cada fatia e gole.</p>
+      </div>
+
+      <div class="elegant-list">
+        <div class="list-item">
+          <div class="list-num">01</div>
+          <div class="list-title">Massa de Longa Fermentação com Farinha Especial</div>
+          <div class="list-desc">Processo lento de descanso da massa que proporciona textura crocante por fora, maciez por dentro e alta digestibilidade.</div>
+          <div></div>
+        </div>
+
+        <div class="list-item">
+          <div class="list-num">02</div>
+          <div class="list-title">Molhos e Ingredientes Selecionados</div>
+          <div class="list-desc">Tomates escolhidos no ponto certo de doçura e acidez, acompanhados de queijos de alta qualidade como fior di latte e mozzarella di búfala.</div>
+          <div></div>
+        </div>
+
+        <div class="list-item">
+          <div class="list-num">03</div>
+          <div class="list-title">Conceito Pizza Bar na Av. Olegário Maciel</div>
+          <div class="list-desc">Um espaço dinâmico que conecta a essência dos bares cariocas com a autêntica culinária de inspiração italiana.</div>
+          <div></div>
+        </div>
+
+        <div class="list-item">
+          <div class="list-num">04</div>
+          <div class="list-title">Drinks Autorais Disponíveis no Delivery</div>
+          <div class="list-desc">A mesma sofisticação do nosso bar entregue na sua porta junto com sua pizza artesanal.</div>
+          <div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DESTAQUE EDITORIAL -->
+  <section class="destaque-editorial">
+    <div class="container">
+      <div class="editorial-card">
+        <span class="eyebrow">SEGREDOS DA NOSSA COZINHA</span>
+        <h2 class="editorial-title">Por Que Apostar na Longa Fermentação?</h2>
+        <p class="editorial-text">O segredo para uma pizza artesanal verdadeiramente leve reside no tempo. Ao permitir que a massa mature por longas horas com farinha especial, o glúten se relaxa e os açúcares são pré-digeridos naturally. O resultado é uma borda aerada, sabor marcante e uma sensação de leveza incomparável após a refeição.</p>
+        <a href="https://sprizza.com.br/reservas/" class="btn btn-primary">Garanta Sua Reserva</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALERIA EDITORIAL / VISUAL COMPOSITION -->
+  <section class="section-galeria">
+    <div class="container">
+      <div class="section-header-center">
+        <span class="eyebrow">EXPERIÊNCIA COMPLETA</span>
+        <h2 class="section-title">A Essência da Sprizza em Cada Detalhe</h2>
+        <p class="section-desc">A fusão ideal entre insumos nobres, coquetelaria autoral e a energia da Barra da Tijuca.</p>
+      </div>
+
+      <div class="galeria-grid">
+        <div class="galeria-item">
+          <div class="galeria-icon">
+            <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm0 18a8 8 0 1 1 8-8 8 8 0 0 1-8 8z"/></svg>
+          </div>
+          <h3 class="galeria-title">Massas Aeradas & Crocantes</h3>
+          <p class="galeria-desc">Fermentação lenta com farinha especial importada para máxima leveza e bordas perfeitas.</p>
+        </div>
+
+        <div class="galeria-item">
+          <div class="galeria-icon">
+            <svg viewBox="0 0 24 24"><path d="M8 21h8m-4-4v4M5 3h14l-7 8z"/></svg>
+          </div>
+          <h3 class="galeria-title">Coquetelaria de Bar Autorais</h3>
+          <p class="galeria-desc">Drinks autorais criados para enriquecer os sabores das pizzas artesanais e foccacias.</p>
+        </div>
+
+        <div class="galeria-item">
+          <div class="galeria-icon">
+            <svg viewBox="0 0 24 24"><path d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
+          </div>
+          <h3 class="galeria-title">Ambiente Urbano & Acolhedor</h3>
+          <p class="galeria-desc">Ponto de encontro na Av. Olegário Maciel 460 para celebrações, encontros e boas conversas.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- COMO FUNCIONA -->
+  <section class="section-passos">
+    <div class="container">
+      <div class="section-header-center">
+        <span class="eyebrow">PASSO A PASSO</span>
+        <h2 class="section-title">Como aproveitar a Sprizza</h2>
+        <p class="section-desc">Simples, rápido e conveniente. Do salão direto para a sua mesa.</p>
+      </div>
+
+      <div class="passos-grid">
+        <div class="passo-card">
+          <div class="passo-num">01</div>
+          <h3 class="passo-title">Escolha Salão ou Delivery</h3>
+          <p class="passo-text">Defina se prefere curtir a atmosfera do nosso Pizza Bar na Barra da Tijuca ou receber em casa.</p>
+        </div>
+
+        <div class="passo-card">
+          <div class="passo-num">02</div>
+          <h3 class="passo-title">Faça seu Pedido ou Reserva</h3>
+          <p class="passo-text">Acesse nosso canal digital para agendar a sua mesa com antecedência ou selecionar os produtos do cardápio.</p>
+        </div>
+
+        <div class="passo-card">
+          <div class="passo-num">03</div>
+          <h3 class="passo-title">Aproveite a Experiência</h3>
+          <p class="passo-text">Deguste pizzas artesanais de longa fermentação acompanhadas de drinks autorais feitos na hora.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section-faq" id="faq">
+    <div class="container">
+      <div class="section-header-center">
+        <span class="eyebrow">DÚVIDAS FREQUENTES</span>
+        <h2 class="section-title">Perguntas Frequentes</h2>
+        <p class="section-desc">Respostas rápidas para ajudar no seu planejamento e pedido.</p>
+      </div>
+
+      <div class="faq-container">
+        <div class="faq-item">
+          <input type="checkbox" id="faq-1" class="faq-toggle">
+          <label for="faq-1" class="faq-question">
+            <span>Onde fica localizada a Sprizza Pizza Bar?</span>
+            <svg viewBox="0 0 24 24"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6z"/></svg>
+          </label>
+          <div class="faq-answer">
+            <p>Estamos localizados no polo gastronômico da Barra da Tijuca: Av. Olegário Maciel, 460 - Loja A - Rio de Janeiro - RJ.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <input type="checkbox" id="faq-2" class="faq-toggle">
+          <label for="faq-2" class="faq-question">
+            <span>O que caracteriza a pizza de longa fermentação?</span>
+            <svg viewBox="0 0 24 24"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6z"/></svg>
+          </label>
+          <div class="faq-answer">
+            <p>Nossas massas passam por um processo lento de descanso e maturação com farinhas especiais, resultando em pizzas mais leves, crocantes e fáceis de digerir.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <input type="checkbox" id="faq-3" class="faq-toggle">
+          <label for="faq-3" class="faq-question">
+            <span>É possível pedir drinks autorais pelo delivery?</span>
+            <svg viewBox="0 0 24 24"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6z"/></svg>
+          </label>
+          <div class="faq-answer">
+            <p>Sim! Toda a nossa carta de drinks autorais e refrescantes está disponível tanto no salão quanto para entrega no delivery.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <input type="checkbox" id="faq-4" class="faq-toggle">
+          <label for="faq-4" class="faq-question">
+            <span>Como faço para reservar uma mesa na Sprizza?</span>
+            <svg viewBox="0 0 24 24"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6z"/></svg>
+          </label>
+          <div class="faq-answer">
+            <p>Você pode solicitar sua reserva diretamente pelos botões de contato deste site, direcionando para nosso canal oficial de agendamentos.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <input type="checkbox" id="faq-5" class="faq-toggle">
+          <label for="faq-5" class="faq-question">
+            <span>A Sprizza possui opções de entradas no cardápio?</span>
+            <svg viewBox="0 0 24 24"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6z"/></svg>
+          </label>
+          <div class="faq-answer">
+            <p>Sim, além das pizzas artesanais, servimos foccacias artesanais e acompanhamentos típicos da culinária italiana.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA FINAL & FORMULARIO -->
+  <section class="section-cta-final" id="contato">
+    <div class="container">
+      <div class="cta-final-grid">
+        <div>
+          <span class="eyebrow">FAÇA SUA RESERVA OU PEDIDO</span>
+          <h2 class="section-title">Experimente a Autêntica Pizza Artesanal na Barra da Tijuca</h2>
+          <p class="section-desc" style="margin-bottom: 2rem;">Reserve sua mesa no nosso espaço na Av. Olegário Maciel ou faça seu pedido pelo delivery para saborear pizzas leves e drinks autorais.</p>
+
+          <a href="https://sprizza.com.br/reservas/" class="btn btn-primary" style="font-size: 1.0625rem; padding: 1.125rem 2.25rem;">Reservar Mesa ou Fazer Pedido</a>
+        </div>
+
+        <div class="cta-form-card">
+          <form action="#" method="post">
+            <div class="form-group">
+              <label class="form-label" for="nome">Nome Completo</label>
+              <input type="text" id="nome" name="nome" class="form-input" placeholder="Seu nome" required>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="telefone">Telefone / WhatsApp</label>
+              <input type="tel" id="telefone" name="telefone" class="form-input" placeholder="(21) 99999-9999" required>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="email">E-mail</label>
+              <input type="email" id="email" name="email" class="form-input" placeholder="" required>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="servico">Interesse Principal</label>
+              <select id="servico" name="servico" class="form-select">
+                <option value="reserva">Reserva de Mesa no Salão</option>
+                <option value="delivery">Pedido para Delivery</option>
+                <option value="evento">Comemoração / Evento</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="mensagem">Mensagem ou Observação</label>
+              <textarea id="mensagem" name="mensagem" class="form-textarea" rows="3" placeholder="Quantidade de pessoas, data ou dúvidas..."></textarea>
+            </div>
+
+            <div class="form-checkbox">
+              <input type="checkbox" id="privacidade" required checked>
+              <label for="privacidade">Concordo com a política de privacidade e uso de dados para contato.</label>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-full">Solicitar Atendimento</button>
+            <p class="form-note">Formulário demonstrativo de contato direto.</p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- RODAPÉ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <a href="#" class="logo" style="margin-bottom: 1.25rem; display: block;" aria-label="Sprizza Pizza Bar">
+            <img src="img/foto-1.png" alt="Sprizza Pizza Bar" loading="lazy">
+          </a>
+          <p style="font-size: 0.84375rem; line-height: 1.6; color: var(--text-muted);">A Sprizza Pizza Bar é uma pizzaria e pizza bar na Barra da Tijuca, Rio de Janeiro. Unindo a tradição das pizzas de longa fermentação a uma carta exclusiva de drinks autorais, oferece ambiente moderno na Av. Olegário Maciel, 460 e entrega de excelência no delivery.</p>
+          
+          <div class="social-links">
+            <a href="https://www.instagram.com/sprizzapizzabar" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="Instagram da Sprizza">
+              <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Cardápio & Serviços</h4>
+          <ul class="footer-links">
+            <li><a href="#servicos">Pizzas Artesanais</a></li>
+            <li><a href="#servicos">Foccacias</a></li>
+            <li><a href="#servicos">Menu de Drinks Autorais</a></li>
+            <li><a href="#servicos">Delivery Sprizza</a></li>
+            <li><a href="#servicos">Reservas no Salão</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Links Úteis</h4>
+          <ul class="footer-links">
+            <li><a href="#sobre">A Sprizza</a></li>
+            <li><a href="#diferenciais">Nossa Fermentação</a></li>
+            <li><a href="#faq">Perguntas Frequentes</a></li>
+            <li><a href="#">Política de Privacidade</a></li>
+            <li><a href="#">Uso de Cookies</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Endereço e Contato</h4>
+          <ul class="footer-links" style="font-size: 0.84375rem;">
+            <li><strong>Sprizza Pizza Bar</strong></li>
+            <li>Av. Olegário Maciel, 460 - Loja A</li>
+            <li>Barra da Tijuca, Rio de Janeiro - RJ</li>
+            <li>CEP 22621-200</li>
+            <li style="margin-top: 0.5rem;"><a href="https://sprizza.com.br/reservas/" style="color: var(--brand-accent); font-weight: 600;">Reservar ou Pedir Online →</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2026 Sprizza Pizza Bar. Todos os direitos reservados. Política de privacidade e uso de cookies conforme aviso do site.</p>
+        <p>Desenvolvido para Sprizza Pizzaria • Barra da Tijuca, RJ</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- BOTÃO FLUTUANTE DE AGENDAMENTO -->
+  <a href="https://sprizza.com.br/reservas/" class="floating-btn" aria-label="Reservar Mesa ou Fazer Pedido">
+    <svg viewBox="0 0 24 24"><path d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.11 0-1.99.9-1.99 2L3 20c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V10h14v10zm0-12H5V6h14v2zm-7 5h5v5h-5z"/></svg>
+    <span>Reservar / Pedir</span>
+  </a>
+
+<div style="position:fixed;bottom:18px;left:50%;transform:translateX(-50%);z-index:2147483647;background:rgba(255,255,255,0.96);border-radius:999px;padding:10px 22px 10px 12px;box-shadow:0 6px 20px rgba(0,0,0,0.22);display:flex;align-items:center;gap:9px;font-family:Inter,-apple-system,sans-serif;"><img src="https://rd-previews-dharari01s-projects.vercel.app/_assets/logo-rd-exclusive.png" alt="RD Exclusive" style="height:26px;width:auto;display:block;"><span style="font-size:14px;font-weight:700;color:#1A1A1A;white-space:nowrap;">Protótipo por RD Exclusive</span></div></body>
+</html>
