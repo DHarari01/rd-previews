@@ -465,6 +465,24 @@
       text-align: center;
     }
 
+    @media (min-width: 900px) {
+      .hero-grid {
+        grid-template-columns: 1.1fr 0.9fr;
+        max-width: none;
+        text-align: left;
+        align-items: center;
+      }
+      .hero-ctas, .hero-microprova { justify-content: flex-start; }
+    }
+
+    .hero-media img {
+      width: 100%;
+      height: auto;
+      border-radius: 20px;
+      display: block;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.25);
+    }
+
     .hero-h1 {
       font-size: clamp(2.1rem, 4.5vw, 3.5rem);
       font-weight: 800;
@@ -1237,6 +1255,10 @@
               <span>Nota 5.0 no Google (20 avaliações) • Espaço estruturado seguindo rigorosos protocolos de segurança</span>
             </div>
           </div>
+
+          <div class="hero-media rd-reveal">
+            <img src="img/mauricio-bity-hero.jpg" alt="Maurício Bity, fisioterapeuta fundador da M&B Fisioterapia" loading="eager" fetchpriority="high">
+          </div>
         </div>
       </div>
     </section>
@@ -1245,19 +1267,19 @@
     <section class="trust-bar" aria-label="Números e Credenciais">
       <div class="container">
         <div class="trust-grid">
-          <div class="trust-item">
-            <span class="trust-number">+20 Anos</span>
+          <div class="trust-item rd-card-fx">
+            <span class="trust-number">+<span class="rd-counter" data-target="20">0</span> Anos</span>
             <span class="trust-label">De experiência profissional em reabilitação física</span>
           </div>
-          <div class="trust-item">
-            <span class="trust-number">Nota 5.0</span>
+          <div class="trust-item rd-card-fx">
+            <span class="trust-number">Nota <span class="rd-counter" data-target="5.0">0</span></span>
             <span class="trust-label">Avaliação no Google com 20 opiniões auditadas</span>
           </div>
-          <div class="trust-item">
+          <div class="trust-item rd-card-fx">
             <span class="trust-number">Seleção Brasileira</span>
             <span class="trust-label">Atuação na comissão técnica de Beach Soccer</span>
           </div>
-          <div class="trust-item">
+          <div class="trust-item rd-card-fx">
             <span class="trust-number">Shopping Downtown</span>
             <span class="trust-label">Estrutura moderna e acessível na Barra da Tijuca</span>
           </div>
@@ -1273,7 +1295,7 @@
         <p class="section-subtitle">Combinamos técnicas manuais consagradas, eletroterapia e atendimento verdadeiramente humano para acelerar seus resultados.</p>
 
         <div class="benefits-grid">
-          <div class="benefit-card">
+          <div class="benefit-card rd-card-fx">
             <div class="benefit-icon">
               <svg viewBox="0 0 24 24"><path d="M13 3c-4.97 0-9 4.03-9 9H1l3.89 3.89.07.14L9 12H6c0-3.87 3.13-7 7-7s7 3.13 7 7-3.13 7-7 7c-1.93 0-3.68-.79-4.94-2.06l-1.42 1.42C8.27 19.99 10.51 21 13 21c4.97 0 9-4.03 9-9s-4.03-9-9-9zm-1 5v5l4.28 2.54.72-1.21-3.5-2.08V8H12z"/></svg>
             </div>
@@ -1281,7 +1303,7 @@
             <p>Integramos a terapia manual direcionada a recursos de eletroterapia para aliviar dores, restabelecer a função motora e otimizar a reabilitação ortopédica.</p>
           </div>
 
-          <div class="benefit-card">
+          <div class="benefit-card rd-card-fx">
             <div class="benefit-icon">
               <svg viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
             </div>
@@ -1289,7 +1311,7 @@
             <p>Tratamos pacientes neurológicos com empatia, respeito e compromisso técnico, transformando o processo de reabilitação em uma rotina humanizada e eficaz.</p>
           </div>
 
-          <div class="benefit-card">
+          <div class="benefit-card rd-card-fx">
             <div class="benefit-icon">
               <svg viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/></svg>
             </div>
@@ -1297,7 +1319,7 @@
             <p>Fortalecimento e reabilitação da musculatura do assoalho pélvico para prevenção e tratamento de incontinências no pré/pós-parto e pós-operatórios cirúrgicos.</p>
           </div>
 
-          <div class="benefit-card">
+          <div class="benefit-card rd-card-fx">
             <div class="benefit-icon">
               <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg>
             </div>
@@ -1316,7 +1338,7 @@
         <p class="section-subtitle">Atendimento individualizado focado nas necessidades específicas do seu corpo e do seu momento de vida.</p>
 
         <div class="services-list">
-          <div class="service-item">
+          <div class="service-item rd-card-fx">
             <span class="service-number">01</span>
             <h3 class="service-name">Fisioterapia Ortopédica</h3>
             <p class="service-desc">Utilizamos como recurso terapêutico principal a terapia manual associada à eletroterapia para auxiliar no alívio de dores e na recuperação articular e muscular do paciente.</p>
@@ -1327,7 +1349,7 @@
             </div>
           </div>
 
-          <div class="service-item">
+          <div class="service-item rd-card-fx">
             <span class="service-number">02</span>
             <h3 class="service-name">Fisioterapia Desportiva</h3>
             <p class="service-desc">Especialidade voltada aos pacientes e atletas de alta performance ou com alta frequência semanal de atividades físicas, focada na prevenção de lesões e reabilitação acelerada.</p>
@@ -1338,7 +1360,7 @@
             </div>
           </div>
 
-          <div class="service-item">
+          <div class="service-item rd-card-fx">
             <span class="service-number">03</span>
             <h3 class="service-name">Reabilitação Neurológica</h3>
             <p class="service-desc">Tratamento fundamentado no respeito, afeto e compromisso técnico com o paciente, fazendo com que o processo de reabilitação neurológica se torne agradável e mais eficaz.</p>
@@ -1349,7 +1371,7 @@
             </div>
           </div>
 
-          <div class="service-item">
+          <div class="service-item rd-card-fx">
             <span class="service-number">04</span>
             <h3 class="service-name">Fisioterapia Uroginecológica</h3>
             <p class="service-desc">Modalidade focada em reabilitar as disfunções do assoalho pélvico, prevenindo e tratando incontinência urinária e fecal no pré e pós-parto e pós-cirúrgico ginecológico ou prostático.</p>
@@ -1360,7 +1382,7 @@
             </div>
           </div>
 
-          <div class="service-item">
+          <div class="service-item rd-card-fx">
             <span class="service-number">05</span>
             <h3 class="service-name">Drenagem Linfática</h3>
             <p class="service-desc">Realizada por meio de leve pressão e movimentos circulares rítmicos para estimular o fluxo de linfa, reduzindo inchaços e a retenção de líquidos no corpo.</p>
@@ -1381,7 +1403,7 @@
         <h2 class="section-title">Liderança técnica e experiência comprovada</h2>
         <p class="section-subtitle">Conheça o profissional responsável pelo padrão de atendimento e reabilitação na M&B Fisioterapia.</p>
 
-        <div class="team-card">
+        <div class="team-card rd-card-fx">
           <div>
             <div class="team-header-info">
               <h3 class="team-name">Maurício Bity</h3>
@@ -1417,19 +1439,19 @@
         <p class="section-subtitle">Por que o modelo de atendimento da M&B proporciona recuperações sólidas.</p>
 
         <div class="differentials-grid">
-          <div class="diff-card">
+          <div class="diff-card rd-card-fx">
             <h3>Atendimento Personalizado</h3>
             <p>Cada plano terapêutico é elaborado exclusivamente para a condição específica e metas do paciente.</p>
           </div>
-          <div class="diff-card">
+          <div class="diff-card rd-card-fx">
             <h3>Protocolos Avançados</h3>
             <p>Combinação eficiente de terapia manual moderna com tecnologia de eletroterapia de última geração.</p>
           </div>
-          <div class="diff-card">
+          <div class="diff-card rd-card-fx">
             <h3>Localização Privilegiada</h3>
             <p>Sede no Shopping Downtown, com fácil acesso, segurança e total infraestrutura na Barra da Tijuca.</p>
           </div>
-          <div class="diff-card">
+          <div class="diff-card rd-card-fx">
             <h3>Experiência no Esporte de Elite</h3>
             <p>Metodologia testada no alto rendimento aplicada na prevenção e cura do seu dia a dia.</p>
           </div>
@@ -1458,17 +1480,17 @@
         <p class="section-subtitle">Etapas simples para você iniciar sua recuperação com total clareza.</p>
 
         <div class="steps-grid">
-          <div class="step-card">
+          <div class="step-card rd-card-fx">
             <span class="step-badge">01</span>
             <h3>Contato Inicial</h3>
             <p>Entre em contato pelo WhatsApp ou telefone para agendar o melhor dia e horário para seu atendimento.</p>
           </div>
-          <div class="step-card">
+          <div class="step-card rd-card-fx">
             <span class="step-badge">02</span>
             <h3>Avaliação Detalhada</h3>
             <p>Realizamos uma anamnese completa para diagnosticar o quadro e definir as metas de recuperação.</p>
           </div>
-          <div class="step-card">
+          <div class="step-card rd-card-fx">
             <span class="step-badge">03</span>
             <h3>Plano Terapêutico</h3>
             <p>Aplicação das sessões com terapia manual, eletroterapia e acompanhamento contínuo da evolução.</p>
