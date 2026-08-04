@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>Catálogo de Hero — Uau vs. Velocidade — RD Prospect</title>
+<style>
+  :root {
+    --surface-0: #F7F6F2; --surface-1: #F1EFE8; --surface-2: #FFFFFF;
+    --text-primary: #2C2C2A; --text-secondary: #5F5E5A;
+    --border: #E3E1D9; --radius: 8px;
+    --bg-success: #EAF3DE; --text-success: #27500A;
+    --bg-warning: #FAEEDA; --text-warning: #633806;
+    --bg-danger: #FCEBEB; --text-danger: #791F1F;
+    --font-sans: -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  }
+  body { background: var(--surface-0); font-family: var(--font-sans); color: var(--text-primary); padding: 2rem; margin: 0; }
+  h1 { font-size: 20px; font-weight: 500; margin: 0 0 4px; }
+  p.intro { font-size: 14px; color: var(--text-secondary); margin: 0 0 24px; max-width: 700px; }
+  @keyframes ken-burns { from { transform: scale(1) translate(0,0); } to { transform: scale(1.15) translate(-2%,-2%); } }
+  @keyframes gradient-shift { 0%,100% { background-position: 0% 50%; } 50% { background-position: 100% 50%; } }
+  @keyframes float-blob { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-8px); } }
+  @keyframes underline-grow { from { width: 0; } to { width: 100%; } }
+  @keyframes bounce-arrow { 0%,100% { transform: translateY(0); } 50% { transform: translateY(6px); } }
+  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 16px; max-width: 1000px; }
+  .efx-card { background: var(--surface-2); border: 0.5px solid var(--border); border-radius: 12px; padding: 1rem; display: flex; flex-direction: column; gap: 10px; }
+  .efx-demo { height: 96px; border-radius: var(--radius); background: var(--surface-1); display: flex; align-items: center; justify-content: center; overflow: hidden; position: relative; }
+  .efx-label { font-size: 13px; font-weight: 600; color: var(--text-primary); }
+  .efx-sub { font-size: 12px; color: var(--text-secondary); line-height: 1.4; }
+  .tags-row { display: flex; gap: 6px; flex-wrap: wrap; }
+  .efx-tag { font-size: 11px; padding: 2px 8px; border-radius: var(--radius); }
+  .tag-ok { background: var(--bg-success); color: var(--text-success); }
+  .tag-warn { background: var(--bg-warning); color: var(--text-warning); }
+  .tag-danger { background: var(--bg-danger); color: var(--text-danger); }
+  .kb-box { width: 100%; height: 100%; background: linear-gradient(135deg, #5DCAA5, #AFA9EC); animation: ken-burns 6s ease-in-out infinite alternate; }
+  .grad-box { width: 100%; height: 100%; background: linear-gradient(120deg, #F0997B, #ED93B1, #AFA9EC); background-size: 200% 200%; animation: gradient-shift 4s ease infinite; }
+  .blob { position: absolute; width: 28px; height: 28px; border-radius: 50%; background: #97C459; opacity: 0.7; animation: float-blob 2.4s ease-in-out infinite; }
+  .blob2 { position: absolute; width: 18px; height: 18px; border-radius: 50%; background: #85B7EB; opacity: 0.7; animation: float-blob 3s ease-in-out infinite; animation-delay: .5s; }
+  .underline-word { position: relative; font-size: 14px; font-weight: 500; }
+  .underline-bar { position: absolute; left: 0; bottom: -3px; height: 3px; background: #BA7517; border-radius: 2px; }
+  .efx-demo:hover .underline-bar { animation: underline-grow .6s ease forwards; }
+  .parallax-back { position: absolute; inset: -14px; background: #CECBF6; border-radius: 8px; }
+  .parallax-mid { position: absolute; width: 44px; height: 30px; border-radius: 6px; background: #7F77DD; transition: transform .12s linear; }
+  .blur-img { width: 76%; height: 70%; border-radius: 8px; background: #5DCAA5; filter: blur(6px); transition: filter .7s ease; }
+  .efx-demo:hover .blur-img { filter: blur(0); }
+  .glass-card { position: absolute; inset: 0; background: linear-gradient(135deg, #F0997B, #85B7EB); }
+  .glass-pane { position: relative; width: 58%; height: 44%; border-radius: 8px; background: rgba(255,255,255,0.25); backdrop-filter: blur(6px); border: 1px solid rgba(255,255,255,0.4); }
+  .video-box { width: 100%; height: 100%; background: repeating-linear-gradient(45deg, #F7C1C1, #F7C1C1 8px, #F09595 8px, #F09595 16px); display: flex; align-items: center; justify-content: center; }
+  .arrow-bounce { animation: bounce-arrow 1.2s ease-in-out infinite; font-size: 20px; }
+</style>
+</head>
+<body>
+<h1>Hero: efeito uau vs. velocidade</h1>
+<p class="intro">Passe o mouse pra ver cada efeito. O peso indica o custo real de performance — combine "leve" à vontade, use "médio" com moderação, e evite "pesado" nos sites-teste (você audita velocidade dos leads como argumento de venda — vale dar o exemplo).</p>
+<div class="grid">
+
+<div class="efx-card">
+  <div class="efx-demo" style="align-items:stretch; justify-content:stretch;"><div class="kb-box"></div></div>
+  <div><div class="efx-label">Ken Burns (zoom lento no fundo)</div><div class="efx-sub">CSS puro, sem JS — leve de verdade</div></div>
+  <div class="tags-row"><span class="efx-tag tag-ok">leve</span></div>
+</div>
+
+<div class="efx-card">
+  <div class="efx-demo" style="align-items:stretch; justify-content:stretch;"><div class="grad-box"></div></div>
+  <div><div class="efx-label">Gradiente animado</div><div class="efx-sub">Fundo colorido em movimento suave</div></div>
+  <div class="tags-row"><span class="efx-tag tag-ok">leve</span></div>
+</div>
+
+<div class="efx-card">
+  <div class="efx-demo" style="justify-content:flex-start; padding-left:24px;"><div class="blob"></div><div class="blob2" style="left:52%; top:60%;"></div></div>
+  <div><div class="efx-label">Formas flutuantes (blobs)</div><div class="efx-sub">Decoração sutil atrás do texto</div></div>
+  <div class="tags-row"><span class="efx-tag tag-ok">leve</span></div>
+</div>
+
+<div class="efx-card">
+  <div class="efx-demo"><div class="underline-word">palavra-chave<div class="underline-bar"></div></div></div>
+  <div><div class="efx-label">Destaque animado no texto</div><div class="efx-sub">Passe o mouse — sublinhado cresce</div></div>
+  <div class="tags-row"><span class="efx-tag tag-ok">leve</span></div>
+</div>
+
+<div class="efx-card">
+  <div class="efx-demo"><div class="blur-img"></div></div>
+  <div><div class="efx-label">Blur-up (nitidez progressiva)</div><div class="efx-sub">Passe o mouse — melhora velocidade PERCEBIDA</div></div>
+  <div class="tags-row"><span class="efx-tag tag-ok">leve</span><span class="efx-tag tag-ok">ajuda velocidade</span></div>
+</div>
+
+<div class="efx-card">
+  <div class="efx-demo"><span class="arrow-bounce">↓</span></div>
+  <div><div class="efx-label">Seta indicando rolagem</div><div class="efx-sub">Convida a continuar descendo a página</div></div>
+  <div class="tags-row"><span class="efx-tag tag-ok">leve</span></div>
+</div>
+
+<div class="efx-card">
+  <div class="efx-demo" id="parallax-hero-demo"><div class="parallax-back"></div><div class="parallax-mid" id="parallax-hero-mid"></div></div>
+  <div><div class="efx-label">Parallax leve (CSS transform)</div><div class="efx-sub">Mova o mouse — sem JS de scroll pesado</div></div>
+  <div class="tags-row"><span class="efx-tag tag-warn">médio</span></div>
+</div>
+
+<div class="efx-card">
+  <div class="efx-demo"><div class="glass-card"><div style="position:absolute; inset:0; display:flex; align-items:center; justify-content:center;"><div class="glass-pane"></div></div></div></div>
+  <div><div class="efx-label">Vidro fosco (glass card)</div><div class="efx-sub">Cartão translúcido sobre a foto</div></div>
+  <div class="tags-row"><span class="efx-tag tag-warn">médio</span></div>
+</div>
+
+<div class="efx-card">
+  <div class="efx-demo"><div class="video-box"><span style="font-size:11px; color:#791F1F; font-weight:600;">vídeo de fundo</span></div></div>
+  <div><div class="efx-label">Vídeo de fundo em loop</div><div class="efx-sub">Maior causa de site lento — evitar</div></div>
+  <div class="tags-row"><span class="efx-tag tag-danger">pesado</span></div>
+</div>
+
+</div>
+<script>
+(function(){
+  var demo = document.getElementById('parallax-hero-demo');
+  var mid = document.getElementById('parallax-hero-mid');
+  demo.addEventListener('mousemove', function(e){
+    var r = demo.getBoundingClientRect();
+    var x = (e.clientX - r.left - r.width/2) / (r.width/2);
+    var y = (e.clientY - r.top - r.height/2) / (r.height/2);
+    mid.style.transform = 'translate(' + (x*16) + 'px,' + (y*10) + 'px)';
+  });
+  demo.addEventListener('mouseleave', function(){ mid.style.transform = 'translate(0,0)'; });
+})();
+</script>
+</body>
+</html>

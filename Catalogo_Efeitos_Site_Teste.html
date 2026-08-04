@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>Catálogo de Efeitos — RD Prospect</title>
+<style>
+  :root {
+    --surface-0: #F7F6F2; --surface-1: #F1EFE8; --surface-2: #FFFFFF;
+    --text-primary: #2C2C2A; --text-secondary: #5F5E5A;
+    --border: #E3E1D9; --radius: 8px;
+    --bg-success: #EAF3DE; --text-success: #27500A;
+    --bg-accent: #E6F1FB; --text-accent: #0C447C;
+    --font-sans: -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+    --font-mono: "Consolas", "Menlo", monospace;
+  }
+  body { background: var(--surface-0); font-family: var(--font-sans); color: var(--text-primary); padding: 2rem; margin: 0; }
+  h1 { font-size: 20px; font-weight: 500; margin: 0 0 4px; }
+  p.intro { font-size: 14px; color: var(--text-secondary); margin: 0 0 24px; }
+  @keyframes marquee-scroll { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+  @keyframes typewriter-caret { 50% { opacity: 0; } }
+  @keyframes ripple-anim { to { transform: scale(3); opacity: 0; } }
+  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 16px; max-width: 1000px; }
+  .efx-card { background: var(--surface-2); border: 0.5px solid var(--border); border-radius: 12px; padding: 1rem; display: flex; flex-direction: column; gap: 10px; }
+  .efx-demo { height: 96px; border-radius: var(--radius); background: var(--surface-1); display: flex; align-items: center; justify-content: center; overflow: hidden; position: relative; }
+  .efx-label { font-size: 13px; font-weight: 600; color: var(--text-primary); }
+  .efx-sub { font-size: 12px; color: var(--text-secondary); line-height: 1.4; }
+  .efx-tag { font-size: 11px; padding: 2px 8px; border-radius: var(--radius); width: fit-content; }
+  .tag-ok { background: var(--bg-success); color: var(--text-success); }
+  .tag-new { background: var(--bg-accent); color: var(--text-accent); }
+  .hover-lift-box { width: 56px; height: 56px; border-radius: 10px; background: #9FE1CB; transition: transform .3s ease, box-shadow .3s ease; }
+  .hover-lift-box:hover { transform: scale(1.12); box-shadow: 0 10px 24px rgba(0,0,0,0.18); }
+  .reveal-box { width: 70%; height: 60%; border-radius: 8px; background: #CECBF6; opacity: 0.3; transform: translateY(14px); transition: opacity .5s ease, transform .5s ease; }
+  .efx-demo:hover .reveal-box { opacity: 1; transform: translateY(0); }
+  .tilt-wrap { perspective: 400px; }
+  .tilt-box { width: 60px; height: 60px; border-radius: 10px; background: #F5C4B3; transition: transform .2s ease; }
+  .tilt-wrap:hover .tilt-box { transform: rotateX(18deg) rotateY(-18deg); }
+  .glow-box { width: 64px; height: 64px; border-radius: 10px; background: var(--surface-2); border: 2px solid var(--border); transition: border-color .3s ease, box-shadow .3s ease; }
+  .efx-demo:hover .glow-box { border-color: #D4537E; box-shadow: 0 0 0 4px #F4C0D1; }
+  .marquee-track { display: flex; gap: 10px; animation: marquee-scroll 6s linear infinite; width: max-content; }
+  .marquee-pill { font-size: 11px; padding: 6px 12px; border-radius: 20px; background: #B5D4F4; color: #0C447C; white-space: nowrap; }
+  .type-text { font-size: 13px; font-family: var(--font-mono); border-right: 2px solid var(--text-primary); animation: typewriter-caret 0.8s step-end infinite; }
+  .ripple-btn { width: 72px; height: 36px; border-radius: var(--radius); background: #FAC775; color: #633806; font-size: 12px; border: none; position: relative; overflow: hidden; cursor: pointer; }
+  .ripple-span { position: absolute; border-radius: 50%; background: rgba(255,255,255,0.6); transform: scale(0); animation: ripple-anim .6s ease-out; pointer-events: none; }
+  .stagger-item { width: 14px; height: 40px; border-radius: 4px; background: #C0DD97; opacity: 0.25; transform: translateY(10px); transition: opacity .35s ease, transform .35s ease; }
+  .efx-demo:hover .stagger-item:nth-child(1) { opacity: 1; transform: translateY(0); transition-delay: 0s; }
+  .efx-demo:hover .stagger-item:nth-child(2) { opacity: 1; transform: translateY(0); transition-delay: .08s; }
+  .efx-demo:hover .stagger-item:nth-child(3) { opacity: 1; transform: translateY(0); transition-delay: .16s; }
+  .efx-demo:hover .stagger-item:nth-child(4) { opacity: 1; transform: translateY(0); transition-delay: .24s; }
+  .efx-demo:hover .stagger-item:nth-child(5) { opacity: 1; transform: translateY(0); transition-delay: .32s; }
+  .parallax-layer-back { position: absolute; inset: -10px; background: #9FE1CB; border-radius: 8px; }
+  .parallax-layer-front { position: absolute; width: 34px; height: 34px; border-radius: 8px; background: #0F6E56; transition: transform .15s ease-out; }
+  .compare-wrap { position: relative; width: 90%; height: 70%; border-radius: 8px; overflow: hidden; }
+  .compare-after { position: absolute; inset: 0; background: #F5C4B3; }
+  .compare-before { position: absolute; inset: 0; background: #CECBF6; clip-path: inset(0 50% 0 0); }
+  .compare-range { position: absolute; inset: 0; width: 100%; opacity: 0; cursor: ew-resize; margin: 0; }
+</style>
+</head>
+<body>
+<h1>Catálogo de efeitos visuais para sites-teste</h1>
+<p class="intro">Passe o mouse (ou arraste/clique, conforme o card) pra ver cada efeito em ação. "Já no seu app" = já implementado no 05_GerarSite.gs. "Dá pra pedir" = é só pedir que eu adiciono.</p>
+<div class="grid">
+
+<div class="efx-card">
+  <div class="efx-demo"><div class="hover-lift-box"></div></div>
+  <div><div class="efx-label">Hover lift (zoom + sombra)</div><div class="efx-sub">Passe o mouse no quadrado</div></div>
+  <span class="efx-tag tag-ok">já no seu app</span>
+</div>
+
+<div class="efx-card">
+  <div class="efx-demo"><div class="reveal-box"></div></div>
+  <div><div class="efx-label">Scroll reveal (fade ao surgir)</div><div class="efx-sub">Passe o mouse na área</div></div>
+  <span class="efx-tag tag-ok">já no seu app</span>
+</div>
+
+<div class="efx-card">
+  <div class="efx-demo"><span style="font-size:22px; font-weight:600;" id="counter-demo">0</span></div>
+  <div><div class="efx-label">Contador animado</div><div class="efx-sub">Números sobem ao aparecer</div></div>
+  <span class="efx-tag tag-ok">já no seu app</span>
+</div>
+
+<div class="efx-card">
+  <div class="efx-demo"><div class="compare-wrap"><div class="compare-after"></div><div class="compare-before" id="compare-before"></div><input type="range" class="compare-range" id="compare-range" min="0" max="100" value="50"></div></div>
+  <div><div class="efx-label">Slider antes / depois</div><div class="efx-sub">Arraste pra comparar</div></div>
+  <span class="efx-tag tag-new">dá pra pedir</span>
+</div>
+
+<div class="efx-card">
+  <div class="efx-demo" id="parallax-demo"><div class="parallax-layer-back"></div><div class="parallax-layer-front" id="parallax-front"></div></div>
+  <div><div class="efx-label">Parallax</div><div class="efx-sub">Camadas se movem em velocidades diferentes</div></div>
+  <span class="efx-tag tag-new">dá pra pedir</span>
+</div>
+
+<div class="efx-card">
+  <div class="efx-demo tilt-wrap"><div class="tilt-box"></div></div>
+  <div><div class="efx-label">Inclinação 3D (tilt)</div><div class="efx-sub">Passe o mouse no quadrado</div></div>
+  <span class="efx-tag tag-new">dá pra pedir</span>
+</div>
+
+<div class="efx-card">
+  <div class="efx-demo"><div class="glow-box"></div></div>
+  <div><div class="efx-label">Borda com brilho</div><div class="efx-sub">Passe o mouse na área</div></div>
+  <span class="efx-tag tag-new">dá pra pedir</span>
+</div>
+
+<div class="efx-card">
+  <div class="efx-demo" style="justify-content:flex-start; padding:0 8px;"><div class="marquee-track"><span class="marquee-pill">Cliente A</span><span class="marquee-pill">Cliente B</span><span class="marquee-pill">Cliente C</span><span class="marquee-pill">Cliente A</span><span class="marquee-pill">Cliente B</span><span class="marquee-pill">Cliente C</span></div></div>
+  <div><div class="efx-label">Rolagem infinita (marquee)</div><div class="efx-sub">Logos ou selos passando sozinhos</div></div>
+  <span class="efx-tag tag-new">dá pra pedir</span>
+</div>
+
+<div class="efx-card">
+  <div class="efx-demo"><span class="type-text" id="type-demo"></span></div>
+  <div><div class="efx-label">Texto digitando</div><div class="efx-sub">Frase aparece letra a letra</div></div>
+  <span class="efx-tag tag-new">dá pra pedir</span>
+</div>
+
+<div class="efx-card">
+  <div class="efx-demo"><button class="ripple-btn" id="ripple-btn">Clique</button></div>
+  <div><div class="efx-label">Ondulação ao clicar (ripple)</div><div class="efx-sub">Clique no botão</div></div>
+  <span class="efx-tag tag-new">dá pra pedir</span>
+</div>
+
+<div class="efx-card">
+  <div class="efx-demo" style="gap:6px;"><div class="stagger-item"></div><div class="stagger-item"></div><div class="stagger-item"></div><div class="stagger-item"></div><div class="stagger-item"></div></div>
+  <div><div class="efx-label">Revelação em cascata</div><div class="efx-sub">Itens de uma lista aparecem em sequência</div></div>
+  <span class="efx-tag tag-new">dá pra pedir</span>
+</div>
+
+</div>
+<script>
+(function(){
+  var target = 247, dur = 900, el = document.getElementById('counter-demo');
+  function run(){
+    var start = null;
+    function step(ts){
+      if(!start) start = ts;
+      var p = Math.min((ts-start)/dur, 1);
+      el.textContent = Math.round(p*target);
+      if(p<1) requestAnimationFrame(step);
+    }
+    requestAnimationFrame(step);
+  }
+  var demo = el.closest('.efx-demo');
+  demo.addEventListener('mouseenter', run);
+  run();
+
+  var range = document.getElementById('compare-range');
+  var before = document.getElementById('compare-before');
+  range.addEventListener('input', function(){
+    before.style.clipPath = 'inset(0 ' + (100-range.value) + '% 0 0)';
+  });
+
+  var pdemo = document.getElementById('parallax-demo');
+  var front = document.getElementById('parallax-front');
+  pdemo.addEventListener('mousemove', function(e){
+    var r = pdemo.getBoundingClientRect();
+    var x = (e.clientX - r.left - r.width/2) / (r.width/2);
+    var y = (e.clientY - r.top - r.height/2) / (r.height/2);
+    front.style.transform = 'translate(' + (x*14) + 'px,' + (y*14) + 'px)';
+  });
+  pdemo.addEventListener('mouseleave', function(){ front.style.transform = 'translate(0,0)'; });
+
+  var phrase = 'Novo site pronto!';
+  var typeEl = document.getElementById('type-demo');
+  var typeDemo = typeEl.closest('.efx-demo');
+  var typing = false;
+  function typeIt(){
+    if(typing) return;
+    typing = true;
+    typeEl.textContent = '';
+    var i = 0;
+    var iv = setInterval(function(){
+      typeEl.textContent = phrase.slice(0, i+1);
+      i++;
+      if(i >= phrase.length){ clearInterval(iv); typing = false; }
+    }, 70);
+  }
+  typeDemo.addEventListener('mouseenter', typeIt);
+  typeIt();
+
+  var btn = document.getElementById('ripple-btn');
+  btn.addEventListener('click', function(e){
+    var span = document.createElement('span');
+    span.className = 'ripple-span';
+    var r = btn.getBoundingClientRect();
+    var size = Math.max(r.width, r.height);
+    span.style.width = span.style.height = size + 'px';
+    span.style.left = (e.clientX - r.left - size/2) + 'px';
+    span.style.top = (e.clientY - r.top - size/2) + 'px';
+    btn.appendChild(span);
+    setTimeout(function(){ span.remove(); }, 600);
+  });
+})();
+</script>
+</body>
+</html>
