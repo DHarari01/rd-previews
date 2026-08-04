@@ -892,6 +892,21 @@ function validarEstruturaDoPrototipo(html, contexto) {
     erros.push("Imagem/logo com URL quebrada ou inacessível (testado ao vivo): " + urlsQuebradas.slice(0, 3).join(" | "));
   }
 
+  // CASO SARA SINGER: lead cuja única presença é o Instagram (sem site
+  // próprio) e cuja foto de perfil não pôde ser capturada pelo servidor
+  // (Instagram bloqueou — o comum). Sem foto real confirmada, o hero do
+  // site pode ter saído com um ícone genérico no lugar da pessoa, e isso
+  // só aparece olhando o site pronto. Aqui a gente já avisa antes: não dá
+  // pra "corrigir" isso sozinho (a IA não tem acesso a fotos do Instagram),
+  // então vira aviso, não erro — o passo seguinte é humano: pedir pra
+  // buscar fotos alternativas manualmente (mesmo fluxo usado com o M&B).
+  if (contexto.origemInstagramSemFoto) {
+    avisos.push(
+      "Origem é só Instagram e a foto de perfil não pôde ser capturada automaticamente — " +
+      "o hero pode estar com um ícone genérico no lugar da foto real. Buscar fotos alternativas manualmente."
+    );
+  }
+
   const profissionaisReais = (contexto.briefingEstruturado && contexto.briefingEstruturado.profissionais) || [];
   profissionaisReais.forEach(function(p) {
     if (p.nome && !codigo.includes(p.nome)) {
