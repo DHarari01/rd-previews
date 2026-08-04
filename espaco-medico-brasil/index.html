@@ -1,0 +1,1411 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Espaço Médico Brasil | Centro Médico na Barra da Tijuca</title>
+  <meta name="description" content="Agende consultas adultas, pediátricas e de psicologia no Shopping Downtown, Barra da Tijuca. Estrutura completa de atendimento e coworking médico.">
+  <meta name="robots" content="index, follow">
+  
+  <!-- Preconnect & Fonts -->
+  <link rel="preconnect" href="https://espacomedicobrasil.com.br">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Open Graph / Social -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Espaço Médico Brasil | Centro Médico na Barra da Tijuca">
+  <meta property="og:description" content="Agende consultas adultas, pediátricas e de psicologia no Shopping Downtown, Barra da Tijuca. Estrutura completa de atendimento e coworking médico.">
+  <meta property="og:image" content="https://rd-previews-dharari01s-projects.vercel.app/espaco-medico-brasil/img/foto-1.jpg">
+  <meta property="og:locale" content="pt_BR">
+
+  <!-- Favicon SVG Data URI -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%232874FC'/%3E%3Cpath d='M16 6v20M6 16h20' stroke='%23ffffff' stroke-width='4' stroke-linecap='round'/%3E%3C/svg%3E">
+
+  <!-- Schema.org JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "MedicalClinic",
+        "@id": "https://espacomedicobrasil.com.br/#clinic",
+        "name": "Espaço Médico Brasil",
+        "url": "https://espacomedicobrasil.com.br",
+        "logo": "img/foto-2.png",
+        "image": "img/foto-1.jpg",
+        "telephone": "+55-21-3171-3171",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Shopping Downtown",
+          "addressLocality": "Barra da Tijuca",
+          "addressRegion": "RJ",
+          "addressCountry": "BR"
+        },
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "4.3",
+          "reviewCount": "169"
+        },
+        "medicalSpecialty": [
+          "Pediatric",
+          "Psychiatric",
+          "PrimaryCare"
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Onde está localizado o Espaço Médico Brasil?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Estamos localizados no Shopping Downtown, na Barra da Tijuca, Rio de Janeiro - RJ."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Quais são as formas disponíveis para agendar uma consulta?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "O agendamento pode ser realizado pelo sistema online, pelo WhatsApp ou diretamente pelo telefone (21) 3171-3171."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "A Unidade de Psicologia é reservada para manter a privacidade?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Sim. A Unidade de Psicologia dispõe de um ambiente exclusivo para garantir a discreção e o conforto do paciente."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Como obter informações sobre o coworking médico e sublocação de consultórios?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Médicos e profissionais interessados podem entrar em contato pelos nossos canais de atendimento para conhecer as opções de sublocação disponíveis no Shopping Downtown."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+
+  <style>
+    :root {
+      --primary: #2874FC;
+      --primary-dark: #1052c8;
+      --primary-light: #eef4ff;
+      --accent-dark: #0b1f40;
+      --text-main: #1e293b;
+      --text-muted: #64748b;
+      --bg-body: #ffffff;
+      --bg-alt: #f8fafc;
+      --border: #e2e8f0;
+      --radius-sm: 8px;
+      --radius-md: 16px;
+      --radius-lg: 24px;
+      --shadow-sm: 0 2px 4px rgba(0,0,0,0.04);
+      --shadow-md: 0 10px 25px -5px rgba(40, 116, 252, 0.08), 0 8px 10px -6px rgba(0, 0, 0, 0.04);
+      --shadow-lg: 0 20px 30px -10px rgba(15, 23, 42, 0.1);
+      --transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+      --max-width: 1200px;
+    }
+
+    /* Reset & Base */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    html {
+      scroll-behavior: smooth;
+      font-size: 16px;
+    }
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      color: var(--text-main);
+      background-color: var(--bg-body);
+      line-height: 1.6;
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+    ul {
+      list-style: none;
+    }
+
+    /* Container */
+    .container {
+      width: 100%;
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0 1.25rem;
+    }
+
+    /* Typography Clamp */
+    h1 {
+      font-size: clamp(2rem, 4vw + 1rem, 3.25rem);
+      font-weight: 800;
+      line-height: 1.15;
+      letter-spacing: -0.02em;
+      color: var(--accent-dark);
+    }
+    h2 {
+      font-size: clamp(1.6rem, 2.5vw + 1rem, 2.375rem);
+      font-weight: 700;
+      line-height: 1.25;
+      letter-spacing: -0.01em;
+      color: var(--accent-dark);
+    }
+    h3 {
+      font-size: clamp(1.2rem, 1.5vw + 1rem, 1.5rem);
+      font-weight: 600;
+      line-height: 1.3;
+      color: var(--accent-dark);
+    }
+
+    /* Buttons */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      padding: 0.875rem 1.75rem;
+      font-size: 1rem;
+      font-weight: 600;
+      border-radius: var(--radius-sm);
+      transition: var(--transition);
+      cursor: pointer;
+      border: 2px solid transparent;
+      text-align: center;
+    }
+    .btn-primary {
+      background-color: var(--primary);
+      color: #ffffff;
+      box-shadow: 0 4px 14px rgba(40, 116, 252, 0.35);
+    }
+    .btn-primary:hover {
+      background-color: var(--primary-dark);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(40, 116, 252, 0.45);
+    }
+    .btn-secondary {
+      background-color: transparent;
+      color: var(--primary);
+      border-color: var(--primary);
+    }
+    .btn-secondary:hover {
+      background-color: var(--primary-light);
+      transform: translateY(-2px);
+    }
+    .btn-full {
+      width: 100%;
+    }
+
+    /* Topbar */
+    .topbar {
+      background-color: var(--accent-dark);
+      color: #ffffff;
+      font-size: 0.875rem;
+      padding: 0.625rem 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    .topbar-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+    }
+    .topbar-info {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+    }
+    .topbar-item {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.375rem;
+      color: #e2e8f0;
+    }
+    .topbar-item a:hover {
+      color: #ffffff;
+      text-decoration: underline;
+    }
+
+    /* Header */
+    .header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background-color: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--border);
+      padding: 1rem 0;
+    }
+    .header-nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .logo img {
+      height: 48px;
+      width: auto;
+      object-fit: contain;
+    }
+    .nav-menu {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+    }
+    .nav-link {
+      font-weight: 5rem;
+      font-size: 0.95rem;
+      color: var(--text-main);
+      transition: var(--transition);
+    }
+    .nav-link:hover {
+      color: var(--primary);
+    }
+
+    /* Mobile Nav Checkbox Hack */
+    .menu-toggle {
+      display: none;
+    }
+    .menu-btn {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      padding: 0.5rem;
+    }
+    .menu-btn span {
+      width: 24px;
+      height: 2px;
+      background-color: var(--accent-dark);
+      transition: var(--transition);
+    }
+
+    /* Hero Split Assimétrico */
+    .hero {
+      padding: 4rem 0 5rem 0;
+      background: linear-gradient(180deg, #ffffff 0%, var(--bg-alt) 100%);
+      position: relative;
+      overflow: hidden;
+    }
+    .rd-hero-split {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3.5rem;
+      align-items: center;
+    }
+    .rd-hero-text {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.375rem 0.875rem;
+      background-color: var(--primary-light);
+      color: var(--primary);
+      font-size: 0.875rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      border-radius: 50px;
+      margin-bottom: 1.25rem;
+    }
+    .hero-subtitle {
+      font-size: 1.125rem;
+      color: var(--text-muted);
+      margin: 1.25rem 0 2rem 0;
+      max-width: 540px;
+    }
+    .hero-ctas {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      margin-bottom: 2rem;
+      width: 100%;
+    }
+    .micro-proof {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      font-size: 0.875rem;
+      color: var(--text-muted);
+      padding-top: 1rem;
+      border-top: 1px solid var(--border);
+      width: 100%;
+    }
+    .stars {
+      display: flex;
+      color: #fbbf24;
+    }
+    .rd-hero-media {
+      position: relative;
+    }
+    .rd-hero-media-card {
+      background: #ffffff;
+      padding: 0.75rem;
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-lg);
+      border: 1px solid var(--border);
+    }
+    .rd-hero-media img {
+      width: 100%;
+      height: 480px;
+      object-fit: cover;
+      border-radius: calc(var(--radius-lg) - 4px);
+    }
+
+    /* Faixa de Confiança / Big Numbers */
+    .trust-bar {
+      background-color: var(--accent-dark);
+      color: #ffffff;
+      padding: 2.5rem 0;
+    }
+    .trust-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+      text-align: center;
+    }
+    .trust-item {
+      padding: 0.5rem;
+    }
+    .trust-number {
+      font-size: clamp(2.25rem, 3vw, 3rem);
+      font-weight: 800;
+      color: #ffffff;
+      line-height: 1;
+      margin-bottom: 0.5rem;
+    }
+    .trust-number span.accent {
+      color: var(--primary);
+    }
+    .trust-label {
+      font-size: 0.9375rem;
+      color: #94a3b8;
+      font-weight: 500;
+    }
+
+    /* Common Section Formatting */
+    .section {
+      padding: 5rem 0;
+    }
+    .section-alt {
+      background-color: var(--bg-alt);
+    }
+    .section-header {
+      text-align: center;
+      max-width: 700px;
+      margin: 0 auto 3.5rem auto;
+    }
+    .section-header p {
+      color: var(--text-muted);
+      margin-top: 0.75rem;
+      font-size: 1.0625rem;
+    }
+
+    /* Card Effects & Reveal */
+    .rd-card-fx {
+      background: #ffffff;
+      border-radius: var(--radius-md);
+      border: 1px solid var(--border);
+      padding: 2rem;
+      transition: var(--transition);
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+    .rd-card-fx:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-md);
+      border-color: rgba(40, 116, 252, 0.3);
+    }
+    .rd-reveal {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+    .rd-reveal.active {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Benefícios */
+    .benefits-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+    }
+    .benefit-icon {
+      width: 48px;
+      height: 48px;
+      border-radius: var(--radius-sm);
+      background-color: var(--primary-light);
+      color: var(--primary);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 1.25rem;
+    }
+
+    /* Serviços (Bento Grid) */
+    .bento-grid {
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      gap: 1.5rem;
+    }
+    .bento-main {
+      grid-column: span 12;
+      background: linear-gradient(135deg, #ffffff 0%, var(--primary-light) 100%);
+      border: 1px solid rgba(40, 116, 252, 0.2);
+    }
+    @media (min-width: 992px) {
+      .bento-main {
+        grid-column: span 12;
+      }
+      .bento-sub {
+        grid-column: span 6;
+      }
+    }
+    .service-card-content {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .service-card-text {
+      margin: 1rem 0 1.5rem 0;
+      color: var(--text-muted);
+    }
+
+    /* Sobre */
+    .about-wrapper {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: center;
+    }
+    .about-content p {
+      color: var(--text-muted);
+      margin-top: 1.25rem;
+      font-size: 1.0625rem;
+      line-height: 1.7;
+    }
+    .about-badge {
+      font-size: 0.875rem;
+      font-weight: 700;
+      color: var(--primary);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 0.5rem;
+      display: block;
+    }
+    .about-highlights {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      margin-top: 1.75rem;
+    }
+    .about-item {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      font-weight: 600;
+    }
+
+    /* Diferenciais */
+    .diferenciais-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2rem;
+    }
+
+    /* Destaque Editorial */
+    .editorial-highlight {
+      background-color: var(--accent-dark);
+      color: #ffffff;
+      padding: 4.5rem 0;
+      position: relative;
+      overflow: hidden;
+    }
+    .editorial-content {
+      max-width: 800px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    .editorial-content h2 {
+      color: #ffffff;
+      margin-bottom: 1.25rem;
+    }
+    .editorial-content p {
+      color: #cbd5e1;
+      font-size: 1.125rem;
+      line-height: 1.7;
+      margin-bottom: 2rem;
+    }
+
+    /* Como Funciona */
+    .steps-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+      position: relative;
+    }
+    .step-number {
+      font-size: 2.5rem;
+      font-weight: 800;
+      color: var(--primary);
+      opacity: 0.3;
+      line-height: 1;
+      margin-bottom: 1rem;
+    }
+
+    /* FAQ */
+    .faq-container {
+      max-width: 800px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+    .faq-item {
+      background-color: #ffffff;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      overflow: hidden;
+      transition: var(--transition);
+    }
+    .faq-item summary {
+      padding: 1.25rem 1.5rem;
+      font-weight: 600;
+      font-size: 1.0625rem;
+      cursor: pointer;
+      list-style: none;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .faq-item summary::-webkit-details-marker {
+      display: none;
+    }
+    .faq-item summary::after {
+      content: "+";
+      font-size: 1.5rem;
+      color: var(--primary);
+      transition: transform 0.2s ease;
+    }
+    .faq-item[open] summary::after {
+      content: "−";
+    }
+    .faq-item[open] {
+      border-color: var(--primary);
+      box-shadow: var(--shadow-sm);
+    }
+    .faq-answer {
+      padding: 0 1.5rem 1.25rem 1.5rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+
+    /* CTA Final + Form */
+    .cta-final-section {
+      background: linear-gradient(180deg, var(--bg-alt) 0%, #ffffff 100%);
+      padding: 5rem 0;
+    }
+    .cta-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3.5rem;
+      align-items: center;
+    }
+    .form-card {
+      background: #ffffff;
+      padding: 2.5rem;
+      border-radius: var(--radius-md);
+      box-shadow: var(--shadow-lg);
+      border: 1px solid var(--border);
+    }
+    .form-group {
+      margin-bottom: 1.25rem;
+    }
+    .form-group label {
+      display: block;
+      font-size: 0.875rem;
+      font-weight: 600;
+      margin-bottom: 0.375rem;
+      color: var(--accent-dark);
+    }
+    .form-control {
+      width: 100%;
+      padding: 0.75rem 1rem;
+      font-size: 0.95rem;
+      font-family: inherit;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      transition: var(--transition);
+      background-color: #ffffff;
+    }
+    .form-control:focus {
+      outline: none;
+      border-color: var(--primary);
+      box-shadow: 0 0 0 3px rgba(40, 116, 252, 0.15);
+    }
+    textarea.form-control {
+      resize: vertical;
+      min-height: 100px;
+    }
+    .form-consent {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.5rem;
+      font-size: 0.8125rem;
+      color: var(--text-muted);
+      margin-bottom: 1.25rem;
+    }
+    .form-consent input {
+      margin-top: 0.2rem;
+    }
+    .form-note {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      text-align: center;
+      margin-top: 1rem;
+    }
+    .form-note a {
+      color: var(--primary);
+      text-decoration: underline;
+    }
+
+    /* Footer */
+    .footer {
+      background-color: var(--accent-dark);
+      color: #94a3b8;
+      padding: 4rem 0 2rem 0;
+      font-size: 0.9375rem;
+    }
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1.5fr;
+      gap: 2.5rem;
+      padding-bottom: 3rem;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    .footer-col h4 {
+      color: #ffffff;
+      font-size: 1rem;
+      font-weight: 600;
+      margin-bottom: 1.25rem;
+    }
+    .footer-bio {
+      margin-top: 1rem;
+      line-height: 1.6;
+      font-size: 0.875rem;
+    }
+    .footer-links {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+    .footer-links a {
+      transition: var(--transition);
+    }
+    .footer-links a:hover {
+      color: #ffffff;
+    }
+    .footer-contact {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+    .footer-bottom {
+      padding-top: 2rem;
+      text-align: center;
+      font-size: 0.8125rem;
+      color: #64748b;
+    }
+
+    /* Floating Action Button */
+    .floating-btn {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 999;
+      background-color: var(--primary);
+      color: #ffffff;
+      padding: 0.875rem 1.25rem;
+      border-radius: 50px;
+      font-weight: 700;
+      font-size: 0.875rem;
+      box-shadow: 0 10px 25px rgba(40, 116, 252, 0.4);
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      transition: var(--transition);
+    }
+    .floating-btn:hover {
+      background-color: var(--primary-dark);
+      transform: scale(1.05);
+    }
+
+    /* Mobile Responsive Media Queries */
+    @media (max-width: 991px) {
+      .rd-hero-split {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+      }
+      .rd-hero-media img {
+        height: 360px;
+      }
+      .about-wrapper {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+      }
+      .cta-grid {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+      }
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (max-width: 767px) {
+      .menu-btn {
+        display: flex;
+      }
+      .nav-menu {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: #ffffff;
+        flex-direction: column;
+        padding: 1.5rem;
+        gap: 1.25rem;
+        border-bottom: 1px solid var(--border);
+        box-shadow: var(--shadow-md);
+        display: none;
+      }
+      .menu-toggle:checked ~ .nav-menu {
+        display: flex;
+      }
+      .topbar-info {
+        justify-content: center;
+        width: 100%;
+      }
+      .topbar-content {
+        justify-content: center;
+      }
+      .trust-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+      }
+      .benefits-grid,
+      .diferenciais-grid,
+      .steps-grid {
+        grid-template-columns: 1fr;
+      }
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+      .hero-ctas {
+        flex-direction: column;
+      }
+      .btn {
+        width: 100%;
+      }
+    }
+  </style>
+<style>
+.rd-reveal{opacity:0;transform:translateY(24px);transition:opacity .6s ease,transform .6s ease;}
+.rd-reveal.rd-in-view{opacity:1;transform:translateY(0);}
+.rd-card-fx{transition:transform .35s ease,box-shadow .35s ease;}
+.rd-card-fx.rd-in-view,.rd-card-fx:hover{transform:scale(1.035);box-shadow:0 18px 40px rgba(0,0,0,0.14);}
+.rd-hero-split{display:grid;grid-template-columns:1fr;gap:2rem;align-items:center;}
+@media (min-width:900px){.rd-hero-split{grid-template-columns:1.1fr .9fr;gap:3rem;}}
+.rd-hero-media img{width:100%;height:auto;border-radius:20px;display:block;}
+@media (prefers-reduced-motion: reduce){.rd-reveal,.rd-card-fx{transition:none;opacity:1;transform:none;}}
+</style></head>
+<body>
+
+  <!-- TOPBAR -->
+  <aside class="topbar" aria-label="Informações de Contato Rápidas">
+    <div class="container topbar-content">
+      <div class="topbar-info">
+        <span class="topbar-item">
+          <svg width="14" height="14" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+          Shopping Downtown, Barra da Tijuca - RJ
+        </span>
+        <span class="topbar-item">
+          <svg width="14" height="14" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h32a2 2 0 012 2v2a2 2 0 01-2 2H5a2 2 0 01-2-2V5z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+          Ligue: <a href="tel:+552131713171">(21) 3171-3171</a>
+        </span>
+      </div>
+    </div>
+  </aside>
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="container header-nav">
+      <a href="#" class="logo" aria-label="Espaço Médico Brasil Página Inicial">
+        <img src="img/foto-2.png" alt="Espaço Médico Brasil - Centro Médico no Shopping Downtown" width="180" height="48">
+      </a>
+
+      <input type="checkbox" id="menu-toggle" class="menu-toggle" aria-label="Alternar Menu Mobile">
+      <label for="menu-toggle" class="menu-btn" aria-label="Abrir Menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </label>
+
+      <nav class="nav-menu" aria-label="Menu Principal">
+        <a href="#beneficios" class="nav-link">Benefícios</a>
+        <a href="#servicos" class="nav-link">Unidades e Serviços</a>
+        <a href="#sobre" class="nav-link">Sobre</a>
+        <a href="#diferenciais" class="nav-link">Diferenciais</a>
+        <a href="#como-funciona" class="nav-link">Como Agendar</a>
+        <a href="#faq" class="nav-link">FAQ</a>
+        <a href="https://paciente.espacomedicobrasil.com.br/emb-paciente/" target="_blank" rel="noopener" class="btn btn-primary">Agendar Consulta</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO (Split Assimétrico) -->
+    <section class="hero">
+      <div class="container">
+        <div class="rd-hero-split">
+          <div class="rd-hero-text">
+            <span class="eyebrow">
+              <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/></svg>
+              Centro Médico na Barra da Tijuca
+            </span>
+            <h1>Cuidados de saúde para toda a família e infraestrutura médica no Shopping Downtown</h1>
+            <p class="hero-subtitle">Agende consultas adultas, pediátricas e de psicologia com facilidade, ou traga sua prática profissional para a nossa rede de coworking médico.</p>
+            
+            <div class="hero-ctas">
+              <a href="https://paciente.espacomedicobrasil.com.br/emb-paciente/" target="_blank" rel="noopener" class="btn btn-primary">Agendar Consulta Online</a>
+              <a href="#servicos" class="btn btn-secondary">Conhecer Coworking Médico</a>
+            </div>
+
+            <div class="micro-proof">
+              <div class="stars" aria-label="Avaliação 4.3 de 5 estrelas">
+                <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+              </div>
+              <span><strong>Nota 4.3 no Google</strong> com 169 avaliações auditadas de pacientes.</span>
+            </div>
+          </div>
+
+          <div class="rd-hero-media">
+            <div class="rd-hero-media-card">
+              <img src="img/foto-1.jpg" alt="Instalações do Espaço Médico Brasil no Shopping Downtown" fetchpriority="high" width="600" height="480">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAIXA DE CONFIANÇA / BIG NUMBERS -->
+    <section class="trust-bar">
+      <div class="container">
+        <div class="trust-grid">
+          <div class="trust-item">
+            <div class="trust-number"><span class="rd-counter" data-target="4.3">4.3</span></div>
+            <div class="trust-label">Nota média de avaliação no Google</div>
+          </div>
+          <div class="trust-item">
+            <div class="trust-number"><span class="rd-counter" data-target="169">169</span></div>
+            <div class="trust-label">Avaliações auditadas de pacientes</div>
+          </div>
+          <div class="trust-item">
+            <div class="trust-number">+<span class="rd-counter" data-target="150">150</span></div>
+            <div class="trust-label">Médicos integrados ao Espaço Médico Brasil</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- BENEFÍCIOS -->
+    <section id="beneficios" class="section rd-reveal">
+      <div class="container">
+        <div class="section-header">
+          <h2>Por Que Escolher o Espaço Médico Brasil</h2>
+          <p>Oferecemos suporte completo e comodidade pensada no bem-estar de pacientes e profissionais.</p>
+        </div>
+
+        <div class="benefits-grid">
+          <article class="rd-card-fx">
+            <div class="benefit-icon">
+              <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+            </div>
+            <h3>Agendamento Ágil e Multicanal</h3>
+            <p style="color: var(--text-muted); margin-top: 0.75rem;">Marque consultas de forma prática e sem complicações utilizando o site, WhatsApp ou a central telefônica.</p>
+          </article>
+
+          <article class="rd-card-fx">
+            <div class="benefit-icon">
+              <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/></svg>
+            </div>
+            <h3>Atendimento Familiar Centralizado</h3>
+            <p style="color: var(--text-muted); margin-top: 0.75rem;">Reúna os cuidados de saúde de adultos e crianças no mesmo local, otimizando o tempo da sua família.</p>
+          </article>
+
+          <article class="rd-card-fx">
+            <div class="benefit-icon">
+              <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/></svg>
+            </div>
+            <h3>Privacidade e Discreção Resguardadas</h3>
+            <p style="color: var(--text-muted); margin-top: 0.75rem;">A Unidade de Psicologia conta com um espaço reservado, preparado para garantir o máximo conforto durante o atendimento.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVIÇOS (Bento Grid) -->
+    <section id="servicos" class="section section-alt rd-reveal">
+      <div class="container">
+        <div class="section-header">
+          <h2>Unidades de Atendimento e Coworking</h2>
+          <p>Estrutura médica versátil no Shopping Downtown para pacientes e profissionais de saúde.</p>
+        </div>
+
+        <div class="bento-grid">
+          <!-- Main Bento Card -->
+          <article class="rd-card-fx bento-main">
+            <div class="service-card-content">
+              <div>
+                <span style="font-size: 0.8125rem; font-weight: 700; color: var(--primary); text-transform: uppercase;">Unidade Integrada</span>
+                <h3 style="font-size: 1.625rem; margin-top: 0.5rem;">Atendimento na Unidade Adulta e Pediátrica</h3>
+                <p class="service-card-text">Atendimento médico voltado para adultos e crianças com agendamento integrado, proporcionando comodidade ao concentrar os cuidados da família no Shopping Downtown.</p>
+              </div>
+              <div>
+                <a href="https://paciente.espacomedicobrasil.com.br/emb-paciente/" target="_blank" rel="noopener" class="btn btn-primary">Agendar Consulta Familiar</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Secondary Bento Card 1 -->
+          <article class="rd-card-fx bento-sub">
+            <div class="service-card-content">
+              <div>
+                <span style="font-size: 0.8125rem; font-weight: 700; color: var(--primary); text-transform: uppercase;">Ambiente Reservado</span>
+                <h3 style="margin-top: 0.5rem;">Atendimento na Unidade de Psicologia</h3>
+                <p class="service-card-text">Sessões e acompanhamento psicológico realizados em ambiente exclusivo e acolhedor, projetado para assegurar sigilo e conforto em cada consulta.</p>
+              </div>
+              <div>
+                <a href="https://paciente.espacomedicobrasil.com.br/emb-paciente/" target="_blank" rel="noopener" class="btn btn-secondary">Agendar Sessão de Psicologia</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Secondary Bento Card 2 -->
+          <article class="rd-card-fx bento-sub">
+            <div class="service-card-content">
+              <div>
+                <span style="font-size: 0.8125rem; font-weight: 700; color: var(--primary); text-transform: uppercase;">Para Profissionais</span>
+                <h3 style="margin-top: 0.5rem;">Coworking Médico e Sublocação de Consultórios</h3>
+                <p class="service-card-text">Estrutura completa e moderna para profissionais de saúde que buscam sublocação de consultórios em um ponto estratégico da Barra da Tijuca.</p>
+              </div>
+              <div>
+                <a href="#contato" class="btn btn-secondary">Conhecer Coworking Médico</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- SOBRE A MARCA -->
+    <section id="sobre" class="section rd-reveal">
+      <div class="container">
+        <div class="about-wrapper">
+          <div class="about-content">
+            <span class="about-badge">Espaço Médico Brasil</span>
+            <h2>Estrutura integrada de saúde e coworking médico na Barra da Tijuca</h2>
+            <p>O Espaço Médico Brasil é um centro médico situado no Shopping Downtown, concebido para unir conveniência e eficiência. Oferecemos unidades especializadas em atendimento adulto, pediátrico e de psicologia, além de um ecossistema de sublocação de consultórios para médicos. Nosso propósito é facilitar o acesso ao cuidado com a saúde e fornecer suporte estrutural de alto nível para os profissionais da área.</p>
+
+            <div class="about-highlights">
+              <div class="about-item">
+                <svg width="20" height="20" fill="none" stroke="var(--primary)" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/></svg>
+                <span>Localização privilegiada no Shopping Downtown</span>
+              </div>
+              <div class="about-item">
+                <svg width="20" height="20" fill="none" stroke="var(--primary)" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/></svg>
+                <span>Consultórios equipados para múltiplas especialidades</span>
+              </div>
+              <div class="about-item">
+                <svg width="20" height="20" fill="none" stroke="var(--primary)" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/></svg>
+                <span>Atendimento integrado para adultos e crianças</span>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <img src="img/foto-1.jpg" alt="Instalações modernas do Espaço Médico Brasil" style="border-radius: var(--radius-lg); box-shadow: var(--shadow-md);" loading="lazy" width="600" height="400">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- DIFERENCIAIS -->
+    <section id="diferenciais" class="section section-alt rd-reveal">
+      <div class="container">
+        <div class="section-header">
+          <h2>Diferenciais Estratégicos</h2>
+          <p>Conheça as evidências reais que fazem do nosso centro médico uma referência na região.</p>
+        </div>
+
+        <div class="diferenciais-grid">
+          <article class="rd-card-fx">
+            <h3>Localização Estratégica no Shopping Downtown</h3>
+            <p style="color: var(--text-muted); margin-top: 0.75rem;">Fácil acesso no coração da Barra da Tijuca, contando com a infraestrutura completa de estacionamento, segurança e serviços do complexo comercial Downtown.</p>
+          </article>
+
+          <article class="rd-card-fx">
+            <h3>Comunidade com Mais de 150 Médicos</h3>
+            <p style="color: var(--text-muted); margin-top: 0.75rem;">Rede sólida de profissionais de saúde que compõem o ecossistema do Espaço Médico Brasil, promovendo conexão e um ambiente altamente qualificado para atuação médica.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- DESTAQUE EDITORIAL -->
+    <section class="editorial-highlight">
+      <div class="container">
+        <div class="editorial-content">
+          <h2>Por que o acompanhamento multiprofissional é essencial para sua rotina?</h2>
+          <p>Manter a saúde física e emocional em dia exige continuidade. Centralizar consultas médicas da família e sessões de psicologia no mesmo polo de atendimento, localizado no Shopping Downtown, garante praticidade e um acompanhamento mais integrado em todas as etapas da vida.</p>
+          <a href="tel:+552131713171" class="btn btn-primary">Falar com o Atendimento</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- COMO FUNCIONA -->
+    <section id="como-funciona" class="section rd-reveal">
+      <div class="container">
+        <div class="section-header">
+          <h2>Como Agendar Seu Atendimento</h2>
+          <p>Passo a passo simples para realizar sua consulta ou solicitar espaço no coworking.</p>
+        </div>
+
+        <div class="steps-grid">
+          <article class="rd-card-fx">
+            <div class="step-number">01</div>
+            <h3>Escolha a Especialidade ou Serviço</h3>
+            <p style="color: var(--text-muted); margin-top: 0.5rem;">Identifique a modalidade de atendimento desejada (Adulta, Pediátrica, Psicologia ou Sublocação de Consultório).</p>
+          </article>
+
+          <article class="rd-card-fx">
+            <div class="step-number">02</div>
+            <h3>Selecione o Canal de Contato</h3>
+            <p style="color: var(--text-muted); margin-top: 0.5rem;">Inicie o contato via agendamento online, formulário ou chamada telefônica para (21) 3171-3171.</p>
+          </article>
+
+          <article class="rd-card-fx">
+            <div class="step-number">03</div>
+            <h3>Confirme seu Horário</h3>
+            <p style="color: var(--text-muted); margin-top: 0.5rem;">Combine a data ideal para seu atendimento no Shopping Downtown e receba as orientações de confirmação.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="section section-alt rd-reveal">
+      <div class="container">
+        <div class="section-header">
+          <h2>Perguntas Frequentes</h2>
+          <p>Tire suas dúvidas sobre o atendimento e estrutura do Espaço Médico Brasil.</p>
+        </div>
+
+        <div class="faq-container">
+          <details class="faq-item">
+            <summary>Onde está localizado o Espaço Médico Brasil?</summary>
+            <div class="faq-answer">
+              Estamos localizados no Shopping Downtown, na Barra da Tijuca, Rio de Janeiro - RJ.
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary>Quais são as formas disponíveis para agendar uma consulta?</summary>
+            <div class="faq-answer">
+              O agendamento pode ser realizado pelo sistema online, pelo WhatsApp ou diretamente pelo telefone (21) 3171-3171.
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary>A Unidade de Psicologia é reservada para manter a privacidade?</summary>
+            <div class="faq-answer">
+              Sim. A Unidade de Psicologia dispõe de um ambiente exclusivo para garantir a discreção e o conforto do paciente.
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary>Como obter informações sobre o coworking médico e sublocação de consultórios?</summary>
+            <div class="faq-answer">
+              Médicos e profissionais interessados podem entrar em contato pelos nossos canais de atendimento para conhecer as opções de sublocação disponíveis no Shopping Downtown.
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA FINAL + FORMULÁRIO -->
+    <section id="contato" class="cta-final-section rd-reveal">
+      <div class="container">
+        <div class="cta-grid">
+          <div>
+            <h2>Agende seu atendimento ou conheça nossos consultórios</h2>
+            <p style="color: var(--text-muted); margin: 1.25rem 0 2rem 0; font-size: 1.0625rem;">Entre em contato para marcar consultas para sua família ou solicitar informações sobre nosso espaço de coworking médico no Shopping Downtown.</p>
+            
+            <div style="display: flex; flex-direction: column; gap: 1rem;">
+              <div style="display: flex; align-items: center; gap: 0.75rem;">
+                <div style="width: 40px; height: 40px; background-color: var(--primary-light); color: var(--primary); border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                  <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+                </div>
+                <div>
+                  <div style="font-size: 0.8125rem; color: var(--text-muted);">Telefone Central</div>
+                  <div style="font-weight: 700; color: var(--accent-dark);">(21) 3171-3171</div>
+                </div>
+              </div>
+
+              <div style="display: flex; align-items: center; gap: 0.75rem;">
+                <div style="width: 40px; height: 40px; background-color: var(--primary-light); color: var(--primary); border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                  <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+                </div>
+                <div>
+                  <div style="font-size: 0.8125rem; color: var(--text-muted);">Endereço</div>
+                  <div style="font-weight: 700; color: var(--accent-dark);">Shopping Downtown - Barra da Tijuca, RJ</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-card">
+            <form action="#" method="post" onsubmit="event.preventDefault(); window.location.href='https://paciente.espacomedicobrasil.com.br/emb-paciente/';">
+              <div class="form-group">
+                <label for="nome">Nome Completo</label>
+                <input type="text" id="nome" name="nome" class="form-control" placeholder="Digite seu nome" required>
+              </div>
+
+              <div class="form-group">
+                <label for="email">E-mail</label>
+                <input type="email" id="email" name="email" class="form-control" placeholder="logo-espaco-medico-brasil@2x.png" required>
+              </div>
+
+              <div class="form-group">
+                <label for="telefone">Telefone / WhatsApp</label>
+                <input type="tel" id="telefone" name="telefone" class="form-control" placeholder="(21) 99999-9999" required>
+              </div>
+
+              <div class="form-group">
+                <label for="servico">Serviço de Interesse</label>
+                <select id="servico" name="servico" class="form-control" required>
+                  <option value="" disabled selected>Selecione uma opção</option>
+                  <option value="Unidade Adulta e Pediátrica">Unidade Adulta e Pediátrica</option>
+                  <option value="Unidade de Psicologia">Unidade de Psicologia</option>
+                  <option value="Coworking Médico / Sublocação">Coworking Médico / Sublocação</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="mensagem">Mensagem (Opcional)</label>
+                <textarea id="mensagem" name="mensagem" class="form-control" placeholder="Como podemos ajudar?"></textarea>
+              </div>
+
+              <div class="form-consent">
+                <input type="checkbox" id="consent" name="consent" required>
+                <label for="consent">Concordo com o processamento dos meus dados para atendimento e agendamento de consultas.</label>
+              </div>
+
+              <button type="submit" class="btn btn-primary btn-full">Agendar Consulta Online</button>
+
+              <p class="form-note">Formulário demonstrativo. Para agendamento direto em tempo real, utilize nosso <a href="https://paciente.espacomedicobrasil.com.br/emb-paciente/" target="_blank" rel="noopener">sistema de agendamento online</a>.</p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- RODAPÉ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <!-- Coluna 1 -->
+        <div class="footer-col">
+          <img src="img/foto-2.png" alt="Espaço Médico Brasil Logo" style="height: 40px; width: auto; filter: brightness(0) invert(1);" loading="lazy">
+          <p class="footer-bio">O Espaço Médico Brasil é um centro médico situado no Shopping Downtown, Barra da Tijuca, Rio de Janeiro. Oferece atendimentos nas áreas adulta, pediátrica e de psicologia, além de infraestrutura completa de coworking médico e sublocação de consultórios para mais de 150 profissionais de saúde.</p>
+        </div>
+
+        <!-- Coluna 2 -->
+        <div class="footer-col">
+          <h4>Serviços</h4>
+          <div class="footer-links">
+            <a href="#servicos">Unidade Adulta e Pediátrica</a>
+            <a href="#servicos">Unidade de Psicologia</a>
+            <a href="#servicos">Coworking Médico</a>
+            <a href="#servicos">Sublocação de Consultórios</a>
+          </div>
+        </div>
+
+        <!-- Coluna 3 -->
+        <div class="footer-col">
+          <h4>Navegação</h4>
+          <div class="footer-links">
+            <a href="#sobre">Sobre a Clínica</a>
+            <a href="#diferenciais">Diferenciais</a>
+            <a href="#faq">Perguntas Frequentes</a>
+            <a href="#">Política de Privacidade</a>
+            <a href="#">Termos de Uso</a>
+          </div>
+        </div>
+
+        <!-- Coluna 4 -->
+        <div class="footer-col">
+          <h4>Contato</h4>
+          <div class="footer-contact">
+            <p><strong>Telefone:</strong> (21) 3171-3171</p>
+            <p><strong>Localização:</strong> Shopping Downtown - Barra da Tijuca, Rio de Janeiro - RJ</p>
+            <p style="margin-top: 0.5rem;"><a href="https://paciente.espacomedicobrasil.com.br/emb-paciente/" target="_blank" rel="noopener" style="color: var(--primary); font-weight: 600;">Agendamento Online &rarr;</a></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 Espaço Médico Brasil. Todos os direitos reservados. Centro Médico no Shopping Downtown, Barra da Tijuca.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- BOTÃO FLUTUANTE DE AGENDAMENTO -->
+  <a href="https://paciente.espacomedicobrasil.com.br/emb-paciente/" target="_blank" rel="noopener" class="floating-btn" aria-label="Agendar Consulta Online">
+    <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+    <span>Agendar Consulta</span>
+  </a>
+
+  <!-- JS Minimalista para Animações / Interatividade -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      // Reveal Animation via IntersectionObserver
+      const reveals = document.querySelectorAll(".rd-reveal");
+      if ("IntersectionObserver" in window) {
+        const revealObserver = new IntersectionObserver(function (entries) {
+          entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("active");
+              revealObserver.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.1 });
+
+        reveals.forEach(function (element) {
+          revealObserver.observe(element);
+        });
+      } else {
+        reveals.forEach(function (element) {
+          element.classList.add("active");
+        });
+      }
+
+      // Counter Animation
+      const counters = document.querySelectorAll(".rd-counter");
+      let counted = false;
+
+      function startCounters() {
+        counters.forEach(function (counter) {
+          const targetStr = counter.getAttribute("data-target");
+          const isFloat = targetStr.includes(".");
+          const target = parseFloat(targetStr);
+          let current = 0;
+          const increment = target / 40;
+
+          const timer = setInterval(function () {
+            current += increment;
+            if (current >= target) {
+              counter.innerText = targetStr;
+              clearInterval(timer);
+            } else {
+              counter.innerText = isFloat ? current.toFixed(1) : Math.ceil(current);
+            }
+          }, 30);
+        });
+      }
+
+      // Trigger counter when trust-bar is visible
+      const trustSection = document.querySelector(".trust-bar");
+      if (trustSection && "IntersectionObserver" in window) {
+        const trustObserver = new IntersectionObserver(function (entries) {
+          if (entries[0].isIntersecting && !counted) {
+            startCounters();
+            counted = true;
+          }
+        }, { threshold: 0.3 });
+        trustObserver.observe(trustSection);
+      } else {
+        startCounters();
+      }
+    });
+  </script>
+<div style="position:fixed;bottom:18px;left:50%;transform:translateX(-50%);z-index:2147483647;background:rgba(255,255,255,0.96);border-radius:999px;padding:10px 22px 10px 12px;box-shadow:0 6px 20px rgba(0,0,0,0.22);display:flex;align-items:center;gap:9px;font-family:Inter,-apple-system,sans-serif;"><img src="https://rd-previews-dharari01s-projects.vercel.app/_assets/logo-rd-exclusive.png" alt="RD Exclusive" style="height:26px;width:auto;display:block;"><span style="font-size:14px;font-weight:700;color:#1A1A1A;white-space:nowrap;">Protótipo por RD Exclusive</span></div><script>
+document.addEventListener("DOMContentLoaded", function() {
+  var alvos = document.querySelectorAll(".rd-reveal, .rd-card-fx, .rd-counter");
+  function animarContador(el) {
+    var textoAlvo = el.getAttribute("data-target") || "0";
+    var alvo = parseFloat(textoAlvo);
+    var casas = textoAlvo.indexOf(".") !== -1 ? 1 : 0;
+    var duracao = 1400, inicio = null;
+    function passo(ts) {
+      if (!inicio) inicio = ts;
+      var progresso = Math.min((ts - inicio) / duracao, 1);
+      var valorAtual = alvo * progresso;
+      el.textContent = casas ? valorAtual.toFixed(casas) : Math.floor(valorAtual);
+      if (progresso < 1) requestAnimationFrame(passo);
+      else el.textContent = casas ? alvo.toFixed(casas) : alvo;
+    }
+    requestAnimationFrame(passo);
+  }
+  if ("IntersectionObserver" in window) {
+    var obs = new IntersectionObserver(function(entradas) {
+      entradas.forEach(function(entrada) {
+        if (entrada.isIntersecting) {
+          entrada.target.classList.add("rd-in-view");
+          if (entrada.target.classList.contains("rd-counter")) animarContador(entrada.target);
+          obs.unobserve(entrada.target);
+        }
+      });
+    }, { threshold: 0.25 });
+    alvos.forEach(function(el) { obs.observe(el); });
+  } else {
+    alvos.forEach(function(el) {
+      el.classList.add("rd-in-view");
+      if (el.classList.contains("rd-counter")) animarContador(el);
+    });
+  }
+});
+</script></body>
+</html>
