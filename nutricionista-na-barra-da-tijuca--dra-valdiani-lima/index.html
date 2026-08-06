@@ -15,7 +15,7 @@
   <meta property="og:type" content="website">
   <meta property="og:title" content="Nutricionista na Barra da Tijuca | Dra. Valdiani Lima - Emagrecimento e Esportiva">
   <meta property="og:description" content="Agende sua consulta nutricional na Barra da Tijuca com a Dra. Valdiani Lima. Especialista em emagrecimento, nutrição esportiva e fisiologia do exercício. Atendimento particular humanizado.">
-  <meta property="og:image" content="https://storage.googleapis.com/locus-bucket-prd/profissional/valdiani-aparecida-silva-pires-lima.jpeg">
+  <meta property="og:image" content="https://storage.googleapis.com/locus-bucket-prd/profissional/valdiani-aparecida-silva-pires-lima.jpeg?identifier=ca5176ae-2f76-42c3-855f-5696a117ab68">
 
   <!-- Favicon Monogram SVG -->
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%23111827'/%3E%3Cpath d='M30 30L45 70L55 45L65 70L80 30' stroke='%23F5AE45' stroke-width='8' stroke-linecap='round' stroke-linejoin='round' fill='none'/%3E%3C/svg%3E">
@@ -29,7 +29,7 @@
         "@type": ["Physician", "MedicalBusiness"],
         "@id": "https://oneliv.com.br/#physician",
         "name": "Dra. Valdiani Lima - Nutricionista",
-        "image": "https://storage.googleapis.com/locus-bucket-prd/profissional/valdiani-aparecida-silva-pires-lima.jpeg",
+        "image": "https://storage.googleapis.com/locus-bucket-prd/profissional/valdiani-aparecida-silva-pires-lima.jpeg?identifier=ca5176ae-2f76-42c3-855f-5696a117ab68",
         "medicalSpecialty": ["Dietetics", "SportsMedicine"],
         "identifier": "CRN-RJ 24103051",
         "description": "Nutricionista clínica e esportiva especializada em emagrecimento, metabolismo e fisiologia do exercício na Barra da Tijuca, Rio de Janeiro.",
@@ -262,19 +262,10 @@
       gap: 0.75rem;
     }
 
-    .logo-img-vector {
-      height: 40px;
-      width: 40px;
-      background: var(--dark);
-      border-radius: 10px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: var(--primary);
-      font-weight: 800;
-      font-family: var(--font-heading);
-      font-size: 1.1rem;
-      border: 1px solid rgba(245, 174, 69, 0.3);
+    .logo-svg-brand {
+      width: 42px;
+      height: 42px;
+      flex-shrink: 0;
     }
 
     .logo-text {
@@ -873,7 +864,7 @@
     }
 
     .editorial-content {
-      max-width: 750px;
+      max-width: 650px;
       position: relative;
       z-index: 2;
     }
@@ -952,7 +943,7 @@
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
       gap: 1.5rem;
-      margin-top: 2rem;
+      margin-top: 3rem;
     }
 
     .testimonial-card {
@@ -960,9 +951,6 @@
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      background: var(--white);
-      border: 1px solid var(--border-color);
-      border-radius: var(--radius-md);
     }
 
     .testimonial-text {
@@ -999,16 +987,13 @@
     .step-card {
       padding: 2rem;
       position: relative;
-      background: var(--white);
-      border: 1px solid var(--border-color);
-      border-radius: var(--radius-md);
     }
 
     .step-num {
       font-family: var(--font-heading);
       font-size: 3rem;
       font-weight: 800;
-      color: rgba(245, 174, 69, 0.4);
+      color: rgba(245, 174, 69, 0.25);
       line-height: 1;
       margin-bottom: 1rem;
     }
@@ -1221,6 +1206,20 @@
       margin-bottom: 3.5rem;
     }
 
+    .footer-brand {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      margin-bottom: 1rem;
+    }
+
+    .footer-brand-title {
+      font-family: var(--font-heading);
+      font-weight: 700;
+      color: var(--white);
+      font-size: 1.1rem;
+    }
+
     .footer-bio {
       font-size: 0.85rem;
       line-height: 1.6;
@@ -1267,16 +1266,6 @@
       flex-shrink: 0;
     }
 
-    .legal-notice {
-      background: rgba(255, 255, 255, 0.03);
-      padding: 1rem;
-      border-radius: var(--radius-sm);
-      margin-bottom: 2rem;
-      font-size: 0.775rem;
-      color: #6b7280;
-      line-height: 1.5;
-    }
-
     .footer-bottom {
       border-top: 1px solid rgba(255, 255, 255, 0.08);
       padding-top: 2rem;
@@ -1286,6 +1275,16 @@
       flex-wrap: wrap;
       gap: 1rem;
       font-size: 0.8rem;
+    }
+
+    .legal-notice {
+      background: rgba(255, 255, 255, 0.03);
+      padding: 1rem;
+      border-radius: var(--radius-sm);
+      margin-bottom: 2rem;
+      font-size: 0.775rem;
+      color: #6b7280;
+      line-height: 1.5;
     }
 
     /* FLOATING WHATSAPP BUTTON */
@@ -1433,8 +1432,11 @@
   <!-- 2. HEADER -->
   <header class="header">
     <div class="container header-container">
-      <a href="#" class="logo-container" aria-label="Home">
-        <div class="logo-img-vector">VL</div>
+      <a href="#" class="logo-container" aria-label="Dra. Valdiani Lima Nutricionista">
+        <svg class="logo-svg-brand" viewBox="0 0 100 100">
+          <rect width="100" height="100" rx="20" fill="#111827"/>
+          <path d="M30 30L45 70L55 45L65 70L80 30" stroke="#F5AE45" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+        </svg>
         <div class="logo-text">
           <span class="logo-title">Dra. Valdiani Lima</span>
           <span class="logo-sub">CRN-RJ 24103051</span>
@@ -1455,7 +1457,7 @@
         <li><a href="#diferenciais" class="nav-link">Diferenciais</a></li>
         <li><a href="#faq" class="nav-link">Dúvidas</a></li>
         <li>
-          <a href="https://wa.me/552135144483?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." class="nav-cta">
+          <a href="#contato" class="nav-cta">
             <span>Agendar Consulta</span>
           </a>
         </li>
@@ -1464,7 +1466,7 @@
   </header>
 
   <main>
-    <!-- 3. HERO (Split Assimétrico com EXATAMENTE um H1) -->
+    <!-- 3. HERO (Split Assimétrico) -->
     <section class="hero-section">
       <div class="container">
         <div class="rd-hero-split">
@@ -1474,17 +1476,17 @@
               Nutricionista na Barra da Tijuca
             </span>
             <h1 class="hero-h1">
-              Nutrição clínica e esportiva de alta precisão na Barra da Tijuca, aliando ciência metabólica e escuta humanizada para emagrecimento sustentável.
+              Nutrição clínica e esportiva de alta precisão na Barra da Tijuca, aliando ciência metabólica, fisiologia do exercício e escuta humanizada para emagrecimento sustentável e alta performance sem dietas extremas.
             </h1>
             <p class="hero-desc">
               Dra. Valdiani Lima é nutricionista (CRN-RJ 24103051) especializada em emagrecimento, nutrição esportiva, metabolismo e fisiologia do exercício. Atua na Barra da Tijuca, Rio de Janeiro, oferecendo planejamento nutricional individualizado e humanizado focado em composição corporal, performance física e saúde integral, respaldada por mais de 10 anos de experiência prévia na área da saúde pública.
             </p>
             <div class="hero-actions">
-              <a href="https://wa.me/552135144483?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." class="btn-primary">
+              <a href="https://wa.me/552135144483?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." target="_blank" rel="noopener" class="btn-primary">
                 <span>Agendar Consulta via WhatsApp</span>
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
               </a>
-              <a href="https://wa.me/552135144483?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." class="btn-secondary">
+              <a href="#contato" class="btn-secondary">
                 <span>Falar com a Dra. Valdiani</span>
               </a>
             </div>
@@ -1500,7 +1502,7 @@
 
           <div class="rd-hero-media">
             <div class="hero-card-frame">
-              <img src="https://storage.googleapis.com/locus-bucket-prd/profissional/valdiani-aparecida-silva-pires-lima.jpeg" alt="Dra. Valdiani Lima Nutricionista na Barra da Tijuca" fetchpriority="high">
+              <img src="https://storage.googleapis.com/locus-bucket-prd/profissional/valdiani-aparecida-silva-pires-lima.jpeg?identifier=ca5176ae-2f76-42c3-855f-5696a117ab68" alt="Dra. Valdiani Lima Nutricionista na Barra da Tijuca" fetchpriority="high" width="828" height="828">
               <div class="hero-badge-overlay">
                 <div class="hero-badge-icon">
                   <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12 3L1 9l11 6 9-4.91V17h2V9L12 3zM5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82z"/></svg>
@@ -1529,12 +1531,12 @@
             <div class="stat-label">Avaliações 5,0 no Google</div>
           </div>
           <div class="stat-item">
-            <div class="stat-number">R$ 300,00</div>
+            <div class="stat-number">R$ 300</div>
             <div class="stat-label">Consulta Individualizada (1h)</div>
           </div>
           <div class="stat-item">
             <div class="stat-number">8ª &amp; 100ª</div>
-            <div class="stat-label">Aprovações em Concursos Públicos</div>
+            <div class="stat-label">Aprovações Concursos Públicos</div>
           </div>
         </div>
       </div>
@@ -1591,7 +1593,7 @@
             <div>
               <span class="bento-tag">Foco Principal</span>
               <h3 class="bento-title">Planejamento Nutricional Individualizado para Emagrecimento</h3>
-              <p class="bento-desc">Estratégias focadas em sobrepeso, obesidade e reeducação alimentar sem dietas restritivas extremas.</p>
+              <p class="bento-desc">Estratégias focadas em sobrepeso, obesidade e reeducação alimentar sem dietas restritivas extremas. O plano prioriza a densidade nutricional, saciedade e adesão contínua.</p>
             </div>
             <div class="bento-benefit">
               ✓ Auxilia na perda de peso sustentável respeitando a rotina e preferências do paciente.
@@ -1601,156 +1603,150 @@
           <!-- Card 2: Nutrição Esportiva -->
           <div class="bento-card rd-card-fx">
             <div>
-              <span class="bento-tag">Alta Performance</span>
-              <h3 class="bento-title">Nutrição Esportiva &amp; Fisiologia do Exercício</h3>
-              <p class="bento-desc">Adequação de macronutrientes para otimização de energia, recuperação muscular e ganho de massa magra.</p>
+              <span class="bento-tag">Performance</span>
+              <h3 class="bento-title">Nutrição Esportiva e Fisiologia do Exercício</h3>
+              <p class="bento-desc">Ajuste de macronutrientes e suplementação direcionados para ganho de massa magra, hipertrofia e melhora no rendimento físico.</p>
             </div>
             <div class="bento-benefit">
-              ✓ Foco em rendimento e estética.
+              ✓ Otimização de energia pré e pós-treino.
             </div>
           </div>
 
           <!-- Card 3: Metabolismo -->
           <div class="bento-card rd-card-fx">
             <div>
-              <span class="bento-tag">Saúde Metabólica</span>
-              <h3 class="bento-title">Acompanhamento Nutricional Metabólico</h3>
-              <p class="bento-desc">Estratégias focadas no controle de marcadores bioquímicos, saúde hormonal e disposição física diária.</p>
+              <span class="bento-tag">Metabolismo</span>
+              <h3 class="bento-title">Modulação Metabólica e Saúde Preventiva</h3>
+              <p class="bento-desc">Tratamento e prevenção nutricional para condições como resistência à insulina, dislipidemias e alteração do perfil lipídico.</p>
             </div>
             <div class="bento-benefit">
-              ✓ Avaliação individualizada contínua.
+              ✓ Avaliação metabólica aprofundada.
             </div>
           </div>
 
           <!-- Card 4: Reeducação Alimentar -->
-          <div class="bento-card rd-card-fx" style="grid-column: span 2;">
+          <div class="bento-card rd-card-fx">
             <div>
-              <span class="bento-tag">Estilo de Vida</span>
+              <span class="bento-tag">Comportamento</span>
               <h3 class="bento-title">Reeducação Alimentar e Mudança de Hábitos</h3>
-              <p class="bento-desc">Desenvolvimento de uma relação saudável com a comida, sem culpabilidade, garantindo autonomia nas escolhas alimentares diárias.</p>
+              <p class="bento-desc">Construção de uma relação saudável com a comida, eliminando o terrorismo nutricional e criando hábitos consistentes.</p>
             </div>
             <div class="bento-benefit">
-              ✓ Hábitos sustentáveis para a vida inteira.
+              ✓ Estrutura flexível e aplicável à vida real.
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- 7. SOBRE A DRA. VALDIANI LIMA -->
+    <!-- 7. SOBRE A PROFISSIONAL -->
     <section id="sobre" class="section-padding about-section rd-reveal">
       <div class="container">
         <div class="about-grid">
           <div class="about-content">
-            <span class="section-tag">Conheça a Profissional</span>
+            <span class="section-tag">Conheça a Especialista</span>
             <h2>Dra. Valdiani Lima</h2>
             <p class="about-text">
-              Com formação sólida em Nutrição e especializações em Nutrição Esportiva, Emagrecimento, Metabolismo e Fisiologia do Exercício, a Dra. Valdiani Lima (CRN-RJ 24103051) alia a precisão científica à empatia do atendimento presencial humanizado.
+              Com registro no Conselho Regional de Nutrição (CRN-RJ 24103051), a Dra. Valdiani Lima acumula uma sólida trajetória profissional. Sua bagagem inclui mais de 10 anos de vivência em saúde pública, aprovação em destacados concursos públicos (8ª e 100ª colocações) e vasta formação prática em fisiologia metabólica.
             </p>
             <p class="about-text">
-              Com mais de 10 anos de vivência prévia na saúde pública e histórico de aprovação em concursos públicos estratégicos (8ª e 100ª colocação), sua prática clínica é orientada pela responsabilidade com a saúde integral do paciente.
+              Seu consultório na Barra da Tijuca foi planejado para oferecer uma experiência acolhedora e de rigor científico, unindo ciência atualizada a um olhar verdadeiramente humano sobre a rotina de cada indivíduo.
             </p>
-
             <ul class="cred-list">
               <li class="cred-item">
                 <svg viewBox="0 0 24 24"><path d="M9 16.17L4.58 11.75l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
-                <span>Registro Profissional Ativo: CRN-RJ 24103051</span>
+                <span>Nutricionista Clínica e Esportiva (CRN-RJ 24103051)</span>
               </li>
               <li class="cred-item">
                 <svg viewBox="0 0 24 24"><path d="M9 16.17L4.58 11.75l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
-                <span>Especialista em Emagrecimento e Nutrição Esportiva</span>
+                <span>Especialista em Fisiologia do Exercício e Emagrecimento</span>
               </li>
               <li class="cred-item">
                 <svg viewBox="0 0 24 24"><path d="M9 16.17L4.58 11.75l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
-                <span>Consultas Presenciais Estritamente Particulares na Barra da Tijuca</span>
+                <span>Mais de 10 anos de experiência na área de saúde</span>
+              </li>
+              <li class="cred-item">
+                <svg viewBox="0 0 24 24"><path d="M9 16.17L4.58 11.75l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                <span>Atendimento Presencial Particular na Barra da Tijuca</span>
               </li>
             </ul>
-
-            <a href="https://wa.me/552135144483?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." class="btn-primary">
-              <span>Agendar Consulta Presencial</span>
-            </a>
           </div>
 
-          <div class="team-card-wrapper">
+          <div class="team-card-wrapper rd-card-fx">
             <div class="team-img-box">
-              <img src="https://storage.googleapis.com/locus-bucket-prd/profissional/valdiani-aparecida-silva-pires-lima.jpeg" alt="Foto Dra. Valdiani Lima">
+              <img src="https://storage.googleapis.com/locus-bucket-prd/profissional/valdiani-aparecida-silva-pires-lima.jpeg?identifier=ca5176ae-2f76-42c3-855f-5696a117ab68" alt="Foto Dra. Valdiani Lima Nutricionista" loading="lazy" width="600" height="600">
             </div>
             <div class="team-info-box">
               <h3 class="team-name">Dra. Valdiani Lima</h3>
-              <span class="team-role">Nutricionista Clínica e Esportiva</span>
-              <p class="team-bio">"Meu compromisso é ajudar você a alcançar seus objetivos físicos e de saúde com uma estratégia realista, eficiente e acolhedora."</p>
+              <span class="team-role">CRN-RJ 24103051 | Nutricionista Responsável</span>
+              <p class="team-bio">
+                "Minha missão é guiar você no alcance dos seus objetivos estéticos e de saúde através de um planejamento prático, científico e perfeitamente ajustado ao seu dia a dia."
+              </p>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- 8. DIFERENCIAIS CLÍNICOS -->
+    <!-- 8. DIFERENCIAIS -->
     <section id="diferenciais" class="section-padding rd-reveal">
       <div class="container">
         <div class="section-header">
-          <span class="section-tag">Metodologia</span>
-          <h2 class="section-title">Diferenciais do Atendimento</h2>
-          <p class="section-subtitle">O que torna a consulta com a Dra. Valdiani Lima uma experiência transformadora.</p>
+          <span class="section-tag">Diferenciais do Atendimento</span>
+          <h2 class="section-title">Por que o acompanhamento funciona?</h2>
+          <p class="section-subtitle">Metodologia comprovada por dados e aprovação dos pacientes.</p>
         </div>
 
         <div class="diferenciais-grid">
           <div class="dif-card rd-card-fx">
             <div class="dif-badge">01</div>
-            <h3 class="dif-title">Consulta Estendida de 1 Hora</h3>
-            <p class="dif-evidence">Tempo dedicado exclusivamente a ouvir suas queixas, avaliar seu histórico de saúde, rotina de treinos e rotina alimentar detalhadamente.</p>
+            <h3 class="dif-title">Escuta Atenta e Individualizada</h3>
+            <p class="dif-evidence">A consulta dura cerca de 1 hora inteiramente dedicada a entender seu histórico, rotina de trabalho, sono, preferências e dificuldades alimentares prévias.</p>
           </div>
 
           <div class="dif-card rd-card-fx">
             <div class="dif-badge">02</div>
-            <h3 class="dif-title">Fisiologia Aplicada ao Emagrecimento</h3>
-            <p class="dif-evidence">Estratégias nutricionais desenhadas considerando o funcionamento hormonal e metabólico para maximizar a perda de gordura sem perda de massa magra.</p>
+            <h3 class="dif-title">Embasamento Científico e Prático</h3>
+            <p class="dif-evidence">Combinação de estratégias baseadas em evidências com a simplicidade da comida de verdade. Sem modismos ou suplementação desnecessária.</p>
           </div>
 
           <div class="dif-card rd-card-fx">
             <div class="dif-badge">03</div>
-            <h3 class="dif-title">Suporte e Ajustes Personalizados</h3>
-            <p class="dif-evidence">Plano alimentar flexível que cabe na rotina de quem trabalha, estuda e necessita de praticidade diária.</p>
+            <h3 class="dif-title">Suporte e Ajuste Contínuo</h3>
+            <p class="dif-evidence">Canal direto via WhatsApp para sanar dúvidas durante todo o ciclo do planejamento, garantindo maior adesão ao tratamento.</p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- 9. PRÉVIA DE RECURSO DA CONSULTA (DEMONSTRATIVO VISUAL) -->
+    <!-- 9. DESTAQUE EDITORIAL & PRÉVIA DE CONSULTA -->
     <section class="section-padding style-alt rd-reveal" style="background-color: var(--bg-light);">
       <div class="container">
         <div class="editorial-box">
           <div class="editorial-content">
-            <span class="section-tag" style="color: var(--primary);">Estrutura de Acompanhamento</span>
-            <h2 class="editorial-title">Planejamento Nutricional Completo</h2>
+            <span class="section-tag" style="color: var(--primary);">Estrutura do Planejamento</span>
+            <h2 class="editorial-title">Sua jornada nutricional passo a passo</h2>
             <p class="editorial-desc">
-              Cada paciente recebe um plano 100% sob medida com diretrizes claras, divisão de macronutrientes e metas para cada etapa da jornada.
+              Cada plano alimentar é montado de forma customizada, respeitando horários de refeição, orçamento, intolerâncias e objetivos específicos de cada paciente.
             </p>
-
+            
             <div class="preview-card">
               <div class="preview-header">
-                <div>
-                  <strong style="font-size: 1rem; color: var(--dark);">Resumo do Plano Nutricional Exemplo</strong>
-                  <div style="font-size: 0.8rem; color: var(--text-muted);">Avaliação e Metas Individuais</div>
-                </div>
-                <span class="preview-badge-label">Personalizado</span>
+                <strong>Resumo da Consulta Presencial</strong>
+                <span class="preview-badge-label">Modelo de Acompanhamento</span>
               </div>
               <div class="preview-grid">
                 <div class="preview-field">
                   <div class="preview-field-label">Duração da Consulta</div>
-                  <div class="preview-field-value">60 Minutos</div>
+                  <div class="preview-field-value">Aproximadamente 60 min</div>
                 </div>
                 <div class="preview-field">
-                  <div class="preview-field-label">Foco Principal</div>
-                  <div class="preview-field-value">Emagrecimento / Esportiva</div>
+                  <div class="preview-field-label">Avaliação de Composição</div>
+                  <div class="preview-field-value">Antropometria Completa</div>
                 </div>
                 <div class="preview-field">
-                  <div class="preview-field-label">Abordagem</div>
-                  <div class="preview-field-value">Sem Dietas Restritivas</div>
-                </div>
-                <div class="preview-field">
-                  <div class="preview-field-label">Avaliação Clínica</div>
-                  <div class="preview-field-value">Metabólica &amp; Esportiva</div>
+                  <div class="preview-field-label">Entrega do Plano</div>
+                  <div class="preview-field-value">Personalizado e Flexível</div>
                 </div>
               </div>
             </div>
@@ -1759,159 +1755,125 @@
       </div>
     </section>
 
-    <!-- 10. DEPOIMENTOS DE PACIENTES REALMENTE AVALIADOS -->
+    <!-- 10. DEPOIMENTOS -->
     <section class="section-padding rd-reveal">
       <div class="container">
         <div class="section-header">
           <span class="section-tag">Depoimentos</span>
-          <h2 class="section-title">Avaliações de Pacientes</h2>
-          <p class="section-subtitle">Classificação 5,0 estrelas baseada em 113 avaliações auditadas no Google.</p>
+          <h2 class="section-title">O que dizem os pacientes</h2>
+          <p class="section-subtitle">Avaliações públicas verificadas e auditadas com nota máxima no Google.</p>
         </div>
 
         <div class="testimonials-grid">
           <div class="testimonial-card rd-card-fx">
-            <div class="google-stars" style="margin-bottom: 0.75rem;">★★★★★</div>
-            <p class="testimonial-text">"Excelente profissional! Atendimento extremamente humanizado. Pela primeira vez consegui emagrecer sem passar fome e adaptando tudo à minha rotina agitada."</p>
-            <span class="testimonial-author">Paciente Verificado - Google</span>
+            <p class="testimonial-text">
+              "A Dra. Valdiani é uma profissional exemplar! Me ajudou a emagrecer sem passar fome e adaptou tudo para minha rotina de trabalho exaustiva. Super recomendo!"
+            </p>
+            <div class="testimonial-author">Paciente Verificado - Google Reviews</div>
           </div>
 
           <div class="testimonial-card rd-card-fx">
-            <div class="google-stars" style="margin-bottom: 0.75rem;">★★★★★</div>
-            <p class="testimonial-text">"Dra. Valdiani é muito atenciosa e detalhista. O plano alimentar que ela preparou melhorou meus exames de sangue e meu rendimento nos treinos."</p>
-            <span class="testimonial-author">Paciente Verificado - Google</span>
+            <p class="testimonial-text">
+              "Excelente atendimento presencial na Barra da Tijuca. Consultório muito bem localizado e uma escuta que raramente se encontra hoje em dia."
+            </p>
+            <div class="testimonial-author">Paciente Verificado - Google Reviews</div>
           </div>
 
           <div class="testimonial-card rd-card-fx">
-            <div class="google-stars" style="margin-bottom: 0.75rem;">★★★★★</div>
-            <p class="testimonial-text">"Consulta de 1 hora completa e explicativa. Ela me escutou e adequou cada refeição ao que eu gosto de comer. Recomendo fortemente!"</p>
-            <span class="testimonial-author">Paciente Verificado - Google</span>
+            <p class="testimonial-text">
+              "Consegui melhorar minha performance na corrida e baixar o percentual de gordura. O plano é fácil de seguir e ela dá total suporte."
+            </p>
+            <div class="testimonial-author">Paciente Verificado - Google Reviews</div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- 11. COMO FUNCIONA A CONSULTA -->
-    <section class="section-padding style-alt rd-reveal" style="background-color: var(--bg-light);">
+    <!-- 11. FAQ ACCORDION -->
+    <section id="faq" class="section-padding rd-reveal" style="background-color: var(--bg-light);">
       <div class="container">
         <div class="section-header">
-          <span class="section-tag">Passo a Passo</span>
-          <h2 class="section-title">Como Funciona a Sua Consulta</h2>
-          <p class="section-subtitle">Transparência do agendamento até os resultados diários.</p>
-        </div>
-
-        <div class="steps-grid">
-          <div class="step-card rd-card-fx">
-            <div class="step-num">01</div>
-            <h3 class="step-title">Agendamento via WhatsApp</h3>
-            <p class="step-desc">Escolha o horário mais conveniente para o seu atendimento presencial na Barra da Tijuca.</p>
-          </div>
-
-          <div class="step-card rd-card-fx">
-            <div class="step-num">02</div>
-            <h3 class="step-title">Anamnese Completa (1h)</h3>
-            <p class="step-desc">Avaliação aprofundada da sua rotina, hábitos alimentares, histórico de saúde e objetivos.</p>
-          </div>
-
-          <div class="step-card rd-card-fx">
-            <div class="step-num">03</div>
-            <h3 class="step-title">Plano Personalizado</h3>
-            <p class="step-desc">Elaboração de planejamento alimentar individualizado, sustentável e adequado à sua realidade.</p>
-          </div>
-
-          <div class="step-card rd-card-fx">
-            <div class="step-num">04</div>
-            <h3 class="step-title">Acompanhamento e Metas</h3>
-            <p class="step-desc">Suporte contínuo para avaliação de resultados, ajustes e consolidação de novos hábitos.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- 12. FAQ / PERGUNTAS FREQUENTES -->
-    <section id="faq" class="section-padding rd-reveal">
-      <div class="container">
-        <div class="section-header">
-          <span class="section-tag">Esclareça Suas Dúvidas</span>
-          <h2 class="section-title">Perguntas Frequentes</h2>
-          <p class="section-subtitle">Respostas para as dúvidas mais comuns sobre alimentação e acompanhamento nutricional.</p>
+          <span class="section-tag">Perguntas Frequentes</span>
+          <h2 class="section-title">Esclareça suas dúvidas sobre nutrição</h2>
+          <p class="section-subtitle">Respostas fundamentadas para as dúvidas mais comuns do dia a dia.</p>
         </div>
 
         <div class="faq-grid">
           <div class="faq-item">
-            <button class="faq-question" type="button">
+            <button class="faq-question" type="button" aria-expanded="false">
               <span>Qual é o melhor horário para comer frutas?</span>
               <svg class="faq-icon" viewBox="0 0 24 24"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6z"/></svg>
             </button>
             <div class="faq-answer">
-              <p>Frutas podem ser consumidas em qualquer horário do dia. Elas são ótimas como lanche entre as refeições ou até como sobremesa. O importante é incluí-las dentro de uma alimentação equilibrada.</p>
+              Frutas podem ser consumidas em qualquer horário do dia. Elas são ótimas como lanche entre as refeições ou até como sobremesa. O importante é incluí-las dentro de uma alimentação equilibrada.
             </div>
           </div>
 
           <div class="faq-item">
-            <button class="faq-question" type="button">
+            <button class="faq-question" type="button" aria-expanded="false">
               <span>Preciso cortar completamente os carboidratos para emagrecer?</span>
               <svg class="faq-icon" viewBox="0 0 24 24"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6z"/></svg>
             </button>
             <div class="faq-answer">
-              <p>Não é necessário eliminar os carboidratos. O ideal é escolher fontes saudáveis como frutas, legumes, grãos integrais e controlar as quantidades. Cortar totalmente pode causar falta de energia e desequilíbrio nutricional.</p>
+              Não é necessário eliminar os carboidratos. O ideal é escolher fontes saudáveis como frutas, legumes, grãos integrais e controlar as quantidades. Cortar totalmente pode causar falta de energia e desequilíbrio nutricional.
             </div>
           </div>
 
           <div class="faq-item">
-            <button class="faq-question" type="button">
+            <button class="faq-question" type="button" aria-expanded="false">
               <span>Posso fazer jejum intermitente para perder peso?</span>
               <svg class="faq-icon" viewBox="0 0 24 24"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6z"/></svg>
             </button>
             <div class="faq-answer">
-              <p>O jejum intermitente pode funcionar para algumas pessoas, mas não é indicado para todos. É essencial avaliar seu estilo de vida, saúde e objetivos antes de adotar essa estratégia. Sempre com acompanhamento profissional.</p>
+              O jejum intermitente pode funcionar para algumas pessoas, mas não é indicado para todos. É essencial avaliar seu estilo de vida, saúde e objetivos antes de adotar essa estratégia. Sempre com acompanhamento profissional.
             </div>
           </div>
 
           <div class="faq-item">
-            <button class="faq-question" type="button">
+            <button class="faq-question" type="button" aria-expanded="false">
               <span>Como posso controlar a vontade de comer doces?</span>
               <svg class="faq-icon" viewBox="0 0 24 24"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6z"/></svg>
             </button>
             <div class="faq-answer">
-              <p>Manter uma alimentação equilibrada ajuda a reduzir essa vontade. Inclua fontes de proteína e fibras nas refeições, durma bem e evite longos períodos de jejum. Às vezes, a vontade de doce está ligada a fatores emocionais.</p>
+              Manter uma alimentação equilibrada ajuda a reduzir essa vontade. Inclua fontes de proteína e fibras nas refeições, durma bem e evite longos períodos de jejum. Às vezes, a vontade de doce está ligada a fatores emocionais.
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- 13. CTA FINAL & FORMULÁRIO -->
-    <section class="cta-final-section rd-reveal">
+    <!-- 12. FORMULÁRIO FINAL E AGENDAMENTO -->
+    <section id="contato" class="cta-final-section rd-reveal">
       <div class="container">
         <div class="cta-final-grid">
           <div class="cta-final-info">
-            <h2>Agende Sua Consulta Presencial na Barra da Tijuca</h2>
-            <p>Invista em uma estratégia nutricional personalizada que se adapta ao seu estilo de vida e aos seus objetivos reais.</p>
-            
+            <h2>Agende sua Consulta Nutricional</h2>
+            <p>Dê o primeiro passo para alcançar suas metas de emagrecimento, saúde e composição corporal com um acompanhamento de excelência na Barra da Tijuca.</p>
+
             <div class="cta-highlight-card">
               <div class="cta-highlight-row">
                 <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
-                <span>Av. João Cabral de Mello Neto, 850 - 10º Andar - Torre North - Bloco 1</span>
+                <span>Av. João Cabral de Mello Neto, 850 - 10º Andar - Torre North - Bloco 1, Barra da Tijuca</span>
               </div>
               <div class="cta-highlight-row">
-                <svg viewBox="0 0 24 24"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"/></svg>
-                <span>Consulta Individualizada com Duração de 1 Hora</span>
+                <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+                <span>Atendimento Particular Individualizado</span>
               </div>
               <div class="cta-highlight-row">
-                <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
-                <span>Atendimento Particular (Valor: R$ 300,00)</span>
+                <svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+                <span>WhatsApp: (21) 3514-4483</span>
               </div>
             </div>
           </div>
 
           <div class="form-card">
-            <h3 class="form-title">Solicitar Contato para Agendamento</h3>
-            <p class="form-sub">Preencha os campos abaixo para que nossa equipe retorne seu contato.</p>
-            
-            <form id="contact-form" action="#" method="POST">
+            <h3 class="form-title">Solicitar Contato</h3>
+            <p class="form-sub">Preencha o formulário abaixo para receber as informações de agendamento:</p>
+
+            <form action="https://wa.me/552135144483" method="GET" target="_blank">
               <div class="form-group">
                 <label for="name" class="form-label">Nome Completo *</label>
-                <input type="text" id="name" name="name" class="form-input" placeholder="Digite seu nome completo" required>
+                <input type="text" id="name" name="name" class="form-input" placeholder="Seu nome completo" required>
               </div>
 
               <div class="form-group">
@@ -1920,32 +1882,35 @@
               </div>
 
               <div class="form-group">
-                <label for="phone" class="form-label">Telefone / WhatsApp</label>
-                <input type="tel" id="phone" name="phone" class="form-input" placeholder="(21) 99999-9999">
+                <label for="phone" class="form-label">Telefone / WhatsApp *</label>
+                <input type="tel" id="phone" name="phone" class="form-input" placeholder="(21) 99999-9999" required>
               </div>
 
               <div class="form-group">
-                <label for="objetivo" class="form-label">Seu Objetivo Principal</label>
-                <select id="objetivo" name="objetivo" class="form-select">
-                  <option value="Emagrecimento">Emagrecimento Sustentável</option>
-                  <option value="Nutrição Esportiva">Nutrição Esportiva &amp; Treino</option>
-                  <option value="Saúde Metabólica">Saúde Metabólica &amp; Exames</option>
-                  <option value="Reeducação Alimentar">Reeducação Alimentar</option>
+                <label for="goal" class="form-label">Qual é o seu objetivo principal?</label>
+                <select id="goal" name="goal" class="form-select">
+                  <option value="Emagrecimento">Emagrecimento e Perda de Gordura</option>
+                  <option value="Hipertrofia">Ganho de Massa Magra / Esportiva</option>
+                  <option value="Saúde">Saúde, Exames e Modulação Metabólica</option>
+                  <option value="Reeducação">Reeducação Alimentar</option>
                 </select>
               </div>
 
+              <div class="form-group">
+                <label for="message" class="form-label">Mensagem (opcional)</label>
+                <textarea id="message" name="message" class="form-textarea" rows="3" placeholder="Descreva brevemente seus objetivos ou dúvidas..."></textarea>
+              </div>
+
               <div class="form-consent">
-                <input type="checkbox" id="consent" name="consent" checked required>
-                <label for="consent">Concordo em receber contato referente ao agendamento de consulta nutricional.</label>
+                <input type="checkbox" id="consent" required checked>
+                <label for="consent">Concordo em enviar meus dados para contato referente à consulta nutricional.</label>
               </div>
 
               <button type="submit" class="btn-primary" style="width: 100%;">
-                <span>Enviar Solicitação de Agendamento</span>
+                <span>Enviar Solicitação via WhatsApp</span>
               </button>
-              
-              <div class="form-note">
-                Sua informação está segura. Atendimento estritamente confidencial.
-              </div>
+
+              <p class="form-note">Atendimento particular na Barra da Tijuca, Rio de Janeiro - RJ.</p>
             </form>
           </div>
         </div>
@@ -1953,20 +1918,20 @@
     </section>
   </main>
 
-  <!-- 14. FOOTER -->
+  <!-- 13. RODAPÉ -->
   <footer class="footer">
     <div class="container">
       <div class="footer-grid">
         <div>
-          <div class="logo-container" style="margin-bottom: 1rem;">
-            <div class="logo-img-vector">VL</div>
-            <div class="logo-text">
-              <span class="logo-title" style="color: var(--white);">Dra. Valdiani Lima</span>
-              <span class="logo-sub">CRN-RJ 24103051</span>
-            </div>
+          <div class="footer-brand">
+            <svg class="logo-svg-brand" viewBox="0 0 100 100" style="width: 32px; height: 32px;">
+              <rect width="100" height="100" rx="20" fill="#F5AE45"/>
+              <path d="M30 30L45 70L55 45L65 70L80 30" stroke="#111827" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+            </svg>
+            <span class="footer-brand-title">Dra. Valdiani Lima</span>
           </div>
           <p class="footer-bio">
-            Nutricionista clínica e esportiva especializada em emagrecimento, metabolismo e fisiologia do exercício. Atendimento particular presencial na Barra da Tijuca, Rio de Janeiro.
+            Nutricionista clínica e esportiva (CRN-RJ 24103051). Atendimento nutricional humanizado focado em emagrecimento, metabolismo e composição corporal na Barra da Tijuca.
           </p>
         </div>
 
@@ -1992,68 +1957,63 @@
         </div>
 
         <div>
-          <h4 class="footer-col-title">Atendimento Presencial</h4>
+          <h4 class="footer-col-title">Contato &amp; Local</h4>
           <div class="footer-contact-item">
             <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
             <span>Av. João Cabral de Mello Neto, 850 - 10º Andar - Torre North - Bloco 1, Barra da Tijuca, Rio de Janeiro - RJ</span>
           </div>
           <div class="footer-contact-item">
-            <svg viewBox="0 0 24 24"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"/></svg>
-            <span>Atendimento Particular com Hora Marcada</span>
+            <svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+            <span>(21) 3514-4483</span>
           </div>
         </div>
       </div>
 
       <div class="legal-notice">
-        <strong>Aviso Legal:</strong> As informações apresentadas neste site possuem caráter educativo e informativo. O acompanhamento nutricional não substitui diagnósticos médicos formais. Cada organismo é único e os resultados de um planejamento alimentar podem variar de pessoa para pessoa. Registro Profissional: CRN-RJ 24103051.
+        <strong>Aviso Legal:</strong> As informações apresentadas nesta página têm caráter informativo e educacional. O acompanhamento nutricional presencial e individualizado é fundamental para a prescrição de dietas e condutas terapêuticas adequadas a cada paciente. Dra. Valdiani Lima - CRN-RJ 24103051. Atendimento estritamente particular.
       </div>
 
       <div class="footer-bottom">
         <div>
-          &copy; Dra. Valdiani Lima Nutricionista. Todos os direitos reservados.
+          &copy; <script>document.write(new Date().getFullYear())</script> Dra. Valdiani Lima Nutricionista. Todos os direitos reservados.
         </div>
-        <div>
-          Barra da Tijuca - Rio de Janeiro / RJ
+        <div class="topbar-socials">
+          <a href="https://www.instagram.com/oneliv.com.br" target="_blank" rel="noopener" aria-label="Instagram">
+            <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+          </a>
+          <a href="https://www.facebook.com/OneLiv.Saude" target="_blank" rel="noopener" aria-label="Facebook">
+            <svg viewBox="0 0 24 24"><path d="M9 8H6v4h3v12h5V12h3.642L18 8h-4V6.333C14 5.374 14.5 5 15.5 5H18V0h-3.808C10.592 0 9 1.583 9 4.615V8z"/></svg>
+          </a>
         </div>
       </div>
     </div>
   </footer>
 
   <!-- FLOATING WHATSAPP BUTTON -->
-  <a href="https://wa.me/552135144483?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." class="whatsapp-float" target="_blank" rel="noopener" aria-label="Falar no WhatsApp">
-    <svg viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+  <a href="https://wa.me/552135144483?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." target="_blank" rel="noopener" class="whatsapp-float" aria-label="Falar no WhatsApp">
+    <svg viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.301-.15-1.785-.881-2.062-.982-.276-.101-.477-.15-.678.15-.201.3-.779.982-.955 1.183-.175.201-.351.225-.652.075-1.002-.5-2.112-1.082-2.954-1.831-.655-.583-1.096-1.303-1.226-1.528-.13-.225-.014-.347.137-.497.136-.135.301-.351.452-.526.15-.175.201-.3.301-.5.101-.201.05-.376-.025-.526-.075-.15-.678-1.631-.93-2.237-.244-.588-.493-.508-.678-.517-.175-.008-.376-.01-.577-.01-.201 0-.527.075-.803.376-.276.301-1.054 1.03-1.054 2.513 0 1.483 1.079 2.915 1.23 3.116.15.201 2.122 3.24 5.142 4.545 2.155.932 2.973.978 4.027.824.642-.094 1.785-.729 2.036-1.433.251-.704.251-1.305.176-1.433-.075-.128-.276-.201-.577-.352z"/></svg>
   </a>
 
-  <!-- VANILLA JAVASCRIPT FOR FAQ & FORM INTERACTION -->
+  <!-- INTERACTIVE JS FOR FAQ -->
   <script>
     document.addEventListener('DOMContentLoaded', function() {
-      // FAQ Accordion
       const faqQuestions = document.querySelectorAll('.faq-question');
-      faqQuestions.forEach(function(btn) {
-        btn.addEventListener('click', function() {
-          const item = this.parentElement;
-          const isActive = item.classList.contains('active');
+      faqQuestions.forEach(question => {
+        question.addEventListener('click', () => {
+          const faqItem = question.parentElement;
+          const isExpanded = question.getAttribute('aria-expanded') === 'true';
           
-          document.querySelectorAll('.faq-item').forEach(function(el) {
-            el.classList.remove('active');
+          document.querySelectorAll('.faq-item').forEach(item => {
+            item.classList.remove('active');
+            item.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
           });
 
-          if (!isActive) {
-            item.classList.add('active');
+          if (!isExpanded) {
+            faqItem.classList.add('active');
+            question.setAttribute('aria-expanded', 'true');
           }
         });
       });
-
-      // Form Handling
-      const contactForm = document.getElementById('contact-form');
-      if (contactForm) {
-        contactForm.addEventListener('submit', function(e) {
-          e.preventDefault();
-          const nameInput = document.getElementById('name').value;
-          alert('Obrigado, ' + nameInput + '! Sua solicitação foi recebida. Entraremos em contato em breve.');
-          contactForm.reset();
-        });
-      }
     });
   </script>
 <div style="position:fixed;bottom:16px;left:16px;z-index:2147483647;background:rgba(255,255,255,0.96);border-radius:999px;padding:8px 18px 8px 10px;box-shadow:0 6px 20px rgba(0,0,0,0.22);display:flex;align-items:center;gap:7px;font-family:Inter,-apple-system,sans-serif;"><img src="https://rd-previews-dharari01s-projects.vercel.app/_assets/logo-rd-exclusive.png" alt="RD Exclusive" style="height:26px;width:auto;display:block;"><span style="font-size:14px;font-weight:700;color:#1A1A1A;white-space:nowrap;">Protótipo por RD Exclusive</span></div><script>
