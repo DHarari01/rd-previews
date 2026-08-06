@@ -21,7 +21,7 @@
   <meta property="og:type" content="website">
   <meta property="og:title" content="Dra. Viviana Navarro | Nutricionista na Barra da Tijuca - RJ">
   <meta property="og:description" content="Consulta nutricional com a Dra. Viviana Navarro na Barra da Tijuca. Foco em Emagrecimento, Performance & Longevidade através da filosofia Nutrição Sem Neura.">
-  <meta property="og:image" content="https://rd-previews-dharari01s-projects.vercel.app/dra-viviana-navarro-nutricionista/data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 630' width='1200' height='630'%3E%3Crect width='1200' height='630' fill='%23804359'/%3E%3Ctext x='600' y='300' font-family='Montserrat, sans-serif' font-size='48' font-weight='800' fill='%23FFFFFF' text-anchor='middle'%3EDra. Viviana Navarro%3C/text%3E%3Ctext x='600' y='360' font-family='Open Sans, sans-serif' font-size='24' fill='%23E2B2C2' text-anchor='middle'%3ENutricionista • Barra da Tijuca%3C/text%3E%3C/svg%3E">
+  <meta property="og:image" content="https://rd-previews-dharari01s-projects.vercel.app/dra-viviana-navarro-nutricionista/data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1200' height='630' viewBox='0 0 1200 630'%3E%3Crect width='1200' height='630' fill='%23804359'/%3E%3Ctext x='600' y='300' font-family='Montserrat, sans-serif' font-size='48' font-weight='800' fill='%23FFFFFF' text-anchor='middle'%3EDra. Viviana Navarro%3C/text%3E%3Ctext x='600' y='360' font-family='Open Sans, sans-serif' font-size='24' fill='%23E2B2C2' text-anchor='middle'%3ENutricionista • Barra da Tijuca - RJ%3C/text%3E%3C/svg%3E">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
 
@@ -37,8 +37,8 @@
         "@type": "Nutritionist",
         "@id": "https://viviananavarro.com.br/#nutritionist",
         "name": "Dra. Viviana Navarro",
-        "image": "data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 600 600'%3E%3Crect width='600' height='600' fill='%23F9F2F5'/%3E%3Ccircle cx='300' cy='230' r='110' fill='%23804359'/%3E%3Cpath d='M120 520 C120 380 480 380 480 520 Z' fill='%23804359'/%3E%3Ctext x='300' y='560' font-family='Montserrat' font-size='24' font-weight='700' fill='%233D1C27' text-anchor='middle'%3EDra. Viviana Navarro%3C/text%3E%3C/svg%3E",
-        "logo": "data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 280 60'%3E%3Ctext x='0' y='32' font-family='Montserrat, sans-serif' font-size='20' font-weight='800' fill='%23804359'%3EDRA. VIVIANA NAVARRO%3C/text%3E%3Ctext x='0' y='50' font-family='Open Sans, sans-serif' font-size='10' font-weight='600' fill='%232D5A43' letter-spacing='2'%3ENUTRITIONIST %26 LONGEVITY%3C/text%3E%3C/svg%3E",
+        "image": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='600' height='480' viewBox='0 0 600 480'%3E%3Crect width='600' height='480' fill='%23F9F2F5'/%3E%3Ccircle cx='300' cy='200' r='120' fill='%23804359' opacity='0.15'/%3E%3Ccircle cx='300' cy='180' r='60' fill='%23804359'/%3E%3Cpath d='M180 380 C180 280, 420 280, 420 380 Z' fill='%23804359'/%3E%3Ctext x='300' y='420' font-family='Montserrat, sans-serif' font-size='22' font-weight='700' fill='%233D1C27' text-anchor='middle'%3EDra. Viviana Navarro%3C/text%3E%3Ctext x='300' y='445' font-family='Open Sans, sans-serif' font-size='14' font-weight='600' fill='%232D5A43' text-anchor='middle'%3ENutrição Sem Neura • Barra da Tijuca%3C/text%3E%3C/svg%3E",
+        "logo": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='50' viewBox='0 0 200 50'%3E%3Crect width='200' height='50' rx='8' fill='%23804359'/%3E%3Ctext x='100' y='28' font-family='Montserrat, sans-serif' font-size='16' font-weight='800' fill='%23FFFFFF' text-anchor='middle'%3EDra. Viviana Navarro%3C/text%3E%3Ctext x='100' y='40' font-family='Open Sans, sans-serif' font-size='9' font-weight='600' fill='%23E2B2C2' text-anchor='middle'%3ENUTRICIONISTA%3C/text%3E%3C/svg%3E",
         "telephone": "+5521996257052",
         "email": "vivinavarro.nutri@gmail.com",
         "url": "https://viviananavarro.com.br",
@@ -355,39 +355,27 @@
       width: auto;
     }
 
-    /* Functional Mobile Menu Button */
-    .mobile-menu-btn {
+    .nav-toggle {
+      display: none;
+    }
+
+    .nav-burger {
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      width: 30px;
-      height: 22px;
-      background: transparent;
-      border: none;
+      width: 28px;
+      height: 20px;
       cursor: pointer;
-      padding: 0;
       z-index: 1010;
     }
 
-    .mobile-menu-btn .burger-bar {
+    .nav-burger span {
       display: block;
       height: 3px;
       width: 100%;
       background-color: var(--primary-dark);
       border-radius: 2px;
       transition: var(--transition);
-    }
-
-    .mobile-menu-btn.active .burger-bar:nth-child(1) {
-      transform: translateY(9.5px) rotate(45deg);
-    }
-
-    .mobile-menu-btn.active .burger-bar:nth-child(2) {
-      opacity: 0;
-    }
-
-    .mobile-menu-btn.active .burger-bar:nth-child(3) {
-      transform: translateY(-9.5px) rotate(-45deg);
     }
 
     .nav-menu {
@@ -407,7 +395,7 @@
       z-index: 1005;
     }
 
-    .nav-menu.active {
+    .nav-menu.is-active {
       right: 0;
     }
 
@@ -426,8 +414,24 @@
       margin-top: 10px;
     }
 
+    .nav-toggle:checked ~ .nav-menu {
+      right: 0;
+    }
+
+    .nav-toggle:checked ~ .nav-burger span:nth-child(1) {
+      transform: translateY(8px) rotate(45deg);
+    }
+
+    .nav-toggle:checked ~ .nav-burger span:nth-child(2) {
+      opacity: 0;
+    }
+
+    .nav-toggle:checked ~ .nav-burger span:nth-child(3) {
+      transform: translateY(-9px) rotate(-45deg);
+    }
+
     @media (min-width: 992px) {
-      .mobile-menu-btn {
+      .nav-burger {
         display: none;
       }
 
@@ -526,7 +530,6 @@
       overflow: hidden;
       box-shadow: var(--shadow-lg);
       border: 6px solid var(--bg-white);
-      background-color: var(--primary-light);
     }
 
     .hero-img-wrapper img {
@@ -622,17 +625,6 @@
       transform: translateY(-5px);
       box-shadow: var(--shadow-md);
       border-color: rgba(128, 67, 89, 0.25);
-    }
-
-    .rd-reveal {
-      opacity: 0;
-      transform: translateY(30px);
-      transition: opacity 0.8s ease, transform 0.8s ease;
-    }
-
-    .rd-reveal.active {
-      opacity: 1;
-      transform: translateY(0);
     }
 
     /* BENEFICIOS */
@@ -885,157 +877,6 @@
       color: var(--text-muted);
     }
 
-    /* DESTAQUE EDITORIAL */
-    .editorial-cta-box {
-      background: linear-gradient(135deg, var(--primary-light) 0%, #FFFFFF 100%);
-      border: 2px solid var(--primary);
-      border-radius: var(--radius-lg);
-      padding: 48px 32px;
-      text-align: center;
-      max-width: 860px;
-      margin: 0 auto;
-      box-shadow: var(--shadow-md);
-    }
-
-    .editorial-cta-box h2 {
-      font-size: clamp(1.6rem, 3.5vw, 2.1rem);
-      margin-bottom: 16px;
-    }
-
-    .editorial-cta-box p {
-      font-size: 1.05rem;
-      color: var(--text-muted);
-      margin-bottom: 28px;
-      max-width: 680px;
-      margin-left: auto;
-      margin-right: auto;
-    }
-
-    /* PRÉVIA DE RECURSO INTERATIVO */
-    .previa-recurso-box {
-      background-color: var(--bg-white);
-      border-radius: var(--radius-lg);
-      border: 1px solid var(--border-color);
-      padding: 32px;
-      box-shadow: var(--shadow-sm);
-      max-width: 800px;
-      margin: 0 auto;
-    }
-
-    .previa-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-bottom: 20px;
-      padding-bottom: 12px;
-      border-bottom: 1px solid var(--border-color);
-    }
-
-    .previa-badge {
-      font-size: 0.75rem;
-      text-transform: uppercase;
-      font-weight: 700;
-      letter-spacing: 1px;
-      background-color: var(--primary-light);
-      color: var(--primary);
-      padding: 4px 10px;
-      border-radius: 4px;
-    }
-
-    .previa-mock-form {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 16px;
-    }
-
-    @media (min-width: 576px) {
-      .previa-mock-form {
-        grid-template-columns: repeat(2, 1fr);
-      }
-    }
-
-    .mock-field {
-      background-color: var(--bg-neutral);
-      padding: 12px 16px;
-      border-radius: var(--radius-sm);
-      border: 1px solid var(--border-color);
-    }
-
-    .mock-field label {
-      display: block;
-      font-size: 0.75rem;
-      font-weight: 700;
-      color: var(--text-light);
-      text-transform: uppercase;
-      margin-bottom: 4px;
-    }
-
-    .mock-field span {
-      font-size: 0.9rem;
-      font-weight: 600;
-      color: var(--primary-dark);
-    }
-
-    .mock-result {
-      grid-column: 1 / -1;
-      background-color: var(--accent-green-light);
-      border: 1px solid rgba(45, 90, 67, 0.2);
-      padding: 16px;
-      border-radius: var(--radius-sm);
-      margin-top: 10px;
-    }
-
-    .mock-result strong {
-      color: var(--accent-green);
-      display: block;
-      font-size: 0.9rem;
-      margin-bottom: 4px;
-    }
-
-    .mock-result p {
-      font-size: 0.85rem;
-      color: var(--text-main);
-    }
-
-    /* GALERIA EDITORIAL */
-    .galeria-grid {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 24px;
-    }
-
-    @media (min-width: 768px) {
-      .galeria-grid {
-        grid-template-columns: repeat(3, 1fr);
-      }
-    }
-
-    .galeria-card {
-      background-color: var(--bg-white);
-      border-radius: var(--radius-md);
-      padding: 28px;
-      border: 1px solid var(--border-color);
-      box-shadow: var(--shadow-sm);
-      text-align: center;
-    }
-
-    .galeria-icon {
-      width: 48px;
-      height: 48px;
-      margin: 0 auto 16px auto;
-      color: var(--primary);
-    }
-
-    .galeria-card h3 {
-      font-size: 1.1rem;
-      margin-bottom: 8px;
-    }
-
-    .galeria-card p {
-      font-size: 0.875rem;
-      color: var(--text-muted);
-    }
-
     /* COMO FUNCIONA */
     .como-funciona-grid {
       display: grid;
@@ -1236,26 +1077,6 @@
       min-height: 90px;
     }
 
-    .form-checkbox {
-      display: flex;
-      align-items: flex-start;
-      gap: 10px;
-      font-size: 0.8rem;
-      color: var(--text-muted);
-      margin-bottom: 20px;
-    }
-
-    .form-checkbox input {
-      margin-top: 3px;
-    }
-
-    .form-note {
-      font-size: 0.75rem;
-      color: var(--text-light);
-      text-align: center;
-      margin-top: 12px;
-    }
-
     /* RODAPE */
     .footer {
       background-color: #180B10;
@@ -1433,17 +1254,18 @@
   <header class="header">
     <div class="container header-container">
       <a href="#" class="logo-link" aria-label="Home Dra. Viviana Navarro">
-        <img src="data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 280 60' width='280' height='60'%3E%3Ctext x='0' y='32' font-family='Montserrat, sans-serif' font-size='20' font-weight='800' fill='%23804359'%3EDRA. VIVIANA NAVARRO%3C/text%3E%3Ctext x='0' y='50' font-family='Open Sans, sans-serif' font-size='10' font-weight='600' fill='%232D5A43' letter-spacing='2'%3ENUTRITIONIST %26 LONGEVITY%3C/text%3E%3C/svg%3E" alt="Dra. Viviana Navarro Nutricionista" width="160" height="38">
+        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='50' viewBox='0 0 200 50'%3E%3Crect width='200' height='50' rx='8' fill='%23804359'/%3E%3Ctext x='100' y='28' font-family='Montserrat, sans-serif' font-size='16' font-weight='800' fill='%23FFFFFF' text-anchor='middle'%3EDra. Viviana Navarro%3C/text%3E%3Ctext x='100' y='40' font-family='Open Sans, sans-serif' font-size='9' font-weight='600' fill='%23E2B2C2' text-anchor='middle'%3ENUTRICIONISTA%3C/text%3E%3C/svg%3E" alt="Dra. Viviana Navarro Nutricionista" width="160" height="38">
       </a>
 
-      <!-- Functional Mobile Menu Button -->
-      <button type="button" class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Abrir menu de navegação" aria-expanded="false" aria-controls="navMenu">
-        <span class="burger-bar"></span>
-        <span class="burger-bar"></span>
-        <span class="burger-bar"></span>
-      </button>
+      <!-- Menu Mobile -->
+      <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-label="Abrir Menu">
+      <label for="nav-toggle" class="nav-burger" aria-label="Alternar Menu" id="nav-burger-btn">
+        <span></span>
+        <span></span>
+        <span></span>
+      </label>
 
-      <nav class="nav-menu" id="navMenu">
+      <nav class="nav-menu" id="nav-menu">
         <a href="#beneficios" class="nav-link">Benefícios</a>
         <a href="#servicos" class="nav-link">Consulta</a>
         <a href="#sobre" class="nav-link">Sobre</a>
@@ -1485,7 +1307,7 @@
 
       <div class="rd-hero-media container">
         <div class="hero-img-wrapper">
-          <img src="data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 600 600' width='600' height='600'%3E%3Crect width='600' height='600' fill='%23F9F2F5'/%3E%3Ccircle cx='300' cy='230' r='110' fill='%23804359'/%3E%3Cpath d='M120 520 C120 380 480 380 480 520 Z' fill='%23804359'/%3E%3Ctext x='300' y='560' font-family='Montserrat, sans-serif' font-size='24' font-weight='700' fill='%233D1C27' text-anchor='middle'%3EDra. Viviana Navarro%3C/text%3E%3C/svg%3E" alt="Dra. Viviana Navarro Nutricionista emagrecimento performance e longevidade" fetchpriority="high" width="600" height="480">
+          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='600' height='480' viewBox='0 0 600 480'%3E%3Crect width='600' height='480' fill='%23F9F2F5'/%3E%3Ccircle cx='300' cy='200' r='120' fill='%23804359' opacity='0.15'/%3E%3Ccircle cx='300' cy='180' r='60' fill='%23804359'/%3E%3Cpath d='M180 380 C180 280, 420 280, 420 380 Z' fill='%23804359'/%3E%3Ctext x='300' y='420' font-family='Montserrat, sans-serif' font-size='22' font-weight='700' fill='%233D1C27' text-anchor='middle'%3EDra. Viviana Navarro%3C/text%3E%3Ctext x='300' y='445' font-family='Open Sans, sans-serif' font-size='14' font-weight='600' fill='%232D5A43' text-anchor='middle'%3ENutrição Sem Neura • Barra da Tijuca%3C/text%3E%3C/svg%3E" alt="Dra. Viviana Navarro Nutricionista emagrecimento performance e longevidade" width="600" height="480">
         </div>
         <div class="hero-badge-float">
           <strong>Nutrição Sem Neura</strong>
@@ -1520,7 +1342,7 @@
   </section>
 
   <!-- BENEFÍCIOS -->
-  <section id="beneficios" class="section-padding rd-reveal">
+  <section id="beneficios" class="section-padding">
     <div class="container">
       <div class="section-header">
         <span class="eyebrow">Seus Resultados</span>
@@ -1557,7 +1379,7 @@
   </section>
 
   <!-- SERVIÇOS -->
-  <section id="servicos" class="section-padding rd-reveal" style="background-color: var(--bg-white);">
+  <section id="servicos" class="section-padding" style="background-color: var(--bg-white);">
     <div class="container">
       <div class="section-header">
         <span class="eyebrow">Atendimento Especializado</span>
@@ -1600,7 +1422,7 @@
   </section>
 
   <!-- SOBRE A MARCA -->
-  <section id="sobre" class="section-padding rd-reveal">
+  <section id="sobre" class="section-padding">
     <div class="container">
       <div class="sobre-wrapper">
         <div class="sobre-content">
@@ -1623,7 +1445,7 @@
   </section>
 
   <!-- EQUIPE / CORPO CLÍNICO -->
-  <section class="section-padding rd-reveal" style="background-color: var(--bg-white);">
+  <section class="section-padding" style="background-color: var(--bg-white);">
     <div class="container">
       <div class="section-header">
         <span class="eyebrow">Sua Nutricionista</span>
@@ -1639,154 +1461,79 @@
           </div>
         </div>
         <p class="equipe-bio">
-          Minha abordagem é pautada na filosofia 'Nutrição Sem Neura', combinando rigor científico e escuta atenta para criar planos alimentares perfeitamente adaptados ao seu cotidiano, garantindo adesão e resultados consistentes.
+          Minha abordagem é pautada na filosofia 'Nutrição Sem Neura', unindo ciência, empatia e praticidade para ajudar você a conquistar seus objetivos de saúde, estética e bem-estar de forma duradoura e sem restrições desnecessárias.
         </p>
       </div>
     </div>
   </section>
 
   <!-- DIFERENCIAIS -->
-  <section id="diferenciais" class="section-padding rd-reveal">
+  <section id="diferenciais" class="section-padding">
     <div class="container">
       <div class="section-header">
-        <span class="eyebrow">Por que agendar</span>
-        <h2>Diferenciais do Acompanhamento</h2>
-        <p>Um método humanizado e técnico desenhado para o seu estilo de vida.</p>
+        <span class="eyebrow">Diferenciais</span>
+        <h2>Por que escolher o atendimento da Dra. Viviana Navarro?</h2>
+        <p>Um cuidado integral focado nas suas necessidades reais e rotina.</p>
       </div>
 
       <div class="diferenciais-grid">
         <div class="rd-card-fx diferencial-card">
           <h3>Planejamento Totalmente Individualizado</h3>
-          <p>Sua rotina, preferências e necessidades metabólicas são o ponto de partida de todas as condutas nutricionais.</p>
+          <p>Nada de dietas prontas. Cada plano é calculado conforme sua rotina, preferências alimentares e metas específicas.</p>
         </div>
-
         <div class="rd-card-fx diferencial-card">
-          <h3>Sem Terrorismo Alimentar</h3>
-          <p>Estratégias que incluem seus alimentos favoritos com equilíbrio, focando em reeducação e consistência.</p>
+          <h3>Foco Comportamental e Educacional</h3>
+          <p>Você compreende o porquê de cada orientação e ganha autonomia para tomar decisões saudáveis em qualquer ambiente.</p>
         </div>
-
         <div class="rd-card-fx diferencial-card">
-          <h3>Localização Privilegiada e Online</h3>
-          <p>Consultório moderno na Torre North, Barra da Tijuca, além de atendimento online com o mesmo padrão de excelência.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- DESTAQUE EDITORIAL & PRÉVIA DE RECURSO -->
-  <section class="section-padding rd-reveal" style="background-color: var(--bg-white);">
-    <div class="container">
-      <div class="editorial-cta-box mb-5">
-        <span class="eyebrow">Filosofia Nutrição Sem Neura</span>
-        <h2>Pronto para alcançar sua melhor versão sem neuras?</h2>
-        <p>Agende sua consulta e descubra como uma nutrição consciente e personalizada pode transformar sua saúde e sua estética.</p>
-        <a href="https://wa.me/5521996257052?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." class="btn btn-primary">
-          Falar no WhatsApp
-        </a>
-      </div>
-
-      <div class="previa-recurso-box" style="margin-top: 40px;">
-        <div class="previa-header">
-          <strong>Metodologia de Atendimento</strong>
-          <span class="previa-badge">Personalizado</span>
-        </div>
-        <div class="previa-mock-form">
-          <div class="mock-field">
-            <label>Avaliação Inicial</label>
-            <span>Hábitos & Anamnese Completa</span>
-          </div>
-          <div class="mock-field">
-            <label>Foco Principal</label>
-            <span>Emagrecimento, Performance ou Longevidade</span>
-          </div>
-          <div class="mock-result">
-            <strong>Plano de Ação Nutricional</strong>
-            <p>Estratégia prática ajustada aos seus horários, preferências e rotina física para máxima adesão.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- GALERIA EDITORIAL -->
-  <section class="section-padding rd-reveal">
-    <div class="container">
-      <div class="section-header">
-        <span class="eyebrow">Pilares de Cuidado</span>
-        <h2>Áreas de Atuação</h2>
-      </div>
-
-      <div class="galeria-grid">
-        <div class="galeria-card">
-          <div class="galeria-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.24 12.24a6 6 0 0 0-8.49-8.49L5 10.5V19h8.5z"></path><line x1="16" y1="8" x2="2" y2="22"></line><line x1="17.5" y1="15" x2="9" y2="15"></line></svg>
-          </div>
-          <h3>Emagrecimento Definitivo</h3>
-          <p>Redução de gordura corporal focada no ganho de saúde e manutenção da massa muscular.</p>
-        </div>
-
-        <div class="galeria-card">
-          <div class="galeria-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>
-          </div>
-          <h3>Performance Esportiva</h3>
-          <p>Nutrição alinhada ao seu treino para otimizar energia, força e recuperação muscular.</p>
-        </div>
-
-        <div class="galeria-card">
-          <div class="galeria-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
-          </div>
-          <h3>Saúde & Longevidade</h3>
-          <p>Modulação de exames laboratoriais, prevenção de doenças e mais vitalidade no cotidiano.</p>
+          <h3>Atendimento de Excelência na Barra</h3>
+          <p>Consultório estruturado na Torre North do OneLiv / Livance, oferecendo máximo conforto e pontualidade.</p>
         </div>
       </div>
     </div>
   </section>
 
   <!-- COMO FUNCIONA -->
-  <section id="como-funciona" class="section-padding rd-reveal" style="background-color: var(--bg-white);">
+  <section id="como-funciona" class="section-padding" style="background-color: var(--bg-white);">
     <div class="container">
       <div class="section-header">
         <span class="eyebrow">Passo a Passo</span>
-        <h2>Como Funciona a Consulta</h2>
-        <p>Um caminho claro e transparente do primeiro contato aos seus resultados.</p>
+        <h2>Como funciona a jornada da consulta</h2>
+        <p>Um processo simples, claro e focado em seus resultados.</p>
       </div>
 
       <div class="como-funciona-grid">
-        <div class="step-card rd-card-fx">
+        <div class="rd-card-fx step-card">
           <div class="step-number">01</div>
           <h3>Agendamento</h3>
-          <p>Escolha a modalidade presencial (Barra da Tijuca) ou online e confirme seu horário via WhatsApp.</p>
+          <p>Escolha a modalidade (presencial na Barra da Tijuca ou online) e selecione o melhor horário via WhatsApp ou formulário.</p>
         </div>
-
-        <div class="step-card rd-card-fx">
+        <div class="rd-card-fx step-card">
           <div class="step-number">02</div>
-          <h3>Anamnese & Avaliação</h3>
-          <p>Mapeamento detalhado dos seus hábitos, rotina, histórico de saúde e preferências alimentares.</p>
+          <h3>Avaliação Clínica</h3>
+          <p>Análise detalhada do seu histórico de saúde, exames laboratoriais, rotina diária e hábitos alimentares atuais.</p>
         </div>
-
-        <div class="step-card rd-card-fx">
+        <div class="rd-card-fx step-card">
           <div class="step-number">03</div>
-          <h3>Plano Personalizado</h3>
-          <p>Elaboração da estratégia nutricional individualizada e fácil de aplicar no seu dia a dia.</p>
+          <h3>Plano Alimentar</h3>
+          <p>Elaboração de condutas práticas e plano personalizado alinhado às suas preferências e rotina diária.</p>
         </div>
-
-        <div class="step-card rd-card-fx">
+        <div class="rd-card-fx step-card">
           <div class="step-number">04</div>
           <h3>Acompanhamento</h3>
-          <p>Suporte e ajustes contínuos para garantir que você alcance e mantenha seus objetivos com leveza.</p>
+          <p>Suporte contínuo para ajustes progressivos, evolução dos resultados e consolidação dos novos hábitos.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- FAQ ACCORDION -->
-  <section id="faq" class="section-padding rd-reveal">
+  <!-- FAQ -->
+  <section id="faq" class="section-padding">
     <div class="container">
       <div class="section-header">
-        <span class="eyebrow">Tire Suas Dúvidas</span>
-        <h2>Perguntas Frequentes</h2>
+        <span class="eyebrow">Dúvidas Frequentes</span>
+        <h2>Perguntas Comuns sobre a Consulta</h2>
+        <p>Esclareça suas principais dúvidas antes de iniciar seu acompanhamento.</p>
       </div>
 
       <div class="faq-container">
@@ -1853,28 +1600,36 @@
     </div>
   </section>
 
-  <!-- CTA FINAL & FORM -->
-  <section class="section-padding cta-final-section rd-reveal">
+  <!-- CTA FINAL & FORMULÁRIO DE CONTATO -->
+  <section id="contato" class="section-padding cta-final-section">
     <div class="container">
       <div class="cta-final-wrapper">
         <div class="cta-final-content">
-          <span class="eyebrow" style="background-color: rgba(255,255,255,0.15); color: #FFFFFF; border-color: rgba(255,255,255,0.2);">Comece Hoje</span>
-          <h2>Dê o primeiro passo para uma vida mais saudável e sem neuras</h2>
-          <p>Preencha os campos ao lado para enviar uma mensagem ou entre em contato diretamente pelo WhatsApp para agendar sua consulta na Barra da Tijuca ou Online.</p>
+          <span class="eyebrow" style="background-color: rgba(255,255,255,0.1); color: #FFFFFF; border-color: rgba(255,255,255,0.2);">Agendamento de Consulta</span>
+          <h2>Dê o primeiro passo para uma alimentação leve e eficiente</h2>
+          <p>Preencha os campos ao lado para receber todas as informações sobre a consulta presencial ou online com a Dra. Viviana Navarro.</p>
           
-          <div style="margin-top: 24px;">
-            <a href="https://wa.me/5521996257052?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." class="btn btn-primary">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
-              Agendar pelo WhatsApp
-            </a>
+          <div style="display: flex; flex-direction: column; gap: 16px; margin-top: 24px;">
+            <div class="footer-contact-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+              <span>Av. João Cabral de Mello Neto, 850, 10º Andar, Torre North, Bloco 1 - Barra da Tijuca, RJ</span>
+            </div>
+            <div class="footer-contact-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+              <span>(21) 99625-7052</span>
+            </div>
+            <div class="footer-contact-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+              <span>vivinavarro.nutri@gmail.com</span>
+            </div>
           </div>
         </div>
 
         <div class="contact-form-card">
-          <h3>Envie uma Mensagem</h3>
-          <p class="form-sub">Entraremos em contato com você o mais rápido possível.</p>
-          
-          <form id="contactForm" action="#" method="POST" onsubmit="event.preventDefault(); alert('Obrigado pelo contato! Entraremos em contato em breve.');">
+          <h3>Solicite seu Atendimento</h3>
+          <p class="form-sub">Envie suas informações e entraremos em contato rapidamente.</p>
+
+          <form action="#" method="post">
             <div class="form-group">
               <label for="name">Nome Completo</label>
               <input type="text" id="name" name="name" class="form-control" placeholder="Digite seu nome completo" required>
@@ -1882,7 +1637,7 @@
 
             <div class="form-group">
               <label for="email">E-mail</label>
-              <input type="email" id="email" name="email" class="form-control" placeholder="vivinavarro.nutri@gmail.com" required>
+              <input type="email" id="email" name="email" class="form-control" placeholder="Digite seu e-mail" required>
             </div>
 
             <div class="form-group">
@@ -1891,39 +1646,35 @@
             </div>
 
             <div class="form-group">
-              <label for="modality">Modalidade Desejada</label>
-              <select id="modality" name="modality" class="form-control">
-                <option value="presencial">Presencial - Barra da Tijuca (RJ)</option>
-                <option value="online">Consulta Online</option>
+              <label for="modalidade">Modalidade Preferida</label>
+              <select id="modalidade" name="modalidade" class="form-control">
+                <option value="Presencial na Barra da Tijuca">Presencial na Barra da Tijuca</option>
+                <option value="Consulta Online">Consulta Online</option>
               </select>
             </div>
 
             <div class="form-group">
-              <label for="message">Mensagem ou Dúvida</label>
-              <textarea id="message" name="message" class="form-control" placeholder="Como posso ajudar você?"></textarea>
+              <label for="message">Mensagem ou Objetivo</label>
+              <textarea id="message" name="message" class="form-control" placeholder="Conte brevemente seu objetivo (Emagrecimento, Performance, Longevidade...)"></textarea>
             </div>
 
-            <div class="form-checkbox">
-              <input type="checkbox" id="terms" name="terms" required checked>
-              <label for="terms">Concordo em receber informações sobre o agendamento de consultas.</label>
-            </div>
-
-            <button type="submit" class="btn btn-primary btn-block">Enviar Solicitação</button>
-            <p class="form-note">Seus dados estão protegidos e não serão compartilhados.</p>
+            <button type="submit" class="btn btn-primary btn-block">
+              Enviar Solicitação
+            </button>
           </form>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- RODAPÉ -->
+  <!-- RODAPÉ COMPLETO -->
   <footer class="footer">
     <div class="container">
       <div class="footer-grid">
         <div class="footer-col">
-          <img src="data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 280 60' width='280' height='60'%3E%3Ctext x='0' y='32' font-family='Montserrat, sans-serif' font-size='20' font-weight='800' fill='%23FFFFFF'%3EDRA. VIVIANA NAVARRO%3C/text%3E%3Ctext x='0' y='50' font-family='Open Sans, sans-serif' font-size='10' font-weight='600' fill='%23E2B2C2' letter-spacing='2'%3ENUTRITIONIST %26 LONGEVITY%3C/text%3E%3C/svg%3E" alt="Dra. Viviana Navarro" class="footer-logo">
+          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='50' viewBox='0 0 200 50'%3E%3Crect width='200' height='50' rx='8' fill='%23804359'/%3E%3Ctext x='100' y='28' font-family='Montserrat, sans-serif' font-size='16' font-weight='800' fill='%23FFFFFF' text-anchor='middle'%3EDra. Viviana Navarro%3C/text%3E%3Ctext x='100' y='40' font-family='Open Sans, sans-serif' font-size='9' font-weight='600' fill='%23E2B2C2' text-anchor='middle'%3ENUTRICIONISTA%3C/text%3E%3C/svg%3E" alt="Dra. Viviana Navarro" class="footer-logo">
           <p class="footer-bio">
-            Nutricionista com foco em Emagrecimento, Performance & Longevidade através da filosofia Nutrição Sem Neura. Atendimentos na Barra da Tijuca e online.
+            Atendimento nutricional especializado na Barra da Tijuca e consulta online. Foco em emagrecimento, alta performance e longevidade através da filosofia Nutrição Sem Neura.
           </p>
         </div>
 
@@ -1931,19 +1682,28 @@
           <h4>Navegação</h4>
           <div class="footer-links">
             <a href="#beneficios">Benefícios</a>
-            <a href="#servicos">Consulta</a>
-            <a href="#sobre">Sobre</a>
+            <a href="#servicos">Consulta Nutricional</a>
+            <a href="#sobre">Sobre a Dra. Viviana</a>
             <a href="#diferenciais">Diferenciais</a>
             <a href="#como-funciona">Como Funciona</a>
-            <a href="#faq">Perguntas Frequentes</a>
+            <a href="#faq">Dúvidas Frequentes</a>
           </div>
         </div>
 
         <div class="footer-col">
           <h4>Atendimento</h4>
+          <div class="footer-links">
+            <a href="#contato">Presencial na Barra da Tijuca</a>
+            <a href="#contato">Consulta Online</a>
+            <a href="https://wa.me/5521996257052">Agendamento via WhatsApp</a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Contato & Localização</h4>
           <div class="footer-contact-item">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
-            <span>Av. João Cabral de Mello Neto, 850, 10º Andar (Torre North, Bloco 1), Barra da Tijuca, Rio de Janeiro - RJ</span>
+            <span>Av. João Cabral de Mello Neto, 850, 10º Andar, Torre North, Bloco 1 - Barra da Tijuca, RJ</span>
           </div>
           <div class="footer-contact-item">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
@@ -1954,90 +1714,59 @@
             <span>vivinavarro.nutri@gmail.com</span>
           </div>
         </div>
-
-        <div class="footer-col">
-          <h4>Unidade</h4>
-          <p class="footer-bio">
-            OneLiv / Livance Consultórios<br>
-            Barra da Tijuca - Rio de Janeiro/RJ<br>
-            Atendimento presencial e consulta online.
-          </p>
-        </div>
       </div>
 
       <div class="footer-bottom">
-        <span>&copy; Dra. Viviana Navarro - Nutricionista. Todos os direitos reservados.</span>
-        <span>Nutrição Sem Neura • Emagrecimento, Performance & Longevidade</span>
+        <p>&copy; Dra. Viviana Navarro - Nutricionista. Todos os direitos reservados.</p>
+        <p>Barra da Tijuca • Rio de Janeiro - RJ</p>
       </div>
     </div>
   </footer>
 
   <!-- BOTÃO FLUTUANTE WHATSAPP -->
-  <a href="https://wa.me/5521996257052?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Falar via WhatsApp">
-    <svg viewBox="0 0 24 24"><path d="M12.012 2c-5.506 0-9.989 4.478-9.99 9.984 0 1.762.459 3.48 1.332 5.001l-1.416 5.17 5.291-1.387c1.467.8 3.118 1.22 4.778 1.221h.004c5.505 0 9.988-4.478 9.989-9.985 0-2.667-1.037-5.176-2.922-7.062a9.923 9.923 0 0 0-7.066-2.942zm5.711 14.128c-.238.667-1.397 1.274-1.928 1.333-.503.057-1.157.085-3.324-.805-2.771-1.139-4.542-3.957-4.68-4.142-.138-.184-1.119-1.488-1.119-2.838 0-1.35.705-2.013.955-2.287.25-.274.546-.343.729-.343.183 0 .365.002.525.01.171.008.402-.065.628.477.238.57.808 1.97.878 2.113.07.143.117.31.023.497-.094.187-.142.302-.282.467-.14.165-.295.368-.422.494-.141.14-.287.292-.123.573.164.28.729 1.203 1.564 1.947 1.074.957 1.98 1.253 2.261 1.392.281.14.444.117.608-.07.164-.187.703-.819.89-1.099.187-.28.375-.234.628-.14.254.094 1.613.76 1.892.898.281.14.468.21.538.328.07.118.07.684-.168 1.351z"/></svg>
+  <a href="https://wa.me/5521996257052?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20agendar%20uma%20consulta." class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Falar pelo WhatsApp">
+    <svg viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
   </a>
 
   <!-- MOBILE STICKY BOTTOM BAR -->
   <div class="mobile-sticky-bar">
     <a href="https://wa.me/5521996257052?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." class="btn btn-primary btn-block" style="padding: 12px 16px; font-size: 0.9rem;">
-      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
       Agendar Consulta via WhatsApp
     </a>
   </div>
 
-  <!-- JAVASCRIPT FOR INTERACTIVITY -->
+  <!-- SCRIPT PARA MENU MOBILE E FAQ ACCORDION -->
   <script>
     document.addEventListener('DOMContentLoaded', function() {
-      // Mobile Menu Toggle
-      const mobileMenuBtn = document.getElementById('mobileMenuBtn');
-      const navMenu = document.getElementById('navMenu');
+      // Menu Mobile Toggle JS
+      const navToggle = document.getElementById('nav-toggle');
+      const navMenu = document.getElementById('nav-menu');
+      const navLinks = document.querySelectorAll('.nav-link');
 
-      if (mobileMenuBtn && navMenu) {
-        mobileMenuBtn.addEventListener('click', function() {
-          const isExpanded = mobileMenuBtn.getAttribute('aria-expanded') === 'true';
-          mobileMenuBtn.setAttribute('aria-expanded', !isExpanded);
-          mobileMenuBtn.classList.toggle('active');
-          navMenu.classList.toggle('active');
-        });
-
-        // Close menu on link click
-        navMenu.querySelectorAll('a').forEach(function(link) {
+      if (navToggle && navMenu) {
+        navLinks.forEach(function(link) {
           link.addEventListener('click', function() {
-            mobileMenuBtn.setAttribute('aria-expanded', 'false');
-            mobileMenuBtn.classList.remove('active');
-            navMenu.classList.remove('active');
+            navToggle.checked = false;
           });
         });
       }
 
-      // FAQ Accordion Toggle
+      // FAQ Accordion
       const faqQuestions = document.querySelectorAll('.faq-question');
-      faqQuestions.forEach(function(btn) {
-        btn.addEventListener('click', function() {
-          const item = btn.parentElement;
+      faqQuestions.forEach(function(question) {
+        question.addEventListener('click', function() {
+          const item = this.parentElement;
           const isActive = item.classList.contains('active');
-          document.querySelectorAll('.faq-item').forEach(function(el) {
-            el.classList.remove('active');
+          
+          document.querySelectorAll('.faq-item').forEach(function(faq) {
+            faq.classList.remove('active');
           });
+
           if (!isActive) {
             item.classList.add('active');
           }
         });
       });
-
-      // Scroll Reveal Animation
-      const reveals = document.querySelectorAll('.rd-reveal');
-      function checkReveal() {
-        const windowHeight = window.innerHeight;
-        reveals.forEach(function(el) {
-          const top = el.getBoundingClientRect().top;
-          if (top < windowHeight - 50) {
-            el.classList.add('active');
-          }
-        });
-      }
-      window.addEventListener('scroll', checkReveal);
-      checkReveal();
     });
   </script>
 <div style="position:fixed;bottom:16px;left:16px;z-index:2147483647;background:rgba(255,255,255,0.96);border-radius:999px;padding:8px 18px 8px 10px;box-shadow:0 6px 20px rgba(0,0,0,0.22);display:flex;align-items:center;gap:7px;font-family:Inter,-apple-system,sans-serif;"><img src="https://rd-previews-dharari01s-projects.vercel.app/_assets/logo-rd-exclusive.png" alt="RD Exclusive" style="height:26px;width:auto;display:block;"><span style="font-size:14px;font-weight:700;color:#1A1A1A;white-space:nowrap;">Protótipo por RD Exclusive</span></div><script>
