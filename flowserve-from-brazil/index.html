@@ -1,0 +1,1730 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flowserve Brasil | Soluções de Controle de Fluxo e Engenharia Industrial</title>
+  <meta name="description" content="Líder global em bombas, válvulas, selos mecânicos e automação industrial. Reduza custos e evite paradas operacionais com a Flowserve e a tecnologia RedRaven.">
+  
+  <!-- Open Graph -->
+  <meta property="og:title" content="Flowserve Brasil | Soluções de Controle de Fluxo e Engenharia Industrial">
+  <meta property="og:description" content="Líder global em bombas, válvulas, selos mecânicos e automação industrial. Reduza custos e evite paradas operacionais com a Flowserve e a tecnologia RedRaven.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500' width='800' height='500'%3E%3Crect width='800' height='500' fill='%23111111'/%3E%3Ccircle cx='400' cy='250' r='180' stroke='%23333333' stroke-width='8' fill='none'/%3E%3Ccircle cx='400' cy='250' r='120' stroke='%23555555' stroke-width='6' fill='none'/%3E%3Cpath d='M400 70 L400 430 M220 250 L580 250 M272 122 L527 377 M272 377 L527 122' stroke='%23444444' stroke-width='6'/%3E%3Ccircle cx='400' cy='250' r='50' fill='%23000000' stroke='%23ffffff' stroke-width='4'/%3E%3Ctext x='400' y='460' font-family='sans-serif' font-size='20' font-weight='bold' fill='%23ffffff' text-anchor='middle'%3EFLOWSERVE INDUSTRIAL PUMP SYSTEM%3C/text%3E%3C/svg%3E">
+
+  <!-- Preconnects -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Favicon SVG URI -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23000000'/%3E%3Cpath d='M6 8h20v4H6zm0 7h14v4H6zm0 7h18v4H6z' fill='%23ffffff'/%3E%3C/svg%3E">
+
+  <style>
+    /* RESET & BASE STYLES */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      font-size: 16px;
+      background-color: #ffffff;
+      color: #111111;
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    }
+
+    body {
+      line-height: 1.6;
+      overflow-x: hidden;
+      background-color: #ffffff;
+      color: #333333;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+      transition: all 0.25s ease;
+    }
+
+    ul {
+      list-style: none;
+    }
+
+    /* TYPOGRAPHY */
+    h1, h2, h3, h4, h5, h6 {
+      color: #000000;
+      font-weight: 700;
+      line-height: 1.25;
+      letter-spacing: -0.02em;
+    }
+
+    h1 { font-size: clamp(2.2rem, 4.5vw, 3.6rem); }
+    h2 { font-size: clamp(1.75rem, 3.2vw, 2.5rem); }
+    h3 { font-size: clamp(1.2rem, 2vw, 1.5rem); }
+    p { color: #555555; font-size: 1rem; }
+
+    /* LAYOUT CONTAINERS */
+    .rd-container {
+      width: 100%;
+      max-width: 1240px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+
+    .rd-section {
+      padding: 4.5rem 0;
+      border-bottom: 1px solid #f0f0f0;
+    }
+
+    /* TOPBAR */
+    .rd-topbar {
+      background-color: #000000;
+      color: #ffffff;
+      font-size: 0.825rem;
+      padding: 0.5rem 0;
+      border-bottom: 1px solid #222222;
+    }
+
+    .rd-topbar-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+
+    .rd-topbar-info {
+      display: flex;
+      align-items: center;
+      gap: 1.25rem;
+      flex-wrap: wrap;
+    }
+
+    .rd-topbar-info span {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+
+    .rd-topbar-socials {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .rd-topbar-socials a {
+      color: #cccccc;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 24px;
+      height: 24px;
+    }
+
+    .rd-topbar-socials a:hover {
+      color: #ffffff;
+    }
+
+    /* HEADER & NAVIGATION */
+    .rd-header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background-color: rgba(255, 255, 255, 0.96);
+      backdrop-filter: blur(8px);
+      box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
+      border-bottom: 1px solid #eaeaea;
+    }
+
+    .rd-header-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 72px;
+    }
+
+    .rd-logo img {
+      height: 38px;
+      width: auto;
+      object-fit: contain;
+    }
+
+    /* CSS MOBILE MENU CHECKBOX HACK */
+    #mobile-menu-toggle {
+      display: none;
+    }
+
+    .rd-menu-btn {
+      display: none;
+      flex-direction: column;
+      justify-content: space-between;
+      width: 28px;
+      height: 20px;
+      cursor: pointer;
+      z-index: 1001;
+    }
+
+    .rd-menu-btn span {
+      display: block;
+      height: 3px;
+      width: 100%;
+      background-color: #000000;
+      border-radius: 2px;
+      transition: all 0.3s ease;
+    }
+
+    .rd-nav {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+    }
+
+    .rd-nav-list {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+    }
+
+    .rd-nav-link {
+      font-weight: 500;
+      font-size: 0.925rem;
+      color: #222222;
+      position: relative;
+    }
+
+    .rd-nav-link:hover {
+      color: #000000;
+    }
+
+    .rd-nav-link::after {
+      content: '';
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background-color: #000000;
+      transition: width 0.25s ease;
+    }
+
+    .rd-nav-link:hover::after {
+      width: 100%;
+    }
+
+    /* BUTTONS */
+    .rd-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.85rem 1.6rem;
+      font-size: 0.925rem;
+      font-weight: 600;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: all 0.25s ease;
+      text-align: center;
+      border: 2px solid transparent;
+      gap: 0.5rem;
+    }
+
+    .rd-btn-primary {
+      background-color: #000000;
+      color: #ffffff;
+      border-color: #000000;
+    }
+
+    .rd-btn-primary:hover {
+      background-color: #222222;
+      border-color: #222222;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    }
+
+    .rd-btn-secondary {
+      background-color: transparent;
+      color: #000000;
+      border-color: #000000;
+    }
+
+    .rd-btn-secondary:hover {
+      background-color: #000000;
+      color: #ffffff;
+    }
+
+    /* HERO SPLIT */
+    .rd-hero {
+      padding: 4rem 0;
+      background-color: #fafafa;
+      position: relative;
+    }
+
+    .rd-hero-split {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 3rem;
+      align-items: center;
+    }
+
+    .rd-eyebrow {
+      display: inline-block;
+      font-size: 0.8rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: #000000;
+      background-color: #f0f0f0;
+      padding: 0.35rem 0.8rem;
+      border-left: 3px solid #000000;
+      margin-bottom: 1.25rem;
+    }
+
+    .rd-hero-text h1 {
+      margin-bottom: 1.25rem;
+    }
+
+    .rd-hero-text p {
+      font-size: 1.1rem;
+      margin-bottom: 2rem;
+      color: #555555;
+    }
+
+    .rd-hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-bottom: 2rem;
+    }
+
+    .rd-microproof {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      font-size: 0.875rem;
+      color: #666666;
+      border-top: 1px solid #e5e5e5;
+      padding-top: 1.25rem;
+    }
+
+    .rd-microproof svg {
+      flex-shrink: 0;
+      color: #000000;
+    }
+
+    .rd-hero-media {
+      position: relative;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+      background-color: #ffffff;
+      border: 1px solid #e5e5e5;
+    }
+
+    .rd-hero-media img {
+      width: 100%;
+      height: 100%;
+      max-height: 480px;
+      object-fit: cover;
+    }
+
+    /* FAIXA DE CONFIANÇA / BIG NUMBERS */
+    .rd-numbers {
+      background-color: #000000;
+      color: #ffffff;
+      padding: 3rem 0;
+    }
+
+    .rd-numbers-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 2rem;
+      text-align: center;
+    }
+
+    .rd-number-card {
+      padding: 1rem;
+      border-right: 1px solid rgba(255, 255, 255, 0.15);
+    }
+
+    .rd-number-card:last-child {
+      border-right: none;
+    }
+
+    .rd-number-card .val {
+      font-size: 2.8rem;
+      font-weight: 800;
+      color: #ffffff;
+      line-height: 1.1;
+      margin-bottom: 0.5rem;
+    }
+
+    .rd-number-card .lbl {
+      font-size: 0.875rem;
+      color: #cccccc;
+      line-height: 1.4;
+    }
+
+    /* SECTION HEADERS */
+    .rd-section-header {
+      text-align: center;
+      max-width: 760px;
+      margin: 0 auto 3.5rem auto;
+    }
+
+    .rd-section-header h2 {
+      margin-bottom: 1rem;
+    }
+
+    .rd-section-header p {
+      font-size: 1.05rem;
+    }
+
+    /* BENEFICIOS & SERVICOS GRID */
+    .rd-grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+    }
+
+    .rd-grid-2 {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2rem;
+    }
+
+    .rd-card-fx {
+      background-color: #ffffff;
+      border: 1px solid #e8e8e8;
+      border-radius: 8px;
+      padding: 2.25rem;
+      transition: all 0.3s ease;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+    }
+
+    .rd-card-fx:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.06);
+      border-color: #000000;
+    }
+
+    .rd-card-icon {
+      width: 48px;
+      height: 48px;
+      background-color: #f5f5f5;
+      border-radius: 6px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 1.5rem;
+      color: #000000;
+    }
+
+    .rd-card-fx h3 {
+      margin-bottom: 0.85rem;
+      font-size: 1.25rem;
+    }
+
+    .rd-card-fx p {
+      flex-grow: 1;
+      font-size: 0.95rem;
+      margin-bottom: 1.5rem;
+      color: #666666;
+    }
+
+    .rd-card-link {
+      font-weight: 600;
+      font-size: 0.9rem;
+      color: #000000;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      margin-top: auto;
+    }
+
+    .rd-card-link svg {
+      transition: transform 0.2s ease;
+    }
+
+    .rd-card-link:hover svg {
+      transform: translateX(4px);
+    }
+
+    /* SOBRE / INSTITUCIONAL */
+    .rd-about-wrapper {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3.5rem;
+      align-items: center;
+    }
+
+    .rd-about-content h2 {
+      margin-bottom: 1.25rem;
+    }
+
+    .rd-about-content p {
+      margin-bottom: 1.25rem;
+      font-size: 1.05rem;
+    }
+
+    .rd-about-box {
+      background-color: #000000;
+      color: #ffffff;
+      padding: 3rem;
+      border-radius: 8px;
+    }
+
+    .rd-about-box h3 {
+      color: #ffffff;
+      margin-bottom: 1rem;
+    }
+
+    .rd-about-box p {
+      color: #cccccc;
+      margin-bottom: 1.5rem;
+    }
+
+    .rd-badge-list {
+      display: flex;
+      flex-direction: column;
+      gap: 0.85rem;
+    }
+
+    .rd-badge-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.75rem;
+      font-size: 0.9rem;
+      color: #e0e0e0;
+    }
+
+    .rd-badge-item svg {
+      flex-shrink: 0;
+      color: #ffffff;
+      margin-top: 2px;
+    }
+
+    /* EQUIPE */
+    .rd-equipe-card {
+      display: flex;
+      gap: 2rem;
+      background: #fafafa;
+      border: 1px solid #e0e0e0;
+      border-radius: 8px;
+      padding: 2rem;
+      align-items: center;
+    }
+
+    .rd-equipe-info h3 {
+      font-size: 1.3rem;
+      margin-bottom: 0.25rem;
+    }
+
+    .rd-equipe-role {
+      font-size: 0.875rem;
+      font-weight: 600;
+      color: #666666;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 1rem;
+      display: block;
+    }
+
+    /* DESTAQUE EDITORIAL */
+    .rd-editorial {
+      background-color: #f7f7f7;
+      border: 1px solid #e5e5e5;
+      border-radius: 12px;
+      padding: 3.5rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .rd-editorial-inner {
+      max-width: 800px;
+    }
+
+    .rd-editorial h2 {
+      font-size: 2rem;
+      margin-bottom: 1.25rem;
+    }
+
+    .rd-editorial p {
+      font-size: 1.1rem;
+      margin-bottom: 2rem;
+      color: #444444;
+    }
+
+    /* PREVIA DE RECURSO INTERATIVO (GAP SIMULATION) */
+    .rd-preview-section {
+      background-color: #ffffff;
+      border: 1px solid #e2e2e2;
+      border-radius: 12px;
+      padding: 2.5rem;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.03);
+    }
+
+    .rd-preview-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 2rem;
+      padding-bottom: 1rem;
+      border-bottom: 1px solid #eeeeee;
+    }
+
+    .rd-preview-tag {
+      background-color: #000000;
+      color: #ffffff;
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      padding: 0.25rem 0.6rem;
+      border-radius: 3px;
+    }
+
+    .rd-preview-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+    }
+
+    .rd-form-sim {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .rd-sim-input {
+      background-color: #f9f9f9;
+      border: 1px solid #dddddd;
+      padding: 0.75rem 1rem;
+      border-radius: 4px;
+      font-size: 0.9rem;
+      color: #555555;
+    }
+
+    .rd-sim-result {
+      background-color: #000000;
+      color: #ffffff;
+      padding: 1.75rem;
+      border-radius: 6px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    /* GALERIA CARROSSEL SCROLL SNAP */
+    .rd-gallery-carousel {
+      display: flex;
+      gap: 1.5rem;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      padding-bottom: 1.5rem;
+      scrollbar-width: thin;
+    }
+
+    .rd-gallery-item {
+      flex: 0 0 360px;
+      scroll-snap-align: start;
+      border-radius: 8px;
+      overflow: hidden;
+      border: 1px solid #e5e5e5;
+      background-color: #ffffff;
+    }
+
+    .rd-gallery-item img {
+      width: 100%;
+      height: 240px;
+      object-fit: cover;
+    }
+
+    .rd-gallery-caption {
+      padding: 1.25rem;
+    }
+
+    .rd-gallery-caption h4 {
+      font-size: 1.05rem;
+      margin-bottom: 0.4rem;
+    }
+
+    .rd-gallery-caption p {
+      font-size: 0.85rem;
+      color: #666666;
+    }
+
+    /* COMO FUNCIONA */
+    .rd-steps-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.5rem;
+      position: relative;
+    }
+
+    .rd-step-card {
+      background-color: #fafafa;
+      border: 1px solid #eaeaea;
+      padding: 2rem 1.5rem;
+      border-radius: 8px;
+      position: relative;
+    }
+
+    .rd-step-num {
+      font-size: 2.2rem;
+      font-weight: 800;
+      color: #000000;
+      opacity: 0.2;
+      line-height: 1;
+      margin-bottom: 1rem;
+    }
+
+    .rd-step-card h3 {
+      font-size: 1.1rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .rd-step-card p {
+      font-size: 0.875rem;
+    }
+
+    /* FAQ */
+    .rd-faq-list {
+      max-width: 840px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .rd-faq-item {
+      border: 1px solid #e2e2e2;
+      border-radius: 6px;
+      overflow: hidden;
+      background-color: #ffffff;
+    }
+
+    .rd-faq-question {
+      padding: 1.25rem 1.5rem;
+      font-weight: 600;
+      font-size: 1.05rem;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #ffffff;
+      color: #000000;
+    }
+
+    .rd-faq-answer {
+      padding: 0 1.5rem 1.25rem 1.5rem;
+      color: #555555;
+      font-size: 0.95rem;
+      line-height: 1.6;
+    }
+
+    /* CTA FINAL & FORM */
+    .rd-cta-final-section {
+      background-color: #000000;
+      color: #ffffff;
+      padding: 5rem 0;
+    }
+
+    .rd-cta-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: center;
+    }
+
+    .rd-cta-info h2 {
+      color: #ffffff;
+      margin-bottom: 1.25rem;
+    }
+
+    .rd-cta-info p {
+      color: #cccccc;
+      font-size: 1.1rem;
+      margin-bottom: 2rem;
+    }
+
+    .rd-form-box {
+      background-color: #ffffff;
+      color: #111111;
+      padding: 2.5rem;
+      border-radius: 8px;
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+    }
+
+    .rd-form-box h3 {
+      margin-bottom: 1.5rem;
+      font-size: 1.3rem;
+    }
+
+    .rd-form-group {
+      margin-bottom: 1.25rem;
+    }
+
+    .rd-form-group label {
+      display: block;
+      font-size: 0.85rem;
+      font-weight: 600;
+      margin-bottom: 0.4rem;
+      color: #222222;
+    }
+
+    .rd-form-group input,
+    .rd-form-group select,
+    .rd-form-group textarea {
+      width: 100%;
+      padding: 0.8rem 1rem;
+      border: 1px solid #cccccc;
+      border-radius: 4px;
+      font-family: inherit;
+      font-size: 0.95rem;
+      transition: border-color 0.2s ease;
+    }
+
+    .rd-form-group input:focus,
+    .rd-form-group select:focus,
+    .rd-form-group textarea:focus {
+      outline: none;
+      border-color: #000000;
+    }
+
+    .rd-form-checkbox {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.6rem;
+      font-size: 0.8rem;
+      color: #666666;
+      margin-bottom: 1.5rem;
+    }
+
+    .rd-form-checkbox input {
+      margin-top: 3px;
+    }
+
+    .rd-form-note {
+      display: block;
+      margin-top: 0.8rem;
+      font-size: 0.75rem;
+      color: #888888;
+      text-align: center;
+    }
+
+    /* FOOTER */
+    .rd-footer {
+      background-color: #111111;
+      color: #aaaaaa;
+      padding: 4rem 0 2rem 0;
+      font-size: 0.875rem;
+      border-top: 1px solid #222222;
+    }
+
+    .rd-footer-grid {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr 1fr 1fr;
+      gap: 2.5rem;
+      margin-bottom: 3.5rem;
+    }
+
+    .rd-footer-logo img {
+      height: 32px;
+      margin-bottom: 1.25rem;
+    }
+
+    .rd-footer-bio {
+      font-size: 0.825rem;
+      line-height: 1.6;
+      color: #888888;
+      margin-bottom: 1.5rem;
+    }
+
+    .rd-footer-col h4 {
+      color: #ffffff;
+      font-size: 1rem;
+      margin-bottom: 1.25rem;
+    }
+
+    .rd-footer-links {
+      display: flex;
+      flex-direction: column;
+      gap: 0.65rem;
+    }
+
+    .rd-footer-links a:hover {
+      color: #ffffff;
+    }
+
+    .rd-footer-bottom {
+      border-top: 1px solid #222222;
+      padding-top: 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.8rem;
+      color: #666666;
+    }
+
+    /* FLOATING BUTTON (SCHEDULING / ANNOUNCEMENT) */
+    .rd-floating-btn {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      z-index: 999;
+      background-color: #000000;
+      color: #ffffff;
+      padding: 0.85rem 1.4rem;
+      border-radius: 50px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+      font-weight: 600;
+      font-size: 0.85rem;
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      border: 1px solid #333333;
+      transition: transform 0.25s ease, background-color 0.25s ease;
+    }
+
+    .rd-floating-btn:hover {
+      transform: translateY(-3px);
+      background-color: #222222;
+    }
+
+    /* REVEAL ANIMATIONS */
+    .rd-reveal {
+      opacity: 1;
+      transform: translateY(0);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+
+    /* RESPONSIVE DESIGN (MOBILE-FIRST BREAKPOINTS) */
+    @media (max-width: 992px) {
+      .rd-hero-split,
+      .rd-about-wrapper,
+      .rd-cta-grid {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+      }
+
+      .rd-grid-3 {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .rd-steps-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .rd-footer-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .rd-preview-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 767px) {
+      .rd-menu-btn {
+        display: flex;
+      }
+
+      .rd-nav {
+        position: fixed;
+        top: 72px;
+        left: 0;
+        width: 100%;
+        background-color: #ffffff;
+        flex-direction: column;
+        padding: 2rem 1.5rem;
+        box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        transform: translateY(-150%);
+        transition: transform 0.35s ease;
+        z-index: 999;
+      }
+
+      #mobile-menu-toggle:checked ~ .rd-nav {
+        transform: translateY(0);
+      }
+
+      #mobile-menu-toggle:checked ~ .rd-menu-btn span:nth-child(1) {
+        transform: translateY(8.5px) rotate(45deg);
+      }
+      #mobile-menu-toggle:checked ~ .rd-menu-btn span:nth-child(2) {
+        opacity: 0;
+      }
+      #mobile-menu-toggle:checked ~ .rd-menu-btn span:nth-child(3) {
+        transform: translateY(-8.5px) rotate(-45deg);
+      }
+
+      .rd-nav-list {
+        flex-direction: column;
+        width: 100%;
+        gap: 1.25rem;
+        text-align: center;
+      }
+
+      .rd-grid-3,
+      .rd-grid-2,
+      .rd-steps-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .rd-footer-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .rd-editorial {
+        padding: 2rem 1.5rem;
+      }
+
+      .rd-equipe-card {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .rd-number-card {
+        border-right: none;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+      }
+
+      .rd-number-card:last-child {
+        border-bottom: none;
+      }
+
+      .rd-floating-btn {
+        bottom: 16px;
+        right: 16px;
+        font-size: 0.75rem;
+        padding: 0.75rem 1rem;
+      }
+    }
+  </style>
+
+  <!-- Structured Data JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Corporation",
+        "@id": "https://www.flowserve.com/#corporation",
+        "name": "Flowserve Brasil",
+        "url": "https://www.flowserve.com",
+        "logo": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 40' width='200' height='40'%3E%3Crect width='200' height='40' fill='none'/%3E%3Ctext x='0' y='28' font-family='Arial, sans-serif' font-size='26' font-weight='900' fill='%23000000' letter-spacing='-1'%3EFLOWSERVE%3C/text%3E%3C/svg%3E",
+        "description": "Fabricante global e prestadora de serviços de soluções de controle de fluxo, bombas industriais, válvulas, selos mecânicos e sistemas de automação.",
+        "sameAs": [
+          "https://www.facebook.com/flowserve",
+          "https://www.youtube.com/user/Flowserveinteractive",
+          "https://www.linkedin.com/company/flowserve"
+        ],
+        "telephone": "88"
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "A Flowserve presta serviços de manutenção em equipamentos de outros fabricantes?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Sim. Através dos nossos Serviços Pós-Venda e suporte multimarca, prestamos assistência técnica especializada, otimização e reparos para equipamentos próprios e de terceiros."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "O que é e como funciona a plataforma RedRaven?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "O RedRaven é o ecossistema IoT da Flowserve que utiliza sensores inteligentes e análise preditiva de dados para monitorar o desempenho de bombas, válvulas e selos, identificando falhas potenciais antes de causarem paradas."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Como funcionam os Centros de Resposta Rápida (Quick Response Centers)?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "São centros de atendimento e manutenção distribuídos estrategicamente para oferecer resposta ágil na fabricação de componentes, reparos urgentes e suporte técnico presencial, minimizando interrupções na sua planta."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Como solicitar um orçamento ou consulta técnica para minha empresa no Brasil?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Você pode utilizar o formulário presente nesta página para solicitar uma reunião com nossos engenheiros ou enviar sua solicitação de cotação (RFQ) diretamente aos nossos representantes."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+<style>
+.rd-reveal{opacity:0;transform:translateY(24px);transition:opacity .6s ease,transform .6s ease;}
+.rd-reveal.rd-in-view{opacity:1;transform:translateY(0);}
+.rd-card-fx{transition:transform .35s ease,box-shadow .35s ease;}
+.rd-card-fx.rd-in-view,.rd-card-fx:hover{transform:scale(1.035);box-shadow:0 18px 40px rgba(0,0,0,0.14);}
+@media (prefers-reduced-motion: reduce){.rd-reveal,.rd-card-fx{transition:none;opacity:1;transform:none;}}
+</style></head>
+<body>
+
+  <!-- TOPBAR -->
+  <div class="rd-topbar">
+    <div class="rd-container rd-topbar-content">
+      <div class="rd-topbar-info">
+        <span>
+          <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg>
+          Atendimento técnico especializado e Centros de Resposta Rápida no Brasil e no mundo.
+        </span>
+        <span>
+          <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          Telefone: 88
+        </span>
+      </div>
+      <div class="rd-topbar-socials">
+        <a href="https://www.facebook.com/flowserve" target="_blank" rel="noopener" aria-label="Facebook Flowserve">
+          <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+        </a>
+        <a href="https://www.youtube.com/user/Flowserveinteractive" target="_blank" rel="noopener" aria-label="YouTube Flowserve">
+          <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-1.96C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 1.96A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-1.96 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.37z"/><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02" fill="#000000"/></svg>
+        </a>
+        <a href="https://www.linkedin.com/company/flowserve" target="_blank" rel="noopener" aria-label="LinkedIn Flowserve">
+          <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- HEADER -->
+  <header class="rd-header">
+    <div class="rd-container rd-header-content">
+      <a href="#" class="rd-logo" aria-label="Flowserve Home">
+        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 40' width='200' height='40'%3E%3Crect width='200' height='40' fill='none'/%3E%3Ctext x='0' y='28' font-family='Arial, sans-serif' font-size='26' font-weight='900' fill='%23000000' letter-spacing='-1'%3EFLOWSERVE%3C/text%3E%3C/svg%3E" alt="Flowserve Logo">
+      </a>
+
+      <input type="checkbox" id="mobile-menu-toggle" aria-label="Toggle Navigation Menu">
+      <label for="mobile-menu-toggle" class="rd-menu-btn" aria-label="Abrir Menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </label>
+
+      <nav class="rd-nav">
+        <ul class="rd-nav-list">
+          <li><a href="#beneficios" class="rd-nav-link">Benefícios</a></li>
+          <li><a href="#servicos" class="rd-nav-link">Serviços</a></li>
+          <li><a href="#diferenciais" class="rd-nav-link">Diferenciais</a></li>
+          <li><a href="#equipe" class="rd-nav-link">Governança</a></li>
+          <li><a href="#sobre" class="rd-nav-link">Sobre</a></li>
+          <li><a href="#faq" class="rd-nav-link">FAQ</a></li>
+        </ul>
+        <a href="#contato" class="rd-btn rd-btn-primary">Agendar Consulta Técnica</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section class="rd-hero">
+    <div class="rd-container">
+      <div class="rd-hero-split">
+        <div class="rd-hero-text">
+          <span class="rd-eyebrow">ENGENHARIA DE PRECISÃO & CONTROLE DE FLUXO INDUSTRIAL</span>
+          <h1>Maximize a confiabilidade operacional e elimine paradas não programadas</h1>
+          <p>A Flowserve fornece bombas industriais, válvulas, selos mecânicos, atuadores e sistemas de automação para as infraestruturas mais exigentes do Brasil e do mundo. Garanta máxima eficiência energética e suporte técnico especializado.</p>
+          
+          <div class="rd-hero-actions">
+            <a href="#contato" class="rd-btn rd-btn-primary">Agendar Consulta Técnica</a>
+            <a href="#contato" class="rd-btn rd-btn-secondary">Solicitar Cotação Técnica</a>
+          </div>
+
+          <div class="rd-microproof">
+            <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+            <span>Tecnologia presente em mais de 95% da indústria global de decaimento (decoking).</span>
+          </div>
+        </div>
+
+        <div class="rd-hero-media">
+          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500' width='800' height='500'%3E%3Crect width='800' height='500' fill='%23111111'/%3E%3Ccircle cx='400' cy='250' r='180' stroke='%23333333' stroke-width='8' fill='none'/%3E%3Ccircle cx='400' cy='250' r='120' stroke='%23555555' stroke-width='6' fill='none'/%3E%3Cpath d='M400 70 L400 430 M220 250 L580 250 M272 122 L527 377 M272 377 L527 122' stroke='%23444444' stroke-width='6'/%3E%3Ccircle cx='400' cy='250' r='50' fill='%23000000' stroke='%23ffffff' stroke-width='4'/%3E%3Ctext x='400' y='460' font-family='sans-serif' font-size='20' font-weight='bold' fill='%23ffffff' text-anchor='middle'%3EFLOWSERVE INDUSTRIAL PUMP SYSTEM%3C/text%3E%3C/svg%3E" alt="Bombas Industriais de Alta Performance Flowserve" fetchpriority="high">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAIXA DE CONFIANÇA / BIG NUMBERS -->
+  <section class="rd-numbers">
+    <div class="rd-container">
+      <div class="rd-numbers-grid">
+        <div class="rd-number-card">
+          <div class="val">95%</div>
+          <div class="lbl">Adoção do portfólio na indústria de decaimento (decoking)</div>
+        </div>
+        <div class="rd-number-card">
+          <div class="val">Multimarca</div>
+          <div class="lbl">Manutenção técnica para equipamentos próprios e de terceiros</div>
+        </div>
+        <div class="rd-number-card">
+          <div class="val">RedRaven</div>
+          <div class="lbl">Plataforma de monitoramento preditivo IoT para sistemas críticos</div>
+        </div>
+        <div class="rd-number-card">
+          <div class="val">4.1 / 5</div>
+          <div class="lbl">Média de avaliação auditada no Google (28 avaliações)</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BENEFÍCIOS -->
+  <section id="beneficios" class="rd-section rd-reveal">
+    <div class="rd-container">
+      <div class="rd-section-header">
+        <h2>Eficiência e Segurança em Infraestruturas Críticas</h2>
+        <p>Desenvolvido para proteger plantas industriais contra riscos de parada e perdas de rentabilidade.</p>
+      </div>
+
+      <div class="rd-grid-3">
+        <div class="rd-card-fx">
+          <div class="rd-card-icon">
+            <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <h3>Prevenção de Paradas Operacionais</h3>
+          <p>Utilização de sistemas de monitoramento inteligente e suporte rápido para EVITAR falhas graves no fluxo de produção e garantir a continuidade da operação.</p>
+        </div>
+
+        <div class="rd-card-fx">
+          <div class="rd-card-icon">
+            <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+          </div>
+          <h3>Suporte Multimarca em Equipamentos</h3>
+          <p>Capacidade de prestar serviços, reparos de alta precisão e otimização técnica independentemente do fabricante original do equipamento.</p>
+        </div>
+
+        <div class="rd-card-fx">
+          <div class="rd-card-icon">
+            <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+          </div>
+          <h3>Otimização de Custos e Energia</h3>
+          <p>Análise rigorosa de sistemas e soluções dedicadas para reduzir custos operacionais e diminuir significativamente o consumo de energia da sua planta.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVIÇOS -->
+  <section id="servicos" class="rd-section rd-reveal">
+    <div class="rd-container">
+      <div class="rd-section-header">
+        <h2>Portfólio Completo de Serviços de Engenharia</h2>
+        <p>Soluções integradas cobrindo todo o ciclo de vida dos seus ativos de controle de fluxo.</p>
+      </div>
+
+      <div class="rd-grid-3">
+        <div class="rd-card-fx">
+          <div class="rd-card-icon">
+            <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+          </div>
+          <h3>Startup & Comissionamento</h3>
+          <p>Suporte de startup e comissionamento para assegurar o funcionamento correto, preciso e seguro das instalações industriais desde o início da operação.</p>
+          <a href="#contato" class="rd-card-link">
+            Solicitar Comissionamento
+            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </a>
+        </div>
+
+        <div class="rd-card-fx">
+          <div class="rd-card-icon">
+            <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M18.36 6.64a9 9 0 1 1-12.73 0"/><line x1="12" y1="2" x2="12" y2="12"/></svg>
+          </div>
+          <h3>Suporte Operacional</h3>
+          <p>Serviço responsivo e reparos de qualidade para manter a continuidade operacional e reduzir paradas não programadas em suas instalações.</p>
+          <a href="#contato" class="rd-card-link">
+            Solicitar Suporte
+            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </a>
+        </div>
+
+        <div class="rd-card-fx">
+          <div class="rd-card-icon">
+            <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>
+          </div>
+          <h3>Otimização de Desempenho</h3>
+          <p>Melhorias, retrofits e engenharia especializada para aumentar a eficiência energética e prolongar a vida útil de longo prazo dos ativos industriais.</p>
+          <a href="#contato" class="rd-card-link">
+            Otimizar Equipamentos
+            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </a>
+        </div>
+
+        <div class="rd-card-fx">
+          <div class="rd-card-icon">
+            <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          </div>
+          <h3>Centros de Resposta Rápida (QRC)</h3>
+          <p>Rede global e regional que entrega suporte ágil para minimizar o tempo de inatividade e fornecer peças de reposição onde e quando necessário.</p>
+          <a href="#contato" class="rd-card-link">
+            Acessar Suporte Rápido
+            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </a>
+        </div>
+
+        <div class="rd-card-fx">
+          <div class="rd-card-icon">
+            <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+          </div>
+          <h3>Acordos de Serviço (Service Agreements)</h3>
+          <p>Estruturas de serviço personalizáveis projetadas para ajudar sua planta a atingir o desempenho máximo com planejamento e garantia contínua.</p>
+          <a href="#contato" class="rd-card-link">
+            Ver Acordos de Serviço
+            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </a>
+        </div>
+
+        <div class="rd-card-fx">
+          <div class="rd-card-icon">
+            <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
+          </div>
+          <h3>Serviços Pós-Venda (Aftermarket)</h3>
+          <p>Suporte abrangente em cada etapa do ciclo de vida do equipamento para melhorar a confiabilidade, atendendo marcas próprias e de terceiros.</p>
+          <a href="#contato" class="rd-card-link">
+            Consultar Pós-Venda
+            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GOVERNANÇA / EQUIPE -->
+  <section id="equipe" class="rd-section rd-reveal">
+    <div class="rd-container">
+      <div class="rd-section-header">
+        <h2>Liderança Executiva e Governança Global</h2>
+        <p>Compromisso institucional com a engenharia de precisão e gestão corporativa rigorosa.</p>
+      </div>
+
+      <div style="max-width: 800px; margin: 0 auto;">
+        <div class="rd-equipe-card rd-card-fx">
+          <div class="rd-equipe-info">
+            <h3>Alice DeBiasio</h3>
+            <span class="rd-equipe-role">Executiva nomeada (mencionada em comunicado de nomeação)</span>
+            <p>Mencionada no anúncio institucional de nomeação da empresa ('Appointment of Alice DeBiasio'), integrando a estrutura executiva e de governança corporativa da Flowserve.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SOBRE A MARCA -->
+  <section id="sobre" class="rd-section rd-reveal">
+    <div class="rd-container">
+      <div class="rd-about-wrapper">
+        <div class="rd-about-content">
+          <span class="rd-eyebrow">SOBRE A FLOWSERVE</span>
+          <h2>Confiabilidade global aplicada à infraestrutura crítica industrial do Brasil</h2>
+          <p><strong>Liderança no fornecimento de bombas, válvulas, selos mecânicos e tecnologia preditiva.</strong></p>
+          <p>A Flowserve é uma fabricante global e prestadora de serviços de soluções de controle de fluxo para as indústrias mais exigentes. Atuando nos setores químico, de energia, mineração, água, geração de energia e petróleo e gás, oferecemos uma combinação única de engenharia avançada, presença local no Brasil, Centros de Resposta Rápida e tecnologia IoT RedRaven para impulsionar a eficiência e prevenir falhas graves em processos operacionais.</p>
+        </div>
+
+        <div class="rd-about-box">
+          <h3>Infraestruturas Atendidas</h3>
+          <p>Desenvolvemos soluções para operações de alta exigência em múltiplos setores:</p>
+          
+          <div class="rd-badge-list">
+            <div class="rd-badge-item">
+              <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+              <span>Químico, Petroquímico e Fertilizantes</span>
+            </div>
+            <div class="rd-badge-item">
+              <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+              <span>Petróleo, Gás & GNL Criogênico</span>
+            </div>
+            <div class="rd-badge-item">
+              <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+              <span>Mineração, Siderurgia e Metais</span>
+            </div>
+            <div class="rd-badge-item">
+              <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+              <span>Geração de Energia Nuclear e Convencional</span>
+            </div>
+            <div class="rd-badge-item">
+              <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+              <span>Saneamento e Infraestrutura de Água</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DIFERENCIAIS -->
+  <section id="diferenciais" class="rd-section rd-reveal">
+    <div class="rd-container">
+      <div class="rd-section-header">
+        <h2>Diferenciais e Inovações Tecnológicas Proprietárias</h2>
+        <p>Evidências concretas de engenharia avançada e liderança de mercado.</p>
+      </div>
+
+      <div class="rd-grid-2">
+        <div class="rd-card-fx">
+          <div class="rd-card-icon">
+            <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          </div>
+          <h3>Liderança na Indústria de Decaimento (Decoking)</h3>
+          <p>Portfólio especializado de equipamentos de decaimento utilizado por mais de 95% da indústria global de decoking.</p>
+        </div>
+
+        <div class="rd-card-fx">
+          <div class="rd-card-icon">
+            <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+          </div>
+          <h3>Plataforma de Monitoramento RedRaven</h3>
+          <p>Sistema de monitoramento preditivo de equipamentos que utiliza sensores inteligentes, análises avançadas e suporte dedicado para prevenir falhas antes que ocorram.</p>
+        </div>
+
+        <div class="rd-card-fx">
+          <div class="rd-card-icon">
+            <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="3"/></svg>
+          </div>
+          <h3>Selo LMX Cartridge Lip Seal</h3>
+          <p>Solução de vedação sem carbono e de funcionamento a seco projetada especificamente para misturadores de entrada superior, reduzindo o risco de contaminação.</p>
+        </div>
+
+        <div class="rd-card-fx">
+          <div class="rd-card-icon">
+            <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="8.5" cy="7" r="4"/><polyline points="17 11 19 13 23 9"/></svg>
+          </div>
+          <h3>Expansão via Aquisições Estratégicas</h3>
+          <p>Incorporação da Divisão de Válvulas da Trillium Flow Technologies e das empresas Greenray e Allen Steam Turbines, ampliando o suporte a frotas de turbinas e soluções nucleares.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DESTAQUE EDITORIAL -->
+  <section class="rd-section">
+    <div class="rd-container">
+      <div class="rd-editorial">
+        <div class="rd-editorial-inner">
+          <h2>Inovação Técnica para o Futuro Industrial</h2>
+          <p>Conheça nossas abordagens tecnológicas para atender a regulamentações ambientais rígidas, soluções para o futuro do Hidrogênio, bombeamento criogênico de GNL e gestão do ciclo de vida de turbinas a gás e a vapor legadas.</p>
+          <a href="#contato" class="rd-btn rd-btn-primary">Falar com Especialista Técnico</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRÉVIA DE RECURSO INTERATIVO (GAP SIMULATION) -->
+  <section class="rd-section rd-reveal">
+    <div class="rd-container">
+      <div class="rd-preview-section">
+        <div class="rd-preview-header">
+          <div>
+            <h3>Simulador de Solicitação de Cotação Técnica (RFQ)</h3>
+            <p style="font-size: 0.9rem;">Demonstração do fluxo de especificação técnica para equipamentos industriais e monitoramento RedRaven.</p>
+          </div>
+          <span class="rd-preview-tag">Exemplo Ilustrativo</span>
+        </div>
+
+        <div class="rd-preview-grid">
+          <div class="rd-form-sim">
+            <div class="rd-sim-input">Equipamento: Bombas Industriais / Selos Mecânicos</div>
+            <div class="rd-sim-input">Módulo Preditivo: RedRaven IoT Sensors</div>
+            <div class="rd-sim-input">Aplicação: Infraestrutura Crítica / Decoking</div>
+            <div class="rd-sim-input">Status: Análise de Desempenho e Monitoramento Preditivo</div>
+          </div>
+          <div class="rd-sim-result">
+            <div>
+              <h4 style="color: #ffffff; font-size: 1.1rem; margin-bottom: 0.5rem;">Resultado do Diagnóstico</h4>
+              <p style="color: #cccccc; font-size: 0.875rem;">Sistemas operando dentro das especificações técnicas para máxima disponibilidade industrial.</p>
+            </div>
+            <a href="#contato" class="rd-btn rd-btn-primary" style="margin-top: 1rem; background: #ffffff; color: #000000; border-color: #ffffff;">Solicitar Diagnóstico Completo</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALERIA DE APLICAÇÕES -->
+  <section class="rd-section rd-reveal">
+    <div class="rd-container">
+      <div class="rd-section-header">
+        <h2>Aplicações e Tecnologia em Campo</h2>
+        <p>Conheça nossas soluções de engenharia aplicadas aos ambientes industriais mais exigentes.</p>
+      </div>
+      <div class="rd-gallery-carousel">
+        <div class="rd-gallery-item">
+          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 600 400'%3E%3Crect width='600' height='400' fill='%231a1a1a'/%3E%3Cpath d='M150 300 L300 100 L450 300 Z' fill='none' stroke='%23555555' stroke-width='4'/%3E%3Ccircle cx='300' cy='220' r='50' fill='%23333333' stroke='%23ffffff' stroke-width='3'/%3E%3Ctext x='300' y='360' font-family='sans-serif' font-size='16' fill='%23ffffff' text-anchor='middle'%3EBombas e V%C3%A1lvulas Industriais%3C/text%3E%3C/svg%3E" alt="Sistemas de Controle de Fluxo Flowserve">
+          <div class="rd-gallery-caption">
+            <h4>Controle de Fluxo Industrial</h4>
+            <p>Sistemas robustos para processos de alta pressão e vazão.</p>
+          </div>
+        </div>
+        <div class="rd-gallery-item">
+          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 600 400'%3E%3Crect width='600' height='400' fill='%23111111'/%3E%3Ccircle cx='300' cy='180' r='80' fill='none' stroke='%23ffffff' stroke-width='4'/%3E%3Cpath d='M300 100 L300 260 M220 180 L380 180' stroke='%23666666' stroke-width='4'/%3E%3Ctext x='300' y='340' font-family='sans-serif' font-size='16' fill='%23ffffff' text-anchor='middle'%3EPlataforma RedRaven IoT%3C/text%3E%3C/svg%3E" alt="Monitoramento Preditivo RedRaven">
+          <div class="rd-gallery-caption">
+            <h4>Plataforma RedRaven</h4>
+            <p>Monitoramento preditivo inteligente para prevenção de falhas.</p>
+          </div>
+        </div>
+        <div class="rd-gallery-item">
+          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 600 400'%3E%3Crect width='600' height='400' fill='%23222222'/%3E%3Crect x='150' y='120' width='300' height='160' rx='10' fill='%23333333' stroke='%23ffffff' stroke-width='3'/%3E%3Ctext x='300' y='340' font-family='sans-serif' font-size='16' fill='%23ffffff' text-anchor='middle'%3ESelos Mec%C3%A2nicos e Veda%C3%A7%C3%B5es%3C/text%3E%3C/svg%3E" alt="Selos Mecânicos e Vedações de Alta Precisão">
+          <div class="rd-gallery-caption">
+            <h4>Vedações de Alta Precisão</h4>
+            <p>Selos mecânicos projetados para contenção e segurança operacional.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- COMO FUNCIONA -->
+  <section class="rd-section rd-reveal">
+    <div class="rd-container">
+      <div class="rd-section-header">
+        <h2>Como Funciona Nosso Atendimento</h2>
+        <p>Um processo estruturado de engenharia para atender às demandas da sua planta.</p>
+      </div>
+
+      <div class="rd-steps-grid">
+        <div class="rd-step-card">
+          <div class="rd-step-num">01</div>
+          <h3>Consulta & Diagnóstico</h3>
+          <p>Mapeamento detalhado das necessidades operacionais e especificações técnicas do seu sistema.</p>
+        </div>
+        <div class="rd-step-card">
+          <div class="rd-step-num">02</div>
+          <h3>Engenharia de Soluções</h3>
+          <p>Dimensionamento e seleção de equipamentos, selos e sistemas de automação sob medida.</p>
+        </div>
+        <div class="rd-step-card">
+          <div class="rd-step-num">03</div>
+          <h3>Implementação & QRC</h3>
+          <p>Instalação, comissionamento e suporte de Centros de Resposta Rápida no Brasil.</p>
+        </div>
+        <div class="rd-step-card">
+          <div class="rd-step-num">04</div>
+          <h3>Monitoramento Contínuo</h3>
+          <p>Acompanhamento via ecossistema RedRaven e serviços pós-venda multimarca.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" class="rd-section rd-reveal">
+    <div class="rd-container">
+      <div class="rd-section-header">
+        <h2>Perguntas Frequentes</h2>
+        <p>Esclareça suas dúvidas sobre nossos serviços, suporte multimarca e soluções digitais.</p>
+      </div>
+
+      <div class="rd-faq-list">
+        <div class="rd-faq-item">
+          <div class="rd-faq-question">
+            <span>A Flowserve presta serviços de manutenção em equipamentos de outros fabricantes?</span>
+          </div>
+          <div class="rd-faq-answer">
+            <p>Sim. Através dos nossos Serviços Pós-Venda e suporte multimarca, prestamos assistência técnica especializada, otimização e reparos para equipamentos próprios e de terceiros.</p>
+          </div>
+        </div>
+
+        <div class="rd-faq-item">
+          <div class="rd-faq-question">
+            <span>O que é e como funciona a plataforma RedRaven?</span>
+          </div>
+          <div class="rd-faq-answer">
+            <p>O RedRaven é o ecossistema IoT da Flowserve que utiliza sensores inteligentes e análise preditiva de dados para monitorar o desempenho de bombas, válvulas e selos, identificando falhas potenciais antes de causarem paradas.</p>
+          </div>
+        </div>
+
+        <div class="rd-faq-item">
+          <div class="rd-faq-question">
+            <span>Como funcionam os Centros de Resposta Rápida (Quick Response Centers)?</span>
+          </div>
+          <div class="rd-faq-answer">
+            <p>São centros de atendimento e manutenção distribuídos estrategicamente para oferecer resposta ágil na fabricação de componentes, reparos urgentes e suporte técnico presencial, minimizando interrupções na sua planta.</p>
+          </div>
+        </div>
+
+        <div class="rd-faq-item">
+          <div class="rd-faq-question">
+            <span>Como solicitar um orçamento ou consulta técnica para minha empresa no Brasil?</span>
+          </div>
+          <div class="rd-faq-answer">
+            <p>Você pode utilizar o formulário presente nesta página para solicitar uma reunião com nossos engenheiros ou enviar sua solicitação de cotação (RFQ) diretamente aos nossos representantes.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA FINAL & FORM -->
+  <section id="contato" class="rd-cta-final-section">
+    <div class="rd-container">
+      <div class="rd-cta-grid">
+        <div class="rd-cta-info">
+          <h2>Fale com a Equipe de Engenharia da Flowserve</h2>
+          <p>Solicite uma cotação técnica, agende um diagnóstico operacional para sua planta ou saiba mais sobre o monitoramento preditivo RedRaven.</p>
+        </div>
+
+        <div class="rd-form-box">
+          <h3>Solicitar Atendimento Técnico</h3>
+          <form action="#" method="POST">
+            <div class="rd-form-group">
+              <label for="form-nome">Nome Completo *</label>
+              <input type="text" id="form-nome" name="nome" placeholder="Seu nome completo" required>
+            </div>
+
+            <div class="rd-form-group">
+              <label for="form-email">E-mail Corporativo *</label>
+              <input type="email" id="form-email" name="email" placeholder="susekar@flowserve.com" required>
+            </div>
+
+            <div class="rd-form-group">
+              <label for="form-telefone">Telefone / WhatsApp *</label>
+              <input type="tel" id="form-telefone" name="telefone" placeholder="(00) 00000-0000" required>
+            </div>
+
+            <div class="rd-form-group">
+              <label for="form-empresa">Empresa / Planta *</label>
+              <input type="text" id="form-empresa" name="empresa" placeholder="Nome da empresa" required>
+            </div>
+
+            <div class="rd-form-group">
+              <label for="form-assunto">Interesse Principal *</label>
+              <select id="form-assunto" name="assunto" required>
+                <option value="">Selecione uma opção</option>
+                <option value="bombas">Bombas Industriais</option>
+                <option value="valvulas">Válvulas & Atuadores</option>
+                <option value="selos">Selos Mecânicos & Vedações</option>
+                <option value="redraven">Plataforma RedRaven IoT</option>
+                <option value="manutencao">Manutenção Multimarca / QRC</option>
+                <option value="outros">Outros Serviços de Engenharia</option>
+              </select>
+            </div>
+
+            <div class="rd-form-group">
+              <label for="form-mensagem">Mensagem / Especificação Técnica</label>
+              <textarea id="form-mensagem" name="mensagem" rows="4" placeholder="Descreva brevemente a sua necessidade técnica ou equipamento"></textarea>
+            </div>
+
+            <div class="rd-form-checkbox">
+              <input type="checkbox" id="form-lgpd" name="lgpd" required>
+              <label for="form-lgpd">Concordo com o processamento dos dados para contato comercial e técnico.</label>
+            </div>
+
+            <button type="submit" class="rd-btn rd-btn-primary" style="width: 100%;">Enviar Solicitação Técnica</button>
+            <span class="rd-form-note">Atendimento exclusivo para demandas industriais e corporativas.</span>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="rd-footer">
+    <div class="rd-container">
+      <div class="rd-footer-grid">
+        <div>
+          <div class="rd-footer-logo">
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 40' width='200' height='40'%3E%3Crect width='200' height='40' fill='none'/%3E%3Ctext x='0' y='28' font-family='Arial, sans-serif' font-size='26' font-weight='900' fill='%23ffffff' letter-spacing='-1'%3EFLOWSERVE%3C/text%3E%3C/svg%3E" alt="Flowserve Logo">
+          </div>
+          <p class="rd-footer-bio">Líder global no fornecimento de bombas industriais, válvulas, selos mecânicos e serviços de automação e controle de fluxo para as indústrias de infraestrutura crítica.</p>
+        </div>
+
+        <div class="rd-footer-col">
+          <h4>Navegação</h4>
+          <div class="rd-footer-links">
+            <a href="#beneficios">Benefícios</a>
+            <a href="#servicos">Serviços</a>
+            <a href="#diferenciais">Diferenciais</a>
+            <a href="#equipe">Governança</a>
+            <a href="#sobre">Sobre</a>
+            <a href="#faq">FAQ</a>
+          </div>
+        </div>
+
+        <div class="rd-footer-col">
+          <h4>Soluções</h4>
+          <div class="rd-footer-links">
+            <a href="#servicos">Bombas Industriais</a>
+            <a href="#servicos">Válvulas & Atuadores</a>
+            <a href="#servicos">Selos Mecânicos</a>
+            <a href="#diferenciais">RedRaven IoT</a>
+            <a href="#servicos">Suporte Multimarca</a>
+          </div>
+        </div>
+
+        <div class="rd-footer-col">
+          <h4>Contato & Redes</h4>
+          <div class="rd-footer-links">
+            <a href="tel:88">Telefone: 88</a>
+            <a href="https://www.facebook.com/flowserve" target="_blank" rel="noopener">Facebook</a>
+            <a href="https://www.youtube.com/user/Flowserveinteractive" target="_blank" rel="noopener">YouTube</a>
+            <a href="https://www.linkedin.com/company/flowserve" target="_blank" rel="noopener">LinkedIn</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="rd-footer-bottom">
+        <p>&copy; Flowserve Corporation. Todos os direitos reservados. Atendimento Flowserve Brasil.</p>
+        <p>Soluções de Engenharia e Controle de Fluxo Industrial.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- FLOATING BUTTON -->
+  <a href="#contato" class="rd-floating-btn" aria-label="Agendar Consulta Técnica">
+    <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+    <span>Agendar Consulta</span>
+  </a>
+
+<div style="position:fixed;bottom:16px;left:16px;z-index:2147483647;background:rgba(255,255,255,0.96);border-radius:999px;padding:8px 18px 8px 10px;box-shadow:0 6px 20px rgba(0,0,0,0.22);display:flex;align-items:center;gap:7px;font-family:Inter,-apple-system,sans-serif;"><img src="https://rd-previews-dharari01s-projects.vercel.app/_assets/logo-rd-exclusive.png" alt="RD Exclusive" style="height:26px;width:auto;display:block;"><span style="font-size:14px;font-weight:700;color:#1A1A1A;white-space:nowrap;">Protótipo por RD Exclusive</span></div><script>
+document.addEventListener("DOMContentLoaded", function() {
+  var alvos = document.querySelectorAll(".rd-reveal, .rd-card-fx, .rd-counter");
+  function animarContador(el) {
+    var textoAlvo = el.getAttribute("data-target") || "0";
+    var alvo = parseFloat(textoAlvo);
+    var casas = textoAlvo.indexOf(".") !== -1 ? 1 : 0;
+    var duracao = 1400, inicio = null;
+    function passo(ts) {
+      if (!inicio) inicio = ts;
+      var progresso = Math.min((ts - inicio) / duracao, 1);
+      var valorAtual = alvo * progresso;
+      el.textContent = casas ? valorAtual.toFixed(casas) : Math.floor(valorAtual);
+      if (progresso < 1) requestAnimationFrame(passo);
+      else el.textContent = casas ? alvo.toFixed(casas) : alvo;
+    }
+    requestAnimationFrame(passo);
+  }
+  if ("IntersectionObserver" in window) {
+    var obs = new IntersectionObserver(function(entradas) {
+      entradas.forEach(function(entrada) {
+        if (entrada.isIntersecting) {
+          entrada.target.classList.add("rd-in-view");
+          if (entrada.target.classList.contains("rd-counter")) animarContador(entrada.target);
+          obs.unobserve(entrada.target);
+        }
+      });
+    }, { threshold: 0.25 });
+    alvos.forEach(function(el) { obs.observe(el); });
+  } else {
+    alvos.forEach(function(el) {
+      el.classList.add("rd-in-view");
+      if (el.classList.contains("rd-counter")) animarContador(el);
+    });
+  }
+});
+</script></body>
+</html>
