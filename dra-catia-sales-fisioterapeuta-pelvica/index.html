@@ -373,16 +373,28 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
+      position: relative;
     }
 
     .rd-logo {
       display: flex;
       align-items: center;
+      justify-content: center;
       gap: 0.75rem;
+      position: relative;
+      z-index: 1010;
+      background: #FAF8F5;
+      padding: 14px 20px 20px 20px;
+      border: 2px solid var(--color-accent-rose);
+      border-radius: 8px 8px 24px 24px;
+      box-shadow: 0 12px 28px rgba(200, 138, 131, 0.22), inset 0 0 0 3px rgba(244, 232, 230, 0.8);
+      margin-bottom: -65px;
+      margin-top: -6px;
+      transition: var(--transition);
     }
 
     .rd-logo img {
-      height: 48px;
+      height: 105px;
       width: auto;
       object-fit: contain;
     }
@@ -1491,47 +1503,41 @@
   <section id="triagem" class="rd-section">
     <div class="rd-container">
       <div class="rd-section-header">
-        <span class="rd-eyebrow">Orientação Inicial</span>
-        <h2>Triagem Discreta de Saúde Pélvica</h2>
-        <p>Identifique qual acompanhamento é mais indicado para o seu momento atual de forma rápida e confidencial.</p>
+        <span class="rd-eyebrow">Triagem Discreta</span>
+        <h2>Descubra a melhor indicação para o seu momento</h2>
+        <p>Selecione abaixo o que melhor descreve seu caso para orientarmos seu atendimento.</p>
       </div>
 
       <div class="rd-interactive-preview">
         <div class="rd-preview-header">
-          <span class="rd-preview-tag">Assistente de Triagem</span>
-          <span style="font-size: 0.85rem; color: var(--color-text-muted);">Confidencial & Sem Compromisso</span>
+          <span class="rd-preview-tag">Orientação Inicial</span>
         </div>
-
         <div class="rd-triaging-step">
-          <label>Qual é o seu principal objetivo ou sintoma no momento?</label>
+          <label>Qual é a sua principal necessidade hoje?</label>
           <div class="rd-options-grid">
             <button class="rd-option-btn active" type="button">
               <span class="rd-option-radio"></span>
-              <span>Perda involuntária de xixi ao tossir, rir ou fazer esforço</span>
+              <span>Gestação ou Preparação para o Parto</span>
             </button>
             <button class="rd-option-btn" type="button">
               <span class="rd-option-radio"></span>
-              <span>Preparação para o parto ou recuperação pós-parto</span>
+              <span>Recuperação Pós-Parto</span>
             </button>
             <button class="rd-option-btn" type="button">
               <span class="rd-option-radio"></span>
-              <span>Dor ou desconforto durante a relação íntima</span>
+              <span>Incontinência Urinária / Desconforto</span>
             </button>
             <button class="rd-option-btn" type="button">
               <span class="rd-option-radio"></span>
-              <span>Acompanhamento pós-cirúrgico pélvico</span>
+              <span>Dores Pélvicas / Outras Disfunções</span>
             </button>
           </div>
         </div>
-
-        <div class="rd-triaging-result">
-          <h4 style="margin-bottom: 0.5rem; color: var(--color-brand-dark);">Recomendação Preliminar:</h4>
-          <p style="margin-bottom: 1rem; font-size: 0.95rem;">Para o quadro selecionado, o protocolo fisioterapêutico envolve uma avaliação funcional detalhada e fortalecimento direcionado do assoalho pélvico.</p>
-          <a href="https://wa.me/5521998392277?text=Ol%C3%A1!%20Fiz%20a%20triagem%20no%20site%20e%20gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o." class="rd-btn rd-btn-primary" style="font-size: 0.9rem;">
-            Conversar com a Dra. Cátia via WhatsApp
-          </a>
+        <div class="rd-triaging-result rd-text-center">
+          <p><strong>Recomendação:</strong> Agende uma avaliação individualizada com a Dra. Cátia Sales para traçar o plano de tratamento adequado ao seu diagnóstico.</p>
+          <a href="https://wa.me/5521998392277?text=Ol%C3%A1!%20Fiz%20a%20triagem%20no%20site%20e%20gostaria%20de%20agendar%20uma%20consulta." class="rd-btn rd-btn-primary" style="margin-top: 1rem;">Agendar Consulta no WhatsApp</a>
         </div>
-        <span class="rd-disclaimer-badge">* Esta triagem informativa não substitui uma avaliação presencial especializada.</span>
+        <span class="rd-disclaimer-badge">*Esta triagem não substitui a consulta presencial com avaliação física.</span>
       </div>
     </div>
   </section>
@@ -1539,34 +1545,19 @@
   <!-- ESPECIALISTA -->
   <section id="equipe" class="rd-section rd-section-alt">
     <div class="rd-container">
-      <div class="rd-section-header">
-        <span class="rd-eyebrow">Corpo Clínico</span>
-        <h2>Sua Especialista no Flamengo - RJ</h2>
-        <p>Conheça a trajetória da fisioterapeuta responsável pelo seu atendimento.</p>
-      </div>
-
       <div class="rd-team-card">
         <div class="rd-team-photo">
-          <img src="img/foto-3.png" alt="Dra. Cátia Sales - Fisioterapeuta Pélvica" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 320 400\'%3E%3Crect width=\'320\' height=\'400\' fill=\'%23FAF8F5\'/%3E%3Ccircle cx=\'160\' cy=\'150\' r=\'70\' fill=\'%23C88A83\' opacity=\'0.3\'/%3E%3Ctext x=\'160\' y=\'360\' font-family=\'sans-serif\' font-size=\'16\' fill=\'%2332373C\' text-anchor=\'middle\'%3EDra. C%C3%A1tia Sales%3C/text%3E%3C/svg%3E';">
+          <img src="img/foto-3.png" alt="Dra. Cátia Sales" onerror="this.onerror=null;this.src='img/foto-1.png';">
         </div>
         <div class="rd-team-info">
+          <span class="rd-eyebrow">Especialista</span>
           <h3>Dra. Cátia Sales</h3>
-          <p class="rd-team-role">Fisioterapeuta Pélvica e Obstétrica</p>
-          <p class="rd-team-bio">Formada em Fisioterapia pela Universidade Estácio de Sá (2006), a Dra. Cátia Sales dedica sua carreira ao atendimento humanizado e à reabilitação das disfunções do assoalho pélvico e saúde íntima da mulher. Com vasta experiência clínica, oferece suporte acolhedor e fundamentado para gestantes, puérperas e mulheres em todas as fases da vida.</p>
-          
+          <div class="rd-team-role">Fisioterapeuta Pélvica e Obstétrica</div>
+          <p class="rd-team-bio">Com vasta experiência em reabilitação do assoalho pélvico e saúde da mulher, Dra. Cátia Sales oferece um atendimento atencioso, acolhedor e fundamentado na prática clínica e evidências científicas no Rio de Janeiro.</p>
           <ul class="rd-credentials-list">
-            <li>
-              <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
-              Graduada pela Universidade Estácio de Sá (2006)
-            </li>
-            <li>
-              <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
-              Especialista em Fisioterapia Pélvica e Obstetrícia
-            </li>
-            <li>
-              <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
-              Atendimento presencial em consultório no Flamengo e domiciliar/maternidade
-            </li>
+            <li><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> Graduada em Fisioterapia pela Universidade Estácio de Sá (2006)</li>
+            <li><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> Especialização em Fisioterapia Pélvica e Obstétrica</li>
+            <li><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> Atendimento Presencial no Flamengo e Domiciliar / Maternidade</li>
           </ul>
         </div>
       </div>
@@ -1577,40 +1568,38 @@
   <section id="sobre" class="rd-section">
     <div class="rd-container">
       <div class="rd-about-wrapper">
-        <span class="rd-eyebrow">Sobre a Marca</span>
-        <h2>Espaço de Acolhimento e Recuperação</h2>
-        <p class="rd-about-subtitle">Excelência técnica e cuidado empático para sua saúde íntima</p>
-        <p>O consultório da Dra. Cátia Sales no Flamengo foi estruturado para proporcionar total privacidade, segurança e conforto às pacientes. Atuamos de forma ética e individualizada, combinando recursos tecnológicos modernos e técnicas manuais reconhecidas para promover a reabilitação funcional do assoalho pélvico e o bem-estar duradouro.</p>
+        <span class="rd-eyebrow">Sobre o Consultório</span>
+        <h2>Espaço de Acolhimento e Cuidado no Flamengo</h2>
+        <div class="rd-about-subtitle">Excelência em Saúde da Mulher</div>
+        <p>Localizado na Rua Dois de Dezembro, no coração do Flamengo, o consultório foi estruturado para proporcionar um ambiente privativo, seguro e confortável para todas as fases da sua vida.</p>
       </div>
     </div>
   </section>
 
-  <!-- COMO FUNCIONA / ATENDIMENTO -->
+  <!-- COMO FUNCIONA -->
   <section id="como-funciona" class="rd-section rd-section-alt">
     <div class="rd-container">
       <div class="rd-section-header">
         <span class="rd-eyebrow">Passo a Passo</span>
         <h2>Como Funciona o Atendimento</h2>
-        <p>Saiba o que esperar do seu acompanhamento fisioterapêutico desde a primeira consulta.</p>
+        <p>Conheça as etapas do seu acompanhamento fisioterapêutico.</p>
       </div>
 
       <div class="rd-steps-grid">
         <div class="rd-step-card">
           <div class="rd-step-num">01</div>
-          <h3>Avaliação Inicial Detalhada</h3>
-          <p>Mapeamento completo do seu histórico de saúde, queixas e avaliação clínica da musculatura pélvica em ambiente reservado.</p>
+          <h3>Primeiro Contato</h3>
+          <p>Agendamento simples e rápido via WhatsApp com nossa equipe para escolha do melhor horário.</p>
         </div>
-
         <div class="rd-step-card">
           <div class="rd-step-num">02</div>
-          <h3>Plano de Tratamento Personalizado</h3>
-          <p>Elaboração de um protocolo individualizado combinando cinesioterapia, terapia manual e recursos tecnológicos adequados.</p>
+          <h3>Avaliação Completa</h3>
+          <p>Anamnese detalhada e exame físico funcional do assoalho pélvico para entender suas necessidades.</p>
         </div>
-
         <div class="rd-step-card">
           <div class="rd-step-num">03</div>
-          <h3>Acompanhamento e Evolução</h3>
-          <p>Sessões contínuas com orientações para o dia a dia, visando atingir resultados sustentáveis e recuperar sua qualidade de vida.</p>
+          <h3>Plano de Tratamento</h3>
+          <p>Sessões personalizadas utilizando os recursos mais avançados para sua reabilitação e bem-estar.</p>
         </div>
       </div>
     </div>
@@ -1620,9 +1609,8 @@
   <section id="faq" class="rd-section">
     <div class="rd-container">
       <div class="rd-section-header">
-        <span class="rd-eyebrow">Tire suas Dúvidas</span>
+        <span class="rd-eyebrow">Tire Suas Dúvidas</span>
         <h2>Perguntas Frequentes</h2>
-        <p>Respostas para as principais dúvidas sobre o tratamento fisioterapêutico pélvico e obstétrico.</p>
       </div>
 
       <div class="rd-faq-container">
@@ -1634,7 +1622,6 @@
             </div>
           </details>
         </div>
-
         <div class="rd-faq-item">
           <details>
             <summary>O atendimento pós-parto pode ser feito em casa ou na maternidade?</summary>
@@ -1643,7 +1630,6 @@
             </div>
           </details>
         </div>
-
         <div class="rd-faq-item">
           <details>
             <summary>Onde está localizado o consultório de atendimento?</summary>
@@ -1652,161 +1638,59 @@
             </div>
           </details>
         </div>
-
-        <div class="rd-faq-item">
-          <details>
-            <summary>Quais recursos são utilizados durante as sessões de fisioterapia pélvica?</summary>
-            <div class="rd-faq-content">
-              Dependendo da necessidade de cada paciente, o tratamento pode utilizar cinesioterapia funcional, terapia manual, biofeedback, eletroestimulação, fotobiomodulação (Laser e LED), dilatadores e cones vaginais.
-            </div>
-          </details>
-        </div>
-
-        <div class="rd-faq-item">
-          <details>
-            <summary>Como faço para agendar um horário de consulta?</summary>
-            <div class="rd-faq-content">
-              O agendamento pode ser feito diretamente pelo WhatsApp. Basta clicar nos botões presentes nesta página para conversar com a equipe e agendar sua avaliação.
-            </div>
-          </details>
-        </div>
       </div>
     </div>
   </section>
 
-  <!-- CTA FINAL E FORMULÁRIO -->
-  <section class="rd-section rd-section-alt">
-    <div class="rd-container rd-text-center">
+  <!-- CTA FINAL -->
+  <section class="rd-section rd-section-dark rd-text-center">
+    <div class="rd-container">
       <div class="rd-cta-final-box">
-        <span class="rd-eyebrow">Agende sua Consulta</span>
-        <h2>Cuide da sua saúde pélvica com quem é especialista</h2>
-        <p style="max-width: 600px; margin: 0 auto 1.5rem auto;">Entre em contato pelo formulário abaixo ou agende diretamente via WhatsApp para iniciar seu tratamento individualizado.</p>
-
-        <form class="rd-form" action="#" method="POST" onsubmit="event.preventDefault(); window.location.href='https://wa.me/5521998392277?text=Ol%C3%A1!%20Preenchi%20o%20formul%C3%A1rio%20no%20site%20e%20gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o.';">
-          <div class="rd-form-row">
-            <div class="rd-form-group">
-              <label for="nome">Seu Nome Completo</label>
-              <input type="text" id="nome" name="nome" placeholder="Ex: Maria Silva" required>
-            </div>
-            <div class="rd-form-group">
-              <label for="telefone">Seu WhatsApp / Telefone</label>
-              <input type="tel" id="telefone" name="telefone" placeholder="(21) 99999-9999" required>
-            </div>
-          </div>
-          <div class="rd-form-group">
-            <label for="servico">Serviço de Interesse</label>
-            <select id="servico" name="servico" required>
-              <option value="" disabled selected>Selecione uma opção...</option>
-              <option value="fisioterapia-uroginecologica">Fisioterapia Pélvica / Uroginecológica</option>
-              <option value="fisioterapia-obstetrica">Fisioterapia Obstétrica / Gestante</option>
-              <option value="pos-parto">Atendimento Pós-Parto (Domiciliar/Maternidade)</option>
-              <option value="disfuncoes">Tratamento de Dores / Disfunções</option>
-            </select>
-          </div>
-          <div class="rd-form-consent">
-            <input type="checkbox" id="consent" required checked>
-            <label for="consent">Concordo em enviar meus dados para contato e agendamento de consulta.</label>
-          </div>
-          <button type="submit" class="rd-btn rd-btn-primary rd-btn-full">
-            Enviar Mensagem e Agendar no WhatsApp
-          </button>
-          <span class="rd-form-note">Seus dados estão seguros e serão utilizados exclusivamente para contato clínico.</span>
-        </form>
+        <h2>Recupere sua Liberdade e Bem-Estar</h2>
+        <p style="margin-bottom: 2rem; color: var(--color-text-muted);">Agende sua avaliação com a Dra. Cátia Sales e dê o primeiro passo para uma vida sem desconfortos.</p>
+        <a href="https://wa.me/5521998392277?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o." class="rd-btn rd-btn-primary">
+          Agendar Consulta via WhatsApp
+        </a>
       </div>
     </div>
   </section>
 
-  <!-- RODAPÉ -->
+  <!-- FOOTER -->
   <footer class="rd-footer">
     <div class="rd-container">
       <div class="rd-footer-grid">
         <div class="rd-footer-col">
-          <h4 style="margin-bottom: 0.8rem;">Dra. Cátia Sales</h4>
-          <p class="rd-footer-bio">Atendimento humanizado e especializado em fisioterapia pélvica e obstetrícia no Flamengo, Rio de Janeiro - RJ.</p>
+          <h4>Dra. Cátia Sales</h4>
+          <p class="rd-footer-bio">Fisioterapia Pélvica e Obstétrica no Flamengo, Rio de Janeiro. Reabilitação funcional com atendimento humanizado e individualizado.</p>
         </div>
-
         <div class="rd-footer-col">
           <h4>Navegação</h4>
           <ul>
             <li><a href="#beneficios">Benefícios</a></li>
             <li><a href="#servicos">Serviços</a></li>
-            <li><a href="#triagem">Triagem Discreta</a></li>
             <li><a href="#equipe">Especialista</a></li>
-            <li><a href="#sobre">Sobre</a></li>
-            <li><a href="#faq">Dúvidas Frequentes</a></li>
+            <li><a href="#faq">Dúvidas</a></li>
           </ul>
         </div>
-
         <div class="rd-footer-col">
-          <h4>Serviços</h4>
+          <h4>Contato</h4>
           <ul>
-            <li><a href="#servicos">Fisioterapia Uroginecológica</a></li>
-            <li><a href="#servicos">Fisioterapia Obstétrica</a></li>
-            <li><a href="#servicos">Reabilitação do Assoalho Pélvico</a></li>
-            <li><a href="#servicos">Atendimento Pós-Parto In Loco</a></li>
-          </ul>
-        </div>
-
-        <div class="rd-footer-col">
-          <h4>Contato & Local</h4>
-          <ul>
-            <li>Rua Dois de Dezembro, 38, Sala 1210</li>
-            <li>Flamengo - Rio de Janeiro, RJ</li>
-            <li>CEP: 22220-040</li>
+            <li>Rua Dois de Dezembro, 38 sala 1210 - Flamengo, RJ</li>
             <li>Tel: (21) 99839-2277</li>
-            <li>E-mail: contato@fisiocatiasales.com.br</li>
+            <li>Email: contato@fisiocatiasales.com.br</li>
           </ul>
         </div>
       </div>
-
       <div class="rd-footer-bottom">
-        <p>&copy; Dra. Cátia Sales - Fisioterapia Pélvica e Obstetrícia. Todos os direitos reservados.</p>
+        <p>&copy; Dra. Cátia Sales - Todos os direitos reservados.</p>
       </div>
     </div>
   </footer>
 
-  <!-- FLOATING WHATSAPP BUTTON -->
-  <a href="https://wa.me/5521998392277?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20consulta%20com%20a%20Dra.%20C%C3%A1tia%20Sales." class="rd-float-wa" aria-label="Atendimento via WhatsApp">
+  <!-- FLOATING WA -->
+  <a href="https://wa.me/5521998392277?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20consulta." class="rd-float-wa" aria-label="Contato via WhatsApp" target="_blank" rel="noopener">
     <svg viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
   </a>
 
-  <!-- SCRIPTS DE ANIMAÇÃO / INTERAÇÃO -->
-  <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      // Counter animation
-      const counters = document.querySelectorAll('.rd-counter');
-      const counterObserver = new IntersectionObserver((entries, observer) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            const counter = entry.target;
-            const target = parseInt(counter.getAttribute('data-target'));
-            let current = 0;
-            const increment = target / 30;
-            const timer = setInterval(() => {
-              current += increment;
-              if (current >= target) {
-                counter.innerText = target;
-                clearInterval(timer);
-              } else {
-                counter.innerText = Math.ceil(current);
-              }
-            }, 40);
-            observer.unobserve(counter);
-          }
-        });
-      }, { threshold: 0.5 });
-
-      counters.forEach(counter => counterObserver.observe(counter));
-
-      // Option selector in preview
-      const optionBtns = document.querySelectorAll('.rd-option-btn');
-      optionBtns.forEach(btn => {
-        btn.addEventListener('click', function() {
-          optionBtns.forEach(b => b.classList.remove('active'));
-          this.classList.add('active');
-        });
-      });
-    });
-  </script>
 </body>
 </html>
