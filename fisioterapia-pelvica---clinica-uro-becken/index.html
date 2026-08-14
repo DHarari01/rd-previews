@@ -1335,8 +1335,8 @@
 
       <div class="grid-2">
         <div class="equipe-card rd-card-fx">
-          <div class="equipe-header">
-            <img src="https://urobecken.com.br/wp-content/uploads/2019/12/IsabelFonseca.jpg" alt="Dra Isabel Fonseca" class="equipe-portrait">
+          <div class="equipe-header" style="flex-direction: column; align-items: flex-start; gap: 1rem;">
+            <img src="https://urobecken.com.br/wp-content/uploads/2019/12/IsabelFonseca.jpg" alt="Dra Isabel Fonseca" style="width: 100%; height: auto; aspect-ratio: 3/2; object-fit: cover; border-radius: var(--radius); box-shadow: var(--shadow-sm);">
             <div>
               <h3 class="equipe-nome">Dra Isabel Fonseca</h3>
               <div class="equipe-cargo">Diretora – Responsável pelo setor de Fisioterapia Pélvica Feminina</div>
@@ -1398,34 +1398,34 @@
   <section id="como-funciona" class="section-padding">
     <div class="container">
       <div class="section-header">
-        <span class="badge">Jornada do Paciente</span>
+        <span class="badge">Passo a Passo</span>
         <h2>Como Funciona o Atendimento</h2>
-        <p>Um passo a passo simples e transparente desde o primeiro contato até o seu tratamento.</p>
+        <p>Entenda a jornada do seu tratamento na Clínica Uro Becken, desde a primeira consulta até a alta.</p>
       </div>
 
       <div class="passos-grid">
         <div class="passo-card">
           <div class="passo-num">01</div>
-          <h3 class="passo-titulo">Agendamento</h3>
-          <p class="passo-texto">Entre em contato via WhatsApp ou telefone para escolher o melhor horário de atendimento.</p>
+          <h3 class="passo-titulo">Agendamento de Consulta</h3>
+          <p class="passo-texto">Entre em contato pelo telefone ou formulário para agendar sua avaliação inicial no melhor horário para você.</p>
         </div>
 
         <div class="passo-card">
           <div class="passo-num">02</div>
-          <h3 class="passo-titulo">Avaliação Inicial</h3>
-          <p class="passo-texto">Consulta detalhada e individualizada para entender o seu histórico e definir o plano terapêutico.</p>
+          <h3 class="passo-titulo">Avaliação Individualizada</h3>
+          <p class="passo-texto">Consulta detalhada em consultório privativo para diagnóstico funcional do assoalho pélvico e definição de metas.</p>
         </div>
 
         <div class="passo-card">
           <div class="passo-num">03</div>
-          <h3 class="passo-titulo">Tratamento Especializado</h3>
-          <p class="passo-texto">Sessões privativas utilizando técnicas baseadas em evidências científicas e tecnologia avançada.</p>
+          <h3 class="passo-titulo">Plano de Tratamento</h3>
+          <p class="passo-texto">Sessões personalizadas com fisioterapia baseada em evidências, equipamentos modernos e acompanhamento contínuo.</p>
         </div>
 
         <div class="passo-card">
           <div class="passo-num">04</div>
-          <h3 class="passo-titulo">Reembolso &amp; Acompanhamento</h3>
-          <p class="passo-texto">Fornecemos documentação completa para solicitação de reembolso junto ao seu plano de saúde.</p>
+          <h3 class="passo-titulo">Documentação para Reembolso</h3>
+          <p class="passo-texto">Emissão de recibos e laudos completos para solicitação de reembolso junto ao seu plano de saúde.</p>
         </div>
       </div>
     </div>
@@ -1435,9 +1435,9 @@
   <section id="faq" class="section-padding section-beneficios">
     <div class="container">
       <div class="section-header">
-        <span class="badge">Tire suas Dúvidas</span>
+        <span class="badge">Dúvidas Frequentes</span>
         <h2>Perguntas Frequentes</h2>
-        <p>Confira as principais dúvidas de nossos pacientes sobre atendimento e reembolso.</p>
+        <p>Tire suas dúvidas sobre o atendimento, reembolso e encaminhamento médico.</p>
       </div>
 
       <div class="faq-list">
@@ -1464,14 +1464,14 @@
     </div>
   </section>
 
-  <!-- CTA FINAL E CONTATO -->
+  <!-- CONTATO / CTA FINAL -->
   <section id="contato" class="section-padding section-cta-final">
     <div class="container">
       <div class="cta-form-container">
         <div class="cta-info">
-          <span class="badge">Agende sua Consulta</span>
-          <h2>Aumente sua Qualidade de Vida Hoje Mesmo</h2>
-          <p>Preencha o formulário para agendar sua avaliação ou tirar dúvidas com nossa equipe de atendimento.</p>
+          <span class="badge">Agende Sua Avaliação</span>
+          <h2>Pronto para Começar seu Tratamento?</h2>
+          <p>Preencha o formulário para agendar sua consulta na Clínica Uro Becken. Nossa equipe entrará em contato para confirmar o dia e horário.</p>
           
           <div class="cta-contacts">
             <div class="cta-contact-item">
@@ -1495,18 +1495,26 @@
             <input type="tel" id="telefone" class="form-input" placeholder="(21) 99999-9999" required>
           </div>
           <div class="form-group">
-            <label class="form-label" for="assunto">Especialidade / Assunto</label>
+            <label class="form-label" for="email">E-mail</label>
+            <input type="email" id="email" class="form-input" placeholder="seuemail@exemplo.com" required>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="assunto">Especialidade / Motivo do Contato</label>
             <select id="assunto" class="form-select">
               <option value="">Selecione uma opção</option>
-              <option value="Incontinência Urinária">Incontinência Urinária</option>
-              <option value="Fisioterapia Pélvica Feminina">Fisioterapia Pélvica Feminina</option>
-              <option value="Fisioterapia Pélvica Masculina">Fisioterapia Pélvica Masculina</option>
-              <option value="Dores Pélvicas">Dores Pélvicas / Vaginismo</option>
-              <option value="Outros">Outros Assuntos / Reembolso</option>
+              <option value="feminina">Fisioterapia Pélvica Feminina</option>
+              <option value="masculina">Fisioterapia Pélvica Masculina</option>
+              <option value="infantil">Fisioterapia Pélvica Infantil</option>
+              <option value="gestante">Pré e Pós-Parto</option>
+              <option value="outros">Outras Dúvidas / Reembolso</option>
             </select>
           </div>
+          <div class="form-group">
+            <label class="form-label" for="mensagem">Mensagem (Opcional)</label>
+            <textarea id="mensagem" class="form-textarea" rows="3" placeholder="Como podemos ajudar você?"></textarea>
+          </div>
           <button type="submit" class="btn btn-primary" style="width: 100%;">Solicitar Agendamento</button>
-          <p class="form-note">Seus dados estão seguros e não serão compartilhados.</p>
+          <p class="form-note">Seus dados estão seguros e serão utilizados apenas para contato profissional.</p>
         </form>
       </div>
     </div>
@@ -1517,11 +1525,11 @@
     <div class="container">
       <div class="footer-grid">
         <div>
-          <h4 class="footer-title">Clínica Uro Becken</h4>
-          <p style="font-size: 0.85rem; line-height: 1.6; margin-bottom: 1rem; color: #94A3B8;">Especializada em reabilitação pélvica funcional no Rio de Janeiro. Atendimento privativo, humanizado e baseado em evidências científicas.</p>
+          <h3 class="footer-title">Clínica Uro Becken</h3>
+          <p style="font-size: 0.85rem; line-height: 1.6; margin-bottom: 1rem;">Clínica especializada em reabilitação e fisioterapia pélvica no Centro do Rio de Janeiro. Atendimento ético, individualizado e focado na sua saúde pélvica.</p>
         </div>
         <div>
-          <h4 class="footer-title">Navegação</h4>
+          <h3 class="footer-title">Navegação</h3>
           <ul class="footer-links">
             <li><a href="#beneficios">Benefícios</a></li>
             <li><a href="#servicos">Serviços</a></li>
@@ -1531,49 +1539,38 @@
           </ul>
         </div>
         <div>
-          <h4 class="footer-title">Especialidades</h4>
+          <h3 class="footer-title">Especialidades</h3>
           <ul class="footer-links">
-            <li><a href="#servicos">Fisioterapia Pélvica Feminina</a></li>
-            <li><a href="#servicos">Fisioterapia Pélvica Masculina</a></li>
-            <li><a href="#servicos">Saúde Gestacional</a></li>
+            <li><a href="#servicos">Incontinência Urinária</a></li>
+            <li><a href="#servicos">Pós-Prostatectomia</a></li>
+            <li><a href="#servicos">Dores Pélvicas</a></li>
+            <li><a href="#servicos">Gestantes &amp; Parto</a></li>
             <li><a href="#servicos">Enurese Infantil</a></li>
           </ul>
         </div>
         <div>
-          <h4 class="footer-title">Contato</h4>
-          <p style="font-size: 0.85rem; margin-bottom: 0.5rem; color: #CBD5E1;">Av. Rio Branco 277, sala 1506, Cinelândia - Rio de Janeiro - RJ</p>
-          <p style="font-size: 0.85rem; color: #CBD5E1;">Tel: (21) 2533-2718 / 2533-2721</p>
+          <h3 class="footer-title">Atendimento</h3>
+          <p style="font-size: 0.85rem; margin-bottom: 0.5rem;">Segunda a Sexta: Com hora marcada</p>
+          <p style="font-size: 0.85rem; margin-bottom: 0.5rem;">Av. Rio Branco 277, sala 1506, Cinelândia - Rio de Janeiro - RJ</p>
+          <p style="font-size: 0.85rem;">Tel: (21) 2533-2718 / (21) 2533-2721</p>
         </div>
       </div>
 
       <div class="footer-bottom">
         <p>&copy; 2024 Clínica Uro Becken. Todos os direitos reservados.</p>
         <div class="footer-bottom-links">
-          <a href="#">Termos de Uso</a>
           <a href="#">Política de Privacidade</a>
+          <a href="#">Termos de Uso</a>
         </div>
       </div>
     </div>
   </footer>
 
-  <!-- BOTÃO FLUTUANTE AGENDAMENTO -->
+  <!-- BOTÃO FLUTUANTE -->
   <a href="#contato" class="floating-btn" aria-label="Agendar Consulta">
-    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 4H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2z"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
     <span>Agendar Consulta</span>
   </a>
 
-  <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('rd-in-view');
-          }
-        });
-      }, { threshold: 0.1 });
-
-      document.querySelectorAll('.rd-reveal, .rd-card-fx').forEach(el => observer.observe(el));
-    });
-  </script>
 </body>
 </html>
