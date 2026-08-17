@@ -1,0 +1,1597 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fisioterapia Pélvica | Dra. Andressa Schlobach</title>
+  <meta name="description" content="Especialista em Fisioterapia Pélvica. Reabilitação, prevenção e fortalecimento do assoalho pélvico com a Dra. Andressa Schlobach. Agende sua consulta via WhatsApp.">
+  <meta name="robots" content="index, follow">
+  
+  <!-- Open Graph / Social Media -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Fisioterapia Pélvica | Dra. Andressa Schlobach">
+  <meta property="og:description" content="Especialista em Fisioterapia Pélvica. Reabilitação, prevenção e fortalecimento do assoalho pélvico com a Dra. Andressa Schlobach. Agende sua consulta via WhatsApp.">
+  <meta property="og:image" content="https://ui-avatars.com/api/?name=Dra+Andressa+Schlobach&amp;background=1F3A34&amp;color=fff&amp;bold=true&amp;size=128">
+  
+  <!-- Preconnect External Resources -->
+  <link rel="preconnect" href="https://ui-avatars.com">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&amp;family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet">
+
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%231F3A34'/><text x='50%' y='55%' dominant-baseline='middle' text-anchor='middle' fill='%23C9A227' font-family='Georgia, serif' font-size='48' font-weight='bold'>AS</text></svg>">
+
+  <style>
+    /* RESET & BASE VARIABLES */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    :root {
+      --bg-main: #FAF7F2;
+      --bg-card: #FFFFFF;
+      --bg-subtle: #F2EFE9;
+      --bg-dark: #1F3A34;
+      --bg-dark-accent: #152824;
+      --text-dark: #1A1A1A;
+      --text-muted: #5A625E;
+      --text-light: #FAF7F2;
+      --text-light-muted: #C2C9C6;
+      --primary: #1F3A34;
+      --primary-hover: #152A26;
+      --accent-gold: #C9A227;
+      --accent-gold-hover: #B08E20;
+      --border-color: #E2DCD2;
+      --border-dark: #2D4E47;
+      --radius-sm: 6px;
+      --radius-md: 12px;
+      --radius-lg: 20px;
+      --shadow-sm: 0 4px 12px rgba(31, 58, 52, 0.04);
+      --shadow-md: 0 10px 30px rgba(31, 58, 52, 0.07);
+      --shadow-lg: 0 20px 40px rgba(31, 58, 52, 0.12);
+      --transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+      --container-width: 1200px;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      font-size: 16px;
+    }
+
+    body {
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+      background-color: var(--bg-main);
+      color: var(--text-dark);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+
+    /* TYPOGRAPHY */
+    h1, h2, h3, h4, .font-serif {
+      font-family: 'Fraunces', Georgia, serif;
+      font-weight: 600;
+      line-height: 1.2;
+      color: var(--primary);
+    }
+
+    h1 { font-size: clamp(2.2rem, 5vw, 3.8rem); letter-spacing: -0.02em; }
+    h2 { font-size: clamp(1.8rem, 3.5vw, 2.6rem); letter-spacing: -0.01em; }
+    h3 { font-size: clamp(1.3rem, 2.5vw, 1.75rem); }
+    h4 { font-size: 1.15rem; }
+
+    p {
+      color: var(--text-muted);
+      font-size: 1.05rem;
+    }
+
+    /* LAYOUT CONTAINERS */
+    .container {
+      width: 100%;
+      max-width: var(--container-width);
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+
+    section {
+      padding: 5rem 0;
+      position: relative;
+      opacity: 1;
+    }
+
+    @media (max-width: 768px) {
+      section { padding: 3.5rem 0; }
+    }
+
+    /* BUTTONS & UTILITIES */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.625rem;
+      padding: 1rem 1.85rem;
+      font-size: 1rem;
+      font-weight: 600;
+      text-decoration: none;
+      border-radius: var(--radius-sm);
+      transition: var(--transition);
+      cursor: pointer;
+      border: 1px solid transparent;
+      text-align: center;
+      line-height: 1.2;
+    }
+
+    .btn-primary {
+      background-color: var(--primary);
+      color: var(--text-light);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .btn-primary:hover {
+      background-color: var(--primary-hover);
+      color: var(--text-light);
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-md);
+    }
+
+    .btn-secondary {
+      background-color: transparent;
+      color: var(--primary);
+      border-color: var(--primary);
+    }
+
+    .btn-secondary:hover {
+      background-color: var(--primary);
+      color: var(--text-light);
+      transform: translateY(-2px);
+    }
+
+    .btn-gold {
+      background-color: var(--accent-gold);
+      color: #111;
+    }
+
+    .btn-gold:hover {
+      background-color: var(--accent-gold-hover);
+      transform: translateY(-2px);
+    }
+
+    .btn-full { width: 100%; }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.4rem 1rem;
+      background-color: rgba(31, 58, 52, 0.08);
+      color: var(--primary);
+      font-size: 0.875rem;
+      font-weight: 600;
+      border-radius: 50px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    /* TOPBAR */
+    .topbar {
+      background-color: var(--bg-dark);
+      color: var(--text-light-muted);
+      font-size: 0.875rem;
+      padding: 0.6rem 0;
+      border-bottom: 1px solid var(--border-dark);
+      text-align: center;
+    }
+
+    .topbar-text {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+    }
+
+    /* HEADER */
+    .header {
+      position: sticky;
+      top: 0;
+      background-color: rgba(250, 247, 242, 0.95);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--border-color);
+      z-index: 1000;
+      padding: 1rem 0;
+    }
+
+    .header-nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo-link {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      text-decoration: none;
+      color: var(--primary);
+    }
+
+    .logo-img {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+
+    .logo-brand {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .logo-title {
+      font-family: 'Fraunces', Georgia, serif;
+      font-weight: 700;
+      font-size: 1.15rem;
+      line-height: 1.1;
+      color: var(--primary);
+    }
+
+    .logo-subtitle {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      letter-spacing: 0.03em;
+    }
+
+    /* MENU DESKTOP & MOBILE */
+    .menu-toggle-input { display: none; }
+
+    .menu-toggle-label {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      padding: 5px;
+      z-index: 1001;
+    }
+
+    .menu-toggle-label span {
+      display: block;
+      width: 24px;
+      height: 2px;
+      background-color: var(--primary);
+      transition: var(--transition);
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+      list-style: none;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: var(--text-dark);
+      font-weight: 500;
+      font-size: 0.95rem;
+      transition: var(--transition);
+    }
+
+    .nav-links a:hover {
+      color: var(--accent-gold);
+    }
+
+    @media (max-width: 992px) {
+      .menu-toggle-label { display: flex; }
+      .nav-links {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 80%;
+        max-width: 320px;
+        height: 100vh;
+        background-color: var(--bg-main);
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 5rem 2rem 2rem;
+        box-shadow: var(--shadow-lg);
+        transition: right 0.4s ease;
+      }
+
+      .menu-toggle-input:checked ~ .nav-links {
+        right: 0;
+      }
+
+      .header-cta-desktop { display: none; }
+    }
+
+    /* HERO - TYPOGRAPHIC VARIANT */
+    .hero {
+      background: linear-gradient(180deg, var(--bg-main) 0%, var(--bg-subtle) 100%);
+      padding: 6rem 0 5rem;
+      text-align: center;
+      border-bottom: 1px solid var(--border-color);
+    }
+
+    .hero-content {
+      max-width: 860px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .hero-eyebrow {
+      margin-bottom: 1.5rem;
+    }
+
+    .hero-h1 {
+      margin-bottom: 1.5rem;
+      color: var(--primary);
+    }
+
+    .hero-p {
+      font-size: 1.2rem;
+      margin-bottom: 2.5rem;
+      max-width: 700px;
+    }
+
+    .hero-ctas {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1rem;
+      margin-bottom: 2.5rem;
+      width: 100%;
+    }
+
+    .hero-microproof {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      background: rgba(255, 255, 255, 0.7);
+      padding: 0.5rem 1.25rem;
+      border-radius: 50px;
+      border: 1px solid var(--border-color);
+    }
+
+    /* FAIXA DE CONFIANÇA */
+    .faixa-confianca {
+      background-color: var(--bg-card);
+      border-bottom: 1px solid var(--border-color);
+      padding: 2.5rem 0;
+    }
+
+    .confianca-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 2rem;
+      text-align: center;
+    }
+
+    .confianca-item {
+      padding: 1rem;
+    }
+
+    .confianca-destaque {
+      font-family: 'Fraunces', Georgia, serif;
+      font-size: 2rem;
+      font-weight: 700;
+      color: var(--primary);
+      margin-bottom: 0.3rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.3rem;
+    }
+
+    .confianca-legenda {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+    }
+
+    /* BENEFÍCIOS */
+    .beneficios-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1.75rem;
+      margin-top: 3rem;
+    }
+
+    .rd-card-fx {
+      background-color: var(--bg-card);
+      padding: 2.25rem;
+      border-radius: var(--radius-md);
+      border: 1px solid var(--border-color);
+      transition: var(--transition);
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      opacity: 1;
+    }
+
+    .rd-card-fx:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-md);
+      border-color: var(--accent-gold);
+    }
+
+    .beneficio-icon {
+      width: 48px;
+      height: 48px;
+      background-color: var(--bg-subtle);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 1.25rem;
+      color: var(--primary);
+    }
+
+    .beneficio-titulo {
+      margin-bottom: 0.75rem;
+      font-size: 1.25rem;
+    }
+
+    /* SERVIÇOS - TYPOGRAPHIC ELEGANT LIST */
+    .servicos-section {
+      background-color: var(--bg-subtle);
+    }
+
+    .servicos-list {
+      margin-top: 3rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+
+    .servico-row {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-md);
+      padding: 2.5rem;
+      display: grid;
+      grid-template-columns: 80px 1fr auto;
+      align-items: center;
+      gap: 2rem;
+      transition: var(--transition);
+    }
+
+    .servico-row:hover {
+      box-shadow: var(--shadow-md);
+      border-color: var(--accent-gold);
+    }
+
+    .servico-num {
+      font-family: 'Fraunces', Georgia, serif;
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: var(--accent-gold);
+      line-height: 1;
+    }
+
+    .servico-body h3 {
+      margin-bottom: 0.5rem;
+    }
+
+    @media (max-width: 768px) {
+      .servico-row {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+        padding: 1.75rem;
+      }
+    }
+
+    /* SOBRE */
+    .sobre-wrapper {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: center;
+    }
+
+    .sobre-card-editorial {
+      background-color: var(--bg-dark);
+      color: var(--text-light);
+      padding: 3.5rem;
+      border-radius: var(--radius-lg);
+      position: relative;
+    }
+
+    .sobre-card-editorial h3 {
+      color: var(--text-light);
+      margin-bottom: 1rem;
+    }
+
+    .sobre-card-editorial p {
+      color: var(--text-light-muted);
+    }
+
+    .sobre-quote-mark {
+      font-family: 'Fraunces', Georgia, serif;
+      font-size: 6rem;
+      color: var(--accent-gold);
+      position: absolute;
+      top: -1rem;
+      right: 2rem;
+      opacity: 0.3;
+      line-height: 1;
+    }
+
+    @media (max-width: 992px) {
+      .sobre-wrapper {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+      }
+    }
+
+    /* EQUIPE */
+    .equipe-section {
+      background-color: var(--bg-card);
+    }
+
+    .equipe-card {
+      max-width: 800px;
+      margin: 3rem auto 0;
+      background-color: var(--bg-main);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-lg);
+      padding: 3rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    .equipe-monogram {
+      width: 90px;
+      height: 90px;
+      border-radius: 50%;
+      background-color: var(--primary);
+      color: var(--accent-gold);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Fraunces', Georgia, serif;
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 1.5rem;
+      border: 3px solid var(--accent-gold);
+    }
+
+    .equipe-nome {
+      font-size: 1.75rem;
+      margin-bottom: 0.25rem;
+    }
+
+    .equipe-cargo {
+      color: var(--accent-gold);
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      font-size: 0.9rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .equipe-bio {
+      font-size: 1.1rem;
+      line-height: 1.7;
+      max-width: 650px;
+    }
+
+    /* DIFERENCIAIS */
+    .diferenciais-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+      margin-top: 3rem;
+    }
+
+    /* DESTAQUE EDITORIAL */
+    .editorial-section {
+      background-color: var(--bg-dark);
+      color: var(--text-light);
+      padding: 5rem 0;
+      text-align: center;
+    }
+
+    .editorial-container {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .editorial-section h2 {
+      color: var(--text-light);
+      margin-bottom: 1.25rem;
+    }
+
+    .editorial-section p {
+      color: var(--text-light-muted);
+      font-size: 1.2rem;
+      margin-bottom: 2.5rem;
+    }
+
+    /* FILOSOFIA EDITORIAL */
+    .filosofia-section {
+      background-color: var(--bg-subtle);
+    }
+
+    .filosofia-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      margin-top: 3rem;
+    }
+
+    .filosofia-card {
+      background-color: var(--bg-card);
+      padding: 2.5rem;
+      border-radius: var(--radius-md);
+      border-left: 4px solid var(--accent-gold);
+    }
+
+    .filosofia-card h4 {
+      color: var(--primary);
+      margin-bottom: 0.75rem;
+    }
+
+    /* COMO FUNCIONA */
+    .passos-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+      margin-top: 3rem;
+    }
+
+    .passo-card {
+      background-color: var(--bg-card);
+      padding: 2.5rem;
+      border-radius: var(--radius-md);
+      border: 1px solid var(--border-color);
+      position: relative;
+    }
+
+    .passo-badge {
+      font-family: 'Fraunces', Georgia, serif;
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: var(--primary);
+      opacity: 0.25;
+      margin-bottom: 1rem;
+      line-height: 1;
+    }
+
+    .passo-card h3 {
+      margin-bottom: 0.75rem;
+    }
+
+    /* FAQ */
+    .faq-wrapper {
+      max-width: 800px;
+      margin: 3rem auto 0;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .faq-item {
+      background-color: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      transition: var(--transition);
+    }
+
+    .faq-item details {
+      width: 100%;
+    }
+
+    .faq-item summary {
+      padding: 1.5rem 2rem;
+      font-weight: 600;
+      font-size: 1.1rem;
+      color: var(--primary);
+      cursor: pointer;
+      list-style: none;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      user-select: none;
+    }
+
+    .faq-item summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .faq-item summary::after {
+      content: '+';
+      font-size: 1.5rem;
+      font-family: sans-serif;
+      color: var(--accent-gold);
+      transition: transform 0.3s ease;
+    }
+
+    .faq-item details[open] summary::after {
+      content: '−';
+    }
+
+    .faq-answer {
+      padding: 0 2rem 1.5rem;
+      color: var(--text-muted);
+      border-top: 1px solid transparent;
+    }
+
+    /* CTA FINAL & FORM */
+    .cta-final-section {
+      background-color: var(--bg-subtle);
+    }
+
+    .cta-final-wrapper {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: start;
+    }
+
+    .form-container {
+      background-color: var(--bg-card);
+      padding: 2.5rem;
+      border-radius: var(--radius-lg);
+      border: 1px solid var(--border-color);
+      box-shadow: var(--shadow-md);
+    }
+
+    .form-group {
+      margin-bottom: 1.25rem;
+    }
+
+    .form-label {
+      display: block;
+      font-size: 0.875rem;
+      font-weight: 600;
+      color: var(--primary);
+      margin-bottom: 0.5rem;
+    }
+
+    .form-input, .form-select, .form-textarea {
+      width: 100%;
+      padding: 0.85rem 1rem;
+      font-family: inherit;
+      font-size: 0.95rem;
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-sm);
+      background-color: var(--bg-main);
+      color: var(--text-dark);
+      transition: var(--transition);
+    }
+
+    .form-input:focus, .form-select:focus, .form-textarea:focus {
+      outline: none;
+      border-color: var(--primary);
+      background-color: #FFF;
+    }
+
+    .form-checkbox-label {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.625rem;
+      font-size: 0.875rem;
+      color: var(--text-muted);
+      cursor: pointer;
+    }
+
+    .form-checkbox-label input[type="checkbox"] {
+      margin-top: 0.25rem;
+      accent-color: var(--primary);
+      width: 16px;
+      height: 16px;
+      cursor: pointer;
+    }
+
+    .form-checkbox-label a {
+      color: var(--primary);
+      text-decoration: underline;
+    }
+
+    .form-note {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      margin-top: 0.75rem;
+      text-align: center;
+    }
+
+    @media (max-width: 992px) {
+      .cta-final-wrapper {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+      }
+    }
+
+    /* FOOTER */
+    .footer {
+      background-color: var(--bg-dark);
+      color: var(--text-light-muted);
+      padding: 4rem 0 2rem;
+      border-top: 1px solid var(--border-dark);
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1.5fr;
+      gap: 3rem;
+      margin-bottom: 3.5rem;
+    }
+
+    .footer-col h4 {
+      color: var(--text-light);
+      margin-bottom: 1.25rem;
+      font-size: 1.1rem;
+    }
+
+    .footer-links {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+
+    .footer-links a {
+      color: var(--text-light-muted);
+      text-decoration: none;
+      font-size: 0.95rem;
+      transition: var(--transition);
+    }
+
+    .footer-links a:hover {
+      color: var(--accent-gold);
+    }
+
+    .footer-bottom {
+      border-top: 1px solid var(--border-dark);
+      padding-top: 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.85rem;
+    }
+
+    @media (max-width: 992px) {
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+      }
+    }
+
+    @media (max-width: 576px) {
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* FLOATING WHATSAPP BUTTON */
+    .floating-wa {
+      position: fixed;
+      bottom: 2rem;
+      right: 2rem;
+      width: 60px;
+      height: 60px;
+      background-color: #25D366;
+      color: #FFF;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 16px rgba(37, 211, 102, 0.4);
+      z-index: 9999;
+      transition: var(--transition);
+      text-decoration: none;
+    }
+
+    .floating-wa:hover {
+      transform: scale(1.1);
+      box-shadow: 0 6px 20px rgba(37, 211, 102, 0.6);
+    }
+
+    .floating-wa svg {
+      width: 32px;
+      height: 32px;
+      fill: currentColor;
+    }
+
+    /* SECTION HEADER COMPONENT */
+    .section-header {
+      text-align: center;
+      max-width: 700px;
+      margin: 0 auto 3rem;
+    }
+
+    .section-header h2 {
+      margin-top: 0.5rem;
+      margin-bottom: 1rem;
+    }
+
+    /* MODAL LEGAL SECTIONS */
+    .legal-modal {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background-color: rgba(0, 0, 0, 0.6);
+      z-index: 10000;
+      align-items: center;
+      justify-content: center;
+      padding: 1.5rem;
+    }
+
+    .legal-modal:target {
+      display: flex;
+    }
+
+    .legal-modal-content {
+      background-color: var(--bg-card);
+      max-width: 700px;
+      max-height: 80vh;
+      overflow-y: auto;
+      padding: 2.5rem;
+      border-radius: var(--radius-lg);
+      position: relative;
+      color: var(--text-dark);
+    }
+
+    .legal-modal-close {
+      position: absolute;
+      top: 1rem;
+      right: 1.5rem;
+      font-size: 1.75rem;
+      color: var(--primary);
+      text-decoration: none;
+      font-weight: bold;
+    }
+  </style>
+
+  <!-- Structured Data JSON-LD (MedicalBusiness + FAQPage) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "MedicalBusiness",
+        "@id": "https://draandressaschlobach.com.br/#business",
+        "name": "Fisioterapia Pélvica - Dra. Andressa Schlobach",
+        "url": "https://draandressaschlobach.com.br",
+        "logo": "https://ui-avatars.com/api/?name=Dra+Andressa+Schlobach&background=1F3A34&color=fff&bold=true&size=128",
+        "image": "https://ui-avatars.com/api/?name=Dra+Andressa+Schlobach&background=1F3A34&color=fff&bold=true&size=128",
+        "description": "Tratamento especializado em Fisioterapia Pélvica com a Dra. Andressa Schlobach, promovendo a reabilitação, prevenção e fortalecimento do assoalho pélvico.",
+        "medicalSpecialty": "Physiotherapy",
+        "priceRange": "$$",
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "5.0",
+          "reviewCount": "1"
+        }
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "O que é a Fisioterapia Pélvica?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "É uma área especializada da fisioterapia que previne e trata alterações nos músculos do assoalho pélvico, promovendo saúde, suporte anatômico e funcionalidade."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Para quem a Fisioterapia Pélvica é indicada?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "É indicada para pessoas que desejam prevenir ou tratar desconfortos pélvicos, fortalecer a musculatura da região ou recuperar a funcionalidade do assoalho pélvico."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Como funciona a primeira consulta?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Na primeira sessão é realizada uma entrevista detalhada e uma avaliação física funcional para compreender suas queixas e traçar o plano de tratamento ideal."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Como faço para agendar um atendimento?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Você pode clicar nos botões de WhatsApp da página para conversar diretamente, esclarecer dúvidas de atendimento e solicitar seu agendamento."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+<style>
+.rd-reveal{opacity:0;transform:translateY(24px);transition:opacity .6s ease,transform .6s ease;}
+.rd-reveal.rd-in-view{opacity:1;transform:translateY(0);}
+.rd-card-fx{transition:transform .35s ease,box-shadow .35s ease;}
+.rd-card-fx.rd-in-view,.rd-card-fx:hover{transform:scale(1.035);box-shadow:0 18px 40px rgba(0,0,0,0.14);}
+@media (prefers-reduced-motion: reduce){.rd-reveal,.rd-card-fx{transition:none;opacity:1;transform:none;}}
+</style></head>
+<body>
+
+  <!-- TOPBAR -->
+  <div class="topbar">
+    <div class="container">
+      <div class="topbar-text">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        <span>Atendimento especializado em saúde do assoalho pélvico com a Dra. Andressa Schlobach</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="container">
+      <nav class="header-nav">
+        <a href="#" class="logo-link" aria-label="Ir para o início">
+          <img src="https://ui-avatars.com/api/?name=Dra+Andressa+Schlobach&amp;background=1F3A34&amp;color=fff&amp;bold=true&amp;size=128" alt="Logo Dra. Andressa Schlobach" class="logo-img" width="44" height="44">
+          <div class="logo-brand">
+            <span class="logo-title">Dra. Andressa Schlobach</span>
+            <span class="logo-subtitle">FISIOTERAPIA PÉLVICA</span>
+          </div>
+        </a>
+
+        <input type="checkbox" id="menu-toggle" class="menu-toggle-input">
+        <label for="menu-toggle" class="menu-toggle-label" aria-label="Abrir Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </label>
+
+        <ul class="nav-links">
+          <li><a href="#beneficios">Benefícios</a></li>
+          <li><a href="#servicos">Serviços</a></li>
+          <li><a href="#sobre">Sobre</a></li>
+          <li><a href="#equipe">Especialista</a></li>
+          <li><a href="#diferenciais">Diferenciais</a></li>
+          <li><a href="#faq">Dúvidas</a></li>
+          <li class="header-cta-desktop">
+            <a href="https://wa.me/5521995355024?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20consulta%20em%20Fisioterapia%20P%C3%A9lvica%20com%20a%20Dra.%20Andressa%20Schlobach." class="btn btn-primary" style="padding: 0.6rem 1.25rem; font-size: 0.9rem;">Agendar Consulta</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO (TYPOGRAPHIC MINIMALIST) -->
+    <section class="hero" id="hero">
+      <div class="container">
+        <div class="hero-content">
+          <div class="hero-eyebrow">
+            <span class="badge">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+              Cuidado Especializado e Humano
+            </span>
+          </div>
+          <h1 class="hero-h1">Fisioterapia Pélvica para Restaurar sua Qualidade de Vida e Bem-Estar</h1>
+          <p class="hero-p">Tratamento focado na saúde do assoalho pélvico, promovendo fortalecimento, prevenção e reabilitação com escuta ativa e total privacidade.</p>
+          
+          <div class="hero-ctas">
+            <a href="https://wa.me/5521995355024?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20consulta%20em%20Fisioterapia%20P%C3%A9lvica%20com%20a%20Dra.%20Andressa%20Schlobach." class="btn btn-primary">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/></svg>
+              Agendar Consulta via WhatsApp
+            </a>
+            <a href="https://wa.me/5521995355024?text=Ol%C3%A1!%20Gostaria%20de%20tirar%20algumas%20d%C3%BAvidas%20sobre%20a%20Fisioterapia%20P%C3%A9lvica." class="btn btn-secondary">
+              Tirar Dúvidas no WhatsApp
+            </a>
+          </div>
+
+          <div class="hero-microproof">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="#C9A227"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <span>Nota 5.0 no Google • Atendimento Individual e Privativo</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAIXA DE CONFIANÇA -->
+    <section class="faixa-confianca">
+      <div class="container">
+        <div class="confianca-grid">
+          <div class="confianca-item">
+            <div class="confianca-destaque">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="#C9A227"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+              <span>Nota 5.0 no Google</span>
+            </div>
+            <p class="confianca-legenda">Avaliação máxima em atendimento</p>
+          </div>
+          <div class="confianca-item">
+            <div class="confianca-destaque">Privacidade Total</div>
+            <p class="confianca-legenda">Ambiente acolhedor e seguro</p>
+          </div>
+          <div class="confianca-item">
+            <div class="confianca-destaque">Foco no Alívio</div>
+            <p class="confianca-legenda">Abordagem individualizada e humanizada</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- BENEFÍCIOS -->
+    <section id="beneficios">
+      <div class="container">
+        <div class="section-header">
+          <span class="badge">Transformação e Saúde</span>
+          <h2>Benefícios do Tratamento Especializado</h2>
+          <p>O cuidado adequado do assoalho pélvico promove autonomia, saúde funcional e qualidade de vida duradoura.</p>
+        </div>
+
+        <div class="beneficios-grid">
+          <article class="rd-card-fx">
+            <div class="beneficio-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+            </div>
+            <h3 class="beneficio-titulo">Fortalecimento Muscular Pélvico</h3>
+            <p>Desenvolva maior consciência corporal e melhore a sustentação e funcionalidade da região pélvica para o dia a dia.</p>
+          </article>
+
+          <article class="rd-card-fx">
+            <div class="beneficio-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            </div>
+            <h3 class="beneficio-titulo">Prevenção e Reabilitação Funcional</h3>
+            <p>Tratamentos direcionados para prevenir desconfortos e restabelecer o equilíbrio normal da musculatura do assoalho pélvico.</p>
+          </article>
+
+          <article class="rd-card-fx">
+            <div class="beneficio-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3zM7 22H4a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h3"/></svg>
+            </div>
+            <h3 class="beneficio-titulo">Mais Autonomia e Conforto</h3>
+            <p>Recupere a confiança em suas atividades diárias e rotina com cuidados estruturados para o seu bem-estar integral.</p>
+          </article>
+
+          <article class="rd-card-fx">
+            <div class="beneficio-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l8.72-8.72 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+            </div>
+            <h3 class="beneficio-titulo">Acolhimento sem Tabus</h3>
+            <p>Atendimento empático e respeitoso para conversar e tratar questões íntimas com absoluta tranquilidade e segurança.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVIÇOS (LISTA NUMERADA ELEGANTE) -->
+    <section class="servicos-section" id="servicos">
+      <div class="container">
+        <div class="section-header">
+          <span class="badge">Frentes de Atuação</span>
+          <h2>Cuidados e Tratamentos Oferecidos</h2>
+          <p>Atendimento individualizado para prevenção, reabilitação e conscientização pélvica.</p>
+        </div>
+
+        <div class="servicos-list">
+          <div class="servico-row rd-card-fx">
+            <div class="servico-num">01</div>
+            <div class="servico-body">
+              <h3>Avaliação Pélvica Especializada</h3>
+              <p>Análise detalhada da funcionalidade e força da musculatura do assoalho pélvico para identificar as necessidades específicas do seu corpo.</p>
+            </div>
+            <div>
+              <a href="https://wa.me/5521995355024?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20Avalia%C3%A7%C3%A3o%20P%C3%A9lvica%20Especializada." class="btn btn-secondary">Agendar Avaliação</a>
+            </div>
+          </div>
+
+          <div class="servico-row rd-card-fx">
+            <div class="servico-num">02</div>
+            <div class="servico-body">
+              <h3>Reabilitação do Assoalho Pélvico</h3>
+              <p>Protocolos terapêuticos focados no tratamento de disfunções pélvicas, visando a recuperação completa da função muscular.</p>
+            </div>
+            <div>
+              <a href="https://wa.me/5521995355024?text=Ol%C3%A1!%20Gostaria%20de%20saber%20mais%20sobre%20a%20Reabilita%C3%A7%C3%A3o%20do%20Assoalho%20P%C3%A9lvica." class="btn btn-secondary">Saber Mais</a>
+            </div>
+          </div>
+
+          <div class="servico-row rd-card-fx">
+            <div class="servico-num">03</div>
+            <div class="servico-body">
+              <h3>Prevenção e Conscientização Pélvica</h3>
+              <p>Orientação e exercícios direcionados para proteger a região pélvica, prevenir desconfortos e promover a saúde em longo prazo.</p>
+            </div>
+            <div>
+              <a href="https://wa.me/5521995355024?text=Ol%C3%A1!%20Gostaria%20de%20falar%20com%20a%20Dra.%20Andressa%20sobre%20Preven%C3%A7%C3%A3o%20e%20Conscientiza%C3%A7%C3%A3o%20P%C3%A9lvica." class="btn btn-secondary">Falar com a Dra. Andressa</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SOBRE -->
+    <section id="sobre">
+      <div class="container">
+        <div class="sobre-wrapper">
+          <div>
+            <span class="badge" style="margin-bottom: 1rem;">Abordagem Técnica e Empática</span>
+            <h2>Cuidado Dedicado à Saúde do Assoalho Pélvico</h2>
+            <p style="font-size: 1.2rem; font-weight: 500; color: var(--primary); margin: 1rem 0 1.5rem;">
+              Um espaço seguro para cuidar do seu bem-estar com atenção técnica e sensibilidade.
+            </p>
+            <p>A Fisioterapia Pélvica é fundamental para a saúde integral, atuando diretamente na prevenção e reabilitação da musculatura pélvica. O trabalho da Dra. Andressa Schlobach une embasamento científico e acolhimento humano, oferecendo um ambiente onde cada paciente recebe escuta atenta, respeito e um plano de tratamento inteiramente personalizado.</p>
+          </div>
+
+          <div class="sobre-card-editorial rd-card-fx">
+            <div class="sobre-quote-mark">“</div>
+            <h3>Compromisso com o Bem-Estar Integral</h3>
+            <p>“A saúde pélvica não deve ser tratada com tabus. Nosso foco é oferecer um atendimento seguro, individualizado e focado em devolver a sua qualidade de vida com rigor técnico e escuta ativa.”</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EQUIPE / PROFISSIONAL -->
+    <section class="equipe-section" id="equipe">
+      <div class="container">
+        <div class="section-header">
+          <span class="badge">Sua Especialista</span>
+          <h2>Conheça quem Cuidará de Você</h2>
+        </div>
+
+        <article class="equipe-card rd-card-fx">
+          <div class="equipe-monogram">AS</div>
+          <h3 class="equipe-nome">Dra. Andressa Schlobach</h3>
+          <p class="equipe-cargo">Fisioterapia Pélvica</p>
+          <p class="equipe-bio">
+            Especialista em Fisioterapia Pélvica, dedicada ao cuidado humanizado e à reabilitação do assoalho pélvico. Atua com foco no bem-estar, na escuta ativa e no tratamento individualizado para cada paciente.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <!-- DIFERENCIAIS -->
+    <section id="diferenciais">
+      <div class="container">
+        <div class="section-header">
+          <span class="badge">Por que Escolher</span>
+          <h2>Nossos Diferenciais de Atendimento</h2>
+        </div>
+
+        <div class="diferenciais-grid">
+          <article class="rd-card-fx">
+            <div class="beneficio-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="8.5" cy="7" r="4"/><line x1="20" y1="8" x2="20" y2="14"/><line x1="23" y1="11" x2="17" y2="11"/></svg>
+            </div>
+            <h3>Plano de Tratamento Personalizado</h3>
+            <p>Cada consulta e protocolo terapêutico são adaptados estritamente às necessidades, rotina e objetivos de cada paciente.</p>
+          </article>
+
+          <article class="rd-card-fx">
+            <div class="beneficio-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+            </div>
+            <h3>Ambiente Privativo e Respeitoso</h3>
+            <p>Estrutura planejada para garantir total privacidade, acolhimento e conforto durante todas as etapas do atendimento.</p>
+          </article>
+
+          <article class="rd-card-fx">
+            <div class="beneficio-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><circle cx="12" cy="12" r="3"/></svg>
+            </div>
+            <h3>Abordagem Didática e Humanizada</h3>
+            <p>Explicações claras e transparentes sobre a anatomia e cada fase do tratamento, proporcionando segurança em todo o processo.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- DESTAQUE EDITORIAL -->
+    <section class="editorial-section">
+      <div class="container">
+        <div class="editorial-container">
+          <h2>Sua saúde pélvica merece atenção e cuidado preventivo</h2>
+          <p>Não espere o desconforto afetar a sua rotina. Agende uma avaliação e descubra como a fisioterapia pélvica pode transformar sua qualidade de vida.</p>
+          <a href="https://wa.me/5521995355024?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o%20p%C3%A9lvica." class="btn btn-gold">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/></svg>
+            Falar pelo WhatsApp
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- FILOSOFIA DE ATENDIMENTO / COMPOSIÇÃO EDITORIAL -->
+    <section class="filosofia-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="badge">Pilares de Atendimento</span>
+          <h2>A Experiência no Consultório</h2>
+          <p>Valores estruturantes para garantir sua total tranquilidade em todas as sessões.</p>
+        </div>
+
+        <div class="filosofia-grid">
+          <div class="filosofia-card rd-card-fx">
+            <h4>100% Individualizado</h4>
+            <p>Sessões exclusivas com horário reservado sem sobreposição, garantindo foco total no seu plano terapêutico.</p>
+          </div>
+          <div class="filosofia-card rd-card-fx">
+            <h4>Ambiente Acolhedor</h4>
+            <p>Espaço preparado com conforto térmico, sonoro e total sigilo para que você se sinta em segurança.</p>
+          </div>
+          <div class="filosofia-card rd-card-fx">
+            <h4>Embasamento Científico</h4>
+            <p>Condutas baseadas nas melhores evidências científicas atualizadas em fisioterapia pélvica funcional.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- COMO FUNCIONA -->
+    <section id="como-funciona">
+      <div class="container">
+        <div class="section-header">
+          <span class="badge">Passo a Passo</span>
+          <h2>Como Funciona o Atendimento</h2>
+          <p>Um caminho simples e estruturado para o início do seu tratamento.</p>
+        </div>
+
+        <div class="passos-grid">
+          <article class="passo-card rd-card-fx">
+            <div class="passo-badge">01</div>
+            <h3>Contato Inicial</h3>
+            <p>Envie uma mensagem pelo WhatsApp para tirar suas dúvidas primárias e solicitar as opções de horários.</p>
+          </article>
+
+          <article class="passo-card rd-card-fx">
+            <div class="passo-badge">02</div>
+            <h3>Avaliação Detalhada</h3>
+            <p>Realização de uma consulta minuciosa para entender o seu histórico de saúde e avaliar a região pélvica.</p>
+          </article>
+
+          <article class="passo-card rd-card-fx">
+            <div class="passo-badge">03</div>
+            <h3>Plano Terapêutico</h3>
+            <p>Definição de uma estratégia personalizada de exercícios e técnicas direcionadas para a sua reabilitação ou prevenção.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" style="background-color: var(--bg-subtle);">
+      <div class="container">
+        <div class="section-header">
+          <span class="badge">Tire suas Dúvidas</span>
+          <h2>Perguntas Frequentes</h2>
+          <p>Respostas claras para as principais objeções e questionamentos.</p>
+        </div>
+
+        <div class="faq-wrapper">
+          <div class="faq-item rd-card-fx">
+            <details open>
+              <summary>O que é a Fisioterapia Pélvica?</summary>
+              <div class="faq-answer">
+                <p>É uma área especializada da fisioterapia que previne e trata alterações nos músculos do assoalho pélvico, promovendo saúde, suporte anatômico e funcionalidade.</p>
+              </div>
+            </details>
+          </div>
+
+          <div class="faq-item rd-card-fx">
+            <details>
+              <summary>Para quem a Fisioterapia Pélvica é indicada?</summary>
+              <div class="faq-answer">
+                <p>É indicada para pessoas que desejam prevenir ou tratar desconfortos pélvicos, fortalecer a musculatura da região ou recuperar a funcionalidade do assoalho pélvico.</p>
+              </div>
+            </details>
+          </div>
+
+          <div class="faq-item rd-card-fx">
+            <details>
+              <summary>Como funciona a primeira consulta?</summary>
+              <div class="faq-answer">
+                <p>Na primeira sessão é realizada uma entrevista detalhada e uma avaliação física funcional para compreender suas queixas e traçar o plano de tratamento ideal.</p>
+              </div>
+            </details>
+          </div>
+
+          <div class="faq-item rd-card-fx">
+            <details>
+              <summary>Como faço para agendar um atendimento?</summary>
+              <div class="faq-answer">
+                <p>Você pode clicar nos botões de WhatsApp da página para conversar diretamente, esclarecer dúvidas de atendimento e solicitar seu agendamento.</p>
+              </div>
+            </details>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA FINAL + FORMULÁRIO -->
+    <section class="cta-final-section" id="contato">
+      <div class="container">
+        <div class="cta-final-wrapper">
+          <div>
+            <span class="badge" style="margin-bottom: 1rem;">Agende Hoje</span>
+            <h2>Priorize sua saúde e bem-estar pélvico hoje mesmo</h2>
+            <p style="font-size: 1.15rem; margin: 1.25rem 0 2rem;">
+              Entre em contato via WhatsApp para tirar suas dúvidas e agendar sua avaliação com a Dra. Andressa Schlobach.
+            </p>
+            <a href="https://wa.me/5521995355024?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20agendar%20minha%20avalia%C3%A7%C3%A3o." class="btn btn-primary" style="margin-bottom: 1.5rem;">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/></svg>
+              Agendar Avaliação no WhatsApp
+            </a>
+          </div>
+
+          <div class="form-container">
+            <h3 style="margin-bottom: 1.5rem; color: var(--primary);">Solicitar Contato</h3>
+            <form action="#" method="POST">
+              <div class="form-group">
+                <label class="form-label" for="nome">Nome Completo</label>
+                <input type="text" id="nome" name="nome" class="form-input" placeholder="Seu nome completo" required>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="telefone">WhatsApp / Telefone</label>
+                <input type="tel" id="telefone" name="telefone" class="form-input" placeholder="(21) 99535-5024" required>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="servico">Assunto de Interesse</label>
+                <select id="servico" name="servico" class="form-select">
+                  <option value="Avaliação Pélvica">Avaliação Pélvica Especializada</option>
+                  <option value="Reabilitação">Reabilitação do Assoalho Pélvico</option>
+                  <option value="Prevenção">Prevenção e Conscientização Pélvica</option>
+                  <option value="Outros">Outras Informações</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="mensagem">Mensagem (opcional)</label>
+                <textarea id="mensagem" name="mensagem" class="form-textarea" rows="3" placeholder="Como podemos te ajudar?"></textarea>
+              </div>
+              <div class="form-group">
+                <label class="form-checkbox-label">
+                  <input type="checkbox" id="privacidade" name="privacidade" required>
+                  <span>Li e aceito a <a href="#politica-privacidade">Política de Privacidade</a> e os <a href="#termos-uso">Termos de Uso</a>.</span>
+                </label>
+              </div>
+              <button type="submit" class="btn btn-primary btn-full">Enviar Solicitação</button>
+              <p class="form-note">Seus dados e informações estão protegidos e sob sigilo profissional.</p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <div class="logo-brand" style="margin-bottom: 1rem;">
+            <span class="logo-title" style="color: var(--text-light); font-size: 1.25rem;">Dra. Andressa Schlobach</span>
+            <span class="logo-subtitle" style="color: var(--accent-gold);">FISIOTERAPIA PÉLVICA</span>
+          </div>
+          <p style="color: var(--text-light-muted); font-size: 0.9rem; max-width: 320px;">
+            Atendimento especializado em Fisioterapia Pélvica, focado na prevenção, reabilitação e saúde do assoalho pélvico com cuidado e sigilo total.
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Navegação</h4>
+          <ul class="footer-links">
+            <li><a href="#beneficios">Benefícios</a></li>
+            <li><a href="#servicos">Serviços</a></li>
+            <li><a href="#sobre">Sobre</a></li>
+            <li><a href="#equipe">Especialista</a></li>
+            <li><a href="#diferenciais">Diferenciais</a></li>
+            <li><a href="#faq">Dúvidas</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Termos &amp; Privacidade</h4>
+          <ul class="footer-links">
+            <li><a href="#politica-privacidade">Política de Privacidade</a></li>
+            <li><a href="#termos-uso">Termos de Uso</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Atendimento</h4>
+          <ul class="footer-links">
+            <li>
+              <a href="https://wa.me/5521995355024?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20consulta." target="_blank" rel="noopener noreferrer">
+                WhatsApp: (21) 99535-5024
+              </a>
+            </li>
+            <li style="color: var(--text-light-muted); font-size: 0.9rem;">
+              Atendimento individualizado com agendamento prévio.
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; Dra. Andressa Schlobach - Fisioterapia Pélvica. Todos os direitos reservados.</p>
+        <div style="display: flex; gap: 1.5rem;">
+          <a href="#politica-privacidade" style="color: var(--text-light-muted); text-decoration: none;">Política de Privacidade</a>
+          <a href="#termos-uso" style="color: var(--text-light-muted); text-decoration: none;">Termos de Uso</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- FLOATING WHATSAPP BUTTON -->
+  <a href="https://wa.me/5521995355024?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20consulta%20em%20Fisioterapia%20P%C3%A9lvica." class="floating-wa" aria-label="Falar pelo WhatsApp" target="_blank" rel="noopener noreferrer">
+    <svg viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/></svg>
+  </a>
+
+  <!-- MODAL POLÍTICA DE PRIVACIDADE -->
+  <div id="politica-privacidade" class="legal-modal">
+    <div class="legal-modal-content">
+      <a href="#" class="legal-modal-close" aria-label="Fechar">&times;</a>
+      <h3 style="margin-bottom: 1rem; color: var(--primary);">Política de Privacidade</h3>
+      <p style="margin-bottom: 1rem;">
+        Sua privacidade é nossa prioridade. Todos os dados fornecidos por meio deste formulário ou em contato via WhatsApp são mantidos sob absoluto sigilo profissional e tratados em total conformidade com a Lei Geral de Proteção de Dados (LGPD).
+      </p>
+      <p style="margin-bottom: 1rem;">
+        As informações coletadas destinam-se exclusivamente ao agendamento de consultas, resposta a dúvidas sobre o atendimento em Fisioterapia Pélvica e organização dos atendimentos da Dra. Andressa Schlobach. Nenhuma informação é compartilhada com terceiros sem sua autorização expressa.
+      </p>
+    </div>
+  </div>
+
+  <!-- MODAL TERMOS DE USO -->
+  <div id="termos-uso" class="legal-modal">
+    <div class="legal-modal-content">
+      <a href="#" class="legal-modal-close" aria-label="Fechar">&times;</a>
+      <h3 style="margin-bottom: 1rem; color: var(--primary);">Termos de Uso</h3>
+      <p style="margin-bottom: 1rem;">
+        As informações contidas neste site possuem caráter estritamente informativo e educacional sobre os serviços de Fisioterapia Pélvica prestados pela Dra. Andressa Schlobach.
+      </p>
+      <p style="margin-bottom: 1rem;">
+        O conteúdo aqui publicado não substitui a necessidade de avaliação e consulta fisioterapêutica individualizada presencial ou por teleconsulta regulamentada. O agendamento prévio é necessário para todos os atendimentos.
+      </p>
+    </div>
+  </div>
+
+<div style="position:fixed;bottom:16px;left:16px;z-index:2147483647;background:rgba(255,255,255,0.96);border-radius:999px;padding:8px 18px 8px 10px;box-shadow:0 6px 20px rgba(0,0,0,0.22);display:flex;align-items:center;gap:7px;font-family:Inter,-apple-system,sans-serif;"><img src="https://rd-previews-dharari01s-projects.vercel.app/_assets/logo-rd-exclusive.png" alt="RD Exclusive" style="height:26px;width:auto;display:block;"><span style="font-size:14px;font-weight:700;color:#1A1A1A;white-space:nowrap;">Protótipo por RD Exclusive</span></div><script>
+document.addEventListener("DOMContentLoaded", function() {
+  var alvos = document.querySelectorAll(".rd-reveal, .rd-card-fx, .rd-counter");
+  function animarContador(el) {
+    var textoAlvo = el.getAttribute("data-target") || "0";
+    var alvo = parseFloat(textoAlvo);
+    var casas = textoAlvo.indexOf(".") !== -1 ? 1 : 0;
+    var duracao = 1400, inicio = null;
+    function passo(ts) {
+      if (!inicio) inicio = ts;
+      var progresso = Math.min((ts - inicio) / duracao, 1);
+      var valorAtual = alvo * progresso;
+      el.textContent = casas ? valorAtual.toFixed(casas) : Math.floor(valorAtual);
+      if (progresso < 1) requestAnimationFrame(passo);
+      else el.textContent = casas ? alvo.toFixed(casas) : alvo;
+    }
+    requestAnimationFrame(passo);
+  }
+  if ("IntersectionObserver" in window) {
+    var obs = new IntersectionObserver(function(entradas) {
+      entradas.forEach(function(entrada) {
+        if (entrada.isIntersecting) {
+          entrada.target.classList.add("rd-in-view");
+          if (entrada.target.classList.contains("rd-counter")) animarContador(entrada.target);
+          obs.unobserve(entrada.target);
+        }
+      });
+    }, { threshold: 0.25 });
+    alvos.forEach(function(el) { obs.observe(el); });
+  } else {
+    alvos.forEach(function(el) {
+      el.classList.add("rd-in-view");
+      if (el.classList.contains("rd-counter")) animarContador(el);
+    });
+  }
+});
+</script></body>
+</html>
