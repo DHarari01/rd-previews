@@ -1,0 +1,1787 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Instituto Fisio Sitta | Fisioterapia Especializada em Vila Romana / Lapa SP</title>
+  <meta name="description" content="Tratamentos fisioterapêuticos personalizados com o Dr. Robson Sitta (+20 anos de experiência e +1M de inscritos). Atendimento na Vila Romana, em casa ou teleconsulta.">
+  <meta name="keywords" content="clinica de fisioterapia na vila romana lapa sp, dr robson sitta fisioterapeuta, fisioterapia especializada lapa sp, reabilitacao vestibular tontura sp, fisioterapia em casa sao paulo, teleconsulta fisioterapia gravada">
+  
+  <!-- Open Graph -->
+  <meta property="og:title" content="Instituto Fisio Sitta | Fisioterapia Especializada em Vila Romana / Lapa SP">
+  <meta property="og:description" content="Tratamentos fisioterapêuticos personalizados com o Dr. Robson Sitta (+20 anos de experiência e +1M de inscritos). Atendimento na Vila Romana, em casa ou teleconsulta.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%231F3A34'/><text x='50%' y='65%' font-size='55' font-family='serif' font-weight='bold' fill='%23C9A227' text-anchor='middle'>S</text></svg>">
+
+  <!-- Favicon Embutido -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%231F3A34'/><text x='50%' y='65%' font-size='55' font-family='serif' font-weight='bold' fill='%23C9A227' text-anchor='middle'>S</text></svg>" type="image/svg+xml">
+
+  <!-- Preconnect -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..800;1,9..144,300..800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    /* VARIABLES & RESET */
+    :root {
+      --primary: #1F3A34;
+      --primary-light: #2A4D45;
+      --primary-dark: #142622;
+      --accent: #C9A227;
+      --accent-hover: #B38E1F;
+      --bg-warm: #FAF7F2;
+      --bg-card: #FFFFFF;
+      --bg-alt: #F2EDE4;
+      --text-main: #1A1A1A;
+      --text-muted: #525252;
+      --text-light: #FAF7F2;
+      --border-color: #E2DACD;
+      --font-heading: 'Fraunces', Georgia, serif;
+      --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      --container-max: 1200px;
+      --transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      font-size: 16px;
+    }
+
+    body {
+      font-family: var(--font-body);
+      background-color: var(--bg-warm);
+      color: var(--text-main);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+      transition: var(--transition);
+    }
+
+    /* TYPOGRAPHY */
+    h1, h2, h3, h4, .font-serif {
+      font-family: var(--font-heading);
+      font-weight: 600;
+      line-height: 1.25;
+      color: var(--primary);
+    }
+
+    .section-eyebrow {
+      display: inline-block;
+      font-size: 0.85rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: var(--accent);
+      margin-bottom: 0.75rem;
+    }
+
+    .section-title {
+      font-size: clamp(2rem, 4vw, 3rem);
+      margin-bottom: 1rem;
+      letter-spacing: -0.02em;
+    }
+
+    .section-subtitle {
+      font-size: 1.125rem;
+      color: var(--text-muted);
+      max-width: 700px;
+      margin-bottom: 2.5rem;
+    }
+
+    /* LAYOUT UTILS */
+    .container {
+      width: 100%;
+      max-width: var(--container-max);
+      margin-left: auto;
+      margin-right: auto;
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
+    }
+
+    .section-padding {
+      padding-top: 5rem;
+      padding-bottom: 5rem;
+    }
+
+    /* BUTTONS */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.75rem;
+      padding: 1rem 2rem;
+      font-size: 1rem;
+      font-weight: 600;
+      border-radius: 50px;
+      cursor: pointer;
+      border: 2px solid transparent;
+      transition: var(--transition);
+      text-align: center;
+    }
+
+    .btn-primary {
+      background-color: var(--primary);
+      color: #FFFFFF;
+      box-shadow: 0 4px 15px rgba(31, 58, 52, 0.2);
+    }
+
+    .btn-primary:hover {
+      background-color: var(--primary-light);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 25px rgba(31, 58, 52, 0.3);
+    }
+
+    .btn-accent {
+      background-color: var(--accent);
+      color: var(--primary-dark);
+      font-weight: 700;
+      box-shadow: 0 4px 15px rgba(201, 162, 39, 0.25);
+    }
+
+    .btn-accent:hover {
+      background-color: var(--accent-hover);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 25px rgba(201, 162, 39, 0.35);
+    }
+
+    .btn-outline {
+      border-color: var(--primary);
+      color: var(--primary);
+      background-color: transparent;
+    }
+
+    .btn-outline:hover {
+      background-color: var(--primary);
+      color: #FFFFFF;
+      transform: translateY(-2px);
+    }
+
+    .btn-sm {
+      padding: 0.6rem 1.25rem;
+      font-size: 0.875rem;
+    }
+
+    /* TOPBAR */
+    .topbar {
+      background-color: var(--primary-dark);
+      color: var(--text-light);
+      font-size: 0.85rem;
+      padding: 0.6rem 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .topbar-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .topbar-info {
+      display: flex;
+      gap: 1.5rem;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .topbar-info a, .topbar-info span {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      color: rgba(255, 255, 255, 0.85);
+    }
+
+    .topbar-info a:hover {
+      color: var(--accent);
+    }
+
+    /* HEADER */
+    .header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background-color: rgba(250, 247, 242, 0.95);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--border-color);
+      padding: 1rem 0;
+    }
+
+    .header-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .brand-logo {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      font-family: var(--font-heading);
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--primary);
+    }
+
+    .brand-logo img {
+      width: 36px;
+      height: 36px;
+      border-radius: 8px;
+    }
+
+    .nav-menu {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+      list-style: none;
+    }
+
+    .nav-link {
+      font-size: 0.95rem;
+      font-weight: 500;
+      color: var(--text-main);
+    }
+
+    .nav-link:hover {
+      color: var(--accent);
+    }
+
+    /* Mobile Checkbox Hack Menu */
+    .menu-toggle {
+      display: none;
+    }
+
+    .menu-btn {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      padding: 5px;
+    }
+
+    .menu-btn span {
+      width: 25px;
+      height: 2px;
+      background-color: var(--primary);
+      transition: var(--transition);
+    }
+
+    /* HERO SECTION */
+    .hero {
+      padding: 6rem 0 5rem 0;
+      background: linear-gradient(135deg, var(--bg-warm) 0%, #FAF3E6 100%);
+      position: relative;
+      border-bottom: 1px solid var(--border-color);
+    }
+
+    .hero-content {
+      max-width: 900px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .hero .section-eyebrow {
+      background-color: rgba(201, 162, 39, 0.15);
+      padding: 0.4rem 1.2rem;
+      border-radius: 30px;
+      border: 1px solid rgba(201, 162, 39, 0.3);
+      margin-bottom: 1.5rem;
+    }
+
+    .hero h1 {
+      font-size: clamp(2.5rem, 5vw, 4.25rem);
+      font-weight: 700;
+      line-height: 1.15;
+      color: var(--primary);
+      margin-bottom: 1.5rem;
+      letter-spacing: -0.03em;
+    }
+
+    .hero p {
+      font-size: clamp(1.1rem, 2vw, 1.35rem);
+      color: var(--text-muted);
+      line-height: 1.6;
+      margin-bottom: 2.5rem;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .hero-actions {
+      display: flex;
+      justify-content: center;
+      gap: 1.25rem;
+      flex-wrap: wrap;
+      margin-bottom: 2.5rem;
+    }
+
+    .micro-proof {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.925rem;
+      color: var(--primary);
+      font-weight: 600;
+      background: rgba(31, 58, 52, 0.05);
+      padding: 0.75rem 1.5rem;
+      border-radius: 50px;
+      border: 1px solid rgba(31, 58, 52, 0.1);
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    /* FAIXA DE CONFIANÇA / COUNTERS */
+    .numbers-bar {
+      background-color: var(--primary);
+      color: var(--text-light);
+      padding: 3rem 0;
+    }
+
+    .numbers-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 2rem;
+      text-align: center;
+    }
+
+    .number-item {
+      padding: 0.5rem;
+    }
+
+    .number-val {
+      font-family: var(--font-heading);
+      font-size: 2.75rem;
+      font-weight: 700;
+      color: var(--accent);
+      line-height: 1;
+      margin-bottom: 0.5rem;
+    }
+
+    .number-label {
+      font-size: 0.9rem;
+      color: rgba(255, 255, 255, 0.85);
+      font-weight: 500;
+    }
+
+    /* CARD STYLING FX */
+    .rd-card-fx {
+      background-color: var(--bg-card);
+      border-radius: 16px;
+      border: 1px solid var(--border-color);
+      transition: var(--transition);
+      opacity: 1 !important;
+    }
+
+    .rd-card-fx:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 35px rgba(31, 58, 52, 0.08);
+      border-color: rgba(201, 162, 39, 0.4);
+    }
+
+    /* BENEFICIOS */
+    .beneficios-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1.75rem;
+    }
+
+    .beneficio-card {
+      padding: 2.25rem;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .beneficio-icon {
+      width: 50px;
+      height: 50px;
+      background-color: rgba(31, 58, 52, 0.08);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 1.25rem;
+      color: var(--primary);
+    }
+
+    .beneficio-card h3 {
+      font-size: 1.3rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .beneficio-card p {
+      color: var(--text-muted);
+      font-size: 0.975rem;
+      line-height: 1.6;
+    }
+
+    /* SERVIÇOS */
+    .servicos-section {
+      background-color: var(--bg-alt);
+    }
+
+    .servicos-list {
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+    }
+
+    .servico-item {
+      padding: 1.75rem 2rem;
+      display: grid;
+      grid-template-columns: 80px 1.5fr 2fr 180px;
+      align-items: center;
+      gap: 1.5rem;
+      border-bottom: 1px solid var(--border-color);
+    }
+
+    .servico-num {
+      font-family: var(--font-heading);
+      font-size: 2rem;
+      font-weight: 700;
+      color: var(--accent);
+    }
+
+    .servico-nome {
+      font-size: 1.3rem;
+      color: var(--primary);
+    }
+
+    .servico-desc {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+    }
+
+    .servico-cta {
+      text-align: right;
+    }
+
+    /* SOBRE A MARCA */
+    .sobre-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: center;
+    }
+
+    .sobre-box {
+      background-color: var(--primary);
+      color: var(--text-light);
+      padding: 3.5rem;
+      border-radius: 24px;
+      position: relative;
+    }
+
+    .sobre-box h3 {
+      color: #FFFFFF;
+      font-size: 2rem;
+      margin-bottom: 1.25rem;
+    }
+
+    .sobre-box p {
+      color: rgba(255, 255, 255, 0.85);
+      margin-bottom: 1.5rem;
+      font-size: 1.05rem;
+    }
+
+    .sobre-badge {
+      display: inline-block;
+      background: var(--accent);
+      color: var(--primary-dark);
+      font-weight: 700;
+      padding: 0.4rem 1rem;
+      border-radius: 20px;
+      font-size: 0.85rem;
+      margin-bottom: 1.5rem;
+    }
+
+    /* EQUIPE */
+    .equipe-section {
+      background-color: var(--bg-warm);
+    }
+
+    .equipe-card {
+      padding: 3.5rem;
+      max-width: 900px;
+      margin: 0 auto;
+      border: 1px solid var(--border-color);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+    }
+
+    .equipe-header {
+      border-bottom: 2px solid var(--bg-warm);
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+
+    .equipe-nome {
+      font-size: 2.25rem;
+      color: var(--primary);
+      margin-bottom: 0.25rem;
+    }
+
+    .equipe-cargo {
+      font-size: 1.1rem;
+      color: var(--accent);
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .equipe-bio {
+      font-size: 1.05rem;
+      line-height: 1.8;
+      color: var(--text-muted);
+      margin-bottom: 2rem;
+    }
+
+    .credentials-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+    }
+
+    .cred-pill {
+      background-color: rgba(31, 58, 52, 0.06);
+      border: 1px solid rgba(31, 58, 52, 0.12);
+      padding: 0.5rem 1rem;
+      border-radius: 30px;
+      font-size: 0.875rem;
+      color: var(--primary);
+      font-weight: 600;
+    }
+
+    /* DIFERENCIAIS */
+    .diferenciais-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 2rem;
+    }
+
+    .diferencial-card {
+      padding: 2.5rem;
+      position: relative;
+    }
+
+    .diferencial-num {
+      font-family: var(--font-heading);
+      font-size: 3rem;
+      color: rgba(201, 162, 39, 0.3);
+      line-height: 1;
+      margin-bottom: 1rem;
+      font-weight: 700;
+    }
+
+    .diferencial-card h3 {
+      font-size: 1.25rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .diferencial-card p {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+    }
+
+    /* DESTAQUE EDITORIAL YOUTUBE */
+    .editorial-section {
+      background-color: var(--primary);
+      color: var(--text-light);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .editorial-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3.5rem;
+      align-items: center;
+    }
+
+    .editorial-text h2 {
+      color: #FFFFFF;
+      font-size: 2.5rem;
+      margin-bottom: 1.25rem;
+    }
+
+    .editorial-text p {
+      color: rgba(255, 255, 255, 0.85);
+      font-size: 1.1rem;
+      line-height: 1.7;
+      margin-bottom: 2rem;
+    }
+
+    .video-wrapper {
+      position: relative;
+      padding-bottom: 56.25%;
+      height: 0;
+      overflow: hidden;
+      border-radius: 16px;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+      border: 2px solid rgba(201, 162, 39, 0.3);
+    }
+
+    .video-wrapper iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+
+    /* COMO FUNCIONA */
+    .steps-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 2rem;
+      position: relative;
+    }
+
+    .step-card {
+      padding: 2.5rem;
+      position: relative;
+      background-color: var(--bg-card);
+      border-radius: 16px;
+      border: 1px solid var(--border-color);
+    }
+
+    .step-badge {
+      width: 48px;
+      height: 48px;
+      background-color: var(--primary);
+      color: var(--accent);
+      font-family: var(--font-heading);
+      font-size: 1.25rem;
+      font-weight: 700;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 1.5rem;
+    }
+
+    .step-card h3 {
+      font-size: 1.3rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .step-card p {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+    }
+
+    /* FAQ ACCORDION */
+    .faq-container {
+      max-width: 850px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .faq-item {
+      background-color: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: 12px;
+      overflow: hidden;
+    }
+
+    .faq-question {
+      padding: 1.5rem 2rem;
+      width: 100%;
+      text-align: left;
+      background: none;
+      border: none;
+      font-family: var(--font-heading);
+      font-size: 1.15rem;
+      font-weight: 600;
+      color: var(--primary);
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .faq-question::after {
+      content: '+';
+      font-size: 1.5rem;
+      color: var(--accent);
+      transition: var(--transition);
+      font-family: sans-serif;
+    }
+
+    .faq-item.active .faq-question::after {
+      content: '−';
+    }
+
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease-out, padding 0.3s ease-out;
+      padding: 0 2rem;
+      color: var(--text-muted);
+      font-size: 0.975rem;
+      line-height: 1.7;
+    }
+
+    .faq-item.active .faq-answer {
+      padding: 0 2rem 1.5rem 2rem;
+      max-height: 500px;
+    }
+
+    /* CTA FINAL & FORM */
+    .cta-final-section {
+      background: linear-gradient(135deg, var(--bg-alt) 0%, #FAF3E6 100%);
+      border-top: 1px solid var(--border-color);
+    }
+
+    .cta-form-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: start;
+    }
+
+    .cta-text h2 {
+      font-size: 2.5rem;
+      margin-bottom: 1.25rem;
+    }
+
+    .cta-text p {
+      font-size: 1.1rem;
+      color: var(--text-muted);
+      margin-bottom: 2rem;
+    }
+
+    .cta-info-list {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      margin-bottom: 2rem;
+    }
+
+    .cta-info-item {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      font-size: 0.95rem;
+      color: var(--primary);
+      font-weight: 500;
+    }
+
+    .cta-form-card {
+      background-color: var(--bg-card);
+      padding: 2.5rem;
+      border-radius: 20px;
+      border: 1px solid var(--border-color);
+      box-shadow: 0 15px 35px rgba(0,0,0,0.05);
+    }
+
+    .form-group {
+      margin-bottom: 1.25rem;
+    }
+
+    .form-group label {
+      display: block;
+      font-size: 0.875rem;
+      font-weight: 600;
+      color: var(--primary);
+      margin-bottom: 0.5rem;
+    }
+
+    .form-control {
+      width: 100%;
+      padding: 0.85rem 1rem;
+      font-size: 0.95rem;
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
+      background-color: var(--bg-warm);
+      color: var(--text-main);
+      transition: var(--transition);
+      font-family: var(--font-body);
+    }
+
+    .form-control:focus {
+      outline: none;
+      border-color: var(--primary);
+      box-shadow: 0 0 0 3px rgba(31, 58, 52, 0.1);
+    }
+
+    .form-checkbox {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.5rem;
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      margin-bottom: 1.5rem;
+    }
+
+    .form-checkbox input {
+      margin-top: 0.2rem;
+    }
+
+    /* FOOTER */
+    .footer {
+      background-color: var(--primary-dark);
+      color: var(--text-light);
+      padding-top: 5rem;
+      padding-bottom: 2rem;
+      font-size: 0.9rem;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr 1fr 1.2fr;
+      gap: 3rem;
+      margin-bottom: 4rem;
+    }
+
+    .footer-col h4 {
+      color: #FFFFFF;
+      font-size: 1.1rem;
+      margin-bottom: 1.25rem;
+    }
+
+    .footer-col p {
+      color: rgba(255, 255, 255, 0.7);
+      line-height: 1.6;
+      margin-bottom: 1.25rem;
+    }
+
+    .footer-links {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+
+    .footer-links a {
+      color: rgba(255, 255, 255, 0.7);
+    }
+
+    .footer-links a:hover {
+      color: var(--accent);
+    }
+
+    .social-links {
+      display: flex;
+      gap: 1rem;
+    }
+
+    .social-icon {
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      background-color: rgba(255, 255, 255, 0.08);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #FFFFFF;
+      transition: var(--transition);
+    }
+
+    .social-icon:hover {
+      background-color: var(--accent);
+      color: var(--primary-dark);
+      transform: translateY(-2px);
+    }
+
+    .footer-bottom {
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      padding-top: 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+      color: rgba(255, 255, 255, 0.5);
+      font-size: 0.85rem;
+    }
+
+    /* FLOATING WHATSAPP BUTTON */
+    .whatsapp-float {
+      position: fixed;
+      bottom: 2rem;
+      right: 2rem;
+      z-index: 999;
+      background-color: #25D366;
+      color: #FFFFFF;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 10px 25px rgba(37, 211, 102, 0.4);
+      transition: var(--transition);
+      animation: pulse-green 2s infinite;
+    }
+
+    .whatsapp-float:hover {
+      transform: scale(1.1);
+      box-shadow: 0 15px 30px rgba(37, 211, 102, 0.6);
+    }
+
+    @keyframes pulse-green {
+      0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); }
+      70% { box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); }
+      100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+    }
+
+    /* RESPONSIVE DESIGN */
+    @media (max-width: 1024px) {
+      .servico-item {
+        grid-template-columns: 60px 1fr 1.5fr;
+      }
+      .servico-cta {
+        grid-column: span 3;
+        text-align: left;
+        margin-top: 0.5rem;
+      }
+      .sobre-grid, .editorial-grid, .cta-form-grid {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+      }
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .topbar {
+        display: none;
+      }
+      .menu-btn {
+        display: flex;
+      }
+      .nav-menu {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: var(--bg-warm);
+        flex-direction: column;
+        padding: 1.5rem;
+        gap: 1rem;
+        border-bottom: 1px solid var(--border-color);
+        display: none;
+        box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+      }
+      .menu-toggle:checked ~ .nav-menu {
+        display: flex;
+      }
+      .servico-item {
+        grid-template-columns: 1fr;
+        gap: 0.5rem;
+        padding: 1.5rem 1rem;
+      }
+      .servico-cta {
+        grid-column: span 1;
+      }
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+      .equipe-card, .sobre-box {
+        padding: 2rem 1.5rem;
+      }
+    }
+  </style>
+
+  <!-- Schema.org JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "MedicalClinic",
+    "name": "Instituto de Fisioterapia Dr Robson Sitta",
+    "url": "https://fisiositta.com.br",
+    "logo": "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%231F3A34'/><text x='50%' y='65%' font-size='55' font-family='serif' font-weight='bold' fill='%23C9A227' text-anchor='middle'>S</text></svg>",
+    "image": "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%231F3A34'/><text x='50%' y='65%' font-size='55' font-family='serif' font-weight='bold' fill='%23C9A227' text-anchor='middle'>S</text></svg>",
+    "telephone": "+551125284661",
+    "priceRange": "$$$",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Rua Coriolano 1480",
+      "addressLocality": "São Paulo",
+      "addressRegion": "SP",
+      "postalCode": "05047-001",
+      "addressCountry": "BR"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": -23.5285,
+      "longitude": -46.6981
+    },
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday"],
+        "opens": "07:00",
+        "closes": "19:00"
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": "Friday",
+        "opens": "07:00",
+        "closes": "13:00"
+      }
+    ],
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "5.0",
+      "reviewCount": "1756"
+    },
+    "founder": {
+      "@type": "Physician",
+      "name": "Dr. Robson Sitta",
+      "jobTitle": "Fisioterapeuta e Diretor Clínico",
+      "medicalSpecialty": "Physiotherapy"
+    }
+  }
+  </script>
+<style>
+.rd-reveal{opacity:0;transform:translateY(24px);transition:opacity .6s ease,transform .6s ease;}
+.rd-reveal.rd-in-view{opacity:1;transform:translateY(0);}
+.rd-card-fx{transition:transform .35s ease,box-shadow .35s ease;}
+.rd-card-fx.rd-in-view,.rd-card-fx:hover{transform:scale(1.035);box-shadow:0 18px 40px rgba(0,0,0,0.14);}
+@media (prefers-reduced-motion: reduce){.rd-reveal,.rd-card-fx{transition:none;opacity:1;transform:none;}}
+</style></head>
+<body>
+
+  <!-- TOPBAR -->
+  <div class="topbar">
+    <div class="container topbar-content">
+      <div class="topbar-info">
+        <span>📍 Rua Coriolano 1480 - Vila Romana (Lapa), São Paulo - SP</span>
+        <a href="tel:+5511997424454">📞 (11) 9.9742.4454</a>
+        <a href="tel:+551125284661">☎️ (11) 2528.4661</a>
+      </div>
+      <div>
+        <span>🕒 Seg à Qui: 07h-19h | Sex: 07h-13h (Somente com horário marcado)</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="container header-container">
+      <a href="#" class="brand-logo" aria-label="Instituto Fisio Sitta Home">
+        <img src="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%231F3A34'/><text x='50%' y='65%' font-size='55' font-family='serif' font-weight='bold' fill='%23C9A227' text-anchor='middle'>S</text></svg>" alt="Logo Instituto Fisio Sitta" width="36" height="36">
+        <span>Instituto Fisio Sitta</span>
+      </a>
+
+      <input type="checkbox" id="menu-toggle" class="menu-toggle" aria-label="Abrir menu">
+      <label for="menu-toggle" class="menu-btn" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </label>
+
+      <ul class="nav-menu">
+        <li><a href="#beneficios" class="nav-link">Benefícios</a></li>
+        <li><a href="#servicos" class="nav-link">Especialidades</a></li>
+        <li><a href="#sobre" class="nav-link">O Instituto</a></li>
+        <li><a href="#equipe" class="nav-link">Corpo Clínico</a></li>
+        <li><a href="#diferenciais" class="nav-link">Diferenciais</a></li>
+        <li><a href="#faq" class="nav-link">Dúvidas</a></li>
+        <li>
+          <a href="https://wa.me/5511997424454?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20consulta%20no%20Instituto%20Fisio%20Sitta." class="btn btn-primary btn-sm" target="_blank" rel="noopener">
+            Agendar Consulta
+          </a>
+        </li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section class="hero">
+    <div class="container hero-content">
+      <span class="section-eyebrow">INSTITUTO DE FISIOTERAPIA DR. ROBSON SITTA</span>
+      <h1>Tratamento Fisioterapêutico Especializado e Individualizado na Vila Romana / Lapa</h1>
+      <p>Recupere sua mobilidade, alivie dores e trate vertigens ou disfunções posturais com quem possui mais de 20 anos de excelência clínica. Atendimento presencial, em domicílio ou teleconsulta gravada com o Dr. Robson Sitta.</p>
+      
+      <div class="hero-actions">
+        <a href="https://wa.me/5511997424454?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20consulta%20no%20Instituto%20Fisio%20Sitta." class="btn btn-accent" target="_blank" rel="noopener">
+          <span>Agendar Consulta via WhatsApp</span>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+        <a href="https://wa.me/5511997424454?text=Ol%C3%A1!%20Gostaria%20de%20falar%20com%20a%20equipe%20do%20Instituto%20Fisio%20Sitta." class="btn btn-outline" target="_blank" rel="noopener">
+          Falar com a Equipe
+        </a>
+      </div>
+
+      <div class="micro-proof">
+        <span>⭐ 5.0 estrelas no Google com mais de 1.700 avaliações</span>
+        <span style="opacity: 0.4;">|</span>
+        <span>+1 Milhão de inscritos no YouTube</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAIXA DE CONFIANÇA / NUMBERS -->
+  <section class="numbers-bar">
+    <div class="container">
+      <div class="numbers-grid">
+        <div class="number-item">
+          <div class="number-val">+<span class="rd-counter" data-target="20">0</span> Anos</div>
+          <div class="number-label">De experiência em fisioterapia clínica e hospitalar</div>
+        </div>
+        <div class="number-item">
+          <div class="number-val">+<span class="rd-counter" data-target="1">0</span> Milhão</div>
+          <div class="number-label">De inscritos no canal do YouTube com orientações</div>
+        </div>
+        <div class="number-item">
+          <div class="number-val"><span class="rd-counter" data-target="1700">0</span>+</div>
+          <div class="number-label">Avaliações nota 5 no Google em São Paulo</div>
+        </div>
+        <div class="number-item">
+          <div class="number-val"><span class="rd-counter" data-target="50">0</span> Minutos</div>
+          <div class="number-label">Duração dedicada em sessões individuais</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BENEFÍCIOS -->
+  <section id="beneficios" class="section-padding">
+    <div class="container">
+      <div style="text-align: center; margin-bottom: 3.5rem;">
+        <span class="section-eyebrow">POR QUE ESCOLHER O INSTITUTO FISIO SITTA</span>
+        <h2 class="section-title">Cuidado Humano, Científico e Sob Medida</h2>
+        <p class="section-subtitle" style="margin-left: auto; margin-right: auto;">Desenvolvemos uma estrutura completa para oferecer a você o máximo de eficiência na recuperação e prevenção de dores.</p>
+      </div>
+
+      <div class="beneficios-grid">
+        <div class="beneficio-card rd-card-fx">
+          <div class="beneficio-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="8.5" cy="7" r="4"/><line x1="20" y1="8" x2="20" y2="14"/><line x1="23" y1="11" x2="17" y2="11"/></svg>
+          </div>
+          <h3>Atendimento Estritamente Individualizado</h3>
+          <p>Cada paciente passa por avaliação detalhada para prescrição de tratamentos exclusivos, sem condutas padronizadas ou genéricas.</p>
+        </div>
+
+        <div class="beneficio-card rd-card-fx">
+          <div class="beneficio-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+          </div>
+          <h3>Flexibilidade Total de Modalidades</h3>
+          <p>Escolha entre ser atendido em nosso instituto na Vila Romana, no conforto da sua residência ou via teleconsulta ao vivo.</p>
+        </div>
+
+        <div class="beneficio-card rd-card-fx">
+          <div class="beneficio-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2" ry="2"/></svg>
+          </div>
+          <h3>Teleconsulta Gravada com Exercícios</h3>
+          <p>Sessão ao vivo via Google Meet acompanhada do envio da gravação completa com todos os exercícios para orientação contínua.</p>
+        </div>
+
+        <div class="beneficio-card rd-card-fx">
+          <div class="beneficio-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+          </div>
+          <h3>Conveniência no Atendimento Domiciliar</h3>
+          <p>Equipe de especialistas com atendimento direto em seu lar, garantindo pontualidade e cuidado completo sem deslocamentos.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVIÇOS / ESPECIALIDADES -->
+  <section id="servicos" class="section-padding servicos-section">
+    <div class="container">
+      <div style="margin-bottom: 3.5rem;">
+        <span class="section-eyebrow">CATÁLOGO DE TRATAMENTOS</span>
+        <h2 class="section-title">Especialidades Fisioterapêuticas</h2>
+        <p class="section-subtitle">Técnicas modernas e embasadas em evidência para a sua completa reabilitação.</p>
+      </div>
+
+      <div class="servicos-list">
+        
+        <div class="servico-item rd-card-fx">
+          <div class="servico-num">01</div>
+          <div class="servico-nome">Fisioterapia Especializada</div>
+          <div class="servico-desc">Tratamento avançado em ortopedia, traumatologia, reumatologia e geriatria. Auxilia na reabilitação e recuperação de condições ortopédicas, articulares e geriátricas.</div>
+          <div class="servico-cta">
+            <a href="https://wa.me/5511997424454?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20Fisioterapia%20Especializada." class="btn btn-outline btn-sm" target="_blank" rel="noopener">Agendar Consulta</a>
+          </div>
+        </div>
+
+        <div class="servico-item rd-card-fx">
+          <div class="servico-num">02</div>
+          <div class="servico-nome">Terapia Manual</div>
+          <div class="servico-desc">Técnicas que utilizam as mãos como ferramentas no tratamento. Apoia o alívio de tensões e o manejo manual da dor.</div>
+          <div class="servico-cta">
+            <a href="https://wa.me/5511997424454?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20Terapia%20Manual." class="btn btn-outline btn-sm" target="_blank" rel="noopener">Agendar Consulta</a>
+          </div>
+        </div>
+
+        <div class="servico-item rd-card-fx">
+          <div class="servico-num">03</div>
+          <div class="servico-nome">Quiropraxia | Osteopatia</div>
+          <div class="servico-desc">Ajustes com técnicas manipulativas para correções articulares e viscerais. Contribui para a mobilidade e o alinhamento das articulações.</div>
+          <div class="servico-cta">
+            <a href="https://wa.me/5511997424454?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20Quiropraxia%20%7C%20Osteopatia." class="btn btn-outline btn-sm" target="_blank" rel="noopener">Agendar Consulta</a>
+          </div>
+        </div>
+
+        <div class="servico-item rd-card-fx">
+          <div class="servico-num">04</div>
+          <div class="servico-nome">Pilates Clínico</div>
+          <div class="servico-desc">Exercícios do Pilates Clássico com foco terapêutico para reabilitação. Promove o fortalecimento muscular e a estabilização postural.</div>
+          <div class="servico-cta">
+            <a href="https://wa.me/5511997424454?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20Pilates%20Cl%C3%ADnico." class="btn btn-outline btn-sm" target="_blank" rel="noopener">Agendar Consulta</a>
+          </div>
+        </div>
+
+        <div class="servico-item rd-card-fx">
+          <div class="servico-num">05</div>
+          <div class="servico-nome">Reabilitação Vestibular</div>
+          <div class="servico-desc">Tratamento das vertigens e 'labirintites' que causam tontura e desequilíbrio. Auxilia na redução de tonturas e na recuperação do equilíbrio.</div>
+          <div class="servico-cta">
+            <a href="https://wa.me/5511997424454?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20Reabilita%C3%A7%C3%A3o%20Vestibular." class="btn btn-outline btn-sm" target="_blank" rel="noopener">Agendar Consulta</a>
+          </div>
+        </div>
+
+        <div class="servico-item rd-card-fx">
+          <div class="servico-num">06</div>
+          <div class="servico-nome">RPG - Reeducação Postural Global</div>
+          <div class="servico-desc">Visa corrigir os desvios posturais e alinhar o corpo. Favorece o realinhamento postural e a prevenção de compensações corporais.</div>
+          <div class="servico-cta">
+            <a href="https://wa.me/5511997424454?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20RPG." class="btn btn-outline btn-sm" target="_blank" rel="noopener">Agendar Consulta</a>
+          </div>
+        </div>
+
+        <div class="servico-item rd-card-fx">
+          <div class="servico-num">07</div>
+          <div class="servico-nome">Fisioterapia Esportiva</div>
+          <div class="servico-desc">Reabilitação de atletas profissionais e amadores. Ajuda no retorno seguro às atividades físicas após lesões.</div>
+          <div class="servico-cta">
+            <a href="https://wa.me/5511997424454?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20Fisioterapia%20Esportiva." class="btn btn-outline btn-sm" target="_blank" rel="noopener">Agendar Consulta</a>
+          </div>
+        </div>
+
+        <div class="servico-item rd-card-fx">
+          <div class="servico-num">08</div>
+          <div class="servico-nome">Método McKenzie</div>
+          <div class="servico-desc">Sistema de avaliação, diagnóstico e tratamento mecânico. Auxilia na identificação e tratamento mecânico de dores na coluna e articulações.</div>
+          <div class="servico-cta">
+            <a href="https://wa.me/5511997424454?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20Avalia%C3%A7%C3%A3o%20McKenzie." class="btn btn-outline btn-sm" target="_blank" rel="noopener">Agendar Consulta</a>
+          </div>
+        </div>
+
+        <div class="servico-item rd-card-fx">
+          <div class="servico-num">09</div>
+          <div class="servico-nome">DTM - ATM</div>
+          <div class="servico-desc">Reabilitação dos problemas relacionados com a articulação da mastigação. Proporciona alívio e reabilitação de disfunções na ATM.</div>
+          <div class="servico-cta">
+            <a href="https://wa.me/5511997424454?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20Tratamento%20DTM." class="btn btn-outline btn-sm" target="_blank" rel="noopener">Agendar Consulta</a>
+          </div>
+        </div>
+
+        <div class="servico-item rd-card-fx">
+          <div class="servico-num">10</div>
+          <div class="servico-nome">Academia Terapêutica</div>
+          <div class="servico-desc">Exercícios terapêuticos direcionados para retardar efeitos do envelhecimento fisiológico. Contribui para a manutenção da capacidade funcional e vitalidade.</div>
+          <div class="servico-cta">
+            <a href="https://wa.me/5511997424454?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20Academia%20Terap%C3%AAutica." class="btn btn-outline btn-sm" target="_blank" rel="noopener">Agendar Consulta</a>
+          </div>
+        </div>
+
+        <div class="servico-item rd-card-fx">
+          <div class="servico-num">11</div>
+          <div class="servico-nome">Acupuntura (Dry Needling)</div>
+          <div class="servico-desc">Tratamento com agulhamento seco para dores musculares e articulares. Auxilia na liberação de pontos de dor e alívio muscular.</div>
+          <div class="servico-cta">
+            <a href="https://wa.me/5511997424454?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20Acupuntura." class="btn btn-outline btn-sm" target="_blank" rel="noopener">Agendar Consulta</a>
+          </div>
+        </div>
+
+        <div class="servico-item rd-card-fx">
+          <div class="servico-num">12</div>
+          <div class="servico-nome">Traumatologia</div>
+          <div class="servico-desc">Fisioterapia focada na reabilitação de fraturas tratadas com ou sem cirurgia. Apoia a recuperação funcional após lesões ósseas e fraturas.</div>
+          <div class="servico-cta">
+            <a href="https://wa.me/5511997424454?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20Traumatologia." class="btn btn-outline btn-sm" target="_blank" rel="noopener">Agendar Consulta</a>
+          </div>
+        </div>
+
+        <div class="servico-item rd-card-fx">
+          <div class="servico-num">13</div>
+          <div class="servico-nome">Teleconsulta Gravada</div>
+          <div class="servico-desc">Consulta ao vivo via Google Meet com duração de 50 minutos, gravada e disponibilizada com todos os exercícios do tratamento para acompanhamento posterior.</div>
+          <div class="servico-cta">
+            <a href="https://wa.me/5511997424454?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20Teleconsulta%20Gravada." class="btn btn-outline btn-sm" target="_blank" rel="noopener">Agendar Teleconsulta</a>
+          </div>
+        </div>
+
+        <div class="servico-item rd-card-fx">
+          <div class="servico-num">14</div>
+          <div class="servico-nome">Fisioterapia em Casa</div>
+          <div class="servico-desc">Equipe de especialistas no seu domicílio em dia e hora marcada, com sessão de 50 minutos sem necessidade de deslocamento.</div>
+          <div class="servico-cta">
+            <a href="https://wa.me/5511997424454?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20Fisioterapia%20em%20Casa." class="btn btn-outline btn-sm" target="_blank" rel="noopener">Agendar Domiciliar</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- SOBRE A MARCA -->
+  <section id="sobre" class="section-padding">
+    <div class="container">
+      <div class="sobre-grid">
+        <div>
+          <span class="section-eyebrow">NOSSA TRAJETÓRIA</span>
+          <h2 class="section-title">Tradição, Ciência e Dedicação ao Seu Bem-Estar</h2>
+          <p style="font-size: 1.15rem; color: var(--primary); font-weight: 600; margin-bottom: 1rem;">Fundado em 2010 pelo Dr. Robson Sitta na Vila Romana (Lapa), São Paulo.</p>
+          <p style="color: var(--text-muted); line-height: 1.8; margin-bottom: 1.5rem;">O Instituto de Fisioterapia Dr Robson Sitta (Instituto Fisio Sitta) é um premiado centro especializado no atendimento de alto padrão. Unindo sólida atuação hospitalar e aperfeiçoamento contínuo em técnicas terapêuticas avançadas, nossa equipe desenvolve planos individuais focados na causa primária das dores, restaurando a qualidade de vida de cada paciente.</p>
+          <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+            <div class="cred-pill">✓ Fundado em 2010</div>
+            <div class="cred-pill">✓ Atendimento Individualizado</div>
+            <div class="cred-pill">✓ Vila Romana / Lapa SP</div>
+          </div>
+        </div>
+
+        <div class="sobre-box">
+          <span class="sobre-badge">ALTO PADRÃO EM SAÚDE</span>
+          <h3>Compromisso Clínico Integral</h3>
+          <p>Oferecemos um ambiente de acolhimento e escuta atenta, onde cada plano terapêutico é construído após análise biomecânica criteriosa. Não utilizamos fórmulas genéricas: priorizamos a causa exata do desconforto para uma recuperação sustentável.</p>
+          <a href="https://wa.me/5511997424454?text=Ol%C3%A1!%20Gostaria%20de%20conhecer%20mais%20sobre%20o%20Instituto%20Fisio%20Sitta." class="btn btn-accent btn-sm" target="_blank" rel="noopener">
+            Falar com o Instituto
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CORPO CLÍNICO / EQUIPE -->
+  <section id="equipe" class="section-padding equipe-section">
+    <div class="container">
+      <div style="text-align: center; margin-bottom: 3.5rem;">
+        <span class="section-eyebrow">DIREÇÃO TÉCNICA</span>
+        <h2 class="section-title">Corpo Clínico de Excelência</h2>
+        <p class="section-subtitle" style="margin-left: auto; margin-right: auto;">Liderança técnica com vasta bagagem hospitalar e acadêmica.</p>
+      </div>
+
+      <div class="equipe-card rd-card-fx">
+        <div class="equipe-header">
+          <h3 class="equipe-nome">Dr. Robson Sitta</h3>
+          <div class="equipe-cargo">Fisioterapeuta e Diretor Clínico</div>
+        </div>
+        <p class="equipe-bio">
+          Fisioterapeuta e diretor clínico do Instituto Fisio Sitta, especialista pela Santa Casa SP, pós-graduado e diplomado pela Orthopaedic Medicine International. Conta com mais de 20 anos de experiência clínica, tendo atuado em grandes centros de referência de São Paulo, como a Santa Casa de Misericórdia e o Hospital Beneficência Portuguesa. Inaugurou a Clínica Fisio Sitta em 2010, onde lidera sua equipe em tratamentos individuais e exclusivos. Em 2012, criou seu canal no YouTube, que soma mais de 1 milhão de inscritos, e em 2022 tornou-se professor e criador do Curso Método SITTA®.
+        </p>
+
+        <div class="credentials-pills">
+          <span class="cred-pill">Especialista pela Santa Casa SP</span>
+          <span class="cred-pill">Diplomado pela Orthopaedic Medicine International</span>
+          <span class="cred-pill">Atuação: Santa Casa e Beneficência Portuguesa</span>
+          <span class="cred-pill">Criador do Método SITTA® (2022)</span>
+          <span class="cred-pill">+1M de Inscritos no YouTube</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DIFERENCIAIS -->
+  <section id="diferenciais" class="section-padding">
+    <div class="container">
+      <div style="text-align: center; margin-bottom: 3.5rem;">
+        <span class="section-eyebrow">PONTOS FORTE DE ATUAÇÃO</span>
+        <h2 class="section-title">Nossos Diferenciais Exclusivos</h2>
+        <p class="section-subtitle" style="margin-left: auto; margin-right: auto;">Provas concretas de dedicação, inovação e rigor científico na fisioterapia.</p>
+      </div>
+
+      <div class="diferenciais-grid">
+        <div class="diferencial-card rd-card-fx">
+          <div class="diferencial-num">01</div>
+          <h3>20+ Anos de Experiência</h3>
+          <p>Bagagem consolidada em atendimentos de alta complexidade em ambiente hospitalar e clínico.</p>
+        </div>
+
+        <div class="diferencial-card rd-card-fx">
+          <div class="diferencial-num">02</div>
+          <h3>Sessões Individuais de 50 Min</h3>
+          <p>Dedicação total do tempo da consulta exclusivamente para o seu tratamento e evolução.</p>
+        </div>
+
+        <div class="diferencial-card rd-card-fx">
+          <div class="diferencial-num">03</div>
+          <h3>Teleconsulta Com Gravação</h3>
+          <p>Atendimento online gravado e enviado com os exercícios para que você não perca nenhum detalhe.</p>
+        </div>
+
+        <div class="diferencial-card rd-card-fx">
+          <div class="diferencial-num">04</div>
+          <h3>Reputação Comprovada</h3>
+          <p>Nota máxima no Google com mais de 1.700 avaliações de pacientes atendidos e satisfeitos.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EDITORIAL YOUTUBE -->
+  <section class="section-padding editorial-section">
+    <div class="container">
+      <div class="editorial-grid">
+        <div class="editorial-text">
+          <span class="section-eyebrow" style="color: var(--accent);">CONTEÚDO EDUCATIVO</span>
+          <h2>Aprenda e Se Informe no Canal do Dr. Robson Sitta</h2>
+          <p>Com mais de 1 milhão de inscritos no YouTube, o Dr. Robson Sitta compartilha diariamente orientações clínicas, exercícios terapêuticos e esclarecimentos sobre reabilitação física para ajudar milhares de pessoas a viverem sem dor.</p>
+          <a href="https://wa.me/5511997424454?text=Ol%C3%A1!%20Vim%20pelo%20canal%20do%20YouTube%20e%20gostaria%20de%20agendar%20uma%20consulta." class="btn btn-accent" target="_blank" rel="noopener">
+            Agendar Tratamento com o Dr. Sitta
+          </a>
+        </div>
+        <div>
+          <div class="video-wrapper">
+            <iframe src="https://www.youtube-nocookie.com/embed/pJQd9HL7SBI" title="Canal Dr. Robson Sitta - Fisioterapia" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- COMO FUNCIONA -->
+  <section class="section-padding">
+    <div class="container">
+      <div style="text-align: center; margin-bottom: 3.5rem;">
+        <span class="section-eyebrow">PASSO A PASSO</span>
+        <h2 class="section-title">Como Funciona o Atendimento</h2>
+        <p class="section-subtitle" style="margin-left: auto; margin-right: auto;">Um processo estruturado para garantir a melhor experiência desde o primeiro contato.</p>
+      </div>
+
+      <div class="steps-grid">
+        <div class="step-card rd-card-fx">
+          <div class="step-badge">1</div>
+          <h3>Agendamento Fácil</h3>
+          <p>Entre em contato pelo WhatsApp ou telefone para agendar o melhor dia e horário de atendimento.</p>
+        </div>
+
+        <div class="step-card rd-card-fx">
+          <div class="step-badge">2</div>
+          <h3>Avaliação Biomecânica</h3>
+          <p>Consulta detalhada de 50 minutos para diagnosticar a causa raiz da sua queixa postural ou dolorosa.</p>
+        </div>
+
+        <div class="step-card rd-card-fx">
+          <div class="step-badge">3</div>
+          <h3>Plano Personalizado</h3>
+          <p>Elaboração de condutas terapêuticas sob medida com base nas melhores evidências científicas.</p>
+        </div>
+
+        <div class="step-card rd-card-fx">
+          <div class="step-badge">4</div>
+          <h3>Reabilitação & Evolução</h3>
+          <p>Acompanhamento contínuo e orientações para prevenção e manutenção dos resultados atingidos.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ SECTION -->
+  <section id="faq" class="section-padding" style="background-color: var(--bg-alt);">
+    <div class="container">
+      <div style="text-align: center; margin-bottom: 3.5rem;">
+        <span class="section-eyebrow">ESCLAREÇA SUAS DÚVIDAS</span>
+        <h2 class="section-title">Perguntas Frequentes (FAQ)</h2>
+        <p class="section-subtitle" style="margin-left: auto; margin-right: auto;">Respostas transparentes para as principais questões sobre o atendimento no Instituto Fisio Sitta.</p>
+      </div>
+
+      <div class="faq-container">
+        
+        <div class="faq-item active">
+          <button type="button" class="faq-question">Onde fica localizado o Instituto Fisio Sitta?</button>
+          <div class="faq-answer">
+            <p>O Instituto está localizado na Rua Coriolano 1480, no bairro da Vila Romana (Lapa), em São Paulo - SP. O local conta com estrutura aconchegante e fácil acesso para a região da Lapa e arredores.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button type="button" class="faq-question">Como funciona o atendimento presencial e qual a duração das sessões?</button>
+          <div class="faq-answer">
+            <p>Os atendimentos presenciais são estritamente individuais e personalizados. Cada sessão possui a duração dedicada de 50 minutos com o fisioterapeuta, garantindo foco total no paciente.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button type="button" class="faq-question">O Instituto realiza atendimento fisioterapêutico em domicílio (em casa)?</button>
+          <div class="faq-answer">
+            <p>Sim! O Instituto Fisio Sitta possui equipe especializada para realizar atendimento fisioterapêutico no conforto do seu lar, em dia e horário marcados, mantendo o mesmo padrão de qualidade da clínica.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button type="button" class="faq-question">Como funciona a Teleconsulta e por que ela é gravada?</button>
+          <div class="faq-answer">
+            <p>A teleconsulta é realizada ao vivo via Google Meet com duração de 50 minutos. A sessão é gravada e enviada posteriormente ao paciente, acompanhada dos exercícios prescritos, para que possa consultar e executar os movimentos com total segurança.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button type="button" class="faq-question">Quais são os horários de funcionamento do Instituto?</button>
+          <div class="faq-answer">
+            <p>Atendemos de segunda a quinta-feira das 07h às 19h, e às sextas-feiras das 07h às 13h. Todos os atendimentos acontecem exclusivamente mediante agendamento prévio com hora marcada.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA FINAL & FORMULÁRIO DE CONTATO -->
+  <section id="contato" class="section-padding cta-final-section">
+    <div class="container">
+      <div class="cta-form-grid">
+        <div class="cta-text">
+          <span class="section-eyebrow">AGENDAR ATENDIMENTO</span>
+          <h2>Agende Sua Consulta com o Dr. Robson Sitta e Equipe</h2>
+          <p>Dê o primeiro passo para uma vida sem dor. Preencha o formulário abaixo ou entre em contato diretamente pelo WhatsApp para agendar sua avaliação.</p>
+
+          <div class="cta-info-list">
+            <div class="cta-info-item">
+              <span>📍 Rua Coriolano 1480 - Vila Romana (Lapa), São Paulo - SP</span>
+            </div>
+            <div class="cta-info-item">
+              <span>📞 Telefone: (11) 2528.4661</span>
+            </div>
+            <div class="cta-info-item">
+              <span>📱 WhatsApp: (11) 9.9742.4454</span>
+            </div>
+            <div class="cta-info-item">
+              <span>🕒 Seg a Qui: 07h às 19h | Sex: 07h às 13h</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="cta-form-card">
+          <form action="#" method="POST" onsubmit="event.preventDefault(); alert('Obrigado! Sua mensagem foi enviada. Entraremos em contato em breve.');">
+            <div class="form-group">
+              <label for="name">Nome Completo *</label>
+              <input type="text" id="name" name="name" class="form-control" required placeholder="Digite seu nome completo">
+            </div>
+
+            <div class="form-group">
+              <label for="phone">Telefone / WhatsApp *</label>
+              <input type="tel" id="phone" name="phone" class="form-control" required placeholder="(11) 99999-9999">
+            </div>
+
+            <div class="form-group">
+              <label for="email">E-mail</label>
+              <input type="email" id="email" name="email" class="form-control" placeholder="">
+            </div>
+
+            <div class="form-group">
+              <label for="service">Modalidade de Interesse</label>
+              <select id="service" name="service" class="form-control">
+                <option value="presencial">Atendimento Presencial (Vila Romana)</option>
+                <option value="domiciliar">Fisioterapia em Casa (Domiciliar)</option>
+                <option value="teleconsulta">Teleconsulta Gravada</option>
+                <option value="outros">Outras Especialidades</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="message">Mensagem / Sintomas</label>
+              <textarea id="message" name="message" class="form-control" rows="3" placeholder="Conte brevemente o que está sentindo..."></textarea>
+            </div>
+
+            <div class="form-checkbox">
+              <input type="checkbox" id="consent" name="consent" required>
+              <label for="consent">Concordo com o envio das minhas informações para agendamento de consulta.</label>
+            </div>
+
+            <button type="submit" class="btn btn-accent" style="width: 100%;">Solicitar Agendamento</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <a href="#" class="brand-logo" style="color: #FFFFFF; margin-bottom: 1.25rem;" aria-label="Instituto Fisio Sitta Logo Footer">
+            <img src="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%231F3A34'/><text x='50%' y='65%' font-size='55' font-family='serif' font-weight='bold' fill='%23C9A227' text-anchor='middle'>S</text></svg>" alt="Logo Instituto Fisio Sitta" width="36" height="36">
+            <span>Instituto Fisio Sitta</span>
+          </a>
+          <p>Fisioterapia especializada e individualizada na Vila Romana / Lapa SP. Mais de 20 anos de experiência oferecendo reabilitação de excelência presencial, domiciliar ou via teleconsulta.</p>
+          <div class="social-links">
+            <a href="https://wa.me/5511997424454" class="social-icon" aria-label="WhatsApp" target="_blank" rel="noopener">📱</a>
+            <a href="tel:+551125284661" class="social-icon" aria-label="Telefone">☎️</a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Navegação</h4>
+          <ul class="footer-links">
+            <li><a href="#beneficios">Benefícios</a></li>
+            <li><a href="#servicos">Especialidades</a></li>
+            <li><a href="#sobre">O Instituto</a></li>
+            <li><a href="#equipe">Corpo Clínico</a></li>
+            <li><a href="#diferenciais">Diferenciais</a></li>
+            <li><a href="#faq">Dúvidas Frequentes</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Especialidades</h4>
+          <ul class="footer-links">
+            <li><a href="#servicos">Reabilitação Vestibular</a></li>
+            <li><a href="#servicos">Terapia Manual</a></li>
+            <li><a href="#servicos">Quiropraxia & Osteopatia</a></li>
+            <li><a href="#servicos">RPG & Pilates Clínico</a></li>
+            <li><a href="#servicos">Teleconsulta Gravada</a></li>
+            <li><a href="#servicos">Fisioterapia Domiciliar</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Atendimento</h4>
+          <p><strong>Endereço:</strong><br>Rua Coriolano 1480 - Vila Romana (Lapa)<br>São Paulo - SP, 05047-001</p>
+          <p><strong>Contatos:</strong><br>(11) 9.9742.4454 (WhatsApp)<br>(11) 2528.4661 (Fixo)</p>
+          <p><strong>Horários:</strong><br>Seg a Qui: 07h-19h | Sex: 07h-13h</p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>&copy; 2025 Instituto de Fisioterapia Dr Robson Sitta. Todos os direitos reservados.</div>
+        <div style="display: flex; gap: 1.5rem;">
+          <a href="#">Termos de Uso</a>
+          <a href="#">Política de Privacidade</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- FLOATING WHATSAPP BUTTON -->
+  <a href="https://wa.me/5511997424454?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20consulta%20no%20Instituto%20Fisio%20Sitta." class="whatsapp-float" target="_blank" rel="noopener" aria-label="Falar no WhatsApp">
+    <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+  </a>
+
+  <!-- SCRIPTS -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // FAQ Accordion Script
+      const faqQuestions = document.querySelectorAll('.faq-question');
+      faqQuestions.forEach(question => {
+        question.addEventListener('click', () => {
+          const faqItem = question.parentElement;
+          const isActive = faqItem.classList.contains('active');
+
+          document.querySelectorAll('.faq-item').forEach(item => {
+            item.classList.remove('active');
+          });
+
+          if (!isActive) {
+            faqItem.classList.add('active');
+          }
+        });
+      });
+
+      // Animated Counters
+      const counters = document.querySelectorAll('.rd-counter');
+      const speed = 200;
+
+      const startCounters = () => {
+        counters.forEach(counter => {
+          const target = +counter.getAttribute('data-target');
+          let count = 0;
+          const inc = Math.max(1, Math.ceil(target / speed));
+
+          const updateCount = () => {
+            count += inc;
+            if (count < target) {
+              counter.innerText = count;
+              setTimeout(updateCount, 25);
+            } else {
+              counter.innerText = target;
+            }
+          };
+          updateCount();
+        });
+      };
+
+      if ('IntersectionObserver' in window) {
+        let observer = new IntersectionObserver((entries, obs) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              startCounters();
+              obs.disconnect();
+            }
+          });
+        }, { threshold: 0.3 });
+
+        const numBar = document.querySelector('.numbers-bar');
+        if (numBar) observer.observe(numBar);
+      } else {
+        startCounters();
+      }
+
+      // Close Mobile Menu on Link Click
+      const navLinks = document.querySelectorAll('.nav-link');
+      const menuToggle = document.getElementById('menu-toggle');
+      navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+          if (menuToggle) menuToggle.checked = false;
+        });
+      });
+    });
+  </script>
+<div style="position:fixed;bottom:16px;left:16px;z-index:2147483647;background:rgba(255,255,255,0.96);border-radius:999px;padding:8px 18px 8px 10px;box-shadow:0 6px 20px rgba(0,0,0,0.22);display:flex;align-items:center;gap:7px;font-family:Inter,-apple-system,sans-serif;"><img src="https://rd-previews-dharari01s-projects.vercel.app/_assets/logo-rd-exclusive.png" alt="RD Exclusive" style="height:26px;width:auto;display:block;"><span style="font-size:14px;font-weight:700;color:#1A1A1A;white-space:nowrap;">Protótipo por RD Exclusive</span></div><script>
+document.addEventListener("DOMContentLoaded", function() {
+  var alvos = document.querySelectorAll(".rd-reveal, .rd-card-fx, .rd-counter");
+  function animarContador(el) {
+    var textoAlvo = el.getAttribute("data-target") || "0";
+    var alvo = parseFloat(textoAlvo);
+    var casas = textoAlvo.indexOf(".") !== -1 ? 1 : 0;
+    var duracao = 1400, inicio = null;
+    function passo(ts) {
+      if (!inicio) inicio = ts;
+      var progresso = Math.min((ts - inicio) / duracao, 1);
+      var valorAtual = alvo * progresso;
+      el.textContent = casas ? valorAtual.toFixed(casas) : Math.floor(valorAtual);
+      if (progresso < 1) requestAnimationFrame(passo);
+      else el.textContent = casas ? alvo.toFixed(casas) : alvo;
+    }
+    requestAnimationFrame(passo);
+  }
+  if ("IntersectionObserver" in window) {
+    var obs = new IntersectionObserver(function(entradas) {
+      entradas.forEach(function(entrada) {
+        if (entrada.isIntersecting) {
+          entrada.target.classList.add("rd-in-view");
+          if (entrada.target.classList.contains("rd-counter")) animarContador(entrada.target);
+          obs.unobserve(entrada.target);
+        }
+      });
+    }, { threshold: 0.25 });
+    alvos.forEach(function(el) { obs.observe(el); });
+  } else {
+    alvos.forEach(function(el) {
+      el.classList.add("rd-in-view");
+      if (el.classList.contains("rd-counter")) animarContador(el);
+    });
+  }
+});
+</script></body>
+</html>
