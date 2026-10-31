@@ -1,0 +1,1940 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Intégra Odontologia em Campinas | Corpo Clínico de Mestres e Especialistas</title>
+  <meta name="description" content="Clínica odontológica no Bosque em Campinas. Tratamentos com tecnologia 3D, Invisalign, Implantes, Odontologia do Sono e Sedação Consciente com dentistas mestres e professores da SLMandic e UNESP. Agende pelo WhatsApp.">
+  <meta name="robots" content="index, follow">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Intégra Odontologia em Campinas | Corpo Clínico de Mestres e Especialistas">
+  <meta property="og:description" content="Odontologia de alta precisão e cuidado humanizado no bairro Bosque em Campinas. Equipe de dentistas mestres, doutores e professores universitários.">
+  <meta property="og:image" content="https://static.wixstatic.com/media/f48385_923776671598463084cf656347c5df54~mv2.png/v1/fill/w_165">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pt_BR">
+
+  <!-- Favicon SVG URI -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%231F3A34'/><text x='50%' y='65%' font-family='Georgia, serif' font-size='55' font-weight='bold' fill='%23C9A227' text-anchor='middle'>I</text></svg>">
+
+  <!-- Preconnect External Resources -->
+  <link rel="preconnect" href="https://static.wixstatic.com">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    /* RESET & BASE VARIABLES */
+    :root {
+      --bg-color: #FAF7F2;
+      --surface-white: #FFFFFF;
+      --surface-glass: rgba(255, 255, 255, 0.88);
+      --primary: #1F3A34;
+      --primary-light: #2A4D45;
+      --primary-dark: #122420;
+      --accent-gold: #C9A227;
+      --accent-gold-hover: #b08d1f;
+      --text-main: #1A1A1A;
+      --text-muted: #556B66;
+      --text-light: #7A8E89;
+      --border-color: #E2DBD0;
+      --border-light: #EFEAE2;
+      --shadow-sm: 0 2px 8px rgba(31, 58, 52, 0.04);
+      --shadow-md: 0 8px 24px rgba(31, 58, 52, 0.08);
+      --shadow-lg: 0 16px 32px rgba(31, 58, 52, 0.12);
+      --font-heading: 'Fraunces', Georgia, serif;
+      --font-body: 'Inter', system-ui, -apple-system, sans-serif;
+      --radius-sm: 8px;
+      --radius-md: 16px;
+      --radius-lg: 24px;
+      --container-max: 1240px;
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      font-size: 16px;
+    }
+
+    body {
+      background-color: var(--bg-color);
+      color: var(--text-main);
+      font-family: var(--font-body);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+      transition: all 0.25s ease;
+    }
+
+    /* TYPOGRAPHY */
+    h1, h2, h3, h4 {
+      font-family: var(--font-heading);
+      color: var(--primary);
+      line-height: 1.25;
+      font-weight: 600;
+    }
+
+    h1 {
+      font-size: clamp(2rem, 4.5vw, 3.25rem);
+      letter-spacing: -0.02em;
+    }
+
+    h2 {
+      font-size: clamp(1.75rem, 3.5vw, 2.5rem);
+      letter-spacing: -0.01em;
+    }
+
+    h3 {
+      font-size: clamp(1.25rem, 2.5vw, 1.5rem);
+    }
+
+    p {
+      color: #333333;
+      font-size: 1.05rem;
+    }
+
+    .rd-container {
+      width: 100%;
+      max-width: var(--container-max);
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+
+    /* BUTTONS & CTAs */
+    .rd-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.6rem;
+      padding: 0.95rem 1.8rem;
+      font-family: var(--font-body);
+      font-weight: 600;
+      font-size: 1rem;
+      border-radius: 50px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      text-align: center;
+      border: 2px solid transparent;
+    }
+
+    .rd-btn-primary {
+      background-color: var(--primary);
+      color: #FFFFFF;
+      box-shadow: 0 4px 14px rgba(31, 58, 52, 0.25);
+    }
+
+    .rd-btn-primary:hover {
+      background-color: var(--primary-light);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(31, 58, 52, 0.35);
+    }
+
+    .rd-btn-gold {
+      background-color: var(--accent-gold);
+      color: #FFFFFF;
+      box-shadow: 0 4px 14px rgba(201, 162, 39, 0.3);
+    }
+
+    .rd-btn-gold:hover {
+      background-color: var(--accent-gold-hover);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(201, 162, 39, 0.4);
+    }
+
+    .rd-btn-outline {
+      background-color: transparent;
+      border-color: var(--primary);
+      color: var(--primary);
+    }
+
+    .rd-btn-outline:hover {
+      background-color: var(--primary);
+      color: #FFFFFF;
+    }
+
+    /* TOPBAR */
+    .rd-topbar {
+      background-color: var(--primary-dark);
+      color: #E2E8E6;
+      font-size: 0.85rem;
+      padding: 0.5rem 0;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .rd-topbar-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+
+    .rd-topbar-info {
+      display: flex;
+      align-items: center;
+      gap: 1.25rem;
+      flex-wrap: wrap;
+    }
+
+    .rd-topbar-item {
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+
+    .rd-topbar-socials {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .rd-social-icon-img {
+      width: 18px;
+      height: 18px;
+      opacity: 0.85;
+      transition: opacity 0.2s;
+    }
+
+    .rd-social-icon-img:hover {
+      opacity: 1;
+    }
+
+    /* HEADER */
+    .rd-header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background-color: var(--surface-glass);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border-color);
+    }
+
+    .rd-header-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 80px;
+    }
+
+    .rd-logo {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .rd-logo-text {
+      font-family: var(--font-heading);
+      font-size: 1.35rem;
+      font-weight: 700;
+      color: var(--primary);
+      letter-spacing: -0.01em;
+    }
+
+    .rd-logo-text span {
+      display: block;
+      font-family: var(--font-body);
+      font-size: 0.65rem;
+      font-weight: 600;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--accent-gold);
+    }
+
+    .rd-nav {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+    }
+
+    .rd-nav-links {
+      display: flex;
+      gap: 1.5rem;
+      list-style: none;
+    }
+
+    .rd-nav-links a {
+      font-size: 0.95rem;
+      font-weight: 500;
+      color: var(--text-main);
+    }
+
+    .rd-nav-links a:hover {
+      color: var(--accent-gold);
+    }
+
+    /* MOBILE MENU CHECKBOX HACK */
+    .nav-toggle {
+      display: none;
+    }
+
+    .nav-toggle-label {
+      display: none;
+      cursor: pointer;
+      padding: 0.5rem;
+      flex-direction: column;
+      gap: 5px;
+    }
+
+    .nav-toggle-label span {
+      display: block;
+      width: 25px;
+      height: 2px;
+      background-color: var(--primary);
+      transition: all 0.3s;
+    }
+
+    /* HERO SECTION */
+    .rd-hero {
+      padding: 3rem 0 4rem;
+      position: relative;
+      background: linear-gradient(180deg, rgba(250, 247, 242, 0.6) 0%, #FAF7F2 100%);
+    }
+
+    .rd-hero-split {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 3rem;
+      align-items: center;
+    }
+
+    .rd-hero-card {
+      background: var(--surface-glass);
+      backdrop-filter: blur(16px);
+      padding: 2.5rem;
+      border-radius: var(--radius-lg);
+      border: 1px solid var(--border-color);
+      box-shadow: var(--shadow-md);
+    }
+
+    .rd-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.85rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--accent-gold);
+      background-color: rgba(201, 162, 39, 0.1);
+      padding: 0.35rem 0.9rem;
+      border-radius: 30px;
+      margin-bottom: 1.25rem;
+    }
+
+    .rd-hero-text h1 {
+      margin-bottom: 1.25rem;
+    }
+
+    .rd-hero-text p {
+      font-size: 1.1rem;
+      color: #444444;
+      margin-bottom: 2rem;
+    }
+
+    .rd-hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-bottom: 1.75rem;
+    }
+
+    .rd-micro-prova {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      border-top: 1px solid var(--border-light);
+      padding-top: 1.25rem;
+    }
+
+    .rd-hero-media {
+      position: relative;
+    }
+
+    .rd-hero-img-wrapper {
+      position: relative;
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: var(--shadow-lg);
+      border: 4px solid var(--surface-white);
+    }
+
+    .rd-hero-img-wrapper img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      min-height: 420px;
+    }
+
+    .rd-badge-google {
+      position: absolute;
+      bottom: 20px;
+      left: 20px;
+      background: var(--surface-white);
+      padding: 0.85rem 1.25rem;
+      border-radius: var(--radius-md);
+      box-shadow: var(--shadow-md);
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      border: 1px solid var(--border-light);
+    }
+
+    .rd-badge-google strong {
+      display: block;
+      font-size: 1rem;
+      color: var(--primary);
+    }
+
+    .rd-badge-google span {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+    }
+
+    /* FAIXA DE CONFIANÇA / NUMEROS */
+    .rd-numbers-section {
+      background-color: var(--primary);
+      color: #FFFFFF;
+      padding: 3rem 0;
+    }
+
+    .rd-numbers-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 2rem;
+      text-align: center;
+    }
+
+    .rd-number-item {
+      padding: 0.5rem 1rem;
+      border-right: 1px solid rgba(255,255,255,0.15);
+    }
+
+    .rd-number-item:last-child {
+      border-right: none;
+    }
+
+    .rd-number-val {
+      font-family: var(--font-heading);
+      font-size: clamp(2rem, 3.5vw, 2.75rem);
+      font-weight: 700;
+      color: var(--accent-gold);
+      line-height: 1;
+      margin-bottom: 0.5rem;
+    }
+
+    .rd-number-lbl {
+      font-size: 0.9rem;
+      color: #D3E0DC;
+      font-weight: 400;
+    }
+
+    /* BENEFICIOS */
+    .rd-section {
+      padding: 5rem 0;
+    }
+
+    .rd-section-header {
+      text-align: center;
+      max-width: 720px;
+      margin: 0 auto 3.5rem;
+    }
+
+    .rd-section-header h2 {
+      margin-bottom: 1rem;
+    }
+
+    .rd-section-header p {
+      color: var(--text-muted);
+    }
+
+    .rd-beneficios-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+    }
+
+    .rd-card-fx {
+      background-color: var(--surface-white);
+      border-radius: var(--radius-md);
+      padding: 2.25rem;
+      border: 1px solid var(--border-color);
+      box-shadow: var(--shadow-sm);
+      transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .rd-card-fx:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-md);
+      border-color: var(--accent-gold);
+    }
+
+    .rd-card-icon {
+      width: 52px;
+      height: 52px;
+      border-radius: 12px;
+      background-color: rgba(31, 58, 52, 0.06);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 1.5rem;
+      color: var(--primary);
+    }
+
+    .rd-card-fx h3 {
+      margin-bottom: 0.85rem;
+      color: var(--primary);
+    }
+
+    .rd-card-fx p {
+      color: #555555;
+      font-size: 0.98rem;
+      line-height: 1.55;
+    }
+
+    /* SERVIÇOS (ZIG-ZAG EDITORIAL) */
+    .rd-servicos-list {
+      display: flex;
+      flex-direction: column;
+      gap: 3.5rem;
+    }
+
+    .rd-servico-block {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+      align-items: center;
+      background-color: var(--surface-white);
+      border-radius: var(--radius-lg);
+      padding: 2.5rem;
+      border: 1px solid var(--border-color);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .rd-servico-block:nth-child(even) {
+      direction: rtl;
+    }
+
+    .rd-servico-block:nth-child(even) .rd-servico-content {
+      direction: ltr;
+    }
+
+    .rd-servico-content {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .rd-servico-badge {
+      font-size: 0.78rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--primary);
+      background-color: #E8F0EE;
+      padding: 0.3rem 0.8rem;
+      border-radius: 20px;
+      margin-bottom: 1rem;
+    }
+
+    .rd-servico-content h3 {
+      font-size: 1.75rem;
+      margin-bottom: 1rem;
+    }
+
+    .rd-servico-content p {
+      margin-bottom: 1.75rem;
+      color: #4A4A4A;
+    }
+
+    .rd-servico-media {
+      position: relative;
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      background-color: #F0EDE6;
+      min-height: 280px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid var(--border-light);
+    }
+
+    .rd-servico-media-icon {
+      width: 80px;
+      height: 80px;
+      color: var(--primary);
+      opacity: 0.25;
+    }
+
+    /* SOBRE INSTITUCIONAL */
+    .rd-sobre {
+      background-color: var(--primary);
+      color: #FFFFFF;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .rd-sobre-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: center;
+    }
+
+    .rd-sobre-text h2 {
+      color: #FFFFFF;
+      margin-bottom: 1rem;
+    }
+
+    .rd-sobre-text .rd-subtitle {
+      font-size: 1.2rem;
+      color: var(--accent-gold);
+      font-family: var(--font-heading);
+      margin-bottom: 1.5rem;
+      line-height: 1.4;
+    }
+
+    .rd-sobre-text p {
+      color: #E2E8E6;
+      font-size: 1.05rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .rd-sobre-media-img {
+      border-radius: var(--radius-lg);
+      border: 3px solid var(--accent-gold);
+      box-shadow: var(--shadow-lg);
+      max-height: 440px;
+      width: 100%;
+      object-fit: cover;
+    }
+
+    /* EQUIPE / CORPO CLÍNICO */
+    .rd-equipe-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2.5rem;
+    }
+
+    .rd-membro-card {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .rd-membro-header {
+      border-bottom: 1px solid var(--border-light);
+      padding-bottom: 1.25rem;
+      margin-bottom: 1.25rem;
+    }
+
+    .rd-membro-nome {
+      font-size: 1.4rem;
+      color: var(--primary);
+      margin-bottom: 0.35rem;
+    }
+
+    .rd-membro-cargo {
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: var(--accent-gold);
+      line-height: 1.35;
+    }
+
+    .rd-membro-bio {
+      font-size: 0.94rem;
+      color: #4A4A4A;
+      line-height: 1.6;
+    }
+
+    /* DIFERENCIAIS */
+    .rd-diferenciais-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2rem;
+    }
+
+    /* DESTAQUE EDITORIAL */
+    .rd-editorial-banner {
+      background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 100%);
+      color: #FFFFFF;
+      border-radius: var(--radius-lg);
+      padding: 3.5rem;
+      position: relative;
+      box-shadow: var(--shadow-lg);
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 3rem;
+      align-items: center;
+    }
+
+    .rd-editorial-banner h2 {
+      color: #FFFFFF;
+      margin-bottom: 1.25rem;
+    }
+
+    .rd-editorial-banner p {
+      color: #D3E0DC;
+      margin-bottom: 2rem;
+      font-size: 1.1rem;
+    }
+
+    /* DEPOIMENTOS */
+    .rd-depoimentos-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+    }
+
+    .rd-depoimento-card {
+      position: relative;
+    }
+
+    .rd-quote-icon {
+      font-family: var(--font-heading);
+      font-size: 4rem;
+      line-height: 0.8;
+      color: var(--accent-gold);
+      opacity: 0.4;
+      margin-bottom: 0.5rem;
+    }
+
+    .rd-depoimento-texto {
+      font-style: italic;
+      color: #333333;
+      margin-bottom: 1.5rem;
+      flex-grow: 1;
+    }
+
+    .rd-depoimento-autor {
+      font-weight: 700;
+      color: var(--primary);
+      font-size: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .rd-depoimento-autor::before {
+      content: "";
+      display: inline-block;
+      width: 16px;
+      height: 2px;
+      background-color: var(--accent-gold);
+    }
+
+    /* COMO FUNCIONA */
+    .rd-passos-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+      position: relative;
+    }
+
+    .rd-passo-card {
+      background-color: var(--surface-white);
+      padding: 2.5rem 2rem;
+      border-radius: var(--radius-md);
+      border: 1px solid var(--border-color);
+      position: relative;
+    }
+
+    .rd-passo-num {
+      font-family: var(--font-heading);
+      font-size: 3rem;
+      font-weight: 700;
+      color: var(--accent-gold);
+      line-height: 1;
+      margin-bottom: 1rem;
+      opacity: 0.9;
+    }
+
+    /* FAQ ACCORDION */
+    .rd-faq-container {
+      max-width: 800px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .rd-faq-item {
+      background-color: var(--surface-white);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      transition: border-color 0.25s;
+    }
+
+    .rd-faq-item summary {
+      padding: 1.25rem 1.75rem;
+      font-weight: 600;
+      font-size: 1.1rem;
+      color: var(--primary);
+      cursor: pointer;
+      list-style: none;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      user-select: none;
+    }
+
+    .rd-faq-item summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .rd-faq-item summary::after {
+      content: "+";
+      font-size: 1.5rem;
+      font-weight: 400;
+      color: var(--accent-gold);
+      transition: transform 0.25s;
+    }
+
+    .rd-faq-item[open] summary::after {
+      content: "−";
+    }
+
+    .rd-faq-item[open] {
+      border-color: var(--accent-gold);
+    }
+
+    .rd-faq-content {
+      padding: 0 1.75rem 1.5rem;
+      color: #4A4A4A;
+      border-top: 1px solid var(--border-light);
+      margin-top: 0.5rem;
+      padding-top: 1rem;
+    }
+
+    /* CTA FINAL & FORM */
+    .rd-cta-final {
+      background-color: #FAF7F2;
+      border-top: 1px solid var(--border-color);
+    }
+
+    .rd-cta-box {
+      background-color: var(--surface-white);
+      border-radius: var(--radius-lg);
+      border: 1px solid var(--border-color);
+      box-shadow: var(--shadow-lg);
+      padding: 3.5rem;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3.5rem;
+    }
+
+    .rd-form {
+      display: flex;
+      flex-direction: column;
+      gap: 1.2rem;
+    }
+
+    .rd-form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 0.4rem;
+    }
+
+    .rd-form-group label {
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: var(--primary);
+    }
+
+    .rd-form-control {
+      width: 100%;
+      padding: 0.85rem 1rem;
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-sm);
+      font-family: var(--font-body);
+      font-size: 0.95rem;
+      background-color: #FAFAFA;
+      transition: border-color 0.25s, background-color 0.25s;
+    }
+
+    .rd-form-control:focus {
+      outline: none;
+      border-color: var(--primary);
+      background-color: #FFFFFF;
+    }
+
+    .rd-form-consent {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.5rem;
+      font-size: 0.82rem;
+      color: var(--text-muted);
+    }
+
+    .rd-form-consent input {
+      margin-top: 0.2rem;
+    }
+
+    /* RODAPÉ */
+    .rd-footer {
+      background-color: var(--primary-dark);
+      color: #A0B2AE;
+      padding: 4rem 0 2rem;
+      border-top: 1px solid rgba(255,255,255,0.05);
+      font-size: 0.9rem;
+    }
+
+    .rd-footer-grid {
+      display: grid;
+      grid-template-columns: 1.4fr 1fr 1fr 1.2fr;
+      gap: 2.5rem;
+      margin-bottom: 3.5rem;
+    }
+
+    .rd-footer-col h4 {
+      color: #FFFFFF;
+      font-size: 1.1rem;
+      margin-bottom: 1.25rem;
+      font-family: var(--font-body);
+      font-weight: 600;
+    }
+
+    .rd-footer-col ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+
+    .rd-footer-col a:hover {
+      color: var(--accent-gold);
+    }
+
+    .rd-footer-bottom {
+      border-top: 1px solid rgba(255,255,255,0.08);
+      padding-top: 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.82rem;
+    }
+
+    /* BOTÃO FLUTUANTE WHATSAPP */
+    .rd-float-wa {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      z-index: 9999;
+      background-color: #25D366;
+      color: #FFFFFF;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 18px rgba(37, 211, 102, 0.4);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .rd-float-wa:hover {
+      transform: scale(1.08);
+      box-shadow: 0 6px 24px rgba(37, 211, 102, 0.5);
+    }
+
+    .rd-float-wa svg {
+      width: 32px;
+      height: 32px;
+      fill: currentColor;
+    }
+
+    /* RESPONSIVIDADE (MOBILE FIRST OVERRIDES) */
+    @media (max-width: 992px) {
+      .rd-hero-split,
+      .rd-servico-block,
+      .rd-sobre-grid,
+      .rd-editorial-banner,
+      .rd-cta-box {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+      }
+
+      .rd-servico-block:nth-child(even) {
+        direction: ltr;
+      }
+
+      .rd-numbers-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+      }
+
+      .rd-number-item {
+        border-right: none;
+        border-bottom: 1px solid rgba(255,255,255,0.1);
+        padding-bottom: 1rem;
+      }
+
+      .rd-number-item:last-child {
+        border-bottom: none;
+      }
+
+      .rd-equipe-grid,
+      .rd-diferenciais-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .rd-footer-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .rd-topbar-content {
+        justify-content: center;
+        text-align: center;
+      }
+
+      .rd-nav-links {
+        display: none;
+      }
+
+      .nav-toggle-label {
+        display: flex;
+      }
+
+      /* Checkbox hack mobile nav display */
+      .nav-toggle:checked ~ .rd-nav .rd-nav-links {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 80px;
+        left: 0;
+        right: 0;
+        background-color: var(--surface-white);
+        padding: 2rem;
+        border-bottom: 1px solid var(--border-color);
+        box-shadow: var(--shadow-md);
+        gap: 1.2rem;
+      }
+
+      .rd-beneficios-grid,
+      .rd-depoimentos-grid,
+      .rd-passos-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .rd-footer-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .rd-cta-box {
+        padding: 2rem 1.5rem;
+      }
+    }
+  </style>
+
+  <!-- JSON-LD SCHEMA -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Dentist",
+    "name": "Intégra Odontologia e Saúde",
+    "image": "https://static.wixstatic.com/media/f48385_923776671598463084cf656347c5df54~mv2.png/v1/fill/w_165",
+    "@id": "https://www.integraodontosaude.com.br",
+    "url": "https://www.integraodontosaude.com.br",
+    "telephone": "+551932540862",
+    "priceRange": "$$",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Rua Barão de Paranapanema, 146, Sala 32A",
+      "addressLocality": "Campinas",
+      "addressRegion": "SP",
+      "postalCode": "13026-010",
+      "addressCountry": "BR"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": -22.9022,
+      "longitude": -47.0508
+    },
+    "areaServed": "Campinas e Região",
+    "medicalSpecialty": [
+      "Dentistry",
+      "Orthodontics",
+      "Endodontics",
+      "Periodontics",
+      "Implantology"
+    ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Onde está localizada a Intégra Odontologia em Campinas?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A clínica está situada na Rua Barão de Paranapanema, 146, Sala 32A, no bairro Bosque, em Campinas - SP."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Como posso agendar uma avaliação com os especialistas?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Você pode agendar sua consulta diretamente pelo WhatsApp (19) 97102-2209 ou através do telefone fixo (19) 3254-0862."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "A clínica oferece tratamento para ansiedade e medo de dentista?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Sim. Disponibilizamos o recurso de sedação consciente com óxido nitroso, conduzida por profissional habilitado, permitindo tratamentos tranquilos e confortáveis."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Como funciona o tratamento de Ronco e Apneia na clínica?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "O tratamento de Odontologia do Sono é realizado por profissional habilitado pelo Instituto do Sono/SP, focado no diagnóstico e na melhoria da qualidade do sono e saúde geral."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Quais são os diferenciais do corpo clínico da Intégra?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Nossa equipe é composta por mestres, especialistas e professores universitários da SLMandic, UNICAMP e UNESP, coautores de livros e com mais de 20 anos de atuação."
+        }
+      }
+    ]
+  }
+  </script>
+<style>
+.rd-reveal{opacity:0;transform:translateY(24px);transition:opacity .6s ease,transform .6s ease;}
+.rd-reveal.rd-in-view{opacity:1;transform:translateY(0);}
+.rd-card-fx{transition:transform .35s ease,box-shadow .35s ease;}
+.rd-card-fx.rd-in-view,.rd-card-fx:hover{transform:scale(1.035);box-shadow:0 18px 40px rgba(0,0,0,0.14);}
+@media (prefers-reduced-motion: reduce){.rd-reveal,.rd-card-fx{transition:none;opacity:1;transform:none;}}
+</style></head>
+
+<body>
+
+  <!-- TOPBAR -->
+  <div class="rd-topbar">
+    <div class="rd-container rd-topbar-content">
+      <div class="rd-topbar-info">
+        <span class="rd-topbar-item">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          Bosque, Campinas - SP
+        </span>
+        <span class="rd-topbar-item">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          (19) 3254-0862
+        </span>
+      </div>
+      <div class="rd-topbar-info">
+        <span class="rd-topbar-item">
+          Atendimento Odontológico Especializado no Bosque
+        </span>
+        <div class="rd-topbar-socials">
+          <a href="https://www.instagram.com/integraodontologia" target="_blank" rel="noopener" aria-label="Instagram">
+            <img src="https://static.wixstatic.com/media/fdcfaba150fc427da298a00cb09d91c1.png/v1/fill/w_25" alt="Instagram" class="rd-social-icon-img">
+          </a>
+          <a href="https://www.facebook.com/integraodontologia" target="_blank" rel="noopener" aria-label="Facebook">
+            <img src="https://static.wixstatic.com/media/ce6ec7c11b174c0581e20f42bb865ce3.png/v1/fill/w_25" alt="Facebook" class="rd-social-icon-img">
+          </a>
+          <a href="https://www.youtube.com/channel/UCJkP6Zevs0W-_OtXshXrBcg" target="_blank" rel="noopener" aria-label="YouTube">
+            <img src="https://static.wixstatic.com/media/71ac09a5a92848cc943bf2ca2a09a6d0.png/v1/fill/w_25" alt="YouTube" class="rd-social-icon-img">
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- HEADER -->
+  <header class="rd-header">
+    <div class="rd-container rd-header-inner">
+      <a href="#" class="rd-logo" aria-label="Página Inicial Intégra Odontologia">
+        <div class="rd-logo-text">
+          INTÉGRA
+          <span>ODONTOLOGIA & SAÚDE</span>
+        </div>
+      </a>
+
+      <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-label="Abrir Menu">
+      <label for="nav-toggle" class="nav-toggle-label" aria-label="Alternar Menu Nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </label>
+
+      <nav class="rd-nav">
+        <ul class="rd-nav-links">
+          <li><a href="#beneficios">Benefícios</a></li>
+          <li><a href="#servicos">Tratamentos</a></li>
+          <li><a href="#sobre">A Clínica</a></li>
+          <li><a href="#equipe">Corpo Clínico</a></li>
+          <li><a href="#diferenciais">Diferenciais</a></li>
+          <li><a href="#faq">Dúvidas</a></li>
+        </ul>
+        <a href="https://wa.me/49183?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20consulta%20na%20Int%C3%A9gra%20Odontologia." class="rd-btn rd-btn-primary" style="font-size: 0.9rem; padding: 0.7rem 1.3rem;">
+          Agendar Consulta
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section class="rd-hero">
+    <div class="rd-container">
+      <div class="rd-hero-split">
+        <div class="rd-hero-card">
+          <div class="rd-eyebrow">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            Corpo Clínico com Dentistas Mestres e Professores
+          </div>
+          <h1>Clínica Odontológica em Campinas: Odontologia de Alta Precisão e Cuidado Humanizado</h1>
+          <p>Tratamentos reabilitadores, estéticos, ortodontia 3D e odontologia do sono conduzidos por mestres e especialistas com mais de 20 anos de experiência no bairro Bosque.</p>
+
+          <div class="rd-hero-actions">
+            <a href="https://wa.me/49183?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20consulta%20na%20Int%C3%A9gra%20Odontologia." class="rd-btn rd-btn-gold">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/></svg>
+              Agendar Consulta via WhatsApp
+            </a>
+            <a href="tel:+551932540862" class="rd-btn rd-btn-outline">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              Falar com Atendimento
+            </a>
+          </div>
+
+          <div class="rd-micro-prova">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#C9A227" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+            <span>11+ anos de atuação auditada no Google • Procedimentos minimamente invasivos</span>
+          </div>
+        </div>
+
+        <div class="rd-hero-media">
+          <div class="rd-hero-img-wrapper">
+            <img src="https://static.wixstatic.com/media/f48385_923776671598463084cf656347c5df54~mv2.png/v1/fill/w_165" alt="Atendimento Odontológico de Excelência em Campinas" fetchpriority="high">
+          </div>
+          <div class="rd-badge-google">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="#C9A227"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <div>
+              <strong>11+ Anos no Google</strong>
+              <span>Excelência e Segurança Auditadas</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAIXA DE CONFIANÇA / NUMEROS REAIS -->
+  <section class="rd-numbers-section">
+    <div class="rd-container">
+      <div class="rd-numbers-grid">
+        <div class="rd-number-item">
+          <div class="rd-number-val"><span class="rd-counter" data-target="20">0</span>+</div>
+          <div class="rd-number-lbl">Anos de experiência dos dentistas da clínica</div>
+        </div>
+        <div class="rd-number-item">
+          <div class="rd-number-val"><span class="rd-counter" data-target="15">0</span>+</div>
+          <div class="rd-number-lbl">Anos de ortodontia da especialista Invisalign</div>
+        </div>
+        <div class="rd-number-item">
+          <div class="rd-number-val"><span class="rd-counter" data-target="11">0</span> Anos</div>
+          <div class="rd-number-lbl">Período e avaliação auditada no Google</div>
+        </div>
+        <div class="rd-number-item">
+          <div class="rd-number-val">Mestres</div>
+          <div class="rd-number-lbl">Docentes na SLMandic, UNICAMP e UNESP</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BENEFÍCIOS -->
+  <section id="beneficios" class="rd-section">
+    <div class="rd-container">
+      <div class="rd-section-header">
+        <span class="rd-eyebrow">Por Que Escolher a Intégra</span>
+        <h2>Cuidado Integral Focado na Sua Saúde e Bem-Estar</h2>
+        <p>A união perfeita entre ciência atualizada, sensibilidade humana e tecnologia avançada para garantir um tratamento tranquilo e duradouro.</p>
+      </div>
+
+      <div class="rd-beneficios-grid">
+        <div class="rd-card-fx">
+          <div class="rd-card-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+          </div>
+          <h3>Autoestima e Confiabilidade</h3>
+          <p>Atendimento humano, personalizado e altamente especializado focado em transformar vidas e elevar a autoestima dos pacientes com absoluta segurança.</p>
+        </div>
+
+        <div class="rd-card-fx">
+          <div class="rd-card-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 8v8M8 12h8"/></svg>
+          </div>
+          <h3>Procedimentos Minimamente Invasivos</h3>
+          <p>Uso de alta tecnologia que garante um tratamento preciso, previsível, justo e confortável em todas as etapas, preservando a estrutura natural do seu sorriso.</p>
+        </div>
+
+        <div class="rd-card-fx">
+          <div class="rd-card-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+          </div>
+          <h3>Saúde e Bem-Estar Integral</h3>
+          <p>Tratamentos completos que devolvem a capacidade mastigatória plena, a qualidade do sono e a confiança ao sorrir no seu dia a dia.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVIÇOS (EDITO-ZIGZAG) -->
+  <section id="servicos" class="rd-section" style="background-color: #F6F2EB;">
+    <div class="rd-container">
+      <div class="rd-section-header">
+        <span class="rd-eyebrow">Tratamentos Especializados</span>
+        <h2>Soluções Odontológicas de Alta Precisão</h2>
+        <p>Planejamento digital, biologia respeitada e suporte multidisciplinar para todas as necessidades da sua saúde bucal.</p>
+      </div>
+
+      <div class="rd-servicos-list">
+
+        <!-- 1. Invisalign -->
+        <div class="rd-servico-block rd-card-fx">
+          <div class="rd-servico-content">
+            <span class="rd-servico-badge">Ortodontia Digital 3D + IA</span>
+            <h3>Invisalign</h3>
+            <p>Alinhadores transparentes planejados por profissional especialista com mais de 15 anos de ortodontia e confeccionados com inteligência artificial + tecnologia 3D. Permite a correção dos dentes de forma previsível, confortável e com liberdade total para manter a rotina diária sem o aspecto dos aparelhos tradicionais.</p>
+            <a href="https://wa.me/49183?text=Ol%C3%A1!%20Gostaria%20de%20saber%20mais%20sobre%20o%20tratamento%20Invisalign." class="rd-btn rd-btn-primary">
+              Saber Mais Sobre Invisalign
+            </a>
+          </div>
+          <div class="rd-servico-media">
+            <svg class="rd-servico-media-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="9"/><path d="M8 12s1.5 2 4 2 4-2 4-2"/></svg>
+          </div>
+        </div>
+
+        <!-- 2. Estética Dental -->
+        <div class="rd-servico-block rd-card-fx">
+          <div class="rd-servico-content">
+            <span class="rd-servico-badge">Lentes & Facetas de Resina</span>
+            <h3>Estética Dental (Lentes de Contato Dental)</h3>
+            <p>Colocação de Lentes de Contato Dental e Facetas de Resina com suporte de avanços tecnológicos para a melhoria da beleza, harmonia e estética do sorriso com total segurança e preservação dental.</p>
+            <a href="https://wa.me/49183?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o%20est%C3%A9tica." class="rd-btn rd-btn-primary">
+              Agendar Avaliação Estética
+            </a>
+          </div>
+          <div class="rd-servico-media">
+            <svg class="rd-servico-media-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          </div>
+        </div>
+
+        <!-- 3. Implante Dental -->
+        <div class="rd-servico-block rd-card-fx">
+          <div class="rd-servico-content">
+            <span class="rd-servico-badge">Reabilitação Oral & Mestres</span>
+            <h3>Implante Dental</h3>
+            <p>Tratamento de implantes dentários executado por profissionais mestres e especialistas. Permite mastigar sem o uso de próteses removíveis ou dentaduras e sorrir sem constrangimentos, resgatando a saúde física e mental.</p>
+            <a href="https://wa.me/49183?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20consulta%20para%20Implantes." class="rd-btn rd-btn-primary">
+              Agendar Consulta de Implante
+            </a>
+          </div>
+          <div class="rd-servico-media">
+            <svg class="rd-servico-media-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+          </div>
+        </div>
+
+        <!-- 4. Odontologia do Sono -->
+        <div class="rd-servico-block rd-card-fx">
+          <div class="rd-servico-content">
+            <span class="rd-servico-badge">Habilitado Instituto do Sono / SP</span>
+            <h3>Odontologia do Sono (Ronco e Apneia)</h3>
+            <p>Tratamento focado em qualidade do sono e diagnóstico de transtornos como ronco e apneia com profissional habilitado pelo Instituto do Sono/SP, proporcionando melhora direta na qualidade de vida e na saúde geral.</p>
+            <a href="https://wa.me/49183?text=Ol%C3%A1!%20Gostaria%20de%20informa%C3%A7%C3%B5es%20sobre%20tratamento%20para%20Ronco%20e%20Apneia." class="rd-btn rd-btn-primary">
+              Tratar Ronco e Apneia
+            </a>
+          </div>
+          <div class="rd-servico-media">
+            <svg class="rd-servico-media-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+          </div>
+        </div>
+
+        <!-- 5. Sedação com Óxido Nitroso -->
+        <div class="rd-servico-block rd-card-fx">
+          <div class="rd-servico-content">
+            <span class="rd-servico-badge">Sedação Consciente & Conforto</span>
+            <h3>Sedação com Óxido Nitroso</h3>
+            <p>Procedimentos com uso de sedação consciente com óxido nitroso por profissional habilitado. Proporciona tratamentos mais confortáveis, tranquilos e sem ansiedade para pacientes com receio de procedimentos odontológicos.</p>
+            <a href="https://wa.me/49183?text=Ol%C3%A1!%20Gostaria%20de%20conhecer%20a%20Sedaci%C3%A3o%20Consciente." class="rd-btn rd-btn-primary">
+              Conhecer Sedação Consciente
+            </a>
+          </div>
+          <div class="rd-servico-media">
+            <svg class="rd-servico-media-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+        </div>
+
+        <!-- 6. Harmonização Orofacial -->
+        <div class="rd-servico-block rd-card-fx">
+          <div class="rd-servico-content">
+            <span class="rd-servico-badge">Fundadores ABRAHOF & SBTI</span>
+            <h3>Harmonização Orofacial</h3>
+            <p>Procedimentos de estética orofacial como toxina botulínica, preenchimento facial, fios faciais, bichectomia, MD Codes e dermaroller para o equilíbrio e rejuvenescimento estético e funcional do rosto.</p>
+            <a href="https://wa.me/49183?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20Harmoniza%C3%A7%C3%A3o%20Orofacial." class="rd-btn rd-btn-primary">
+              Agendar Harmonização Orofacial
+            </a>
+          </div>
+          <div class="rd-servico-media">
+            <svg class="rd-servico-media-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20.24 12.24a6 6 0 0 0-8.49-8.49L5 10.5V19h8.5z"/><line x1="16" y1="8" x2="2" y2="22"/><line x1="17.5" y1="15" x2="9" y2="15"/></svg>
+          </div>
+        </div>
+
+        <!-- 7. Endodontia -->
+        <div class="rd-servico-block rd-card-fx">
+          <div class="rd-servico-content">
+            <span class="rd-servico-badge">Mestres em Endodontia</span>
+            <h3>Endodontia (Tratamento de Canal)</h3>
+            <p>Tratamento de canal realizado por especialistas e mestres na área, focado na preservação da estrutura dental e eliminação de dores de forma precisa, segura e indolor.</p>
+            <a href="https://wa.me/49183?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20consulta%20de%20Endodontia." class="rd-btn rd-btn-primary">
+              Agendar Consulta de Endodontia
+            </a>
+          </div>
+          <div class="rd-servico-media">
+            <svg class="rd-servico-media-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm0 18a8 8 0 1 1 8-8 8 8 0 0 1-8 8z"/></svg>
+          </div>
+        </div>
+
+        <!-- 8. Periodontia -->
+        <div class="rd-servico-block rd-card-fx">
+          <div class="rd-servico-content">
+            <span class="rd-servico-badge">Plástica Periodontal & Enxertos</span>
+            <h3>Periodontia</h3>
+            <p>Tratamentos gengivais e de tecidos de suporte dos dentes, incluindo plástica periodontal e reconstrução tecidual, garantindo a saúde e estabilidade dos tecidos que sustentam dentes e implantes.</p>
+            <a href="https://wa.me/49183?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o%20periodontal." class="rd-btn rd-btn-primary">
+              Agendar Avaliação Periodontal
+            </a>
+          </div>
+          <div class="rd-servico-media">
+            <svg class="rd-servico-media-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- SOBRE A CLÍNICA -->
+  <section id="sobre" class="rd-section rd-sobre">
+    <div class="rd-container">
+      <div class="rd-sobre-grid">
+        <div class="rd-sobre-text">
+          <span class="rd-eyebrow" style="background: rgba(201, 162, 39, 0.2); color: var(--accent-gold);">Tradição & Ciência em Campinas</span>
+          <h2>Sobre a Intégra Odontologia e Saúde</h2>
+          <div class="rd-subtitle">Ciência, tecnologia e sensibilidade humana a serviço do seu sorriso e bem-estar em Campinas.</div>
+          <p>A Intégra Odontologia e Saúde é uma clínica odontológica em Campinas composta por um corpo clínico multidisciplinar de dentistas mestres, especialistas e professores universitários com mais de 20 anos de experiência.</p>
+          <p>Localizada no nobre bairro Bosque, oferece tratamentos completos com tecnologia de ponta, planejamento 3D, atendimento humanizado e foco em procedimentos minimamente invasivos que priorizam a saúde física e o equilíbrio emocional de cada paciente.</p>
+        </div>
+        <div>
+          <img src="https://static.wixstatic.com/media/f48385_72c917c5ee354467a54fda2440d21c95~mv2.png/v1/crop/x_99" alt="Ambiente da Clínica Intégra Odontologia no Bosque em Campinas" class="rd-sobre-media-img" loading="lazy">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EQUIPE / CORPO CLÍNICO -->
+  <section id="equipe" class="rd-section">
+    <div class="rd-container">
+      <div class="rd-section-header">
+        <span class="rd-eyebrow">Corpo Clínico Integrado</span>
+        <h2>Dentistas Mestres, Doutores e Professores</h2>
+        <p>Conheça os profissionais responsáveis por cuidar da sua saúde bucal na Intégra Odontologia, atuantes nas principais faculdades e autores de livros da área.</p>
+      </div>
+
+      <div class="rd-equipe-grid">
+
+        <!-- Prof. Dr. Arnaldo Jamariqueli -->
+        <div class="rd-card-fx rd-membro-card">
+          <div class="rd-membro-header">
+            <h3 class="rd-membro-nome">Prof. Dr. Arnaldo Jamariqueli</h3>
+            <div class="rd-membro-cargo">Mestre em Implantodontia, Implantodontista e Periodontista (CROSP 86.521)</div>
+          </div>
+          <div class="rd-membro-bio">
+            Mestre em Implantodontia e Especialista em Implantodontia pela Faculdade São Leopoldo Mandic (Campinas). Especialista em Periodontia pela Faculdade São Leopoldo Mandic (São Paulo). Habilitado em Sedação com Óxido Nitroso pela Faculdade São Leopoldo Mandic e Habilitado em Odontologia do Sono pelo Instituto do Sono/SP. Graduado pela Universidade Estadual Paulista (UNESP). Atua como Professor do curso de Plástica Periodontal e Periimplantar (NAP), Professor do curso de Especialização em Periodontia (SLMandic) e Professor do curso de imersão em reconstrução tecidual no Miami Anatomical Research Center. Coautor do livro 'Periodontia no Contexto Interdisciplinar - Integrando as Melhores Práticas' (Editora Napoleão) e Coautor do livro 'Pro-Odonto - Programa de Atualização em Prótese Odontológica e Dentística' (Editora Artmed Panamericana).
+          </div>
+        </div>
+
+        <!-- Dra. Marcela Santi -->
+        <div class="rd-card-fx rd-membro-card">
+          <div class="rd-membro-header">
+            <h3 class="rd-membro-nome">Dra. Marcela Santi</h3>
+            <div class="rd-membro-cargo">Ortodontista (CROSP 86.552)</div>
+          </div>
+          <div class="rd-membro-bio">
+            Especialista em Ortodontia pela Faculdade São Leopoldo Mandic e Graduada pela Universidade Estadual Paulista (UNESP). Possui Habilitação em Laser na Odontologia pela USP, Pós-Graduação em Ortodontia pela Escola Superior de Odontologia e Pós-Graduação em Damon System. Credenciada como Invisalign Doctor (Aparelho Invisível). Possui Pós-Graduação em Toxina Botulínica e Preenchimento Facial (Harmonização/Estética Orofacial) e Pós-Graduação em Endodontia pela Associação Brasileira de Odontologia (ABO). É Membro da Sociedade de Toxina Botulínica e Implantes Faciais (SBTI) e Sócia Fundadora da Associação Brasileira de Harmonização Orofacial (ABRAHOF).
+          </div>
+        </div>
+
+        <!-- Prof. Dr. Guilherme Bampa Bonduki -->
+        <div class="rd-card-fx rd-membro-card">
+          <div class="rd-membro-header">
+            <h3 class="rd-membro-nome">Prof. Dr. Guilherme Bampa Bonduki</h3>
+            <div class="rd-membro-cargo">Mestre em Endodontia e Endodontista (CROSP 71.956)</div>
+          </div>
+          <div class="rd-membro-bio">
+            Mestre em Endodontia e Especialista em Endodontia pela Faculdade São Leopoldo Mandic (Campinas). Graduado pela Universidade Católica de Campinas (PUC). Atua como Professor Assistente do Curso de Especialização da Faculdade São Leopoldo Mandic nas unidades de Campinas e São Paulo.
+          </div>
+        </div>
+
+        <!-- Dra. Patricia Sato -->
+        <div class="rd-card-fx rd-membro-card">
+          <div class="rd-membro-header">
+            <h3 class="rd-membro-nome">Dra. Patricia Sato</h3>
+            <div class="rd-membro-cargo">Harmonização Orofacial e Odontopediatra (CROSP 83.882)</div>
+          </div>
+          <div class="rd-membro-bio">
+            Especialista em Odontopediatria e Graduada pela UNG. Possui Habilitação em Toxina e Preenchedores Orofaciais e atua como Professora em cursos de Harmonização Orofacial na Escola Silvio de Freitas. Possui Pós-Graduação em Bichectomia, Pós-Graduação em Fios Faciais, Pós-Graduação em Toxina Botulínica e Preenchimento Facial (Harmonização / Estética Orofacial), Pós-Graduação em MD Codes e Pós-Graduação em Dermaroller.
+          </div>
+        </div>
+
+        <!-- Dr. João Victor Gonçalves Zanotte -->
+        <div class="rd-card-fx rd-membro-card">
+          <div class="rd-membro-header">
+            <h3 class="rd-membro-nome">Dr. João Victor Gonçalves Zanotte</h3>
+            <div class="rd-membro-cargo">Mestre e Especialista em Odontologia Estética (CROSP 176.517)</div>
+          </div>
+          <div class="rd-membro-bio">
+            Mestre e Especialista em Odontologia Estética. Graduado pela Universidade Paulista (UNESP).
+          </div>
+        </div>
+
+        <!-- Dra. Morgana Gabriotti -->
+        <div class="rd-card-fx rd-membro-card">
+          <div class="rd-membro-header">
+            <h3 class="rd-membro-nome">Dra. Morgana Gabriotti</h3>
+            <div class="rd-membro-cargo">Endodontista (CROSP 83.650)</div>
+          </div>
+          <div class="rd-membro-bio">
+            Especialista em Endodontia pela Faculdade de Odontologia de Piracicaba (FOP-UNICAMP) e Graduada pela FOP-UNICAMP. Atua como Professora Assistente na Especialização da APCD Piracicaba e é Membro da Sociedade Brasileira de Endodontia (SBE).
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- DIFERENCIAIS -->
+  <section id="diferenciais" class="rd-section" style="background-color: #F6F2EB;">
+    <div class="rd-container">
+      <div class="rd-section-header">
+        <span class="rd-eyebrow">Diferenciais Competitivos</span>
+        <h2>Excelência Acadêmica e Rigor Científico</h2>
+        <p>Evidências reais que fundamentam a qualidade e o nível de especialização dos tratamentos oferecidos na Intégra.</p>
+      </div>
+
+      <div class="rd-diferenciais-grid">
+        <div class="rd-card-fx">
+          <h3>Corpo Clínico com Dentistas Mestres e Especialistas</h3>
+          <p>Equipe formada por mestres e especialistas atuantes como professores em instituições de excelência como São Leopoldo Mandic, UNICAMP, UNESP e Miami Anatomical Research Center.</p>
+        </div>
+
+        <div class="rd-card-fx">
+          <h3>Mais de 20 Anos de Experiência</h3>
+          <p>Mais de duas décadas de prática clínica associada à produção científica, autoria de livros da área odontológica e constante atualização nacional e internacional.</p>
+        </div>
+
+        <div class="rd-card-fx">
+          <h3>Tecnologia de Ponta e Inteligência Artificial</h3>
+          <p>Utilização de IA e planejamento 3D nos alinhadores Invisalign, exames de alta precisão e estrutura tecnológica para tratamentos mais rápidos e previsíveis.</p>
+        </div>
+
+        <div class="rd-card-fx">
+          <h3>Profissionais de Destaque e Autores de Livros</h3>
+          <p>Membros do corpo clínico são coautores de livros técnicos referência na odontologia, fundadores de associações como a ABRAHOF e palestrantes internacionais.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DESTAQUE EDITORIAL -->
+  <section class="rd-section">
+    <div class="rd-container">
+      <div class="rd-editorial-banner">
+        <div>
+          <span class="rd-eyebrow" style="background: rgba(201, 162, 39, 0.2); color: var(--accent-gold);">Visão Científica Atualizada</span>
+          <h2>Odontologia Atualizada e Focada no Bem-Estar</h2>
+          <p>Nosso corpo clínico mantém permanente atualização científica em temas como o impacto de medicações na saúde bucal, tratamentos para distúrbios do sono e o uso de novas tecnologias para garantir resultados duradouros e confortáveis.</p>
+          <a href="https://wa.me/49183?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20consulta%20com%20especialista." class="rd-btn rd-btn-gold">
+            Agendar Consulta com Especialista
+          </a>
+        </div>
+        <div style="text-align: center;">
+          <svg width="120" height="120" viewBox="0 0 24 24" fill="none" stroke="#C9A227" stroke-width="1"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><circle cx="12" cy="11" r="3"/></svg>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DEPOIMENTOS DE PACIENTES REAIS -->
+  <section class="rd-section" style="background-color: #F6F2EB;">
+    <div class="rd-container">
+      <div class="rd-section-header">
+        <span class="rd-eyebrow">Depoimentos Reais</span>
+        <h2>O Que Dizem Nossos Pacientes</h2>
+        <p>A satisfação de quem confia a saúde do seu sorriso e da sua família à equipe da Intégra Odontologia.</p>
+      </div>
+
+      <div class="rd-depoimentos-grid">
+        <div class="rd-card-fx rd-depoimento-card">
+          <div class="rd-quote-icon">“</div>
+          <p class="rd-depoimento-texto">Sou grata a equipe por cuidar de mim e do meu sorriso com muita dedicação e muito carinho.</p>
+          <div class="rd-depoimento-autor">Verônica Matos</div>
+        </div>
+
+        <div class="rd-card-fx rd-depoimento-card">
+          <div class="rd-quote-icon">“</div>
+          <p class="rd-depoimento-texto">Em minha profissão o sorriso é muito importante, por isso busco os melhores profissionais para cuidar da minha saúde bucal.</p>
+          <div class="rd-depoimento-autor">Sérgio Guizé</div>
+        </div>
+
+        <div class="rd-card-fx rd-depoimento-card">
+          <div class="rd-quote-icon">“</div>
+          <p class="rd-depoimento-texto">Busquei os melhores para cuidar do meu sorriso e acabei encontrando amigos super preocupados com minha saúde.</p>
+          <div class="rd-depoimento-autor">Netenho</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- COMO FUNCIONA -->
+  <section class="rd-section">
+    <div class="rd-container">
+      <div class="rd-section-header">
+        <span class="rd-eyebrow">Sua Jornada Conosco</span>
+        <h2>Como Funciona o Seu Atendimento</h2>
+        <p>Passos simples para agendar sua consulta e iniciar um plano de tratamento personalizado e seguro.</p>
+      </div>
+
+      <div class="rd-passos-grid">
+        <div class="rd-passo-card rd-card-fx">
+          <div class="rd-passo-num">01</div>
+          <h3>Contato Inicial</h3>
+          <p>Entre em contato via WhatsApp ou telefone para conversar com nossa equipe de atendimento e agendar seu horário.</p>
+        </div>
+
+        <div class="rd-passo-card rd-card-fx">
+          <div class="rd-passo-num">02</div>
+          <h3>Avaliação Especializada</h3>
+          <p>Realize uma consulta completa com nossos dentistas mestres e especialistas para um diagnóstico detalhado do seu caso.</p>
+        </div>
+
+        <div class="rd-passo-card rd-card-fx">
+          <div class="rd-passo-num">03</div>
+          <h3>Tratamento Personalizado</h3>
+          <p>Inicie seu plano de tratamento com tecnologia 3D, suporte de sedação consciente quando necessário e procedimentos minimamente invasivos.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" class="rd-section" style="background-color: #F6F2EB;">
+    <div class="rd-container">
+      <div class="rd-section-header">
+        <span class="rd-eyebrow">Dúvidas Frequentes</span>
+        <h2>Perguntas Frequentes sobre a Clínica</h2>
+        <p>Respostas claras para ajudar você a planejar sua consulta na Intégra Odontologia.</p>
+      </div>
+
+      <div class="rd-faq-container">
+        <details class="rd-faq-item" open>
+          <summary>Onde está localizada a Intégra Odontologia em Campinas?</summary>
+          <div class="rd-faq-content">
+            A clínica está situada na Rua Barão de Paranapanema, 146, Sala 32A, no bairro Bosque, em Campinas - SP.
+          </div>
+        </details>
+
+        <details class="rd-faq-item">
+          <summary>Como posso agendar uma avaliação com os especialistas?</summary>
+          <div class="rd-faq-content">
+            Você pode agendar sua consulta diretamente pelo WhatsApp (19) 97102-2209 ou através do telefone fixo (19) 3254-0862.
+          </div>
+        </details>
+
+        <details class="rd-faq-item">
+          <summary>A clínica oferece tratamento para ansiedade e medo de dentista?</summary>
+          <div class="rd-faq-content">
+            Sim. Disponibilizamos o recurso de sedação consciente com óxido nitroso, conduzida por profissional habilitado, permitindo tratamentos tranquilos e confortáveis.
+          </div>
+        </details>
+
+        <details class="rd-faq-item">
+          <summary>Como funciona o tratamento de Ronco e Apneia na clínica?</summary>
+          <div class="rd-faq-content">
+            O tratamento de Odontologia do Sono é realizado por profissional habilitado pelo Instituto do Sono/SP, focado no diagnóstico e na melhoria da qualidade do sono e saúde geral.
+          </div>
+        </details>
+
+        <details class="rd-faq-item">
+          <summary>Quais são os diferenciais do corpo clínico da Intégra?</summary>
+          <div class="rd-faq-content">
+            Nossa equipe é composta por mestres, especialistas e professores universitários da SLMandic, UNICAMP e UNESP, coautores de livros e com mais de 20 anos de atuação.
+          </div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA FINAL E FORMULÁRIO -->
+  <section class="rd-section rd-cta-final">
+    <div class="rd-container">
+      <div class="rd-cta-box">
+        <div>
+          <span class="rd-eyebrow">Agende Seu Atendimento</span>
+          <h2>Agende Sua Consulta na Intégra Odontologia</h2>
+          <p style="margin-bottom: 2rem;">Entre em contato com nossa equipe em Campinas e agende seu atendimento com dentistas mestres e especialistas.</p>
+
+          <div style="display: flex; flex-direction: column; gap: 1rem; margin-bottom: 2rem;">
+            <div style="display: flex; align-items: center; gap: 0.75rem;">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#C9A227" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              <span><strong>Endereço:</strong> Rua Barão de Paranapanema, 146, Sala 32A - Bosque, Campinas - SP</span>
+            </div>
+            <div style="display: flex; align-items: center; gap: 0.75rem;">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#C9A227" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              <span><strong>Telefone:</strong> (19) 3254-0862 • <strong>WhatsApp:</strong> (19) 97102-2209</span>
+            </div>
+            <div style="display: flex; align-items: center; gap: 0.75rem;">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#C9A227" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              <span><strong>E-mail:</strong> falecom@integraodontosaude.com.br</span>
+            </div>
+          </div>
+
+          <a href="https://wa.me/49183?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20consulta%20na%20Int%C3%A9gra%20Odontologia." class="rd-btn rd-btn-gold" style="width: 100%;">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/></svg>
+            Agendar Consulta via WhatsApp
+          </a>
+        </div>
+
+        <div>
+          <form class="rd-form" action="#" method="post">
+            <div class="rd-form-group">
+              <label for="form-nome">Nome Completo</label>
+              <input type="text" id="form-nome" name="nome" class="rd-form-control" placeholder="Seu nome completo" required>
+            </div>
+
+            <div class="rd-form-group">
+              <label for="form-telefone">Telefone / WhatsApp</label>
+              <input type="tel" id="form-telefone" name="telefone" class="rd-form-control" placeholder="(19) 99999-9999" required>
+            </div>
+
+            <div class="rd-form-group">
+              <label for="form-email">E-mail</label>
+              <input type="email" id="form-email" name="email" class="rd-form-control" placeholder="falecom@integraodontosaude.com.br" required>
+            </div>
+
+            <div class="rd-form-group">
+              <label for="form-servico">Tratamento de Interesse</label>
+              <select id="form-servico" name="servico" class="rd-form-control" required>
+                <option value="" disabled selected>Selecione um tratamento</option>
+                <option value="Invisalign">Invisalign (Alinhadores 3D)</option>
+                <option value="Estetica">Estética Dental (Lentes/Facetas)</option>
+                <option value="Implantes">Implante Dental</option>
+                <option value="Sono">Odontologia do Sono (Ronco/Apneia)</option>
+                <option value="Sedacao">Sedação com Óxido Nitroso</option>
+                <option value="HOF">Harmonização Orofacial</option>
+                <option value="Endodontia">Endodontia (Tratamento de Canal)</option>
+                <option value="Periodontia">Periodontia</option>
+                <option value="Outro">Outra consulta/Avaliação geral</option>
+              </select>
+            </div>
+
+            <div class="rd-form-group">
+              <label for="form-mensagem">Mensagem (Opcional)</label>
+              <textarea id="form-mensagem" name="mensagem" class="rd-form-control" rows="3" placeholder="Como podemos ajudar você?"></textarea>
+            </div>
+
+            <div class="rd-form-consent">
+              <input type="checkbox" id="form-consentimento" name="consentimento" required>
+              <label for="form-consentimento">Li e aceito a Política de Privacidade e concordo em enviar meus dados para contato da equipe da Intégra Odontologia.</label>
+            </div>
+
+            <button type="submit" class="rd-btn rd-btn-primary">
+              Solicitar Contato
+            </button>
+            <span style="font-size: 0.75rem; color: #888888; text-align: center; display: block;">Formulário demonstrativo</span>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- RODAPÉ -->
+  <footer class="rd-footer">
+    <div class="rd-container">
+      <div class="rd-footer-grid">
+
+        <!-- Coluna 1 -->
+        <div>
+          <div class="rd-logo-text" style="color: #FFFFFF; margin-bottom: 1rem;">
+            INTÉGRA
+            <span style="color: var(--accent-gold);">ODONTOLOGIA & SAÚDE</span>
+          </div>
+          <p style="font-size: 0.88rem; color: #A0B2AE; margin-bottom: 1.5rem; line-height: 1.5;">
+            A Intégra Odontologia e Saúde é uma clínica odontológica no bairro Bosque, em Campinas - SP, composta por dentistas mestres, especialistas e professores universitários com mais de 20 anos de experiência. Oferece tratamentos em Invisalign, Implantes, Odontologia do Sono, Estética e Sedação Consciente com tecnologia de ponta e cuidado humanizado.
+          </p>
+          <div class="rd-topbar-socials">
+            <a href="https://www.instagram.com/integraodontologia" target="_blank" rel="noopener" aria-label="Instagram">
+              <img src="https://static.wixstatic.com/media/fdcfaba150fc427da298a00cb09d91c1.png/v1/fill/w_25" alt="Instagram" class="rd-social-icon-img">
+            </a>
+            <a href="https://www.facebook.com/integraodontologia" target="_blank" rel="noopener" aria-label="Facebook">
+              <img src="https://static.wixstatic.com/media/ce6ec7c11b174c0581e20f42bb865ce3.png/v1/fill/w_25" alt="Facebook" class="rd-social-icon-img">
+            </a>
+            <a href="https://www.youtube.com/channel/UCJkP6Zevs0W-_OtXshXrBcg" target="_blank" rel="noopener" aria-label="YouTube">
+              <img src="https://static.wixstatic.com/media/71ac09a5a92848cc943bf2ca2a09a6d0.png/v1/fill/w_25" alt="YouTube" class="rd-social-icon-img">
+            </a>
+          </div>
+        </div>
+
+        <!-- Coluna 2 -->
+        <div class="rd-footer-col">
+          <h4>Tratamentos</h4>
+          <ul>
+            <li><a href="#servicos">Invisalign 3D</a></li>
+            <li><a href="#servicos">Estética Dental & Facetas</a></li>
+            <li><a href="#servicos">Implantes Dentários</a></li>
+            <li><a href="#servicos">Odontologia do Sono</a></li>
+            <li><a href="#servicos">Sedação com Óxido Nitroso</a></li>
+            <li><a href="#servicos">Harmonização Orofacial</a></li>
+            <li><a href="#servicos">Endodontia Especializada</a></li>
+            <li><a href="#servicos">Periodontia & Enxertos</a></li>
+          </ul>
+        </div>
+
+        <!-- Coluna 3 -->
+        <div class="rd-footer-col">
+          <h4>Institucional</h4>
+          <ul>
+            <li><a href="#sobre">A Clínica</a></li>
+            <li><a href="#equipe">Corpo Clínico</a></li>
+            <li><a href="#diferenciais">Diferenciais</a></li>
+            <li><a href="#faq">Perguntas Frequentes</a></li>
+            <li><a href="#">Política de Privacidade</a></li>
+            <li><a href="#">Termos de Uso</a></li>
+          </ul>
+        </div>
+
+        <!-- Coluna 4 -->
+        <div class="rd-footer-col">
+          <h4>Contato & Localização</h4>
+          <ul>
+            <li><strong>Telefone:</strong> <a href="tel:+551932540862">(19) 3254-0862</a></li>
+            <li><strong>WhatsApp:</strong> <a href="https://wa.me/49183?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es.">(19) 97102-2209</a></li>
+            <li><strong>E-mail:</strong> <a href="mailto:falecom@integraodontosaude.com.br">falecom@integraodontosaude.com.br</a></li>
+            <li style="margin-top: 0.5rem;"><strong>Endereço:</strong><br>Rua Barão de Paranapanema, 146, Sala 32A - Bosque, Campinas - SP</li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="rd-footer-bottom">
+        <div>
+          Copyright © 2020 • Intégra Odontologia e Saúde • Todos os direitos reservados.
+        </div>
+        <div>
+          Responsáveis Técnicos: Prof. Dr. Arnaldo Jamariqueli (CROSP 86.521) • Dra. Marcela Santi (CROSP 86.552)
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- BOTÃO FLUTUANTE WHATSAPP -->
+  <a href="https://wa.me/49183?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." class="rd-float-wa" target="_blank" rel="noopener" aria-label="Atendimento no WhatsApp">
+    <svg viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.882-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/></svg>
+  </a>
+
+  <!-- SCRIPT PARA ANIMAÇÃO DE CONTADORES -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      const counters = document.querySelectorAll('.rd-counter');
+      counters.forEach(counter => {
+        const target = +counter.getAttribute('data-target');
+        let count = 0;
+        const speed = 200;
+        const inc = target / (speed / 15);
+
+        const updateCount = () => {
+          count += inc;
+          if(count < target) {
+            counter.innerText = Math.ceil(count);
+            setTimeout(updateCount, 20);
+          } else {
+            counter.innerText = target;
+          }
+        };
+        updateCount();
+      });
+    });
+  </script>
+<div style="position:fixed;bottom:16px;left:16px;z-index:2147483647;background:rgba(255,255,255,0.96);border-radius:999px;padding:8px 18px 8px 10px;box-shadow:0 6px 20px rgba(0,0,0,0.22);display:flex;align-items:center;gap:7px;font-family:Inter,-apple-system,sans-serif;"><img src="https://rd-previews-dharari01s-projects.vercel.app/_assets/logo-rd-exclusive.png" alt="RD Exclusive" style="height:26px;width:auto;display:block;"><span style="font-size:14px;font-weight:700;color:#1A1A1A;white-space:nowrap;">Protótipo por RD Exclusive</span></div><script>
+document.addEventListener("DOMContentLoaded", function() {
+  var alvos = document.querySelectorAll(".rd-reveal, .rd-card-fx, .rd-counter");
+  function animarContador(el) {
+    var textoAlvo = el.getAttribute("data-target") || "0";
+    var alvo = parseFloat(textoAlvo);
+    var casas = textoAlvo.indexOf(".") !== -1 ? 1 : 0;
+    var duracao = 1400, inicio = null;
+    function passo(ts) {
+      if (!inicio) inicio = ts;
+      var progresso = Math.min((ts - inicio) / duracao, 1);
+      var valorAtual = alvo * progresso;
+      el.textContent = casas ? valorAtual.toFixed(casas) : Math.floor(valorAtual);
+      if (progresso < 1) requestAnimationFrame(passo);
+      else el.textContent = casas ? alvo.toFixed(casas) : alvo;
+    }
+    requestAnimationFrame(passo);
+  }
+  if ("IntersectionObserver" in window) {
+    var obs = new IntersectionObserver(function(entradas) {
+      entradas.forEach(function(entrada) {
+        if (entrada.isIntersecting) {
+          entrada.target.classList.add("rd-in-view");
+          if (entrada.target.classList.contains("rd-counter")) animarContador(entrada.target);
+          obs.unobserve(entrada.target);
+        }
+      });
+    }, { threshold: 0.25 });
+    alvos.forEach(function(el) { obs.observe(el); });
+  } else {
+    alvos.forEach(function(el) {
+      el.classList.add("rd-in-view");
+      if (el.classList.contains("rd-counter")) animarContador(el);
+    });
+  }
+});
+</script></body>
+</html>
