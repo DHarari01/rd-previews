@@ -1,0 +1,63 @@
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url("https://rd-previews-dharari01s-projects.vercel.app/clinica-santa-estetica-visual-v2/assets/a2.ttf") format('truetype');
+}
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("https://rd-previews-dharari01s-projects.vercel.app/clinica-santa-estetica-visual-v2/assets/a3.ttf") format('truetype');
+}
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("https://rd-previews-dharari01s-projects.vercel.app/clinica-santa-estetica-visual-v2/assets/a4.ttf") format('truetype');
+}
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("https://rd-previews-dharari01s-projects.vercel.app/clinica-santa-estetica-visual-v2/assets/a5.ttf") format('truetype');
+}
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("https://rd-previews-dharari01s-projects.vercel.app/clinica-santa-estetica-visual-v2/assets/a6.ttf") format('truetype');
+}
+@font-face {
+  font-family: 'Playfair Display';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url("https://rd-previews-dharari01s-projects.vercel.app/clinica-santa-estetica-visual-v2/assets/a7.ttf") format('truetype');
+}
+@font-face {
+  font-family: 'Playfair Display';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("https://rd-previews-dharari01s-projects.vercel.app/clinica-santa-estetica-visual-v2/assets/a8.ttf") format('truetype');
+}
+@font-face {
+  font-family: 'Playfair Display';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("https://rd-previews-dharari01s-projects.vercel.app/clinica-santa-estetica-visual-v2/assets/a9.ttf") format('truetype');
+}
+@font-face {
+  font-family: 'Playfair Display';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("https://rd-previews-dharari01s-projects.vercel.app/clinica-santa-estetica-visual-v2/assets/a10.ttf") format('truetype');
+}
